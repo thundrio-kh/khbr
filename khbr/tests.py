@@ -1,9 +1,8 @@
-import unittest
+import unittest, os, functools, sys, traceback, pdb
 from randomizer import Randomizer
 
 class Tests(unittest.TestCase):
     def test_valid_options(self):
-        seed = "12345"
         game = "kh2"
         options = {
             "selected_enemy": "Air Pirate"
@@ -23,5 +22,12 @@ class Tests(unittest.TestCase):
         assert newseed == seed
         assert newoptions == options
 
+    def test_tmpdir_create_delete(self):
+        r = Randomizer()
+        fn, rmdir = r._make_tmpdir()
+        assert os.path.isdir(fn)
+        rmdir()
+        assert not os.path.exists(fn)
+        
 
 unittest.main()

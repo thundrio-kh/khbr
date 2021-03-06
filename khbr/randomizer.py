@@ -1,4 +1,5 @@
-import time, json
+import time, json, random, os, shutil, yaml, base64
+from zipfile import ZipFile
 
 supported_games = ["kh2"]
 
@@ -27,10 +28,12 @@ class KingdomHearts2:
             "stable_bosses_only": [True, False],
             "selected_boss": self.get_valid_bosses()
         }
+    def generate_mod_basics(self):
+        return {"title": "KH2 Boss/Enemy Rando"}
 
 class Randomizer:
-    def __init__(self):
-        pass
+    def __init__(self, tempdir=None):
+        self.tempdir = tempdir or "C:\\temp"
 
     def _get_game(self, game):
         if game == "kh2":
@@ -48,6 +51,29 @@ class Randomizer:
                 if options[key] not in schema[key]:
                     raise Exception("Option {}-{} is not found in valid options: {}".format(key, options[key], schema[key]))
     
+    def _make_tmpdir(self):
+        fn = os.path.join(self.tempdir, ''.join(list(str(random.randint(0,10)) for _ in range(7))))
+        if os.path.exists(fn):
+            # Realistically this should never happen
+            raise Exception("TMP dir already exists, try again")
+        os.mkdir(os.path.join(self.tempdir, fn))
+        rmdir = lambda : shutil.rmtree(fn)
+        return fn, rmdir
+
+    def _create_yaml(self, fn, obj):
+        yaml.dump(obj, open(fn, "w"))
+    
+    def _create_zip(self, moddir, fn):
+        with ZipFile(fn, "w") as z:
+            for folder, _, fns in os.walk(moddir):
+                for wfn in fns:
+                    pth = os.path.join(folder, wfn)
+                    z.write(pth, wfn)
+        with open(fn, "rb") as f:
+            b64zip = base64.encodebytes(f.read())
+        os.remove(fn)
+        return b64zip
+
     def generate_filename(self, game, seed, options):
         if type(game) == str:
             game = self._get_game(game)
@@ -97,8 +123,19 @@ class Randomizer:
             raise Exception("Game not supported")
         game = self._get_game(g)
         self._validate_options(game.get_options(), options)
+        fn = self.generate_filename(game, seed, options)
         if not seed:
             self.seed = int(time.time())
+        mod_yaml = game.generate_mod_basics()
+        moddir, rmmoddir = self._make_tmpdir()
+
+
+        self._create_yaml(os.path.join(moddir, "mod.yml"), mod_yaml)
+        zipped = self._create_zip(moddir, fn)
+
+        rmmoddir()
+
+        return zipped
 
 if __name__ == '__main__':
-    pass
+    Randomizer().generate_seed("kh2", "1234", {"selected_enemy": "Air Pirate"})
