@@ -90,7 +90,7 @@
             "Assault Rider (1)": [ 1, 0, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": True,
         "enmp_index": 59
     },
     "Nightwalker": {
@@ -129,7 +129,7 @@
         "type": "boss",
         "variations": {
             "Blizzard Lord": [ 0, 0, 0 ],
-            "Blizzard Lord (1)": [ 0, 1, 0 ]
+            "Blizzard Lord (Cups)": [ 0, 1, 0 ]
         },
         "enabled": true,
         "islarge": false,
@@ -175,7 +175,7 @@
             "Living Bone (4)": [ 1, 0, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 7
     },
     "Devastator": {
@@ -189,7 +189,7 @@
             "Devastator (2)": [ 0, 3, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 65
     },
     "Lance Soldier": {
@@ -236,7 +236,7 @@
         "type": "boss",
         "variations": {
             "Volcano Lord": [ 0, 0, 0 ],
-            "Volcano Lord (1)": [ 0, 1, 0 ]
+            "Volcano Lord (Cups)": [ 0, 1, 0 ]
         },
         "enabled": true,
         "islarge": false,
@@ -263,7 +263,7 @@
             "Final Xemnas": [ 0, 0, 0 ],
             "Final Xemnas (1)": [ 0, 1, 0 ]
         },
-        "enabled": true,
+        "enabled": false,
         "islarge": false,
         "enmp_index": 85
     },
@@ -312,7 +312,7 @@
             "Bolt Tower (1)": [ 0, 1, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 38
     },
     "Shadow WI": {
@@ -348,7 +348,7 @@
         "variations": {
             "Setzer": [ 0, 0, 0 ]
         },
-        "enabled": true,
+        "enabled": false,
         "islarge": false,
         "enmp_index": 146
     },
@@ -360,7 +360,7 @@
         "variations": {
             "Riku": [ 0, 0, 0 ]
         },
-        "enabled": true,
+        "enabled": false,
         "islarge": false,
         "enmp_index": 120
     },
@@ -414,7 +414,7 @@
             "Crimson Jazz (4)": [ 0, 20, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 2
     },
     "Air Pirate": {
@@ -478,7 +478,7 @@
         "variations": {
             "Groundshaker": [ 0, 0, 0 ]
         },
-        "enabled": true,
+        "enabled": false,
         "islarge": false,
         "enmp_index": 90
     },
@@ -488,8 +488,8 @@
         "size": 1150276,
         "type": "boss",
         "variations": {
-            "Armor Xemnas": [ 0, 0, 0 ],
-            "Armor Xemnas (1)": [ 0, 1, 0 ]
+            "Armor Xemnas II": [ 0, 0, 0 ],
+            "Armor Xemnas I": [ 0, 1, 0 ]
         },
         "enabled": true,
         "islarge": false,
@@ -503,7 +503,7 @@
         "variations": {
             "Vivi": [ 0, 1, 0 ]
         },
-        "enabled": true,
+        "enabled": false,
         "islarge": false,
         "enmp_index": 145
     },
@@ -532,7 +532,7 @@
             "Seifer (3)": [ 0, 4, 0 ],
             "Seifer (4)": [ 0, 5, 0 ]
         },
-        "enabled": true,
+        "enabled": false,
         "islarge": false,
         "enmp_index": 125
     },
@@ -559,7 +559,7 @@
             "Morning Star (1)": [ 0, 99, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 11
     },
     "Tornado Step": {
@@ -819,7 +819,7 @@
         "variations": {
             "Hayner": [ 0, 0, 0 ]
         },
-        "enabled": true,
+        "enabled": false,
         "islarge": false,
         "enmp_index": 140
     },
@@ -834,7 +834,7 @@
             "Graveyard NM (2)": [ 2, 0, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 139
     },
     "Bolt Tower DC": {
@@ -846,7 +846,7 @@
             "Bolt Tower DC": [ 0, 0, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 38
     },
     "Sark": {
@@ -882,7 +882,7 @@
             "Toy Soldier NM": [ 0, 0, 0 ]
         },
         "enabled": false,
-        "islarge": false
+        "islarge": true
     },
     "Demyx": {
         "obj_id": 2295,
@@ -1062,8 +1062,8 @@
         "size": 3252168,
         "type": "boss",
         "variations": {
-            "Marluxia": [ 0, 0, 1 ],
-            "Marluxia (1)": [ 0, 0, 0 ]
+            "Marluxia (Data)": [ 0, 0, 1 ],
+            "Marluxia": [ 0, 0, 0 ]
         },
         "enabled": true,
         "islarge": false,
@@ -1118,7 +1118,7 @@
             "Hot Rod WI": [ 0, 0, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 63
     },
     "Driller Mole NM": {
@@ -1244,7 +1244,7 @@
             "Dragoon (2)": [ 0, 99, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 43
     },
     "Dancer": {
@@ -1271,7 +1271,7 @@
             "Berserker (1)": [ 1, 0, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 48
     },
     "Gambler": {
@@ -1407,7 +1407,8 @@
         "variations": {
             "Jafar": [ 0, 0, 0 ]
         },
-        "enabled": true,
+        "enabled": false,
+        "replaceallowed": false,
         "islarge": false,
         "enmp_index": 128
     },
@@ -1591,7 +1592,7 @@
             "Mad Ride (1)": [ 1, 0, 0 ]
         },
         "enabled": true,
-        "islarge": false,
+        "islarge": true,
         "enmp_index": 211
     },
     "Magic Phantom": {
@@ -1738,7 +1739,7 @@
         "variations": {
             "Giant Sark": [ 0, 0, 0 ]
         },
-        "enabled": true,
+        "enabled": false,
         "islarge": false,
         "enmp_index": 107
     },
@@ -1862,7 +1863,7 @@
         "variations": {
             "Barbossa": [ 0, 0, 0 ]
         },
-        "enabled": true,
+        "enabled": false,
         "islarge": false,
         "enmp_index": 92
     },
