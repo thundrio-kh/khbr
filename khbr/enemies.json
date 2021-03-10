@@ -1,0 +1,1881 @@
+{
+    "Fat Bandit": {
+        "obj_id": 1,
+        "model": "M_EX060",
+        "size": 551572,
+        "type": "enemy",
+        "variations": {
+            "Fat Bandit": [ 0, 0, 0 ],
+            "Fat Bandit (1)": [ 0, 1, 0 ],
+            "Fat Bandit (2)": [ 1, 0, 0 ],
+            "Fat Bandit (3)": [ 0, 0, 1 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 52
+    },
+    "Hook Bat": {
+        "obj_id": 4,
+        "model": "M_EX520",
+        "size": 296752,
+        "type": "enemy",
+        "variations": {
+            "Hook Bat": [ 1, 20, 0 ],
+            "Hook Bat (1)": [ 0, 0, 0 ],
+            "Hook Bat (2)": [ 0, 20, 0 ],
+            "Hook Bat (3)": [ 1, 0, 0 ]
+        },
+        "enabled": false,
+        "islarge": false
+    },
+    "Surveillance Robot": {
+        "obj_id": 306,
+        "model": "M_EX770",
+        "size": 369292,
+        "type": "enemy",
+        "variations": {
+            "Surveillance Robot": [ 2, 0, 0 ],
+            "Surveillance Robot (1)": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 36
+    },
+    "Trick Ghost": {
+        "obj_id": 2,
+        "model": "M_EX500",
+        "size": 1020248,
+        "type": "enemy",
+        "variations": {
+            "Trick Ghost": [ 0, 0, 0 ],
+            "Trick Ghost (1)": [ 1, 0, 0 ]
+        },
+        "enabled": false,
+        "islarge": false
+    },
+    "Grim Reaper": {
+        "obj_id": 1543,
+        "model": "B_CA050",
+        "size": 1499488,
+        "type": "boss",
+        "variations": {
+            "Grim Reaper I": [ 0, 0, 0 ],
+            "Grim Reaper II": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 143
+    },
+    "Minute Bomb": {
+        "obj_id": 7,
+        "model": "M_EX550",
+        "size": 400712,
+        "type": "enemy",
+        "variations": {
+            "Minute Bomb": [ 0, 0, 0 ],
+            "Minute Bomb (1)": [ 1, 0, 0 ],
+            "Minute Bomb (2)": [ 0, 99, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 57
+    },
+    "Assault Rider": {
+        "obj_id": 9,
+        "model": "M_EX570",
+        "size": 1404236,
+        "type": "enemy",
+        "variations": {
+            "Assault Rider": [ 0, 0, 0 ],
+            "Assault Rider (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 59
+    },
+    "Nightwalker": {
+        "obj_id": 10,
+        "model": "M_EX580",
+        "size": 602620,
+        "type": "enemy",
+        "variations": {
+            "Nightwalker": [ 0, 0, 0 ],
+            "Nightwalker (1)": [ 1, 0, 0 ],
+            "Nightwalker (2)": [ 2, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 60
+    },
+    "Fortuneteller": {
+        "obj_id": 11,
+        "model": "M_EX620",
+        "size": 632600,
+        "type": "enemy",
+        "variations": {
+            "Fortuneteller": [ 0, 0, 0 ],
+            "Fortuneteller (1)": [ 1, 0, 0 ],
+            "Fortuneteller (2)": [ 1, 20, 0 ],
+            "Fortuneteller (3)": [ 0, 20, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 61
+    },
+    "Blizzard Lord": {
+        "obj_id": 1036,
+        "model": "B_AL100_ICE",
+        "size": 1191968,
+        "type": "boss",
+        "variations": {
+            "Blizzard Lord": [ 0, 0, 0 ],
+            "Blizzard Lord (1)": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 113
+    },
+    "Luna Bandit": {
+        "obj_id": 12,
+        "model": "M_EX630",
+        "size": 1436676,
+        "type": "enemy",
+        "variations": {
+            "Luna Bandit": [ 0, 0, 0 ],
+            "Luna Bandit (1)": [ 0, 1, 0 ],
+            "Luna Bandit (2)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 62
+    },
+    "Cannon Gun": {
+        "obj_id": 14,
+        "model": "M_EX650",
+        "size": 280926,
+        "type": "enemy",
+        "variations": {
+            "Cannon Gun": [ 0, 0, 0 ],
+            "Cannon Gun (1)": [ 2, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 64
+    },
+    "Living Bone": {
+        "obj_id": 15,
+        "model": "M_EX670",
+        "size": 1417332,
+        "type": "enemy",
+        "variations": {
+            "Living Bone": [ 0, 0, 0 ],
+            "Living Bone (1)": [ 0, 1, 0 ],
+            "Living Bone (2)": [ 0, 2, 0 ],
+            "Living Bone (3)": [ 1, 1, 0 ],
+            "Living Bone (4)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 7
+    },
+    "Devastator": {
+        "obj_id": 16,
+        "model": "M_EX680",
+        "size": 941282,
+        "type": "enemy",
+        "variations": {
+            "Devastator": [ 0, 0, 0 ],
+            "Devastator (1)": [ 0, 2, 0 ],
+            "Devastator (2)": [ 0, 3, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 65
+    },
+    "Lance Soldier": {
+        "obj_id": 17,
+        "model": "M_EX690",
+        "size": 754672,
+        "type": "enemy",
+        "variations": {
+            "Lance Soldier": [ 0, 0, 0 ],
+            "Lance Soldier (1)": [ 2, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 66
+    },
+    "Driller Mole": {
+        "obj_id": 18,
+        "model": "M_EX700",
+        "size": 469358,
+        "type": "enemy",
+        "variations": {
+            "Driller Mole": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 67
+    },
+    "Hades Escape": {
+        "obj_id": 2066,
+        "model": "B_HE030_HE05",
+        "size": 1422564,
+        "type": "boss",
+        "variations": {
+            "Hades Escape": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 18
+    },
+    "Volcano Lord": {
+        "obj_id": 1035,
+        "model": "B_AL100_FIRE",
+        "size": 1720178,
+        "type": "boss",
+        "variations": {
+            "Volcano Lord": [ 0, 0, 0 ],
+            "Volcano Lord (1)": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 174
+    },
+    "Shan-Yu": {
+        "obj_id": 21,
+        "model": "B_MU100",
+        "size": 2631800,
+        "type": "boss",
+        "variations": {
+            "Shan-Yu": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 70
+    },
+    "Final Xemnas": {
+        "obj_id": 2079,
+        "model": "B_EX170_LAST",
+        "size": 4536360,
+        "type": "boss",
+        "variations": {
+            "Final Xemnas": [ 0, 0, 0 ],
+            "Final Xemnas (1)": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 85
+    },
+    "Soldier NM": {
+        "obj_id": 1838,
+        "model": "M_EX010_NM",
+        "size": 787284,
+        "type": "enemy",
+        "variations": {
+            "Soldier NM": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 32
+    },
+    "Xigbar": {
+        "obj_id": 1570,
+        "model": "B_EX140",
+        "size": 2061008,
+        "type": "boss",
+        "variations": {
+            "Xigbar": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 123
+    },
+    "Bees": {
+        "obj_id": 1573,
+        "model": "F_PO090",
+        "size": 41084,
+        "type": "enemy",
+        "variations": {
+            "Bees": [ 0, 0, 0 ]
+        },
+        "enabled": false,
+        "islarge": false
+    },
+    "Bolt Tower": {
+        "obj_id": 1575,
+        "model": "M_EX800",
+        "size": 337392,
+        "type": "enemy",
+        "variations": {
+            "Bolt Tower": [ 0, 0, 0 ],
+            "Bolt Tower (1)": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 38
+    },
+    "Shadow WI": {
+        "obj_id": 1840,
+        "model": "M_EX020_WI",
+        "size": 477686,
+        "type": "enemy",
+        "variations": {
+            "Shadow WI": [ 0, 0, 0 ],
+            "Shadow WI (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 33
+    },
+    "Twilight Thorn": {
+        "obj_id": 307,
+        "model": "B_EX100",
+        "size": 3691716,
+        "type": "boss",
+        "variations": {
+            "Twilight Thorn": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 81
+    },
+    "Setzer": {
+        "obj_id": 2095,
+        "model": "N_EX600_BTL",
+        "size": 1330656,
+        "type": "boss",
+        "variations": {
+            "Setzer": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 146
+    },
+    "Riku": {
+        "obj_id": 1596,
+        "model": "N_EX940_BTL",
+        "size": 755026,
+        "type": "boss",
+        "variations": {
+            "Riku": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 120
+    },
+    "Xemnas": {
+        "obj_id": 1606,
+        "model": "B_EX170",
+        "size": 2607408,
+        "type": "boss",
+        "variations": {
+            "Xemnas": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 85
+    },
+    "Past Pete": {
+        "obj_id": 1607,
+        "model": "N_WI010_BTL_VS",
+        "size": 896764,
+        "type": "boss",
+        "variations": {
+            "Past Pete": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 106
+    },
+    "Silver Rock": {
+        "obj_id": 71,
+        "model": "M_EX110",
+        "size": 212176,
+        "type": "enemy",
+        "variations": {
+            "Silver Rock": [ 0, 0, 0 ],
+            "Silver Rock (1)": [ 0, 1, 0 ],
+            "Silver Rock (2)": [ 1, 0, 0 ]
+        },
+        "enabled": false,
+        "islarge": false
+    },
+    "Crimson Jazz": {
+        "obj_id": 73,
+        "model": "M_EX130",
+        "size": 290842,
+        "type": "enemy",
+        "variations": {
+            "Crimson Jazz": [ 0, 0, 0 ],
+            "Crimson Jazz (1)": [ 0, 1, 0 ],
+            "Crimson Jazz (2)": [ 1, 0, 0 ],
+            "Crimson Jazz (3)": [ 1, 20, 0 ],
+            "Crimson Jazz (4)": [ 0, 20, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 2
+    },
+    "Air Pirate": {
+        "obj_id": 74,
+        "model": "M_EX210",
+        "size": 603320,
+        "type": "enemy",
+        "variations": {
+            "Air Pirate": [ 0, 0, 0 ],
+            "Air Pirate (1)": [ 1, 0, 0 ],
+            "Air Pirate (2)": [ 0, 1, 0 ],
+            "Air Pirate (3)": [ 1, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 3
+    },
+    "Fiery Globe": {
+        "obj_id": 76,
+        "model": "M_AL020_FIRE",
+        "size": 122640,
+        "type": "enemy",
+        "variations": {
+            "Fiery Globe": [ 1, 0, 0 ],
+            "Fiery Globe (1)": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 5
+    },
+    "Icy Cube": {
+        "obj_id": 77,
+        "model": "M_AL020_ICEE",
+        "size": 189784,
+        "type": "enemy",
+        "variations": {
+            "Icy Cube": [ 0, 0, 0 ],
+            "Icy Cube (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 6
+    },
+    "Axel II": {
+        "obj_id": 81,
+        "model": "B_EX110",
+        "size": 2741104,
+        "type": "boss",
+        "variations": {
+            "Axel II": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 138
+    },
+    "Groundshaker": {
+        "obj_id": 1113,
+        "model": "B_LK120",
+        "size": 3078386,
+        "type": "boss",
+        "variations": {
+            "Groundshaker": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 90
+    },
+    "Armor Xemnas": {
+        "obj_id": 2140,
+        "model": "B_EX260",
+        "size": 1150276,
+        "type": "boss",
+        "variations": {
+            "Armor Xemnas": [ 0, 0, 0 ],
+            "Armor Xemnas (1)": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 147
+    },
+    "Vivi": {
+        "obj_id": 2156,
+        "model": "N_EX610_BTL",
+        "size": 882418,
+        "type": "boss",
+        "variations": {
+            "Vivi": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 145
+    },
+    "Wight Knight NM": {
+        "obj_id": 119,
+        "model": "M_EX200_NM",
+        "size": 554888,
+        "type": "enemy",
+        "variations": {
+            "Wight Knight NM": [ 0, 0, 0 ],
+            "Wight Knight NM (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 8
+    },
+    "Seifer": {
+        "obj_id": 1656,
+        "model": "N_EX570_BTL",
+        "size": 939680,
+        "type": "boss",
+        "variations": {
+            "Seifer": [ 0, 3, 0 ],
+            "Seifer (1)": [ 0, 1, 0 ],
+            "Seifer (2)": [ 0, 2, 0 ],
+            "Seifer (3)": [ 0, 4, 0 ],
+            "Seifer (4)": [ 0, 5, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 125
+    },
+    "Magnum Loader": {
+        "obj_id": 121,
+        "model": "M_EX600",
+        "size": 382620,
+        "type": "enemy",
+        "variations": {
+            "Magnum Loader": [ 0, 0, 0 ],
+            "Magnum Loader (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 10
+    },
+    "Morning Star": {
+        "obj_id": 122,
+        "model": "M_EX710",
+        "size": 990288,
+        "type": "enemy",
+        "variations": {
+            "Morning Star": [ 0, 0, 0 ],
+            "Morning Star (1)": [ 0, 99, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 11
+    },
+    "Tornado Step": {
+        "obj_id": 123,
+        "model": "M_EX730",
+        "size": 673368,
+        "type": "enemy",
+        "variations": {
+            "Tornado Step": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 12
+    },
+    "Crescendo": {
+        "obj_id": 124,
+        "model": "M_EX740",
+        "size": 343104,
+        "type": "enemy",
+        "variations": {
+            "Crescendo": [ 0, 0, 0 ],
+            "Crescendo (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 13
+    },
+    "Oogie Boogie": {
+        "obj_id": 126,
+        "model": "B_NM000",
+        "size": 2223500,
+        "type": "boss",
+        "variations": {
+            "Oogie Boogie": [ 0, 1, 0 ]
+        },
+        "enabled": false,
+        "islarge": false,
+        "enmp_index": 74
+    },
+    "Lock": {
+        "obj_id": 127,
+        "model": "N_NM050_BTL",
+        "size": 599504,
+        "type": "boss",
+        "variations": {
+            "Lock": [ 0, 0, 0 ]
+        },
+        "enabled": false,
+        "replaceallowed": false,
+        "islarge": false,
+        "enmp_index": 15
+    },
+    "Shock": {
+        "obj_id": 128,
+        "model": "N_NM060_BTL",
+        "size": 977672,
+        "type": "boss",
+        "variations": {
+            "Shock": [ 0, 0, 0 ]
+        },
+        "enabled": false,
+        "replaceallowed": false,
+        "islarge": false,
+        "enmp_index": 16
+    },
+    "Barrel": {
+        "obj_id": 129,
+        "model": "N_NM070_BTL",
+        "size": 1006700,
+        "type": "boss",
+        "variations": {
+            "Barrel": [ 0, 0, 0 ]
+        },
+        "enabled": false,
+        "replaceallowed": false,
+        "islarge": false,
+        "enmp_index": 17
+    },
+    "Fiery Globe Treasure Room": {
+        "obj_id": 1670,
+        "model": "M_AL020_FIRE_RAW",
+        "size": 732000,
+        "type": "enemy",
+        "variations": {
+            "Fiery Globe Treasure Room": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 5
+    },
+    "Icy Cube Treasure Room": {
+        "obj_id": 1671,
+        "model": "M_AL020_ICEE_RAW",
+        "size": 872152,
+        "type": "enemy",
+        "variations": {
+            "Icy Cube Treasure Room": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 6
+    },
+    "Shenzie": {
+        "obj_id": 665,
+        "model": "B_LK100_00",
+        "size": 799588,
+        "type": "boss",
+        "variations": {
+            "Shenzie": [ 0, 0, 0 ],
+            "Shenzie (1)": [ 0, 3, 0 ]
+        },
+        "enabled": false,
+        "replaceallowed": false,
+        "islarge": false,
+        "enmp_index": 86
+    },
+    "Banzai": {
+        "obj_id": 666,
+        "model": "B_LK100_10",
+        "size": 699684,
+        "type": "boss",
+        "variations": {
+            "Banzai": [ 0, 0, 0 ],
+            "Banzai (1)": [ 0, 2, 0 ]
+        },
+        "enabled": false,
+        "replaceallowed": false,
+        "islarge": false,
+        "enmp_index": 86
+    },
+    "Ed": {
+        "obj_id": 667,
+        "model": "B_LK100_20",
+        "size": 700580,
+        "type": "boss",
+        "variations": {
+            "Ed": [ 0, 0, 0 ],
+            "Ed (1)": [ 0, 1, 0 ]
+        },
+        "enabled": false,
+        "replaceallowed": false,
+        "islarge": false,
+        "enmp_index": 86
+    },
+    "Nobody from Final Battle v1": {
+        "obj_id": 2202,
+        "model": "EH_G_EX250",
+        "size": 87118,
+        "type": "enemy",
+        "variations": {
+            "Nobody from Final Battle v1": [ 1, 0, 0 ]
+        },
+        "enabled": false,
+        "islarge": false
+    },
+    "Scar": {
+        "obj_id": 668,
+        "model": "B_LK110",
+        "size": 1196392,
+        "type": "boss",
+        "variations": {
+            "Scar": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 89
+    },
+    "Axel I": {
+        "obj_id": 2229,
+        "model": "B_EX110_SKIRMISH",
+        "size": 1879368,
+        "type": "boss",
+        "variations": {
+            "Axel I": [ 0, 1, 0 ]
+        },
+        "enabled": false,
+        "islarge": false
+    },
+    "Sephiroth": {
+        "obj_id": 2230,
+        "model": "N_HB630",
+        "size": 2485952,
+        "type": "boss",
+        "variations": {
+            "Sephiroth": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 130
+    },
+    "Hostile Program": {
+        "obj_id": 1208,
+        "model": "B_TR000",
+        "size": 1276992,
+        "type": "boss",
+        "variations": {
+            "Hostile Program": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 99
+    },
+    "Pete OC I": {
+        "obj_id": 1723,
+        "model": "N_EX760_BTL_MEGARA",
+        "size": 1022804,
+        "type": "boss",
+        "variations": {
+            "Pete OC I": [ 0, 0, 0 ]
+        },
+        "enabled": false,
+        "replaceallowed": false,
+        "islarge": false,
+        "enmp_index": 25
+    },
+    "Pete OC II": {
+        "obj_id": 1724,
+        "model": "N_EX760_BTL_HERCULES",
+        "size": 1022968,
+        "type": "boss",
+        "variations": {
+            "Pete OC II": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 25
+    },
+    "Saix": {
+        "obj_id": 1737,
+        "model": "B_EX160",
+        "size": 3557686,
+        "type": "boss",
+        "variations": {
+            "Saix": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 124
+    },
+    "The Beast": {
+        "obj_id": 718,
+        "model": "P_BB000_BTL",
+        "size": 1657608,
+        "type": "boss",
+        "variations": {
+            "The Beast": [ 0, 0, 0 ]
+        },
+        "enabled": false,
+        "islarge": false,
+        "enmp_index": 72
+    },
+    "Hayner": {
+        "obj_id": 1239,
+        "model": "N_EX500_BTL",
+        "size": 791734,
+        "type": "boss",
+        "variations": {
+            "Hayner": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 140
+    },
+    "Graveyard NM": {
+        "obj_id": 1775,
+        "model": "M_EX790_HALLOWEEN_NM",
+        "size": 616628,
+        "type": "enemy",
+        "variations": {
+            "Graveyard NM": [ 0, 0, 0 ],
+            "Graveyard NM (1)": [ 1, 0, 0 ],
+            "Graveyard NM (2)": [ 2, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 139
+    },
+    "Bolt Tower DC": {
+        "obj_id": 2288,
+        "model": "M_EX800_DC",
+        "size": 669940,
+        "type": "enemy",
+        "variations": {
+            "Bolt Tower DC": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 38
+    },
+    "Sark": {
+        "obj_id": 862,
+        "model": "N_TR010_BTL",
+        "size": 956092,
+        "type": "boss",
+        "variations": {
+            "Sark": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 93
+    },
+    "Thresholder": {
+        "obj_id": 353,
+        "model": "B_BB100",
+        "size": 1426680,
+        "type": "boss",
+        "variations": {
+            "Thresholder": [ 0, 0, 0 ]
+        },
+        "enabled": false,
+        "islarge": false,
+        "enmp_index": 73
+    },
+    "Toy Soldier NM": {
+        "obj_id": 1777,
+        "model": "M_EX790_CHRISTMAS_NM",
+        "size": 614828,
+        "type": "enemy",
+        "variations": {
+            "Toy Soldier NM": [ 0, 0, 0 ]
+        },
+        "enabled": false,
+        "islarge": false
+    },
+    "Demyx": {
+        "obj_id": 2295,
+        "model": "B_EX120_HB",
+        "size": 3527072,
+        "type": "boss",
+        "variations": {
+            "Demyx": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 83
+    },
+    "Leon": {
+        "obj_id": 2296,
+        "model": "N_HB530_BTL2",
+        "size": 1278612,
+        "type": "boss",
+        "variations": {
+            "Leon": [ 0, 1, 0 ],
+            "Leon (1)": [ 0, 3, 0 ],
+            "Leon (2)": [ 0, 4, 0 ],
+            "Leon (3)": [ 0, 2, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 159
+    },
+    "Cloud": {
+        "obj_id": 2297,
+        "model": "N_HB550_BTL2",
+        "size": 1642502,
+        "type": "boss",
+        "variations": {
+            "Cloud": [ 0, 1, 0 ],
+            "Cloud (1)": [ 0, 2, 0 ],
+            "Cloud (2)": [ 0, 3, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 160
+    },
+    "Shadow Stalker": {
+        "obj_id": 355,
+        "model": "B_BB120",
+        "size": 887908,
+        "type": "boss",
+        "variations": {
+            "Shadow Stalker": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 22
+    },
+    "Tifa": {
+        "obj_id": 2298,
+        "model": "N_HB570_BTL2",
+        "size": 1053854,
+        "type": "boss",
+        "variations": {
+            "Tifa": [ 0, 1, 0 ],
+            "Tifa (1)": [ 0, 2, 0 ],
+            "Tifa (2)": [ 0, 3, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 161
+    },
+    "Yuffie": {
+        "obj_id": 2299,
+        "model": "N_HB580_BTL2",
+        "size": 755432,
+        "type": "boss",
+        "variations": {
+            "Yuffie": [ 0, 1, 0 ],
+            "Yuffie (1)": [ 0, 3, 0 ],
+            "Yuffie (2)": [ 0, 4, 0 ],
+            "Yuffie (3)": [ 0, 2, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 162
+    },
+    "Storm Rider": {
+        "obj_id": 357,
+        "model": "B_MU120",
+        "size": 2006116,
+        "type": "boss",
+        "variations": {
+            "Storm Rider": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 24
+    },
+    "Hades Cups": {
+        "obj_id": 2318,
+        "model": "B_HE030_CLSM",
+        "size": 2347708,
+        "type": "boss",
+        "variations": {
+            "Hades Cups": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 156
+    },
+    "Pete Cups": {
+        "obj_id": 2319,
+        "model": "N_EX760_BTL_CLSM",
+        "size": 1022460,
+        "type": "boss",
+        "variations": {
+            "Pete Cups": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 158
+    },
+    "Hercules": {
+        "obj_id": 2320,
+        "model": "N_HE010_BTL_CLSM",
+        "size": 2280296,
+        "type": "boss",
+        "variations": {
+            "Hercules": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 157
+    },
+    "Demyx OC": {
+        "obj_id": 795,
+        "model": "B_EX120",
+        "size": 2132546,
+        "type": "boss",
+        "variations": {
+            "Demyx OC": [ 0, 0, 0 ]
+        },
+        "enabled": false,
+        "islarge": false
+    },
+    "Rapid Thruster AL": {
+        "obj_id": 1889,
+        "model": "M_EX660_AL",
+        "size": 73460,
+        "type": "enemy",
+        "variations": {
+            "Rapid Thruster AL": [ 0, 12, 0 ],
+            "Rapid Thruster AL (1)": [ 0, 13, 0 ],
+            "Rapid Thruster AL (2)": [ 0, 7, 0 ],
+            "Rapid Thruster AL (3)": [ 0, 14, 0 ],
+            "Rapid Thruster AL (4)": [ 0, 11, 0 ],
+            "Rapid Thruster AL (5)": [ 0, 5, 0 ],
+            "Rapid Thruster AL (6)": [ 0, 6, 0 ],
+            "Rapid Thruster AL (7)": [ 0, 12, 17 ],
+            "Rapid Thruster AL (8)": [ 0, 1, 0 ],
+            "Rapid Thruster AL (9)": [ 0, 3, 0 ],
+            "Rapid Thruster AL (10)": [ 0, 4, 0 ],
+            "Rapid Thruster AL (11)": [ 0, 9, 0 ],
+            "Rapid Thruster AL (12)": [ 0, 14, 30 ],
+            "Rapid Thruster AL (13)": [ 0, 8, 30 ],
+            "Rapid Thruster AL (14)": [ 0, 4, 30 ],
+            "Rapid Thruster AL (15)": [ 0, 12, 32 ],
+            "Rapid Thruster AL (16)": [ 0, 6, 31 ],
+            "Rapid Thruster AL (17)": [ 0, 10, 31 ],
+            "Rapid Thruster AL (18)": [ 0, 2, 32 ],
+            "Rapid Thruster AL (19)": [ 0, 2, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 37
+    },
+    "Marluxia": {
+        "obj_id": 2339,
+        "model": "N_CM000_BTL",
+        "size": 3252168,
+        "type": "boss",
+        "variations": {
+            "Marluxia": [ 0, 0, 1 ],
+            "Marluxia (1)": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 191
+    },
+    "Aeroplane WI": {
+        "obj_id": 1828,
+        "model": "M_EX540_WI",
+        "size": 245100,
+        "type": "enemy",
+        "variations": {
+            "Aeroplane WI": [ 0, 0, 0 ],
+            "Aeroplane WI (1)": [ 1, 0, 0 ],
+            "Aeroplane WI (2)": [ 2, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 56
+    },
+    "Minute Bomb WI": {
+        "obj_id": 1829,
+        "model": "M_EX550_WI",
+        "size": 400712,
+        "type": "enemy",
+        "variations": {
+            "Minute Bomb WI": [ 0, 0, 0 ],
+            "Minute Bomb WI (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 57
+    },
+    "Hammer Frame WI": {
+        "obj_id": 1830,
+        "model": "M_EX560_WI",
+        "size": 535724,
+        "type": "enemy",
+        "variations": {
+            "Hammer Frame WI": [ 0, 0, 0 ],
+            "Hammer Frame WI (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 58
+    },
+    "Hot Rod WI": {
+        "obj_id": 1831,
+        "model": "M_EX640_WI",
+        "size": 871428,
+        "type": "enemy",
+        "variations": {
+            "Hot Rod WI": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 63
+    },
+    "Driller Mole NM": {
+        "obj_id": 1833,
+        "model": "M_EX700_NM",
+        "size": 469870,
+        "type": "enemy",
+        "variations": {
+            "Driller Mole NM": [ 0, 0, 0 ],
+            "Driller Mole NM (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 67
+    },
+    "Shadow": {
+        "obj_id": 302,
+        "model": "M_EX020",
+        "size": 477686,
+        "type": "enemy",
+        "variations": {
+            "Shadow": [ 0, 0, 0 ],
+            "Shadow (1)": [ 0, 1, 0 ],
+            "Shadow (2)": [ 1, 0, 0 ],
+            "Shadow (3)": [ 0, 99, 0 ],
+            "Shadow (4)": [ 1, 99, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 33
+    },
+    "Large Body": {
+        "obj_id": 303,
+        "model": "M_EX050",
+        "size": 961136,
+        "type": "enemy",
+        "variations": {
+            "Large Body": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 34
+    },
+    "Armored Knight": {
+        "obj_id": 305,
+        "model": "M_EX760",
+        "size": 462904,
+        "type": "enemy",
+        "variations": {
+            "Armored Knight": [ 0, 0, 0 ],
+            "Armored Knight (1)": [ 0, 90, 0 ],
+            "Armored Knight (2)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 35
+    },
+    "Rapid Thruster": {
+        "obj_id": 304,
+        "model": "M_EX660",
+        "size": 251012,
+        "type": "enemy",
+        "variations": {
+            "Rapid Thruster": [ 1, 20, 0 ],
+            "Rapid Thruster (1)": [ 0, 20, 0 ],
+            "Rapid Thruster (2)": [ 0, 0, 0 ],
+            "Rapid Thruster (3)": [ 1, 0, 0 ],
+            "Rapid Thruster (4)": [ 2, 0, 0 ],
+            "Rapid Thruster (5)": [ 0, 90, 0 ],
+            "Rapid Thruster (6)": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 37
+    },
+    "Vexen": {
+        "obj_id": 2355,
+        "model": "N_CM040_BTL",
+        "size": 4708244,
+        "type": "boss",
+        "variations": {
+            "Vexen": [ 0, 1, 1 ],
+            "Vexen (1)": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 177
+    },
+    "Assassin": {
+        "obj_id": 309,
+        "model": "M_EX900",
+        "size": 1531924,
+        "type": "enemy",
+        "variations": {
+            "Assassin": [ 0, 0, 0 ],
+            "Assassin (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 44
+    },
+    "Lexaeus": {
+        "obj_id": 2357,
+        "model": "N_CM020_BTL",
+        "size": 2359752,
+        "type": "boss",
+        "variations": {
+            "Lexaeus (Data)": [ 0, 0, 1 ],
+            "Lexaeus": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 190
+    },
+    "Dragoon": {
+        "obj_id": 308,
+        "model": "M_EX890",
+        "size": 1209752,
+        "type": "enemy",
+        "variations": {
+            "Dragoon": [ 0, 0, 0 ],
+            "Dragoon (1)": [ 1, 0, 0 ],
+            "Dragoon (2)": [ 0, 99, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 43
+    },
+    "Dancer": {
+        "obj_id": 312,
+        "model": "M_EX930",
+        "size": 951352,
+        "type": "enemy",
+        "variations": {
+            "Dancer": [ 0, 0, 0 ],
+            "Dancer (1)": [ 1, 0, 0 ],
+            "Dancer (2)": [ 0, 99, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 47
+    },
+    "Berserker": {
+        "obj_id": 313,
+        "model": "M_EX940",
+        "size": 848210,
+        "type": "enemy",
+        "variations": {
+            "Berserker": [ 0, 0, 0 ],
+            "Berserker (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 48
+    },
+    "Gambler": {
+        "obj_id": 314,
+        "model": "M_EX950",
+        "size": 1672788,
+        "type": "enemy",
+        "variations": {
+            "Gambler": [ 0, 0, 0 ],
+            "Gambler (1)": [ 0, 1, 0 ],
+            "Gambler (2)": [ 0, 5, 0 ],
+            "Gambler (3)": [ 1, 5, 0 ],
+            "Gambler (4)": [ 0, 90, 0 ],
+            "Gambler (5)": [ 1, 0, 0 ],
+            "Gambler (6)": [ 0, 99, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 49
+    },
+    "Rapid Thruster WI": {
+        "obj_id": 1843,
+        "model": "M_EX500_NM",
+        "size": 1020248,
+        "type": "enemy",
+        "variations": {
+            "Rapid Thruster WI": [ 0, 0, 0 ],
+            "Rapid Thruster WI (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 37
+    },
+    "Samurai": {
+        "obj_id": 310,
+        "model": "M_EX910",
+        "size": 791312,
+        "type": "enemy",
+        "variations": {
+            "Samurai": [ 0, 0, 0 ],
+            "Samurai (1)": [ 0, 99, 0 ],
+            "Samurai (2)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 45
+    },
+    "Creeper": {
+        "obj_id": 317,
+        "model": "M_EX880",
+        "size": 563598,
+        "type": "enemy",
+        "variations": {
+            "Creeper": [ 0, 0, 0 ],
+            "Creeper (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 51
+    },
+    "Dusk": {
+        "obj_id": 318,
+        "model": "M_EX990",
+        "size": 1013040,
+        "type": "enemy",
+        "variations": {
+            "Dusk": [ 0, 0, 0 ],
+            "Dusk (1)": [ 1, 0, 0 ],
+            "Dusk (2)": [ 0, 99, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 40
+    },
+    "Sniper": {
+        "obj_id": 311,
+        "model": "M_EX920",
+        "size": 547096,
+        "type": "enemy",
+        "variations": {
+            "Sniper": [ 0, 0, 0 ],
+            "Sniper (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 46
+    },
+    "Sorcerer": {
+        "obj_id": 316,
+        "model": "M_EX870",
+        "size": 1741312,
+        "type": "enemy",
+        "variations": {
+            "Sorcerer": [ 0, 0, 0 ],
+            "Sorcerer (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 50
+    },
+    "Roxas": {
+        "obj_id": 2385,
+        "model": "B_EX390",
+        "size": 3373592,
+        "type": "boss",
+        "variations": {
+            "Roxas": [ 0, 0, 0 ],
+            "Roxas (Data)": [ 0, 0, 1 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 218
+    },
+    "Strafer": {
+        "obj_id": 1875,
+        "model": "M_EX610_RAW",
+        "size": 363704,
+        "type": "enemy",
+        "variations": {
+            "Strafer": [ 0, 0, 10 ],
+            "Strafer (1)": [ 1, 0, 10 ],
+            "Strafer (2)": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 94
+    },
+    "Jafar": {
+        "obj_id": 348,
+        "model": "B_AL020",
+        "size": 1017964,
+        "type": "boss",
+        "variations": {
+            "Jafar": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 128
+    },
+    "Hades I": {
+        "obj_id": 349,
+        "model": "B_HE030_PART",
+        "size": 929856,
+        "type": "boss",
+        "variations": {
+            "Hades I": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 18
+    },
+    "Hades II": {
+        "obj_id": 350,
+        "model": "B_HE030",
+        "size": 2351052,
+        "type": "boss",
+        "variations": {
+            "Hades II": [ 0, 1, 0 ],
+            "Hades II (1)": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 18
+    },
+    "Cerberus": {
+        "obj_id": 351,
+        "model": "B_HE020",
+        "size": 2494584,
+        "type": "boss",
+        "variations": {
+            "Cerberus": [ 0, 0, 0 ],
+            "Cerberus (1)": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 176
+    },
+    "Crimson Jazz AL": {
+        "obj_id": 1888,
+        "model": "M_EX130_AL",
+        "size": 285258,
+        "type": "enemy",
+        "variations": {
+            "Crimson Jazz AL": [ 0, 8, 1 ],
+            "Crimson Jazz AL (1)": [ 0, 12, 0 ],
+            "Crimson Jazz AL (2)": [ 0, 4, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 2
+    },
+    "Dark Thorn": {
+        "obj_id": 354,
+        "model": "B_BB110",
+        "size": 2177276,
+        "type": "boss",
+        "variations": {
+            "Dark Thorn": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 21
+    },
+    "Larxene": {
+        "obj_id": 2402,
+        "model": "B_EX400",
+        "size": 4443212,
+        "type": "boss",
+        "variations": {
+            "Larxene (Data)": [ 0, 0, 1 ],
+            "Larxene": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 192
+    },
+    "Beffudler": {
+        "obj_id": 2404,
+        "model": "M_EX520_HB",
+        "size": 298036,
+        "type": "enemy",
+        "variations": {
+            "Beffudler": [ 0, 0, 0 ],
+            "Beffudler (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 201
+    },
+    "Hook Bat AL": {
+        "obj_id": 1887,
+        "model": "M_EX520_AL",
+        "size": 292560,
+        "type": "enemy",
+        "variations": {
+            "Hook Bat AL": [ 0, 3, 0 ],
+            "Hook Bat AL (1)": [ 0, 9, 0 ],
+            "Hook Bat AL (2)": [ 0, 11, 0 ],
+            "Hook Bat AL (3)": [ 0, 1, 0 ],
+            "Hook Bat AL (4)": [ 0, 10, 0 ],
+            "Hook Bat AL (5)": [ 0, 14, 0 ],
+            "Hook Bat AL (6)": [ 0, 12, 0 ],
+            "Hook Bat AL (7)": [ 0, 13, 0 ],
+            "Hook Bat AL (8)": [ 0, 7, 0 ],
+            "Hook Bat AL (9)": [ 0, 3, 20 ],
+            "Hook Bat AL (10)": [ 0, 4, 0 ],
+            "Hook Bat AL (11)": [ 0, 15, 30 ],
+            "Hook Bat AL (12)": [ 0, 1, 31 ],
+            "Hook Bat AL (13)": [ 0, 3, 30 ],
+            "Hook Bat AL (14)": [ 0, 8, 32 ],
+            "Hook Bat AL (15)": [ 0, 13, 31 ],
+            "Hook Bat AL (16)": [ 0, 2, 0 ],
+            "Hook Bat AL (17)": [ 0, 5, 0 ],
+            "Hook Bat AL (18)": [ 0, 6, 0 ]
+        },
+        "enabled": false,
+        "islarge": false
+    },
+    "Hydra": {
+        "obj_id": 352,
+        "model": "B_HE100",
+        "size": 2417732,
+        "type": "boss",
+        "variations": {
+            "Hydra": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 20
+    },
+    "Illuminator": {
+        "obj_id": 358,
+        "model": "B_CA000",
+        "size": 258308,
+        "type": "boss",
+        "variations": {
+            "Illuminator": [ 0, 0, 0 ]
+        },
+        "enabled": false,
+        "replaceallowed": false,
+        "islarge": false,
+        "enmp_index": 91
+    },
+    "Iron Hammer": {
+        "obj_id": 2405,
+        "model": "M_EX560_HB",
+        "size": 537416,
+        "type": "enemy",
+        "variations": {
+            "Iron Hammer": [ 0, 0, 0 ],
+            "Iron Hammer (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 208
+    },
+    "Lance Warrior": {
+        "obj_id": 2409,
+        "model": "M_EX690_HB",
+        "size": 755608,
+        "type": "enemy",
+        "variations": {
+            "Lance Warrior": [ 0, 0, 0 ],
+            "Lance Warrior (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 209
+    },
+    "Mad Ride": {
+        "obj_id": 2406,
+        "model": "M_EX640_HB",
+        "size": 871788,
+        "type": "enemy",
+        "variations": {
+            "Mad Ride": [ 0, 0, 0 ],
+            "Mad Ride (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 211
+    },
+    "Magic Phantom": {
+        "obj_id": 2403,
+        "model": "M_EX500_HB",
+        "size": 1020616,
+        "type": "enemy",
+        "variations": {
+            "Magic Phantom": [ 0, 0, 0 ],
+            "Magic Phantom (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 207
+    },
+    "Necromancer": {
+        "obj_id": 2411,
+        "model": "M_EX720_HB",
+        "size": 698584,
+        "type": "enemy",
+        "variations": {
+            "Necromancer": [ 0, 0, 0 ],
+            "Necromancer (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 210
+    },
+    "Aerial Viking": {
+        "obj_id": 2413,
+        "model": "M_EX210_HB",
+        "size": 603180,
+        "type": "enemy",
+        "variations": {
+            "Aerial Viking": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 203
+    },
+    "Pete TR": {
+        "obj_id": 359,
+        "model": "N_EX760_BTL",
+        "size": 968770,
+        "type": "boss",
+        "variations": {
+            "Pete TR": [ 0, 4, 0 ]
+        },
+        "enabled": false,
+        "islarge": false
+    },
+    "Runemaster": {
+        "obj_id": 2414,
+        "model": "M_EX530_HB",
+        "size": 352940,
+        "type": "enemy",
+        "variations": {
+            "Runemaster": [ 0, 0, 0 ],
+            "Runemaster (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 206
+    },
+    "Spring Metal": {
+        "obj_id": 2412,
+        "model": "M_EX120_HB",
+        "size": 186364,
+        "type": "enemy",
+        "variations": {
+            "Spring Metal": [ 0, 0, 0 ],
+            "Spring Metal (1)": [ 1, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 205
+    },
+    "Terra": {
+        "obj_id": 2415,
+        "model": "B_EX420",
+        "size": 2854684,
+        "type": "boss",
+        "variations": {
+            "Terra": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 220
+    },
+    "Zexion": {
+        "obj_id": 2427,
+        "model": "B_EX370",
+        "size": 1939060,
+        "type": "boss",
+        "variations": {
+            "Zexion (Data)": [ 0, 0, 1 ],
+            "Zexion": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 193
+    },
+    "Data Axel": {
+        "obj_id": 2500,
+        "model": "B_EX110_LV99",
+        "size": 2742180,
+        "type": "boss",
+        "variations": {
+            "Data Axel": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 221
+    },
+    "Data Xigbar": {
+        "obj_id": 2501,
+        "model": "B_EX140_LV99",
+        "size": 557240,
+        "type": "boss",
+        "variations": {
+            "Data Xigbar": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 227
+    },
+    "Data Saix": {
+        "obj_id": 2502,
+        "model": "B_EX160_LV99",
+        "size": 3559034,
+        "type": "boss",
+        "variations": {
+            "Data Saix": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 228
+    },
+    "Giant Sark": {
+        "obj_id": 964,
+        "model": "N_TR010_BTL_L",
+        "size": 933824,
+        "type": "boss",
+        "variations": {
+            "Giant Sark": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 107
+    },
+    "Data Luxord": {
+        "obj_id": 2504,
+        "model": "B_EX150_LV99",
+        "size": 3430732,
+        "type": "boss",
+        "variations": {
+            "Data Luxord": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 219
+    },
+    "Data Xemnas": {
+        "obj_id": 2505,
+        "model": "B_EX170_LV99",
+        "size": 2607964,
+        "type": "boss",
+        "variations": {
+            "Data Xemnas": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 215
+    },
+    "Data Final Xemnas": {
+        "obj_id": 2506,
+        "model": "B_EX170_LAST_LV99",
+        "size": 4538944,
+        "type": "boss",
+        "variations": {
+            "Data Final Xemnas": [ 0, 0, 0 ],
+            "Data Final Xemnas (1)": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 215
+    },
+    "Data Xaldin": {
+        "obj_id": 2507,
+        "model": "B_EX130_LV99",
+        "size": 2741808,
+        "type": "boss",
+        "variations": {
+            "Data Xaldin": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 222
+    },
+    "Data Demyx": {
+        "obj_id": 2508,
+        "model": "B_EX120_HB_LV99",
+        "size": 3528528,
+        "type": "boss",
+        "variations": {
+            "Data Demyx": [ 0, 1, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 216
+    },
+    "Prison Keeper": {
+        "obj_id": 1486,
+        "model": "B_NM100",
+        "size": 2314684,
+        "type": "boss",
+        "variations": {
+            "Prison Keeper": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 109
+    },
+    "The Experiment": {
+        "obj_id": 1488,
+        "model": "B_NM110",
+        "size": 3549978,
+        "type": "boss",
+        "variations": {
+            "The Experiment": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 110
+    },
+    "Xaldin": {
+        "obj_id": 997,
+        "model": "B_EX130",
+        "size": 2741336,
+        "type": "boss",
+        "variations": {
+            "Xaldin": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 82
+    },
+    "Soldier": {
+        "obj_id": 301,
+        "model": "M_EX010",
+        "size": 787284,
+        "type": "enemy",
+        "variations": {
+            "Soldier": [ 0, 0, 0 ],
+            "Soldier (1)": [ 0, 1, 0 ],
+            "Soldier (2)": [ 1, 0, 0 ],
+            "Soldier (3)": [ 0, 99, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 32
+    },
+    "Barbossa": {
+        "obj_id": 1015,
+        "model": "B_CA010",
+        "size": 3175016,
+        "type": "boss",
+        "variations": {
+            "Barbossa": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 92
+    },
+    "Luxord": {
+        "obj_id": 1528,
+        "model": "B_EX150",
+        "size": 3429892,
+        "type": "boss",
+        "variations": {
+            "Luxord": [ 0, 0, 0 ]
+        },
+        "enabled": true,
+        "islarge": false,
+        "enmp_index": 84
+    }
+}

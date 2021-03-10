@@ -1,0 +1,18 @@
+fixing the formatting of locations to be more readable after a json.dump
+
+>>> x = open("locations_new.json").read()
+KeyboardInterrupt
+>>> xx = x.replace(",\n                                ",", ")
+KeyboardInterrupt
+>>> xxx = xx.replace("\n                            }"," }")
+KeyboardInterrupt
+>>> xxxx = xxx.replace("{\n                                ","{ ")
+
+
+
+for enemies
+
+>>> x = open("enemies.json").read()
+>>> xx = x.replace(",\n                ", ", ")
+>>> xxx = xx.replace("\n            ]", " ]")
+>>> xxxx = xxx.replace("[\n                ", "[ ")
