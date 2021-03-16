@@ -16,3 +16,11 @@ for enemies
 >>> xx = x.replace(",\n                ", ", ")
 >>> xxx = xx.replace("\n            ]", " ]")
 >>> xxxx = xxx.replace("[\n                ", "[ ")
+
+
+
+add isboss to location entities
+add a bunch of different stuff to the enemies, make each variation a dict with "vars" and the ability for other params like nightmare
+   when the dict is gotten, merge the parent and the kid (so if nightmare in parent)
+msn needs to be listed in the enemies
+hp and level and spawnlimiter needs to be tracked in the enemies.json
