@@ -5,14 +5,24 @@
         "size": 551572,
         "type": "enemy",
         "variations": {
-            "Fat Bandit": [ 0, 0, 0 ],
-            "Fat Bandit (1)": [ 0, 1, 0 ],
-            "Fat Bandit (2)": [ 1, 0, 0 ],
-            "Fat Bandit (3)": [ 0, 0, 1 ]
+            "Fat Bandit": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Fat Bandit (1)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Fat Bandit (2)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Fat Bandit (3)": {
+                "vars": [ 0, 0, 1 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 52
+        "enmp_index": 52,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hook Bat": {
         "obj_id": 4,
@@ -20,13 +30,23 @@
         "size": 296752,
         "type": "enemy",
         "variations": {
-            "Hook Bat": [ 1, 20, 0 ],
-            "Hook Bat (1)": [ 0, 0, 0 ],
-            "Hook Bat (2)": [ 0, 20, 0 ],
-            "Hook Bat (3)": [ 1, 0, 0 ]
+            "Hook Bat": {
+                "vars": [ 1, 20, 0 ]
+            },
+            "Hook Bat (1)": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Hook Bat (2)": {
+                "vars": [ 0, 20, 0 ]
+            },
+            "Hook Bat (3)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Surveillance Robot": {
         "obj_id": 306,
@@ -34,12 +54,18 @@
         "size": 369292,
         "type": "enemy",
         "variations": {
-            "Surveillance Robot": [ 2, 0, 0 ],
-            "Surveillance Robot (1)": [ 0, 0, 0 ]
+            "Surveillance Robot": {
+                "vars": [ 2, 0, 0 ]
+            },
+            "Surveillance Robot (1)": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 36
+        "enmp_index": 36,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Trick Ghost": {
         "obj_id": 2,
@@ -47,11 +73,17 @@
         "size": 1020248,
         "type": "enemy",
         "variations": {
-            "Trick Ghost": [ 0, 0, 0 ],
-            "Trick Ghost (1)": [ 1, 0, 0 ]
+            "Trick Ghost": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Trick Ghost (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Grim Reaper": {
         "obj_id": 1543,
@@ -59,12 +91,19 @@
         "size": 1499488,
         "type": "boss",
         "variations": {
-            "Grim Reaper I": [ 0, 0, 0 ],
-            "Grim Reaper II": [ 0, 1, 0 ]
+            "Grim Reaper I": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Grim Reaper II": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 143
+        "enmp_index": 143,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Minute Bomb": {
         "obj_id": 7,
@@ -72,13 +111,21 @@
         "size": 400712,
         "type": "enemy",
         "variations": {
-            "Minute Bomb": [ 0, 0, 0 ],
-            "Minute Bomb (1)": [ 1, 0, 0 ],
-            "Minute Bomb (2)": [ 0, 99, 0 ]
+            "Minute Bomb": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Minute Bomb (1)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Minute Bomb (2)": {
+                "vars": [ 0, 99, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 57
+        "enmp_index": 57,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Assault Rider": {
         "obj_id": 9,
@@ -86,12 +133,21 @@
         "size": 1404236,
         "type": "enemy",
         "variations": {
-            "Assault Rider": [ 0, 0, 0 ],
-            "Assault Rider (1)": [ 1, 0, 0 ]
+            "Assault Rider": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Assault Rider (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 59
+        "enmp_index": 59,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Nightwalker": {
         "obj_id": 10,
@@ -99,13 +155,21 @@
         "size": 602620,
         "type": "enemy",
         "variations": {
-            "Nightwalker": [ 0, 0, 0 ],
-            "Nightwalker (1)": [ 1, 0, 0 ],
-            "Nightwalker (2)": [ 2, 0, 0 ]
+            "Nightwalker": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Nightwalker (1)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Nightwalker (2)": {
+                "vars": [ 2, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 60
+        "enmp_index": 60,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Fortuneteller": {
         "obj_id": 11,
@@ -113,14 +177,24 @@
         "size": 632600,
         "type": "enemy",
         "variations": {
-            "Fortuneteller": [ 0, 0, 0 ],
-            "Fortuneteller (1)": [ 1, 0, 0 ],
-            "Fortuneteller (2)": [ 1, 20, 0 ],
-            "Fortuneteller (3)": [ 0, 20, 0 ]
+            "Fortuneteller": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Fortuneteller (1)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Fortuneteller (2)": {
+                "vars": [ 1, 20, 0 ]
+            },
+            "Fortuneteller (3)": {
+                "vars": [ 0, 20, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 61
+        "enmp_index": 61,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Blizzard Lord": {
         "obj_id": 1036,
@@ -128,12 +202,19 @@
         "size": 1191968,
         "type": "boss",
         "variations": {
-            "Blizzard Lord": [ 0, 0, 0 ],
-            "Blizzard Lord (Cups)": [ 0, 1, 0 ]
+            "Blizzard Lord": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Blizzard Lord (Cups)": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 113
+        "enmp_index": 113,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Luna Bandit": {
         "obj_id": 12,
@@ -141,13 +222,21 @@
         "size": 1436676,
         "type": "enemy",
         "variations": {
-            "Luna Bandit": [ 0, 0, 0 ],
-            "Luna Bandit (1)": [ 0, 1, 0 ],
-            "Luna Bandit (2)": [ 1, 0, 0 ]
+            "Luna Bandit": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Luna Bandit (1)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Luna Bandit (2)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 62
+        "enmp_index": 62,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Cannon Gun": {
         "obj_id": 14,
@@ -155,12 +244,18 @@
         "size": 280926,
         "type": "enemy",
         "variations": {
-            "Cannon Gun": [ 0, 0, 0 ],
-            "Cannon Gun (1)": [ 2, 1, 0 ]
+            "Cannon Gun": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Cannon Gun (1)": {
+                "vars": [ 2, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 64
+        "enmp_index": 64,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Living Bone": {
         "obj_id": 15,
@@ -168,15 +263,30 @@
         "size": 1417332,
         "type": "enemy",
         "variations": {
-            "Living Bone": [ 0, 0, 0 ],
-            "Living Bone (1)": [ 0, 1, 0 ],
-            "Living Bone (2)": [ 0, 2, 0 ],
-            "Living Bone (3)": [ 1, 1, 0 ],
-            "Living Bone (4)": [ 1, 0, 0 ]
+            "Living Bone": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Living Bone (1)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Living Bone (2)": {
+                "vars": [ 0, 2, 0 ]
+            },
+            "Living Bone (3)": {
+                "vars": [ 1, 1, 0 ]
+            },
+            "Living Bone (4)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 7
+        "enmp_index": 7,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Devastator": {
         "obj_id": 16,
@@ -184,13 +294,24 @@
         "size": 941282,
         "type": "enemy",
         "variations": {
-            "Devastator": [ 0, 0, 0 ],
-            "Devastator (1)": [ 0, 2, 0 ],
-            "Devastator (2)": [ 0, 3, 0 ]
+            "Devastator": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Devastator (1)": {
+                "vars": [ 0, 2, 0 ]
+            },
+            "Devastator (2)": {
+                "vars": [ 0, 3, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 65
+        "enmp_index": 65,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Lance Soldier": {
         "obj_id": 17,
@@ -198,12 +319,18 @@
         "size": 754672,
         "type": "enemy",
         "variations": {
-            "Lance Soldier": [ 0, 0, 0 ],
-            "Lance Soldier (1)": [ 2, 0, 0 ]
+            "Lance Soldier": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Lance Soldier (1)": {
+                "vars": [ 2, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 66
+        "enmp_index": 66,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Driller Mole": {
         "obj_id": 18,
@@ -211,11 +338,15 @@
         "size": 469358,
         "type": "enemy",
         "variations": {
-            "Driller Mole": [ 0, 0, 0 ]
+            "Driller Mole": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 67
+        "enmp_index": 67,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hades Escape": {
         "obj_id": 2066,
@@ -223,11 +354,16 @@
         "size": 1422564,
         "type": "boss",
         "variations": {
-            "Hades Escape": [ 0, 0, 0 ]
+            "Hades Escape": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 18
+        "enmp_index": 18,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Volcano Lord": {
         "obj_id": 1035,
@@ -235,12 +371,19 @@
         "size": 1720178,
         "type": "boss",
         "variations": {
-            "Volcano Lord": [ 0, 0, 0 ],
-            "Volcano Lord (Cups)": [ 0, 1, 0 ]
+            "Volcano Lord": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Volcano Lord (Cups)": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 174
+        "enmp_index": 174,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Shan-Yu": {
         "obj_id": 21,
@@ -248,11 +391,16 @@
         "size": 2631800,
         "type": "boss",
         "variations": {
-            "Shan-Yu": [ 0, 0, 0 ]
+            "Shan-Yu": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 70
+        "enmp_index": 70,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Final Xemnas": {
         "obj_id": 2079,
@@ -260,12 +408,19 @@
         "size": 4536360,
         "type": "boss",
         "variations": {
-            "Final Xemnas": [ 0, 0, 0 ],
-            "Final Xemnas (1)": [ 0, 1, 0 ]
+            "Final Xemnas": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Final Xemnas (1)": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 85
+        "enmp_index": 85,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Soldier NM": {
         "obj_id": 1838,
@@ -273,11 +428,15 @@
         "size": 787284,
         "type": "enemy",
         "variations": {
-            "Soldier NM": [ 0, 0, 0 ]
+            "Soldier NM": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 32
+        "enmp_index": 32,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Xigbar": {
         "obj_id": 1570,
@@ -285,11 +444,16 @@
         "size": 2061008,
         "type": "boss",
         "variations": {
-            "Xigbar": [ 0, 0, 0 ]
+            "Xigbar": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 123
+        "enmp_index": 123,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Bees": {
         "obj_id": 1573,
@@ -297,10 +461,14 @@
         "size": 41084,
         "type": "enemy",
         "variations": {
-            "Bees": [ 0, 0, 0 ]
+            "Bees": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Bolt Tower": {
         "obj_id": 1575,
@@ -308,12 +476,21 @@
         "size": 337392,
         "type": "enemy",
         "variations": {
-            "Bolt Tower": [ 0, 0, 0 ],
-            "Bolt Tower (1)": [ 0, 1, 0 ]
+            "Bolt Tower": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Bolt Tower (1)": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 38
+        "enmp_index": 38,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Shadow WI": {
         "obj_id": 1840,
@@ -321,12 +498,18 @@
         "size": 477686,
         "type": "enemy",
         "variations": {
-            "Shadow WI": [ 0, 0, 0 ],
-            "Shadow WI (1)": [ 1, 0, 0 ]
+            "Shadow WI": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Shadow WI (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 33
+        "enmp_index": 33,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Twilight Thorn": {
         "obj_id": 307,
@@ -334,11 +517,16 @@
         "size": 3691716,
         "type": "boss",
         "variations": {
-            "Twilight Thorn": [ 0, 0, 0 ]
+            "Twilight Thorn": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 81
+        "enmp_index": 81,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Setzer": {
         "obj_id": 2095,
@@ -346,11 +534,16 @@
         "size": 1330656,
         "type": "boss",
         "variations": {
-            "Setzer": [ 0, 0, 0 ]
+            "Setzer": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 146
+        "enmp_index": 146,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Riku": {
         "obj_id": 1596,
@@ -358,11 +551,16 @@
         "size": 755026,
         "type": "boss",
         "variations": {
-            "Riku": [ 0, 0, 0 ]
+            "Riku": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 120
+        "enmp_index": 120,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Xemnas": {
         "obj_id": 1606,
@@ -370,11 +568,16 @@
         "size": 2607408,
         "type": "boss",
         "variations": {
-            "Xemnas": [ 0, 0, 0 ]
+            "Xemnas": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 85
+        "enmp_index": 85,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Past Pete": {
         "obj_id": 1607,
@@ -382,11 +585,16 @@
         "size": 896764,
         "type": "boss",
         "variations": {
-            "Past Pete": [ 0, 1, 0 ]
+            "Past Pete": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 106
+        "enmp_index": 106,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Silver Rock": {
         "obj_id": 71,
@@ -394,12 +602,20 @@
         "size": 212176,
         "type": "enemy",
         "variations": {
-            "Silver Rock": [ 0, 0, 0 ],
-            "Silver Rock (1)": [ 0, 1, 0 ],
-            "Silver Rock (2)": [ 1, 0, 0 ]
+            "Silver Rock": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Silver Rock (1)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Silver Rock (2)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Crimson Jazz": {
         "obj_id": 73,
@@ -407,15 +623,30 @@
         "size": 290842,
         "type": "enemy",
         "variations": {
-            "Crimson Jazz": [ 0, 0, 0 ],
-            "Crimson Jazz (1)": [ 0, 1, 0 ],
-            "Crimson Jazz (2)": [ 1, 0, 0 ],
-            "Crimson Jazz (3)": [ 1, 20, 0 ],
-            "Crimson Jazz (4)": [ 0, 20, 0 ]
+            "Crimson Jazz": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Crimson Jazz (1)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Crimson Jazz (2)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Crimson Jazz (3)": {
+                "vars": [ 1, 20, 0 ]
+            },
+            "Crimson Jazz (4)": {
+                "vars": [ 0, 20, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 2
+        "enmp_index": 2,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Air Pirate": {
         "obj_id": 74,
@@ -423,14 +654,24 @@
         "size": 603320,
         "type": "enemy",
         "variations": {
-            "Air Pirate": [ 0, 0, 0 ],
-            "Air Pirate (1)": [ 1, 0, 0 ],
-            "Air Pirate (2)": [ 0, 1, 0 ],
-            "Air Pirate (3)": [ 1, 1, 0 ]
+            "Air Pirate": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Air Pirate (1)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Air Pirate (2)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Air Pirate (3)": {
+                "vars": [ 1, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 3
+        "enmp_index": 3,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Fiery Globe": {
         "obj_id": 76,
@@ -438,12 +679,18 @@
         "size": 122640,
         "type": "enemy",
         "variations": {
-            "Fiery Globe": [ 1, 0, 0 ],
-            "Fiery Globe (1)": [ 0, 0, 0 ]
+            "Fiery Globe": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Fiery Globe (1)": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 5
+        "enmp_index": 5,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Icy Cube": {
         "obj_id": 77,
@@ -451,12 +698,18 @@
         "size": 189784,
         "type": "enemy",
         "variations": {
-            "Icy Cube": [ 0, 0, 0 ],
-            "Icy Cube (1)": [ 1, 0, 0 ]
+            "Icy Cube": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Icy Cube (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 6
+        "enmp_index": 6,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Axel II": {
         "obj_id": 81,
@@ -464,11 +717,16 @@
         "size": 2741104,
         "type": "boss",
         "variations": {
-            "Axel II": [ 0, 0, 0 ]
+            "Axel II": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 138
+        "enmp_index": 138,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Groundshaker": {
         "obj_id": 1113,
@@ -476,11 +734,16 @@
         "size": 3078386,
         "type": "boss",
         "variations": {
-            "Groundshaker": [ 0, 0, 0 ]
+            "Groundshaker": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 90
+        "enmp_index": 90,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Armor Xemnas": {
         "obj_id": 2140,
@@ -488,12 +751,19 @@
         "size": 1150276,
         "type": "boss",
         "variations": {
-            "Armor Xemnas II": [ 0, 0, 0 ],
-            "Armor Xemnas I": [ 0, 1, 0 ]
+            "Armor Xemnas II": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Armor Xemnas I": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 147
+        "enmp_index": 147,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Vivi": {
         "obj_id": 2156,
@@ -501,11 +771,16 @@
         "size": 882418,
         "type": "boss",
         "variations": {
-            "Vivi": [ 0, 1, 0 ]
+            "Vivi": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 145
+        "enmp_index": 145,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Wight Knight NM": {
         "obj_id": 119,
@@ -513,12 +788,18 @@
         "size": 554888,
         "type": "enemy",
         "variations": {
-            "Wight Knight NM": [ 0, 0, 0 ],
-            "Wight Knight NM (1)": [ 1, 0, 0 ]
+            "Wight Knight NM": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Wight Knight NM (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 8
+        "enmp_index": 8,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Seifer": {
         "obj_id": 1656,
@@ -526,15 +807,28 @@
         "size": 939680,
         "type": "boss",
         "variations": {
-            "Seifer": [ 0, 3, 0 ],
-            "Seifer (1)": [ 0, 1, 0 ],
-            "Seifer (2)": [ 0, 2, 0 ],
-            "Seifer (3)": [ 0, 4, 0 ],
-            "Seifer (4)": [ 0, 5, 0 ]
+            "Seifer": {
+                "vars": [ 0, 3, 0 ]
+            },
+            "Seifer (1)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Seifer (2)": {
+                "vars": [ 0, 2, 0 ]
+            },
+            "Seifer (3)": {
+                "vars": [ 0, 4, 0 ]
+            },
+            "Seifer (4)": {
+                "vars": [ 0, 5, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 125
+        "enmp_index": 125,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Magnum Loader": {
         "obj_id": 121,
@@ -542,12 +836,18 @@
         "size": 382620,
         "type": "enemy",
         "variations": {
-            "Magnum Loader": [ 0, 0, 0 ],
-            "Magnum Loader (1)": [ 1, 0, 0 ]
+            "Magnum Loader": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Magnum Loader (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 10
+        "enmp_index": 10,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Morning Star": {
         "obj_id": 122,
@@ -555,12 +855,21 @@
         "size": 990288,
         "type": "enemy",
         "variations": {
-            "Morning Star": [ 0, 0, 0 ],
-            "Morning Star (1)": [ 0, 99, 0 ]
+            "Morning Star": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Morning Star (1)": {
+                "vars": [ 0, 99, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 11
+        "enmp_index": 11,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Tornado Step": {
         "obj_id": 123,
@@ -568,11 +877,15 @@
         "size": 673368,
         "type": "enemy",
         "variations": {
-            "Tornado Step": [ 0, 0, 0 ]
+            "Tornado Step": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 12
+        "enmp_index": 12,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Crescendo": {
         "obj_id": 124,
@@ -580,12 +893,18 @@
         "size": 343104,
         "type": "enemy",
         "variations": {
-            "Crescendo": [ 0, 0, 0 ],
-            "Crescendo (1)": [ 1, 0, 0 ]
+            "Crescendo": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Crescendo (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 13
+        "enmp_index": 13,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Oogie Boogie": {
         "obj_id": 126,
@@ -593,11 +912,16 @@
         "size": 2223500,
         "type": "boss",
         "variations": {
-            "Oogie Boogie": [ 0, 1, 0 ]
+            "Oogie Boogie": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 74
+        "enmp_index": 74,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Lock": {
         "obj_id": 127,
@@ -605,12 +929,17 @@
         "size": 599504,
         "type": "boss",
         "variations": {
-            "Lock": [ 0, 0, 0 ]
+            "Lock": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
         "replaceallowed": false,
-        "islarge": false,
-        "enmp_index": 15
+        "enmp_index": 15,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Shock": {
         "obj_id": 128,
@@ -618,12 +947,17 @@
         "size": 977672,
         "type": "boss",
         "variations": {
-            "Shock": [ 0, 0, 0 ]
+            "Shock": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
         "replaceallowed": false,
-        "islarge": false,
-        "enmp_index": 16
+        "enmp_index": 16,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Barrel": {
         "obj_id": 129,
@@ -631,12 +965,17 @@
         "size": 1006700,
         "type": "boss",
         "variations": {
-            "Barrel": [ 0, 0, 0 ]
+            "Barrel": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
         "replaceallowed": false,
-        "islarge": false,
-        "enmp_index": 17
+        "enmp_index": 17,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Fiery Globe Treasure Room": {
         "obj_id": 1670,
@@ -644,11 +983,15 @@
         "size": 732000,
         "type": "enemy",
         "variations": {
-            "Fiery Globe Treasure Room": [ 0, 0, 0 ]
+            "Fiery Globe Treasure Room": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 5
+        "enmp_index": 5,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Icy Cube Treasure Room": {
         "obj_id": 1671,
@@ -656,11 +999,15 @@
         "size": 872152,
         "type": "enemy",
         "variations": {
-            "Icy Cube Treasure Room": [ 0, 0, 0 ]
+            "Icy Cube Treasure Room": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 6
+        "enmp_index": 6,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Shenzie": {
         "obj_id": 665,
@@ -668,13 +1015,20 @@
         "size": 799588,
         "type": "boss",
         "variations": {
-            "Shenzie": [ 0, 0, 0 ],
-            "Shenzie (1)": [ 0, 3, 0 ]
+            "Shenzie": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Shenzie (1)": {
+                "vars": [ 0, 3, 0 ]
+            }
         },
         "enabled": false,
         "replaceallowed": false,
-        "islarge": false,
-        "enmp_index": 86
+        "enmp_index": 86,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Banzai": {
         "obj_id": 666,
@@ -682,13 +1036,20 @@
         "size": 699684,
         "type": "boss",
         "variations": {
-            "Banzai": [ 0, 0, 0 ],
-            "Banzai (1)": [ 0, 2, 0 ]
+            "Banzai": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Banzai (1)": {
+                "vars": [ 0, 2, 0 ]
+            }
         },
         "enabled": false,
         "replaceallowed": false,
-        "islarge": false,
-        "enmp_index": 86
+        "enmp_index": 86,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Ed": {
         "obj_id": 667,
@@ -696,13 +1057,20 @@
         "size": 700580,
         "type": "boss",
         "variations": {
-            "Ed": [ 0, 0, 0 ],
-            "Ed (1)": [ 0, 1, 0 ]
+            "Ed": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Ed (1)": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": false,
         "replaceallowed": false,
-        "islarge": false,
-        "enmp_index": 86
+        "enmp_index": 86,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Nobody from Final Battle v1": {
         "obj_id": 2202,
@@ -710,10 +1078,14 @@
         "size": 87118,
         "type": "enemy",
         "variations": {
-            "Nobody from Final Battle v1": [ 1, 0, 0 ]
+            "Nobody from Final Battle v1": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Scar": {
         "obj_id": 668,
@@ -721,11 +1093,16 @@
         "size": 1196392,
         "type": "boss",
         "variations": {
-            "Scar": [ 0, 0, 0 ]
+            "Scar": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 89
+        "enmp_index": 89,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Axel I": {
         "obj_id": 2229,
@@ -733,10 +1110,15 @@
         "size": 1879368,
         "type": "boss",
         "variations": {
-            "Axel I": [ 0, 1, 0 ]
+            "Axel I": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Sephiroth": {
         "obj_id": 2230,
@@ -744,11 +1126,16 @@
         "size": 2485952,
         "type": "boss",
         "variations": {
-            "Sephiroth": [ 0, 0, 0 ]
+            "Sephiroth": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 130
+        "enmp_index": 130,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hostile Program": {
         "obj_id": 1208,
@@ -756,11 +1143,16 @@
         "size": 1276992,
         "type": "boss",
         "variations": {
-            "Hostile Program": [ 0, 0, 0 ]
+            "Hostile Program": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 99
+        "enmp_index": 99,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Pete OC I": {
         "obj_id": 1723,
@@ -768,12 +1160,17 @@
         "size": 1022804,
         "type": "boss",
         "variations": {
-            "Pete OC I": [ 0, 0, 0 ]
+            "Pete OC I": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
         "replaceallowed": false,
-        "islarge": false,
-        "enmp_index": 25
+        "enmp_index": 25,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Pete OC II": {
         "obj_id": 1724,
@@ -781,11 +1178,16 @@
         "size": 1022968,
         "type": "boss",
         "variations": {
-            "Pete OC II": [ 0, 0, 0 ]
+            "Pete OC II": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 25
+        "enmp_index": 25,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Saix": {
         "obj_id": 1737,
@@ -793,11 +1195,16 @@
         "size": 3557686,
         "type": "boss",
         "variations": {
-            "Saix": [ 0, 0, 0 ]
+            "Saix": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 124
+        "enmp_index": 124,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "The Beast": {
         "obj_id": 718,
@@ -805,11 +1212,16 @@
         "size": 1657608,
         "type": "boss",
         "variations": {
-            "The Beast": [ 0, 0, 0 ]
+            "The Beast": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 72
+        "enmp_index": 72,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hayner": {
         "obj_id": 1239,
@@ -817,11 +1229,16 @@
         "size": 791734,
         "type": "boss",
         "variations": {
-            "Hayner": [ 0, 0, 0 ]
+            "Hayner": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 140
+        "enmp_index": 140,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Graveyard NM": {
         "obj_id": 1775,
@@ -829,13 +1246,24 @@
         "size": 616628,
         "type": "enemy",
         "variations": {
-            "Graveyard NM": [ 0, 0, 0 ],
-            "Graveyard NM (1)": [ 1, 0, 0 ],
-            "Graveyard NM (2)": [ 2, 0, 0 ]
+            "Graveyard NM": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Graveyard NM (1)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Graveyard NM (2)": {
+                "vars": [ 2, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 139
+        "enmp_index": 139,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Bolt Tower DC": {
         "obj_id": 2288,
@@ -843,11 +1271,18 @@
         "size": 669940,
         "type": "enemy",
         "variations": {
-            "Bolt Tower DC": [ 0, 0, 0 ]
+            "Bolt Tower DC": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 38
+        "enmp_index": 38,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Sark": {
         "obj_id": 862,
@@ -855,11 +1290,16 @@
         "size": 956092,
         "type": "boss",
         "variations": {
-            "Sark": [ 0, 0, 0 ]
+            "Sark": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 93
+        "enmp_index": 93,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Thresholder": {
         "obj_id": 353,
@@ -867,11 +1307,16 @@
         "size": 1426680,
         "type": "boss",
         "variations": {
-            "Thresholder": [ 0, 0, 0 ]
+            "Thresholder": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 73
+        "enmp_index": 73,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Toy Soldier NM": {
         "obj_id": 1777,
@@ -879,10 +1324,17 @@
         "size": 614828,
         "type": "enemy",
         "variations": {
-            "Toy Soldier NM": [ 0, 0, 0 ]
+            "Toy Soldier NM": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": true
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Demyx": {
         "obj_id": 2295,
@@ -890,11 +1342,16 @@
         "size": 3527072,
         "type": "boss",
         "variations": {
-            "Demyx": [ 0, 1, 0 ]
+            "Demyx": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 83
+        "enmp_index": 83,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Leon": {
         "obj_id": 2296,
@@ -902,14 +1359,25 @@
         "size": 1278612,
         "type": "boss",
         "variations": {
-            "Leon": [ 0, 1, 0 ],
-            "Leon (1)": [ 0, 3, 0 ],
-            "Leon (2)": [ 0, 4, 0 ],
-            "Leon (3)": [ 0, 2, 0 ]
+            "Leon": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Leon (1)": {
+                "vars": [ 0, 3, 0 ]
+            },
+            "Leon (2)": {
+                "vars": [ 0, 4, 0 ]
+            },
+            "Leon (3)": {
+                "vars": [ 0, 2, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 159
+        "enmp_index": 159,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Cloud": {
         "obj_id": 2297,
@@ -917,13 +1385,22 @@
         "size": 1642502,
         "type": "boss",
         "variations": {
-            "Cloud": [ 0, 1, 0 ],
-            "Cloud (1)": [ 0, 2, 0 ],
-            "Cloud (2)": [ 0, 3, 0 ]
+            "Cloud": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Cloud (1)": {
+                "vars": [ 0, 2, 0 ]
+            },
+            "Cloud (2)": {
+                "vars": [ 0, 3, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 160
+        "enmp_index": 160,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Shadow Stalker": {
         "obj_id": 355,
@@ -931,11 +1408,16 @@
         "size": 887908,
         "type": "boss",
         "variations": {
-            "Shadow Stalker": [ 0, 0, 0 ]
+            "Shadow Stalker": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 22
+        "enmp_index": 22,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Tifa": {
         "obj_id": 2298,
@@ -943,13 +1425,22 @@
         "size": 1053854,
         "type": "boss",
         "variations": {
-            "Tifa": [ 0, 1, 0 ],
-            "Tifa (1)": [ 0, 2, 0 ],
-            "Tifa (2)": [ 0, 3, 0 ]
+            "Tifa": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Tifa (1)": {
+                "vars": [ 0, 2, 0 ]
+            },
+            "Tifa (2)": {
+                "vars": [ 0, 3, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 161
+        "enmp_index": 161,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Yuffie": {
         "obj_id": 2299,
@@ -957,14 +1448,25 @@
         "size": 755432,
         "type": "boss",
         "variations": {
-            "Yuffie": [ 0, 1, 0 ],
-            "Yuffie (1)": [ 0, 3, 0 ],
-            "Yuffie (2)": [ 0, 4, 0 ],
-            "Yuffie (3)": [ 0, 2, 0 ]
+            "Yuffie": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Yuffie (1)": {
+                "vars": [ 0, 3, 0 ]
+            },
+            "Yuffie (2)": {
+                "vars": [ 0, 4, 0 ]
+            },
+            "Yuffie (3)": {
+                "vars": [ 0, 2, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 162
+        "enmp_index": 162,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Storm Rider": {
         "obj_id": 357,
@@ -972,11 +1474,16 @@
         "size": 2006116,
         "type": "boss",
         "variations": {
-            "Storm Rider": [ 0, 0, 0 ]
+            "Storm Rider": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 24
+        "enmp_index": 24,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hades Cups": {
         "obj_id": 2318,
@@ -984,11 +1491,16 @@
         "size": 2347708,
         "type": "boss",
         "variations": {
-            "Hades Cups": [ 0, 0, 0 ]
+            "Hades Cups": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 156
+        "enmp_index": 156,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Pete Cups": {
         "obj_id": 2319,
@@ -996,11 +1508,16 @@
         "size": 1022460,
         "type": "boss",
         "variations": {
-            "Pete Cups": [ 0, 0, 0 ]
+            "Pete Cups": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 158
+        "enmp_index": 158,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hercules": {
         "obj_id": 2320,
@@ -1008,11 +1525,16 @@
         "size": 2280296,
         "type": "boss",
         "variations": {
-            "Hercules": [ 0, 1, 0 ]
+            "Hercules": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 157
+        "enmp_index": 157,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Demyx OC": {
         "obj_id": 795,
@@ -1020,10 +1542,15 @@
         "size": 2132546,
         "type": "boss",
         "variations": {
-            "Demyx OC": [ 0, 0, 0 ]
+            "Demyx OC": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Rapid Thruster AL": {
         "obj_id": 1889,
@@ -1031,30 +1558,72 @@
         "size": 73460,
         "type": "enemy",
         "variations": {
-            "Rapid Thruster AL": [ 0, 12, 0 ],
-            "Rapid Thruster AL (1)": [ 0, 13, 0 ],
-            "Rapid Thruster AL (2)": [ 0, 7, 0 ],
-            "Rapid Thruster AL (3)": [ 0, 14, 0 ],
-            "Rapid Thruster AL (4)": [ 0, 11, 0 ],
-            "Rapid Thruster AL (5)": [ 0, 5, 0 ],
-            "Rapid Thruster AL (6)": [ 0, 6, 0 ],
-            "Rapid Thruster AL (7)": [ 0, 12, 17 ],
-            "Rapid Thruster AL (8)": [ 0, 1, 0 ],
-            "Rapid Thruster AL (9)": [ 0, 3, 0 ],
-            "Rapid Thruster AL (10)": [ 0, 4, 0 ],
-            "Rapid Thruster AL (11)": [ 0, 9, 0 ],
-            "Rapid Thruster AL (12)": [ 0, 14, 30 ],
-            "Rapid Thruster AL (13)": [ 0, 8, 30 ],
-            "Rapid Thruster AL (14)": [ 0, 4, 30 ],
-            "Rapid Thruster AL (15)": [ 0, 12, 32 ],
-            "Rapid Thruster AL (16)": [ 0, 6, 31 ],
-            "Rapid Thruster AL (17)": [ 0, 10, 31 ],
-            "Rapid Thruster AL (18)": [ 0, 2, 32 ],
-            "Rapid Thruster AL (19)": [ 0, 2, 0 ]
+            "Rapid Thruster AL": {
+                "vars": [ 0, 12, 0 ]
+            },
+            "Rapid Thruster AL (1)": {
+                "vars": [ 0, 13, 0 ]
+            },
+            "Rapid Thruster AL (2)": {
+                "vars": [ 0, 7, 0 ]
+            },
+            "Rapid Thruster AL (3)": {
+                "vars": [ 0, 14, 0 ]
+            },
+            "Rapid Thruster AL (4)": {
+                "vars": [ 0, 11, 0 ]
+            },
+            "Rapid Thruster AL (5)": {
+                "vars": [ 0, 5, 0 ]
+            },
+            "Rapid Thruster AL (6)": {
+                "vars": [ 0, 6, 0 ]
+            },
+            "Rapid Thruster AL (7)": {
+                "vars": [ 0, 12, 17 ]
+            },
+            "Rapid Thruster AL (8)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Rapid Thruster AL (9)": {
+                "vars": [ 0, 3, 0 ]
+            },
+            "Rapid Thruster AL (10)": {
+                "vars": [ 0, 4, 0 ]
+            },
+            "Rapid Thruster AL (11)": {
+                "vars": [ 0, 9, 0 ]
+            },
+            "Rapid Thruster AL (12)": {
+                "vars": [ 0, 14, 30 ]
+            },
+            "Rapid Thruster AL (13)": {
+                "vars": [ 0, 8, 30 ]
+            },
+            "Rapid Thruster AL (14)": {
+                "vars": [ 0, 4, 30 ]
+            },
+            "Rapid Thruster AL (15)": {
+                "vars": [ 0, 12, 32 ]
+            },
+            "Rapid Thruster AL (16)": {
+                "vars": [ 0, 6, 31 ]
+            },
+            "Rapid Thruster AL (17)": {
+                "vars": [ 0, 10, 31 ]
+            },
+            "Rapid Thruster AL (18)": {
+                "vars": [ 0, 2, 32 ]
+            },
+            "Rapid Thruster AL (19)": {
+                "vars": [ 0, 2, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 37
+        "enmp_index": 37,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Marluxia": {
         "obj_id": 2339,
@@ -1062,12 +1631,19 @@
         "size": 3252168,
         "type": "boss",
         "variations": {
-            "Marluxia (Data)": [ 0, 0, 1 ],
-            "Marluxia": [ 0, 0, 0 ]
+            "Marluxia (Data)": {
+                "vars": [ 0, 0, 1 ]
+            },
+            "Marluxia": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 191
+        "enmp_index": 191,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Aeroplane WI": {
         "obj_id": 1828,
@@ -1075,13 +1651,21 @@
         "size": 245100,
         "type": "enemy",
         "variations": {
-            "Aeroplane WI": [ 0, 0, 0 ],
-            "Aeroplane WI (1)": [ 1, 0, 0 ],
-            "Aeroplane WI (2)": [ 2, 0, 0 ]
+            "Aeroplane WI": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Aeroplane WI (1)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Aeroplane WI (2)": {
+                "vars": [ 2, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 56
+        "enmp_index": 56,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Minute Bomb WI": {
         "obj_id": 1829,
@@ -1089,12 +1673,18 @@
         "size": 400712,
         "type": "enemy",
         "variations": {
-            "Minute Bomb WI": [ 0, 0, 0 ],
-            "Minute Bomb WI (1)": [ 1, 0, 0 ]
+            "Minute Bomb WI": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Minute Bomb WI (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 57
+        "enmp_index": 57,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hammer Frame WI": {
         "obj_id": 1830,
@@ -1102,12 +1692,18 @@
         "size": 535724,
         "type": "enemy",
         "variations": {
-            "Hammer Frame WI": [ 0, 0, 0 ],
-            "Hammer Frame WI (1)": [ 1, 0, 0 ]
+            "Hammer Frame WI": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Hammer Frame WI (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 58
+        "enmp_index": 58,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hot Rod WI": {
         "obj_id": 1831,
@@ -1115,11 +1711,18 @@
         "size": 871428,
         "type": "enemy",
         "variations": {
-            "Hot Rod WI": [ 0, 0, 0 ]
+            "Hot Rod WI": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 63
+        "enmp_index": 63,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Driller Mole NM": {
         "obj_id": 1833,
@@ -1127,12 +1730,18 @@
         "size": 469870,
         "type": "enemy",
         "variations": {
-            "Driller Mole NM": [ 0, 0, 0 ],
-            "Driller Mole NM (1)": [ 1, 0, 0 ]
+            "Driller Mole NM": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Driller Mole NM (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 67
+        "enmp_index": 67,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Shadow": {
         "obj_id": 302,
@@ -1140,15 +1749,27 @@
         "size": 477686,
         "type": "enemy",
         "variations": {
-            "Shadow": [ 0, 0, 0 ],
-            "Shadow (1)": [ 0, 1, 0 ],
-            "Shadow (2)": [ 1, 0, 0 ],
-            "Shadow (3)": [ 0, 99, 0 ],
-            "Shadow (4)": [ 1, 99, 0 ]
+            "Shadow": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Shadow (1)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Shadow (2)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Shadow (3)": {
+                "vars": [ 0, 99, 0 ]
+            },
+            "Shadow (4)": {
+                "vars": [ 1, 99, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 33
+        "enmp_index": 33,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Large Body": {
         "obj_id": 303,
@@ -1156,11 +1777,15 @@
         "size": 961136,
         "type": "enemy",
         "variations": {
-            "Large Body": [ 0, 0, 0 ]
+            "Large Body": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 34
+        "enmp_index": 34,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Armored Knight": {
         "obj_id": 305,
@@ -1168,13 +1793,21 @@
         "size": 462904,
         "type": "enemy",
         "variations": {
-            "Armored Knight": [ 0, 0, 0 ],
-            "Armored Knight (1)": [ 0, 90, 0 ],
-            "Armored Knight (2)": [ 1, 0, 0 ]
+            "Armored Knight": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Armored Knight (1)": {
+                "vars": [ 0, 90, 0 ]
+            },
+            "Armored Knight (2)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 35
+        "enmp_index": 35,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Rapid Thruster": {
         "obj_id": 304,
@@ -1182,17 +1815,33 @@
         "size": 251012,
         "type": "enemy",
         "variations": {
-            "Rapid Thruster": [ 1, 20, 0 ],
-            "Rapid Thruster (1)": [ 0, 20, 0 ],
-            "Rapid Thruster (2)": [ 0, 0, 0 ],
-            "Rapid Thruster (3)": [ 1, 0, 0 ],
-            "Rapid Thruster (4)": [ 2, 0, 0 ],
-            "Rapid Thruster (5)": [ 0, 90, 0 ],
-            "Rapid Thruster (6)": [ 0, 1, 0 ]
+            "Rapid Thruster": {
+                "vars": [ 1, 20, 0 ]
+            },
+            "Rapid Thruster (1)": {
+                "vars": [ 0, 20, 0 ]
+            },
+            "Rapid Thruster (2)": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Rapid Thruster (3)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Rapid Thruster (4)": {
+                "vars": [ 2, 0, 0 ]
+            },
+            "Rapid Thruster (5)": {
+                "vars": [ 0, 90, 0 ]
+            },
+            "Rapid Thruster (6)": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 37
+        "enmp_index": 37,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Vexen": {
         "obj_id": 2355,
@@ -1200,12 +1849,19 @@
         "size": 4708244,
         "type": "boss",
         "variations": {
-            "Vexen": [ 0, 1, 1 ],
-            "Vexen (1)": [ 0, 1, 0 ]
+            "Vexen": {
+                "vars": [ 0, 1, 1 ]
+            },
+            "Vexen (1)": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 177
+        "enmp_index": 177,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Assassin": {
         "obj_id": 309,
@@ -1213,12 +1869,18 @@
         "size": 1531924,
         "type": "enemy",
         "variations": {
-            "Assassin": [ 0, 0, 0 ],
-            "Assassin (1)": [ 1, 0, 0 ]
+            "Assassin": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Assassin (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 44
+        "enmp_index": 44,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Lexaeus": {
         "obj_id": 2357,
@@ -1226,12 +1888,19 @@
         "size": 2359752,
         "type": "boss",
         "variations": {
-            "Lexaeus (Data)": [ 0, 0, 1 ],
-            "Lexaeus": [ 0, 0, 0 ]
+            "Lexaeus (Data)": {
+                "vars": [ 0, 0, 1 ]
+            },
+            "Lexaeus": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 190
+        "enmp_index": 190,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Dragoon": {
         "obj_id": 308,
@@ -1239,13 +1908,24 @@
         "size": 1209752,
         "type": "enemy",
         "variations": {
-            "Dragoon": [ 0, 0, 0 ],
-            "Dragoon (1)": [ 1, 0, 0 ],
-            "Dragoon (2)": [ 0, 99, 0 ]
+            "Dragoon": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Dragoon (1)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Dragoon (2)": {
+                "vars": [ 0, 99, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 43
+        "enmp_index": 43,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Dancer": {
         "obj_id": 312,
@@ -1253,13 +1933,21 @@
         "size": 951352,
         "type": "enemy",
         "variations": {
-            "Dancer": [ 0, 0, 0 ],
-            "Dancer (1)": [ 1, 0, 0 ],
-            "Dancer (2)": [ 0, 99, 0 ]
+            "Dancer": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Dancer (1)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Dancer (2)": {
+                "vars": [ 0, 99, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 47
+        "enmp_index": 47,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Berserker": {
         "obj_id": 313,
@@ -1267,12 +1955,21 @@
         "size": 848210,
         "type": "enemy",
         "variations": {
-            "Berserker": [ 0, 0, 0 ],
-            "Berserker (1)": [ 1, 0, 0 ]
+            "Berserker": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Berserker (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 48
+        "enmp_index": 48,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Gambler": {
         "obj_id": 314,
@@ -1280,17 +1977,33 @@
         "size": 1672788,
         "type": "enemy",
         "variations": {
-            "Gambler": [ 0, 0, 0 ],
-            "Gambler (1)": [ 0, 1, 0 ],
-            "Gambler (2)": [ 0, 5, 0 ],
-            "Gambler (3)": [ 1, 5, 0 ],
-            "Gambler (4)": [ 0, 90, 0 ],
-            "Gambler (5)": [ 1, 0, 0 ],
-            "Gambler (6)": [ 0, 99, 0 ]
+            "Gambler": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Gambler (1)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Gambler (2)": {
+                "vars": [ 0, 5, 0 ]
+            },
+            "Gambler (3)": {
+                "vars": [ 1, 5, 0 ]
+            },
+            "Gambler (4)": {
+                "vars": [ 0, 90, 0 ]
+            },
+            "Gambler (5)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Gambler (6)": {
+                "vars": [ 0, 99, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 49
+        "enmp_index": 49,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Rapid Thruster WI": {
         "obj_id": 1843,
@@ -1298,12 +2011,18 @@
         "size": 1020248,
         "type": "enemy",
         "variations": {
-            "Rapid Thruster WI": [ 0, 0, 0 ],
-            "Rapid Thruster WI (1)": [ 1, 0, 0 ]
+            "Rapid Thruster WI": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Rapid Thruster WI (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 37
+        "enmp_index": 37,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Samurai": {
         "obj_id": 310,
@@ -1311,13 +2030,21 @@
         "size": 791312,
         "type": "enemy",
         "variations": {
-            "Samurai": [ 0, 0, 0 ],
-            "Samurai (1)": [ 0, 99, 0 ],
-            "Samurai (2)": [ 1, 0, 0 ]
+            "Samurai": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Samurai (1)": {
+                "vars": [ 0, 99, 0 ]
+            },
+            "Samurai (2)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 45
+        "enmp_index": 45,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Creeper": {
         "obj_id": 317,
@@ -1325,12 +2052,18 @@
         "size": 563598,
         "type": "enemy",
         "variations": {
-            "Creeper": [ 0, 0, 0 ],
-            "Creeper (1)": [ 1, 0, 0 ]
+            "Creeper": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Creeper (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 51
+        "enmp_index": 51,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Dusk": {
         "obj_id": 318,
@@ -1338,13 +2071,21 @@
         "size": 1013040,
         "type": "enemy",
         "variations": {
-            "Dusk": [ 0, 0, 0 ],
-            "Dusk (1)": [ 1, 0, 0 ],
-            "Dusk (2)": [ 0, 99, 0 ]
+            "Dusk": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Dusk (1)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Dusk (2)": {
+                "vars": [ 0, 99, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 40
+        "enmp_index": 40,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Sniper": {
         "obj_id": 311,
@@ -1352,12 +2093,18 @@
         "size": 547096,
         "type": "enemy",
         "variations": {
-            "Sniper": [ 0, 0, 0 ],
-            "Sniper (1)": [ 1, 0, 0 ]
+            "Sniper": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Sniper (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 46
+        "enmp_index": 46,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Sorcerer": {
         "obj_id": 316,
@@ -1365,12 +2112,18 @@
         "size": 1741312,
         "type": "enemy",
         "variations": {
-            "Sorcerer": [ 0, 0, 0 ],
-            "Sorcerer (1)": [ 1, 0, 0 ]
+            "Sorcerer": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Sorcerer (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 50
+        "enmp_index": 50,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Roxas": {
         "obj_id": 2385,
@@ -1378,12 +2131,19 @@
         "size": 3373592,
         "type": "boss",
         "variations": {
-            "Roxas": [ 0, 0, 0 ],
-            "Roxas (Data)": [ 0, 0, 1 ]
+            "Roxas": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Roxas (Data)": {
+                "vars": [ 0, 0, 1 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 218
+        "enmp_index": 218,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Strafer": {
         "obj_id": 1875,
@@ -1391,13 +2151,21 @@
         "size": 363704,
         "type": "enemy",
         "variations": {
-            "Strafer": [ 0, 0, 10 ],
-            "Strafer (1)": [ 1, 0, 10 ],
-            "Strafer (2)": [ 0, 0, 0 ]
+            "Strafer": {
+                "vars": [ 0, 0, 10 ]
+            },
+            "Strafer (1)": {
+                "vars": [ 1, 0, 10 ]
+            },
+            "Strafer (2)": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 94
+        "enmp_index": 94,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Jafar": {
         "obj_id": 348,
@@ -1405,12 +2173,17 @@
         "size": 1017964,
         "type": "boss",
         "variations": {
-            "Jafar": [ 0, 0, 0 ]
+            "Jafar": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
         "replaceallowed": false,
-        "islarge": false,
-        "enmp_index": 128
+        "enmp_index": 128,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hades I": {
         "obj_id": 349,
@@ -1418,11 +2191,16 @@
         "size": 929856,
         "type": "boss",
         "variations": {
-            "Hades I": [ 0, 0, 0 ]
+            "Hades I": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 18
+        "enmp_index": 18,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hades II": {
         "obj_id": 350,
@@ -1430,12 +2208,19 @@
         "size": 2351052,
         "type": "boss",
         "variations": {
-            "Hades II": [ 0, 1, 0 ],
-            "Hades II (1)": [ 0, 0, 0 ]
+            "Hades II": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Hades II (1)": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 18
+        "enmp_index": 18,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Cerberus": {
         "obj_id": 351,
@@ -1443,12 +2228,19 @@
         "size": 2494584,
         "type": "boss",
         "variations": {
-            "Cerberus": [ 0, 0, 0 ],
-            "Cerberus (1)": [ 0, 1, 0 ]
+            "Cerberus": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Cerberus (1)": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 176
+        "enmp_index": 176,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Crimson Jazz AL": {
         "obj_id": 1888,
@@ -1456,13 +2248,21 @@
         "size": 285258,
         "type": "enemy",
         "variations": {
-            "Crimson Jazz AL": [ 0, 8, 1 ],
-            "Crimson Jazz AL (1)": [ 0, 12, 0 ],
-            "Crimson Jazz AL (2)": [ 0, 4, 0 ]
+            "Crimson Jazz AL": {
+                "vars": [ 0, 8, 1 ]
+            },
+            "Crimson Jazz AL (1)": {
+                "vars": [ 0, 12, 0 ]
+            },
+            "Crimson Jazz AL (2)": {
+                "vars": [ 0, 4, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 2
+        "enmp_index": 2,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Dark Thorn": {
         "obj_id": 354,
@@ -1470,11 +2270,16 @@
         "size": 2177276,
         "type": "boss",
         "variations": {
-            "Dark Thorn": [ 0, 0, 0 ]
+            "Dark Thorn": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 21
+        "enmp_index": 21,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Larxene": {
         "obj_id": 2402,
@@ -1482,12 +2287,19 @@
         "size": 4443212,
         "type": "boss",
         "variations": {
-            "Larxene (Data)": [ 0, 0, 1 ],
-            "Larxene": [ 0, 0, 0 ]
+            "Larxene (Data)": {
+                "vars": [ 0, 0, 1 ]
+            },
+            "Larxene": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 192
+        "enmp_index": 192,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Beffudler": {
         "obj_id": 2404,
@@ -1495,12 +2307,18 @@
         "size": 298036,
         "type": "enemy",
         "variations": {
-            "Beffudler": [ 0, 0, 0 ],
-            "Beffudler (1)": [ 1, 0, 0 ]
+            "Beffudler": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Beffudler (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 201
+        "enmp_index": 201,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hook Bat AL": {
         "obj_id": 1887,
@@ -1508,28 +2326,68 @@
         "size": 292560,
         "type": "enemy",
         "variations": {
-            "Hook Bat AL": [ 0, 3, 0 ],
-            "Hook Bat AL (1)": [ 0, 9, 0 ],
-            "Hook Bat AL (2)": [ 0, 11, 0 ],
-            "Hook Bat AL (3)": [ 0, 1, 0 ],
-            "Hook Bat AL (4)": [ 0, 10, 0 ],
-            "Hook Bat AL (5)": [ 0, 14, 0 ],
-            "Hook Bat AL (6)": [ 0, 12, 0 ],
-            "Hook Bat AL (7)": [ 0, 13, 0 ],
-            "Hook Bat AL (8)": [ 0, 7, 0 ],
-            "Hook Bat AL (9)": [ 0, 3, 20 ],
-            "Hook Bat AL (10)": [ 0, 4, 0 ],
-            "Hook Bat AL (11)": [ 0, 15, 30 ],
-            "Hook Bat AL (12)": [ 0, 1, 31 ],
-            "Hook Bat AL (13)": [ 0, 3, 30 ],
-            "Hook Bat AL (14)": [ 0, 8, 32 ],
-            "Hook Bat AL (15)": [ 0, 13, 31 ],
-            "Hook Bat AL (16)": [ 0, 2, 0 ],
-            "Hook Bat AL (17)": [ 0, 5, 0 ],
-            "Hook Bat AL (18)": [ 0, 6, 0 ]
+            "Hook Bat AL": {
+                "vars": [ 0, 3, 0 ]
+            },
+            "Hook Bat AL (1)": {
+                "vars": [ 0, 9, 0 ]
+            },
+            "Hook Bat AL (2)": {
+                "vars": [ 0, 11, 0 ]
+            },
+            "Hook Bat AL (3)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Hook Bat AL (4)": {
+                "vars": [ 0, 10, 0 ]
+            },
+            "Hook Bat AL (5)": {
+                "vars": [ 0, 14, 0 ]
+            },
+            "Hook Bat AL (6)": {
+                "vars": [ 0, 12, 0 ]
+            },
+            "Hook Bat AL (7)": {
+                "vars": [ 0, 13, 0 ]
+            },
+            "Hook Bat AL (8)": {
+                "vars": [ 0, 7, 0 ]
+            },
+            "Hook Bat AL (9)": {
+                "vars": [ 0, 3, 20 ]
+            },
+            "Hook Bat AL (10)": {
+                "vars": [ 0, 4, 0 ]
+            },
+            "Hook Bat AL (11)": {
+                "vars": [ 0, 15, 30 ]
+            },
+            "Hook Bat AL (12)": {
+                "vars": [ 0, 1, 31 ]
+            },
+            "Hook Bat AL (13)": {
+                "vars": [ 0, 3, 30 ]
+            },
+            "Hook Bat AL (14)": {
+                "vars": [ 0, 8, 32 ]
+            },
+            "Hook Bat AL (15)": {
+                "vars": [ 0, 13, 31 ]
+            },
+            "Hook Bat AL (16)": {
+                "vars": [ 0, 2, 0 ]
+            },
+            "Hook Bat AL (17)": {
+                "vars": [ 0, 5, 0 ]
+            },
+            "Hook Bat AL (18)": {
+                "vars": [ 0, 6, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Hydra": {
         "obj_id": 352,
@@ -1537,11 +2395,16 @@
         "size": 2417732,
         "type": "boss",
         "variations": {
-            "Hydra": [ 0, 0, 0 ]
+            "Hydra": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 20
+        "enmp_index": 20,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Illuminator": {
         "obj_id": 358,
@@ -1549,12 +2412,17 @@
         "size": 258308,
         "type": "boss",
         "variations": {
-            "Illuminator": [ 0, 0, 0 ]
+            "Illuminator": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
         "replaceallowed": false,
-        "islarge": false,
-        "enmp_index": 91
+        "enmp_index": 91,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Iron Hammer": {
         "obj_id": 2405,
@@ -1562,12 +2430,18 @@
         "size": 537416,
         "type": "enemy",
         "variations": {
-            "Iron Hammer": [ 0, 0, 0 ],
-            "Iron Hammer (1)": [ 1, 0, 0 ]
+            "Iron Hammer": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Iron Hammer (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 208
+        "enmp_index": 208,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Lance Warrior": {
         "obj_id": 2409,
@@ -1575,12 +2449,18 @@
         "size": 755608,
         "type": "enemy",
         "variations": {
-            "Lance Warrior": [ 0, 0, 0 ],
-            "Lance Warrior (1)": [ 1, 0, 0 ]
+            "Lance Warrior": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Lance Warrior (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 209
+        "enmp_index": 209,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Mad Ride": {
         "obj_id": 2406,
@@ -1588,12 +2468,21 @@
         "size": 871788,
         "type": "enemy",
         "variations": {
-            "Mad Ride": [ 0, 0, 0 ],
-            "Mad Ride (1)": [ 1, 0, 0 ]
+            "Mad Ride": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Mad Ride (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": true,
-        "enmp_index": 211
+        "enmp_index": 211,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "tags": [
+            "large"
+        ]
     },
     "Magic Phantom": {
         "obj_id": 2403,
@@ -1601,12 +2490,18 @@
         "size": 1020616,
         "type": "enemy",
         "variations": {
-            "Magic Phantom": [ 0, 0, 0 ],
-            "Magic Phantom (1)": [ 1, 0, 0 ]
+            "Magic Phantom": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Magic Phantom (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 207
+        "enmp_index": 207,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Necromancer": {
         "obj_id": 2411,
@@ -1614,12 +2509,18 @@
         "size": 698584,
         "type": "enemy",
         "variations": {
-            "Necromancer": [ 0, 0, 0 ],
-            "Necromancer (1)": [ 1, 0, 0 ]
+            "Necromancer": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Necromancer (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 210
+        "enmp_index": 210,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Aerial Viking": {
         "obj_id": 2413,
@@ -1627,11 +2528,15 @@
         "size": 603180,
         "type": "enemy",
         "variations": {
-            "Aerial Viking": [ 0, 0, 0 ]
+            "Aerial Viking": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 203
+        "enmp_index": 203,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Pete TR": {
         "obj_id": 359,
@@ -1639,10 +2544,15 @@
         "size": 968770,
         "type": "boss",
         "variations": {
-            "Pete TR": [ 0, 4, 0 ]
+            "Pete TR": {
+                "vars": [ 0, 4, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Runemaster": {
         "obj_id": 2414,
@@ -1650,12 +2560,18 @@
         "size": 352940,
         "type": "enemy",
         "variations": {
-            "Runemaster": [ 0, 0, 0 ],
-            "Runemaster (1)": [ 1, 0, 0 ]
+            "Runemaster": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Runemaster (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 206
+        "enmp_index": 206,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Spring Metal": {
         "obj_id": 2412,
@@ -1663,12 +2579,18 @@
         "size": 186364,
         "type": "enemy",
         "variations": {
-            "Spring Metal": [ 0, 0, 0 ],
-            "Spring Metal (1)": [ 1, 0, 0 ]
+            "Spring Metal": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Spring Metal (1)": {
+                "vars": [ 1, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 205
+        "enmp_index": 205,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Terra": {
         "obj_id": 2415,
@@ -1676,11 +2598,16 @@
         "size": 2854684,
         "type": "boss",
         "variations": {
-            "Terra": [ 0, 0, 0 ]
+            "Terra": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 220
+        "enmp_index": 220,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Zexion": {
         "obj_id": 2427,
@@ -1688,12 +2615,19 @@
         "size": 1939060,
         "type": "boss",
         "variations": {
-            "Zexion (Data)": [ 0, 0, 1 ],
-            "Zexion": [ 0, 0, 0 ]
+            "Zexion (Data)": {
+                "vars": [ 0, 0, 1 ]
+            },
+            "Zexion": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 193
+        "enmp_index": 193,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Data Axel": {
         "obj_id": 2500,
@@ -1701,11 +2635,16 @@
         "size": 2742180,
         "type": "boss",
         "variations": {
-            "Data Axel": [ 0, 0, 0 ]
+            "Data Axel": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 221
+        "enmp_index": 221,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Data Xigbar": {
         "obj_id": 2501,
@@ -1713,11 +2652,16 @@
         "size": 557240,
         "type": "boss",
         "variations": {
-            "Data Xigbar": [ 0, 0, 0 ]
+            "Data Xigbar": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 227
+        "enmp_index": 227,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Data Saix": {
         "obj_id": 2502,
@@ -1725,11 +2669,16 @@
         "size": 3559034,
         "type": "boss",
         "variations": {
-            "Data Saix": [ 0, 0, 0 ]
+            "Data Saix": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 228
+        "enmp_index": 228,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Giant Sark": {
         "obj_id": 964,
@@ -1737,11 +2686,16 @@
         "size": 933824,
         "type": "boss",
         "variations": {
-            "Giant Sark": [ 0, 0, 0 ]
+            "Giant Sark": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 107
+        "enmp_index": 107,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Data Luxord": {
         "obj_id": 2504,
@@ -1749,11 +2703,16 @@
         "size": 3430732,
         "type": "boss",
         "variations": {
-            "Data Luxord": [ 0, 0, 0 ]
+            "Data Luxord": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 219
+        "enmp_index": 219,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Data Xemnas": {
         "obj_id": 2505,
@@ -1761,11 +2720,16 @@
         "size": 2607964,
         "type": "boss",
         "variations": {
-            "Data Xemnas": [ 0, 0, 0 ]
+            "Data Xemnas": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 215
+        "enmp_index": 215,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Data Final Xemnas": {
         "obj_id": 2506,
@@ -1773,12 +2737,19 @@
         "size": 4538944,
         "type": "boss",
         "variations": {
-            "Data Final Xemnas": [ 0, 0, 0 ],
-            "Data Final Xemnas (1)": [ 0, 1, 0 ]
+            "Data Final Xemnas": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Data Final Xemnas (1)": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 215
+        "enmp_index": 215,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Data Xaldin": {
         "obj_id": 2507,
@@ -1786,11 +2757,16 @@
         "size": 2741808,
         "type": "boss",
         "variations": {
-            "Data Xaldin": [ 0, 0, 0 ]
+            "Data Xaldin": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 222
+        "enmp_index": 222,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Data Demyx": {
         "obj_id": 2508,
@@ -1798,11 +2774,16 @@
         "size": 3528528,
         "type": "boss",
         "variations": {
-            "Data Demyx": [ 0, 1, 0 ]
+            "Data Demyx": {
+                "vars": [ 0, 1, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 216
+        "enmp_index": 216,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Prison Keeper": {
         "obj_id": 1486,
@@ -1810,11 +2791,16 @@
         "size": 2314684,
         "type": "boss",
         "variations": {
-            "Prison Keeper": [ 0, 0, 0 ]
+            "Prison Keeper": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 109
+        "enmp_index": 109,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "The Experiment": {
         "obj_id": 1488,
@@ -1822,11 +2808,16 @@
         "size": 3549978,
         "type": "boss",
         "variations": {
-            "The Experiment": [ 0, 0, 0 ]
+            "The Experiment": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 110
+        "enmp_index": 110,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Xaldin": {
         "obj_id": 997,
@@ -1834,11 +2825,16 @@
         "size": 2741336,
         "type": "boss",
         "variations": {
-            "Xaldin": [ 0, 0, 0 ]
+            "Xaldin": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 82
+        "enmp_index": 82,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Soldier": {
         "obj_id": 301,
@@ -1846,14 +2842,24 @@
         "size": 787284,
         "type": "enemy",
         "variations": {
-            "Soldier": [ 0, 0, 0 ],
-            "Soldier (1)": [ 0, 1, 0 ],
-            "Soldier (2)": [ 1, 0, 0 ],
-            "Soldier (3)": [ 0, 99, 0 ]
+            "Soldier": {
+                "vars": [ 0, 0, 0 ]
+            },
+            "Soldier (1)": {
+                "vars": [ 0, 1, 0 ]
+            },
+            "Soldier (2)": {
+                "vars": [ 1, 0, 0 ]
+            },
+            "Soldier (3)": {
+                "vars": [ 0, 99, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 32
+        "enmp_index": 32,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Barbossa": {
         "obj_id": 1015,
@@ -1861,11 +2867,16 @@
         "size": 3175016,
         "type": "boss",
         "variations": {
-            "Barbossa": [ 0, 0, 0 ]
+            "Barbossa": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": false,
-        "islarge": false,
-        "enmp_index": 92
+        "enmp_index": 92,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     },
     "Luxord": {
         "obj_id": 1528,
@@ -1873,10 +2884,15 @@
         "size": 3429892,
         "type": "boss",
         "variations": {
-            "Luxord": [ 0, 0, 0 ]
+            "Luxord": {
+                "vars": [ 0, 0, 0 ]
+            }
         },
         "enabled": true,
-        "islarge": false,
-        "enmp_index": 84
+        "enmp_index": 84,
+        "msn": "LK05_MS101.bar",
+        "hp": 100,
+        "level": 99,
+        "limiter": 1
     }
 }
