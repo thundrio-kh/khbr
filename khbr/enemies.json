@@ -90,7 +90,7 @@
             "Assault Rider (1)": [ 1, 0, 0 ]
         },
         "enabled": true,
-        "islarge": True,
+        "islarge": true,
         "enmp_index": 59
     },
     "Nightwalker": {
