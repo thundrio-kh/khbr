@@ -80,6 +80,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": false,
         "hp": 100,
         "level": 99,
@@ -92,10 +93,14 @@
         "type": "boss",
         "variations": {
             "Grim Reaper I": {
-                "vars": [ 0, 0, 0 ]
+                "vars": [ 0, 0, 0 ],
+                "can_be_enemy": true,
+                "tags": ["large"]
             },
             "Grim Reaper II": {
-                "vars": [ 0, 1, 0 ]
+                "vars": [ 0, 1, 0 ],
+                "enabled": false,
+                "isnightmare": true
             }
         },
         "enabled": true,
@@ -140,6 +145,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 59,
         "hp": 100,
@@ -190,6 +196,7 @@
                 "vars": [ 0, 20, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 61,
         "hp": 100,
@@ -209,12 +216,14 @@
                 "vars": [ 0, 1, 0 ]
             }
         },
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 113,
         "msn": "LK05_MS101.bar",
         "hp": 100,
         "level": 99,
-        "limiter": 1
+        "limiter": 1,
+        "tags": ["large"]
     },
     "Luna Bandit": {
         "obj_id": 12,
@@ -251,6 +260,7 @@
                 "vars": [ 2, 1, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 64,
         "hp": 100,
@@ -279,6 +289,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 7,
         "hp": 100,
@@ -304,6 +315,7 @@
                 "vars": [ 0, 3, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 65,
         "hp": 100,
@@ -358,6 +370,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "replace_as": "Hades Cups",
         "enabled": true,
         "enmp_index": 18,
         "msn": "LK05_MS101.bar",
@@ -378,12 +391,14 @@
                 "vars": [ 0, 1, 0 ]
             }
         },
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 174,
         "msn": "LK05_MS101.bar",
         "hp": 100,
         "level": 99,
-        "limiter": 1
+        "limiter": 1,
+        "tags": ["large"]
     },
     "Shan-Yu": {
         "obj_id": 21,
@@ -395,6 +410,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 70,
         "msn": "LK05_MS101.bar",
@@ -415,6 +431,8 @@
                 "vars": [ 0, 1, 0 ]
             }
         },
+        "isnightmare": true,
+        "can_be_enemy": true,
         "enabled": false,
         "enmp_index": 85,
         "msn": "LK05_MS101.bar",
@@ -448,6 +466,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "unstable": true,
         "enabled": true,
         "enmp_index": 123,
         "msn": "LK05_MS101.bar",
@@ -521,6 +540,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "aimod": true,
         "enabled": true,
         "enmp_index": 81,
         "msn": "LK05_MS101.bar",
@@ -572,6 +592,9 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "isnightmare": true,
+        "can_be_enemy": true,
+        "aimod": true,
         "enabled": true,
         "enmp_index": 85,
         "msn": "LK05_MS101.bar",
@@ -589,6 +612,7 @@
                 "vars": [ 0, 1, 0 ]
             }
         },
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 106,
         "msn": "LK05_MS101.bar",
@@ -795,6 +819,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 8,
         "hp": 100,
@@ -843,6 +868,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 10,
         "hp": 100,
@@ -862,6 +888,7 @@
                 "vars": [ 0, 99, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 11,
         "hp": 100,
@@ -1083,6 +1110,7 @@
             }
         },
         "enabled": false,
+        "replaceallowed": false,
         "hp": 100,
         "level": 99,
         "limiter": 1
@@ -1097,6 +1125,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 89,
         "msn": "LK05_MS101.bar",
@@ -1114,7 +1143,7 @@
                 "vars": [ 0, 1, 0 ]
             }
         },
-        "enabled": false,
+        "enabled": true,
         "msn": "LK05_MS101.bar",
         "hp": 100,
         "level": 99,
@@ -1130,6 +1159,8 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "can_be_enemy": true,
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 130,
         "msn": "LK05_MS101.bar",
@@ -1199,6 +1230,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 124,
         "msn": "LK05_MS101.bar",
@@ -1256,6 +1288,7 @@
                 "vars": [ 2, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 139,
         "hp": 100,
@@ -1328,6 +1361,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": false,
         "hp": 100,
         "level": 99,
@@ -1360,7 +1394,8 @@
         "type": "boss",
         "variations": {
             "Leon": {
-                "vars": [ 0, 1, 0 ]
+                "vars": [ 0, 1, 0 ],
+                "can_be_enemy": true
             },
             "Leon (1)": {
                 "vars": [ 0, 3, 0 ]
@@ -1386,7 +1421,8 @@
         "type": "boss",
         "variations": {
             "Cloud": {
-                "vars": [ 0, 1, 0 ]
+                "vars": [ 0, 1, 0 ],
+                "can_be_enemy": true
             },
             "Cloud (1)": {
                 "vars": [ 0, 2, 0 ]
@@ -1412,7 +1448,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 22,
         "msn": "LK05_MS101.bar",
         "hp": 100,
@@ -1426,7 +1462,8 @@
         "type": "boss",
         "variations": {
             "Tifa": {
-                "vars": [ 0, 1, 0 ]
+                "vars": [ 0, 1, 0 ],
+                "can_be_enemy": true
             },
             "Tifa (1)": {
                 "vars": [ 0, 2, 0 ]
@@ -1449,7 +1486,8 @@
         "type": "boss",
         "variations": {
             "Yuffie": {
-                "vars": [ 0, 1, 0 ]
+                "vars": [ 0, 1, 0 ],
+                "can_be_enemy": true
             },
             "Yuffie (1)": {
                 "vars": [ 0, 3, 0 ]
@@ -1478,6 +1516,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "unstable": true,
         "enabled": true,
         "enmp_index": 24,
         "msn": "LK05_MS101.bar",
@@ -1495,6 +1534,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 156,
         "msn": "LK05_MS101.bar",
@@ -1529,6 +1569,7 @@
                 "vars": [ 0, 1, 0 ]
             }
         },
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 157,
         "msn": "LK05_MS101.bar",
@@ -1623,7 +1664,8 @@
         "enmp_index": 37,
         "hp": 100,
         "level": 99,
-        "limiter": 1
+        "limiter": 1,
+        "tags": ["al"]
     },
     "Marluxia": {
         "obj_id": 2339,
@@ -1632,7 +1674,8 @@
         "type": "boss",
         "variations": {
             "Marluxia (Data)": {
-                "vars": [ 0, 0, 1 ]
+                "vars": [ 0, 0, 1 ],
+                "isnightmare": true
             },
             "Marluxia": {
                 "vars": [ 0, 0, 0 ]
@@ -1715,6 +1758,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 63,
         "hp": 100,
@@ -1889,7 +1933,8 @@
         "type": "boss",
         "variations": {
             "Lexaeus (Data)": {
-                "vars": [ 0, 0, 1 ]
+                "vars": [ 0, 0, 1 ],
+                "isnightmare": true
             },
             "Lexaeus": {
                 "vars": [ 0, 0, 0 ]
@@ -1918,6 +1963,7 @@
                 "vars": [ 0, 99, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 43,
         "hp": 100,
@@ -1943,6 +1989,7 @@
                 "vars": [ 0, 99, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 47,
         "hp": 100,
@@ -1962,6 +2009,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 48,
         "hp": 100,
@@ -2100,6 +2148,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 46,
         "hp": 100,
@@ -2119,6 +2168,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 50,
         "hp": 100,
@@ -2135,9 +2185,11 @@
                 "vars": [ 0, 0, 0 ]
             },
             "Roxas (Data)": {
-                "vars": [ 0, 0, 1 ]
+                "vars": [ 0, 0, 1],
+                "isnightmare": true
             }
         },
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 218,
         "msn": "LK05_MS101.bar",
@@ -2195,7 +2247,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 18,
         "msn": "LK05_MS101.bar",
         "hp": 100,
@@ -2216,6 +2268,7 @@
             }
         },
         "enabled": true,
+        "replaceas": "Hades Cups",
         "enmp_index": 18,
         "msn": "LK05_MS101.bar",
         "hp": 100,
@@ -2262,7 +2315,8 @@
         "enmp_index": 2,
         "hp": 100,
         "level": 99,
-        "limiter": 1
+        "limiter": 1,
+        "tags": ["al"]
     },
     "Dark Thorn": {
         "obj_id": 354,
@@ -2288,12 +2342,13 @@
         "type": "boss",
         "variations": {
             "Larxene (Data)": {
-                "vars": [ 0, 0, 1 ]
+                "vars": [ 0, 0, 1 ],
             },
             "Larxene": {
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 192,
         "msn": "LK05_MS101.bar",
@@ -2387,7 +2442,8 @@
         "enabled": false,
         "hp": 100,
         "level": 99,
-        "limiter": 1
+        "limiter": 1,
+        "tags": ["al"]
     },
     "Hydra": {
         "obj_id": 352,
@@ -2399,7 +2455,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 20,
         "msn": "LK05_MS101.bar",
         "hp": 100,
@@ -2475,6 +2531,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 211,
         "hp": 100,
@@ -2497,6 +2554,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 207,
         "hp": 100,
@@ -2567,6 +2625,7 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 206,
         "hp": 100,
@@ -2602,6 +2661,8 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "isnightmare": true,
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 220,
         "msn": "LK05_MS101.bar",
@@ -2622,6 +2683,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "aimod": true,
         "enabled": true,
         "enmp_index": 193,
         "msn": "LK05_MS101.bar",
@@ -2653,9 +2715,11 @@
         "type": "boss",
         "variations": {
             "Data Xigbar": {
-                "vars": [ 0, 0, 0 ]
+                "vars": [ 0, 0, 0 ],
             }
         },
+        "unstable": true,
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 227,
         "msn": "LK05_MS101.bar",
@@ -2673,6 +2737,8 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "can_be_enemy": true,
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 228,
         "msn": "LK05_MS101.bar",
@@ -2724,6 +2790,9 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "aimod": true,
+        "isnightmare": true,
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 215,
         "msn": "LK05_MS101.bar",
@@ -2744,6 +2813,8 @@
                 "vars": [ 0, 1, 0 ]
             }
         },
+        "isnightmare": true,
+        "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 215,
         "msn": "LK05_MS101.bar",
@@ -2761,6 +2832,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 222,
         "msn": "LK05_MS101.bar",
