@@ -399,8 +399,8 @@
                     "size": 0,
                     "sp_ids": {
                         "10": [
-                            { "index": 3, "name": "Volcano Lord", "isboss": false },
-                            { "index": 4, "name": "Blizzard Lord", "isboss": false }
+                            { "index": 3, "name": "Volcano Lord", "isboss": true },
+                            { "index": 4, "name": "Blizzard Lord", "isboss": true }
                         ]
                     }
                 }
@@ -413,7 +413,7 @@
                     "size": 0,
                     "sp_ids": {
                         "4": [
-                            { "index": 2, "name": "Jafar", "isboss": false }
+                            { "index": 2, "name": "Jafar", "isboss": true }
                         ]
                     }
                 }
@@ -1312,7 +1312,7 @@
                     "size": 0,
                     "sp_ids": {
                         "5": [
-                            { "index": 3, "name": "The Beast", "isboss": false }
+                            { "index": 3, "name": "The Beast", "isboss": true }
                         ]
                     }
                 }
@@ -1413,7 +1413,7 @@
                     "size": 0,
                     "sp_ids": {
                         "1": [
-                            { "index": 3, "name": "Shadow Stalker", "isboss": false }
+                            { "index": 3, "name": "Shadow Stalker", "isboss": true }
                         ]
                     }
                 },
@@ -1421,7 +1421,7 @@
                     "size": 0,
                     "sp_ids": {
                         "27": [
-                            { "index": 3, "name": "Dark Thorn", "isboss": false }
+                            { "index": 3, "name": "Dark Thorn", "isboss": true }
                         ]
                     }
                 },
@@ -1429,7 +1429,7 @@
                     "size": 0,
                     "sp_ids": {
                         "50": [
-                            { "index": 3, "name": "Dark Thorn", "isboss": false }
+                            { "index": 3, "name": "Dark Thorn", "isboss": true }
                         ]
                     }
                 }
@@ -1851,7 +1851,7 @@
                     "size": 0,
                     "sp_ids": {
                         "14": [
-                            { "index": 3, "name": "Thresholder", "isboss": false }
+                            { "index": 3, "name": "Thresholder", "isboss": true }
                         ],
                         "96": [
                             { "index": 2, "name": "Hook Bat (1)", "isboss": false },
@@ -1871,7 +1871,7 @@
                     "size": 0,
                     "sp_ids": {
                         "93": [
-                            { "index": 5, "name": "Thresholder", "isboss": false }
+                            { "index": 5, "name": "Thresholder", "isboss": true }
                         ]
                     }
                 }
@@ -1923,7 +1923,7 @@
                     "size": 0,
                     "sp_ids": {
                         "13": [
-                            { "index": 3, "name": "Xaldin", "isboss": false }
+                            { "index": 3, "name": "Xaldin", "isboss": true }
                         ]
                     }
                 },
@@ -1931,7 +1931,7 @@
                     "size": 0,
                     "sp_ids": {
                         "79": [
-                            { "index": 3, "name": "Data Xaldin", "isboss": false }
+                            { "index": 3, "name": "Data Xaldin", "isboss": true }
                         ]
                     }
                 }
@@ -2018,7 +2018,7 @@
                     "size": 0,
                     "sp_ids": {
                         "114": [
-                            { "index": 3, "name": "Grim Reaper I", "isboss": false }
+                            { "index": 3, "name": "Grim Reaper I", "isboss": true }
                         ]
                     }
                 }
@@ -2317,8 +2317,8 @@
                     "size": 0,
                     "sp_ids": {
                         "40": [
-                            { "index": 3, "name": "Barbossa", "isboss": false },
-                            { "index": 4, "name": "Illuminator", "isboss": false }
+                            { "index": 3, "name": "Barbossa", "isboss": true },
+                            { "index": 4, "name": "Illuminator", "isboss": true }
                         ]
                     }
                 },
@@ -2631,7 +2631,7 @@
                     "size": 0,
                     "sp_ids": {
                         "245": [
-                            { "index": 3, "name": "Grim Reaper I (1)", "isboss": false }
+                            { "index": 3, "name": "Grim Reaper II", "isboss": true }
                         ]
                     }
                 },
@@ -2975,7 +2975,7 @@
                     "size": 0,
                     "sp_ids": {
                         "134": [
-                            { "index": 0, "name": "Illuminator", "isboss": false }
+                            { "index": 0, "name": "Illuminator", "isboss": true }
                         ]
                     }
                 }
@@ -3077,7 +3077,7 @@
                     "size": 0,
                     "sp_ids": {
                         "157": [
-                            { "index": 0, "name": "Illuminator", "isboss": false }
+                            { "index": 0, "name": "Illuminator", "isboss": true }
                         ]
                     }
                 }
@@ -3204,7 +3204,7 @@
                     "size": 0,
                     "sp_ids": {
                         "124": [
-                            { "index": 3, "name": "Xigbar", "isboss": false }
+                            { "index": 3, "name": "Xigbar", "isboss": true }
                         ]
                     }
                 },
@@ -3212,7 +3212,7 @@
                     "size": 0,
                     "sp_ids": {
                         "434": [
-                            { "index": 3, "name": "Data Xigbar", "isboss": false }
+                            { "index": 3, "name": "Data Xigbar", "isboss": true }
                         ]
                     }
                 }
@@ -3328,7 +3328,7 @@
                     "size": 0,
                     "sp_ids": {
                         "69": [
-                            { "index": 3, "name": "Luxord", "isboss": false }
+                            { "index": 3, "name": "Luxord", "isboss": true }
                         ]
                     }
                 },
@@ -3336,7 +3336,7 @@
                     "size": 0,
                     "sp_ids": {
                         "378": [
-                            { "index": 3, "name": "Data Luxord", "isboss": false }
+                            { "index": 3, "name": "Data Luxord", "isboss": true }
                         ]
                     }
                 }
@@ -3371,7 +3371,7 @@
                     "size": 0,
                     "sp_ids": {
                         "69": [
-                            { "index": 3, "name": "Saix", "isboss": false }
+                            { "index": 3, "name": "Saix", "isboss": true }
                         ]
                     }
                 },
@@ -3379,7 +3379,7 @@
                     "size": 0,
                     "sp_ids": {
                         "356": [
-                            { "index": 3, "name": "Data Saix", "isboss": false }
+                            { "index": 3, "name": "Data Saix", "isboss": true }
                         ]
                     }
                 }
@@ -3568,11 +3568,11 @@
                     "size": 0,
                     "sp_ids": {
                         "47": [
-                            { "index": 2, "name": "Final Xemnas", "isboss": false },
-                            { "index": 3, "name": "Final Xemnas (1)", "isboss": false }
+                            { "index": 2, "name": "Final Xemnas", "isboss": true },
+                            { "index": 3, "name": "Final Xemnas (1)", "isboss": true }
                         ],
                         "23": [
-                            { "index": 11, "name": "Armor Xemnas (1)", "isboss": false }
+                            { "index": 11, "name": "Armor Xemnas I", "isboss": true }
                         ],
                         "24": [
                             { "index": 0, "name": "Assassin", "isboss": false },
@@ -3613,8 +3613,8 @@
                     "size": 0,
                     "sp_ids": {
                         "89": [
-                            { "index": 2, "name": "Data Final Xemnas", "isboss": false },
-                            { "index": 3, "name": "Data Final Xemnas (1)", "isboss": false }
+                            { "index": 2, "name": "Data Final Xemnas", "isboss": true },
+                            { "index": 3, "name": "Data Final Xemnas (1)", "isboss": true }
                         ]
                     }
                 },
@@ -3622,7 +3622,7 @@
                     "size": 0,
                     "sp_ids": {
                         "151": [
-                            { "index": 2, "name": "Xemnas", "isboss": false }
+                            { "index": 2, "name": "Xemnas", "isboss": true }
                         ]
                     }
                 },
@@ -3630,8 +3630,8 @@
                     "size": 0,
                     "sp_ids": {
                         "87": [
-                            { "index": 2, "name": "Armor Xemnas", "isboss": false },
-                            { "index": 11, "name": "Armor Xemnas (1)", "isboss": false }
+                            { "index": 2, "name": "Armor Xemnas II", "isboss": true },
+                            { "index": 11, "name": "Armor Xemnas I", "isboss": true }
                         ],
                         "98": [
                             { "index": 0, "name": "Nobody from Final Battle v1", "isboss": false },
@@ -3651,7 +3651,7 @@
                     "size": 0,
                     "sp_ids": {
                         "23": [
-                            { "index": 3, "name": "Roxas", "isboss": false }
+                            { "index": 3, "name": "Roxas", "isboss": true }
                         ]
                     }
                 },
@@ -3659,7 +3659,7 @@
                     "size": 0,
                     "sp_ids": {
                         "87": [
-                            { "index": 3, "name": "Roxas (Data)", "isboss": false }
+                            { "index": 3, "name": "Roxas (Data)", "isboss": true }
                         ]
                     }
                 }
@@ -3706,7 +3706,7 @@
                     "size": 0,
                     "sp_ids": {
                         "162": [
-                            { "index": 3, "name": "Sephiroth", "isboss": false }
+                            { "index": 3, "name": "Sephiroth", "isboss": true }
                         ]
                     }
                 }
@@ -3804,7 +3804,7 @@
                     "size": 0,
                     "sp_ids": {
                         "42": [
-                            { "index": 3, "name": "Demyx", "isboss": false }
+                            { "index": 3, "name": "Demyx", "isboss": true }
                         ]
                     }
                 },
@@ -3812,7 +3812,7 @@
                     "size": 0,
                     "sp_ids": {
                         "202": [
-                            { "index": 3, "name": "Data Demyx", "isboss": false }
+                            { "index": 3, "name": "Data Demyx", "isboss": true }
                         ]
                     }
                 }
@@ -5298,7 +5298,7 @@
                     "size": 0,
                     "sp_ids": {
                         "32": [
-                            { "index": 3, "name": "Vexen", "isboss": false }
+                            { "index": 3, "name": "Vexen", "isboss": true }
                         ]
                     }
                 },
@@ -5306,7 +5306,7 @@
                     "size": 0,
                     "sp_ids": {
                         "64": [
-                            { "index": 3, "name": "Vexen (1)", "isboss": false }
+                            { "index": 3, "name": "Vexen (1)", "isboss": true }
                         ]
                     }
                 }
@@ -5319,7 +5319,7 @@
                     "size": 0,
                     "sp_ids": {
                         "32": [
-                            { "index": 3, "name": "Lexaeus (Data)", "isboss": false }
+                            { "index": 3, "name": "Lexaeus (Data)", "isboss": true }
                         ]
                     }
                 },
@@ -5327,7 +5327,7 @@
                     "size": 0,
                     "sp_ids": {
                         "64": [
-                            { "index": 3, "name": "Larxene (Data)", "isboss": false }
+                            { "index": 3, "name": "Larxene (Data)", "isboss": true }
                         ]
                     }
                 },
@@ -5335,7 +5335,7 @@
                     "size": 0,
                     "sp_ids": {
                         "96": [
-                            { "index": 3, "name": "Lexaeus", "isboss": false }
+                            { "index": 3, "name": "Lexaeus", "isboss": true }
                         ]
                     }
                 },
@@ -5343,7 +5343,7 @@
                     "size": 0,
                     "sp_ids": {
                         "128": [
-                            { "index": 3, "name": "Larxene", "isboss": false }
+                            { "index": 3, "name": "Larxene", "isboss": true }
                         ]
                     }
                 },
@@ -5351,7 +5351,7 @@
                     "size": 0,
                     "sp_ids": {
                         "160": [
-                            { "index": 3, "name": "Vexen", "isboss": false }
+                            { "index": 3, "name": "Vexen", "isboss": true }
                         ]
                     }
                 },
@@ -5359,7 +5359,7 @@
                     "size": 0,
                     "sp_ids": {
                         "192": [
-                            { "index": 3, "name": "Vexen (1)", "isboss": false }
+                            { "index": 3, "name": "Vexen (1)", "isboss": true }
                         ]
                     }
                 }
@@ -5372,7 +5372,7 @@
                     "size": 0,
                     "sp_ids": {
                         "32": [
-                            { "index": 3, "name": "Zexion (Data)", "isboss": false }
+                            { "index": 3, "name": "Zexion (Data)", "isboss": true }
                         ]
                     }
                 },
@@ -5380,7 +5380,7 @@
                     "size": 0,
                     "sp_ids": {
                         "64": [
-                            { "index": 3, "name": "Zexion", "isboss": false }
+                            { "index": 3, "name": "Zexion", "isboss": true }
                         ]
                     }
                 }
@@ -5393,7 +5393,7 @@
                     "size": 0,
                     "sp_ids": {
                         "32": [
-                            { "index": 3, "name": "Marluxia", "isboss": false }
+                            { "index": 3, "name": "Marluxia (Data)", "isboss": true }
                         ]
                     }
                 },
@@ -5401,7 +5401,7 @@
                     "size": 0,
                     "sp_ids": {
                         "64": [
-                            { "index": 3, "name": "Marluxia (1)", "isboss": false }
+                            { "index": 3, "name": "Marluxia", "isboss": true }
                         ]
                     }
                 }
@@ -5526,7 +5526,7 @@
                     "size": 0,
                     "sp_ids": {
                         "12": [
-                            { "index": 3, "name": "Hades Escape", "isboss": false }
+                            { "index": 3, "name": "Hades Escape", "isboss": true }
                         ],
                         "24": [
                             { "index": 0, "name": "Hook Bat (1)", "isboss": false },
@@ -5568,7 +5568,7 @@
                     "size": 0,
                     "sp_ids": {
                         "9": [
-                            { "index": 0, "name": "Hades I", "isboss": false }
+                            { "index": 0, "name": "Hades I", "isboss": true }
                         ]
                     }
                 },
@@ -5594,7 +5594,7 @@
                     "size": 0,
                     "sp_ids": {
                         "27": [
-                            { "index": 4, "name": "Hades I", "isboss": false }
+                            { "index": 4, "name": "Hades I", "isboss": true }
                         ]
                     }
                 }
@@ -5651,7 +5651,7 @@
                     "size": 0,
                     "sp_ids": {
                         "13": [
-                            { "index": 0, "name": "Cerberus", "isboss": false }
+                            { "index": 0, "name": "Cerberus", "isboss": true }
                         ]
                     }
                 },
@@ -5697,7 +5697,7 @@
                     "size": 0,
                     "sp_ids": {
                         "9": [
-                            { "index": 4, "name": "Pete OC I", "isboss": false }
+                            { "index": 4, "name": "Pete OC I", "isboss": true }
                         ],
                         "81": [
                             { "index": 0, "name": "Hook Bat (1)", "isboss": false },
@@ -5726,7 +5726,7 @@
                     "size": 0,
                     "sp_ids": {
                         "10": [
-                            { "index": 3, "name": "Pete OC II", "isboss": false }
+                            { "index": 3, "name": "Pete OC II", "isboss": true }
                         ],
                         "25": [
                             { "index": 0, "name": "Trick Ghost", "isboss": false },
@@ -6060,8 +6060,8 @@
                     "size": 0,
                     "sp_ids": {
                         "392": [
-                            { "index": 0, "name": "Yuffie", "isboss": false },
-                            { "index": 1, "name": "Leon", "isboss": false }
+                            { "index": 0, "name": "Yuffie", "isboss": true },
+                            { "index": 1, "name": "Leon", "isboss": true }
                         ]
                     }
                 },
@@ -6162,7 +6162,7 @@
                     "size": 0,
                     "sp_ids": {
                         "1232": [
-                            { "index": 0, "name": "Cerberus (1)", "isboss": false }
+                            { "index": 0, "name": "Cerberus (1)", "isboss": true }
                         ]
                     }
                 },
@@ -6269,7 +6269,7 @@
                     "size": 0,
                     "sp_ids": {
                         "1343": [
-                            { "index": 0, "name": "Hercules", "isboss": false }
+                            { "index": 0, "name": "Hercules", "isboss": true }
                         ]
                     }
                 },
@@ -6382,7 +6382,7 @@
                     "size": 0,
                     "sp_ids": {
                         "1658": [
-                            { "index": 0, "name": "Hades Cups", "isboss": false }
+                            { "index": 0, "name": "Hades Cups", "isboss": true }
                         ]
                     }
                 },
@@ -6457,8 +6457,8 @@
                     "size": 0,
                     "sp_ids": {
                         "1850": [
-                            { "index": 0, "name": "Tifa", "isboss": false },
-                            { "index": 1, "name": "Yuffie (1)", "isboss": false }
+                            { "index": 0, "name": "Tifa", "isboss": true },
+                            { "index": 1, "name": "Yuffie (1)", "isboss": true }
                         ]
                     }
                 },
@@ -6505,7 +6505,7 @@
                     "size": 0,
                     "sp_ids": {
                         "2011": [
-                            { "index": 0, "name": "Volcano Lord (1)", "isboss": false },
+                            { "index": 0, "name": "Volcano Lord (Cups)", "isboss": true },
                             { "index": 1, "name": "Soldier", "isboss": false },
                             { "index": 2, "name": "Soldier", "isboss": false }
                         ]
@@ -6580,7 +6580,7 @@
                     "size": 0,
                     "sp_ids": {
                         "2180": [
-                            { "index": 0, "name": "Pete Cups", "isboss": false }
+                            { "index": 0, "name": "Pete Cups", "isboss": true }
                         ]
                     }
                 },
@@ -6639,7 +6639,7 @@
                     "size": 0,
                     "sp_ids": {
                         "2341": [
-                            { "index": 0, "name": "Blizzard Lord (1)", "isboss": false }
+                            { "index": 0, "name": "Blizzard Lord (Cups)", "isboss": true }
                         ]
                     }
                 },
@@ -6681,7 +6681,7 @@
                     "size": 0,
                     "sp_ids": {
                         "2820": [
-                            { "index": 0, "name": "Hades Cups", "isboss": false }
+                            { "index": 0, "name": "Hades Cups", "isboss": true }
                         ]
                     }
                 },
@@ -6720,8 +6720,8 @@
                     "size": 0,
                     "sp_ids": {
                         "2948": [
-                            { "index": 0, "name": "Tifa (1)", "isboss": false },
-                            { "index": 1, "name": "Cloud", "isboss": false }
+                            { "index": 0, "name": "Tifa (1)", "isboss": true },
+                            { "index": 1, "name": "Cloud", "isboss": true }
                         ]
                     }
                 },
@@ -6771,8 +6771,8 @@
                     "size": 0,
                     "sp_ids": {
                         "4753": [
-                            { "index": 0, "name": "Leon (1)", "isboss": false },
-                            { "index": 1, "name": "Cloud (1)", "isboss": false }
+                            { "index": 0, "name": "Leon (1)", "isboss": true },
+                            { "index": 1, "name": "Cloud (1)", "isboss": true }
                         ]
                     }
                 },
@@ -6885,7 +6885,7 @@
                     "size": 0,
                     "sp_ids": {
                         "5041": [
-                            { "index": 1, "name": "Hades II", "isboss": false }
+                            { "index": 1, "name": "Hades II", "isboss": true }
                         ]
                     }
                 },
@@ -6952,7 +6952,7 @@
                     "size": 0,
                     "sp_ids": {
                         "5009": [
-                            { "index": 0, "name": "Cerberus (1)", "isboss": false }
+                            { "index": 0, "name": "Cerberus (1)", "isboss": true }
                         ]
                     }
                 },
@@ -6960,10 +6960,10 @@
                     "size": 0,
                     "sp_ids": {
                         "5073": [
-                            { "index": 0, "name": "Tifa (2)", "isboss": false },
-                            { "index": 1, "name": "Cloud (2)", "isboss": false },
-                            { "index": 2, "name": "Yuffie (2)", "isboss": false },
-                            { "index": 3, "name": "Leon (2)", "isboss": false }
+                            { "index": 0, "name": "Tifa (2)", "isboss": true },
+                            { "index": 1, "name": "Cloud (2)", "isboss": true },
+                            { "index": 2, "name": "Yuffie (2)", "isboss": true },
+                            { "index": 3, "name": "Leon (2)", "isboss": true }
                         ]
                     }
                 },
@@ -6971,8 +6971,8 @@
                     "size": 0,
                     "sp_ids": {
                         "5137": [
-                            { "index": 0, "name": "Yuffie (3)", "isboss": false },
-                            { "index": 1, "name": "Leon (3)", "isboss": false }
+                            { "index": 0, "name": "Yuffie (3)", "isboss": true },
+                            { "index": 1, "name": "Leon (3)", "isboss": true }
                         ]
                     }
                 },
@@ -6980,7 +6980,7 @@
                     "size": 0,
                     "sp_ids": {
                         "38": [
-                            { "index": 3, "name": "Hades II (1)", "isboss": false }
+                            { "index": 3, "name": "Hades II (1)", "isboss": true }
                         ]
                     }
                 },
@@ -6988,7 +6988,7 @@
                     "size": 0,
                     "sp_ids": {
                         "60": [
-                            { "index": 3, "name": "Hades II (1)", "isboss": false }
+                            { "index": 3, "name": "Hades II (1)", "isboss": true }
                         ]
                     }
                 }
@@ -7258,7 +7258,7 @@
                     "size": 0,
                     "sp_ids": {
                         "11": [
-                            { "index": 3, "name": "Demyx OC", "isboss": false }
+                            { "index": 3, "name": "Demyx OC", "isboss": true }
                         ]
                     }
                 }
@@ -7271,7 +7271,7 @@
                     "size": 0,
                     "sp_ids": {
                         "41": [
-                            { "index": 0, "name": "Hydra", "isboss": false }
+                            { "index": 0, "name": "Hydra", "isboss": true }
                         ]
                     }
                 }
@@ -7286,9 +7286,9 @@
                     "size": 0,
                     "sp_ids": {
                         "16": [
-                            { "index": 3, "name": "Ed", "isboss": false },
-                            { "index": 4, "name": "Banzai", "isboss": false },
-                            { "index": 5, "name": "Shenzie", "isboss": false }
+                            { "index": 3, "name": "Ed", "isboss": true },
+                            { "index": 4, "name": "Banzai", "isboss": true },
+                            { "index": 5, "name": "Shenzie", "isboss": true }
                         ]
                     }
                 }
@@ -7508,7 +7508,7 @@
                     "size": 0,
                     "sp_ids": {
                         "23": [
-                            { "index": 3, "name": "Groundshaker", "isboss": false }
+                            { "index": 3, "name": "Groundshaker", "isboss": true }
                         ]
                     }
                 }
@@ -7604,9 +7604,9 @@
                     "size": 0,
                     "sp_ids": {
                         "45": [
-                            { "index": 0, "name": "Shenzie (1)", "isboss": false },
-                            { "index": 1, "name": "Ed (1)", "isboss": false },
-                            { "index": 2, "name": "Banzai (1)", "isboss": false }
+                            { "index": 0, "name": "Shenzie (1)", "isboss": true },
+                            { "index": 1, "name": "Ed (1)", "isboss": true },
+                            { "index": 2, "name": "Banzai (1)", "isboss": true }
                         ]
                     }
                 }
@@ -7738,7 +7738,7 @@
                     "size": 0,
                     "sp_ids": {
                         "13": [
-                            { "index": 3, "name": "Scar", "isboss": false }
+                            { "index": 3, "name": "Scar", "isboss": true }
                         ]
                     }
                 }
@@ -8365,7 +8365,7 @@
                     "size": 0,
                     "sp_ids": {
                         "236": [
-                            { "index": 1, "name": "Riku", "isboss": false }
+                            { "index": 1, "name": "Riku", "isboss": true }
                         ]
                     }
                 }
@@ -8432,7 +8432,7 @@
                     "size": 0,
                     "sp_ids": {
                         "96": [
-                            { "index": 0, "name": "Storm Rider", "isboss": false }
+                            { "index": 0, "name": "Storm Rider", "isboss": true }
                         ]
                     }
                 }
@@ -8460,7 +8460,7 @@
                     "size": 0,
                     "sp_ids": {
                         "82": [
-                            { "index": 3, "name": "Shan-Yu", "isboss": false }
+                            { "index": 3, "name": "Shan-Yu", "isboss": true }
                         ]
                     }
                 },
@@ -8656,14 +8656,20 @@
                     "size": 0,
                     "sp_ids": {
                         "96": [
+                            { "index": 0, "name": "Emerald Blues NM", "isboss": false },
                             { "index": 1, "name": "Driller Mole NM", "isboss": false },
                             { "index": 2, "name": "Driller Mole NM", "isboss": false },
                             { "index": 3, "name": "Driller Mole NM", "isboss": false },
                             { "index": 4, "name": "Driller Mole NM", "isboss": false }
                         ],
+                        "98": [
+                            { "index": 3, "name": "Emerald Blues NM", "isboss": false }
+                        ],
                         "100": [
+                            { "index": 0, "name": "Emerald Blues NM", "isboss": false },
                             { "index": 1, "name": "Driller Mole NM (1)", "isboss": false },
-                            { "index": 2, "name": "Driller Mole NM (1)", "isboss": false }
+                            { "index": 2, "name": "Driller Mole NM (1)", "isboss": false },
+                            { "index": 3, "name": "Emerald Blues NM", "isboss": false }
                         ]
                     }
                 },
@@ -8710,6 +8716,11 @@
                             { "index": 3, "name": "Driller Mole NM", "isboss": false },
                             { "index": 4, "name": "Wight Knight NM", "isboss": false },
                             { "index": 5, "name": "Wight Knight NM", "isboss": false },
+                            { "index": 6, "name": "Emerald Blues NM", "isboss": false },
+                            { "index": 7, "name": "Emerald Blues NM", "isboss": false },
+                            { "index": 8, "name": "Emerald Blues NM", "isboss": false },
+                            { "index": 9, "name": "Emerald Blues NM", "isboss": false },
+                            { "index": 10, "name": "Emerald Blues NM", "isboss": false },
                             { "index": 11, "name": "Driller Mole NM", "isboss": false },
                             { "index": 12, "name": "Driller Mole NM", "isboss": false },
                             { "index": 13, "name": "Driller Mole NM", "isboss": false },
@@ -8724,8 +8735,11 @@
                             { "index": 22, "name": "Driller Mole NM", "isboss": false },
                             { "index": 23, "name": "Wight Knight NM", "isboss": false },
                             { "index": 24, "name": "Wight Knight NM", "isboss": false },
+                            { "index": 25, "name": "Emerald Blues NM", "isboss": false },
                             { "index": 26, "name": "Soldier NM", "isboss": false },
                             { "index": 27, "name": "Soldier NM", "isboss": false },
+                            { "index": 28, "name": "Emerald Blues NM", "isboss": false },
+                            { "index": 29, "name": "Emerald Blues NM", "isboss": false },
                             { "index": 30, "name": "Driller Mole NM", "isboss": false },
                             { "index": 31, "name": "Driller Mole NM", "isboss": false },
                             { "index": 32, "name": "Driller Mole NM", "isboss": false },
@@ -8751,7 +8765,7 @@
                     "size": 0,
                     "sp_ids": {
                         "6": [
-                            { "index": 3, "name": "Prison Keeper", "isboss": false }
+                            { "index": 3, "name": "Prison Keeper", "isboss": true }
                         ]
                     }
                 }
@@ -8801,10 +8815,13 @@
                     "sp_ids": {
                         "82": [
                             { "index": 0, "name": "Wight Knight NM", "isboss": false },
-                            { "index": 1, "name": "Wight Knight NM", "isboss": false }
+                            { "index": 1, "name": "Wight Knight NM", "isboss": false },
+                            { "index": 2, "name": "Emerald Blues NM", "isboss": false }
                         ],
                         "83": [
-                            { "index": 0, "name": "Wight Knight NM", "isboss": false }
+                            { "index": 0, "name": "Wight Knight NM", "isboss": false },
+                            { "index": 1, "name": "Emerald Blues NM", "isboss": false },
+                            { "index": 2, "name": "Emerald Blues NM", "isboss": false }
                         ]
                     }
                 },
@@ -8863,7 +8880,14 @@
                     "size": 0,
                     "sp_ids": {
                         "114": [
-                            { "index": 0, "name": "Toy Soldier NM", "isboss": false }
+                            { "index": 0, "name": "Toy Soldier NM", "isboss": false },
+                            { "index": 1, "name": "Emerald Blues NM", "isboss": false },
+                            { "index": 2, "name": "Emerald Blues NM", "isboss": false }
+                        ],
+                        "115": [
+                            { "index": 0, "name": "Emerald Blues NM", "isboss": false },
+                            { "index": 1, "name": "Emerald Blues NM", "isboss": false },
+                            { "index": 2, "name": "Emerald Blues NM", "isboss": false }
                         ]
                     }
                 },
@@ -8926,7 +8950,7 @@
                     "size": 0,
                     "sp_ids": {
                         "7": [
-                            { "index": 3, "name": "The Experiment", "isboss": false }
+                            { "index": 3, "name": "The Experiment", "isboss": true }
                         ]
                     }
                 },
@@ -8934,7 +8958,7 @@
                     "size": 0,
                     "sp_ids": {
                         "60": [
-                            { "index": 3, "name": "The Experiment", "isboss": false }
+                            { "index": 3, "name": "The Experiment", "isboss": true }
                         ]
                     }
                 }
@@ -8947,7 +8971,7 @@
                     "size": 0,
                     "sp_ids": {
                         "13": [
-                            { "index": 3, "name": "Oogie Boogie", "isboss": false }
+                            { "index": 3, "name": "Oogie Boogie", "isboss": true }
                         ]
                     }
                 }
@@ -8960,9 +8984,9 @@
                     "size": 0,
                     "sp_ids": {
                         "32": [
-                            { "index": 3, "name": "Lock", "isboss": false },
-                            { "index": 4, "name": "Shock", "isboss": false },
-                            { "index": 5, "name": "Barrel", "isboss": false }
+                            { "index": 3, "name": "Lock", "isboss": true },
+                            { "index": 4, "name": "Shock", "isboss": true },
+                            { "index": 5, "name": "Barrel", "isboss": true }
                         ]
                     }
                 }
@@ -9208,7 +9232,7 @@
                     "size": 0,
                     "sp_ids": {
                         "84": [
-                            { "index": 3, "name": "Hostile Program", "isboss": false }
+                            { "index": 3, "name": "Hostile Program", "isboss": true }
                         ]
                     }
                 },
@@ -9292,7 +9316,7 @@
                     "size": 0,
                     "sp_ids": {
                         "57": [
-                            { "index": 3, "name": "Sark", "isboss": false }
+                            { "index": 3, "name": "Sark", "isboss": true }
                         ]
                     }
                 },
@@ -9300,7 +9324,7 @@
                     "size": 0,
                     "sp_ids": {
                         "69": [
-                            { "index": 5, "name": "Giant Sark", "isboss": false }
+                            { "index": 5, "name": "Giant Sark", "isboss": true }
                         ]
                     }
                 },
@@ -9308,7 +9332,7 @@
                     "size": 0,
                     "sp_ids": {
                         "91": [
-                            { "index": 4, "name": "Giant Sark", "isboss": false }
+                            { "index": 4, "name": "Giant Sark", "isboss": true }
                         ]
                     }
                 }
@@ -9360,7 +9384,7 @@
                     "size": 0,
                     "sp_ids": {
                         "858": [
-                            { "index": 3, "name": "Seifer", "isboss": false }
+                            { "index": 3, "name": "Seifer", "isboss": true }
                         ]
                     }
                 }
@@ -9393,10 +9417,10 @@
                     "size": 0,
                     "sp_ids": {
                         "71": [
-                            { "index": 3, "name": "Seifer (1)", "isboss": false }
+                            { "index": 3, "name": "Seifer (1)", "isboss": true }
                         ],
                         "100": [
-                            { "index": 3, "name": "Vivi", "isboss": false }
+                            { "index": 3, "name": "Vivi", "isboss": true }
                         ]
                     }
                 },
@@ -9404,7 +9428,7 @@
                     "size": 0,
                     "sp_ids": {
                         "93": [
-                            { "index": 3, "name": "Seifer (2)", "isboss": false }
+                            { "index": 3, "name": "Seifer (2)", "isboss": true }
                         ],
                         "122": [
                             { "index": 3, "name": "Dusk", "isboss": false },
@@ -9420,7 +9444,7 @@
                             { "index": 3, "name": "Dusk", "isboss": false }
                         ],
                         "144": [
-                            { "index": 3, "name": "Axel I", "isboss": false }
+                            { "index": 3, "name": "Axel I", "isboss": true }
                         ]
                     }
                 },
@@ -9441,7 +9465,7 @@
                             { "index": 10, "name": "Berserker", "isboss": false }
                         ],
                         "166": [
-                            { "index": 3, "name": "Setzer", "isboss": false }
+                            { "index": 3, "name": "Setzer", "isboss": true }
                         ]
                     }
                 },
@@ -9449,7 +9473,7 @@
                     "size": 0,
                     "sp_ids": {
                         "2215": [
-                            { "index": 3, "name": "Seifer (3)", "isboss": false }
+                            { "index": 3, "name": "Seifer (3)", "isboss": true }
                         ]
                     }
                 },
@@ -9457,7 +9481,7 @@
                     "size": 0,
                     "sp_ids": {
                         "2343": [
-                            { "index": 3, "name": "Hayner", "isboss": false }
+                            { "index": 3, "name": "Hayner", "isboss": true }
                         ]
                     }
                 },
@@ -9465,7 +9489,7 @@
                     "size": 0,
                     "sp_ids": {
                         "2375": [
-                            { "index": 3, "name": "Seifer (4)", "isboss": false }
+                            { "index": 3, "name": "Seifer (4)", "isboss": true }
                         ]
                     }
                 },
@@ -9473,7 +9497,7 @@
                     "size": 0,
                     "sp_ids": {
                         "2407": [
-                            { "index": 3, "name": "Setzer", "isboss": false }
+                            { "index": 3, "name": "Setzer", "isboss": true }
                         ]
                     }
                 },
@@ -9481,7 +9505,7 @@
                     "size": 0,
                     "sp_ids": {
                         "78": [
-                            { "index": 3, "name": "Hayner", "isboss": false }
+                            { "index": 3, "name": "Hayner", "isboss": true }
                         ]
                     }
                 }
@@ -9961,7 +9985,7 @@
                     "size": 0,
                     "sp_ids": {
                         "55": [
-                            { "index": 0, "name": "Vexen (1)", "isboss": false }
+                            { "index": 0, "name": "Vexen (1)", "isboss": true }
                         ]
                     }
                 }
@@ -10121,7 +10145,7 @@
                             { "index": 5, "name": "Assassin", "isboss": false }
                         ],
                         "67": [
-                            { "index": 3, "name": "Axel II", "isboss": false }
+                            { "index": 3, "name": "Axel II", "isboss": true }
                         ]
                     }
                 },
@@ -10129,7 +10153,7 @@
                     "size": 0,
                     "sp_ids": {
                         "89": [
-                            { "index": 3, "name": "Data Axel", "isboss": false }
+                            { "index": 3, "name": "Data Axel", "isboss": true }
                         ]
                     }
                 }
@@ -10527,7 +10551,7 @@
                     "size": 0,
                     "sp_ids": {
                         "13": [
-                            { "index": 0, "name": "Twilight Thorn", "isboss": false }
+                            { "index": 0, "name": "Twilight Thorn", "isboss": true }
                         ]
                     }
                 }
@@ -10787,7 +10811,7 @@
                     "size": 0,
                     "sp_ids": {
                         "26": [
-                            { "index": 3, "name": "Past Pete", "isboss": false }
+                            { "index": 3, "name": "Past Pete", "isboss": true }
                         ]
                     }
                 }
@@ -10878,7 +10902,7 @@
                     "size": 0,
                     "sp_ids": {
                         "36": [
-                            { "index": 3, "name": "Pete TR", "isboss": false }
+                            { "index": 3, "name": "Pete TR", "isboss": true }
                         ]
                     }
                 }

@@ -95,7 +95,7 @@
             "Grim Reaper I": {
                 "vars": [ 0, 0, 0 ],
                 "can_be_enemy": true,
-                "tags": ["large"]
+                "tags": [ "large" ]
             },
             "Grim Reaper II": {
                 "vars": [ 0, 1, 0 ],
@@ -223,7 +223,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 1,
-        "tags": ["large"]
+        "tags": [
+            "large"
+        ]
     },
     "Luna Bandit": {
         "obj_id": 12,
@@ -398,7 +400,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 1,
-        "tags": ["large"]
+        "tags": [
+            "large"
+        ]
     },
     "Shan-Yu": {
         "obj_id": 21,
@@ -439,6 +443,22 @@
         "hp": 100,
         "level": 99,
         "limiter": 1
+    },
+    "Emerald Blues NM": {
+        "obj_id": 1834,
+        "model": "M_EX120_NM",
+        "size": 109420,
+        "type": "extra",
+        "variations": {
+            "Emerald Blues NM": {
+                "vars": [ 0, 0, 0 ]
+            }
+        },
+        "enabled": true,
+        "hp": 100,
+        "level": 99,
+        "limiter": 1,
+        "enmp_index": 1
     },
     "Soldier NM": {
         "obj_id": 1838,
@@ -1665,7 +1685,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 1,
-        "tags": ["al"]
+        "tags": [
+            "al"
+        ]
     },
     "Marluxia": {
         "obj_id": 2339,
@@ -2185,7 +2207,7 @@
                 "vars": [ 0, 0, 0 ]
             },
             "Roxas (Data)": {
-                "vars": [ 0, 0, 1],
+                "vars": [ 0, 0, 1 ],
                 "isnightmare": true
             }
         },
@@ -2316,7 +2338,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 1,
-        "tags": ["al"]
+        "tags": [
+            "al"
+        ]
     },
     "Dark Thorn": {
         "obj_id": 354,
@@ -2342,7 +2366,7 @@
         "type": "boss",
         "variations": {
             "Larxene (Data)": {
-                "vars": [ 0, 0, 1 ],
+                "vars": [ 0, 0, 1 ]
             },
             "Larxene": {
                 "vars": [ 0, 0, 0 ]
@@ -2443,7 +2467,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 1,
-        "tags": ["al"]
+        "tags": [
+            "al"
+        ]
     },
     "Hydra": {
         "obj_id": 352,
@@ -2715,7 +2741,7 @@
         "type": "boss",
         "variations": {
             "Data Xigbar": {
-                "vars": [ 0, 0, 0 ],
+                "vars": [ 0, 0, 0 ]
             }
         },
         "unstable": true,

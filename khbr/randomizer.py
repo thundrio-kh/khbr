@@ -16,35 +16,65 @@ class KingdomHearts2:
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
             "enemy": ["one_to_one", "spawnpoint_one_to_one", "wild", False],
-            "selected_enemy": self.get_valid_enemies(),
-            "bosses_can_replace_enemies": [True, False],
-            "nightmare_enemies": [True, False],
+            "selected_enemy": [False],#self.get_valid_enemies(),
+            "bosses_can_replace_enemies": [False],
+            "nightmare_enemies": [False],
             "separate_small_big_enemies": [True, False],
             "scale_enemy_stats": [True, False],
 
             "memory_expansion": [True, False],
 
-            "boss": ["one_to_one", "one_to_one_characters", "wild", False],
-            "nightmare_bosses": [True, False],
+            "boss": ["one_to_one"],#, "one_to_one_characters", "wild", False],
+            "nightmare_bosses": [False],
             "scale_boss_stats": [True, False],
-            "stable_bosses_only": [True, False],
-            "selected_boss": self.get_valid_bosses()
+            "stable_bosses_only": [False],
+            "selected_boss": False#self.get_valid_bosses()
         }
     def get_enemies(self):
         # Respect disabled flags and such
         pass
-    def get_bosses(self):
-        pass
+    def get_bosses(self, nightmare_mode=False, stable_only=False):
+        bosses_f = json.load(open(os.path.join(os.path.dirname(__file__), "enemies.json")))
+        bosses = {}
+        for bn in bosses_f:
+            b = bosses_f[bn]
+            if b["type"] != 'boss' or b['enabled'] == 'false':
+                continue
+            if nightmare_mode and not ("isnightmare" in b and b["isnightmare"]):
+                continue
+            if stable_only and ("unstable" in b and b["unstable"]):
+                continue
+            for v in b["variations"]:
+                boss = dict(b["variations"][v])
+                boss["name"] = v
+                for k in b:
+                    if k == "variations":
+                        continue
+                    if k not in boss:
+                        boss[k] = b[k]
+                bosses[bn] = boss
+        locations = self.get_locations()
+        for boss in bosses:
+            available = [] # These are places they are allowed to be
+            
+        return bosses
     def get_locations(self):
-        pass
-    def filter_enemies(self, enemylist, attribute, isfalse=False)
-        pass
+        locations_f = json.load(os.path.join(os.path.dirname(__file__), "locations.json"))
+        return locations_f
     def add_tag(self, enemylist, tag):
-        pass
+        for enemy in enemylist:
+            enemy["tags"].append(tag)
+        return enemylist
     def remove_tag(self, enemylist, tag):
-        pass
+        for enemy in enemylist:
+            enemy["tags"] = list(filter(lambda k: k != tag), enemylist)
     def pickbossmapping(self, bosslist, bossmode, unlimited_memory=False):
-        pass # Just doing the really stupid thing
+        # Randomization with limitations can take a while, so pregenerate 100K randomizations for each option
+        # then just pick one of the right type
+        num_files = 100000
+        dirname = os.path.join(os.path.dirname(__file__), "boss_randomizations", "{}_{}".format(bossmode, unlimited_memory))
+        num = random.randint(1,num_files)
+        return json.load(open(os.path.join(dirname, num)))
     def pickenemymapping(self, enemylist):
         pass 
     def pick_boss_to_replace(self, oldname, bosslist, unlimited_memory=False):
