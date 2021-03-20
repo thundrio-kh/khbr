@@ -38,12 +38,6 @@ class KingdomHearts2:
         bosses = {}
         for bn in bosses_f:
             b = bosses_f[bn]
-            if b["type"] != 'boss' or b['enabled'] == 'false':
-                continue
-            if nightmare_mode and not ("isnightmare" in b and b["isnightmare"]):
-                continue
-            if stable_only and ("unstable" in b and b["unstable"]):
-                continue
             for v in b["variations"]:
                 boss = dict(b["variations"][v])
                 boss["name"] = v
@@ -52,14 +46,25 @@ class KingdomHearts2:
                         continue
                     if k not in boss:
                         boss[k] = b[k]
-                bosses[bn] = boss
+
+                if boss["type"] != 'boss':
+                    continue
+                if not boss['enabled']:
+                    continue
+                if nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
+                    continue
+                if stable_only and ("unstable" in boss and boss["unstable"]):
+                    continue
+
+                bosses[v] = boss
+
         locations = self.get_locations()
         for boss in bosses:
             available = [] # These are places they are allowed to be
-            
+
         return bosses
     def get_locations(self):
-        locations_f = json.load(os.path.join(os.path.dirname(__file__), "locations.json"))
+        locations_f = json.load(open(os.path.join(os.path.dirname(__file__), "locations.json")))
         return locations_f
     def add_tag(self, enemylist, tag):
         for enemy in enemylist:
