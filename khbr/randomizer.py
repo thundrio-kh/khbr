@@ -4,6 +4,9 @@ import random
 
 supported_games = ["kh2"]
 
+UNLIMITED_SIZE = 99_999_999_999_999
+LIMITED_SIZE = 10_000_000
+NUM_RANDOMIZATION_MAPPINGS = 10
 class KingdomHearts2:
     def __init__(self):
         self.schemaversion = "01"
@@ -33,7 +36,7 @@ class KingdomHearts2:
     def get_enemies(self):
         # Respect disabled flags and such
         pass
-    def get_bosses(self, nightmare_mode=False, stable_only=False):
+    def get_bosses(self, nightmare_mode=False, stable_only=False, maxsize=UNLIMITED_SIZE):
         bosses_f = json.load(open(os.path.join(os.path.dirname(__file__), "enemies.json")))
         bosses = {}
         for bn in bosses_f:
@@ -59,8 +62,33 @@ class KingdomHearts2:
                 bosses[v] = boss
 
         locations = self.get_locations()
-        for boss in bosses:
-            available = [] # These are places they are allowed to be
+
+        for w in locations:
+            world = locations[w]
+            for r in world:
+                room = world[r]
+                for sp in room["spawnpoints"]:
+                    spawnpoint = room["spawnpoints"][sp]
+                    for spid in spawnpoint["sp_ids"].values():
+                        for ent in spid:
+                            if ent["isboss"]:
+                                if ent["name"] in bosses:
+                                    bosses[ent["name"]]["room_size"] = room["size"]
+        for b in bosses:
+            boss = bosses[b]
+            avail = [] # These are bosses that are allowed to be here
+            for bc in bosses:
+                boss_check = bosses[bc]
+                if "blacklist" in boss:
+                    if bc in boss["blacklist"]:
+                        continue
+                if "whitelist" in boss:
+                    if bc not in boss["whitelist"]:
+                        continue
+                if boss["size"] + boss_check["room_size"] >= maxsize:
+                    continue
+                avail.append(boss_check["name"])
+            boss["available"] = avail
 
         return bosses
     def get_locations(self):
@@ -73,17 +101,18 @@ class KingdomHearts2:
     def remove_tag(self, enemylist, tag):
         for enemy in enemylist:
             enemy["tags"] = list(filter(lambda k: k != tag), enemylist)
-    def pickbossmapping(self, bosslist, bossmode, unlimited_memory=False):
+    def pickbossmapping(self, bosslist, category):
         # Randomization with limitations can take a while, so pregenerate 100K randomizations for each option
         # then just pick one of the right type
-        num_files = 100000
-        dirname = os.path.join(os.path.dirname(__file__), "boss_randomizations", "{}_{}".format(bossmode, unlimited_memory))
+        num_files = NUM_RANDOMIZATION_MAPPINGS
+        dirname = os.path.join(os.path.dirname(__file__), "boss_randomizations", category))
         num = random.randint(1,num_files)
         return json.load(open(os.path.join(dirname, num)))
     def pickenemymapping(self, enemylist):
         pass 
-    def pick_boss_to_replace(self, oldname, bosslist, unlimited_memory=False):
-        False
+    def pick_boss_to_replace(self, bosslist):
+        n = random.randint(0,len(bosslist)-1)
+        return bosslist[n]
     def get_enemy_attribute(self, name, attribute):
         pass
     def pick_enemy_to_replae(self, oldname, enemylist):
@@ -93,47 +122,52 @@ class KingdomHearts2:
         scale_enemy, scale_boss = False
         selected_boss, selected_enemy = False
         enemies, bosses, duplicate_enemies, duplicate_bosses, bossmode, enemymode = None
-        if "enemy" in options and options["enemy"]:
-            enemymode = options["enemy"]
-            duplicate_enemies = enemymode in ["spawnpoint_one_to_one", "wild"]
-            enemies = self.get_enemies()
-            if "scale_enemy_stats" in options:
-                scale_enemy = options["scale_enemy_stats"]
-            if "bosses_can_replace_enemies" in options and options["bosses_can_replace_enemies"]:
-                # Might eventually want to limit this to 10% of replacements get a boss, see how it plays
-                duplicate_enemies = True
-                bossenemies = self.filter_enemies(self.get_bosses(), "can_be_enemy")
-                bossenemies = self.filter_enemies(bossenemies, "unstable", isfalse=True)
-                bossenemies = self.add_tag(bossenemies, "large")
-                enemies = enemies + bossenemies
-            if "nightmare_enemies" in options and options["nightmare_enemies"]:
-                duplicate_enemies = True
-                enemies = self.filter_enemies(enemies, "isnightmare")
-            if not ("separate_small_big_enemies" in options and options["separate_small_big_enemies"]):
-                enemies = self.remove_tag(enemies, "large")
-            if "selected_enemy" in options and options["selected_enemy"]:
-                enemymode = "wild"
-                duplicate_enemies = True
-                selected_enemy = options["selected_enemy"]
+        # if "enemy" in options and options["enemy"]:
+        #     enemymode = options["enemy"]
+        #     duplicate_enemies = enemymode in ["spawnpoint_one_to_one", "wild"]
+        #     enemies = self.get_enemies()
+        #     if "scale_enemy_stats" in options:
+        #         scale_enemy = options["scale_enemy_stats"]
+        #     if "bosses_can_replace_enemies" in options and options["bosses_can_replace_enemies"]:
+        #         # Might eventually want to limit this to 10% of replacements get a boss, see how it plays
+        #         duplicate_enemies = True
+        #         bossenemies = self.filter_enemies(self.get_bosses(), "can_be_enemy")
+        #         bossenemies = self.filter_enemies(bossenemies, "unstable", isfalse=True)
+        #         bossenemies = self.add_tag(bossenemies, "large")
+        #         enemies = enemies + bossenemies
+        #     if "nightmare_enemies" in options and options["nightmare_enemies"]:
+        #         duplicate_enemies = True
+        #         enemies = self.filter_enemies(enemies, "isnightmare")
+        #     if not ("separate_small_big_enemies" in options and options["separate_small_big_enemies"]):
+        #         enemies = self.remove_tag(enemies, "large")
+        #     if "selected_enemy" in options and options["selected_enemy"]:
+        #         enemymode = "wild"
+        #         duplicate_enemies = True
+        #         selected_enemy = options["selected_enemy"]
         if "boss" in options and options["boss"]:
             bossmode = options["boss"]
             duplicate_bosses = options["boss"] == "wild"
-            bosses = self.get_bosses()
-            if "scale_boss_stats" in options:
-                scale_boss = options["scale_boss_stats"]
+            stable_only = False
+            nightmare_bosses = False
             if "stable_bosses_only" in options and options["stable_bosses_only"]:
                 duplicate_bosses = True
-                bosses = self.filter_enemies(bosses, "unstable", isfalse=True)
+                stable_only = True
             if "nightmare_bosses" in options and options["nightmare_bosses"]:
+                nightmare_bosses = True
                 duplicate_bosses = True
-                bosses = self.filter_enemies(bosses, "isnightmare")
+            
+            maxsize = UNLIMITED_SIZE if unlimited_memory else LIMITED_SIZE
+            bosses = self.get_bosses(nightmare_bosses=nightmare_bosses, stable_only=stable_only, maxsize=maxsize)
+            if "scale_boss_stats" in options:
+                scale_boss = options["scale_boss_stats"]
+
             if "selected_boss" in options and options["selected_boss"]:
                 bossmode = "wild"
                 duplicate_bosses = True
                 selected_boss = options["selected_boss"]
             
-            bossmapping = self.pickbossmapping(bosses, bossmode, unlimited_memory) if not duplicate_enemies else None
-            enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else None
+            bossmapping = self.pickbossmapping(bosses, bossmode, unlimited_memory) if not duplicate_bosses else None
+            # enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else None
 
             spawns = self.get_locations()
             spawn_limiters = {}
@@ -147,8 +181,8 @@ class KingdomHearts2:
                     if "ignored" in room:
                         del spawns[w][r]
                         continue
-                    if enemies and enemymode == "spawnpoint_one_to_one":
-                        enemymapping = self.pickenemymapping(enemies)
+                    # if enemies and enemymode == "spawnpoint_one_to_one":
+                    #     enemymapping = self.pickenemymapping(enemies)
                     for sp in room:
                         spawnpoint = room[sp]
                         for i in spawnpoint:
@@ -163,44 +197,47 @@ class KingdomHearts2:
                                     elif bossmapping:
                                         new_boss = bossmapping[ent["name"]]
                                     else:
-                                        new_boss = self.pick_boss_to_replace(ent["name"], bosses, unlimited_memory)
+                                        new_boss = self.pick_boss_to_replace(bosses[ent["name"]]["available"])
                                     if new_boss == ent["name"]:
                                         continue
+                                    new_boss_object = bosses[new_boss]
+                                    old_boss_object = bosses[ent["name"]]
                                     # Bosses don't have spawn limiters normally, so don't need to set them
-                                    msn_mapping[self.getEnemyAttribute(ent["name"], "msn")] = self.getEnemyAttribute(new_boss, "msn")
+                                    msn_mapping[bosses[ent["name"]]["msn"]] = bosses[new_boss]["msn"]
+                                    msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"] 
                                     if scale_boss:
                                         if new_boss not in set_scaling:
-                                            hp = self.getEnemyAttribute(ent["name"], "hp")
-                                            level = self.getEnemyAttribute(ent["name"], "level")
+                                            hp = old_boss_object["hp"]
+                                            level = old_boss_object["level"]
                                             set_scaling[new_boss] = (hp, level)
                                         else:
-                                            hp = self.getEnemyAttribute(ent["name"], "hp")
-                                            level = self.getEnemyAttribute(ent["name"], "level")
+                                            hp = old_boss_object["hp"]
+                                            level = old_boss_object["level"]
                                             if hp > set_scaling[new_boss][0]:
                                                 set_scaling[new_boss] = (hp, level)
-                                    if self.getEnemyAttribute(new_boss, "aiMod"):
+                                    if "aiMod" in new_boss_object and new_boss_object["aiMod"]:
                                         # In some cases it might be useful to know who is being replaced,
                                         ## IE the height Axel spawns the fire floor might be different on a per room basis
                                         ai_mods[new_boss] = ent["name"]
-                                else:
-                                    if not enemies:
-                                        continue
-                                    if selected_enemy:
-                                        new_enemy = selected_enemy
-                                    elif enemymapping:
-                                        new_enemy = enemymapping[ent["name"]]
-                                    else:
-                                        #Remember tags
-                                        new_enemy = self.pick_enemy_to_replace(ent["name"], enemies)
-                                    oldlimiter = self.getEnemyAttribute(ent["name"], "limiter")
-                                    if new_enemy not in spawn_limiters:
-                                        spawn_limiters[new_enemy] = oldlimiter
-                                    else:
-                                        spawn_limiters[new_enemy] = min(oldlimiter, spawn_limiters[new_enemy])
-                                    if scale_enemy:
-                                        if new_enemy not in set_scaling:
-                                            set_scaling[new_enemy] = []
-                                        set_scaling[new_enemy].append(ent["name"])
+                                # else:
+                                #     if not enemies:
+                                #         continue
+                                #     if selected_enemy:
+                                #         new_enemy = selected_enemy
+                                #     elif enemymapping:
+                                #         new_enemy = enemymapping[ent["name"]]
+                                #     else:
+                                #         #Remember tags
+                                #         new_enemy = self.pick_enemy_to_replace(ent["name"], enemies)
+                                #     oldlimiter = self.getEnemyAttribute(ent["name"], "limiter")
+                                #     if new_enemy not in spawn_limiters:
+                                #         spawn_limiters[new_enemy] = oldlimiter
+                                #     else:
+                                #         spawn_limiters[new_enemy] = min(oldlimiter, spawn_limiters[new_enemy])
+                                #     if scale_enemy:
+                                #         if new_enemy not in set_scaling:
+                                #             set_scaling[new_enemy] = []
+                                #         set_scaling[new_enemy].append(ent["name"])
 
             return {"spawns": spawns, "msn_map": msn_mapping, "ai_mods": set(ai_mods), "scale_map": set_scaling, "limiter_map": spawn_limiters}
  
@@ -298,7 +335,23 @@ class Randomizer:
         seed = parts[2]
         return gm, seed, options
 
-    def generate_seed(self, g, seed, options):
+    def generate_mod(self, game, fn, randomization):
+        mod_yaml = game.generate_mod_basics()
+        moddir, rmmoddir = self._make_tmpdir()
+        
+        self._create_yaml(os.path.join(moddir, "mod.yml"), mod_yaml)
+        zipped = self._create_zip(moddir, fn)
+
+        rmmoddir()
+
+        return zipped
+
+    def read_seed(self, g, fn):
+
+
+    def generate_seed(self,g,)
+
+    def generate_randomization(self, g, seed, options):
         if g not in supported_games:
             raise Exception("Game not supported")
         game = self._get_game(g)
@@ -306,20 +359,14 @@ class Randomizer:
         fn = self.generate_filename(game, seed, options)
         if not seed:
             self.seed = int(time.time())
-        mod_yaml = game.generate_mod_basics()
-        moddir, rmmoddir = self._make_tmpdir()
-
+        
         # for both enemies and bosses
         # replacements are either decided beforehand, or at the time of replacement
         random.seed(seed)
         randomization = game.perform_randomization(options)
 
-        self._create_yaml(os.path.join(moddir, "mod.yml"), mod_yaml)
-        zipped = self._create_zip(moddir, fn)
+        return randomization
 
-        rmmoddir()
-
-        return zipped
 
 if __name__ == '__main__':
     Randomizer().generate_seed("kh2", "1234", {"selected_enemy": "Air Pirate"})

@@ -2841,7 +2841,7 @@
         },
         "isnightmare": true,
         "can_be_enemy": true,
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 215,
         "msn": "LK05_MS101.bar",
         "hp": 100,
