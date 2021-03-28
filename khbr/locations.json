@@ -3645,7 +3645,7 @@
                     "sp_ids": {
                         "47": [
                             { "index": 2, "name": "Final Xemnas", "isboss": true },
-                            { "index": 3, "name": "Final Xemnas (1)", "isboss": true }
+                            { "index": 3, "name": "Final Xemnas (Copy)", "isboss": true }
                         ]
                     }
                 },
@@ -3654,7 +3654,7 @@
                     "sp_ids": {
                         "89": [
                             { "index": 2, "name": "Data Final Xemnas", "isboss": true },
-                            { "index": 3, "name": "Data Final Xemnas (1)", "isboss": true }
+                            { "index": 3, "name": "Data Final Xemnas (Copy)", "isboss": true }
                         ]
                     }
                 }

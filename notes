@@ -24,3 +24,11 @@ add a bunch of different stuff to the enemies, make each variation a dict with "
    when the dict is gotten, merge the parent and the kid (so if nightmare in parent)
 msn needs to be listed in the enemies
 hp and level and spawnlimiter needs to be tracked in the enemies.json
+
+need a solution for msns for the AS's since they only have one MSN.... Can probably be something hacky
+the cups guys also have MSN's that shouldn't change, think about how to add this
+and like blizzard lord/volcano lord.... maybe just make these msns not replaced and limit who can be put there
+
+need to implement replaceallowed=false
+
+for the ones that don't get the msn replaced, you will likely want to craft a new MSN for them that works

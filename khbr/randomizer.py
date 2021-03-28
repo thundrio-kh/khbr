@@ -12,14 +12,14 @@ class KingdomHearts2:
         self.schemaversion = "01"
         self.name = "kh2"
     def get_valid_enemies(self):
-        return ["Air Pirate"]
+        return ["Air Pirate", "Dancer", "Driller Mole"]
     def get_valid_bosses(self):
-        return ["Marluxia"]
+        return ["Zexion", "Axel II"]
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
             "enemy": ["one_to_one", "spawnpoint_one_to_one", "wild", False],
-            "selected_enemy": [False],#self.get_valid_enemies(),
+            "selected_enemy": self.get_valid_enemies(),
             "bosses_can_replace_enemies": [False],
             "nightmare_enemies": [False],
             "separate_small_big_enemies": [True, False],
@@ -27,69 +27,95 @@ class KingdomHearts2:
 
             "memory_expansion": [True, False],
 
-            "boss": ["one_to_one"],#, "one_to_one_characters", "wild", False],
+            "boss": ["one_to_one", "selected_boss"],#, "one_to_one_characters", "wild", False],
             "nightmare_bosses": [False],
             "scale_boss_stats": [True, False],
             "stable_bosses_only": [False],
-            "selected_boss": False#self.get_valid_bosses()
+            "selected_boss": self.get_valid_bosses()
         }
     def get_enemies(self):
         # Respect disabled flags and such
         pass
-    def get_bosses(self, nightmare_mode=False, stable_only=False, maxsize=UNLIMITED_SIZE):
+    def get_bosses(self, nightmare_mode=False, stable_only=False, maxsize=UNLIMITED_SIZE, usefilters=True, getavail=True):
+        defaults = {
+            "replace_as": None,
+            "replace_allowed": True,
+            "model": None,
+            "msn_replace_allowed": True,
+            "tags": [],
+            "level": 0,
+            "isnightmare": False,
+            "hp": 100,
+            "limiter": 1,
+            "msn_required": False,
+            "unstable": False,
+            "aimod": None,
+            "can_be_enemy": False,
+            "msn": None,
+            "size": 0,
+            "enmp_index": None,
+            "enabled": True
+        }
         bosses_f = json.load(open(os.path.join(os.path.dirname(__file__), "enemies.json")))
         bosses = {}
+        allkeys = []
         for bn in bosses_f:
             b = bosses_f[bn]
             for v in b["variations"]:
                 boss = dict(b["variations"][v])
                 boss["name"] = v
                 for k in b:
+                    allkeys.append(k)
                     if k == "variations":
                         continue
                     if k not in boss:
                         boss[k] = b[k]
-
-                if boss["type"] != 'boss':
-                    continue
-                if not boss['enabled']:
-                    continue
-                if nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
-                    continue
-                if stable_only and ("unstable" in boss and boss["unstable"]):
-                    continue
+                for d in defaults:
+                    if d not in boss:
+                        boss[d] = defaults[d]
+                if usefilters:
+                    if boss["type"] != 'boss':
+                        continue
+                    if not boss['enabled']:
+                        continue
+                    if nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
+                        continue
+                    if stable_only and ("unstable" in boss and boss["unstable"]):
+                        continue
 
                 bosses[v] = boss
+        if getavail:
+            locations = self.get_locations()
 
-        locations = self.get_locations()
-
-        for w in locations:
-            world = locations[w]
-            for r in world:
-                room = world[r]
-                for sp in room["spawnpoints"]:
-                    spawnpoint = room["spawnpoints"][sp]
-                    for spid in spawnpoint["sp_ids"].values():
-                        for ent in spid:
-                            if ent["isboss"]:
-                                if ent["name"] in bosses:
-                                    bosses[ent["name"]]["room_size"] = room["size"]
-        for b in bosses:
-            boss = bosses[b]
-            avail = [] # These are bosses that are allowed to be here
-            for bc in bosses:
-                boss_check = bosses[bc]
-                if "blacklist" in boss:
-                    if bc in boss["blacklist"]:
+            for w in locations:
+                world = locations[w]
+                for r in world:
+                    room = world[r]
+                    for sp in room["spawnpoints"]:
+                        spawnpoint = room["spawnpoints"][sp]
+                        for spid in spawnpoint["sp_ids"].values():
+                            for ent in spid:
+                                if ent["isboss"]:
+                                    if ent["name"] in bosses:
+                                        bosses[ent["name"]]["room_size"] = room["size"]
+            for b in bosses:
+                boss = bosses[b]
+                avail = [] # These are bosses that are allowed to be here
+                for bc in bosses:
+                    boss_check = bosses[bc]
+                    if "blacklist" in boss:
+                        if bc in boss["blacklist"]:
+                            continue
+                    if "whitelist" in boss:
+                        if bc not in boss["whitelist"]:
+                            continue
+                    if "msn_required" in boss and boss["msn_required"]:
+                        if "msn_replace_allowed" in boss_check and not boss_check["msn_replace_allowed"]:
+                            continue
+                    if boss["size"] + boss_check["room_size"] >= maxsize:
                         continue
-                if "whitelist" in boss:
-                    if bc not in boss["whitelist"]:
-                        continue
-                if boss["size"] + boss_check["room_size"] >= maxsize:
-                    continue
-                avail.append(boss_check["name"])
-            boss["available"] = avail
-
+                    avail.append(boss_check["name"])
+                boss["available"] = avail
         return bosses
     def get_locations(self):
         locations_f = json.load(open(os.path.join(os.path.dirname(__file__), "locations.json")))
@@ -105,7 +131,7 @@ class KingdomHearts2:
         # Randomization with limitations can take a while, so pregenerate 100K randomizations for each option
         # then just pick one of the right type
         num_files = NUM_RANDOMIZATION_MAPPINGS
-        dirname = os.path.join(os.path.dirname(__file__), "boss_randomizations", category))
+        dirname = os.path.join(os.path.dirname(__file__), "boss_randomizations", category)
         num = random.randint(1,num_files)
         return json.load(open(os.path.join(dirname, num)))
     def pickenemymapping(self, enemylist):
@@ -119,9 +145,16 @@ class KingdomHearts2:
         pass #Remember tags
     def perform_randomization(self, options):
         unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
-        scale_enemy, scale_boss = False
-        selected_boss, selected_enemy = False
-        enemies, bosses, duplicate_enemies, duplicate_bosses, bossmode, enemymode = None
+        scale_enemy = False
+        scale_boss = False
+        selected_boss = False
+        selected_enemy = False
+        enemies = None
+        bosses = None
+        duplicate_enemies = None
+        duplicate_bosses = None
+        bossmode = None
+        enemymode = None
         # if "enemy" in options and options["enemy"]:
         #     enemymode = options["enemy"]
         #     duplicate_enemies = enemymode in ["spawnpoint_one_to_one", "wild"]
@@ -157,7 +190,7 @@ class KingdomHearts2:
                 duplicate_bosses = True
             
             maxsize = UNLIMITED_SIZE if unlimited_memory else LIMITED_SIZE
-            bosses = self.get_bosses(nightmare_bosses=nightmare_bosses, stable_only=stable_only, maxsize=maxsize)
+            bosses = self.get_bosses(nightmare_mode=nightmare_bosses, stable_only=stable_only, maxsize=maxsize)
             if "scale_boss_stats" in options:
                 scale_boss = options["scale_boss_stats"]
 
@@ -168,6 +201,8 @@ class KingdomHearts2:
             
             bossmapping = self.pickbossmapping(bosses, bossmode, unlimited_memory) if not duplicate_bosses else None
             # enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else None
+
+            enemy_records = self.get_bosses(usefilters=False, getavail=False)
 
             spawns = self.get_locations()
             spawn_limiters = {}
@@ -183,10 +218,10 @@ class KingdomHearts2:
                         continue
                     # if enemies and enemymode == "spawnpoint_one_to_one":
                     #     enemymapping = self.pickenemymapping(enemies)
-                    for sp in room:
-                        spawnpoint = room[sp]
-                        for i in spawnpoint:
-                            entities = spawnpoint[i]
+                    for sp in room["spawnpoints"]:
+                        spawnpoint = room["spawnpoints"][sp]
+                        for i in spawnpoint["sp_ids"]:
+                            entities = spawnpoint["sp_ids"][i]
                             for e in range(len(entities)):
                                 ent = entities[e]
                                 if ent["isboss"]:
@@ -200,11 +235,13 @@ class KingdomHearts2:
                                         new_boss = self.pick_boss_to_replace(bosses[ent["name"]]["available"])
                                     if new_boss == ent["name"]:
                                         continue
-                                    new_boss_object = bosses[new_boss]
-                                    old_boss_object = bosses[ent["name"]]
+                                    new_boss_object = enemy_records[new_boss]
+                                    old_boss_object = enemy_records[ent["name"]]
+                                    if not old_boss_object["replace_allowed"]:
+                                        continue
                                     # Bosses don't have spawn limiters normally, so don't need to set them
-                                    msn_mapping[bosses[ent["name"]]["msn"]] = bosses[new_boss]["msn"]
-                                    msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"] 
+                                    if "msn_replace_allowed":
+                                        msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"] 
                                     if scale_boss:
                                         if new_boss not in set_scaling:
                                             hp = old_boss_object["hp"]
@@ -239,12 +276,8 @@ class KingdomHearts2:
                                 #             set_scaling[new_enemy] = []
                                 #         set_scaling[new_enemy].append(ent["name"])
 
-            return {"spawns": spawns, "msn_map": msn_mapping, "ai_mods": set(ai_mods), "scale_map": set_scaling, "limiter_map": spawn_limiters}
+            return {"spawns": spawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters}
  
-
-
-                
-
     def generate_mod_basics(self):
         return {"title": "KH2 Boss/Enemy Rando"}
 
@@ -347,9 +380,10 @@ class Randomizer:
         return zipped
 
     def read_seed(self, g, fn):
+        pass
 
-
-    def generate_seed(self,g,)
+    def generate_seed(self, g, fn):
+        pass
 
     def generate_randomization(self, g, seed, options):
         if g not in supported_games:
@@ -369,4 +403,6 @@ class Randomizer:
 
 
 if __name__ == '__main__':
-    Randomizer().generate_seed("kh2", "1234", {"selected_enemy": "Air Pirate"})
+    rando = Randomizer().generate_randomization("kh2", "1234", {"boss": "selected_boss", "selected_boss": "Zexion"})
+    import json
+    json.dump(rando, open("zexion.seed", "w"), indent=4)
