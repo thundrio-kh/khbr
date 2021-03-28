@@ -1318,7 +1318,7 @@
                 }
             }
         },
-        "Ballroom": {
+        "Ballroom 04": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -1408,7 +1408,12 @@
                             { "index": 4, "name": "Dusk", "isboss": false }
                         ]
                     }
-                },
+                }
+            }
+        },
+        "Ballroom 05": {
+            "size": 5000000,
+            "spawnpoints": {
                 "b_40": {
                     "size": 0,
                     "sp_ids": {
@@ -1435,7 +1440,7 @@
                 }
             }
         },
-        "Courtyard": {
+        "Courtyard 06": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -1939,7 +1944,7 @@
         }
     },
     "Port Royal": {
-        "Harbor": {
+        "Harbor 01": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -2148,7 +2153,7 @@
                 }
             }
         },
-        "The Interceptor": {
+        "The Interceptor 03": {
             "size": 5000000,
             "spawnpoints": {
                 "b_40": {
@@ -2173,20 +2178,6 @@
                         ],
                         "455": [
                             { "index": 0, "name": "Cannon Gun (1)", "isboss": false }
-                        ]
-                    }
-                },
-                "b_00": {
-                    "size": 0,
-                    "sp_ids": {
-                        "48": [
-                            { "index": 1, "name": "Tornado Step", "isboss": false },
-                            { "index": 2, "name": "Tornado Step", "isboss": false },
-                            { "index": 3, "name": "Tornado Step", "isboss": false },
-                            { "index": 4, "name": "Cannon Gun", "isboss": false },
-                            { "index": 1, "name": "Cannon Gun", "isboss": false },
-                            { "index": 2, "name": "Cannon Gun", "isboss": false },
-                            { "index": 3, "name": "Air Pirate", "isboss": false }
                         ]
                     }
                 }
@@ -2276,7 +2267,7 @@
                 }
             }
         },
-        "Isla de Muerta: Treasure Heap": {
+        "Isla de Muerta: Treasure Heap 10": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -2572,7 +2563,7 @@
                 }
             }
         },
-        "The Black Pearl": {
+        "The Black Pearl 18": {
             "size": 5000000,
             "spawnpoints": {
                 "b_01": {
@@ -2580,8 +2571,7 @@
                     "sp_ids": {
                         "139": [
                             { "index": 0, "name": "Morning Star", "isboss": false },
-                            { "index": 1, "name": "Morning Star", "isboss": false },
-                            { "index": 0, "name": "Morning Star", "isboss": false }
+                            { "index": 1, "name": "Morning Star", "isboss": false }
                         ]
                     }
                 },
@@ -2598,14 +2588,6 @@
                             { "index": 6, "name": "Shadow (2)", "isboss": false },
                             { "index": 7, "name": "Shadow (2)", "isboss": false },
                             { "index": 8, "name": "Shadow (2)", "isboss": false }
-                        ],
-                        "222": [
-                            { "index": 0, "name": "Air Pirate", "isboss": false },
-                            { "index": 1, "name": "Air Pirate", "isboss": false },
-                            { "index": 2, "name": "Cannon Gun", "isboss": false },
-                            { "index": 3, "name": "Cannon Gun", "isboss": false },
-                            { "index": 4, "name": "Soldier (2)", "isboss": false },
-                            { "index": 5, "name": "Soldier (2)", "isboss": false }
                         ]
                     }
                 },
@@ -2615,15 +2597,7 @@
                         "161": [
                             { "index": 0, "name": "Gambler", "isboss": false },
                             { "index": 1, "name": "Gambler", "isboss": false },
-                            { "index": 2, "name": "Gambler", "isboss": false },
-                            { "index": 0, "name": "Gambler", "isboss": false },
-                            { "index": 1, "name": "Gambler", "isboss": false },
                             { "index": 2, "name": "Gambler", "isboss": false }
-                        ],
-                        "160": [
-                            { "index": 0, "name": "Gambler", "isboss": false },
-                            { "index": 1, "name": "Gambler (4)", "isboss": false },
-                            { "index": 2, "name": "Gambler (4)", "isboss": false }
                         ]
                     }
                 },
@@ -2632,6 +2606,24 @@
                     "sp_ids": {
                         "245": [
                             { "index": 3, "name": "Grim Reaper II", "isboss": true }
+                        ]
+                    }
+                }
+            }
+        },
+        "The Black Pearl 19": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_03": {
+                    "size": 0,
+                    "sp_ids": {
+                        "222": [
+                            { "index": 0, "name": "Air Pirate", "isboss": false },
+                            { "index": 1, "name": "Air Pirate", "isboss": false },
+                            { "index": 2, "name": "Cannon Gun", "isboss": false },
+                            { "index": 3, "name": "Cannon Gun", "isboss": false },
+                            { "index": 4, "name": "Soldier (2)", "isboss": false },
+                            { "index": 5, "name": "Soldier (2)", "isboss": false }
                         ]
                     }
                 },
@@ -2658,6 +2650,21 @@
                         ]
                     }
                 },
+                "b_30": {
+                    "size": 0,
+                    "sp_ids": {
+                        "160": [
+                            { "index": 0, "name": "Gambler", "isboss": false },
+                            { "index": 1, "name": "Gambler (4)", "isboss": false },
+                            { "index": 2, "name": "Gambler (4)", "isboss": false }
+                        ]
+                    }
+                }
+            }
+        },
+        "The Black Pearl": {
+            "size": 5000000,
+            "spawnpoints": {
                 "b_00": {
                     "size": 0,
                     "sp_ids": {
@@ -2665,6 +2672,55 @@
                             { "index": 1, "name": "Rapid Thruster (5)", "isboss": false },
                             { "index": 2, "name": "Rapid Thruster (5)", "isboss": false },
                             { "index": 3, "name": "Rapid Thruster (5)", "isboss": false }
+                        ]
+                    }
+                },
+                "b_01": {
+                    "size": 0,
+                    "sp_ids": {
+                        "139": [
+                            { "index": 0, "name": "Morning Star", "isboss": false }
+                        ]
+                    }
+                },
+                "b_30": {
+                    "size": 0,
+                    "sp_ids": {
+                        "161": [
+                            { "index": 0, "name": "Gambler", "isboss": false },
+                            { "index": 1, "name": "Gambler", "isboss": false },
+                            { "index": 2, "name": "Gambler", "isboss": false }
+                        ]
+                    }
+                }
+            }
+        },
+        "The Interceptor 21": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_00": {
+                    "size": 0,
+                    "sp_ids": {
+                        "48": [
+                            { "index": 1, "name": "Tornado Step", "isboss": false },
+                            { "index": 2, "name": "Tornado Step", "isboss": false },
+                            { "index": 3, "name": "Tornado Step", "isboss": false },
+                            { "index": 4, "name": "Cannon Gun", "isboss": false }
+                        ]
+                    }
+                }
+            }
+        },
+        "The Interceptor": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_00": {
+                    "size": 0,
+                    "sp_ids": {
+                        "48": [
+                            { "index": 1, "name": "Cannon Gun", "isboss": false },
+                            { "index": 2, "name": "Cannon Gun", "isboss": false },
+                            { "index": 3, "name": "Air Pirate", "isboss": false }
                         ]
                     }
                 }
@@ -3141,7 +3197,7 @@
                 }
             }
         },
-        "Crooked Ascension": {
+        "Crooked Ascension 07": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3151,7 +3207,17 @@
                             { "index": 0, "name": "Dragoon", "isboss": false },
                             { "index": 1, "name": "Dragoon", "isboss": false },
                             { "index": 2, "name": "Dragoon", "isboss": false }
-                        ],
+                        ]
+                    }
+                }
+            }
+        },
+        "Crooked Ascension": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_00": {
+                    "size": 0,
+                    "sp_ids": {
                         "294": [
                             { "index": 0, "name": "Samurai", "isboss": false },
                             { "index": 1, "name": "Samurai", "isboss": false },
@@ -3161,7 +3227,7 @@
                 }
             }
         },
-        "Hall of Empty Melodies": {
+        "Hall of Empty Melodies 10": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3171,14 +3237,6 @@
                             { "index": 0, "name": "Sniper", "isboss": false },
                             { "index": 1, "name": "Sniper", "isboss": false },
                             { "index": 2, "name": "Sniper", "isboss": false }
-                        ],
-                        "115": [
-                            { "index": 0, "name": "Assassin", "isboss": false },
-                            { "index": 1, "name": "Assassin", "isboss": false },
-                            { "index": 2, "name": "Assassin", "isboss": false },
-                            { "index": 3, "name": "Assassin", "isboss": false },
-                            { "index": 4, "name": "Sniper", "isboss": false },
-                            { "index": 5, "name": "Sniper", "isboss": false }
                         ]
                     }
                 },
@@ -3213,6 +3271,24 @@
                     "sp_ids": {
                         "434": [
                             { "index": 3, "name": "Data Xigbar", "isboss": true }
+                        ]
+                    }
+                }
+            }
+        },
+        "Hall of Empty Melodies 11": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_00": {
+                    "size": 0,
+                    "sp_ids": {
+                        "115": [
+                            { "index": 0, "name": "Assassin", "isboss": false },
+                            { "index": 1, "name": "Assassin", "isboss": false },
+                            { "index": 2, "name": "Assassin", "isboss": false },
+                            { "index": 3, "name": "Assassin", "isboss": false },
+                            { "index": 4, "name": "Sniper", "isboss": false },
+                            { "index": 5, "name": "Sniper", "isboss": false }
                         ]
                     }
                 }
@@ -3342,7 +3418,7 @@
                 }
             }
         },
-        "Addled Impasse": {
+        "Addled Impasse 15": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3561,7 +3637,7 @@
                 }
             }
         },
-        "The World of Nothing": {
+        "The World of Nothing 20": {
             "size": 5000000,
             "spawnpoints": {
                 "b_40": {
@@ -3570,10 +3646,89 @@
                         "47": [
                             { "index": 2, "name": "Final Xemnas", "isboss": true },
                             { "index": 3, "name": "Final Xemnas (1)", "isboss": true }
-                        ],
+                        ]
+                    }
+                },
+                "b_80": {
+                    "size": 0,
+                    "sp_ids": {
+                        "89": [
+                            { "index": 2, "name": "Data Final Xemnas", "isboss": true },
+                            { "index": 3, "name": "Data Final Xemnas (1)", "isboss": true }
+                        ]
+                    }
+                }
+            }
+        },
+        "Station of Awakening 21": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_40": {
+                    "size": 0,
+                    "sp_ids": {
+                        "23": [
+                            { "index": 3, "name": "Roxas", "isboss": true }
+                        ]
+                    }
+                },
+                "b_80": {
+                    "size": 0,
+                    "sp_ids": {
+                        "87": [
+                            { "index": 3, "name": "Roxas (Data)", "isboss": true }
+                        ]
+                    }
+                }
+            }
+        },
+        "The World of Nothing 23": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_97": {
+                    "size": 0,
+                    "sp_ids": {
+                        "151": [
+                            { "index": 2, "name": "Xemnas", "isboss": true }
+                        ]
+                    }
+                },
+                "b_99": {
+                    "size": 0,
+                    "sp_ids": {
+                        "87": [
+                            { "index": 2, "name": "Armor Xemnas II", "isboss": true }
+                        ]
+                    }
+                }
+            }
+        },
+        "The World of Nothing 24": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_40": {
+                    "size": 0,
+                    "sp_ids": {
                         "23": [
                             { "index": 11, "name": "Armor Xemnas I", "isboss": true }
-                        ],
+                        ]
+                    }
+                },
+                "b_99": {
+                    "size": 0,
+                    "sp_ids": {
+                        "87": [
+                            { "index": 11, "name": "Armor Xemnas I", "isboss": true }
+                        ]
+                    }
+                }
+            }
+        },
+        "The World of Nothing 25": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_40": {
+                    "size": 0,
+                    "sp_ids": {
                         "24": [
                             { "index": 0, "name": "Assassin", "isboss": false },
                             { "index": 1, "name": "Creeper", "isboss": false },
@@ -3608,58 +3763,21 @@
                             { "index": 8, "name": "Creeper", "isboss": false }
                         ]
                     }
-                },
-                "b_80": {
-                    "size": 0,
-                    "sp_ids": {
-                        "89": [
-                            { "index": 2, "name": "Data Final Xemnas", "isboss": true },
-                            { "index": 3, "name": "Data Final Xemnas (1)", "isboss": true }
-                        ]
-                    }
-                },
-                "b_97": {
-                    "size": 0,
-                    "sp_ids": {
-                        "151": [
-                            { "index": 2, "name": "Xemnas", "isboss": true }
-                        ]
-                    }
-                },
+                }
+            }
+        },
+        "The World of Nothing 26": {
+            "size": 5000000,
+            "spawnpoints": {
                 "b_99": {
                     "size": 0,
                     "sp_ids": {
-                        "87": [
-                            { "index": 2, "name": "Armor Xemnas II", "isboss": true },
-                            { "index": 11, "name": "Armor Xemnas I", "isboss": true }
-                        ],
                         "98": [
                             { "index": 0, "name": "Nobody from Final Battle v1", "isboss": false },
                             { "index": 1, "name": "Nobody from Final Battle v1", "isboss": false },
                             { "index": 2, "name": "Nobody from Final Battle v1", "isboss": false },
                             { "index": 3, "name": "Nobody from Final Battle v1", "isboss": false },
                             { "index": 4, "name": "Nobody from Final Battle v1", "isboss": false }
-                        ]
-                    }
-                }
-            }
-        },
-        "Station of Awakening": {
-            "size": 5000000,
-            "spawnpoints": {
-                "b_40": {
-                    "size": 0,
-                    "sp_ids": {
-                        "23": [
-                            { "index": 3, "name": "Roxas", "isboss": true }
-                        ]
-                    }
-                },
-                "b_80": {
-                    "size": 0,
-                    "sp_ids": {
-                        "87": [
-                            { "index": 3, "name": "Roxas (Data)", "isboss": true }
                         ]
                     }
                 }
@@ -3712,7 +3830,7 @@
                 }
             }
         },
-        "The Great Maw": {
+        "The Great Maw 02": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3818,7 +3936,7 @@
                 }
             }
         },
-        "Restoration Site": {
+        "Restoration Site 07": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3834,182 +3952,10 @@
                             { "index": 1, "name": "Morning Star", "isboss": false }
                         ]
                     }
-                },
-                "b_01": {
-                    "size": 0,
-                    "sp_ids": {
-                        "112": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false }
-                        ],
-                        "113": [
-                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 4, "name": "Morning Star", "isboss": false }
-                        ],
-                        "114": [
-                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 1, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 2, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 3, "name": "Morning Star", "isboss": false }
-                        ],
-                        "115": [
-                            { "index": 0, "name": "Morning Star", "isboss": false },
-                            { "index": 1, "name": "Morning Star", "isboss": false }
-                        ],
-                        "116": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false }
-                        ],
-                        "117": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false },
-                            { "index": 4, "name": "Surveillance Robot (1)", "isboss": false }
-                        ]
-                    }
-                },
-                "b_02": {
-                    "size": 0,
-                    "sp_ids": {
-                        "90": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false }
-                        ],
-                        "91": [
-                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 4, "name": "Morning Star", "isboss": false }
-                        ],
-                        "92": [
-                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 1, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 2, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 3, "name": "Morning Star", "isboss": false }
-                        ],
-                        "93": [
-                            { "index": 0, "name": "Morning Star", "isboss": false },
-                            { "index": 1, "name": "Morning Star", "isboss": false }
-                        ],
-                        "94": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false }
-                        ],
-                        "95": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false },
-                            { "index": 4, "name": "Surveillance Robot (1)", "isboss": false }
-                        ]
-                    }
-                },
-                "b_20": {
-                    "size": 0,
-                    "sp_ids": {
-                        "211": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false }
-                        ],
-                        "212": [
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 4, "name": "Morning Star", "isboss": false }
-                        ],
-                        "213": [
-                            { "index": 3, "name": "Morning Star", "isboss": false }
-                        ],
-                        "214": [
-                            { "index": 0, "name": "Morning Star", "isboss": false },
-                            { "index": 1, "name": "Morning Star", "isboss": false }
-                        ],
-                        "215": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false }
-                        ],
-                        "216": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false }
-                        ]
-                    }
-                },
-                "b_21": {
-                    "size": 0,
-                    "sp_ids": {
-                        "255": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false }
-                        ],
-                        "256": [
-                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 4, "name": "Morning Star", "isboss": false }
-                        ],
-                        "257": [
-                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 1, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 2, "name": "Surveillance Robot (1)", "isboss": false },
-                            { "index": 3, "name": "Morning Star", "isboss": false }
-                        ],
-                        "258": [
-                            { "index": 0, "name": "Morning Star", "isboss": false },
-                            { "index": 1, "name": "Morning Star", "isboss": false }
-                        ],
-                        "259": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false }
-                        ],
-                        "260": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false },
-                            { "index": 4, "name": "Surveillance Robot (1)", "isboss": false }
-                        ]
-                    }
-                },
-                "b_40": {
-                    "size": 0,
-                    "sp_ids": {
-                        "66": [
-                            { "index": 0, "name": "Dancer", "isboss": false },
-                            { "index": 1, "name": "Dancer", "isboss": false },
-                            { "index": 2, "name": "Dancer", "isboss": false },
-                            { "index": 3, "name": "Dancer", "isboss": false },
-                            { "index": 4, "name": "Dancer", "isboss": false },
-                            { "index": 5, "name": "Dancer", "isboss": false },
-                            { "index": 6, "name": "Dancer", "isboss": false },
-                            { "index": 7, "name": "Dancer", "isboss": false },
-                            { "index": 8, "name": "Dancer", "isboss": false },
-                            { "index": 9, "name": "Dancer", "isboss": false },
-                            { "index": 10, "name": "Creeper", "isboss": false },
-                            { "index": 11, "name": "Creeper", "isboss": false },
-                            { "index": 12, "name": "Creeper", "isboss": false },
-                            { "index": 13, "name": "Creeper", "isboss": false },
-                            { "index": 14, "name": "Dancer", "isboss": false }
-                        ]
-                    }
                 }
             }
         },
-        "Bailey": {
+        "Bailey 08": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -4097,93 +4043,6 @@
                             { "index": 7, "name": "Dusk", "isboss": false },
                             { "index": 8, "name": "Dusk", "isboss": false },
                             { "index": 9, "name": "Dusk", "isboss": false }
-                        ]
-                    }
-                },
-                "b_02": {
-                    "size": 0,
-                    "sp_ids": {
-                        "203": [
-                            { "index": 0, "name": "Crimson Jazz", "isboss": false },
-                            { "index": 1, "name": "Crimson Jazz", "isboss": false }
-                        ],
-                        "204": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false },
-                            { "index": 4, "name": "Soldier", "isboss": false },
-                            { "index": 5, "name": "Soldier", "isboss": false },
-                            { "index": 6, "name": "Soldier", "isboss": false }
-                        ],
-                        "205": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Crimson Jazz", "isboss": false }
-                        ]
-                    }
-                },
-                "b_03": {
-                    "size": 0,
-                    "sp_ids": {
-                        "291": [
-                            { "index": 0, "name": "Crimson Jazz", "isboss": false },
-                            { "index": 2, "name": "Crimson Jazz", "isboss": false }
-                        ],
-                        "292": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false }
-                        ],
-                        "293": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Crimson Jazz", "isboss": false }
-                        ]
-                    }
-                },
-                "b_20": {
-                    "size": 0,
-                    "sp_ids": {
-                        "247": [
-                            { "index": 0, "name": "Magnum Loader", "isboss": false },
-                            { "index": 1, "name": "Magnum Loader", "isboss": false },
-                            { "index": 2, "name": "Crimson Jazz", "isboss": false }
-                        ],
-                        "248": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Magnum Loader", "isboss": false },
-                            { "index": 3, "name": "Magnum Loader", "isboss": false }
-                        ],
-                        "249": [
-                            { "index": 0, "name": "Magnum Loader", "isboss": false },
-                            { "index": 1, "name": "Magnum Loader", "isboss": false },
-                            { "index": 2, "name": "Magnum Loader", "isboss": false }
-                        ]
-                    }
-                },
-                "b_21": {
-                    "size": 0,
-                    "sp_ids": {
-                        "269": [
-                            { "index": 0, "name": "Crimson Jazz", "isboss": false },
-                            { "index": 1, "name": "Crimson Jazz", "isboss": false }
-                        ],
-                        "270": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false }
-                        ],
-                        "271": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Crimson Jazz", "isboss": false }
                         ]
                     }
                 }
@@ -4350,7 +4209,7 @@
                 }
             }
         },
-        "Corridors": {
+        "Corridors 11": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -4502,32 +4361,6 @@
                         "299": [
                             { "index": 2, "name": "Crimson Jazz", "isboss": false },
                             { "index": 4, "name": "Surveillance Robot (1)", "isboss": false }
-                        ]
-                    }
-                },
-                "b_40": {
-                    "size": 0,
-                    "sp_ids": {
-                        "46": [
-                            { "index": 0, "name": "Armored Knight", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight (2)", "isboss": false },
-                            { "index": 4, "name": "Armored Knight (2)", "isboss": false },
-                            { "index": 5, "name": "Crimson Jazz (2)", "isboss": false },
-                            { "index": 6, "name": "Armored Knight (2)", "isboss": false },
-                            { "index": 7, "name": "Armored Knight (2)", "isboss": false },
-                            { "index": 8, "name": "Armored Knight (2)", "isboss": false }
-                        ],
-                        "47": [
-                            { "index": 0, "name": "Dusk", "isboss": false },
-                            { "index": 1, "name": "Dusk", "isboss": false },
-                            { "index": 2, "name": "Dancer", "isboss": false },
-                            { "index": 3, "name": "Dusk", "isboss": false },
-                            { "index": 4, "name": "Dusk", "isboss": false },
-                            { "index": 5, "name": "Dusk", "isboss": false },
-                            { "index": 6, "name": "Dusk", "isboss": false },
-                            { "index": 7, "name": "Dusk", "isboss": false }
                         ]
                     }
                 }
@@ -4765,6 +4598,306 @@
                             { "index": 2, "name": "Morning Star", "isboss": false },
                             { "index": 3, "name": "Surveillance Robot (1)", "isboss": false },
                             { "index": 4, "name": "Morning Star", "isboss": false }
+                        ]
+                    }
+                }
+            }
+        },
+        "Restoration Site": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_01": {
+                    "size": 0,
+                    "sp_ids": {
+                        "112": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "113": [
+                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 4, "name": "Morning Star", "isboss": false }
+                        ],
+                        "114": [
+                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 1, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 2, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 3, "name": "Morning Star", "isboss": false }
+                        ],
+                        "115": [
+                            { "index": 0, "name": "Morning Star", "isboss": false },
+                            { "index": 1, "name": "Morning Star", "isboss": false }
+                        ],
+                        "116": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "117": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false },
+                            { "index": 4, "name": "Surveillance Robot (1)", "isboss": false }
+                        ]
+                    }
+                },
+                "b_02": {
+                    "size": 0,
+                    "sp_ids": {
+                        "90": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "91": [
+                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 4, "name": "Morning Star", "isboss": false }
+                        ],
+                        "92": [
+                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 1, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 2, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 3, "name": "Morning Star", "isboss": false }
+                        ],
+                        "93": [
+                            { "index": 0, "name": "Morning Star", "isboss": false },
+                            { "index": 1, "name": "Morning Star", "isboss": false }
+                        ],
+                        "94": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "95": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false },
+                            { "index": 4, "name": "Surveillance Robot (1)", "isboss": false }
+                        ]
+                    }
+                },
+                "b_20": {
+                    "size": 0,
+                    "sp_ids": {
+                        "211": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "212": [
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 4, "name": "Morning Star", "isboss": false }
+                        ],
+                        "213": [
+                            { "index": 3, "name": "Morning Star", "isboss": false }
+                        ],
+                        "214": [
+                            { "index": 0, "name": "Morning Star", "isboss": false },
+                            { "index": 1, "name": "Morning Star", "isboss": false }
+                        ],
+                        "215": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "216": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false }
+                        ]
+                    }
+                },
+                "b_21": {
+                    "size": 0,
+                    "sp_ids": {
+                        "255": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "256": [
+                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 4, "name": "Morning Star", "isboss": false }
+                        ],
+                        "257": [
+                            { "index": 0, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 1, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 2, "name": "Surveillance Robot (1)", "isboss": false },
+                            { "index": 3, "name": "Morning Star", "isboss": false }
+                        ],
+                        "258": [
+                            { "index": 0, "name": "Morning Star", "isboss": false },
+                            { "index": 1, "name": "Morning Star", "isboss": false }
+                        ],
+                        "259": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "260": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false },
+                            { "index": 4, "name": "Surveillance Robot (1)", "isboss": false }
+                        ]
+                    }
+                },
+                "b_40": {
+                    "size": 0,
+                    "sp_ids": {
+                        "66": [
+                            { "index": 0, "name": "Dancer", "isboss": false },
+                            { "index": 1, "name": "Dancer", "isboss": false },
+                            { "index": 2, "name": "Dancer", "isboss": false },
+                            { "index": 3, "name": "Dancer", "isboss": false },
+                            { "index": 4, "name": "Dancer", "isboss": false },
+                            { "index": 5, "name": "Dancer", "isboss": false },
+                            { "index": 6, "name": "Dancer", "isboss": false },
+                            { "index": 7, "name": "Dancer", "isboss": false },
+                            { "index": 8, "name": "Dancer", "isboss": false },
+                            { "index": 9, "name": "Dancer", "isboss": false },
+                            { "index": 10, "name": "Creeper", "isboss": false },
+                            { "index": 11, "name": "Creeper", "isboss": false },
+                            { "index": 12, "name": "Creeper", "isboss": false },
+                            { "index": 13, "name": "Creeper", "isboss": false },
+                            { "index": 14, "name": "Dancer", "isboss": false }
+                        ]
+                    }
+                }
+            }
+        },
+        "Bailey": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_02": {
+                    "size": 0,
+                    "sp_ids": {
+                        "203": [
+                            { "index": 0, "name": "Crimson Jazz", "isboss": false },
+                            { "index": 1, "name": "Crimson Jazz", "isboss": false }
+                        ],
+                        "204": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false },
+                            { "index": 4, "name": "Soldier", "isboss": false },
+                            { "index": 5, "name": "Soldier", "isboss": false },
+                            { "index": 6, "name": "Soldier", "isboss": false }
+                        ],
+                        "205": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Crimson Jazz", "isboss": false }
+                        ]
+                    }
+                },
+                "b_03": {
+                    "size": 0,
+                    "sp_ids": {
+                        "291": [
+                            { "index": 0, "name": "Crimson Jazz", "isboss": false },
+                            { "index": 2, "name": "Crimson Jazz", "isboss": false }
+                        ],
+                        "292": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "293": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Crimson Jazz", "isboss": false }
+                        ]
+                    }
+                },
+                "b_20": {
+                    "size": 0,
+                    "sp_ids": {
+                        "247": [
+                            { "index": 0, "name": "Magnum Loader", "isboss": false },
+                            { "index": 1, "name": "Magnum Loader", "isboss": false },
+                            { "index": 2, "name": "Crimson Jazz", "isboss": false }
+                        ],
+                        "248": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Magnum Loader", "isboss": false },
+                            { "index": 3, "name": "Magnum Loader", "isboss": false }
+                        ],
+                        "249": [
+                            { "index": 0, "name": "Magnum Loader", "isboss": false },
+                            { "index": 1, "name": "Magnum Loader", "isboss": false },
+                            { "index": 2, "name": "Magnum Loader", "isboss": false }
+                        ]
+                    }
+                },
+                "b_21": {
+                    "size": 0,
+                    "sp_ids": {
+                        "269": [
+                            { "index": 0, "name": "Crimson Jazz", "isboss": false },
+                            { "index": 1, "name": "Crimson Jazz", "isboss": false }
+                        ],
+                        "270": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "271": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Crimson Jazz", "isboss": false }
+                        ]
+                    }
+                }
+            }
+        },
+        "Corridors": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_40": {
+                    "size": 0,
+                    "sp_ids": {
+                        "46": [
+                            { "index": 0, "name": "Armored Knight", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight (2)", "isboss": false },
+                            { "index": 4, "name": "Armored Knight (2)", "isboss": false },
+                            { "index": 5, "name": "Crimson Jazz (2)", "isboss": false },
+                            { "index": 6, "name": "Armored Knight (2)", "isboss": false },
+                            { "index": 7, "name": "Armored Knight (2)", "isboss": false },
+                            { "index": 8, "name": "Armored Knight (2)", "isboss": false }
+                        ],
+                        "47": [
+                            { "index": 0, "name": "Dusk", "isboss": false },
+                            { "index": 1, "name": "Dusk", "isboss": false },
+                            { "index": 2, "name": "Dancer", "isboss": false },
+                            { "index": 3, "name": "Dusk", "isboss": false },
+                            { "index": 4, "name": "Dusk", "isboss": false },
+                            { "index": 5, "name": "Dusk", "isboss": false },
+                            { "index": 6, "name": "Dusk", "isboss": false },
+                            { "index": 7, "name": "Dusk", "isboss": false }
                         ]
                     }
                 }
@@ -5291,7 +5424,7 @@
                 }
             }
         },
-        "The Old Mansion": {
+        "The Old Mansion 32": {
             "size": 5000000,
             "spawnpoints": {
                 "b_80": {
@@ -5751,7 +5884,7 @@
                 }
             }
         },
-        "The Underdrome": {
+        "The Underdrome 09": {
             "size": 5000000,
             "spawnpoints": {
                 "b_60": {
@@ -6975,22 +7108,6 @@
                             { "index": 1, "name": "Leon (3)", "isboss": true }
                         ]
                     }
-                },
-                "b_62": {
-                    "size": 0,
-                    "sp_ids": {
-                        "38": [
-                            { "index": 3, "name": "Hades II (1)", "isboss": true }
-                        ]
-                    }
-                },
-                "b_63": {
-                    "size": 0,
-                    "sp_ids": {
-                        "60": [
-                            { "index": 3, "name": "Hades II (1)", "isboss": true }
-                        ]
-                    }
                 }
             }
         },
@@ -7276,6 +7393,27 @@
                     }
                 }
             }
+        },
+        "The Underdrome": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_62": {
+                    "size": 0,
+                    "sp_ids": {
+                        "38": [
+                            { "index": 3, "name": "Hades II (1)", "isboss": true }
+                        ]
+                    }
+                },
+                "b_63": {
+                    "size": 0,
+                    "sp_ids": {
+                        "60": [
+                            { "index": 3, "name": "Hades II (1)", "isboss": true }
+                        ]
+                    }
+                }
+            }
         }
     },
     "Pride Land": {
@@ -7294,7 +7432,7 @@
                 }
             }
         },
-        "Wildebeest Valley": {
+        "Wildebeest Valley 03": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -7375,7 +7513,7 @@
                 }
             }
         },
-        "The Savannah": {
+        "The Savannah 04": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -7501,14 +7639,6 @@
                             { "index": 4, "name": "Shadow (2)", "isboss": false },
                             { "index": 5, "name": "Shadow (2)", "isboss": false },
                             { "index": 8, "name": "Shadow (2)", "isboss": false }
-                        ]
-                    }
-                },
-                "b_60": {
-                    "size": 0,
-                    "sp_ids": {
-                        "23": [
-                            { "index": 3, "name": "Groundshaker", "isboss": true }
                         ]
                     }
                 }
@@ -7739,6 +7869,19 @@
                     "sp_ids": {
                         "13": [
                             { "index": 3, "name": "Scar", "isboss": true }
+                        ]
+                    }
+                }
+            }
+        },
+        "The Savannah": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_60": {
+                    "size": 0,
+                    "sp_ids": {
+                        "23": [
+                            { "index": 3, "name": "Groundshaker", "isboss": true }
                         ]
                     }
                 }
@@ -8438,7 +8581,7 @@
                 }
             }
         },
-        "Palace Gate": {
+        "Palace Gate 09": {
             "size": 5000000,
             "spawnpoints": {
                 "b_20": {
@@ -9272,7 +9415,7 @@
                 }
             }
         },
-        "Solar Sailer Simulation": {
+        "Solar Sailer Simulation 07": {
             "size": 5000000,
             "spawnpoints": {
                 "b_60": {
@@ -9390,7 +9533,7 @@
                 }
             }
         },
-        "Sandlot": {
+        "Sandlot 04": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -9418,9 +9561,6 @@
                     "sp_ids": {
                         "71": [
                             { "index": 3, "name": "Seifer (1)", "isboss": true }
-                        ],
-                        "100": [
-                            { "index": 3, "name": "Vivi", "isboss": true }
                         ]
                     }
                 },
@@ -9429,11 +9569,6 @@
                     "sp_ids": {
                         "93": [
                             { "index": 3, "name": "Seifer (2)", "isboss": true }
-                        ],
-                        "122": [
-                            { "index": 3, "name": "Dusk", "isboss": false },
-                            { "index": 4, "name": "Dusk", "isboss": false },
-                            { "index": 5, "name": "Dusk", "isboss": false }
                         ]
                     }
                 },
@@ -9442,9 +9577,6 @@
                     "sp_ids": {
                         "115": [
                             { "index": 3, "name": "Dusk", "isboss": false }
-                        ],
-                        "144": [
-                            { "index": 3, "name": "Axel I", "isboss": true }
                         ]
                     }
                 },
@@ -9463,9 +9595,6 @@
                             { "index": 8, "name": "Berserker", "isboss": false },
                             { "index": 9, "name": "Berserker", "isboss": false },
                             { "index": 10, "name": "Berserker", "isboss": false }
-                        ],
-                        "166": [
-                            { "index": 3, "name": "Setzer", "isboss": true }
                         ]
                     }
                 },
@@ -9500,12 +9629,51 @@
                             { "index": 3, "name": "Setzer", "isboss": true }
                         ]
                     }
-                },
+                }
+            }
+        },
+        "Sandlot": {
+            "size": 5000000,
+            "spawnpoints": {
                 "b_40": {
                     "size": 0,
                     "sp_ids": {
                         "78": [
                             { "index": 3, "name": "Hayner", "isboss": true }
+                        ]
+                    }
+                },
+                "b_41": {
+                    "size": 0,
+                    "sp_ids": {
+                        "100": [
+                            { "index": 3, "name": "Vivi", "isboss": true }
+                        ]
+                    }
+                },
+                "b_42": {
+                    "size": 0,
+                    "sp_ids": {
+                        "122": [
+                            { "index": 3, "name": "Dusk", "isboss": false },
+                            { "index": 4, "name": "Dusk", "isboss": false },
+                            { "index": 5, "name": "Dusk", "isboss": false }
+                        ]
+                    }
+                },
+                "b_43": {
+                    "size": 0,
+                    "sp_ids": {
+                        "144": [
+                            { "index": 3, "name": "Axel I", "isboss": true }
+                        ]
+                    }
+                },
+                "b_44": {
+                    "size": 0,
+                    "sp_ids": {
+                        "166": [
+                            { "index": 3, "name": "Setzer", "isboss": true }
                         ]
                     }
                 }
@@ -9866,7 +10034,7 @@
                 }
             }
         },
-        "The Old Mansion": {
+        "The Old Mansion 14": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -9957,35 +10125,6 @@
                             { "index": 8, "name": "Samurai", "isboss": false },
                             { "index": 9, "name": "Samurai", "isboss": false },
                             { "index": 10, "name": "Samurai", "isboss": false }
-                        ],
-                        "24": [
-                            { "index": 0, "name": "Dusk", "isboss": false },
-                            { "index": 1, "name": "Dusk", "isboss": false },
-                            { "index": 2, "name": "Dusk", "isboss": false },
-                            { "index": 3, "name": "Dusk", "isboss": false },
-                            { "index": 4, "name": "Dusk", "isboss": false },
-                            { "index": 5, "name": "Dusk", "isboss": false }
-                        ],
-                        "25": [
-                            { "index": 0, "name": "Creeper", "isboss": false },
-                            { "index": 1, "name": "Creeper", "isboss": false },
-                            { "index": 2, "name": "Creeper", "isboss": false },
-                            { "index": 3, "name": "Creeper", "isboss": false },
-                            { "index": 4, "name": "Creeper", "isboss": false },
-                            { "index": 5, "name": "Creeper", "isboss": false },
-                            { "index": 6, "name": "Samurai", "isboss": false },
-                            { "index": 7, "name": "Samurai", "isboss": false },
-                            { "index": 8, "name": "Samurai", "isboss": false },
-                            { "index": 9, "name": "Samurai", "isboss": false },
-                            { "index": 10, "name": "Samurai", "isboss": false }
-                        ]
-                    }
-                },
-                "b_80": {
-                    "size": 0,
-                    "sp_ids": {
-                        "55": [
-                            { "index": 0, "name": "Vexen (1)", "isboss": true }
                         ]
                     }
                 }
@@ -10110,7 +10249,7 @@
                 }
             }
         },
-        "Mansion: Basement Hall": {
+        "Mansion: Basement Hall 19": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -10143,7 +10282,17 @@
                             { "index": 3, "name": "Dusk", "isboss": false },
                             { "index": 4, "name": "Assassin", "isboss": false },
                             { "index": 5, "name": "Assassin", "isboss": false }
-                        ],
+                        ]
+                    }
+                }
+            }
+        },
+        "Mansion: Basement Hall": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_40": {
+                    "size": 0,
+                    "sp_ids": {
                         "67": [
                             { "index": 3, "name": "Axel II", "isboss": true }
                         ]
@@ -10371,7 +10520,7 @@
                 }
             }
         },
-        "Tower: Wayward Stairs": {
+        "Tower: Wayward Stairs 31": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -10381,22 +10530,6 @@
                             { "index": 0, "name": "Shadow", "isboss": false },
                             { "index": 1, "name": "Shadow", "isboss": false },
                             { "index": 2, "name": "Shadow", "isboss": false }
-                        ],
-                        "63": [
-                            { "index": 0, "name": "Shadow", "isboss": false },
-                            { "index": 1, "name": "Shadow", "isboss": false },
-                            { "index": 2, "name": "Shadow", "isboss": false }
-                        ],
-                        "64": [
-                            { "index": 0, "name": "Shadow", "isboss": false },
-                            { "index": 1, "name": "Shadow", "isboss": false }
-                        ],
-                        "66": [
-                            { "index": 0, "name": "Soldier", "isboss": false },
-                            { "index": 1, "name": "Soldier", "isboss": false },
-                            { "index": 2, "name": "Shadow", "isboss": false },
-                            { "index": 3, "name": "Shadow", "isboss": false },
-                            { "index": 4, "name": "Shadow", "isboss": false }
                         ]
                     }
                 },
@@ -10408,19 +10541,6 @@
                             { "index": 1, "name": "Driller Mole", "isboss": false },
                             { "index": 2, "name": "Driller Mole", "isboss": false },
                             { "index": 3, "name": "Driller Mole", "isboss": false }
-                        ],
-                        "159": [
-                            { "index": 0, "name": "Cannon Gun", "isboss": false },
-                            { "index": 1, "name": "Cannon Gun", "isboss": false }
-                        ],
-                        "160": [
-                            { "index": 0, "name": "Cannon Gun", "isboss": false },
-                            { "index": 1, "name": "Cannon Gun", "isboss": false },
-                            { "index": 2, "name": "Cannon Gun", "isboss": false }
-                        ],
-                        "156": [
-                            { "index": 0, "name": "Morning Star", "isboss": false },
-                            { "index": 1, "name": "Morning Star", "isboss": false }
                         ]
                     }
                 },
@@ -10432,27 +10552,6 @@
                         ],
                         "102": [
                             { "index": 0, "name": "Crimson Jazz", "isboss": false }
-                        ],
-                        "41": [
-                            { "index": 0, "name": "Morning Star", "isboss": false },
-                            { "index": 1, "name": "Armored Knight", "isboss": false },
-                            { "index": 2, "name": "Armored Knight", "isboss": false },
-                            { "index": 3, "name": "Armored Knight", "isboss": false },
-                            { "index": 4, "name": "Armored Knight", "isboss": false },
-                            { "index": 5, "name": "Armored Knight", "isboss": false },
-                            { "index": 6, "name": "Armored Knight", "isboss": false },
-                            { "index": 0, "name": "Crescendo", "isboss": false },
-                            { "index": 1, "name": "Crescendo", "isboss": false },
-                            { "index": 2, "name": "Morning Star", "isboss": false }
-                        ],
-                        "43": [
-                            { "index": 0, "name": "Morning Star", "isboss": false }
-                        ],
-                        "42": [
-                            { "index": 0, "name": "Crescendo", "isboss": false },
-                            { "index": 1, "name": "Crescendo", "isboss": false },
-                            { "index": 2, "name": "Crescendo", "isboss": false },
-                            { "index": 3, "name": "Crescendo", "isboss": false }
                         ]
                     }
                 },
@@ -10472,28 +10571,6 @@
                             { "index": 0, "name": "Dusk", "isboss": false },
                             { "index": 1, "name": "Dusk", "isboss": false },
                             { "index": 2, "name": "Samurai", "isboss": false }
-                        ],
-                        "85": [
-                            { "index": 0, "name": "Dancer", "isboss": false },
-                            { "index": 1, "name": "Dancer", "isboss": false },
-                            { "index": 2, "name": "Dancer", "isboss": false },
-                            { "index": 3, "name": "Dancer", "isboss": false }
-                        ],
-                        "87": [
-                            { "index": 0, "name": "Dusk", "isboss": false },
-                            { "index": 1, "name": "Dusk", "isboss": false },
-                            { "index": 2, "name": "Dancer", "isboss": false }
-                        ],
-                        "89": [
-                            { "index": 0, "name": "Dusk", "isboss": false },
-                            { "index": 1, "name": "Dusk", "isboss": false },
-                            { "index": 2, "name": "Berserker", "isboss": false }
-                        ],
-                        "90": [
-                            { "index": 0, "name": "Berserker", "isboss": false },
-                            { "index": 1, "name": "Berserker", "isboss": false },
-                            { "index": 2, "name": "Berserker", "isboss": false },
-                            { "index": 3, "name": "Berserker", "isboss": false }
                         ]
                     }
                 }
@@ -10711,6 +10788,130 @@
                 }
             }
         },
+        "Tower: Wayward Stairs 38": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_00": {
+                    "size": 0,
+                    "sp_ids": {
+                        "63": [
+                            { "index": 0, "name": "Shadow", "isboss": false },
+                            { "index": 1, "name": "Shadow", "isboss": false },
+                            { "index": 2, "name": "Shadow", "isboss": false }
+                        ],
+                        "64": [
+                            { "index": 0, "name": "Shadow", "isboss": false },
+                            { "index": 1, "name": "Shadow", "isboss": false }
+                        ]
+                    }
+                },
+                "b_10": {
+                    "size": 0,
+                    "sp_ids": {
+                        "159": [
+                            { "index": 0, "name": "Cannon Gun", "isboss": false },
+                            { "index": 1, "name": "Cannon Gun", "isboss": false }
+                        ],
+                        "160": [
+                            { "index": 0, "name": "Cannon Gun", "isboss": false },
+                            { "index": 1, "name": "Cannon Gun", "isboss": false },
+                            { "index": 2, "name": "Cannon Gun", "isboss": false }
+                        ]
+                    }
+                },
+                "b_20": {
+                    "size": 0,
+                    "sp_ids": {
+                        "41": [
+                            { "index": 0, "name": "Morning Star", "isboss": false },
+                            { "index": 1, "name": "Armored Knight", "isboss": false },
+                            { "index": 2, "name": "Armored Knight", "isboss": false },
+                            { "index": 3, "name": "Armored Knight", "isboss": false },
+                            { "index": 4, "name": "Armored Knight", "isboss": false },
+                            { "index": 5, "name": "Armored Knight", "isboss": false },
+                            { "index": 6, "name": "Armored Knight", "isboss": false }
+                        ],
+                        "43": [
+                            { "index": 0, "name": "Morning Star", "isboss": false }
+                        ]
+                    }
+                },
+                "b_21": {
+                    "size": 0,
+                    "sp_ids": {
+                        "85": [
+                            { "index": 0, "name": "Dancer", "isboss": false },
+                            { "index": 1, "name": "Dancer", "isboss": false },
+                            { "index": 2, "name": "Dancer", "isboss": false },
+                            { "index": 3, "name": "Dancer", "isboss": false }
+                        ],
+                        "87": [
+                            { "index": 0, "name": "Dusk", "isboss": false },
+                            { "index": 1, "name": "Dusk", "isboss": false },
+                            { "index": 2, "name": "Dancer", "isboss": false }
+                        ]
+                    }
+                }
+            }
+        },
+        "Tower: Wayward Stairs": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_00": {
+                    "size": 0,
+                    "sp_ids": {
+                        "66": [
+                            { "index": 0, "name": "Soldier", "isboss": false },
+                            { "index": 1, "name": "Soldier", "isboss": false },
+                            { "index": 2, "name": "Shadow", "isboss": false },
+                            { "index": 3, "name": "Shadow", "isboss": false },
+                            { "index": 4, "name": "Shadow", "isboss": false }
+                        ]
+                    }
+                },
+                "b_10": {
+                    "size": 0,
+                    "sp_ids": {
+                        "156": [
+                            { "index": 0, "name": "Morning Star", "isboss": false },
+                            { "index": 1, "name": "Morning Star", "isboss": false }
+                        ]
+                    }
+                },
+                "b_20": {
+                    "size": 0,
+                    "sp_ids": {
+                        "41": [
+                            { "index": 0, "name": "Crescendo", "isboss": false },
+                            { "index": 1, "name": "Crescendo", "isboss": false },
+                            { "index": 2, "name": "Morning Star", "isboss": false }
+                        ],
+                        "42": [
+                            { "index": 0, "name": "Crescendo", "isboss": false },
+                            { "index": 1, "name": "Crescendo", "isboss": false },
+                            { "index": 2, "name": "Crescendo", "isboss": false },
+                            { "index": 3, "name": "Crescendo", "isboss": false }
+                        ]
+                    }
+                },
+                "b_21": {
+                    "size": 0,
+                    "sp_ids": {
+                        "89": [
+                            { "index": 0, "name": "Dusk", "isboss": false },
+                            { "index": 1, "name": "Dusk", "isboss": false },
+                            { "index": 2, "name": "Berserker", "isboss": false }
+                        ],
+                        "90": [
+                            { "index": 0, "name": "Berserker", "isboss": false },
+                            { "index": 1, "name": "Berserker", "isboss": false },
+                            { "index": 2, "name": "Berserker", "isboss": false },
+                            { "index": 3, "name": "Berserker", "isboss": false }
+                        ]
+                    }
+                }
+            }
+        },
         "Betwixt and Between": {
             "size": 5000000,
             "spawnpoints": {
@@ -10759,6 +10960,45 @@
                             { "index": 0, "name": "Dusk", "isboss": false },
                             { "index": 1, "name": "Assassin (1)", "isboss": false },
                             { "index": 2, "name": "Dusk (1)", "isboss": false }
+                        ]
+                    }
+                }
+            }
+        },
+        "The Old Mansion": {
+            "size": 5000000,
+            "spawnpoints": {
+                "b_80": {
+                    "size": 0,
+                    "sp_ids": {
+                        "55": [
+                            { "index": 0, "name": "Vexen (1)", "isboss": true }
+                        ]
+                    }
+                },
+                "b_99": {
+                    "size": 0,
+                    "sp_ids": {
+                        "24": [
+                            { "index": 0, "name": "Dusk", "isboss": false },
+                            { "index": 1, "name": "Dusk", "isboss": false },
+                            { "index": 2, "name": "Dusk", "isboss": false },
+                            { "index": 3, "name": "Dusk", "isboss": false },
+                            { "index": 4, "name": "Dusk", "isboss": false },
+                            { "index": 5, "name": "Dusk", "isboss": false }
+                        ],
+                        "25": [
+                            { "index": 0, "name": "Creeper", "isboss": false },
+                            { "index": 1, "name": "Creeper", "isboss": false },
+                            { "index": 2, "name": "Creeper", "isboss": false },
+                            { "index": 3, "name": "Creeper", "isboss": false },
+                            { "index": 4, "name": "Creeper", "isboss": false },
+                            { "index": 5, "name": "Creeper", "isboss": false },
+                            { "index": 6, "name": "Samurai", "isboss": false },
+                            { "index": 7, "name": "Samurai", "isboss": false },
+                            { "index": 8, "name": "Samurai", "isboss": false },
+                            { "index": 9, "name": "Samurai", "isboss": false },
+                            { "index": 10, "name": "Samurai", "isboss": false }
                         ]
                     }
                 }
