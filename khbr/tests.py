@@ -30,4 +30,11 @@ class Tests(unittest.TestCase):
         assert not os.path.exists(fn)
         
 
+# All Zexion
+# one_to_one -> two seeds generating the same file
+# wild
+# nightmare mode on
+# stable bosses only
+# memory expansion on one_to_one
+
 unittest.main()

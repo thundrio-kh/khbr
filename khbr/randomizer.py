@@ -205,6 +205,7 @@ class KingdomHearts2:
             enemy_records = self.get_bosses(usefilters=False, getavail=False)
 
             spawns = self.get_locations()
+            newspawns = {}
             spawn_limiters = {}
             msn_mapping = {}
             set_scaling = {}
@@ -224,6 +225,24 @@ class KingdomHearts2:
                             entities = spawnpoint["sp_ids"][i]
                             for e in range(len(entities)):
                                 ent = entities[e]
+
+                                def _add_spawn(spawnsies, ent):
+                                    if w not in spawnsies:
+                                        spawnsies[w] = {}
+                                    if r not in spawnsies[w]:
+                                        spawnsies[w][r] = {"spawnpoints": {}}
+                                    if sp not in spawnsies[w][r]["spawnpoints"]:
+                                        spawnsies[w][r]["spawnpoints"][sp] = {"sp_ids": {}}
+                                    if i not in spawnsies[w][r]["spawnpoints"][sp]["sp_ids"]:
+                                        spawnsies[w][r]["spawnpoints"][sp]["sp_ids"][i] = []
+                                    spawnsies[w][r]["spawnpoints"][sp]["sp_ids"][i].append(ent)
+                                    return
+                                
+                                def _get_new_ent(old_ent, new_object):
+                                    ent = dict(old_ent)
+                                    ent["name"] = new_object["name"]
+                                    return ent
+
                                 if ent["isboss"]:
                                     if not bosses:
                                         continue # Bosses aren't being randomized
@@ -239,6 +258,7 @@ class KingdomHearts2:
                                     old_boss_object = enemy_records[ent["name"]]
                                     if not old_boss_object["replace_allowed"]:
                                         continue
+                                    _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
                                     # Bosses don't have spawn limiters normally, so don't need to set them
                                     if "msn_replace_allowed":
                                         msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"] 
@@ -276,7 +296,7 @@ class KingdomHearts2:
                                 #             set_scaling[new_enemy] = []
                                 #         set_scaling[new_enemy].append(ent["name"])
 
-            return {"spawns": spawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters}
+            return {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters}
  
     def generate_mod_basics(self):
         return {"title": "KH2 Boss/Enemy Rando"}
