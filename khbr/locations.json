@@ -1155,7 +1155,7 @@
             }
         }
     },
-    "Beast's Castle": {
+    "Beasts Castle": {
         "Entrance Hall": {
             "size": 5000000,
             "spawnpoints": {
@@ -1305,7 +1305,7 @@
                 }
             }
         },
-        "The Beast\u00b4s Room": {
+        "The Beasts Room": {
             "size": 5000000,
             "spawnpoints": {
                 "b_40": {
@@ -3037,7 +3037,7 @@
                 }
             }
         },
-        "Memory\u00b4s Skyscraper": {
+        "Memorys Skyscraper": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3139,7 +3139,7 @@
                 }
             }
         },
-        "Nothing\u00b4s Call": {
+        "Nothings Call": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3294,7 +3294,7 @@
                 }
             }
         },
-        "Naught\u00b4s Skyway": {
+        "Naughts Skyway": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3384,7 +3384,7 @@
                 }
             }
         },
-        "Havoc\u00b4s Divide": {
+        "Havocs Divide": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3461,7 +3461,7 @@
                 }
             }
         },
-        "Naught\u00b4s Approach": {
+        "Naughts Approach": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3505,7 +3505,7 @@
                 }
             }
         },
-        "Ruin and Creation\u00b4s Passage": {
+        "Ruin and Creations Passage": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {
@@ -3616,7 +3616,7 @@
                 }
             }
         },
-        "Memory\u00b4s Contortion": {
+        "Memorys Contortion": {
             "size": 5000000,
             "spawnpoints": {
                 "b_40": {
@@ -5694,7 +5694,7 @@
                 }
             }
         },
-        "Hades\u00b4 Chamber": {
+        "Hades Chamber": {
             "size": 5000000,
             "spawnpoints": {
                 "b_40": {
@@ -7417,7 +7417,7 @@
         }
     },
     "Pride Land": {
-        "The King\u00b4s Den": {
+        "The Kings Den": {
             "size": 5000000,
             "spawnpoints": {
                 "b_40": {
@@ -7861,7 +7861,7 @@
                 }
             }
         },
-        "Scar\u00b4s Darkness": {
+        "Scars Darkness": {
             "size": 5000000,
             "spawnpoints": {
                 "b_40": {
@@ -11322,7 +11322,7 @@
                 }
             }
         },
-        "Mickey\u00b4s House": {
+        "Mickeys House": {
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {

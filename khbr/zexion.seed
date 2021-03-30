@@ -22,8 +22,8 @@
                 }
             }
         },
-        "Beast's Castle": {
-            "The Beast\u00b4s Room": {
+        "Beasts Castle": {
+            "The Beasts Room": {
                 "spawnpoints": {
                     "b_40": {
                         "sp_ids": {
@@ -219,7 +219,7 @@
                     }
                 }
             },
-            "Havoc\u00b4s Divide": {
+            "Havocs Divide": {
                 "spawnpoints": {
                     "b_40": {
                         "sp_ids": {
@@ -271,7 +271,7 @@
                     }
                 }
             },
-            "Memory\u00b4s Contortion": {
+            "Memorys Contortion": {
                 "spawnpoints": {
                     "b_40": {
                         "sp_ids": {
@@ -905,7 +905,7 @@
             }
         },
         "Pride Land": {
-            "Scar\u00b4s Darkness": {
+            "Scars Darkness": {
                 "spawnpoints": {
                     "b_40": {
                         "sp_ids": {

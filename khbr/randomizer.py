@@ -4,6 +4,8 @@ import random
 
 supported_games = ["kh2"]
 
+KH2_DIR = os.environ["USE_KH2_GITPATH"]
+
 UNLIMITED_SIZE = 99_999_999_999_999
 LIMITED_SIZE = 10_000_000
 NUM_RANDOMIZATION_MAPPINGS = 10
@@ -11,6 +13,8 @@ class KingdomHearts2:
     def __init__(self):
         self.schemaversion = "01"
         self.name = "kh2"
+        self.locmap = json.load(open(os.path.join(os.path.dirname(__file__), "location-ard-map.json")))
+        self.enemy_records = self.get_bosses(usefilters=False, getavail=False)
     def get_valid_enemies(self):
         return ["Air Pirate", "Dancer", "Driller Mole"]
     def get_valid_bosses(self):
@@ -141,7 +145,7 @@ class KingdomHearts2:
         return bosslist[n]
     def get_enemy_attribute(self, name, attribute):
         pass
-    def pick_enemy_to_replae(self, oldname, enemylist):
+    def pick_enemy_to_replace(self, oldname, enemylist):
         pass #Remember tags
     def perform_randomization(self, options):
         unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
@@ -200,9 +204,7 @@ class KingdomHearts2:
                 selected_boss = options["selected_boss"]
             
             bossmapping = self.pickbossmapping(bosses, bossmode, unlimited_memory) if not duplicate_bosses else None
-            # enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else None
-
-            enemy_records = self.get_bosses(usefilters=False, getavail=False)
+            # enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else Nonee
 
             spawns = self.get_locations()
             newspawns = {}
@@ -254,8 +256,8 @@ class KingdomHearts2:
                                         new_boss = self.pick_boss_to_replace(bosses[ent["name"]]["available"])
                                     if new_boss == ent["name"]:
                                         continue
-                                    new_boss_object = enemy_records[new_boss]
-                                    old_boss_object = enemy_records[ent["name"]]
+                                    new_boss_object = self.enemy_records[new_boss]
+                                    old_boss_object = self.enemy_records[ent["name"]]
                                     if not old_boss_object["replace_allowed"]:
                                         continue
                                     _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
@@ -298,8 +300,62 @@ class KingdomHearts2:
 
             return {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters}
  
-    def generate_mod_basics(self):
-        return {"title": "KH2 Boss/Enemy Rando"}
+    def generate_files(self, outdir, randomization):
+        # Generates files in the zip folder and also returns the list of assets
+        assets = []
+        if randomization.get("spawns", ""):
+            for world in randomization.get("spawns").values():
+                for room in world:
+                    ardname = self.locmap[room]
+                    roomasset = {
+                        "method": "binarc",
+                        "name": "ard/{}.ard".format(ardname),
+                        "source": []
+                    }
+                    for spawnpoint in world[room]["spawnpoints"]:
+                        existing = self.getSpawnpoint(ardname, spawnpoint)
+                        for spid in world[room]["spawnpoints"][spawnpoint]["sp_ids"]:
+                            sid = int(spid)
+                            for ent in world[room]["spawnpoints"][spawnpoint]["sp_ids"][spid]:
+                                obj = self.lookupObject(ent["name"])
+                                oid = obj["obj_id"]
+                                vrs = obj["vars"]
+                                for instance in existing:
+                                    if instance["Id"] == sid:
+                                        instance["Entities"][ent["index"]]["ObjectId"] = oid
+                                        instance["Entities"][ent["index"]]["SpawnArgument"] = vrs[0]
+                                        instance["Entities"][ent["index"]]["Argument1"] = vrs[1]
+                                        instance["Entities"][ent["index"]]["Argument2"] = vrs[2]
+                        spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir)
+                        roomasset["source"].append(spasset)
+                    assets.append(roomasset)
+        return assets
+
+    def getSpawnpoint(self, ardname, spawnpoint):
+        return yaml.load(open(os.path.join(KH2_DIR, "bars", "spawnpoint", ardname, "{}.spawn.yml".format(spawnpoint))))
+
+    def writeSpawnpoint(self, ardname, spawnpoint, obj, outdir):
+        outfn = os.path.join(outdir, "files")
+        if not os.path.isdir(outfn):
+            os.mkdir(outfn)
+        outfn = os.path.join(outfn, ardname)
+        if not os.path.isdir(outfn):
+            os.mkdir(outfn)
+        outfn = os.path.join(outfn, spawnpoint+".yml")
+        fn = os.path.join("files", ardname, spawnpoint+".yml")
+        yaml.dump(obj, open(outfn, "w"))
+        return {
+            "method": "spawnpoint",
+            "name": spawnpoint,
+            "source": [{"name": fn}],
+            "type": "AreaDataSpawn"
+        }
+
+    def lookupObject(self, name):
+        return self.enemy_records[name]
+
+    def generate_mod_basics(self, newname=None):
+        return {"title": "KH2 Boss/Enemy Rando" if not newname else newname}
 
 class Randomizer:
     def __init__(self, tempdir=None):
@@ -326,7 +382,7 @@ class Randomizer:
         if os.path.exists(fn):
             # Realistically this should never happen
             raise Exception("TMP dir already exists, try again")
-        os.mkdir(os.path.join(self.tempdir, fn))
+        os.mkdir(fn)
         rmdir = lambda : shutil.rmtree(fn)
         return fn, rmdir
 
@@ -334,11 +390,12 @@ class Randomizer:
         yaml.dump(obj, open(fn, "w"))
     
     def _create_zip(self, moddir, fn):
+        # Creates a zip with too many paths
         with ZipFile(fn, "w") as z:
             for folder, _, fns in os.walk(moddir):
                 for wfn in fns:
                     pth = os.path.join(folder, wfn)
-                    z.write(pth, wfn)
+                    z.write(pth, pth)
         with open(fn, "rb") as f:
             b64zip = base64.encodebytes(f.read())
         os.remove(fn)
@@ -388,19 +445,28 @@ class Randomizer:
         seed = parts[2]
         return gm, seed, options
 
-    def generate_mod(self, game, fn, randomization):
-        mod_yaml = game.generate_mod_basics()
+    def generate_mod(self, game, fn, randomization, newname=None):
+        mod_yaml = game.generate_mod_basics(newname)
         moddir, rmmoddir = self._make_tmpdir()
         
+        # For icon generate an identicon based on the filename+game
+        assets = game.generate_files(moddir, randomization)
+        mod_yaml["assets"] = assets
         self._create_yaml(os.path.join(moddir, "mod.yml"), mod_yaml)
+        
+
         zipped = self._create_zip(moddir, fn)
 
         rmmoddir()
 
         return zipped
 
-    def read_seed(self, g, fn):
-        pass
+    def read_seed(self, g, seedfn, outfn):
+        if g not in supported_games:
+            raise Exception("Game not supported")
+        game = self._get_game(g)
+        randomization = json.load(open(seedfn))
+        return self.generate_mod(game, outfn, randomization, newname=os.path.basename(outfn))
 
     def generate_seed(self, g, fn):
         pass
@@ -423,6 +489,7 @@ class Randomizer:
 
 
 if __name__ == '__main__':
-    rando = Randomizer().generate_randomization("kh2", "1234", {"boss": "selected_boss", "selected_boss": "Zexion"})
-    import json
-    json.dump(rando, open("zexion.seed", "w"), indent=4)
+    rando = Randomizer(tempdir="/tmp")
+    fn =  "zexion.zip"
+    b64 = rando.read_seed("kh2", "zexion.seed", fn)
+    fn = open(fn, "wb").write(base64.decodebytes(b64))
