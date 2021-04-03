@@ -1,6 +1,7 @@
-import time, json, random, os, shutil, yaml, base64
+import time, json, random, os, shutil, yaml, base64, sys
 from zipfile import ZipFile
 import random
+import pydenticon
 
 supported_games = ["kh2"]
 
@@ -318,15 +319,33 @@ class KingdomHearts2:
                         for spid in world[room]["spawnpoints"][spawnpoint]["sp_ids"]:
                             sid = int(spid)
                             for ent in world[room]["spawnpoints"][spawnpoint]["sp_ids"][spid]:
-                                obj = self.lookupObject(ent["name"])
-                                oid = obj["obj_id"]
-                                vrs = obj["vars"]
+                                # Get to the right spawnpointid instance
                                 for instance in existing:
                                     if instance["Id"] == sid:
-                                        instance["Entities"][ent["index"]]["ObjectId"] = oid
-                                        instance["Entities"][ent["index"]]["SpawnArgument"] = vrs[0]
-                                        instance["Entities"][ent["index"]]["Argument1"] = vrs[1]
-                                        instance["Entities"][ent["index"]]["Argument2"] = vrs[2]
+                                        if ent["index"] == "new":
+                                            # adding new entity to list, defaulting all values to the first entity in the list
+                                            new_ent = dict(instance["Entities"][0])
+                                            # put the new entity in the existing instance
+                                            instance["Entities"].append(new_ent)
+                                            # set the ent index to the proper value
+                                            ent["index"] = len(instance["Entities"])-1
+                                        if type(ent["name"] == int):
+                                            for k in ent:
+                                                if k == "name":
+                                                    instance["Entities"][ent["index"]]["ObjectId"] = ent[k]
+                                                elif k == "index":
+                                                    pass
+                                                else:
+                                                    instance["Entities"][ent["index"]][k] = ent[k]
+                                        else:
+                                            obj = self.lookupObject(ent["name"])
+                                            oid = obj["obj_id"]
+                                            vrs = obj["vars"]
+
+                                            instance["Entities"][ent["index"]]["ObjectId"] = oid
+                                            instance["Entities"][ent["index"]]["SpawnArgument"] = vrs[0]
+                                            instance["Entities"][ent["index"]]["Argument1"] = vrs[1]
+                                            instance["Entities"][ent["index"]]["Argument2"] = vrs[2]
                         spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir)
                         roomasset["source"].append(spasset)
                     assets.append(roomasset)
@@ -476,6 +495,12 @@ class Randomizer:
         seed = parts[2]
         return gm, seed, options
 
+    def _generate_images(self, fn, outdir):
+        generator = pydenticon.Generator(10, 10)
+        raw_image = generator.generate(fn, 128, 128, output_format="png")
+        # image_stream = BytesIO(raw_image)
+        open(os.path.join(outdir, "icon.png"), "wb").write(raw_image)
+        
     def generate_mod(self, game, fn, randomization, newname=None):
         mod_yaml = game.generate_mod_basics(newname)
         moddir, rmmoddir = self._make_tmpdir()
@@ -485,6 +510,7 @@ class Randomizer:
         mod_yaml["assets"] = assets
         self._create_yaml(os.path.join(moddir, "mod.yml"), mod_yaml)
         
+        self._generate_images(fn, moddir)
 
         zipped = self._create_zip(moddir, fn)
 
@@ -529,13 +555,23 @@ class Randomizer:
 
 
 if __name__ == '__main__':
-    moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
-    fn = "devmod"
-    if os.path.isdir(os.path.join(moddir,fn)):
-        shutil.rmtree(os.path.join(moddir,fn))
+    mode = sys.argv[1]
+    # {"selected_boss": "Past Pete", "boss": "selected_boss"}
+    options = sys.argv[2]
+
+    if mode.startswith("dev"):
+        moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
+        fn = "devmod"
+        if os.path.exists(os.path.join(moddir, fn)):
+            shutil.rmtree(os.path.join(moddir, fn))
+        mode = mode[3:]
+    else:
+        moddir = None
+        fn = None
+
     rando = Randomizer(tempdir=moddir, tempfn=fn, deletetmp=False)
-
-    fn =  "luxord"
-
-    b64 = rando.generate_seed("kh2", {"selected_boss": "Past Pete", "boss": "selected_boss"})
-    fn = open(fn, "wb").write(base64.decodebytes(b64))
+    
+    if mode == "read":
+        b64 = rando.read_seed("kh2", seedfn=options, outfn=fn)
+    else:
+        b64 = rando.generate_seed("kh2", options)
