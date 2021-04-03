@@ -14,11 +14,12 @@ class KingdomHearts2:
         self.schemaversion = "01"
         self.name = "kh2"
         self.locmap = json.load(open(os.path.join(os.path.dirname(__file__), "location-ard-map.json")))
+        self.msninfo = json.load(open(os.path.join(os.path.dirname(__file__), "msns.json")))
         self.enemy_records = self.get_bosses(usefilters=False, getavail=False)
     def get_valid_enemies(self):
         return ["Air Pirate", "Dancer", "Driller Mole"]
     def get_valid_bosses(self):
-        return ["Zexion", "Axel II"]
+        return ["Zexion", "Axel II", "Luxord", "Past Pete"]
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
@@ -329,6 +330,31 @@ class KingdomHearts2:
                         spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir)
                         roomasset["source"].append(spasset)
                     assets.append(roomasset)
+        if randomization.get("msn_map", ""):
+            for oldmsn in randomization.get("msn_map"):
+                if oldmsn in ["LK05_MS101.bar", "unknown"]:
+                    continue # I DONT KNOW WHY THESE ARE SHOWING UP
+                # Load in the entire msn to memory
+                newmsn = randomization["msn_map"][oldmsn]
+                newmsnfn = os.path.join(KH2_DIR, "KH2", "msn", "jp", newmsn+".bar")
+                data = bytearray(open(newmsnfn, "rb").read())
+                # edit the bonus byte
+                data[0x0D+self.msninfo[newmsn]["list_offset"]] = self.msninfo[oldmsn]["bonus"]
+                # write the msn to the temp folder
+                relfn = os.path.join("files", "msns", oldmsn)
+                outfn = os.path.join(outdir, relfn)
+                if not os.path.isdir(os.path.join(outdir, "files")):
+                    os.mkdir(os.path.join(outdir, "files"))
+                if not os.path.isdir(os.path.join(outdir, "files", "msns")):
+                    os.mkdir(os.path.join(outdir, "files", "msns"))
+                open(outfn, "wb").write(data)
+                # create the asset
+                asset = {
+                    "method": "copy",
+                    "name": "msn/jp/{}.bar".format(oldmsn),
+                    "source": [{"name": relfn}]
+                }
+                assets.append(asset)
         return assets
 
     def getSpawnpoint(self, ardname, spawnpoint):
@@ -358,8 +384,10 @@ class KingdomHearts2:
         return {"title": "KH2 Boss/Enemy Rando" if not newname else newname}
 
 class Randomizer:
-    def __init__(self, tempdir=None):
+    def __init__(self, tempdir=None, tempfn=None, deletetmp=True):
         self.tempdir = tempdir or "C:\\temp"
+        self.tempfn = tempfn
+        self.deletetmp=deletetmp
 
     def _get_game(self, game):
         if game == "kh2":
@@ -378,7 +406,10 @@ class Randomizer:
                     raise Exception("Option {}-{} is not found in valid options: {}".format(key, options[key], schema[key]))
     
     def _make_tmpdir(self):
-        fn = os.path.join(self.tempdir, ''.join(list(str(random.randint(0,10)) for _ in range(7))))
+        if self.tempfn:
+            fn = os.path.join(self.tempdir, self.tempfn)
+        else:
+            fn = os.path.join(self.tempdir, ''.join(list(str(random.randint(0,10)) for _ in range(7))))
         if os.path.exists(fn):
             # Realistically this should never happen
             raise Exception("TMP dir already exists, try again")
@@ -457,39 +488,54 @@ class Randomizer:
 
         zipped = self._create_zip(moddir, fn)
 
-        rmmoddir()
+        if self.deletetmp:
+            rmmoddir()
 
         return zipped
 
-    def read_seed(self, g, seedfn, outfn):
+    def read_seed(self, g, seedfn=False, seed=False, outfn="fn"):
         if g not in supported_games:
             raise Exception("Game not supported")
+        if not (seedfn or seed):
+            raise Exception("Need one of seedfn or seed")
         game = self._get_game(g)
-        randomization = json.load(open(seedfn))
+        randomization = json.load(open(seedfn)) if seedfn else seed
         return self.generate_mod(game, outfn, randomization, newname=os.path.basename(outfn))
 
-    def generate_seed(self, g, fn):
-        pass
-
-    def generate_randomization(self, g, seed, options):
+    def generate_seed(self, g, options, seed=None):
         if g not in supported_games:
             raise Exception("Game not supported")
         game = self._get_game(g)
         self._validate_options(game.get_options(), options)
+        if not seed:
+            seed = str(random.randint(0,100000))
         fn = self.generate_filename(game, seed, options)
+        print(fn)
         if not seed:
             self.seed = int(time.time())
-        
+
+        randomization = self.generate_randomization(game,options, seed)
+
+        zipped = self.read_seed(g, seed=randomization, outfn=fn)
+        return zipped
+
+    def generate_randomization(self, game, options, seed):
         # for both enemies and bosses
         # replacements are either decided beforehand, or at the time of replacement
         random.seed(seed)
         randomization = game.perform_randomization(options)
-
+        
         return randomization
 
 
 if __name__ == '__main__':
-    rando = Randomizer(tempdir="/tmp")
-    fn =  "zexion.zip"
-    b64 = rando.read_seed("kh2", "zexion.seed", fn)
+    moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
+    fn = "devmod"
+    if os.path.isdir(os.path.join(moddir,fn)):
+        shutil.rmtree(os.path.join(moddir,fn))
+    rando = Randomizer(tempdir=moddir, tempfn=fn, deletetmp=False)
+
+    fn =  "luxord"
+
+    b64 = rando.generate_seed("kh2", {"selected_boss": "Past Pete", "boss": "selected_boss"})
     fn = open(fn, "wb").write(base64.decodebytes(b64))

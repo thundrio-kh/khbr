@@ -93,7 +93,7 @@
         "type": "boss",
         "variations": {
             "Grim Reaper I": {
-                "msn": "unknown",
+                "msn": "CA18_MS202",
                 "vars": [ 0, 0, 0 ],
                 "can_be_enemy": true,
                 "tags": [ "large" ]
@@ -817,7 +817,6 @@
         },
         "enabled": true,
         "enmp_index": 147,
-        "msn": "LK05_MS101.bar",
         "hp": 100,
         "level": 99,
         "limiter": 1
@@ -1287,7 +1286,7 @@
         },
         "enabled": false,
         "enmp_index": 72,
-        "msn": "LK05_MS101.bar",
+        "msn": "BB03_MS103",
         "hp": 100,
         "level": 99,
         "limiter": 1
@@ -1599,7 +1598,7 @@
         "msn_replace_allowed": false,
         "enabled": true,
         "enmp_index": 158,
-        "msn": "unknownr",
+        "msn": "unknown",
         "hp": 100,
         "level": 99,
         "limiter": 1
@@ -2320,7 +2319,7 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
-        "enabled": true,
+        "enabled": false,
         "replace_as": "Hades Cups",
         "enmp_index": 18,
         "msn": "unknown",
