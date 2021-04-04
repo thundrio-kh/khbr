@@ -329,7 +329,7 @@ class KingdomHearts2:
                                             instance["Entities"].append(new_ent)
                                             # set the ent index to the proper value
                                             ent["index"] = len(instance["Entities"])-1
-                                        if type(ent["name"] == int):
+                                        if type(ent["name"]) == int:
                                             for k in ent:
                                                 if k == "name":
                                                     instance["Entities"][ent["index"]]["ObjectId"] = ent[k]
@@ -349,6 +349,38 @@ class KingdomHearts2:
                         spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir)
                         roomasset["source"].append(spasset)
                     assets.append(roomasset)
+        if randomization.get("ai_mods", ""):
+            for ai in randomization.get("ai_mods"):
+                edits = open(os.path.join(os.path.dirname(__file__), "data", "ai_mods", ai)).read().split("\n")
+                aifn = edits[0].split("# ")[1].strip()
+                edits = [{"offset": int(e.split(" ")[0], 16), "value": e.split(" ")[1]} for e in edits if not e.startswith("#")]
+                data = bytearray(open(os.path.join(KH2_DIR, "bars", "bdx", aifn), "rb").read())
+                for mod in edits:
+                    data[mod["offset"]] = int(mod["value"][:2], 16)
+                    data[mod["offset"]+1] = int(mod["value"][2:4], 16)
+                    data[mod["offset"]+2] = int(mod["value"][4:6], 16)
+                    data[mod["offset"]+3] = int(mod["value"][6:8], 16)
+                relfn = os.path.join("files", "ai", aifn)
+                outfn = os.path.join(outdir, relfn)
+                if not os.path.isdir(os.path.join(outdir, "files")):
+                    os.mkdir(os.path.join(outdir, "files"))
+                if not os.path.isdir(os.path.join(outdir, "files", "ai")):
+                    os.mkdir(os.path.join(outdir, "files", "ai"))
+                enemy = self.enemy_records[ai]
+                open(outfn, "wb").write(data)
+                asset = {
+                    "method": "binarc",
+                    "name": "obj/{}.mdlx".format(enemy["model"]),
+                    "source": [
+                        {
+                            "method": "copy",
+                            "name": aifn.split(".")[0],
+                            "source": [{"name": relfn}],
+                            "type": "Bdx"
+                        }
+                    ]
+                }
+                assets.append(asset)
         if randomization.get("msn_map", ""):
             for oldmsn in randomization.get("msn_map"):
                 if oldmsn in ["LK05_MS101.bar", "unknown"]:

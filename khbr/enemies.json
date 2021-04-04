@@ -606,6 +606,7 @@
             }
         },
         "enabled": false,
+        "msn_replace_allowed": false,
         "replace_allowed": false,
         "enmp_index": 120,
         "msn": "MU07_MS201",
