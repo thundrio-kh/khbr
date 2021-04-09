@@ -4,8 +4,9 @@ import random, os, json
 kh2 = KingdomHearts2()
 bosses = kh2.get_bosses()
 
+
 # Fake number right now
-MAXCACHESIZE = 10_000_000_000_000_000_000
+MAXCACHESIZE = 25_000_00 # A little under Shan yu's max size, just a guess for right now
 UNLIMITEDSIZE = 99_999_999_999_999
 SOLUTIONSWANTED = 10
 
