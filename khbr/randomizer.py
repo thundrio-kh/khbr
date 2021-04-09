@@ -9,34 +9,36 @@ KH2_DIR = os.environ["USE_KH2_GITPATH"]
 
 UNLIMITED_SIZE = 99_999_999_999_999
 LIMITED_SIZE = 10_000_000
-NUM_RANDOMIZATION_MAPPINGS = 10
+NUM_RANDOMIZATION_MAPPINGS = 9
 class KingdomHearts2:
     def __init__(self):
         self.schemaversion = "01"
         self.name = "kh2"
-        self.locmap = json.load(open(os.path.join(os.path.dirname(__file__), "location-ard-map.json")))
-        self.msninfo = json.load(open(os.path.join(os.path.dirname(__file__), "msns.json")))
+        with open(os.path.join(os.path.dirname(__file__), "location-ard-map.json")) as f:
+            self.locmap = json.load(f)
+        with open(os.path.join(os.path.dirname(__file__), "msns.json")) as f:
+            self.msninfo = json.load(f)
         self.enemy_records = self.get_bosses(usefilters=False, getavail=False)
     def get_valid_enemies(self):
-        return ["Air Pirate", "Dancer", "Driller Mole"]
+        return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "enemy"]
     def get_valid_bosses(self):
-        return ["Zexion", "Axel II", "Luxord", "Past Pete"]
+        return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "boss"]
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
-            "enemy": ["one_to_one", "spawnpoint_one_to_one", "wild", False],
-            "selected_enemy": self.get_valid_enemies(),
-            "bosses_can_replace_enemies": [False],
-            "nightmare_enemies": [False],
-            "separate_small_big_enemies": [True, False],
-            "scale_enemy_stats": [True, False],
+            #"enemy": ["one_to_one", "spawnpoint_one_to_one", "wild", False],
+            #"selected_enemy": self.get_valid_enemies(),
+            #"bosses_can_replace_enemies": [False],
+            #"nightmare_enemies": [False],
+            #"separate_small_big_enemies": [True, False],
+            #"scale_enemy_stats": [True, False],
 
-            "memory_expansion": [True, False],
+            #"memory_expansion": [True, False],
 
-            "boss": ["one_to_one", "selected_boss"],#, "one_to_one_characters", "wild", False],
-            "nightmare_bosses": [False],
-            "scale_boss_stats": [True, False],
-            "stable_bosses_only": [False],
+            "boss": ["one_to_one", "selected_boss", "wild", False],#, "one_to_one_characters", "wild", False],
+            "nightmare_bosses": [True, False],
+            #"scale_boss_stats": [True, False],
+            "stable_bosses_only": [True, False],
             "selected_boss": self.get_valid_bosses()
         }
     def get_enemies(self):
@@ -62,7 +64,8 @@ class KingdomHearts2:
             "enmp_index": None,
             "enabled": True
         }
-        bosses_f = json.load(open(os.path.join(os.path.dirname(__file__), "enemies.json")))
+        with open(os.path.join(os.path.dirname(__file__), "enemies.json")) as f:
+            bosses_f = json.load(f)
         bosses = {}
         allkeys = []
         for bn in bosses_f:
@@ -124,7 +127,8 @@ class KingdomHearts2:
                 boss["available"] = avail
         return bosses
     def get_locations(self):
-        locations_f = json.load(open(os.path.join(os.path.dirname(__file__), "locations.json")))
+        with open(os.path.join(os.path.dirname(__file__), "locations.json")) as f:
+            locations_f = json.load(f)
         return locations_f
     def add_tag(self, enemylist, tag):
         for enemy in enemylist:
@@ -137,9 +141,10 @@ class KingdomHearts2:
         # Randomization with limitations can take a while, so pregenerate 100K randomizations for each option
         # then just pick one of the right type
         num_files = NUM_RANDOMIZATION_MAPPINGS
-        dirname = os.path.join(os.path.dirname(__file__), "boss_randomizations", category)
+        dirname = os.path.join(os.path.dirname(__file__), "randomizations", category)
         num = random.randint(1,num_files)
-        return json.load(open(os.path.join(dirname, num)))
+        with open(os.path.join(dirname, str(num))) as f:
+            return json.load(f)
     def pickenemymapping(self, enemylist):
         pass 
     def pick_boss_to_replace(self, bosslist):
@@ -205,7 +210,13 @@ class KingdomHearts2:
                 duplicate_bosses = True
                 selected_boss = options["selected_boss"]
             
-            bossmapping = self.pickbossmapping(bosses, bossmode, unlimited_memory) if not duplicate_bosses else None
+            # Probably need a better way to make the category
+            category = 'limited'
+            if unlimited_memory:
+                category = 'un' + category
+            if stable_only:
+                category += "-stable"
+            bossmapping = self.pickbossmapping(bosses, category) if not duplicate_bosses else None
             # enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else Nonee
 
             spawns = self.get_locations()
@@ -253,8 +264,13 @@ class KingdomHearts2:
                                     if selected_boss:
                                         new_boss = selected_boss
                                     elif bossmapping:
+                                        if ent["name"] not in bossmapping:
+                                            # Boss is not being randomized
+                                            continue
                                         new_boss = bossmapping[ent["name"]]
                                     else:
+                                        if ent["name"] not in bosses:
+                                            continue # Boss can't be randomized (eg jafar)
                                         new_boss = self.pick_boss_to_replace(bosses[ent["name"]]["available"])
                                     if new_boss == ent["name"]:
                                         continue
@@ -276,7 +292,7 @@ class KingdomHearts2:
                                             level = old_boss_object["level"]
                                             if hp > set_scaling[new_boss][0]:
                                                 set_scaling[new_boss] = (hp, level)
-                                    if "aiMod" in new_boss_object and new_boss_object["aiMod"]:
+                                    if "aimod" in new_boss_object and new_boss_object["aimod"]:
                                         # In some cases it might be useful to know who is being replaced,
                                         ## IE the height Axel spawns the fire floor might be different on a per room basis
                                         ai_mods[new_boss] = ent["name"]
@@ -351,10 +367,12 @@ class KingdomHearts2:
                     assets.append(roomasset)
         if randomization.get("ai_mods", ""):
             for ai in randomization.get("ai_mods"):
-                edits = open(os.path.join(os.path.dirname(__file__), "data", "ai_mods", ai)).read().split("\n")
+                with open(os.path.join(os.path.dirname(__file__), "data", "ai_mods", ai)) as f:
+                    edits = f.read().split("\n")
                 aifn = edits[0].split("# ")[1].strip()
-                edits = [{"offset": int(e.split(" ")[0], 16), "value": e.split(" ")[1]} for e in edits if not e.startswith("#")]
-                data = bytearray(open(os.path.join(KH2_DIR, "bars", "bdx", aifn), "rb").read())
+                edits = [{"offset": int(e.split(" ")[0], 16), "value": e.split(" ")[1]} for e in edits if not e.startswith("#") and len(e) > 0]
+                with open(os.path.join(KH2_DIR, "subfiles", "bdx", "obj",  aifn), "rb") as f:
+                    data = bytearray(f.read())
                 for mod in edits:
                     data[mod["offset"]] = int(mod["value"][:2], 16)
                     data[mod["offset"]+1] = int(mod["value"][2:4], 16)
@@ -362,12 +380,11 @@ class KingdomHearts2:
                     data[mod["offset"]+3] = int(mod["value"][6:8], 16)
                 relfn = os.path.join("files", "ai", aifn)
                 outfn = os.path.join(outdir, relfn)
-                if not os.path.isdir(os.path.join(outdir, "files")):
-                    os.mkdir(os.path.join(outdir, "files"))
-                if not os.path.isdir(os.path.join(outdir, "files", "ai")):
-                    os.mkdir(os.path.join(outdir, "files", "ai"))
+                if not os.path.isdir(os.path.dirname(outfn)):
+                    os.makedirs(os.path.dirname(outfn))
                 enemy = self.enemy_records[ai]
-                open(outfn, "wb").write(data)
+                with open(outfn, "wb") as f:
+                    f.write(data)
                 asset = {
                     "method": "binarc",
                     "name": "obj/{}.mdlx".format(enemy["model"]),
@@ -384,21 +401,23 @@ class KingdomHearts2:
         if randomization.get("msn_map", ""):
             for oldmsn in randomization.get("msn_map"):
                 if oldmsn in ["LK05_MS101.bar", "unknown"]:
-                    continue # I DONT KNOW WHY THESE ARE SHOWING UP
+                    continue # TODO I DONT KNOW WHY THESE ARE SHOWING UP
                 # Load in the entire msn to memory
                 newmsn = randomization["msn_map"][oldmsn]
                 newmsnfn = os.path.join(KH2_DIR, "KH2", "msn", "jp", newmsn+".bar")
-                data = bytearray(open(newmsnfn, "rb").read())
+                if not os.path.exists(newmsnfn):
+                    continue # TODO I DONT KNOW WHY ITS DOING THESE UNKNOWN ONES FIX IT
+                with open(newmsnfn, "rb") as f:
+                    data = bytearray(f.read())
                 # edit the bonus byte
                 data[0x0D+self.msninfo[newmsn]["list_offset"]] = self.msninfo[oldmsn]["bonus"]
                 # write the msn to the temp folder
                 relfn = os.path.join("files", "msns", oldmsn)
                 outfn = os.path.join(outdir, relfn)
-                if not os.path.isdir(os.path.join(outdir, "files")):
-                    os.mkdir(os.path.join(outdir, "files"))
-                if not os.path.isdir(os.path.join(outdir, "files", "msns")):
-                    os.mkdir(os.path.join(outdir, "files", "msns"))
-                open(outfn, "wb").write(data)
+                if not os.path.isdir(os.path.dirname(outfn)):
+                    os.makedirs(os.path.dirname(outfn))
+                with open(outfn, "wb") as f:
+                    f.write(data)
                 # create the asset
                 asset = {
                     "method": "copy",
@@ -409,18 +428,16 @@ class KingdomHearts2:
         return assets
 
     def getSpawnpoint(self, ardname, spawnpoint):
-        return yaml.load(open(os.path.join(KH2_DIR, "bars", "spawnpoint", ardname, "{}.spawn.yml".format(spawnpoint))))
+        with open(os.path.join(KH2_DIR, "subfiles", "spawn", "ard", ardname, "{}.spawn".format(spawnpoint))) as f:
+            return yaml.load(f, Loader=yaml.SafeLoader)
 
     def writeSpawnpoint(self, ardname, spawnpoint, obj, outdir):
-        outfn = os.path.join(outdir, "files")
-        if not os.path.isdir(outfn):
-            os.mkdir(outfn)
-        outfn = os.path.join(outfn, ardname)
-        if not os.path.isdir(outfn):
-            os.mkdir(outfn)
-        outfn = os.path.join(outfn, spawnpoint+".yml")
+        outfn = os.path.join(outdir, "files", ardname, spawnpoint+".yml")
+        if not os.path.isdir(os.path.dirname(outfn)):
+            os.makedirs(os.path.dirname(outfn))
         fn = os.path.join("files", ardname, spawnpoint+".yml")
-        yaml.dump(obj, open(outfn, "w"))
+        with open(outfn, "w") as f:
+            yaml.dump(obj, f)
         return {
             "method": "spawnpoint",
             "name": spawnpoint,
@@ -462,6 +479,7 @@ class Randomizer:
         else:
             fn = os.path.join(self.tempdir, ''.join(list(str(random.randint(0,10)) for _ in range(7))))
         if os.path.exists(fn):
+            print(fn)
             # Realistically this should never happen
             raise Exception("TMP dir already exists, try again")
         os.mkdir(fn)
@@ -469,7 +487,8 @@ class Randomizer:
         return fn, rmdir
 
     def _create_yaml(self, fn, obj):
-        yaml.dump(obj, open(fn, "w"))
+        with open(fn, "w") as f:
+            yaml.dump(obj, f)
     
     def _create_zip(self, moddir, fn):
         # Creates a zip with too many paths
@@ -531,7 +550,8 @@ class Randomizer:
         generator = pydenticon.Generator(10, 10)
         raw_image = generator.generate(fn, 128, 128, output_format="png")
         # image_stream = BytesIO(raw_image)
-        open(os.path.join(outdir, "icon.png"), "wb").write(raw_image)
+        with open(os.path.join(outdir, "icon.png"), "wb") as f:
+            f.write(raw_image)
         
     def generate_mod(self, game, fn, randomization, newname=None):
         mod_yaml = game.generate_mod_basics(newname)
@@ -557,10 +577,14 @@ class Randomizer:
         if not (seedfn or seed):
             raise Exception("Need one of seedfn or seed")
         game = self._get_game(g)
-        randomization = json.load(open(seedfn)) if seedfn else seed
+        if seed:
+            randomization = seed
+        else:
+            with open(seedfn) as f:
+                randomization = json.load(f)
         return self.generate_mod(game, outfn, randomization, newname=os.path.basename(outfn))
 
-    def generate_seed(self, g, options, seed=None):
+    def generate_seed(self, g, options, seed=None, randomization_only=False):
         if g not in supported_games:
             raise Exception("Game not supported")
         game = self._get_game(g)
@@ -568,11 +592,12 @@ class Randomizer:
         if not seed:
             seed = str(random.randint(0,100000))
         fn = self.generate_filename(game, seed, options)
-        print(fn)
         if not seed:
             self.seed = int(time.time())
 
-        randomization = self.generate_randomization(game,options, seed)
+        randomization = self.generate_randomization(game, options, seed)
+        if randomization_only:
+            return randomization
 
         zipped = self.read_seed(g, seed=randomization, outfn=fn)
         return zipped
@@ -590,6 +615,8 @@ if __name__ == '__main__':
     mode = sys.argv[1]
     # {"selected_boss": "Past Pete", "boss": "selected_boss"}
     options = sys.argv[2]
+    if options[0] == "{":
+        options = json.loads(options)
 
     if mode.startswith("dev"):
         moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
@@ -598,7 +625,7 @@ if __name__ == '__main__':
             shutil.rmtree(os.path.join(moddir, fn))
         mode = mode[3:]
     else:
-        moddir = None
+        moddir = "/tmp"
         fn = None
 
     rando = Randomizer(tempdir=moddir, tempfn=fn, deletetmp=False)

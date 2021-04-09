@@ -1306,13 +1306,13 @@
     },
     "msn_map": {
         "AL03_MS103": "HB34_FM_ZEX",
-        "LK05_MS101.bar": "HB34_FM_ZEX",
+        "BB03_MS103": "HB34_FM_ZEX",
         "BB05_MS104A": "HB34_FM_ZEX",
         "BB05_MS104B": "HB34_FM_ZEX",
         "BB11_MS102": "HB34_FM_ZEX",
         "BB15_MS203": "HB34_FM_ZEX",
         "BB15_MS203_RE": "HB34_FM_ZEX",
-        "unknown": "HB34_FM_ZEX",
+        "CA18_MS202": "HB34_FM_ZEX",
         "CA10_MS107": "HB34_FM_ZEX",
         "CA01_MS204": "HB34_FM_ZEX",
         "DC07_FM_NAZO": "HB34_FM_ZEX",
@@ -1335,7 +1335,6 @@
         "HE05_MS102": "HB34_FM_ZEX",
         "HE07_MS103": "HB34_FM_ZEX",
         "HE08_MS107": "HB34_FM_ZEX",
-        "unknownr": "HB34_FM_ZEX",
         "HE17_MS105": "HB34_FM_ZEX",
         "HE18_MS108": "HB34_FM_ZEX",
         "LK14_MS103": "HB34_FM_ZEX",
@@ -1356,7 +1355,8 @@
         "TT20_MS603_RE": "HB34_FM_ZEX",
         "TT34_MS304": "HB34_FM_ZEX",
         "WI01_MS101": "HB34_FM_ZEX",
-        "WI03_MS104": "HB34_FM_ZEX"
+        "WI03_MS104": "HB34_FM_ZEX",
+        "TT04_MS107": "HB34_FM_ZEX"
     },
     "ai_mods": ["Zexion"],
     "scale_map": {"Zexion": {"hp": 100, "level": 10}},

@@ -24,3 +24,7 @@ yarn-error.log*
 *.pyc
 
 khbr/randomizations/*
+
+tests_debug.py
+*.zip
+*.seed
