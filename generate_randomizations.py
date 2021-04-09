@@ -1,12 +1,12 @@
 from khbr.randomizer import KingdomHearts2
-import random, os, json
+import random, os, json, time
 
 kh2 = KingdomHearts2()
 bosses = kh2.get_bosses()
 
 
 # Fake number right now
-MAXCACHESIZE = 25_000_00 # A little under Shan yu's max size, just a guess for right now
+MAXCACHESIZE = 25_000_00_000_000_000#FAKE NUMBER # A little under Shan yu's max size, just a guess for right now
 UNLIMITEDSIZE = 99_999_999_999_999
 SOLUTIONSWANTED = 10
 
@@ -18,12 +18,14 @@ outdir = os.path.join("khbr", "randomizations")
 for options in [{"name": "limited", "size": MAXCACHESIZE}, {"name": "unlimited", "size": UNLIMITEDSIZE},
             {"name": "limited-stable", "size": MAXCACHESIZE, "stableonly": True}, 
             {"name": "unlimited-stable", "size": UNLIMITEDSIZE, "stableonly": True}]:
+    print(options)
     stableonly = options["stableonly"] if "stableonly" in options else False
     bosses = kh2.get_bosses(maxsize=options["size"], stable_only=stableonly)
     
     bosses_base = list(bosses.keys())
 
     solutions = []
+    start_time = time.time()
     while len(solutions) < SOLUTIONSWANTED:
         possible_solution = list(bosses_base)
         random.shuffle(possible_solution)
@@ -35,7 +37,9 @@ for options in [{"name": "limited", "size": MAXCACHESIZE}, {"name": "unlimited",
                 break
         
         if solution_found:
-            print(solution_found, len(solutions))
+            length = int(time.time() - start_time)
+            start_time = time.time()
+            print(solution_found, len(solutions), "{}s".format(length))
             solutions.append({bosses_base[i]:possible_solution[i] for i in range(len(possible_solution))})    
 
     for i in range(len(solutions)):

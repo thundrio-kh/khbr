@@ -36,7 +36,7 @@ subfiles = {
     "script": lib.openkh.spawnscript_extract
 }
 for sf in subfiles:
-    subfile_out_dir = os.path.join(kh2_out_dir, "..", "subfiles", sf)
+    subfile_out_dir = os.path.join(kh2_in_dir, "subfiles", sf)
     for root, dirs, files in os.walk(kh2_out_dir):
         path = root.split(os.sep)
         for f in files:
@@ -47,7 +47,7 @@ for sf in subfiles:
                     subfn = os.path.join("root", *subfn.split(os.sep))
                 subfoldername = subfn.split(os.sep)[1]
                 catname = subfn.split(os.sep)[-2]
-                catname = '.'.join(catname.split(".")[:-1]) # Remove later
+                # catname = '.'.join(catname.split(".")[:-1]) # Remove later
                 outfn = os.path.join(subfile_out_dir, subfoldername, catname, f)
                 if not os.path.isdir(os.path.dirname(outfn)):
                     os.makedirs(os.path.dirname(outfn))
