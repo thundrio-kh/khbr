@@ -33,7 +33,7 @@ class Tests(unittest.TestCase):
         assert not os.path.exists(fn)
     
     def test_read_all_zexion(self):
-        seedfn = os.path.join(os.path.dirname(__file__), "data", "zexion.seed")
+        seedfn = os.path.join(os.path.dirname(__file__), "data", "zexion.test")
         if os.path.exists(os.path.join("/tmp", "test")):
             shutil.rmtree(os.path.join("/tmp", "test"))
         rando = Randomizer(tempdir="/tmp", tempfn="test")
