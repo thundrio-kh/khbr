@@ -7,7 +7,7 @@ with open('README.md') as f:
 setup(
 	name = 'khbr',
 	packages = find_packages(),
-	package_data={'': ['data/*', '*.json']}
+	package_data={'': ['data/*', '*.json']},
 	version = 0.10,
 	long_description = long_description,
 	long_description_content_type='text/markdown',
