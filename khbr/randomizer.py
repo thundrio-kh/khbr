@@ -640,6 +640,12 @@ class Randomizer:
         assets = game.generate_files(randomization=randomization, outzip=outZip)
         modobj["assets"] += assets
         return randomization
+    
+    def getSchemaForGame(self, g):
+        if g not in supported_games:
+            raise Exception("Game not supported")
+        game = self._get_game(g)
+        return game.get_options()
 
 if __name__ == '__main__':
     mode = sys.argv[1]
