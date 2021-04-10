@@ -1,7 +1,7 @@
 import time, json, random, os, shutil, yaml, base64, sys
 from zipfile import ZipFile
 import random
-import pydenticon
+
 
 supported_games = ["kh2"]
 
@@ -319,8 +319,21 @@ class KingdomHearts2:
 
             return {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters}
  
-    def generate_files(self, outdir, randomization):
-        # Generates files in the zip folder and also returns the list of assets
+    def generate_files(self, outdir='', randomization={}, outzip=[]):
+        # Generates files in the zip folder and also returns the list of 
+        if outdir:
+            def _writeMethod(outfn, relfn, data):
+                if not os.path.isdir(os.path.dirname(outfn)):
+                    os.makedirs(os.path.dirname(outfn))
+                if type(data) == str:
+                    data = bytes(data, "utf-8")
+                with open(outfn, "wb") as f:
+                    f.write(data)
+        elif outzip:
+            def _writeMethod(outfn, relfn, data):
+                outzip.writestr(relfn, data)
+        else:
+            raise Exception("one of outzip or outdir must be defined")
         assets = []
         if randomization.get("spawns", ""):
             for world in randomization.get("spawns").values():
@@ -363,7 +376,7 @@ class KingdomHearts2:
                                             instance["Entities"][ent["index"]]["SpawnArgument"] = vrs[0]
                                             instance["Entities"][ent["index"]]["Argument1"] = vrs[1]
                                             instance["Entities"][ent["index"]]["Argument2"] = vrs[2]
-                        spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir)
+                        spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir, _writeMethod)
                         roomasset["source"].append(spasset)
                     assets.append(roomasset)
         if randomization.get("ai_mods", ""):
@@ -381,11 +394,8 @@ class KingdomHearts2:
                     data[mod["offset"]+3] = int(mod["value"][6:8], 16)
                 relfn = os.path.join("files", "ai", aifn)
                 outfn = os.path.join(outdir, relfn)
-                if not os.path.isdir(os.path.dirname(outfn)):
-                    os.makedirs(os.path.dirname(outfn))
                 enemy = self.enemy_records[ai]
-                with open(outfn, "wb") as f:
-                    f.write(data)
+                _writeMethod(outfn, relfn, data)
                 asset = {
                     "method": "binarc",
                     "name": "obj/{}.mdlx".format(enemy["model"]),
@@ -415,10 +425,7 @@ class KingdomHearts2:
                 # write the msn to the temp folder
                 relfn = os.path.join("files", "msns", oldmsn)
                 outfn = os.path.join(outdir, relfn)
-                if not os.path.isdir(os.path.dirname(outfn)):
-                    os.makedirs(os.path.dirname(outfn))
-                with open(outfn, "wb") as f:
-                    f.write(data)
+                _writeMethod(outfn, relfn, data)
                 # create the asset
                 asset = {
                     "method": "copy",
@@ -432,13 +439,10 @@ class KingdomHearts2:
         with open(os.path.join(KH2_DIR, "subfiles", "spawn", "ard", ardname, "{}.spawn".format(spawnpoint))) as f:
             return yaml.load(f, Loader=yaml.SafeLoader)
 
-    def writeSpawnpoint(self, ardname, spawnpoint, obj, outdir):
+    def writeSpawnpoint(self, ardname, spawnpoint, obj, outdir, writeMethod):
         outfn = os.path.join(outdir, "files", ardname, spawnpoint+".yml")
-        if not os.path.isdir(os.path.dirname(outfn)):
-            os.makedirs(os.path.dirname(outfn))
         fn = os.path.join("files", ardname, spawnpoint+".yml")
-        with open(outfn, "w") as f:
-            yaml.dump(obj, f)
+        writeMethod(outfn, fn, yaml.dump(obj))
         return {
             "method": "spawnpoint",
             "name": spawnpoint,
@@ -548,6 +552,7 @@ class Randomizer:
         return gm, seed, options
 
     def _generate_images(self, fn, outdir):
+        import pydenticon
         generator = pydenticon.Generator(10, 10)
         raw_image = generator.generate(fn, 128, 128, output_format="png")
         # image_stream = BytesIO(raw_image)
@@ -585,6 +590,7 @@ class Randomizer:
                 randomization = json.load(f)
         return self.generate_mod(game, outfn, randomization, newname=os.path.basename(outfn))
 
+    # My zipped functionality is broken, as the mod randomizer wants just the files in the root of the zip
     def generate_seed(self, g, options, seed=None, randomization_only=False):
         if g not in supported_games:
             raise Exception("Game not supported")
@@ -611,6 +617,17 @@ class Randomizer:
         
         return randomization
 
+    def generateToZip(self, g, options, modobj, outZip):
+        if g not in supported_games:
+            raise Exception("Game not supported")
+        game = self._get_game(g)
+        self._validate_options(game.get_options(), options)
+        print(random.randint(0,1000000))
+
+        randomization = game.perform_randomization(options)
+        assets = game.generate_files(randomization=randomization, outzip=outZip)
+        modobj["assets"] += assets
+        return randomization
 
 if __name__ == '__main__':
     mode = sys.argv[1]
