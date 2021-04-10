@@ -8,7 +8,7 @@ setup(
 	name = 'khbr',
 	packages = find_packages(),
 	package_data={'': ['data/*', '*.json']},
-	version = 0.20,
+	version = 0.30,
 	long_description = long_description,
 	long_description_content_type='text/markdown',
 	license = 'MIT',
