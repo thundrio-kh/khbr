@@ -25,6 +25,7 @@ for root, dirs, files in os.walk(kh2_in_dir):
                 outfn = os.path.join(kh2_out_dir, '.'.join(subfn.split(".")[:-1]))
                 if not os.path.isdir(os.path.dirname(outfn)):
                     os.makedirs(os.path.dirname(outfn))
+                print(fn, outfn)
                 lib.editengine.bar_extract(fn, outfn)
 
 ## Create folders containing just bdx, spawnpoint, and spawanscript files
