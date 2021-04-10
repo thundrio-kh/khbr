@@ -25,6 +25,8 @@ class Tests(unittest.TestCase):
     #     assert newseed == seed
     #     assert newoptions == options
 
+    # Test doing nothing
+
     def test_tmpdir_create_delete(self):
         r = Randomizer(tempdir="/tmp")
         fn, rmdir = r._make_tmpdir()
@@ -43,7 +45,7 @@ class Tests(unittest.TestCase):
         base64.decodebytes(b64)
 
     def test_generate_all_xemnas(self):
-        options = {"selected_boss": "Xemnas", "boss": "selected_boss"}
+        options = {"selected_boss": "Xemnas", "boss": "Selected Boss"}
         rando = Randomizer(tempdir="/tmp")
         b64 = rando.generate_seed("kh2", options=options)
         import base64
@@ -51,7 +53,7 @@ class Tests(unittest.TestCase):
         base64.decodebytes(b64)
 
     def test_generate_one_one(self):
-        options = {"boss": "one_to_one"}
+        options = {"boss": "One to One"}
         rando = Randomizer(tempdir="/tmp")
         b64 = rando.generate_seed("kh2", options=options)
         import base64
@@ -59,7 +61,7 @@ class Tests(unittest.TestCase):
         base64.decodebytes(b64)
 
     def test_one_to_one_seedgen(self):
-        options = {"boss": "one_to_one"}
+        options = {"boss": "One to One"}
         rando = Randomizer(tempfn="test")
         seed = "12345"
         randomization1 = rando.generate_seed("kh2", options, seed, randomization_only=True)
@@ -67,19 +69,19 @@ class Tests(unittest.TestCase):
         assert randomization1 == randomization2
 
     def test_stable_one_to_one_seedgen(self):
-        options = {"boss": "one_to_one", "stable_bosses_only": True}
+        options = {"boss": "One to One", "stable_bosses_only": True}
         rando = Randomizer(tempfn="test")
         seed = "12345"
         rando.generate_seed("kh2", options, seed, randomization_only=True)
 
     def test_wild_seedgen(self):
-        options = {"boss": "wild"}
+        options = {"boss": "Wild"}
         rando = Randomizer(tempfn="test")
         seed = "12345"
         rando.generate_seed("kh2", options, seed, randomization_only=True)
     
     def test_wild_nightmare_stable_seedgen(self):
-        options = {"boss": "one_to_one", "nightmare_bosses": True}
+        options = {"boss": "One to One", "nightmare_bosses": True}
         rando = Randomizer(tempfn="test")
         seed = "12345"
         randomization1 = rando.generate_seed("kh2", options, seed, randomization_only=True)

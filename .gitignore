@@ -28,3 +28,6 @@ khbr/randomizations/*
 tests_debug.py
 *.zip
 *.seed
+
+*.pyc
+__pycache__

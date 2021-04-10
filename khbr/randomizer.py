@@ -27,20 +27,32 @@ class KingdomHearts2:
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
-            #"enemy": ["one_to_one", "spawnpoint_one_to_one", "wild", False],
-            #"selected_enemy": self.get_valid_enemies(),
-            #"bosses_can_replace_enemies": [False],
-            #"nightmare_enemies": [False],
-            #"separate_small_big_enemies": [True, False],
-            #"scale_enemy_stats": [True, False],
+            # "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per spawn: One-to-One but every spawnpoint is different (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized",
+            #                       "possible_values": ["Disabled", "One to One", "One to One Per Spawn", "Wild"]},
+            # "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
+            #                     "possible_values": self.get_valid_enemies()},
+            # "bosses_can_replace_enemies": {"display_name": "Bosses Can Replace Enemies", "description": "Replaces a small percentage of enemies in the game with a random boss. This option is intended for PC use only.",
+            #                     "possible_values": [False, True]},
+            # "nightmare_enemies": {"display_name": "Enemies of Eternal Darkness", "description": "Replaces enemies using only the most difficult enemies in the game.",
+            #                     "possible_values": [False, True]},
+            # "separate_small_big_enemies": {"display_name": "Separate Small and Big Enemies", "description": "Randomizes big enemies among themselves and small enemies among themselves. Useful to prevent crashing"},
+            #                     "possible_values": [True, False]},
+            # "scale_enemy_stats": {"display_name": "Scale Enemy Stats", "description": "Attempts to scale enemies to the level/HP of the enemy it is replacing.",
+            #                     "possible_values": [True, False]},
 
-            #"memory_expansion": [True, False],
+            # "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game is limited to 32MB of memory, which constrains where bosses and enemies can be placed. Turn this option on if playing on PC to remove these constraints.",
+            #                     "possible_values": [True, False]},
 
-            "boss": ["one_to_one", "selected_boss", "wild", False],#, "one_to_one_characters", "wild", False],
-            "nightmare_bosses": [True, False],
-            #"scale_boss_stats": [True, False],
-            "stable_bosses_only": [True, False],
-            "selected_boss": self.get_valid_bosses()
+            "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. Selected Boss will replace every boss with a single selected boss.",
+                                "possible_values": ["Disabled", "One to One", "Selected Boss", "Wild"]},#, "one_to_one_characters",
+            "nightmare_bosses": {"display_name": "Bosses of Eternal Darkness", "description": "Replaces bosses using only the most difficult bosses in the game.",
+                                "possible_values": [False, True]},
+            # "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
+            #                     "possible_values": [True, False]},
+            "stable_bosses_only": {"display_name": "Only Include Stable Bosses", "description": "Removes from the pool bosses that are known to commonly cause issues in many parts of the game.",
+                                "possible_values": [True, False]},
+            "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
+                                "possible_values": self.get_valid_bosses()}
         }
     def get_enemies(self):
         # Respect disabled flags and such
@@ -167,7 +179,7 @@ class KingdomHearts2:
         duplicate_bosses = None
         bossmode = None
         enemymode = None
-        # if "enemy" in options and options["enemy"]:
+        # if "enemy" in options and options["enemy"] != "Disabled":
         #     enemymode = options["enemy"]
         #     duplicate_enemies = enemymode in ["spawnpoint_one_to_one", "wild"]
         #     enemies = self.get_enemies()
@@ -189,9 +201,9 @@ class KingdomHearts2:
         #         enemymode = "wild"
         #         duplicate_enemies = True
         #         selected_enemy = options["selected_enemy"]
-        if "boss" in options and options["boss"]:
+        if "boss" in options and options["boss"] != "Disabled":
             bossmode = options["boss"]
-            duplicate_bosses = options["boss"] == "wild"
+            duplicate_bosses = options["boss"] == "Wild"
             stable_only = False
             nightmare_bosses = False
             if "stable_bosses_only" in options and options["stable_bosses_only"]:
@@ -206,8 +218,8 @@ class KingdomHearts2:
             if "scale_boss_stats" in options:
                 scale_boss = options["scale_boss_stats"]
 
-            if "selected_boss" in options and options["selected_boss"]:
-                bossmode = "wild"
+            if "selected_boss" in options and options["selected_boss"] and options["boss"] == "Selected Boss":
+                bossmode = "Wild"
                 duplicate_bosses = True
                 selected_boss = options["selected_boss"]
             
@@ -475,7 +487,7 @@ class Randomizer:
             if key not in schema:
                 raise Exception("Option {} is not a valid option".format(key))
             else:
-                if options[key] not in schema[key]:
+                if options[key] not in schema[key]["possible_values"]:
                     raise Exception("Option {}-{} is not found in valid options: {}".format(key, options[key], schema[key]))
     
     def _make_tmpdir(self):
@@ -518,7 +530,7 @@ class Randomizer:
             key = sortedkeys[o]
             if key in options:
                 translated.append(str(o))
-                translated.append( str(validoptions[key].index(options[key])) )
+                translated.append( str(validoptions[key]["possible_values"].index(options[key])) )
         name += '-'.join(translated)
         name += ".zip"
         return name
@@ -545,7 +557,7 @@ class Randomizer:
         sortedkeys = sorted(validoptions.keys())
         for i in range(0, len(compressedoptions), 2):
             key = sortedkeys[int(compressedoptions[i])]
-            value = validoptions[key][int(compressedoptions[i+1])]
+            value = validoptions[key]["possible_values"][int(compressedoptions[i+1])]
             options[key] = value
 
         seed = parts[2]
