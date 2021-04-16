@@ -447,6 +447,7 @@
         "isnightmare": true,
         "can_be_enemy": true,
         "enabled": false,
+        "msn_replace_allowed": false,
         "enmp_index": 85,
         "msn": "EH20_MS113",
         "hp": 100,
@@ -495,7 +496,18 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
-        "unstable": true,
+        "blacklist": [
+            "Grim Reaper 1",
+            "Twilight Thorn",
+            "Past Pete",
+            "Scar",
+            "Armor Xemnas I",
+            "Pete OC II",
+            "Sark",
+            "Roxas",
+            "Roxas (Data)",
+            "Prison Keeper"
+        ],
         "enabled": true,
         "enmp_index": 123,
         "msn": "EH10_MS102",
@@ -1560,7 +1572,16 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
-        "unstable": true,
+        "whitelist": [
+            "Final Xemnas",
+            "Final Xemnas (Data)",
+            "Armor Xemnas II",
+            "Xemnas",
+            "Xemnas (Data)",
+            "Groundshaker",
+            "Cerberus",
+            "Terra"
+        ],
         "enabled": true,
         "enmp_index": 24,
         "msn": "MU08_MS204",
@@ -1580,6 +1601,7 @@
         },
         "msn_replace_allowed": false,
         "can_be_enemy": true,
+        "whitelist": [],
         "enabled": true,
         "enmp_index": 156,
         "msn": "unknown",
@@ -2780,7 +2802,18 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
-        "unstable": true,
+        "blacklist": [
+            "Grim Reaper 1",
+            "Twilight Thorn",
+            "Past Pete",
+            "Scar",
+            "Armor Xemnas I",
+            "Pete OC II",
+            "Sark",
+            "Roxas",
+            "Roxas (Data)",
+            "Prison Keeper"
+        ],
         "isnightmare": true,
         "enabled": true,
         "enmp_index": 227,
