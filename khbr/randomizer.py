@@ -293,7 +293,7 @@ class KingdomHearts2:
                                         continue
                                     _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
                                     # Bosses don't have spawn limiters normally, so don't need to set them
-                                    if "msn_replace_allowed":
+                                    if old_boss_object["msn_replace_allowed"]:
                                         msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"] 
                                     if scale_boss:
                                         if new_boss not in set_scaling:
@@ -423,13 +423,9 @@ class KingdomHearts2:
                 assets.append(asset)
         if randomization.get("msn_map", ""):
             for oldmsn in randomization.get("msn_map"):
-                if oldmsn in ["LK05_MS101.bar", "unknown"]:
-                    continue # TODO I DONT KNOW WHY THESE ARE SHOWING UP
                 # Load in the entire msn to memory
                 newmsn = randomization["msn_map"][oldmsn]
                 newmsnfn = os.path.join(KH2_DIR, "KH2", "msn", "jp", newmsn+".bar")
-                if not os.path.exists(newmsnfn):
-                    continue # TODO I DONT KNOW WHY ITS DOING THESE UNKNOWN ONES FIX IT
                 with open(newmsnfn, "rb") as f:
                     data = bytearray(f.read())
                 # edit the bonus byte
