@@ -67,7 +67,6 @@ class KingdomHearts2:
             "hp": 100,
             "limiter": 1,
             "msn_required": False,
-            "unstable": False,
             "aimod": None,
             "can_be_enemy": False,
             "msn": None,
@@ -75,7 +74,8 @@ class KingdomHearts2:
             "enmp_index": None,
             "enabled": True,
             "blacklist": [],
-            "whitelist": []
+            "whitelist": [],
+            "additional_objects": []
         }
         with open(os.path.join(os.path.dirname(__file__), "enemies.json")) as f:
             bosses_f = json.load(f)
@@ -295,6 +295,9 @@ class KingdomHearts2:
                                     if not old_boss_object["replace_allowed"]:
                                         continue
                                     _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
+                                    # Actually I have to be a little careful about this to make sure they are added to end
+                                    for obj in new_boss_object["additional_objects"]:
+                                        _add_spawn(newspawns, "new", self.enemy_records[obj])
                                     # Bosses don't have spawn limiters normally, so don't need to set them
                                     if old_boss_object["msn_replace_allowed"]:
                                         msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"] 

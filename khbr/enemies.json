@@ -3041,12 +3041,15 @@
                 "vars": [ 0, 0, 0 ]
             }
         },
-        "enabled": false,
+        "enabled": true,
         "enmp_index": 92,
         "msn": "CA10_MS107",
         "hp": 100,
         "level": 99,
-        "limiter": 0
+        "limiter": 0,
+        "additional_objects": [
+            "Illuminator"
+        ]
     },
     "Luxord": {
         "obj_id": 1528,
