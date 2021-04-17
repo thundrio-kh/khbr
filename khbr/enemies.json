@@ -3054,6 +3054,7 @@
         "enmp_index": 92,
         "msn": "CA10_MS107",
         "hp": 100,
+        "adds": [{"name": "Illuminator"}],
         "level": 99,
         "limiter": 0
     },
