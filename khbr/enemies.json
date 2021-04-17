@@ -22,7 +22,10 @@
         "enmp_index": 52,
         "hp": 100,
         "level": 99,
-        "limiter": 13
+        "limiter": 13,
+        "tags": [
+            "large"
+        ]
     },
     "Hook Bat": {
         "obj_id": 4,
@@ -1878,7 +1881,10 @@
         "enmp_index": 34,
         "hp": 100,
         "level": 99,
-        "limiter": 15
+        "limiter": 15,
+        "tags": [
+            "large"
+        ]
     },
     "Armored Knight": {
         "obj_id": 305,
@@ -2691,7 +2697,10 @@
         "enmp_index": 206,
         "hp": 100,
         "level": 99,
-        "limiter": 10
+        "limiter": 10,
+        "tags": [
+            "large"
+        ]
     },
     "Spring Metal": {
         "obj_id": 2412,

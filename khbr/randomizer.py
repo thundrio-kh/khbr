@@ -27,10 +27,10 @@ class KingdomHearts2:
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
-            # "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per spawn: One-to-One but every spawnpoint is different (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized",
-            #                       "possible_values": ["Disabled", "One to One", "One to One Per Spawn", "Wild"]},
-            # "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
-            #                     "possible_values": self.get_valid_enemies()},
+            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per spawn: One-to-One but every spawnpoint is different (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized",
+                                  "possible_values": ["Disabled", "One to One", "One to One Per Spawn", "Wild", "Selected Enemy"]},
+            "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
+                                "possible_values": self.get_valid_enemies()},
             # "bosses_can_replace_enemies": {"display_name": "Bosses Can Replace Enemies", "description": "Replaces a small percentage of enemies in the game with a random boss. This option is intended for PC use only.",
             #                     "possible_values": [False, True]},
             # "nightmare_enemies": {"display_name": "Enemies of Eternal Darkness", "description": "Replaces enemies using only the most difficult enemies in the game.",
@@ -179,10 +179,11 @@ class KingdomHearts2:
         duplicate_bosses = None
         bossmode = None
         enemymode = None
-        # if "enemy" in options and options["enemy"] != "Disabled":
-        #     enemymode = options["enemy"]
+        print(options)
+        if "enemy" in options and options["enemy"] != "Disabled":
+            enemymode = options["enemy"]
         #     duplicate_enemies = enemymode in ["spawnpoint_one_to_one", "wild"]
-        #     enemies = self.get_enemies()
+            enemies = "hi there TODO FIX ME"#self.get_enemies()
         #     if "scale_enemy_stats" in options:
         #         scale_enemy = options["scale_enemy_stats"]
         #     if "bosses_can_replace_enemies" in options and options["bosses_can_replace_enemies"]:
@@ -201,7 +202,8 @@ class KingdomHearts2:
         #         enemymode = "wild"
         #         duplicate_enemies = True
         #         selected_enemy = options["selected_enemy"]
-        if "boss" in options and options["boss"] != "Disabled":
+        # TODO BIG ISSUE HERE WITH THE INDENTATION
+        if ("boss" in options and options["boss"] != "Disabled"):
             bossmode = options["boss"]
             duplicate_bosses = options["boss"] == "Wild"
             stable_only = False
@@ -222,6 +224,11 @@ class KingdomHearts2:
                 bossmode = "Wild"
                 duplicate_bosses = True
                 selected_boss = options["selected_boss"]
+
+            if "selected_enemy" in options and options["selected_enemy"] and options["enemy"] == "Selected Enemy":
+                enemymode = "Wild"
+                duplicate_enemies = True
+                selected_enemy = options["selected_enemy"]
             
             # Probably need a better way to make the category
             category = 'limited'
@@ -231,6 +238,8 @@ class KingdomHearts2:
                 category += "-stable"
             bossmapping = self.pickbossmapping(bosses, category) if not duplicate_bosses else None
             # enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else Nonee
+        
+            print(enemies, selected_enemy)
 
             spawns = self.get_locations()
             newspawns = {}
@@ -293,7 +302,7 @@ class KingdomHearts2:
                                         continue
                                     _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
                                     # Bosses don't have spawn limiters normally, so don't need to set them
-                                    if "msn_replace_allowed":
+                                    if old_boss_object["msn_replace_allowed"]:
                                         msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"] 
                                     if scale_boss:
                                         if new_boss not in set_scaling:
@@ -309,11 +318,17 @@ class KingdomHearts2:
                                         # In some cases it might be useful to know who is being replaced,
                                         ## IE the height Axel spawns the fire floor might be different on a per room basis
                                         ai_mods[new_boss] = ent["name"]
-                                # else:
-                                #     if not enemies:
-                                #         continue
-                                #     if selected_enemy:
-                                #         new_enemy = selected_enemy
+                                else:
+                                    if not enemies:
+                                        continue
+                                    if selected_enemy:
+                                        new_enemy = selected_enemy
+                                    if new_enemy == ent["name"]:
+                                        continue
+                                    print("sah")
+                                    new_enemy_object = self.enemy_records[new_enemy]
+                                    old_enemy_object = self.enemy_records[ent["name"]]
+                                    _add_spawn(newspawns, _get_new_ent(ent, new_enemy_object))
                                 #     elif enemymapping:
                                 #         new_enemy = enemymapping[ent["name"]]
                                 #     else:
@@ -615,6 +630,7 @@ class Randomizer:
             self.seed = int(time.time())
 
         randomization = self.generate_randomization(game, options, seed)
+        print(randomization)
         if randomization_only:
             return randomization
 
