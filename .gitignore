@@ -31,3 +31,6 @@ tests_debug.py
 
 *.pyc
 __pycache__
+
+dist
+khbr.egg-info

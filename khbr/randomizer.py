@@ -49,8 +49,6 @@ class KingdomHearts2:
                                 "possible_values": [False, True]},
             # "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
             #                     "possible_values": [True, False]},
-            "stable_bosses_only": {"display_name": "Only Include Stable Bosses", "description": "Removes from the pool bosses that are known to commonly cause issues in many parts of the game.",
-                                "possible_values": [True, False]},
             "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
                                 "possible_values": self.get_valid_bosses()}
         }
@@ -75,7 +73,9 @@ class KingdomHearts2:
             "msn": None,
             "size": 0,
             "enmp_index": None,
-            "enabled": True
+            "enabled": True,
+            "blacklist": [],
+            "whitelist": []
         }
         with open(os.path.join(os.path.dirname(__file__), "enemies.json")) as f:
             bosses_f = json.load(f)
@@ -102,8 +102,6 @@ class KingdomHearts2:
                         continue
                     if nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
                         continue
-                    if stable_only and ("unstable" in boss and boss["unstable"]):
-                        continue
 
                 bosses[v] = boss
         if getavail:
@@ -125,17 +123,22 @@ class KingdomHearts2:
                 avail = [] # These are bosses that are allowed to be here
                 for bc in bosses:
                     boss_check = bosses[bc]
+                    if boss_check["name"] == boss["name"]:
+                        # Boss should always be allowed to be in it's own location
+                        avail.append(boss_check["name"])
+                        continue
                     if "blacklist" in boss:
                         if bc in boss["blacklist"]:
                             continue
-                    if "whitelist" in boss:
+                    if boss["whitelist"]:
                         if bc not in boss["whitelist"]:
                             continue
-                    if "msn_required" in boss and boss["msn_required"]:
-                        if "msn_replace_allowed" in boss_check and not boss_check["msn_replace_allowed"]:
+                    else:
+                        if boss["msn_required"]:
+                            if not boss_check["msn_replace_allowed"]:
+                                continue
+                        if boss["size"] + boss_check["room_size"] >= maxsize:
                             continue
-                    if boss["size"] + boss_check["room_size"] >= maxsize:
-                        continue
                     avail.append(boss_check["name"])
                 boss["available"] = avail
         return bosses
@@ -438,13 +441,9 @@ class KingdomHearts2:
                 assets.append(asset)
         if randomization.get("msn_map", ""):
             for oldmsn in randomization.get("msn_map"):
-                if oldmsn in ["LK05_MS101.bar", "unknown"]:
-                    continue # TODO I DONT KNOW WHY THESE ARE SHOWING UP
                 # Load in the entire msn to memory
                 newmsn = randomization["msn_map"][oldmsn]
                 newmsnfn = os.path.join(KH2_DIR, "KH2", "msn", "jp", newmsn+".bar")
-                if not os.path.exists(newmsnfn):
-                    continue # TODO I DONT KNOW WHY ITS DOING THESE UNKNOWN ONES FIX IT
                 with open(newmsnfn, "rb") as f:
                     data = bytearray(f.read())
                 # edit the bonus byte
