@@ -68,23 +68,33 @@ class Tests(unittest.TestCase):
         randomization2 = rando.generate_seed("kh2", options, seed, randomization_only=True)
         assert randomization1 == randomization2
 
-    def test_stable_one_to_one_seedgen(self):
-        options = {"boss": "One to One", "stable_bosses_only": True}
-        rando = Randomizer(tempfn="test")
-        seed = "12345"
-        rando.generate_seed("kh2", options, seed, randomization_only=True)
-
     def test_wild_seedgen(self):
         options = {"boss": "Wild"}
         rando = Randomizer(tempfn="test")
         seed = "12345"
         rando.generate_seed("kh2", options, seed, randomization_only=True)
     
-    def test_wild_nightmare_stable_seedgen(self):
+    def test_wild_nightmare_seedgen(self):
         options = {"boss": "One to One", "nightmare_bosses": True}
         rando = Randomizer(tempfn="test")
         seed = "12345"
         randomization1 = rando.generate_seed("kh2", options, seed, randomization_only=True)
         randomization2 = rando.generate_seed("kh2", options, seed, randomization_only=True)
+        assert randomization1 == randomization2
+
+    def test_selected_enemy(self):
+        options = {"enemy": "Selected Enemy", "selected_enemy": "Dancer"}
+        rando = Randomizer(tempfn="test")
+        seed = "12345"
+        randomization = rando.generate_seed("kh2", options, seed, randomization_only=True)
+
+    def test_wild_nightmare_enemy_seedgen(self):
+        options = {"enemy": "Wild", "nightmare_enemies": True}
+        rando = Randomizer(tempfn="test")
+        seed = "12345"
+        randomization1 = rando.generate_seed("kh2", options, seed, randomization_only=True)
+        randomization2 = rando.generate_seed("kh2", options, seed, randomization_only=True)
+        assert randomization1 == randomization2
+
 
 unittest.main()

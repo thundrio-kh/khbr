@@ -2729,6 +2729,7 @@
     },
     "Disney Castle": {
         "Audience Chamber": {
+            "ignored": true,
             "size": 5000000,
             "spawnpoints": {
                 "b_00": {

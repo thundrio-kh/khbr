@@ -33,8 +33,8 @@ class KingdomHearts2:
                                 "possible_values": self.get_valid_enemies()},
             # "bosses_can_replace_enemies": {"display_name": "Bosses Can Replace Enemies", "description": "Replaces a small percentage of enemies in the game with a random boss. This option is intended for PC use only.",
             #                     "possible_values": [False, True]},
-            # "nightmare_enemies": {"display_name": "Enemies of Eternal Darkness", "description": "Replaces enemies using only the most difficult enemies in the game.",
-            #                     "possible_values": [False, True]},
+            "nightmare_enemies": {"display_name": "Enemies of Eternal Darkness", "description": "Replaces enemies using only the most difficult enemies in the game.",
+                                "possible_values": [False, True]},
             # "separate_small_big_enemies": {"display_name": "Separate Small and Big Enemies", "description": "Randomizes big enemies among themselves and small enemies among themselves. Useful to prevent crashing"},
             #                     "possible_values": [True, False]},
             # "scale_enemy_stats": {"display_name": "Scale Enemy Stats", "description": "Attempts to scale enemies to the level/HP of the enemy it is replacing.",
@@ -53,21 +53,21 @@ class KingdomHearts2:
                                 "possible_values": self.get_valid_bosses()}
         }
     def get_enemies(self):
-        # Respect disabled flags and such
-        pass
-    def get_bosses(self, nightmare_mode=False, stable_only=False, maxsize=UNLIMITED_SIZE, usefilters=True, getavail=True):
+        enemies = self.get_valid_enemies()
+        return [self.enemy_records[e] for e in self.get_valid_enemies() if self.enemy_records[e]["enabled"]]
+    def get_bosses(self, nightmare_mode=False, maxsize=UNLIMITED_SIZE, usefilters=True, getavail=True):
         defaults = {
             "replace_as": None,
             "replace_allowed": True,
             "model": None,
             "msn_replace_allowed": True,
             "tags": [],
+            "category": None,
             "level": 0,
             "isnightmare": False,
             "hp": 100,
             "limiter": 1,
             "msn_required": False,
-            "unstable": False,
             "aimod": None,
             "can_be_enemy": False,
             "msn": None,
@@ -95,6 +95,7 @@ class KingdomHearts2:
                 for d in defaults:
                     if d not in boss:
                         boss[d] = defaults[d]
+                boss["category"] = '-'.join(boss["tags"])
                 if usefilters:
                     if boss["type"] != 'boss':
                         continue
@@ -102,7 +103,6 @@ class KingdomHearts2:
                         continue
                     if nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
                         continue
-
                 bosses[v] = boss
         if getavail:
             locations = self.get_locations()
@@ -168,8 +168,9 @@ class KingdomHearts2:
         return bosslist[n]
     def get_enemy_attribute(self, name, attribute):
         pass
-    def pick_enemy_to_replace(self, oldname, enemylist):
-        pass #Remember tags
+    def pick_enemy_to_replace(self, oldenemy, enabledenemies):
+        options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
+        return random.choice(options)
     def perform_randomization(self, options):
         unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
         scale_enemy = False
@@ -185,20 +186,20 @@ class KingdomHearts2:
         print(options)
         if "enemy" in options and options["enemy"] != "Disabled":
             enemymode = options["enemy"]
-        #     duplicate_enemies = enemymode in ["spawnpoint_one_to_one", "wild"]
-            enemies = "hi there TODO FIX ME"#self.get_enemies()
+        #duplicate_enemies = enemymode in ["spawnpoint_one_to_one", "wild"]
+            enemies = self.get_enemies()
         #     if "scale_enemy_stats" in options:
         #         scale_enemy = options["scale_enemy_stats"]
         #     if "bosses_can_replace_enemies" in options and options["bosses_can_replace_enemies"]:
         #         # Might eventually want to limit this to 10% of replacements get a boss, see how it plays
         #         duplicate_enemies = True
         #         bossenemies = self.filter_enemies(self.get_bosses(), "can_be_enemy")
-        #         bossenemies = self.filter_enemies(bossenemies, "unstable", isfalse=True)
+        #         bossenemies = self.filter_enemies(bossenemies, isfalse=True)
         #         bossenemies = self.add_tag(bossenemies, "large")
         #         enemies = enemies + bossenemies
-        #     if "nightmare_enemies" in options and options["nightmare_enemies"]:
+            if "nightmare_enemies" in options and options["nightmare_enemies"]:
         #         duplicate_enemies = True
-        #         enemies = self.filter_enemies(enemies, "isnightmare")
+                enemies = [e for e in enemies if e["isnightmare"]]
         #     if not ("separate_small_big_enemies" in options and options["separate_small_big_enemies"]):
         #         enemies = self.remove_tag(enemies, "large")
         #     if "selected_enemy" in options and options["selected_enemy"]:
@@ -209,41 +210,37 @@ class KingdomHearts2:
         if ("boss" in options and options["boss"] != "Disabled"):
             bossmode = options["boss"]
             duplicate_bosses = options["boss"] == "Wild"
-            stable_only = False
             nightmare_bosses = False
-            if "stable_bosses_only" in options and options["stable_bosses_only"]:
-                duplicate_bosses = True
-                stable_only = True
             if "nightmare_bosses" in options and options["nightmare_bosses"]:
                 nightmare_bosses = True
                 duplicate_bosses = True
             
+        if bossmode or enemymode:
             maxsize = UNLIMITED_SIZE if unlimited_memory else LIMITED_SIZE
-            bosses = self.get_bosses(nightmare_mode=nightmare_bosses, stable_only=stable_only, maxsize=maxsize)
-            if "scale_boss_stats" in options:
-                scale_boss = options["scale_boss_stats"]
+            if bossmode:
+                bosses = self.get_bosses(nightmare_mode=nightmare_bosses, maxsize=maxsize)
+                if "scale_boss_stats" in options:
+                    scale_boss = options["scale_boss_stats"]
 
-            if "selected_boss" in options and options["selected_boss"] and options["boss"] == "Selected Boss":
-                bossmode = "Wild"
-                duplicate_bosses = True
-                selected_boss = options["selected_boss"]
-
-            if "selected_enemy" in options and options["selected_enemy"] and options["enemy"] == "Selected Enemy":
-                enemymode = "Wild"
-                duplicate_enemies = True
-                selected_enemy = options["selected_enemy"]
+                if "selected_boss" in options and options["selected_boss"] and options["boss"] == "Selected Boss":
+                    bossmode = "Wild"
+                    duplicate_bosses = True
+                    selected_boss = options["selected_boss"]
+            if enemymode:
+                if "selected_enemy" in options and options["selected_enemy"] and options["enemy"] == "Selected Enemy":
+                    enemymode = "Wild"
+                    duplicate_enemies = True
+                    selected_enemy = options["selected_enemy"]
             
             # Probably need a better way to make the category
             category = 'limited'
             if unlimited_memory:
                 category = 'un' + category
-            if stable_only:
-                category += "-stable"
-            bossmapping = self.pickbossmapping(bosses, category) if not duplicate_bosses else None
-            # enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else Nonee
-        
-            print(enemies, selected_enemy)
-
+            bossmapping = None
+            enemymapping = None
+            if bossmode:
+                bossmapping = self.pickbossmapping(bosses, category) if not duplicate_bosses else None
+            # enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else None
             spawns = self.get_locations()
             newspawns = {}
             spawn_limiters = {}
@@ -255,7 +252,6 @@ class KingdomHearts2:
                 for r in world:
                     room = world[r]
                     if "ignored" in room:
-                        del spawns[w][r]
                         continue
                     # if enemies and enemymode == "spawnpoint_one_to_one":
                     #     enemymapping = self.pickenemymapping(enemies)
@@ -324,13 +320,20 @@ class KingdomHearts2:
                                 else:
                                     if not enemies:
                                         continue
+                                    old_enemy_object = self.enemy_records[ent["name"]]
+                                    if not old_enemy_object["replace_allowed"]:
+                                        continue
                                     if selected_enemy:
                                         new_enemy = selected_enemy
+                                    elif enemymapping:
+                                        pass
+                                    elif enemymode == "Wild":
+                                        new_enemy = self.pick_enemy_to_replace(old_enemy_object, enemies)
                                     if new_enemy == ent["name"]:
                                         continue
-                                    print("sah")
+                                    
                                     new_enemy_object = self.enemy_records[new_enemy]
-                                    old_enemy_object = self.enemy_records[ent["name"]]
+                                    
                                     _add_spawn(newspawns, _get_new_ent(ent, new_enemy_object))
                                 #     elif enemymapping:
                                 #         new_enemy = enemymapping[ent["name"]]
@@ -348,7 +351,8 @@ class KingdomHearts2:
                                 #         set_scaling[new_enemy].append(ent["name"])
 
             return {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters}
- 
+        raise Exception("Didn't randomize anything!")
+
     def generate_files(self, outdir='', randomization={}, outzip=[]):
         # Generates files in the zip folder and also returns the list of 
         if outdir:
@@ -629,7 +633,6 @@ class Randomizer:
             self.seed = int(time.time())
 
         randomization = self.generate_randomization(game, options, seed)
-        print(randomization)
         if randomization_only:
             return randomization
 
@@ -666,6 +669,10 @@ if __name__ == '__main__':
     mode = sys.argv[1]
     # {"selected_boss": "Past Pete", "boss": "selected_boss"}
     options = sys.argv[2]
+    if len(sys.argv) > 3:
+        seed = sys.argv[3]
+    else:
+        seed=None
     if options[0] == "{":
         options = json.loads(options)
 
@@ -684,4 +691,4 @@ if __name__ == '__main__':
     if mode == "read":
         b64 = rando.read_seed("kh2", seedfn=options, outfn=fn)
     else:
-        b64 = rando.generate_seed("kh2", options)
+        b64 = rando.generate_seed("kh2", options, seed=seed)

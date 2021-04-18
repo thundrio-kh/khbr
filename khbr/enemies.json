@@ -2247,8 +2247,11 @@
                 "vars": [ 1, 0, 0 ]
             }
         },
+        "tags": [
+            "large"
+        ],
         "isnightmare": true,
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 50,
         "hp": 100,
         "level": 99,
@@ -2397,6 +2400,7 @@
             }
         },
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 2,
         "hp": 100,
         "level": 99,
