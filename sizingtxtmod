@@ -1,0 +1,1260 @@
+
+*********************
+Armor Xemnas I
+*********************
+Location: eh24
+Program: 71
+Mission: EH24_MS110
+Room Size: 16.8
+Size: 1.7
+adds:
+- B_EX300 (0.17)
+- B_EX290 (0.29)
+- B_EX310 (0.69)
+- B_EX320 (0.3)
+- M_EX880_DANCER_EH (0.67)
+- P_EH010 (0.28)
+
+*********************
+Armor Xemnas II
+*********************
+Location: eh23
+Program: 73
+Mission: EH23_MS112
+Room Size: 13.8
+Size: 1.7
+subtracts:
+  F_EH060 (0.67)
+  B_EX180 (2.2)
+- P_EH010 (0.28) ????
+
+*********************
+Axel I
+*********************
+Location: tt05
+Program: 87
+Mission: TT05_MS404
+Room Size: 12.35 
+Size: 2.92
+
+
+*********************
+Axel II
+*********************
+Location: tt20
+Program: 137
+Mission: TT20_MS603
+Room Size: 7.42 
+Size: 3.74
+
+
+*********************
+Banzai
+*********************
+Location: lk02
+Program: 51
+Mission: LK02_MS102
+Room Size: 10.28
+Size: 0.56
+cave fight
+shenzi 0.96
+ed 0.56
+
+*********************
+Banzai (1)
+*********************
+Location: lk05
+Program: 57
+Mission: LK05_MS201
+Room Size: 10.54
+Size: 0.56
+graveyard fight
+shenzi 0.96
+ed 0.56
+
+*********************
+Barbossa
+*********************
+Location: ca10
+Program: 60
+Mission: CA10_MS107
+Room Size: 15.79
+Size: 3.48
+adds:
+ B_CA060 (0.1)
+ B_CA000 (0.47)
+
+*********************
+Barrel
+*********************
+Location: nm10
+Program: 62
+Mission: NM10_MS201
+Room Size: 14.93
+Size: 1.32
+1.3 shock
+0.92 lock
+
+*********************
+Blizzard Lord
+*********************
+Location: al03
+Program: 59
+Mission: AL03_MS103
+Room Size: 15.13
+Size: 1.72
+has volcano lord
+volcano lord: 1.76
+adds:
+ M_AL020_FIRE2 (0.26)
+ M_AL020_ICEE2 (0.36)
+ B_AL110 (0.5)
+ B_AL120 (0.21)
+
+*********************
+Blizzard Lord (Cups)
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8TI_BOSS
+Room Size: 
+Size: 
+
+
+*********************
+Cerberus
+*********************
+Location: he07
+Program: 114
+Mission: HE07_MS103
+Room Size: 13.74 
+Size: 3.2
+
+
+*********************
+Cerberus (1)
+*********************
+Location: he09
+Program: 194
+Mission: HE_COL_2_10
+Room Size: 
+Size: 
+
+
+*********************
+Cerberus (1)
+*********************
+Location: he09
+Program: 196
+Mission: HE_COLOSSEUM_8_ONLY
+Room Size: 
+Size: 
+
+
+*********************
+Cerberus (1)
+*********************
+Location: he09
+Program: 190
+Mission: HE_COL_2_10
+Room Size: 
+Size: 
+
+
+*********************
+Cloud
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_25
+Room Size: 
+Size: 1.9
+
+
+*********************
+Cloud (1)
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_40
+Room Size: 
+Size: 
+
+
+*********************
+Cloud (2)
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_49
+Room Size: 
+Size: 
+
+*********************
+Dark Thorn
+*********************
+Location: bb05
+Program: 79
+Mission: BB05_MS104B
+Room Size: 15.29
+Size: 2.86
+subtracts/adds
+  1.33 chandelier
+
+*********************
+Data Axel
+*********************
+Location: tt20
+Program: 213
+Mission: TT20_MS603_RE
+Room Size: 7.39
+Size: 3.74
+
+
+*********************
+Data Demyx
+*********************
+Location: hb04
+Program: 114
+Mission: HB04_MS403_RE
+Room Size: 14.69
+Size: 2.66
+adds:
+  M_EX880_DANCER_LV99 (1.41)
+
+*********************
+Data Final Xemnas
+*********************
+Location: eh20
+Program: 98
+Mission: EH20_MS113_RE
+Room Size: 16.41
+Size: 6.28
+adds:
+  P_EH010 (0.28)
+  P_EX100_LAST (1.19)
+
+*********************
+Data Final Xemnas (Copy)
+*********************
+Location: eh20
+Program: 98
+Mission: EH20_MS113_RE
+Room Size: 
+Size: 
+see above
+
+*********************
+Data Luxord
+*********************
+Location: eh14
+Program: 101
+Mission: EH14_MS103_RE
+
+  
+
+*********************
+Data Saix
+*********************
+Location: eh15
+Program: 102
+Mission: EH15_MS104_RE
+Room Size: 14.85
+Size: 3.92
+adds:
+  B_EX220_LV99 (0.63)
+
+*********************
+Data Xaldin
+*********************
+Location: bb15
+Program: 97
+Mission: BB15_MS203_RE
+Room Size: 13.24
+Size: 3.63
+
+
+*********************
+Data Xemnas
+*********************
+Location: eh19
+Program: 97
+Mission: EH19_MS105_RE
+Room Size: 9.86
+Size: 3.7
+
+
+*********************
+Data Xigbar
+*********************
+Location: eh10
+Program: 100
+Mission: EH10_MS102_RE
+Room Size: 14.28
+Size: 3.19
+
+
+*********************
+Demyx
+*********************
+Location: hb04
+Program: 55
+Mission: HB04_MS403
+Room Size: 14.69 
+Size: 2.66
+adds:
+ M_EX880_DANCER (1.41)
+
+
+*********************
+Demyx OC
+*********************
+Location: he17
+Program: 123
+Mission: HE17_MS105
+Room Size: 11.83
+Size: 1.33
+adds:
+  M_EX880_DANCER (1.41)
+
+
+*********************
+Ed
+*********************
+Location: lk02
+Program: 51
+Mission: LK02_MS102
+Room Size: 
+Size: 
+
+
+*********************
+Ed (1)
+*********************
+Location: lk05
+Program: 57
+Mission: LK05_MS201
+Room Size: 
+Size: 
+
+
+*********************
+Final Xemnas
+*********************
+Location: eh20
+Program: 74
+Mission: EH20_MS113
+Room Size: 16.4 
+Size: 6.29
+subtracts: 
+ P_EX100_LAST (1.19)
+pyramid?
+
+*********************
+Final Xemnas (Copy)
+*********************
+Location: eh20
+Program: 74
+Mission: EH20_MS113
+Room Size: 
+Size: 
+
+
+*********************
+Giant Sark
+*********************
+Location: tr09
+Program: 59
+Mission: TR09_MS205
+Room Size: 11.76
+Size: 1.41
+
+
+*********************
+Giant Sark
+*********************
+Location: tr09
+Program: 64
+Mission: TR09_MS205
+Room Size: 
+Size: 
+
+
+*********************
+Grim Reaper I
+*********************
+Location: ca01
+Program: 54
+Mission: CA01_MS204
+Room Size: 14.96
+Size: 2.35
+
+
+*********************
+Grim Reaper II
+*********************
+Location: ca18
+Program: 85
+Mission: CA18_MS202
+Room Size: 14.7
+Size: 2.35
+adds:
+  F_CA690_BTL (0.2)
+  PRIZE_CA_SEA (0.03)
+
+
+*********************
+Groundshaker
+*********************
+Location: lk15
+Program: 59
+Mission: LK15_MS202
+Room Size: 10.4
+Size: 4.16
+adds:
+ B_LK130 0.09
+
+
+*********************
+Hades Cups
+*********************
+Location: he09
+Program: 192
+Mission: HE_COL_4_10
+Room Size: 
+Size: 3.14
+
+*********************
+Hades Cups
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_30
+Room Size: 
+Size: 
+
+
+*********************
+Hades Escape
+*********************
+Location: he05
+Program: 111
+Mission: HE05_MS102
+Room Size: 16.47
+Size: 2.26
+
+
+*********************
+Hades I
+*********************
+Location: he06
+Program: 112
+Mission: HE06_MS101
+Room Size: 12.73
+Size: 2.26
+
+
+*********************
+Hades II
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_50
+Room Size: 
+Size: 
+
+
+*********************
+Hades II (1)
+*********************
+Location: he19
+Program: 201
+Mission: HE19_MS204
+Room Size: 11.38
+Size: 3.15
+
+
+*********************
+Hades II (1)
+*********************
+Location: he19
+Program: 202
+Mission: HE19_MS205
+Room Size: 13.88 
+Size: 3.15
+
+
+*********************
+Hayner
+*********************
+Location: tt04
+Program: 182
+Mission: TT04_MS00
+Room Size: 8.45
+Size: 0.84
+
+
+*********************
+Hayner
+*********************
+Location: tt05
+Program: 84
+Mission: TT05_MS401
+Room Size: 12.41
+Size: 0.84
+
+
+*********************
+Hercules
+*********************
+Location: he09
+Program: 191
+Mission: HE_COLOSSEUM_3
+Room Size: 
+Size: 2.48
+
+
+*********************
+Hercules
+*********************
+Location: he09
+Program: 195
+Mission: HE_COLOSSEUM_7
+Room Size: 
+Size: 
+
+
+*********************
+Hostile Program
+*********************
+Location: tr04
+Program: 55
+Mission: TR04_MS104
+Room Size: 11.53
+Size: 2.33
+adds:
+  PRIZE_TR (0.04)
+
+*********************
+Hydra
+*********************
+Location: he18
+Program: 171
+Mission: HE18_MS108
+Room Size: 15.92
+Size: 3.22 
+adds:
+ B_HE110 (0.86)
+ F_HE030_L (0.21)
+ N_HE020_BTL (0.64)
+ N_HE040_BTL (0.77)
+ N_HE030_BTL (0.45) 
+
+*********************
+Illuminator
+*********************
+Location: ca10
+Program: 60
+Mission: CA10_MS107
+Room Size: 
+Size: 
+see barbossa
+
+*********************
+Jafar
+*********************
+Location: al05
+Program: 62
+Mission: AL05_MS203
+Room Size: 13.05
+Size: 1.86
+
+
+*********************
+Larxene
+*********************
+Location: hb33
+Program: 155
+Mission: HB33_FM_LAR
+Room Size: 
+Size: 
+
+
+*********************
+Larxene
+*********************
+Location: hb33
+Program: 143
+Mission: HB33_FM_LAR
+Room Size: 13.65
+Size: 5.35
+
+
+*********************
+Larxene (Data)
+*********************
+Location: hb33
+Program: 148
+Mission: HB33_FM_LAR_RE
+Room Size: 13.65 
+Size: 5.35
+
+*********************
+Leon
+*********************
+Location: he09
+Program: 189
+Mission: HE_COL_1_10
+Room Size: 
+Size: 1.67
+
+
+*********************
+Leon (1)
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_40
+Room Size: 
+Size: 
+
+
+*********************
+Leon (2)
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_49
+Room Size: 
+Size: 
+
+
+*********************
+Leon (3)
+*********************
+Location: he09
+Program: 193
+Mission: HE_COL_5_10
+Room Size: 
+Size: 
+
+
+*********************
+Lexaeus
+*********************
+Location: hb33
+Program: 142
+Mission: HB33_FM_LEX
+Room Size: 12.26
+Size: 3.9
+
+
+*********************
+Lexaeus (Data)
+*********************
+Location: hb33
+Program: 147
+Mission: HB33_FM_LEX_RE
+Room Size: 
+Size: 
+
+
+*********************
+Lock
+*********************
+Location: nm10
+Program: 62
+Mission: NM10_MS201
+Room Size: 
+Size: 
+with shock and barrel
+
+*********************
+Luxord
+*********************
+Location: eh14
+Program: 58
+Mission: EH14_MS103
+Room Size: 11.89
+Size: 3.51
+adds:
+  B_EX950_CARD (0.26)
+  B_EX210 (0.87)
+  B_EX230 (0.03)
+
+
+*********************
+Marluxia
+*********************
+Location: hb38
+Program: 145
+Mission: HB38_FM_MAR
+Room Size: 12.53
+Size: 4.57
+
+
+*********************
+Marluxia (Data)
+*********************
+Location: hb38
+Program: 150
+Mission: HB38_FM_MAR_RE
+Room Size: 12.53
+Size: 4.57
+
+*********************
+Oogie Boogie
+*********************
+Location: nm09
+Program: 55
+Mission: NM09_MS104
+Room Size: 15.2 
+Size: 1.23
+adds:
+  F_NM120(0.09)
+  F_NM130(0.08)
+  F_NM090(0.15)
+  F_NM140(0.01)
+  F_NM080(0.57)
+  F_NM100(0.14)
+  F_NM110(0.08)
+  M_EX200_NM(0.7)
+  M_EX120_NM(0.46)
+
+*********************
+Past Pete
+*********************
+Location: wi01
+Program: 58
+Mission: WI01_MS101
+Room Size: 11.59
+Size: 0.43
+
+
+*********************
+Pete Cups
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8TI_BOSS
+Room Size: 
+Size: 1.57
+
+
+*********************
+Pete OC I
+*********************
+Location: he08
+Program: 115
+Mission: HE08_MS106
+Room Size: 12.05
+Size: 1.57
+
+
+*********************
+Pete OC II
+*********************
+Location: he08
+Program: 116
+Mission: HE08_MS107
+Room Size: 15.1 
+Size: 1.57
+
+
+*********************
+Pete TR
+*********************
+Location: wi03
+Program: 53
+Mission: WI03_MS104
+Room Size: 15.84
+Size: 2.04
+adds:
+  F_WI060_PETE (0.54)
+  F_WI360_PETE (0.36)
+  F_WI020_BOSS (0.58)
+  F_WI010_BOSS (0.03)
+  F_WI000 (0.01)
+  F_WI310 (0.12)
+
+*********************
+Prison Keeper
+*********************
+Location: nm03
+Program: 52
+Mission: NM03_MS103
+Room Size: 13.09
+Size: 2.09
+adds:
+  N_NM050_BTL_2 (0.29)
+  N_NM060_BTL_2 (0.31)
+  N_NM070_BTL_2 (0.29)
+
+
+*********************
+Riku
+*********************
+Location: mu07
+Program: 76
+Mission: MU07_MS201
+Room Size: 9.84
+Size: 1.22
+
+*********************
+Roxas
+*********************
+Location: eh21
+Program: 65
+Mission: EH21_MS101
+Room Size: 11.68
+Size: 5.85
+
+
+*********************
+Roxas (Data)
+*********************
+Location: eh21
+Program: 99
+Mission: EH21_MS101_RE
+Room Size: 
+Size: 
+
+
+*********************
+Saix
+*********************
+Location: eh15
+Program: 56
+Mission: EH15_MS104
+Room Size: 14.84
+Size: 3.91
+adds:
+ B_EX220 (0.63)
+
+
+*********************
+Sark
+*********************
+Location: tr09
+Program: 58
+Mission: TR09_MS204
+Room Size: 11.12
+Size: 1.22
+
+
+*********************
+Scar
+*********************
+Location: lk14
+Program: 55
+Mission: LK14_MS103
+Room Size: 7.97
+Size: 1.63
+
+
+*********************
+Seifer
+*********************
+Location: tt03
+Program: 180
+Mission: TT03_MS400
+Room Size: 7.28 
+Size: 0.98
+
+
+*********************
+Seifer (1)
+*********************
+Location: tt04
+Program: 77
+Mission: TT04_MS107
+Room Size: 8.7
+Size: 0.98
+
+
+*********************
+Seifer (2)
+*********************
+Location: tt04
+Program: 78
+Mission: TT04_MS108
+Room Size: 8.75
+Size: 0.98
+
+
+*********************
+Seifer (3)
+*********************
+Location: tt04
+Program: 181
+Mission: TT04_MS500
+Room Size: 7.08 
+Size: 0.98
+
+
+*********************
+Seifer (4)
+*********************
+Location: tt04
+Program: 184
+Mission: TT04_MS02
+Room Size: 8.89
+Size: 0.98
+
+
+*********************
+Sephiroth
+*********************
+Location: hb01
+Program: 75
+Mission: HB01_MS601
+Room Size: 10.46
+Size: 3.89
+adds?
+  B_EX360 (0.01)
+
+
+*********************
+Setzer
+*********************
+Location: tt04
+Program: 183
+Mission: TT04_MS01
+Room Size: 8.03
+Size: 1.35
+
+
+*********************
+Setzer
+*********************
+Location: tt05
+Program: 88
+Mission: TT05_MS405
+Room Size: 12.91
+Size: 1.35
+
+
+*********************
+Shadow Stalker
+*********************
+Location: bb05
+Program: 78
+Mission: BB05_MS104A
+Room Size: 15.43
+Size: 1.32
+adds:
+  F_BB080 (0.36)
+  F_BB050 (1.33)
+  F_BB060 (1.27)
+
+*********************
+Shan-Yu
+*********************
+Location: mu09
+Program: 75
+Mission: MU09_MS108
+Room Size: 14.79
+Size: 3.21
+adds:
+  B_MU110 (0.62)
+  M_EX580 (0.81)
+  F_MU030 (0.09)
+
+*********************
+Shenzie
+*********************
+Location: lk02
+Program: 51
+Mission: LK02_MS102
+Room Size: 
+Size: 
+see others
+
+*********************
+Shenzie (1)
+*********************
+Location: lk05
+Program: 57
+Mission: LK05_MS201
+Room Size: 
+Size: 
+see others
+
+*********************
+Shock
+*********************
+Location: nm10
+Program: 62
+Mission: NM10_MS201
+Room Size: 
+Size: 
+see others
+
+*********************
+Storm Rider
+*********************
+Location: mu08
+Program: 79
+Mission: MU08_MS204
+Room Size: 12.64
+Size: 3.2
+adds
+  B_MU130 (0.02)
+  F_MU070_BOSS (0.15)
+
+*********************
+Terra
+*********************
+Location: dc07
+Program: 73
+Mission: DC07_FM_NAZO
+Room Size: 13.98
+Size: 5.38
+adds:
+  B_EX430 (0.02)
+
+
+*********************
+Terra
+*********************
+Location: dc07
+Program: 67
+Mission: DC07_FM_NAZO
+Room Size: 
+Size: 
+
+
+*********************
+The Beast
+*********************
+Location: bb03
+Program: 69
+Mission: BB03_MS103
+Room Size: 13.78
+Size: 1.71
+adds:
+  N_BB050_BTL (0.86)
+  F_BB000 (0.28)
+
+*********************
+The Experiment
+*********************
+Location: nm07
+Program: 64
+Mission: NM07_MS204
+Room Size: 15.89 
+Size: 1.82
+adds:
+  B_NM110_HEAD (1.39)
+  B_NM110_L_ARM (1.41)
+  B_NM110_R_ARM (1.39)
+
+*********************
+Thresholder
+*********************
+Location: bb11
+Program: 72
+Mission: BB11_MS102
+Room Size: 14.09
+Size: 1.96
+adds:
+  B_BB130 (0.21)
+
+
+*********************
+Thresholder
+*********************
+Location: bb11
+Program: 80
+Mission: BB11_MS102
+Room Size: 
+Size: 
+
+
+*********************
+Tifa
+*********************
+Location: he09
+Program: 196
+Mission: b_h0
+Room Size: 
+Size: 1.32
+
+
+*********************
+Tifa (1)
+*********************
+Location: he09
+Program: 196
+Mission: b_j5
+Room Size: 
+Size: 
+
+
+*********************
+Tifa (2)
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_49
+Room Size: 
+Size: 
+
+
+*********************
+Twilight Thorn
+*********************
+Location: tt34
+Program: 157
+Mission: TT34_MS304
+Room Size: 8.84
+Size: 3.92
+adds:
+  B_EX200 (0.27)
+  M_EX880 (0.72)
+
+
+*********************
+Vexen
+*********************
+Location: hb32
+Program: 146
+Mission: HB32_FM_VEX_RE
+Room Size: 15.19
+Size: 4.27
+adds:
+ P_EX100_HTLF_BTL (1.95)
+
+*********************
+Vexen (1)
+*********************
+Location: hb32
+Program: 115
+Mission: HB32_FM_VEX
+Room Size: 
+Size: 
+
+*********************
+Vivi
+*********************
+Location: tt05
+Program: 85
+Mission: TT05_MS402
+Room Size: 12.59
+Size: 1.02
+adds:
+  PRIZE_TT (0.04) // this is an add for all the struggles
+
+*********************
+Volcano Lord
+*********************
+Location: al03
+Program: 59
+Mission: AL03_MS103
+Room Size: 
+Size: 
+see ice lord
+
+*********************
+Volcano Lord (Cups)
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_5
+Room Size: 
+Size: 
+
+
+*********************
+Xaldin
+*********************
+Location: bb15
+Program: 82
+Mission: BB15_MS203
+Room Size: 13.28
+Size: 3.63
+
+
+*********************
+Xemnas
+*********************
+Location: eh19
+Program: 59
+Mission: EH19_MS105
+Room Size: 9.86
+Size: 3.7
+
+*********************
+Xigbar
+*********************
+Location: eh10
+Program: 57
+Mission: EH10_MS102
+Room Size: 14.37
+Size: 3.19
+
+
+*********************
+Yuffie
+*********************
+Location: he09
+Program: 189
+Mission: HE_COL_1_10
+Room Size: 
+Size: 0.95
+
+
+*********************
+Yuffie (1)
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_10
+Room Size: 
+Size: 
+
+
+*********************
+Yuffie (2)
+*********************
+Location: he09
+Program: 196
+Mission: HE_COL_8_49
+Room Size: 
+Size: 
+
+
+*********************
+Yuffie (3)
+*********************
+Location: he09
+Program: 193
+Mission: HE_COL_5_10
+Room Size: 
+Size: 
+
+
+*********************
+Zexion
+*********************
+Location: hb34
+Program: 151
+Mission: HB34_FM_ZEX
+Room Size: 13.58
+Size: 3.44
+adds:
+  B_EX380 (0.39)
+  B_EX410 (.61)
+
+
+*********************
+Zexion (Data)
+*********************
+Location: hb34
+Program: 152
+Mission: HB34_FM_ZEX_RE
+Room Size: 13.58
+Size: 3.44
+adds:
+  B_EX380 (0.39)
+  B_EX410 (.61)

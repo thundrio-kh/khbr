@@ -8,7 +8,7 @@ setup(
 	name = 'khbr',
 	packages = find_packages(),
 	package_data={'': ['data/ai_mods/*', '*.json']},
-	version = 0.40,
+	version = 0.44,
 	long_description = long_description,
 	long_description_content_type='text/markdown',
 	license = 'MIT',
