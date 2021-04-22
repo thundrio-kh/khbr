@@ -97,14 +97,14 @@
         "variations": {
             "Grim Reaper I": {
                 "msn": "CA18_MS202",
-                "vars": [ 0, 0, 0 ],
+                "vars": [ 0, 1, 0 ],
                 "can_be_enemy": true,
                 "tags": [ "large" ]
             },
             "Grim Reaper II": {
                 "msn": "CA01_MS204",
                 "requires_msn": true,
-                "vars": [ 0, 1, 0 ],
+                "vars": [ 0, 0, 0 ],
                 "enabled": false,
                 "isnightmare": true
             }

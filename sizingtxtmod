@@ -1,6 +1,6 @@
 
 *********************
-Armor Xemnas I
+Armor Xemnas I*
 *********************
 Location: eh24
 Program: 71
@@ -8,12 +8,11 @@ Mission: EH24_MS110
 Room Size: 16.8
 Size: 1.7
 adds:
-- B_EX300 (0.17)
-- B_EX290 (0.29)
-- B_EX310 (0.69)
-- B_EX320 (0.3)
-- M_EX880_DANCER_EH (0.67)
-- P_EH010 (0.28)
+- B_EX300 (0.17) // ???
+- B_EX290 (0.29) // xig
+- B_EX310 (0.69) // xaldin
+- B_EX320 (0.3), Arg1=1 // chakram
+- M_EX880_DANCER_EH (0.67) // dancers
 
 *********************
 Armor Xemnas II
@@ -26,7 +25,6 @@ Size: 1.7
 subtracts:
   F_EH060 (0.67)
   B_EX180 (2.2)
-- P_EH010 (0.28) ????
 
 *********************
 Axel I
@@ -73,16 +71,17 @@ shenzi 0.96
 ed 0.56
 
 *********************
-Barbossa
+Barbossa*
 *********************
+NOT WORKING YET
 Location: ca10
 Program: 60
 Mission: CA10_MS107
 Room Size: 15.79
 Size: 3.48
 adds:
- B_CA060 (0.1)
  B_CA000 (0.47)
+should be tested in big arena
 
 *********************
 Barrel
@@ -102,14 +101,9 @@ Location: al03
 Program: 59
 Mission: AL03_MS103
 Room Size: 15.13
-Size: 1.72
+Size: 2.58
 has volcano lord
-volcano lord: 1.76
-adds:
- M_AL020_FIRE2 (0.26)
- M_AL020_ICEE2 (0.36)
- B_AL110 (0.5)
- B_AL120 (0.21)
+volcano lord: 2.23
 
 *********************
 Blizzard Lord (Cups)
@@ -191,7 +185,7 @@ Room Size:
 Size: 
 
 *********************
-Dark Thorn
+Dark Thorn*
 *********************
 Location: bb05
 Program: 79
@@ -199,7 +193,7 @@ Mission: BB05_MS104B
 Room Size: 15.29
 Size: 2.86
 subtracts/adds
-  1.33 chandelier
+  1.33 chandelier // y value -1500
 
 *********************
 Data Axel
@@ -218,12 +212,11 @@ Location: hb04
 Program: 114
 Mission: HB04_MS403_RE
 Room Size: 14.69
-Size: 2.66
-adds:
-  M_EX880_DANCER_LV99 (1.41)
+Size: 4.07
+
 
 *********************
-Data Final Xemnas
+Data Final Xemnas*
 *********************
 Location: eh20
 Program: 98
@@ -231,7 +224,6 @@ Mission: EH20_MS113_RE
 Room Size: 16.41
 Size: 6.28
 adds:
-  P_EH010 (0.28)
   P_EX100_LAST (1.19)
 
 *********************
@@ -251,8 +243,6 @@ Location: eh14
 Program: 101
 Mission: EH14_MS103_RE
 
-  
-
 *********************
 Data Saix
 *********************
@@ -260,9 +250,7 @@ Location: eh15
 Program: 102
 Mission: EH15_MS104_RE
 Room Size: 14.85
-Size: 3.92
-adds:
-  B_EX220_LV99 (0.63)
+Size: 4.55
 
 *********************
 Data Xaldin
@@ -301,9 +289,7 @@ Location: hb04
 Program: 55
 Mission: HB04_MS403
 Room Size: 14.69 
-Size: 2.66
-adds:
- M_EX880_DANCER (1.41)
+Size: 4.07
 
 
 *********************
@@ -313,10 +299,7 @@ Location: he17
 Program: 123
 Mission: HE17_MS105
 Room Size: 11.83
-Size: 1.33
-adds:
-  M_EX880_DANCER (1.41)
-
+Size: 2.74
 
 *********************
 Ed
@@ -339,16 +322,15 @@ Size:
 
 
 *********************
-Final Xemnas
+Final Xemnas*
 *********************
 Location: eh20
 Program: 74
 Mission: EH20_MS113
 Room Size: 16.4 
 Size: 6.29
-subtracts: 
+adds: 
  P_EX100_LAST (1.19)
-pyramid?
 
 *********************
 Final Xemnas (Copy)
@@ -381,39 +363,39 @@ Size:
 
 
 *********************
-Grim Reaper I
+Grim Reaper II*
 *********************
 Location: ca01
 Program: 54
 Mission: CA01_MS204
+Room Size: 14.7
+Size: 2.35
+adds:
+  F_CA690_BTL (0.2)
+  PRIZE_CA_SEA (0.03) // Medal 123
+should be tested in bigger arena
+
+*********************
+Grim Reaper I
+*********************
+Location: ca18
+Program: 85
+Mission: CA18_MS202
 Room Size: 14.96
 Size: 2.35
 
 
 *********************
-Grim Reaper II
-*********************
-Location: ca18
-Program: 85
-Mission: CA18_MS202
-Room Size: 14.7
-Size: 2.35
-adds:
-  F_CA690_BTL (0.2)
-  PRIZE_CA_SEA (0.03)
-
-
-*********************
-Groundshaker
+Groundshaker*
 *********************
 Location: lk15
 Program: 59
 Mission: LK15_MS202
 Room Size: 10.4
-Size: 4.16
+Size: 4.25
 adds:
  B_LK130 0.09
-
+Test in different larger arena
 
 *********************
 Hades Cups
@@ -525,7 +507,7 @@ Size:
 
 
 *********************
-Hostile Program
+Hostile Program*
 *********************
 Location: tr04
 Program: 55
@@ -536,7 +518,7 @@ adds:
   PRIZE_TR (0.04)
 
 *********************
-Hydra
+Hydra*
 *********************
 Location: he18
 Program: 171
@@ -545,10 +527,11 @@ Room Size: 15.92
 Size: 3.22 
 adds:
  B_HE110 (0.86)
- F_HE030_L (0.21)
- N_HE020_BTL (0.64)
+ F_HE030_L (0.21) // arg 99
+ N_HE020_BTL (0.64) // arg 1
  N_HE040_BTL (0.77)
  N_HE030_BTL (0.45) 
+test in a larger arena
 
 *********************
 Illuminator
@@ -670,16 +653,14 @@ Size:
 with shock and barrel
 
 *********************
-Luxord
+Luxord*
 *********************
 Location: eh14
 Program: 58
 Mission: EH14_MS103
 Room Size: 11.89
-Size: 3.51
+Size: 4.64
 adds:
-  B_EX950_CARD (0.26)
-  B_EX210 (0.87)
   B_EX230 (0.03)
 
 
@@ -703,23 +684,19 @@ Room Size: 12.53
 Size: 4.57
 
 *********************
-Oogie Boogie
+Oogie Boogie*
 *********************
 Location: nm09
 Program: 55
 Mission: NM09_MS104
 Room Size: 15.2 
-Size: 1.23
+Size: 1.98
 adds:
-  F_NM120(0.09)
   F_NM130(0.08)
   F_NM090(0.15)
   F_NM140(0.01)
   F_NM080(0.57)
-  F_NM100(0.14)
-  F_NM110(0.08)
-  M_EX200_NM(0.7)
-  M_EX120_NM(0.46)
+Test in a bigger arena
 
 *********************
 Past Pete
@@ -827,9 +804,7 @@ Location: eh15
 Program: 56
 Mission: EH15_MS104
 Room Size: 14.84
-Size: 3.91
-adds:
- B_EX220 (0.63)
+Size: 4.54
 
 
 *********************
@@ -910,8 +885,6 @@ Program: 75
 Mission: HB01_MS601
 Room Size: 10.46
 Size: 3.89
-adds?
-  B_EX360 (0.01)
 
 
 *********************
@@ -1025,7 +998,7 @@ Size:
 
 
 *********************
-The Beast
+The Beast*
 *********************
 Location: bb03
 Program: 69
@@ -1034,7 +1007,7 @@ Room Size: 13.78
 Size: 1.71
 adds:
   N_BB050_BTL (0.86)
-  F_BB000 (0.28)
+want him disabled to start
 
 *********************
 The Experiment
@@ -1050,7 +1023,7 @@ adds:
   B_NM110_R_ARM (1.39)
 
 *********************
-Thresholder
+Thresholder*
 *********************
 Location: bb11
 Program: 72
@@ -1108,10 +1081,7 @@ Location: tt34
 Program: 157
 Mission: TT34_MS304
 Room Size: 8.84
-Size: 3.92
-adds:
-  B_EX200 (0.27)
-  M_EX880 (0.72)
+Size: 4.91
 
 
 *********************
@@ -1121,9 +1091,7 @@ Location: hb32
 Program: 146
 Mission: HB32_FM_VEX_RE
 Room Size: 15.19
-Size: 4.27
-adds:
- P_EX100_HTLF_BTL (1.95)
+Size: 6.22
 
 *********************
 Vexen (1)
@@ -1142,8 +1110,6 @@ Program: 85
 Mission: TT05_MS402
 Room Size: 12.59
 Size: 1.02
-adds:
-  PRIZE_TT (0.04) // this is an add for all the struggles
 
 *********************
 Volcano Lord
@@ -1241,10 +1207,7 @@ Location: hb34
 Program: 151
 Mission: HB34_FM_ZEX
 Room Size: 13.58
-Size: 3.44
-adds:
-  B_EX380 (0.39)
-  B_EX410 (.61)
+Size: 4.44
 
 
 *********************
@@ -1254,7 +1217,4 @@ Location: hb34
 Program: 152
 Mission: HB34_FM_ZEX_RE
 Room Size: 13.58
-Size: 3.44
-adds:
-  B_EX380 (0.39)
-  B_EX410 (.61)
+Size: 4.44
