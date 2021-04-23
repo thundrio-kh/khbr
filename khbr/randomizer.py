@@ -378,6 +378,12 @@ class KingdomHearts2:
                         "name": "ard/{}.ard".format(ardname),
                         "source": []
                     }
+                    # Check the btl script to see if there are any capacities
+                    # rewrite the btl scripts that have capacities to have the overloaded capacities
+
+                    # btl scripts need to be a class
+                    # given a btl script file, read in the programs to a list
+                    # have a replace capacity that does what I want, and some write/setter/getters
                     for spawnpoint in world[room]["spawnpoints"]:
                         existing = self.getSpawnpoint(ardname, spawnpoint)
                         for spid in world[room]["spawnpoints"][spawnpoint]["sp_ids"]:
