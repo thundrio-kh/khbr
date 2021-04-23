@@ -1156,7 +1156,7 @@ Air Pirate:
       vars:
       - 0
       - 0
-    Air Pirate (1):
+    Air Pirate (1 0):
       vars:
       - 1
       - 0
@@ -1196,7 +1196,7 @@ Armored Knight:
       vars:
       - 0
       - 0
-    Armored Knight (1):
+    Armored Knight (90 0):
       vars:
       - 90
       - 0
@@ -1545,11 +1545,11 @@ Crimson Jazz:
       vars:
       - 0
       - 0
-    Crimson Jazz (1):
+    Crimson Jazz (1 0):
       vars:
       - 1
       - 0
-    Crimson Jazz (2):
+    Crimson Jazz (Zipliner):
       vars:
       - 20
       - 0
@@ -1567,15 +1567,15 @@ Crimson Jazz AL:
   - al
   type: enemy
   variations:
-    Crimson Jazz AL:
+    Crimson Jazz AL (8 1):
       vars:
       - 8
       - 1
-    Crimson Jazz AL (1):
+    Crimson Jazz AL (12 0):
       vars:
       - 12
       - 0
-    Crimson Jazz AL (2):
+    Crimson Jazz AL (4 0):
       vars:
       - 4
       - 0
@@ -1595,7 +1595,7 @@ Dancer:
       vars:
       - 0
       - 0
-    Dancer (1):
+    Dancer (99 0):
       vars:
       - 99
       - 0
@@ -1615,7 +1615,7 @@ Dark Thorn:
       vars:
       - 0
       - 0
-Data Axel:
+Axel (Data):
   enabled: true
   enmp_index: 221
   hp: 100
@@ -1627,11 +1627,11 @@ Data Axel:
   size: 2742180
   type: boss
   variations:
-    Data Axel:
+    Axel (Data):
       vars:
       - 0
       - 0
-Data Demyx:
+Demyx (Data):
   enabled: true
   enmp_index: 216
   hp: 100
@@ -1643,11 +1643,11 @@ Data Demyx:
   size: 3528528
   type: boss
   variations:
-    Data Demyx:
+    Demyx (Data):
       vars:
       - 1
       - 0
-Data Final Xemnas:
+Final Xemnas (Data):
   enabled: false
   enmp_index: 215
   hp: 100
@@ -1660,15 +1660,15 @@ Data Final Xemnas:
   size: 4538944
   type: boss
   variations:
-    Data Final Xemnas:
+    Final Xemnas (Clone) (Data):
       vars:
       - 0
       - 0
-    Data Final Xemnas (1):
+    Final Xemnas (Data):
       vars:
       - 1
       - 0
-Data Luxord:
+Luxord (Data):
   enabled: true
   enmp_index: 219
   hp: 100
@@ -1681,11 +1681,11 @@ Data Luxord:
   size: 3430732
   type: boss
   variations:
-    Data Luxord:
+    Luxord (Data):
       vars:
       - 0
       - 0
-Data Saix:
+Saix (Data):
   can_be_enemy: true
   enabled: true
   enmp_index: 228
@@ -1700,11 +1700,11 @@ Data Saix:
   size: 3559034
   type: boss
   variations:
-    Data Saix:
+    Saix (Data):
       vars:
       - 0
       - 0
-Data Xaldin:
+Xaldin (Data):
   enabled: true
   enmp_index: 222
   hp: 100
@@ -1717,11 +1717,11 @@ Data Xaldin:
   size: 2741808
   type: boss
   variations:
-    Data Xaldin:
+    Xaldin (Data):
       vars:
       - 0
       - 0
-Data Xemnas:
+Xemnas (Data):
   aimod: true
   can_be_enemy: true
   enabled: true
@@ -1736,11 +1736,11 @@ Data Xemnas:
   size: 2607964
   type: boss
   variations:
-    Data Xemnas:
+    Xemnas (Data):
       vars:
       - 0
       - 0
-Data Xigbar:
+Xigbar (Data):
   blacklist:
   - Grim Reaper 1
   - Twilight Thorn
@@ -1764,7 +1764,7 @@ Data Xigbar:
   size: 557240
   type: boss
   variations:
-    Data Xigbar:
+    Xigbar (Data):
       vars:
       - 0
       - 0
@@ -1829,15 +1829,16 @@ Devastator:
       vars:
       - 0
       - 0
-    Devastator (1):
+    Devastator (Ranged Start):
       vars:
       - 2
       - 0
-    Devastator (2):
+    Devastator (Ranged):
       vars:
       - 3
       - 0
 Dragon Xemnas:
+  remove_from_list: true
   enabled: false
   model: B_EX330
   obj_id: 2189
@@ -1867,7 +1868,7 @@ Dragoon:
       vars:
       - 0
       - 0
-    Dragoon (1):
+    Dragoon (99 0):
       vars:
       - 99
       - 0
@@ -1916,7 +1917,7 @@ Dusk:
       vars:
       - 0
       - 0
-    Dusk (1):
+    Dusk (99 0):
       vars:
       - 99
       - 0
@@ -1970,11 +1971,11 @@ Fat Bandit:
       vars:
       - 0
       - 0
-    Fat Bandit (1):
+    Fat Bandit (1 0):
       vars:
       - 1
       - 0
-    Fat Bandit (2):
+    Fat Bandit (Passive):
       vars:
       - 0
       - 1
@@ -2048,7 +2049,7 @@ Fortuneteller:
       vars:
       - 0
       - 0
-    Fortuneteller (1):
+    Fortuneteller (Zipliner):
       vars:
       - 20
       - 0
@@ -2067,19 +2068,19 @@ Gambler:
       vars:
       - 0
       - 0
-    Gambler (1):
+    Gambler (Summons Darkness):
       vars:
       - 1
       - 0
-    Gambler (2):
+    Gambler (5 0):
       vars:
       - 5
       - 0
-    Gambler (3):
+    Gambler (90 0):
       vars:
       - 90
       - 0
-    Gambler (4):
+    Gambler (99 0):
       vars:
       - 99
       - 0
@@ -2296,11 +2297,11 @@ Hook Bat:
   size: 296752
   type: enemy
   variations:
-    Hook Bat:
+    Hook Bat (20 0):
       vars:
       - 20
       - 0
-    Hook Bat (1):
+    Hook Bat:
       vars:
       - 0
       - 0
@@ -2316,79 +2317,79 @@ Hook Bat AL:
   - al
   type: enemy
   variations:
-    Hook Bat AL:
+    Hook Bat AL (3 0):
       vars:
       - 3
       - 0
-    Hook Bat AL (1):
+    Hook Bat AL (9 0):
       vars:
       - 9
       - 0
-    Hook Bat AL (10):
+    Hook Bat AL (4 0):
       vars:
       - 4
       - 0
-    Hook Bat AL (11):
+    Hook Bat AL (15 30):
       vars:
       - 15
       - 30
-    Hook Bat AL (12):
+    Hook Bat AL (1 31):
       vars:
       - 1
       - 31
-    Hook Bat AL (13):
+    Hook Bat AL (3 30):
       vars:
       - 3
       - 30
-    Hook Bat AL (14):
+    Hook Bat AL (8 32):
       vars:
       - 8
       - 32
-    Hook Bat AL (15):
+    Hook Bat AL (13 31):
       vars:
       - 13
       - 31
-    Hook Bat AL (16):
+    Hook Bat AL (2 0):
       vars:
       - 2
       - 0
-    Hook Bat AL (17):
+    Hook Bat AL (5 0):
       vars:
       - 5
       - 0
-    Hook Bat AL (18):
+    Hook Bat AL (6 0):
       vars:
       - 6
       - 0
-    Hook Bat AL (2):
+    Hook Bat AL (11 0):
       vars:
       - 11
       - 0
-    Hook Bat AL (3):
+    Hook Bat AL (1 0):
       vars:
       - 1
       - 0
-    Hook Bat AL (4):
+    Hook Bat AL (10 0):
       vars:
       - 10
       - 0
-    Hook Bat AL (5):
+    Hook Bat AL (14 0):
       vars:
       - 14
       - 0
-    Hook Bat AL (6):
+    Hook Bat AL (12 0):
       vars:
       - 12
       - 0
-    Hook Bat AL (7):
+    Hook Bat AL (13 0):
       vars:
       - 13
       - 0
-    Hook Bat AL (8):
+    Hook Bat AL (7 0):
       vars:
       - 7
       - 0
-    Hook Bat AL (9):
+    Hook Bat AL (3 20):
       vars:
       - 3
       - 20
@@ -2538,6 +2539,7 @@ Lance Soldier:
       - 0
       - 0
 Lance Warrior:
+  isnightmare: true
   enabled: true
   enmp_index: 209
   hp: 100
@@ -2645,7 +2647,6 @@ Living Bone:
   enabled: true
   enmp_index: 7
   hp: 100
-  isnightmare: true
   level: 99
   limiter: 17
   model: M_EX670
@@ -2656,14 +2657,16 @@ Living Bone:
   type: enemy
   variations:
     Living Bone:
+      isnightmare: true
       vars:
       - 0
       - 0
-    Living Bone (1):
+    Living Bone (Headless with Necromancer):
       vars:
       - 1
       - 0
-    Living Bone (2):
+    Living Bone (Necromancer):
+      isnightmare: true
       vars:
       - 2
       - 0
@@ -2699,7 +2702,7 @@ Luna Bandit:
       vars:
       - 0
       - 0
-    Luna Bandit (1):
+    Luna Bandit (1 0):
       vars:
       - 1
       - 0
@@ -2806,7 +2809,7 @@ Minute Bomb:
       vars:
       - 0
       - 0
-    Minute Bomb (1):
+    Minute Bomb (99 0):
       vars:
       - 99
       - 0
@@ -2843,7 +2846,7 @@ Morning Star:
       vars:
       - 0
       - 0
-    Morning Star (1):
+    Morning Star (99 0):
       vars:
       - 99
       - 0
@@ -2878,6 +2881,7 @@ Nightwalker:
       - 0
       - 0
 No. 11:
+  remove_from_list: true
   enabled: false
   model: M_EX350_11
   obj_id: 2352
@@ -2889,6 +2893,7 @@ No. 11:
       - 0
       - 0
 No. 4:
+  remove_from_list: true
   enabled: false
   model: M_EX350_04
   obj_id: 2345
@@ -2900,6 +2905,7 @@ No. 4:
       - 0
       - 0
 No. 7:
+  remove_from_list: true
   enabled: false
   model: M_EX350_07
   obj_id: 2348
@@ -2911,6 +2917,7 @@ No. 7:
       - 0
       - 0
 No. 8:
+  remove_from_list: true
   enabled: false
   model: M_EX350_08
   obj_id: 2349
@@ -2921,7 +2928,7 @@ No. 8:
       vars:
       - 0
       - 0
-Nobody from Final Battle v1:
+Bomb Bell A:
   enabled: false
   hp: 100
   level: 99
@@ -2932,7 +2939,7 @@ Nobody from Final Battle v1:
   size: 87118
   type: enemy
   variations:
-    Nobody from Final Battle v1:
+    Bomb Bell A:
       vars:
       - 0
       - 0
@@ -2953,6 +2960,7 @@ Oogie Boogie:
       - 1
       - 0
 Oogie Terminal Dummy:
+  remove_from_list: true
   enabled: false
   model: F_NM080
   obj_id: 1003
@@ -3073,19 +3081,19 @@ Rapid Thruster:
   size: 251012
   type: enemy
   variations:
-    Rapid Thruster:
+    Rapid Thruster (Zipliner):
       vars:
       - 20
       - 0
-    Rapid Thruster (1):
+    Rapid Thruster:
       vars:
       - 0
       - 0
-    Rapid Thruster (2):
+    Rapid Thruster (90 0):
       vars:
       - 90
       - 0
-    Rapid Thruster (3):
+    Rapid Thruster (1 0):
       vars:
       - 1
       - 0
@@ -3102,83 +3110,83 @@ Rapid Thruster AL:
   - al
   type: enemy
   variations:
-    Rapid Thruster AL:
+    Rapid Thruster AL (12 0):
       vars:
       - 12
       - 0
-    Rapid Thruster AL (1):
+    Rapid Thruster AL (13 0):
       vars:
       - 13
       - 0
-    Rapid Thruster AL (10):
+    Rapid Thruster AL (4 0):
       vars:
       - 4
       - 0
-    Rapid Thruster AL (11):
+    Rapid Thruster AL (9 0):
       vars:
       - 9
       - 0
-    Rapid Thruster AL (12):
+    Rapid Thruster AL (14 30):
       vars:
       - 14
       - 30
-    Rapid Thruster AL (13):
+    Rapid Thruster AL (8 30):
       vars:
       - 8
       - 30
-    Rapid Thruster AL (14):
+    Rapid Thruster AL (4 30):
       vars:
       - 4
       - 30
-    Rapid Thruster AL (15):
+    Rapid Thruster AL (12 32):
       vars:
       - 12
       - 32
-    Rapid Thruster AL (16):
+    Rapid Thruster AL (6 31):
       vars:
       - 6
       - 31
-    Rapid Thruster AL (17):
+    Rapid Thruster AL (10 31):
       vars:
       - 10
       - 31
-    Rapid Thruster AL (18):
+    Rapid Thruster AL (2 32):
       vars:
       - 2
       - 32
-    Rapid Thruster AL (19):
+    Rapid Thruster AL (2 0):
       vars:
       - 2
       - 0
-    Rapid Thruster AL (2):
+    Rapid Thruster AL (7 0):
       vars:
       - 7
       - 0
-    Rapid Thruster AL (3):
+    Rapid Thruster AL (14 0):
       vars:
       - 14
       - 0
-    Rapid Thruster AL (4):
+    Rapid Thruster AL (11 0):
       vars:
       - 11
       - 0
-    Rapid Thruster AL (5):
+    Rapid Thruster AL (5 0):
       vars:
       - 5
       - 0
-    Rapid Thruster AL (6):
+    Rapid Thruster AL (6 0):
       vars:
       - 6
       - 0
-    Rapid Thruster AL (7):
+    Rapid Thruster AL (12 17):
       vars:
       - 12
       - 17
-    Rapid Thruster AL (8):
+    Rapid Thruster AL (1 0):
       vars:
       - 1
       - 0
-    Rapid Thruster AL (9):
+    Rapid Thruster AL (3 0):
       vars:
       - 3
       - 0
@@ -3291,7 +3299,7 @@ Samurai:
       vars:
       - 0
       - 0
-    Samurai (1):
+    Samurai (99 0):
       vars:
       - 99
       - 0
@@ -3413,7 +3421,7 @@ Shadow:
       vars:
       - 1
       - 0
-    Shadow (2):
+    Shadow (Aggressive):
       vars:
       - 99
       - 0
@@ -3518,7 +3526,7 @@ Silver Rock:
       vars:
       - 0
       - 0
-    Silver Rock (1):
+    Silver Rock (1 0):
       vars:
       - 1
       - 0
@@ -3553,11 +3561,11 @@ Soldier:
       vars:
       - 0
       - 0
-    Soldier (1):
+    Soldier (1 0):
       vars:
       - 1
       - 0
-    Soldier (2):
+    Soldier (99 0):
       vars:
       - 99
       - 0
@@ -3645,11 +3653,11 @@ Strafer:
   size: 363704
   type: enemy
   variations:
-    Strafer:
+    Strafer (0 10):
       vars:
       - 0
       - 10
-    Strafer (1):
+    Strafer:
       vars:
       - 0
       - 0
@@ -3719,6 +3727,7 @@ The Experiment:
       - 0
       - 0
 The Experiment Head:
+  remove_from_list: true
   enabled: false
   model: B_NM110_HEAD
   obj_id: 1808
@@ -3730,6 +3739,7 @@ The Experiment Head:
       - 0
       - 0
 The Experiment Left Hand:
+  remove_from_list: true
   enabled: false
   model: B_NM110_L_ARM
   obj_id: 1809
@@ -3741,6 +3751,7 @@ The Experiment Left Hand:
       - 0
       - 0
 The Experiment Right Hand:
+  remove_from_list: true
   enabled: false
   model: B_NM110_R_ARM
   obj_id: 1810

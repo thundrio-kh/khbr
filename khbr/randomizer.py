@@ -77,8 +77,8 @@ class KingdomHearts2:
             "blacklist": [],
             "whitelist": []
         }
-        with open(os.path.join(os.path.dirname(__file__), "enemies.json")) as f:
-            bosses_f = json.load(f)
+        with open(os.path.join(os.path.dirname(__file__), "enemies.yaml")) as f:
+            bosses_f = yaml.load(f)
         bosses = {}
         allkeys = []
         for bn in bosses_f:
