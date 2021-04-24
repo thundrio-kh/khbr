@@ -697,6 +697,7 @@ if __name__ == '__main__':
         options = json.loads(options)
 
     if mode.startswith("dev"):
+        # moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
         moddir = "C:\\Users\\Arcade\\Desktop\\git\\OpenKh\\OpenKh.Tools.ModsManager\\bin\\Debug\\net5.0-windows\\mods\\thundrio-kh\\dev"
         fn = "devmod"
         if os.path.exists(os.path.join(moddir, fn)):
