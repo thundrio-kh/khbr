@@ -3390,7 +3390,7 @@ Beast's Castle:
           - index: 2
             isboss: false
             name: Large Body
-  "The Beast\xB4s Room":
+  "The Beasts Room":
     size: 5000000
     spawnpoints:
       b_40:
@@ -11199,7 +11199,7 @@ Olympus Coliseum:
           - index: 0
             isboss: true
             name: Hydra
-  "Hades\xB4 Chamber":
+  "Hades Chamber":
     size: 5000000
     spawnpoints:
       b_40:
@@ -16888,7 +16888,7 @@ Pride Land:
           - index: 0
             isboss: false
             name: Rapid Thruster
-  "Scar\xB4s Darkness":
+  "Scars Darkness":
     size: 5000000
     spawnpoints:
       b_40:
@@ -16898,7 +16898,7 @@ Pride Land:
           - index: 3
             isboss: true
             name: Scar
-  "The King\xB4s Den":
+  "The Kings Den":
     size: 5000000
     spawnpoints:
       b_40:
@@ -20779,7 +20779,7 @@ The World That Never Was:
           - index: 5
             isboss: false
             name: Sniper
-  "Havoc\xB4s Divide":
+  "Havocs Divide":
     size: 5000000
     spawnpoints:
       b_00:
@@ -20818,7 +20818,7 @@ The World That Never Was:
           - index: 3
             isboss: true
             name: Luxord (Data)
-  "Memory\xB4s Contortion":
+  "Memorys Contortion":
     size: 5000000
     spawnpoints:
       b_40:
@@ -20835,7 +20835,7 @@ The World That Never Was:
           - index: 3
             isboss: true
             name: Xemnas (Data)
-  "Memory\xB4s Skyscraper":
+  "Memorys Skyscraper":
     size: 5000000
     spawnpoints:
       b_00:
@@ -21097,7 +21097,7 @@ The World That Never Was:
           - index: 0
             isboss: true
             name: Illuminator
-  "Naught\xB4s Approach":
+  "Naughts Approach":
     size: 5000000
     spawnpoints:
       b_00:
@@ -21158,7 +21158,7 @@ The World That Never Was:
           - index: 0
             isboss: false
             name: Sorcerer
-  "Naught\xB4s Skyway":
+  "Naughts Skyway":
     size: 5000000
     spawnpoints:
       b_00:
@@ -21342,7 +21342,7 @@ The World That Never Was:
           - index: 9
             isboss: false
             name: Berserker
-  "Nothing\xB4s Call":
+  "Nothings Call":
     size: 5000000
     spawnpoints:
       b_00:
@@ -21445,7 +21445,7 @@ The World That Never Was:
           - index: 8
             isboss: false
             name: Sniper
-  "Ruin and Creation\xB4s Passage":
+  "Ruin and Creations Passage":
     size: 5000000
     spawnpoints:
       b_00:
@@ -22115,7 +22115,7 @@ Timeless River:
           - index: 10
             isboss: false
             name: Hammer Frame WI
-  "Mickey\xB4s House":
+  "Mickeys House":
     size: 5000000
     spawnpoints:
       b_00:
