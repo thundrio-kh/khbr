@@ -57,6 +57,8 @@ Aeroplane:
   obj_id: 6
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Aeroplane:
       vars:
@@ -121,6 +123,8 @@ Bookmaster:
   obj_id: 5
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Bookmaster:
       vars:
@@ -133,6 +137,8 @@ Bookmaster (TR):
   obj_id: 1835
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Bookmaster (TR):
       vars:
@@ -177,6 +183,8 @@ Camo Cannon:
   obj_id: 2407
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Camo Cannon:
       vars:
@@ -189,6 +197,8 @@ Cannon Gun WI:
   obj_id: 1832
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Cannon Gun WI:
       vars:
@@ -237,6 +247,8 @@ Emerald Blues:
   obj_id: 72
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Emerald Blues:
       vars:
@@ -249,6 +261,8 @@ Emerald Blues (TR):
   obj_id: 1852
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Emerald Blues (TR):
       vars:
@@ -479,7 +493,7 @@ Reckless:
       - 0
       - 0
 Scar Ghost:
-  enabled: false
+  enabled: true
   enmp_index: 999
   model: B_LK110_PHANTOM
   obj_id: 2099
@@ -525,6 +539,8 @@ Shaman:
   obj_id: 19
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Shaman:
       vars:
@@ -577,6 +593,8 @@ Surveillance Robot (1K Battle) (Disappears):
   obj_id: 1469
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     (M) Surveillance Robot (1K Battle) (Disappears):
       vars:
@@ -589,6 +607,8 @@ Surveillance Robot (TR):
   obj_id: 1847
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Surveillance Robot (TR):
       vars:
@@ -700,7 +720,7 @@ Undead Pirate B:
       vars:
       - 92
       - 0
-(Undead Pirate C:
+Undead Pirate C:
   enabled: true
   enmp_index: 999
   model: B_CA040
@@ -828,6 +848,8 @@ Aeroplane WI:
   obj_id: 1828
   size: 245100
   type: enemy
+  tags:
+  - ranged
   variations:
     Aeroplane WI:
       vars:
@@ -1133,6 +1155,8 @@ Cannon Gun:
   obj_id: 14
   size: 280926
   type: enemy
+  tags:
+  - ranged
   variations:
     Cannon Gun:
       vars:
@@ -1231,6 +1255,7 @@ Crimson Jazz:
   size: 290842
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Crimson Jazz:
@@ -1257,6 +1282,7 @@ Crimson Jazz AL:
   size: 285258
   tags:
   - al
+  - ranged
   type: enemy
   variations:
     Crimson Jazz AL (8 1):
@@ -1515,6 +1541,7 @@ Devastator:
   size: 941282
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Devastator:
@@ -1644,6 +1671,7 @@ Fat Bandit:
   size: 551572
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Fat Bandit:
@@ -1792,6 +1820,7 @@ Graveyard NM:
   size: 616628
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Graveyard NM:
@@ -2341,11 +2370,15 @@ Living Bone:
       - 0
       - 0
     Living Bone (Headless with Necromancer):
+      tags:
+      - ranged
       vars:
       - 1
       - 0
     Living Bone (Necromancer):
       isnightmare: true
+      tags:
+      - ranged
       vars:
       - 2
       - 0
@@ -2431,6 +2464,8 @@ Magic Phantom:
   obj_id: 2403
   size: 1020616
   type: enemy
+  tags:
+  - ranged
   variations:
     Magic Phantom:
       vars:
@@ -2539,6 +2574,8 @@ Necromancer:
   obj_id: 2411
   size: 698584
   type: enemy
+  tags:
+  - ranged
   variations:
     Necromancer:
       vars:
@@ -2878,6 +2915,7 @@ Runemaster:
   size: 352940
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Runemaster:
@@ -3140,6 +3178,8 @@ Silver Rock:
   obj_id: 71
   size: 212176
   type: enemy
+  tags:
+  - ranged
   variations:
     Silver Rock:
       vars:
@@ -3160,6 +3200,8 @@ Sniper:
   obj_id: 311
   size: 547096
   type: enemy
+  tags:
+  - ranged
   variations:
     Sniper:
       vars:
@@ -3215,6 +3257,7 @@ Sorcerer:
   size: 1741312
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Sorcerer:
@@ -3231,6 +3274,8 @@ Spring Metal:
   obj_id: 2412
   size: 186364
   type: enemy
+  tags:
+  - ranged
   variations:
     Spring Metal:
       vars:
@@ -3290,6 +3335,8 @@ Surveillance Robot:
   obj_id: 306
   size: 369292
   type: enemy
+  tags:
+  - ranged
   variations:
     Surveillance Robot:
       vars:
@@ -3413,6 +3460,7 @@ Toy Soldier NM:
   size: 614828
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Toy Soldier NM:
@@ -3429,6 +3477,8 @@ Trick Ghost:
   obj_id: 2
   size: 1020248
   type: enemy
+  tags:
+  - ranged
   variations:
     Trick Ghost:
       vars:
