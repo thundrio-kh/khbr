@@ -39,19 +39,20 @@ class AreaDataScript:
     def get_program(self, number):
         if number not in self.programs:
             raise Exception("Program not found")
-        return self.programs[number]
+        return '\n'.join(self.programs[number])
     def update_program(self, number, capacity=None):
-        program = self.get_program(number)
+        program = self.get_program(number).split("\n")
         for l in range(len(program)):
             line = program[l]
             if capacity and "Capacity" in line:
                 cap_line = line.split(" ")
                 cap_line[1] = capacity
                 program[l] = ' '.join(cap_line)
+        self.programs[number] = program
     def has_capacity(self, number):
         program = self.get_program(number)
-        for line in program:
-            if "Capacity in line":
+        for line in program.split("\n"):
+            if "Capacity" in line:
                 if not line.startswith("Capacity"):
                     raise Exception("My guess was wrong")
                 if not len(line.split(" ")) == 2:
@@ -484,13 +485,13 @@ class KingdomHearts2:
                                             instance["Entities"][ent["index"]]["Argument2"] = vrs[1]
                         spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir, _writeMethod)
                         roomasset["source"].append(spasset)
-                    # btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
-                    # script = AreaDataScript(open(btlfn).read())
-                    # for p in script.programs:
-                    #     if script.has_capacity(p):
-                    #         script.update_program(p, HARDCAP)
-                    #         programasset = self.writeAreaDataProgram(ardname, "btl", p, script.get_program(), outdir, _writeMethod)
-                    #         roomasset["source"].append(programasset)
+                    btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
+                    script = AreaDataScript(open(btlfn).read())
+                    for p in script.programs:
+                        if script.has_capacity(p):
+                            script.update_program(p, HARDCAP)
+                            programasset = self.writeAreaDataProgram(ardname, "btl", p, script.get_program(p), outdir, _writeMethod)
+                            roomasset["source"].append(programasset)
                     assets.append(roomasset)
         if randomization.get("ai_mods", ""):
             for ai in randomization.get("ai_mods"):
@@ -548,7 +549,7 @@ class KingdomHearts2:
         return assets
 
     def writeAreaDataProgram(self, ardname, scripttype, programnumber, program, outdir, writeMethod):
-        filename = scripttype+"_"+programnumber+".areadataprogram"
+        filename = scripttype+"_"+str(programnumber)+".areadataprogram"
         outfn = os.path.join(outdir, "files", ardname, filename)
         fn = os.path.join("files", ardname, filename)
         writeMethod(outfn, fn, program)
@@ -771,7 +772,7 @@ if __name__ == '__main__':
 
     if mode.startswith("dev"):
         # moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
-        moddir = "C:\\Users\\Arcade\\Desktop\\git\\OpenKh\\OpenKh.Tools.ModsManager\\bin\\Debug\\net5.0-windows\\mods\\thundrio-kh\\dev"
+        moddir = "C:\\Users\\Arcade\\Desktop\\git\\OpenKh\\OpenKh.Tools.ModsManager\\bin\\Debug\\net5.0-windows\\mods\\thundrio-kh"
         fn = "devmod"
         if os.path.exists(os.path.join(moddir, fn)):
             shutil.rmtree(os.path.join(moddir, fn))
