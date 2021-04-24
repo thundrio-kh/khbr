@@ -33,7 +33,7 @@ class KingdomHearts2:
                                 "possible_values": self.get_valid_enemies()},
             # "bosses_can_replace_enemies": {"display_name": "Bosses Can Replace Enemies", "description": "Replaces a small percentage of enemies in the game with a random boss. This option is intended for PC use only.",
             #                     "possible_values": [False, True]},
-            "nightmare_enemies": {"display_name": "Enemies of Eternal Darkness", "description": "Replaces enemies using only the most difficult enemies in the game.",
+            "nightmare_enemies": {"display_name": "Nightmare Enemies", "description": "Replaces enemies using only the most difficult enemies in the game.",
                                 "possible_values": [False, True]},
             # "separate_small_big_enemies": {"display_name": "Separate Small and Big Enemies", "description": "Randomizes big enemies among themselves and small enemies among themselves. Useful to prevent crashing"},
             #                     "possible_values": [True, False]},
@@ -45,7 +45,7 @@ class KingdomHearts2:
 
             "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. Selected Boss will replace every boss with a single selected boss.",
                                 "possible_values": ["Disabled", "One to One", "Selected Boss", "Wild"]},#, "one_to_one_characters",
-            "nightmare_bosses": {"display_name": "Bosses of Eternal Darkness", "description": "Replaces bosses using only the most difficult bosses in the game.",
+            "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game.",
                                 "possible_values": [False, True]},
             # "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
             #                     "possible_values": [True, False]},
@@ -143,8 +143,8 @@ class KingdomHearts2:
                 boss["available"] = avail
         return bosses
     def get_locations(self):
-        with open(os.path.join(os.path.dirname(__file__), "locations.json")) as f:
-            locations_f = json.load(f)
+        with open(os.path.join(os.path.dirname(__file__), "locations.yaml")) as f:
+            locations_f = yaml.load(f)
         return locations_f
     def add_tag(self, enemylist, tag):
         for enemy in enemylist:
@@ -162,7 +162,22 @@ class KingdomHearts2:
         with open(os.path.join(dirname, str(num))) as f:
             return json.load(f)
     def pickenemymapping(self, enemylist):
-        pass 
+        categories = {}
+        for e in enemylist:
+            if e["category"] not in categories:
+                categories[e["category"]] = []
+            categories[e["category"]].append(e)
+        if len(categories) == 1:
+            raise Exception("Something broke")
+        mapping = {}
+        for c in categories:
+            og = list(categories[c])
+            new = list(og)
+            random.shuffle(new)
+            for i in range(len(og)):
+                mapping[og[i]["name"]] = new[i]["name"]
+        assert len(enemylist) == len(list(mapping.keys()))
+        return mapping 
     def pick_boss_to_replace(self, bosslist):
         n = random.randint(0,len(bosslist)-1)
         return bosslist[n]
@@ -170,7 +185,9 @@ class KingdomHearts2:
         pass
     def pick_enemy_to_replace(self, oldenemy, enabledenemies):
         options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
-        return random.choice(options)
+        if c == "Undead Pirate A":
+            0/0
+        return c
     def perform_randomization(self, options):
         unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
         scale_enemy = False
@@ -240,7 +257,7 @@ class KingdomHearts2:
             enemymapping = None
             if bossmode:
                 bossmapping = self.pickbossmapping(bosses, category) if not duplicate_bosses else None
-            # enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else None
+            enemymapping = self.pickenemymapping(enemies)
             spawns = self.get_locations()
             newspawns = {}
             spawn_limiters = {}
@@ -253,8 +270,8 @@ class KingdomHearts2:
                     room = world[r]
                     if "ignored" in room:
                         continue
-                    # if enemies and enemymode == "spawnpoint_one_to_one":
-                    #     enemymapping = self.pickenemymapping(enemies)
+                    if enemies and enemymode == "One to One Per Spawn":
+                        enemymapping = self.pickenemymapping(enemies)
                     for sp in room["spawnpoints"]:
                         spawnpoint = room["spawnpoints"][sp]
                         for i in spawnpoint["sp_ids"]:
@@ -326,7 +343,10 @@ class KingdomHearts2:
                                     if selected_enemy:
                                         new_enemy = selected_enemy
                                     elif enemymapping:
-                                        pass
+                                        if ent["name"] not in enemymapping:
+                                            continue
+                                            # if it's not in mapping it's not enabled
+                                        new_enemy = enemymapping[ent["name"]]
                                     elif enemymode == "Wild":
                                         new_enemy = self.pick_enemy_to_replace(old_enemy_object, enemies)
                                     if new_enemy == ent["name"]:
@@ -691,4 +711,4 @@ if __name__ == '__main__':
     if mode == "read":
         b64 = rando.read_seed("kh2", seedfn=options, outfn=fn)
     else:
-        b64 = rando.generate_seed("kh2", options, seed=seed)
+        b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=True)

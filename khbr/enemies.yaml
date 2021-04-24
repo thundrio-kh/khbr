@@ -1,207 +1,3 @@
-(B) ??? - Barriers from Storm Rider?:
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: B_MU130
-  obj_id: 721
-  size: 0
-  type: enemy
-  variations:
-    (B) ??? - Barriers from Storm Rider?:
-      vars:
-      - 1
-      - 0
-    (B) ??? - Barriers from Storm Rider? (1):
-      vars:
-      - 2
-      - 0
-(B) Large platform from TWTNW with pink spike:
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: B_EX350
-  obj_id: 2226
-  size: 0
-  type: enemy
-  variations:
-    (B) Large platform from TWTNW with pink spike:
-      vars:
-      - 0
-      - 0
-(EH) Bomb Bell B (FLY) (G_EX):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: EH_G_EX250_FLY
-  obj_id: 2285
-  size: 0
-  type: enemy
-  variations:
-    (EH) Bomb Bell B (FLY) (G_EX):
-      vars:
-      - 1
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (1):
-      vars:
-      - 8
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (2):
-      vars:
-      - 3
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (3):
-      vars:
-      - 4
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (4):
-      vars:
-      - 6
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (5):
-      vars:
-      - 2
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (6):
-      vars:
-      - 9
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (7):
-      vars:
-      - 7
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (8):
-      vars:
-      - 5
-      - 0
-(EH) Speeder B (G_EX):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: EH_G_EX290
-  obj_id: 2247
-  size: 0
-  type: enemy
-  variations:
-    (EH) Speeder B (G_EX):
-      vars:
-      - 3
-      - 0
-    (EH) Speeder B (G_EX) (1):
-      vars:
-      - 7
-      - 0
-    (EH) Speeder B (G_EX) (2):
-      vars:
-      - 1
-      - 0
-    (EH) Speeder B (G_EX) (3):
-      vars:
-      - 9
-      - 0
-    (EH) Speeder B (G_EX) (4):
-      vars:
-      - 2
-      - 0
-    (EH) Speeder B (G_EX) (5):
-      vars:
-      - 4
-      - 0
-    (EH) Speeder B (G_EX) (6):
-      vars:
-      - 8
-      - 0
-    (EH) Speeder B (G_EX) (7):
-      vars:
-      - 6
-      - 0
-    (EH) Speeder B (G_EX) (8):
-      vars:
-      - 5
-      - 0
-(EH) Spiked Roller B (G_EX):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: EH_G_EX320
-  obj_id: 2248
-  size: 0
-  type: enemy
-  variations:
-    (EH) Spiked Roller B (G_EX):
-      vars:
-      - 5
-      - 0
-    (EH) Spiked Roller B (G_EX) (1):
-      vars:
-      - 4
-      - 0
-    (EH) Spiked Roller B (G_EX) (2):
-      vars:
-      - 6
-      - 0
-    (EH) Spiked Roller B (G_EX) (3):
-      vars:
-      - 2
-      - 0
-    (EH) Spiked Roller B (G_EX) (4):
-      vars:
-      - 8
-      - 0
-    (EH) Spiked Roller B (G_EX) (5):
-      vars:
-      - 1
-      - 0
-    (EH) Spiked Roller B (G_EX) (6):
-      vars:
-      - 7
-      - 0
-    (EH) Spiked Roller B (G_EX) (7):
-      vars:
-      - 9
-      - 0
-(EH) Xemnas's dragon missile (G_EX):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: EH_G_EX120
-  obj_id: 2261
-  size: 0
-  type: enemy
-  variations:
-    (EH) Xemnas's dragon missile (G_EX):
-      vars:
-      - 0
-      - 0
-(F) ??? (WI):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: F_WI310
-  obj_id: 758
-  size: 0
-  type: enemy
-  variations:
-    (F) ??? (WI):
-      vars:
-      - 1
-      - 0
-    (F) ??? (WI) (1):
-      vars:
-      - 0
-      - 0
-(F) ??? - Path? Pyramid? Sparkle? (WI):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: F_WI000
-  obj_id: 344
-  size: 0
-  type: enemy
-  variations:
-    (F) ??? - Path? Pyramid? Sparkle? (WI):
-      vars:
-      - 0
-      - 0
 Bees ETC PO:
   enabled: false
   enmp_index: 999
@@ -215,7 +11,7 @@ Bees ETC PO:
       - 0
       - 3
 Bees TT PO:
-  enabled: true
+  enabled: false
   enmp_index: 999
   model: F_PO090_TT
   obj_id: 2138
@@ -223,36 +19,6 @@ Bees TT PO:
   type: enemy
   variations:
     Bees TT PO:
-      vars:
-      - 0
-      - 0
-(F) Shadow Stalker (Chandelier) (BB):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: F_BB050
-  obj_id: 644
-  size: 0
-  type: enemy
-  variations:
-    (F) Shadow Stalker (Chandelier) (BB):
-      vars:
-      - 1
-      - 0
-    (F) Shadow Stalker (Chandelier) (BB) (1):
-      vars:
-      - 0
-      - 0
-(F) Shadow Stalker (Columns) (BB):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: F_BB060
-  obj_id: 645
-  size: 0
-  type: enemy
-  variations:
-    (F) Shadow Stalker (Columns) (BB):
       vars:
       - 0
       - 0
@@ -327,6 +93,8 @@ Bolt Tower (MU):
   obj_id: 2238
   size: 0
   type: enemy
+  tags:
+  - large
   variations:
     Bolt Tower (MU):
       vars:
@@ -339,6 +107,8 @@ Bolt Tower (RAW):
   obj_id: 1576
   size: 0
   type: enemy
+  tags:
+  - large
   variations:
     Bolt Tower (RAW):
       vars:
@@ -412,7 +182,7 @@ Camo Cannon:
       vars:
       - 0
       - 0
-Cannon Gun:
+Cannon Gun WI:
   enabled: true
   enmp_index: 999
   model: M_EX650_TR
@@ -420,7 +190,7 @@ Cannon Gun:
   size: 0
   type: enemy
   variations:
-    Cannon Gun:
+    Cannon Gun WI:
       vars:
       - 0
       - 0
@@ -609,12 +379,14 @@ Hot Rod:
   obj_id: 13
   size: 0
   type: enemy
+  tags:
+  - large
   variations:
     Hot Rod:
       vars:
       - 0
       - 0
-Large Body:
+Large Body WI:
   enabled: true
   enmp_index: 999
   model: M_EX050_WI
@@ -622,72 +394,7 @@ Large Body:
   size: 0
   type: enemy
   variations:
-    Large Body:
-      vars:
-      - 0
-      - 0
-(M) Luxord's card (time?) (EX):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: B_EX210_EH
-  obj_id: 2286
-  size: 0
-  type: enemy
-  variations:
-    (M) Luxord's card (time?) (EX):
-      vars:
-      - 0
-      - 0
-(M) Magnum Loader (blue):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: M_EX600_LC_ATK
-  obj_id: 1717
-  size: 0
-  type: enemy
-  variations:
-    (M) Magnum Loader (blue):
-      vars:
-      - 0
-      - 0
-(M) Magnum Loader (green):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: M_EX600_LC_GRD
-  obj_id: 1719
-  size: 0
-  type: enemy
-  variations:
-    (M) Magnum Loader (green):
-      vars:
-      - 0
-      - 0
-(M) Magnum Loader (white):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: M_EX600_LC
-  obj_id: 1675
-  size: 0
-  type: enemy
-  variations:
-    (M) Magnum Loader (white):
-      vars:
-      - 0
-      - 0
-(M) Magnum Loader (yellow):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: M_EX600_LC_CHG
-  obj_id: 1718
-  size: 0
-  type: enemy
-  variations:
-    (M) Magnum Loader (yellow):
+    Large Body WI:
       vars:
       - 0
       - 0
@@ -764,6 +471,8 @@ Reckless:
   size: 0
   type: enemy
   isnightmare: true
+  tags:
+  - large
   variations:
     Reckless:
       vars:
@@ -896,6 +605,8 @@ Toy Soldier:
   obj_id: 1776
   size: 0
   type: enemy
+  tags:
+  - large
   variations:
     Toy Soldier:
       vars:
@@ -997,6 +708,8 @@ Undead Pirate B:
   size: 0
   type: enemy
   isnightmare: true
+  tags:
+  - pirate
   variations:
     Undead Pirate C:
       vars:
@@ -1065,27 +778,6 @@ Wight Knight:
     Wight Knight:
       vars:
       - 0
-      - 0
-(N) Jafar clone (BTL) (AL):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: N_AL070_BTL
-  obj_id: 1593
-  size: 0
-  type: enemy
-  variations:
-    (N) Jafar clone (BTL) (AL):
-      vars:
-      - 0
-      - 0
-    (N) Jafar clone (BTL) (AL) (1):
-      vars:
-      - 1
-      - 0
-    (N) Jafar clone (BTL) (AL) (2):
-      vars:
-      - 2
       - 0
 Vivi (clones):
   enabled: true
@@ -1836,19 +1528,6 @@ Devastator:
     Devastator (Ranged):
       vars:
       - 3
-      - 0
-Dragon Xemnas:
-  remove_from_list: true
-  enabled: false
-  model: B_EX330
-  obj_id: 2189
-  replace_allowed: false
-  size: 2689964
-  type: boss
-  variations:
-    Dragon Xemnas:
-      vars:
-      - 0
       - 0
 Dragoon:
   enabled: true
@@ -2880,54 +2559,6 @@ Nightwalker:
       vars:
       - 0
       - 0
-No. 11:
-  remove_from_list: true
-  enabled: false
-  model: M_EX350_11
-  obj_id: 2352
-  size: 772142
-  type: enemy
-  variations:
-    No. 11:
-      vars:
-      - 0
-      - 0
-No. 4:
-  remove_from_list: true
-  enabled: false
-  model: M_EX350_04
-  obj_id: 2345
-  size: 2644106
-  type: enemy
-  variations:
-    No. 4:
-      vars:
-      - 0
-      - 0
-No. 7:
-  remove_from_list: true
-  enabled: false
-  model: M_EX350_07
-  obj_id: 2348
-  size: 809722
-  type: enemy
-  variations:
-    No. 7:
-      vars:
-      - 0
-      - 0
-No. 8:
-  remove_from_list: true
-  enabled: false
-  model: M_EX350_08
-  obj_id: 2349
-  size: 797468
-  type: enemy
-  variations:
-    No. 8:
-      vars:
-      - 0
-      - 0
 Bomb Bell A:
   enabled: false
   hp: 100
@@ -2958,18 +2589,6 @@ Oogie Boogie:
     Oogie Boogie:
       vars:
       - 1
-      - 0
-Oogie Terminal Dummy:
-  remove_from_list: true
-  enabled: false
-  model: F_NM080
-  obj_id: 1003
-  size: 434622
-  type: extra
-  variations:
-    Oogie Terminal Dummy:
-      vars:
-      - 0
       - 0
 Past Pete:
   can_be_enemy: true
@@ -3417,7 +3036,7 @@ Shadow:
       vars:
       - 0
       - 0
-    Shadow (1):
+    Shadow (1 0):
       vars:
       - 1
       - 0
@@ -3642,7 +3261,7 @@ Storm Rider:
   - Groundshaker
   - Cerberus
   - Terra
-Strafer:
+Strafer RAW:
   enabled: true
   enmp_index: 94
   hp: 100
@@ -3653,11 +3272,11 @@ Strafer:
   size: 363704
   type: enemy
   variations:
-    Strafer (0 10):
+    Strafer RAW (0 10):
       vars:
       - 0
       - 10
-    Strafer:
+    Strafer RAW:
       vars:
       - 0
       - 0
@@ -3723,42 +3342,6 @@ The Experiment:
   type: boss
   variations:
     The Experiment:
-      vars:
-      - 0
-      - 0
-The Experiment Head:
-  remove_from_list: true
-  enabled: false
-  model: B_NM110_HEAD
-  obj_id: 1808
-  size: 771246
-  type: extra
-  variations:
-    The Experiment Head:
-      vars:
-      - 0
-      - 0
-The Experiment Left Hand:
-  remove_from_list: true
-  enabled: false
-  model: B_NM110_L_ARM
-  obj_id: 1809
-  size: 788874
-  type: extra
-  variations:
-    The Experiment Left Hand:
-      vars:
-      - 0
-      - 0
-The Experiment Right Hand:
-  remove_from_list: true
-  enabled: false
-  model: B_NM110_R_ARM
-  obj_id: 1810
-  size: 767918
-  type: extra
-  variations:
-    The Experiment Right Hand:
       vars:
       - 0
       - 0
@@ -3929,7 +3512,6 @@ Volcano Lord:
     Volcano Lord (Cups):
       msn: unknown
       vars:
-      - 0
       - 1
       - 0
 Wight Knight NM:
