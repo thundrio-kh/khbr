@@ -493,7 +493,7 @@ Reckless:
       - 0
       - 0
 Scar Ghost:
-  enabled: true
+  enabled: false # Gives no XP so should not be in pool
   enmp_index: 999
   model: B_LK110_PHANTOM
   obj_id: 2099
@@ -800,7 +800,7 @@ Wight Knight:
       - 0
       - 0
 Vivi (clones):
-  enabled: true
+  enabled: false # Gives no xp so should not be in pool
   enmp_index: 999
   model: N_EX610_BTL2
   obj_id: 2256

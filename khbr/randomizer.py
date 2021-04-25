@@ -761,7 +761,7 @@ class Randomizer:
 
 if __name__ == '__main__':
     mode = sys.argv[1]
-    #  run randomizer.py devgenerate "{\"enemy\": \"Selected Enemy\", \"selected_enemy\": \"Fortuneteller\"}"
+    #  run randomizer.py devgenerate "{\"enemy\": \"One to One Per Room\"}"
     options = sys.argv[2]
     if len(sys.argv) > 3:
         seed = sys.argv[3]

@@ -17719,6 +17719,7 @@ Space Paranoids:
             name: Giant Sark
   Dataspace:
     size: 5000000
+    ignored: true # Randomized enemies don't drop the orbs
     spawnpoints:
       b_00:
         size: 0
@@ -18092,6 +18093,7 @@ Space Paranoids:
             isboss: false
             name: Cannon Gun WI
   Solar Sailer Simulation 07:
+    ignored: true # randomized weights mess up the gauge
     size: 5000000
     spawnpoints:
       b_60:
@@ -18229,6 +18231,7 @@ The Land of Dragons:
             name: Sniper
   Checkpoint:
     size: 5000000
+    ignored: true # ambush uggggh
     spawnpoints:
       b_00:
         size: 0
