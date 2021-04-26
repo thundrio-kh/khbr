@@ -1,6 +1,6 @@
 
 *********************
-Armor Xemnas I*
+Armor Xemnas I
 *********************
 Location: eh24
 Program: 71
@@ -81,7 +81,7 @@ Room Size: 15.79
 Size: 3.48
 adds:
  B_CA000 (0.47)
-should be tested in big arena
+
 
 *********************
 Barrel
@@ -373,7 +373,6 @@ Size: 2.35
 adds:
   F_CA690_BTL (0.2)
   PRIZE_CA_SEA (0.03) // Medal 123
-should be tested in bigger arena
 
 *********************
 Grim Reaper I
@@ -386,7 +385,7 @@ Size: 2.35
 
 
 *********************
-Groundshaker*
+Groundshaker
 *********************
 Location: lk15
 Program: 59
@@ -395,7 +394,6 @@ Room Size: 10.4
 Size: 4.25
 adds:
  B_LK130 0.09
-Test in different larger arena
 
 *********************
 Hades Cups
@@ -531,7 +529,7 @@ adds:
  N_HE020_BTL (0.64) // arg 1
  N_HE040_BTL (0.77)
  N_HE030_BTL (0.45) 
-test in a larger arena
+Meg isn't needed
 
 *********************
 Illuminator
@@ -696,7 +694,7 @@ adds:
   F_NM090(0.15)
   F_NM140(0.01)
   F_NM080(0.57)
-Test in a bigger arena
+
 
 *********************
 Past Pete
@@ -745,14 +743,12 @@ Location: wi03
 Program: 53
 Mission: WI03_MS104
 Room Size: 15.84
-Size: 2.04
+Size: 2.17
 adds:
   F_WI060_PETE (0.54)
   F_WI360_PETE (0.36)
   F_WI020_BOSS (0.58)
   F_WI010_BOSS (0.03)
-  F_WI000 (0.01)
-  F_WI310 (0.12)
 
 *********************
 Prison Keeper
@@ -761,7 +757,7 @@ Location: nm03
 Program: 52
 Mission: NM03_MS103
 Room Size: 13.09
-Size: 2.09
+Size: 2.98
 adds:
   N_NM050_BTL_2 (0.29)
   N_NM060_BTL_2 (0.31)
@@ -931,7 +927,7 @@ Size: 3.21
 adds:
   B_MU110 (0.62)
   M_EX580 (0.81)
-  F_MU030 (0.09)
+  F_MU030 (0.09) (door is a subtract and isn't needed)
 
 *********************
 Shenzie
@@ -974,6 +970,8 @@ Size: 3.2
 adds
   B_MU130 (0.02)
   F_MU070_BOSS (0.15)
+both are adds, but disable at first because needs more testing
+   looks like maybe the walls define where storm rider can go
 
 *********************
 Terra
@@ -1021,6 +1019,9 @@ adds:
   B_NM110_HEAD (1.39)
   B_NM110_L_ARM (1.41)
   B_NM110_R_ARM (1.39)
+that stuff should be there to not have hp gates
+blacklist him from ax2
+   all the teleporters should be banned from ax2
 
 *********************
 Thresholder*
