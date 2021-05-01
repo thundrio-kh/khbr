@@ -18,8 +18,9 @@ NUM_RANDOMIZATION_MAPPINGS = 9
 HARDCAP = "-3.3895395E+38"
 
 class AreaDataScript:
-    def __init__(self, txt):
+    def __init__(self, txt, ispc=False):
         self.script = txt
+        self.ispc = ispc
         self.programs = self.parse_programs(self.script)
     def parse_programs(self, script):
         programs = {}
@@ -42,29 +43,38 @@ class AreaDataScript:
         return '\n'.join(self.programs[number])
     def update_program(self, number, capacity=None):
         program = self.get_program(number).split("\n")
+        topop = []
         for l in range(len(program)):
             line = program[l]
             if capacity and "Capacity" in line:
+                if self.ispc:
+                    topop.append(l)
+                    continue
                 cap_line = line.split(" ")
                 cap_line[1] = capacity
                 program[l] = ' '.join(cap_line)
+        if self.ispc:
+            for p in topop[::-1]:
+                program.pop(p)
         self.programs[number] = program
     def has_capacity(self, number):
         program = self.get_program(number)
         for line in program.split("\n"):
             if "Capacity" in line:
-                if not line.startswith("Capacity"):
-                    raise Exception("My guess was wrong")
-                if not len(line.split(" ")) == 2:
-                    raise Exception("My second guess was wrong")
                 return True
         return False
-
+    def has_mission(self, number):
+        program = self.get_program(number)
+        for line in program.split("\n"):
+            if "Mission" in line:
+                return True
+        return False
 
 class KingdomHearts2:
     def __init__(self):
         self.schemaversion = "01"
         self.name = "kh2"
+        self.unlimited_memory = False
         with open(os.path.join(os.path.dirname(__file__), "location-ard-map.json")) as f:
             self.locmap = json.load(f)
         with open(os.path.join(os.path.dirname(__file__), "msns.json")) as f:
@@ -90,8 +100,8 @@ class KingdomHearts2:
             # "scale_enemy_stats": {"display_name": "Scale Enemy Stats", "description": "Attempts to scale enemies to the level/HP of the enemy it is replacing.",
             #                     "possible_values": [True, False], "hidden_values": []},
 
-            # "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game is limited to 32MB of memory, which constrains where bosses and enemies can be placed. Turn this option on if playing on PC to remove these constraints.",
-            #                     "possible_values": [True, False], "hidden_values": []},
+            "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game has more limited enemy randomization capabilities. Turn this option on if playing on PC to remove these constraints.",
+                                "possible_values": [False, True], "hidden_values": []},
 
             "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. Selected Boss will replace every boss with a single selected boss.",
                                 "possible_values": ["Disabled", "One to One", "Selected Boss", "Wild"], "hidden_values": []},#, "one_to_one_characters",
@@ -238,7 +248,7 @@ class KingdomHearts2:
         if diagnostics:
             start_time = time.time()
             print("Starting Randomization: {}".format(options))
-        unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
+        self.unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
         scale_enemy = False
         scale_boss = False
         selected_boss = False
@@ -281,7 +291,8 @@ class KingdomHearts2:
                 duplicate_bosses = True
             
         if bossmode or enemymode:
-            maxsize = UNLIMITED_SIZE if unlimited_memory else LIMITED_SIZE
+            #maxsize = UNLIMITED_SIZE if self.unlimited_memory else LIMITED_SIZE
+            maxsize = LIMITED_SIZE
             if bossmode:
                 bosses = self.get_bosses(nightmare_mode=nightmare_bosses, maxsize=maxsize)
                 if "scale_boss_stats" in options:
@@ -299,8 +310,8 @@ class KingdomHearts2:
             
             # Probably need a better way to make the category
             category = 'limited'
-            if unlimited_memory:
-                category = 'un' + category
+            # if self.unlimited_memory:
+            #     category = 'un' + category
             bossmapping = None
             enemymapping = None
             if bossmode:
@@ -316,12 +327,22 @@ class KingdomHearts2:
                 world = spawns[w]
                 for r in world:
                     room = world[r]
-                    if "ignored" in room:
+                    if "pc" in room and self.unlimited_memory:
+                        for k in room["pc"]:
+                            room[k] = room["pc"][k]
+                    if "ignored" in room and room["ignored"]:
+                        # print("Ignoring: ", r)
                         continue
                     if enemies and enemymode == "One to One Per Room":
                         enemymapping = self.pickenemymapping(enemies)
                     for sp in room["spawnpoints"]:
                         spawnpoint = room["spawnpoints"][sp]
+                        if "pc" in spawnpoint and self.unlimited_memory:
+                            for k in spawnpoint["pc"]:
+                                spawnpoint[k] = spawnpoint["pc"][k]
+                        if "ignored" in spawnpoint and spawnpoint["ignored"]:
+                            # print("Ignoring: ", sp)
+                            continue
                         for i in spawnpoint["sp_ids"]:
                             entities = spawnpoint["sp_ids"][i]
                             for e in range(len(entities)):
@@ -486,9 +507,12 @@ class KingdomHearts2:
                         spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir, _writeMethod)
                         roomasset["source"].append(spasset)
                     btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
-                    script = AreaDataScript(open(btlfn).read())
+                    script = AreaDataScript(open(btlfn).read(), ispc=self.unlimited_memory)
                     for p in script.programs:
                         if script.has_capacity(p):
+                            if (not script.ispc) and (not script.has_mission(p)):
+                                # It's not a big deal if enemies fail to spawn properly in areas where you don't have a mission going on
+                                continue 
                             script.update_program(p, HARDCAP)
                             programasset = self.writeAreaDataProgram(ardname, "btl", p, script.get_program(p), outdir, _writeMethod)
                             roomasset["source"].append(programasset)
@@ -761,7 +785,7 @@ class Randomizer:
 
 if __name__ == '__main__':
     mode = sys.argv[1]
-    #  run randomizer.py devgenerate "{\"enemy\": \"One to One Per Room\"}"
+    # run randomizer.py devgenerate "{\"enemy\": \"One to One\"}"
     options = sys.argv[2]
     if len(sys.argv) > 3:
         seed = sys.argv[3]

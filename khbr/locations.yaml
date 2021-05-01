@@ -1802,7 +1802,6 @@ Agrabah:
             isboss: false
             name: Icy Cube
   'The Cave of Wonders: Treasure Room':
-    ignored: true,
     size: 5000000
     spawnpoints:
       b_00:
@@ -1856,6 +1855,9 @@ Agrabah:
             isboss: false
             name: Fortuneteller
       b_40:
+        ignored: true
+        pc:
+          ignored: false
         size: 0
         sp_ids:
           '41':
@@ -4374,6 +4376,8 @@ Beast's Castle:
 Disney Castle:
   Audience Chamber:
     ignored: true
+    pc:
+      ignored: false
     size: 5000000
     spawnpoints:
       b_00:
@@ -4558,6 +4562,9 @@ Disney Castle:
             isboss: false
             name: Bolt Tower DC
   Colonnade:
+    ignored: true
+    pc:
+      ignored: false
     size: 5000000
     spawnpoints:
       b_00:
@@ -6510,6 +6517,7 @@ Halloween Town:
             isboss: false
             name: Shadow (NM)
       b_99:
+        ignored: true # randomizing this might not cause presents to appear
         size: 0
         sp_ids:
           '686':
@@ -17719,7 +17727,6 @@ Space Paranoids:
             name: Giant Sark
   Dataspace:
     size: 5000000
-    ignored: true # Randomized enemies don't drop the orbs
     spawnpoints:
       b_00:
         size: 0
@@ -17768,6 +17775,7 @@ Space Paranoids:
             name: Devastator
       b_40:
         size: 0
+        ignored: true
         sp_ids:
           '87':
           - index: 3
@@ -18231,7 +18239,6 @@ The Land of Dragons:
             name: Sniper
   Checkpoint:
     size: 5000000
-    ignored: true # ambush uggggh
     spawnpoints:
       b_00:
         size: 0
@@ -18371,6 +18378,7 @@ The Land of Dragons:
             isboss: false
             name: Nightwalker
       b_45:
+        ignored: true # ambush auuuuuah
         size: 0
         sp_ids:
           '416':
@@ -19232,6 +19240,8 @@ The Land of Dragons:
             name: Nightwalker
   Ridge:
     ignored: true
+    pc:
+      ignored: false
     size: 5000000
     spawnpoints:
       b_00:
@@ -19601,6 +19611,8 @@ The Land of Dragons:
             name: (M) Rapid Thruster (RAW)
   Village Cave:
     ignored: true
+    pc:
+      ignored: false
     size: 5000000
     spawnpoints:
       b_00:
@@ -23454,6 +23466,7 @@ Twilight Town:
             isboss: true
             name: Seifer (2)
       b_43:
+        ignored: true
         size: 0
         sp_ids:
           '115':
@@ -23926,6 +23939,7 @@ Twilight Town:
             isboss: false
             name: Samurai
       b_41:
+        ignored: true # if the dusk dies you are softlocked
         size: 0
         sp_ids:
           '65':

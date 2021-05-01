@@ -1917,6 +1917,7 @@ Hades I:
   msn: LK05_MS101.bar
   obj_id: 349
   replace_allowed: false
+  replace_as: Hades Cups
   size: 929856
   type: boss
   variations:
@@ -2696,7 +2697,7 @@ Pete OC II:
       - 0
       - 0
 Pete TR:
-  enabled: false
+  enabled: true
   hp: 100
   level: 99
   limiter: 20
@@ -2705,6 +2706,7 @@ Pete TR:
   obj_id: 359
   size: 968770
   type: boss
+  replace_as: Pete Cups
   variations:
     Pete TR:
       vars:
