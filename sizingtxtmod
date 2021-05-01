@@ -1,12 +1,12 @@
 
 *********************
-Armor Xemnas I
+* Armor Xemnas I
 *********************
 Location: eh24
 Program: 71
 Mission: EH24_MS110
 Room Size: 16.8
-Size: 1.7
+Size: 3.82
 adds:
 - B_EX300 (0.17) // ???
 - B_EX290 (0.29) // xig
@@ -15,7 +15,7 @@ adds:
 - M_EX880_DANCER_EH (0.67) // dancers
 
 *********************
-Armor Xemnas II
+* Armor Xemnas II
 *********************
 Location: eh23
 Program: 73
@@ -27,7 +27,7 @@ subtracts:
   B_EX180 (2.2)
 
 *********************
-Axel I
+* Axel I
 *********************
 Location: tt05
 Program: 87
@@ -37,7 +37,7 @@ Size: 2.92
 
 
 *********************
-Axel II
+* Axel II
 *********************
 Location: tt20
 Program: 137
@@ -47,7 +47,7 @@ Size: 3.74
 
 
 *********************
-Banzai
+* Banzai
 *********************
 Location: lk02
 Program: 51
@@ -59,7 +59,7 @@ shenzi 0.96
 ed 0.56
 
 *********************
-Banzai (1)
+* Banzai (1)
 *********************
 Location: lk05
 Program: 57
@@ -71,7 +71,7 @@ shenzi 0.96
 ed 0.56
 
 *********************
-Barbossa*
+* Barbossa*
 *********************
 NOT WORKING YET
 Location: ca10
@@ -84,7 +84,7 @@ adds:
 
 
 *********************
-Barrel
+*Barrel
 *********************
 Location: nm10
 Program: 62
@@ -95,7 +95,7 @@ Size: 1.32
 0.92 lock
 
 *********************
-Blizzard Lord
+*Blizzard Lord
 *********************
 Location: al03
 Program: 59
@@ -106,17 +106,7 @@ has volcano lord
 volcano lord: 2.23
 
 *********************
-Blizzard Lord (Cups)
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8TI_BOSS
-Room Size: 
-Size: 
-
-
-*********************
-Cerberus
+* Cerberus
 *********************
 Location: he07
 Program: 114
@@ -124,68 +114,8 @@ Mission: HE07_MS103
 Room Size: 13.74 
 Size: 3.2
 
-
 *********************
-Cerberus (1)
-*********************
-Location: he09
-Program: 194
-Mission: HE_COL_2_10
-Room Size: 
-Size: 
-
-
-*********************
-Cerberus (1)
-*********************
-Location: he09
-Program: 196
-Mission: HE_COLOSSEUM_8_ONLY
-Room Size: 
-Size: 
-
-
-*********************
-Cerberus (1)
-*********************
-Location: he09
-Program: 190
-Mission: HE_COL_2_10
-Room Size: 
-Size: 
-
-
-*********************
-Cloud
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_25
-Room Size: 
-Size: 1.9
-
-
-*********************
-Cloud (1)
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_40
-Room Size: 
-Size: 
-
-
-*********************
-Cloud (2)
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_49
-Room Size: 
-Size: 
-
-*********************
-Dark Thorn*
+* Dark Thorn*
 *********************
 Location: bb05
 Program: 79
@@ -196,7 +126,7 @@ subtracts/adds
   1.33 chandelier // y value -1500
 
 *********************
-Data Axel
+* Data Axel
 *********************
 Location: tt20
 Program: 213
@@ -206,7 +136,7 @@ Size: 3.74
 
 
 *********************
-Data Demyx
+* Data Demyx
 *********************
 Location: hb04
 Program: 114
@@ -216,7 +146,7 @@ Size: 4.07
 
 
 *********************
-Data Final Xemnas*
+* Data Final Xemnas*
 *********************
 Location: eh20
 Program: 98
@@ -227,7 +157,7 @@ adds:
   P_EX100_LAST (1.19)
 
 *********************
-Data Final Xemnas (Copy)
+*Data Final Xemnas (Copy)
 *********************
 Location: eh20
 Program: 98
@@ -244,7 +174,7 @@ Program: 101
 Mission: EH14_MS103_RE
 
 *********************
-Data Saix
+* Data Saix
 *********************
 Location: eh15
 Program: 102
@@ -253,7 +183,7 @@ Room Size: 14.85
 Size: 4.55
 
 *********************
-Data Xaldin
+* Data Xaldin
 *********************
 Location: bb15
 Program: 97
@@ -263,7 +193,7 @@ Size: 3.63
 
 
 *********************
-Data Xemnas
+* Data Xemnas
 *********************
 Location: eh19
 Program: 97
@@ -273,7 +203,7 @@ Size: 3.7
 
 
 *********************
-Data Xigbar
+* Data Xigbar
 *********************
 Location: eh10
 Program: 100
@@ -283,7 +213,7 @@ Size: 3.19
 
 
 *********************
-Demyx
+* Demyx
 *********************
 Location: hb04
 Program: 55
@@ -293,7 +223,7 @@ Size: 4.07
 
 
 *********************
-Demyx OC
+* Demyx OC
 *********************
 Location: he17
 Program: 123
@@ -302,7 +232,7 @@ Room Size: 11.83
 Size: 2.74
 
 *********************
-Ed
+* Ed
 *********************
 Location: lk02
 Program: 51
@@ -312,7 +242,7 @@ Size:
 
 
 *********************
-Ed (1)
+* Ed (1)
 *********************
 Location: lk05
 Program: 57
@@ -322,7 +252,7 @@ Size:
 
 
 *********************
-Final Xemnas*
+*Final Xemnas*
 *********************
 Location: eh20
 Program: 74
@@ -333,7 +263,7 @@ adds:
  P_EX100_LAST (1.19)
 
 *********************
-Final Xemnas (Copy)
+* Final Xemnas (Copy)
 *********************
 Location: eh20
 Program: 74
@@ -343,7 +273,7 @@ Size:
 
 
 *********************
-Giant Sark
+* Giant Sark
 *********************
 Location: tr09
 Program: 59
@@ -353,17 +283,7 @@ Size: 1.41
 
 
 *********************
-Giant Sark
-*********************
-Location: tr09
-Program: 64
-Mission: TR09_MS205
-Room Size: 
-Size: 
-
-
-*********************
-Grim Reaper II*
+* Grim Reaper II*
 *********************
 Location: ca01
 Program: 54
@@ -375,7 +295,7 @@ adds:
   PRIZE_CA_SEA (0.03) // Medal 123
 
 *********************
-Grim Reaper I
+* Grim Reaper I
 *********************
 Location: ca18
 Program: 85
@@ -385,7 +305,7 @@ Size: 2.35
 
 
 *********************
-Groundshaker
+* Groundshaker
 *********************
 Location: lk15
 Program: 59
@@ -396,26 +316,7 @@ adds:
  B_LK130 0.09
 
 *********************
-Hades Cups
-*********************
-Location: he09
-Program: 192
-Mission: HE_COL_4_10
-Room Size: 
-Size: 3.14
-
-*********************
-Hades Cups
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_30
-Room Size: 
-Size: 
-
-
-*********************
-Hades Escape
+* Hades Escape
 *********************
 Location: he05
 Program: 111
@@ -425,7 +326,7 @@ Size: 2.26
 
 
 *********************
-Hades I
+* Hades I
 *********************
 Location: he06
 Program: 112
@@ -434,78 +335,13 @@ Room Size: 12.73
 Size: 2.26
 
 
-*********************
-Hades II
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_50
-Room Size: 
-Size: 
+
+
+
 
 
 *********************
-Hades II (1)
-*********************
-Location: he19
-Program: 201
-Mission: HE19_MS204
-Room Size: 11.38
-Size: 3.15
-
-
-*********************
-Hades II (1)
-*********************
-Location: he19
-Program: 202
-Mission: HE19_MS205
-Room Size: 13.88 
-Size: 3.15
-
-
-*********************
-Hayner
-*********************
-Location: tt04
-Program: 182
-Mission: TT04_MS00
-Room Size: 8.45
-Size: 0.84
-
-
-*********************
-Hayner
-*********************
-Location: tt05
-Program: 84
-Mission: TT05_MS401
-Room Size: 12.41
-Size: 0.84
-
-
-*********************
-Hercules
-*********************
-Location: he09
-Program: 191
-Mission: HE_COLOSSEUM_3
-Room Size: 
-Size: 2.48
-
-
-*********************
-Hercules
-*********************
-Location: he09
-Program: 195
-Mission: HE_COLOSSEUM_7
-Room Size: 
-Size: 
-
-
-*********************
-Hostile Program*
+* Hostile Program     *
 *********************
 Location: tr04
 Program: 55
@@ -516,7 +352,7 @@ adds:
   PRIZE_TR (0.04)
 
 *********************
-Hydra*
+* Hydra*
 *********************
 Location: he18
 Program: 171
@@ -528,11 +364,9 @@ adds:
  F_HE030_L (0.21) // arg 99
  N_HE020_BTL (0.64) // arg 1
  N_HE040_BTL (0.77)
- N_HE030_BTL (0.45) 
-Meg isn't needed
 
 *********************
-Illuminator
+* Illuminator
 *********************
 Location: ca10
 Program: 60
@@ -542,7 +376,7 @@ Size:
 see barbossa
 
 *********************
-Jafar
+* Jafar
 *********************
 Location: al05
 Program: 62
@@ -552,17 +386,7 @@ Size: 1.86
 
 
 *********************
-Larxene
-*********************
-Location: hb33
-Program: 155
-Mission: HB33_FM_LAR
-Room Size: 
-Size: 
-
-
-*********************
-Larxene
+* Larxene
 *********************
 Location: hb33
 Program: 143
@@ -572,7 +396,7 @@ Size: 5.35
 
 
 *********************
-Larxene (Data)
+* Larxene (Data)
 *********************
 Location: hb33
 Program: 148
@@ -580,48 +404,9 @@ Mission: HB33_FM_LAR_RE
 Room Size: 13.65 
 Size: 5.35
 
-*********************
-Leon
-*********************
-Location: he09
-Program: 189
-Mission: HE_COL_1_10
-Room Size: 
-Size: 1.67
-
 
 *********************
-Leon (1)
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_40
-Room Size: 
-Size: 
-
-
-*********************
-Leon (2)
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_49
-Room Size: 
-Size: 
-
-
-*********************
-Leon (3)
-*********************
-Location: he09
-Program: 193
-Mission: HE_COL_5_10
-Room Size: 
-Size: 
-
-
-*********************
-Lexaeus
+*Lexaeus
 *********************
 Location: hb33
 Program: 142
@@ -631,7 +416,7 @@ Size: 3.9
 
 
 *********************
-Lexaeus (Data)
+*Lexaeus (Data)
 *********************
 Location: hb33
 Program: 147
@@ -641,7 +426,7 @@ Size:
 
 
 *********************
-Lock
+*Lock
 *********************
 Location: nm10
 Program: 62
@@ -651,7 +436,7 @@ Size:
 with shock and barrel
 
 *********************
-Luxord*
+* Luxord*
 *********************
 Location: eh14
 Program: 58
@@ -663,7 +448,7 @@ adds:
 
 
 *********************
-Marluxia
+* Marluxia
 *********************
 Location: hb38
 Program: 145
@@ -673,7 +458,7 @@ Size: 4.57
 
 
 *********************
-Marluxia (Data)
+* Marluxia (Data)
 *********************
 Location: hb38
 Program: 150
@@ -682,7 +467,7 @@ Room Size: 12.53
 Size: 4.57
 
 *********************
-Oogie Boogie*
+* Oogie Boogie*
 *********************
 Location: nm09
 Program: 55
@@ -697,7 +482,7 @@ adds:
 
 
 *********************
-Past Pete
+*Past Pete
 *********************
 Location: wi01
 Program: 58
@@ -706,18 +491,9 @@ Room Size: 11.59
 Size: 0.43
 
 
-*********************
-Pete Cups
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8TI_BOSS
-Room Size: 
-Size: 1.57
-
 
 *********************
-Pete OC I
+* Pete OC I
 *********************
 Location: he08
 Program: 115
@@ -727,7 +503,7 @@ Size: 1.57
 
 
 *********************
-Pete OC II
+* Pete OC II
 *********************
 Location: he08
 Program: 116
@@ -737,7 +513,7 @@ Size: 1.57
 
 
 *********************
-Pete TR
+* Pete TR
 *********************
 Location: wi03
 Program: 53
@@ -751,7 +527,7 @@ adds:
   F_WI010_BOSS (0.03)
 
 *********************
-Prison Keeper
+* Prison Keeper
 *********************
 Location: nm03
 Program: 52
@@ -763,9 +539,8 @@ adds:
   N_NM060_BTL_2 (0.31)
   N_NM070_BTL_2 (0.29)
 
-
 *********************
-Riku
+* Riku
 *********************
 Location: mu07
 Program: 76
@@ -774,7 +549,7 @@ Room Size: 9.84
 Size: 1.22
 
 *********************
-Roxas
+* Roxas
 *********************
 Location: eh21
 Program: 65
@@ -784,7 +559,7 @@ Size: 5.85
 
 
 *********************
-Roxas (Data)
+* Roxas (Data)
 *********************
 Location: eh21
 Program: 99
@@ -794,7 +569,7 @@ Size:
 
 
 *********************
-Saix
+* Saix
 *********************
 Location: eh15
 Program: 56
@@ -804,7 +579,7 @@ Size: 4.54
 
 
 *********************
-Sark
+* Sark
 *********************
 Location: tr09
 Program: 58
@@ -814,7 +589,7 @@ Size: 1.22
 
 
 *********************
-Scar
+* Scar
 *********************
 Location: lk14
 Program: 55
@@ -824,7 +599,7 @@ Size: 1.63
 
 
 *********************
-Seifer
+*Seifer
 *********************
 Location: tt03
 Program: 180
@@ -834,7 +609,7 @@ Size: 0.98
 
 
 *********************
-Seifer (1)
+*Seifer (1)
 *********************
 Location: tt04
 Program: 77
@@ -844,7 +619,7 @@ Size: 0.98
 
 
 *********************
-Seifer (2)
+*Seifer (2)
 *********************
 Location: tt04
 Program: 78
@@ -854,7 +629,7 @@ Size: 0.98
 
 
 *********************
-Seifer (3)
+*Seifer (3)
 *********************
 Location: tt04
 Program: 181
@@ -864,7 +639,7 @@ Size: 0.98
 
 
 *********************
-Seifer (4)
+*Seifer (4)
 *********************
 Location: tt04
 Program: 184
@@ -874,7 +649,7 @@ Size: 0.98
 
 
 *********************
-Sephiroth
+*Sephiroth
 *********************
 Location: hb01
 Program: 75
@@ -883,28 +658,10 @@ Room Size: 10.46
 Size: 3.89
 
 
-*********************
-Setzer
-*********************
-Location: tt04
-Program: 183
-Mission: TT04_MS01
-Room Size: 8.03
-Size: 1.35
 
 
 *********************
-Setzer
-*********************
-Location: tt05
-Program: 88
-Mission: TT05_MS405
-Room Size: 12.91
-Size: 1.35
-
-
-*********************
-Shadow Stalker
+* Shadow Stalker
 *********************
 Location: bb05
 Program: 78
@@ -916,21 +673,10 @@ adds:
   F_BB050 (1.33)
   F_BB060 (1.27)
 
-*********************
-Shan-Yu
-*********************
-Location: mu09
-Program: 75
-Mission: MU09_MS108
-Room Size: 14.79
-Size: 3.21
-adds:
-  B_MU110 (0.62)
-  M_EX580 (0.81)
-  F_MU030 (0.09) (door is a subtract and isn't needed)
+
 
 *********************
-Shenzie
+* Shenzie
 *********************
 Location: lk02
 Program: 51
@@ -940,7 +686,7 @@ Size:
 see others
 
 *********************
-Shenzie (1)
+* Shenzie (1)
 *********************
 Location: lk05
 Program: 57
@@ -950,7 +696,7 @@ Size:
 see others
 
 *********************
-Shock
+* Shock
 *********************
 Location: nm10
 Program: 62
@@ -960,7 +706,7 @@ Size:
 see others
 
 *********************
-Storm Rider
+* Storm Rider
 *********************
 Location: mu08
 Program: 79
@@ -974,7 +720,7 @@ both are adds, but disable at first because needs more testing
    looks like maybe the walls define where storm rider can go
 
 *********************
-Terra
+*Terra
 *********************
 Location: dc07
 Program: 73
@@ -985,18 +731,9 @@ adds:
   B_EX430 (0.02)
 
 
-*********************
-Terra
-*********************
-Location: dc07
-Program: 67
-Mission: DC07_FM_NAZO
-Room Size: 
-Size: 
-
 
 *********************
-The Beast*
+* The Beast*
 *********************
 Location: bb03
 Program: 69
@@ -1007,24 +744,9 @@ adds:
   N_BB050_BTL (0.86)
 want him disabled to start
 
-*********************
-The Experiment
-*********************
-Location: nm07
-Program: 64
-Mission: NM07_MS204
-Room Size: 15.89 
-Size: 1.82
-adds:
-  B_NM110_HEAD (1.39)
-  B_NM110_L_ARM (1.41)
-  B_NM110_R_ARM (1.39)
-that stuff should be there to not have hp gates
-blacklist him from ax2
-   all the teleporters should be banned from ax2
 
 *********************
-Thresholder*
+*Thresholder*
 *********************
 Location: bb11
 Program: 72
@@ -1035,48 +757,10 @@ adds:
   B_BB130 (0.21)
 
 
-*********************
-Thresholder
-*********************
-Location: bb11
-Program: 80
-Mission: BB11_MS102
-Room Size: 
-Size: 
 
 
 *********************
-Tifa
-*********************
-Location: he09
-Program: 196
-Mission: b_h0
-Room Size: 
-Size: 1.32
-
-
-*********************
-Tifa (1)
-*********************
-Location: he09
-Program: 196
-Mission: b_j5
-Room Size: 
-Size: 
-
-
-*********************
-Tifa (2)
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_49
-Room Size: 
-Size: 
-
-
-*********************
-Twilight Thorn
+* Twilight Thorn
 *********************
 Location: tt34
 Program: 157
@@ -1086,7 +770,7 @@ Size: 4.91
 
 
 *********************
-Vexen
+*Vexen
 *********************
 Location: hb32
 Program: 146
@@ -1095,7 +779,7 @@ Room Size: 15.19
 Size: 6.22
 
 *********************
-Vexen (1)
+*Vexen (1)
 *********************
 Location: hb32
 Program: 115
@@ -1104,7 +788,7 @@ Room Size:
 Size: 
 
 *********************
-Vivi
+* Vivi
 *********************
 Location: tt05
 Program: 85
@@ -1113,7 +797,7 @@ Room Size: 12.59
 Size: 1.02
 
 *********************
-Volcano Lord
+* Volcano Lord
 *********************
 Location: al03
 Program: 59
@@ -1122,18 +806,10 @@ Room Size:
 Size: 
 see ice lord
 
-*********************
-Volcano Lord (Cups)
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_5
-Room Size: 
-Size: 
 
 
 *********************
-Xaldin
+* Xaldin
 *********************
 Location: bb15
 Program: 82
@@ -1143,7 +819,7 @@ Size: 3.63
 
 
 *********************
-Xemnas
+* Xemnas
 *********************
 Location: eh19
 Program: 59
@@ -1152,7 +828,7 @@ Room Size: 9.86
 Size: 3.7
 
 *********************
-Xigbar
+* Xigbar
 *********************
 Location: eh10
 Program: 57
@@ -1160,45 +836,6 @@ Mission: EH10_MS102
 Room Size: 14.37
 Size: 3.19
 
-
-*********************
-Yuffie
-*********************
-Location: he09
-Program: 189
-Mission: HE_COL_1_10
-Room Size: 
-Size: 0.95
-
-
-*********************
-Yuffie (1)
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_10
-Room Size: 
-Size: 
-
-
-*********************
-Yuffie (2)
-*********************
-Location: he09
-Program: 196
-Mission: HE_COL_8_49
-Room Size: 
-Size: 
-
-
-*********************
-Yuffie (3)
-*********************
-Location: he09
-Program: 193
-Mission: HE_COL_5_10
-Room Size: 
-Size: 
 
 
 *********************
