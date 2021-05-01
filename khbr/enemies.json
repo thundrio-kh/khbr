@@ -298,8 +298,6 @@
         "type": "boss",
         "variations": {
             "Volcano Lord": [ 0, 0 ],
-            "Volcano Lord (1)": [ 1, 0 ]
-        },
             "Volcano Lord (Cups)": {
                 "msn": "unknown",
                 "vars": [ 0, 1, 0 ]
@@ -1116,7 +1114,7 @@
             "Seifer": [ 3, 0 ],
             "Seifer (1)": {
                 "vars": [ 1, 0 ],
-                "msn": "TT04_MS107",
+                "msn": "TT04_MS107"
             },
             "Seifer (2)": [ 2, 0 ],
             "Seifer (3)": [ 4, 0 ],
@@ -1348,7 +1346,7 @@
         "variations": {
             "Dragon Xemnas": [ 0, 0 ]
         },
-        "enabled": false
+        "enabled": false,
         "replace_allowed": false
     },
     "Shenzie": {

@@ -5,16 +5,76 @@ import random
 
 supported_games = ["kh2"]
 
+diagnostics = True
+GENERATE_IDENTICON = False
+
 KH2_DIR = os.environ["USE_KH2_GITPATH"]
 RANDOMIZATIONS_DIR = os.path.join(KH2_DIR,"randomizations") if os.path.exists(os.path.join(KH2_DIR,"randomizations")) else "randomizations"
 
 UNLIMITED_SIZE = 99_999_999_999_999
 LIMITED_SIZE = 10_000_000
 NUM_RANDOMIZATION_MAPPINGS = 9
+
+HARDCAP = "-3.3895395E+38"
+
+class AreaDataScript:
+    def __init__(self, txt, ispc=False):
+        self.script = txt
+        self.ispc = ispc
+        self.programs = self.parse_programs(self.script)
+    def parse_programs(self, script):
+        programs = {}
+        currentProgram = None
+        lines_program = []
+        for line in script.split("\n"):
+            if line.startswith("Program"):
+                if currentProgram:
+                    programs[currentProgram] = lines_program
+                currentProgram = int(line.split(" ")[1], 16)
+                lines_program = [line]
+            else:
+                lines_program.append(line)
+        if currentProgram:
+            programs[currentProgram] = lines_program
+        return programs
+    def get_program(self, number):
+        if number not in self.programs:
+            raise Exception("Program not found")
+        return '\n'.join(self.programs[number])
+    def update_program(self, number, capacity=None):
+        program = self.get_program(number).split("\n")
+        topop = []
+        for l in range(len(program)):
+            line = program[l]
+            if capacity and "Capacity" in line:
+                if self.ispc:
+                    topop.append(l)
+                    continue
+                cap_line = line.split(" ")
+                cap_line[1] = capacity
+                program[l] = ' '.join(cap_line)
+        if self.ispc:
+            for p in topop[::-1]:
+                program.pop(p)
+        self.programs[number] = program
+    def has_capacity(self, number):
+        program = self.get_program(number)
+        for line in program.split("\n"):
+            if "Capacity" in line:
+                return True
+        return False
+    def has_mission(self, number):
+        program = self.get_program(number)
+        for line in program.split("\n"):
+            if "Mission" in line:
+                return True
+        return False
+
 class KingdomHearts2:
     def __init__(self):
         self.schemaversion = "01"
         self.name = "kh2"
+        self.unlimited_memory = False
         with open(os.path.join(os.path.dirname(__file__), "location-ard-map.json")) as f:
             self.locmap = json.load(f)
         with open(os.path.join(os.path.dirname(__file__), "msns.json")) as f:
@@ -27,30 +87,30 @@ class KingdomHearts2:
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
-            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per spawn: One-to-One but every spawnpoint is different (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized",
-                                  "possible_values": ["Disabled", "One to One", "One to One Per Spawn", "Wild", "Selected Enemy"]},
+            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized",
+                                  "possible_values": ["Disabled", "One to One", "One to One Per Room", "Selected Enemy"], "hidden_values": ["Wild"]},
             "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
-                                "possible_values": self.get_valid_enemies()},
+                                "possible_values": [None] + self.get_valid_enemies(), "hidden_values": []},
             # "bosses_can_replace_enemies": {"display_name": "Bosses Can Replace Enemies", "description": "Replaces a small percentage of enemies in the game with a random boss. This option is intended for PC use only.",
-            #                     "possible_values": [False, True]},
-            "nightmare_enemies": {"display_name": "Enemies of Eternal Darkness", "description": "Replaces enemies using only the most difficult enemies in the game.",
-                                "possible_values": [False, True]},
+            #                     "possible_values": [False, True], "hidden_values": []},
+            "nightmare_enemies": {"display_name": "Nightmare Enemies", "description": "Replaces enemies using only the most difficult enemies in the game.",
+                                "possible_values": [False, True], "hidden_values": []},
             # "separate_small_big_enemies": {"display_name": "Separate Small and Big Enemies", "description": "Randomizes big enemies among themselves and small enemies among themselves. Useful to prevent crashing"},
-            #                     "possible_values": [True, False]},
+            #                     "possible_values": [True, False], "hidden_values": []},
             # "scale_enemy_stats": {"display_name": "Scale Enemy Stats", "description": "Attempts to scale enemies to the level/HP of the enemy it is replacing.",
-            #                     "possible_values": [True, False]},
+            #                     "possible_values": [True, False], "hidden_values": []},
 
-            # "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game is limited to 32MB of memory, which constrains where bosses and enemies can be placed. Turn this option on if playing on PC to remove these constraints.",
-            #                     "possible_values": [True, False]},
+            "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game has more limited enemy randomization capabilities. Turn this option on if playing on PC to remove these constraints.",
+                                "possible_values": [False, True], "hidden_values": []},
 
             "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. Selected Boss will replace every boss with a single selected boss.",
-                                "possible_values": ["Disabled", "One to One", "Selected Boss", "Wild"]},#, "one_to_one_characters",
-            "nightmare_bosses": {"display_name": "Bosses of Eternal Darkness", "description": "Replaces bosses using only the most difficult bosses in the game.",
-                                "possible_values": [False, True]},
+                                "possible_values": ["Disabled", "One to One", "Selected Boss", "Wild"], "hidden_values": []},#, "one_to_one_characters",
+            "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game.",
+                                "possible_values": [False, True], "hidden_values": []},
             # "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
-            #                     "possible_values": [True, False]},
+            #                     "possible_values": [True, False], "hidden_values": []},
             "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
-                                "possible_values": self.get_valid_bosses()}
+                                "possible_values": [None] + self.get_valid_bosses(), "hidden_values": []}
         }
     def get_enemies(self):
         enemies = self.get_valid_enemies()
@@ -77,8 +137,8 @@ class KingdomHearts2:
             "blacklist": [],
             "whitelist": []
         }
-        with open(os.path.join(os.path.dirname(__file__), "enemies.json")) as f:
-            bosses_f = json.load(f)
+        with open(os.path.join(os.path.dirname(__file__), "enemies.yaml")) as f:
+            bosses_f = yaml.load(f, Loader=yaml.FullLoader)
         bosses = {}
         allkeys = []
         for bn in bosses_f:
@@ -143,8 +203,8 @@ class KingdomHearts2:
                 boss["available"] = avail
         return bosses
     def get_locations(self):
-        with open(os.path.join(os.path.dirname(__file__), "locations.json")) as f:
-            locations_f = json.load(f)
+        with open(os.path.join(os.path.dirname(__file__), "locations.yaml")) as f:
+            locations_f = yaml.load(f, Loader=yaml.FullLoader)
         return locations_f
     def add_tag(self, enemylist, tag):
         for enemy in enemylist:
@@ -157,12 +217,25 @@ class KingdomHearts2:
         # Randomization with limitations can take a while, so pregenerate 100K randomizations for each option
         # then just pick one of the right type
         num_files = NUM_RANDOMIZATION_MAPPINGS
-        dirname = os.path.join(os.path.dirname(__file__), "randomizations", category)
+        dirname = os.path.join(RANDOMIZATIONS_DIR, category)
         num = random.randint(1,num_files)
         with open(os.path.join(dirname, str(num))) as f:
             return json.load(f)
     def pickenemymapping(self, enemylist):
-        pass 
+        categories = {}
+        for e in enemylist:
+            if e["category"] not in categories:
+                categories[e["category"]] = []
+            categories[e["category"]].append(e)
+        mapping = {}
+        for c in categories:
+            og = list(categories[c])
+            new = list(og)
+            random.shuffle(new)
+            for i in range(len(og)):
+                mapping[og[i]["name"]] = new[i]["name"]
+        assert len(enemylist) == len(list(mapping.keys()))
+        return mapping 
     def pick_boss_to_replace(self, bosslist):
         n = random.randint(0,len(bosslist)-1)
         return bosslist[n]
@@ -170,9 +243,12 @@ class KingdomHearts2:
         pass
     def pick_enemy_to_replace(self, oldenemy, enabledenemies):
         options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
-        return random.choice(options)
+        return c
     def perform_randomization(self, options):
-        unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
+        if diagnostics:
+            start_time = time.time()
+            print("Starting Randomization: {}".format(options))
+        self.unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
         scale_enemy = False
         scale_boss = False
         selected_boss = False
@@ -183,7 +259,6 @@ class KingdomHearts2:
         duplicate_bosses = None
         bossmode = None
         enemymode = None
-        print(options)
         if "enemy" in options and options["enemy"] != "Disabled":
             enemymode = options["enemy"]
         #duplicate_enemies = enemymode in ["spawnpoint_one_to_one", "wild"]
@@ -216,7 +291,8 @@ class KingdomHearts2:
                 duplicate_bosses = True
             
         if bossmode or enemymode:
-            maxsize = UNLIMITED_SIZE if unlimited_memory else LIMITED_SIZE
+            #maxsize = UNLIMITED_SIZE if self.unlimited_memory else LIMITED_SIZE
+            maxsize = LIMITED_SIZE
             if bossmode:
                 bosses = self.get_bosses(nightmare_mode=nightmare_bosses, maxsize=maxsize)
                 if "scale_boss_stats" in options:
@@ -234,13 +310,13 @@ class KingdomHearts2:
             
             # Probably need a better way to make the category
             category = 'limited'
-            if unlimited_memory:
-                category = 'un' + category
+            # if self.unlimited_memory:
+            #     category = 'un' + category
             bossmapping = None
             enemymapping = None
             if bossmode:
                 bossmapping = self.pickbossmapping(bosses, category) if not duplicate_bosses else None
-            # enemymapping = self.pickenemymapping(enemies) if not duplicate_bosses else None
+            enemymapping = self.pickenemymapping(enemies)
             spawns = self.get_locations()
             newspawns = {}
             spawn_limiters = {}
@@ -251,12 +327,22 @@ class KingdomHearts2:
                 world = spawns[w]
                 for r in world:
                     room = world[r]
-                    if "ignored" in room:
+                    if "pc" in room and self.unlimited_memory:
+                        for k in room["pc"]:
+                            room[k] = room["pc"][k]
+                    if "ignored" in room and room["ignored"]:
+                        # print("Ignoring: ", r)
                         continue
-                    # if enemies and enemymode == "spawnpoint_one_to_one":
-                    #     enemymapping = self.pickenemymapping(enemies)
+                    if enemies and enemymode == "One to One Per Room":
+                        enemymapping = self.pickenemymapping(enemies)
                     for sp in room["spawnpoints"]:
                         spawnpoint = room["spawnpoints"][sp]
+                        if "pc" in spawnpoint and self.unlimited_memory:
+                            for k in spawnpoint["pc"]:
+                                spawnpoint[k] = spawnpoint["pc"][k]
+                        if "ignored" in spawnpoint and spawnpoint["ignored"]:
+                            # print("Ignoring: ", sp)
+                            continue
                         for i in spawnpoint["sp_ids"]:
                             entities = spawnpoint["sp_ids"][i]
                             for e in range(len(entities)):
@@ -326,7 +412,10 @@ class KingdomHearts2:
                                     if selected_enemy:
                                         new_enemy = selected_enemy
                                     elif enemymapping:
-                                        pass
+                                        if ent["name"] not in enemymapping:
+                                            continue
+                                            # if it's not in mapping it's not enabled
+                                        new_enemy = enemymapping[ent["name"]]
                                     elif enemymode == "Wild":
                                         new_enemy = self.pick_enemy_to_replace(old_enemy_object, enemies)
                                     if new_enemy == ent["name"]:
@@ -350,11 +439,17 @@ class KingdomHearts2:
                                 #             set_scaling[new_enemy] = []
                                 #         set_scaling[new_enemy].append(ent["name"])
 
+            if diagnostics:
+                end_time = time.time()
+                print("Randomization Complete: {}s".format(end_time-start_time))
             return {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters}
         raise Exception("Didn't randomize anything!")
 
     def generate_files(self, outdir='', randomization={}, outzip=[]):
         # Generates files in the zip folder and also returns the list of 
+        if diagnostics:
+            start_time = time.time()
+            print("Starting generation of files")
         if outdir:
             def _writeMethod(outfn, relfn, data):
                 if not os.path.isdir(os.path.dirname(outfn)):
@@ -407,11 +502,20 @@ class KingdomHearts2:
                                             vrs = obj["vars"]
 
                                             instance["Entities"][ent["index"]]["ObjectId"] = oid
-                                            instance["Entities"][ent["index"]]["SpawnArgument"] = vrs[0]
-                                            instance["Entities"][ent["index"]]["Argument1"] = vrs[1]
-                                            instance["Entities"][ent["index"]]["Argument2"] = vrs[2]
+                                            instance["Entities"][ent["index"]]["Argument1"] = vrs[0]
+                                            instance["Entities"][ent["index"]]["Argument2"] = vrs[1]
                         spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir, _writeMethod)
                         roomasset["source"].append(spasset)
+                    btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
+                    script = AreaDataScript(open(btlfn).read(), ispc=self.unlimited_memory)
+                    for p in script.programs:
+                        if script.has_capacity(p):
+                            if (not script.ispc) and (not script.has_mission(p)):
+                                # It's not a big deal if enemies fail to spawn properly in areas where you don't have a mission going on
+                                continue 
+                            script.update_program(p, HARDCAP)
+                            programasset = self.writeAreaDataProgram(ardname, "btl", p, script.get_program(p), outdir, _writeMethod)
+                            roomasset["source"].append(programasset)
                     assets.append(roomasset)
         if randomization.get("ai_mods", ""):
             for ai in randomization.get("ai_mods"):
@@ -463,7 +567,22 @@ class KingdomHearts2:
                     "source": [{"name": relfn}]
                 }
                 assets.append(asset)
+        if diagnostics:
+            end_time = time.time()
+            print("Files Generated: {}s".format(end_time-start_time))
         return assets
+
+    def writeAreaDataProgram(self, ardname, scripttype, programnumber, program, outdir, writeMethod):
+        filename = scripttype+"_"+str(programnumber)+".areadataprogram"
+        outfn = os.path.join(outdir, "files", ardname, filename)
+        fn = os.path.join("files", ardname, filename)
+        writeMethod(outfn, fn, program)
+        return {
+            "method": "areadatascript",
+            "name": scripttype,
+            "source": [{"name": fn}],
+            "type": "AreaDataScript"
+        }
 
     def getSpawnpoint(self, ardname, spawnpoint):
         with open(os.path.join(KH2_DIR, "subfiles", "spawn", "ard", ardname, "{}.spawn".format(spawnpoint))) as f:
@@ -479,7 +598,6 @@ class KingdomHearts2:
             "source": [{"name": fn}],
             "type": "AreaDataSpawn"
         }
-
     def lookupObject(self, name):
         return self.enemy_records[name]
 
@@ -505,7 +623,7 @@ class Randomizer:
             if key not in schema:
                 raise Exception("Option {} is not a valid option".format(key))
             else:
-                if options[key] not in schema[key]["possible_values"]:
+                if options[key] not in schema[key]["possible_values"] + schema[key]["hidden_values"]:
                     raise Exception("Option {}-{} is not found in valid options: {}".format(key, options[key], schema[key]))
     
     def _make_tmpdir(self):
@@ -593,12 +711,12 @@ class Randomizer:
         mod_yaml = game.generate_mod_basics(newname)
         moddir, rmmoddir = self._make_tmpdir()
         
-        # For icon generate an identicon based on the filename+game
         assets = game.generate_files(moddir, randomization)
         mod_yaml["assets"] = assets
         self._create_yaml(os.path.join(moddir, "mod.yml"), mod_yaml)
         
-        self._generate_images(fn, moddir)
+        if GENERATE_IDENTICON:
+            self._generate_images(fn, moddir)
 
         zipped = self._create_zip(moddir, fn)
 
@@ -667,7 +785,7 @@ class Randomizer:
 
 if __name__ == '__main__':
     mode = sys.argv[1]
-    # {"selected_boss": "Past Pete", "boss": "selected_boss"}
+    # run randomizer.py devgenerate "{\"enemy\": \"One to One\"}"
     options = sys.argv[2]
     if len(sys.argv) > 3:
         seed = sys.argv[3]
@@ -677,7 +795,8 @@ if __name__ == '__main__':
         options = json.loads(options)
 
     if mode.startswith("dev"):
-        moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
+        # moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
+        moddir = "C:\\Users\\Arcade\\Desktop\\git\\OpenKh\\OpenKh.Tools.ModsManager\\bin\\Debug\\net5.0-windows\\mods\\thundrio-kh"
         fn = "devmod"
         if os.path.exists(os.path.join(moddir, fn)):
             shutil.rmtree(os.path.join(moddir, fn))

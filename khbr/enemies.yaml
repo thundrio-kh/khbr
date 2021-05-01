@@ -1,207 +1,3 @@
-(B) ??? - Barriers from Storm Rider?:
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: B_MU130
-  obj_id: 721
-  size: 0
-  type: enemy
-  variations:
-    (B) ??? - Barriers from Storm Rider?:
-      vars:
-      - 1
-      - 0
-    (B) ??? - Barriers from Storm Rider? (1):
-      vars:
-      - 2
-      - 0
-(B) Large platform from TWTNW with pink spike:
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: B_EX350
-  obj_id: 2226
-  size: 0
-  type: enemy
-  variations:
-    (B) Large platform from TWTNW with pink spike:
-      vars:
-      - 0
-      - 0
-(EH) Bomb Bell B (FLY) (G_EX):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: EH_G_EX250_FLY
-  obj_id: 2285
-  size: 0
-  type: enemy
-  variations:
-    (EH) Bomb Bell B (FLY) (G_EX):
-      vars:
-      - 1
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (1):
-      vars:
-      - 8
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (2):
-      vars:
-      - 3
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (3):
-      vars:
-      - 4
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (4):
-      vars:
-      - 6
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (5):
-      vars:
-      - 2
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (6):
-      vars:
-      - 9
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (7):
-      vars:
-      - 7
-      - 0
-    (EH) Bomb Bell B (FLY) (G_EX) (8):
-      vars:
-      - 5
-      - 0
-(EH) Speeder B (G_EX):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: EH_G_EX290
-  obj_id: 2247
-  size: 0
-  type: enemy
-  variations:
-    (EH) Speeder B (G_EX):
-      vars:
-      - 3
-      - 0
-    (EH) Speeder B (G_EX) (1):
-      vars:
-      - 7
-      - 0
-    (EH) Speeder B (G_EX) (2):
-      vars:
-      - 1
-      - 0
-    (EH) Speeder B (G_EX) (3):
-      vars:
-      - 9
-      - 0
-    (EH) Speeder B (G_EX) (4):
-      vars:
-      - 2
-      - 0
-    (EH) Speeder B (G_EX) (5):
-      vars:
-      - 4
-      - 0
-    (EH) Speeder B (G_EX) (6):
-      vars:
-      - 8
-      - 0
-    (EH) Speeder B (G_EX) (7):
-      vars:
-      - 6
-      - 0
-    (EH) Speeder B (G_EX) (8):
-      vars:
-      - 5
-      - 0
-(EH) Spiked Roller B (G_EX):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: EH_G_EX320
-  obj_id: 2248
-  size: 0
-  type: enemy
-  variations:
-    (EH) Spiked Roller B (G_EX):
-      vars:
-      - 5
-      - 0
-    (EH) Spiked Roller B (G_EX) (1):
-      vars:
-      - 4
-      - 0
-    (EH) Spiked Roller B (G_EX) (2):
-      vars:
-      - 6
-      - 0
-    (EH) Spiked Roller B (G_EX) (3):
-      vars:
-      - 2
-      - 0
-    (EH) Spiked Roller B (G_EX) (4):
-      vars:
-      - 8
-      - 0
-    (EH) Spiked Roller B (G_EX) (5):
-      vars:
-      - 1
-      - 0
-    (EH) Spiked Roller B (G_EX) (6):
-      vars:
-      - 7
-      - 0
-    (EH) Spiked Roller B (G_EX) (7):
-      vars:
-      - 9
-      - 0
-(EH) Xemnas's dragon missile (G_EX):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: EH_G_EX120
-  obj_id: 2261
-  size: 0
-  type: enemy
-  variations:
-    (EH) Xemnas's dragon missile (G_EX):
-      vars:
-      - 0
-      - 0
-(F) ??? (WI):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: F_WI310
-  obj_id: 758
-  size: 0
-  type: enemy
-  variations:
-    (F) ??? (WI):
-      vars:
-      - 1
-      - 0
-    (F) ??? (WI) (1):
-      vars:
-      - 0
-      - 0
-(F) ??? - Path? Pyramid? Sparkle? (WI):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: F_WI000
-  obj_id: 344
-  size: 0
-  type: enemy
-  variations:
-    (F) ??? - Path? Pyramid? Sparkle? (WI):
-      vars:
-      - 0
-      - 0
 Bees ETC PO:
   enabled: false
   enmp_index: 999
@@ -215,7 +11,7 @@ Bees ETC PO:
       - 0
       - 3
 Bees TT PO:
-  enabled: true
+  enabled: false
   enmp_index: 999
   model: F_PO090_TT
   obj_id: 2138
@@ -223,36 +19,6 @@ Bees TT PO:
   type: enemy
   variations:
     Bees TT PO:
-      vars:
-      - 0
-      - 0
-(F) Shadow Stalker (Chandelier) (BB):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: F_BB050
-  obj_id: 644
-  size: 0
-  type: enemy
-  variations:
-    (F) Shadow Stalker (Chandelier) (BB):
-      vars:
-      - 1
-      - 0
-    (F) Shadow Stalker (Chandelier) (BB) (1):
-      vars:
-      - 0
-      - 0
-(F) Shadow Stalker (Columns) (BB):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: F_BB060
-  obj_id: 645
-  size: 0
-  type: enemy
-  variations:
-    (F) Shadow Stalker (Columns) (BB):
       vars:
       - 0
       - 0
@@ -291,6 +57,8 @@ Aeroplane:
   obj_id: 6
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Aeroplane:
       vars:
@@ -327,6 +95,8 @@ Bolt Tower (MU):
   obj_id: 2238
   size: 0
   type: enemy
+  tags:
+  - large
   variations:
     Bolt Tower (MU):
       vars:
@@ -339,6 +109,8 @@ Bolt Tower (RAW):
   obj_id: 1576
   size: 0
   type: enemy
+  tags:
+  - large
   variations:
     Bolt Tower (RAW):
       vars:
@@ -351,6 +123,8 @@ Bookmaster:
   obj_id: 5
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Bookmaster:
       vars:
@@ -363,6 +137,8 @@ Bookmaster (TR):
   obj_id: 1835
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Bookmaster (TR):
       vars:
@@ -407,20 +183,24 @@ Camo Cannon:
   obj_id: 2407
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Camo Cannon:
       vars:
       - 0
       - 0
-Cannon Gun:
+Cannon Gun WI:
   enabled: true
   enmp_index: 999
   model: M_EX650_TR
   obj_id: 1832
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
-    Cannon Gun:
+    Cannon Gun WI:
       vars:
       - 0
       - 0
@@ -467,6 +247,8 @@ Emerald Blues:
   obj_id: 72
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Emerald Blues:
       vars:
@@ -479,6 +261,8 @@ Emerald Blues (TR):
   obj_id: 1852
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Emerald Blues (TR):
       vars:
@@ -609,12 +393,14 @@ Hot Rod:
   obj_id: 13
   size: 0
   type: enemy
+  tags:
+  - large
   variations:
     Hot Rod:
       vars:
       - 0
       - 0
-Large Body:
+Large Body WI:
   enabled: true
   enmp_index: 999
   model: M_EX050_WI
@@ -622,72 +408,7 @@ Large Body:
   size: 0
   type: enemy
   variations:
-    Large Body:
-      vars:
-      - 0
-      - 0
-(M) Luxord's card (time?) (EX):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: B_EX210_EH
-  obj_id: 2286
-  size: 0
-  type: enemy
-  variations:
-    (M) Luxord's card (time?) (EX):
-      vars:
-      - 0
-      - 0
-(M) Magnum Loader (blue):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: M_EX600_LC_ATK
-  obj_id: 1717
-  size: 0
-  type: enemy
-  variations:
-    (M) Magnum Loader (blue):
-      vars:
-      - 0
-      - 0
-(M) Magnum Loader (green):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: M_EX600_LC_GRD
-  obj_id: 1719
-  size: 0
-  type: enemy
-  variations:
-    (M) Magnum Loader (green):
-      vars:
-      - 0
-      - 0
-(M) Magnum Loader (white):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: M_EX600_LC
-  obj_id: 1675
-  size: 0
-  type: enemy
-  variations:
-    (M) Magnum Loader (white):
-      vars:
-      - 0
-      - 0
-(M) Magnum Loader (yellow):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: M_EX600_LC_CHG
-  obj_id: 1718
-  size: 0
-  type: enemy
-  variations:
-    (M) Magnum Loader (yellow):
+    Large Body WI:
       vars:
       - 0
       - 0
@@ -764,13 +485,15 @@ Reckless:
   size: 0
   type: enemy
   isnightmare: true
+  tags:
+  - large
   variations:
     Reckless:
       vars:
       - 0
       - 0
 Scar Ghost:
-  enabled: false
+  enabled: false # Gives no XP so should not be in pool
   enmp_index: 999
   model: B_LK110_PHANTOM
   obj_id: 2099
@@ -816,6 +539,8 @@ Shaman:
   obj_id: 19
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Shaman:
       vars:
@@ -868,6 +593,8 @@ Surveillance Robot (1K Battle) (Disappears):
   obj_id: 1469
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     (M) Surveillance Robot (1K Battle) (Disappears):
       vars:
@@ -880,6 +607,8 @@ Surveillance Robot (TR):
   obj_id: 1847
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Surveillance Robot (TR):
       vars:
@@ -896,6 +625,8 @@ Toy Soldier:
   obj_id: 1776
   size: 0
   type: enemy
+  tags:
+  - large
   variations:
     Toy Soldier:
       vars:
@@ -989,7 +720,7 @@ Undead Pirate B:
       vars:
       - 92
       - 0
-(Undead Pirate C:
+Undead Pirate C:
   enabled: true
   enmp_index: 999
   model: B_CA040
@@ -997,6 +728,8 @@ Undead Pirate B:
   size: 0
   type: enemy
   isnightmare: true
+  tags:
+  - pirate
   variations:
     Undead Pirate C:
       vars:
@@ -1066,29 +799,8 @@ Wight Knight:
       vars:
       - 0
       - 0
-(N) Jafar clone (BTL) (AL):
-  remove_from_list: true
-  enabled: true
-  enmp_index: 999
-  model: N_AL070_BTL
-  obj_id: 1593
-  size: 0
-  type: enemy
-  variations:
-    (N) Jafar clone (BTL) (AL):
-      vars:
-      - 0
-      - 0
-    (N) Jafar clone (BTL) (AL) (1):
-      vars:
-      - 1
-      - 0
-    (N) Jafar clone (BTL) (AL) (2):
-      vars:
-      - 2
-      - 0
 Vivi (clones):
-  enabled: true
+  enabled: false # Gives no xp so should not be in pool
   enmp_index: 999
   model: N_EX610_BTL2
   obj_id: 2256
@@ -1136,6 +848,8 @@ Aeroplane WI:
   obj_id: 1828
   size: 245100
   type: enemy
+  tags:
+  - ranged
   variations:
     Aeroplane WI:
       vars:
@@ -1156,7 +870,7 @@ Air Pirate:
       vars:
       - 0
       - 0
-    Air Pirate (1):
+    Air Pirate (1 0):
       vars:
       - 1
       - 0
@@ -1196,7 +910,7 @@ Armored Knight:
       vars:
       - 0
       - 0
-    Armored Knight (1):
+    Armored Knight (90 0):
       vars:
       - 90
       - 0
@@ -1441,6 +1155,8 @@ Cannon Gun:
   obj_id: 14
   size: 280926
   type: enemy
+  tags:
+  - ranged
   variations:
     Cannon Gun:
       vars:
@@ -1539,17 +1255,18 @@ Crimson Jazz:
   size: 290842
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Crimson Jazz:
       vars:
       - 0
       - 0
-    Crimson Jazz (1):
+    Crimson Jazz (1 0):
       vars:
       - 1
       - 0
-    Crimson Jazz (2):
+    Crimson Jazz (Zipliner):
       vars:
       - 20
       - 0
@@ -1565,17 +1282,18 @@ Crimson Jazz AL:
   size: 285258
   tags:
   - al
+  - ranged
   type: enemy
   variations:
-    Crimson Jazz AL:
+    Crimson Jazz AL (8 1):
       vars:
       - 8
       - 1
-    Crimson Jazz AL (1):
+    Crimson Jazz AL (12 0):
       vars:
       - 12
       - 0
-    Crimson Jazz AL (2):
+    Crimson Jazz AL (4 0):
       vars:
       - 4
       - 0
@@ -1595,7 +1313,7 @@ Dancer:
       vars:
       - 0
       - 0
-    Dancer (1):
+    Dancer (99 0):
       vars:
       - 99
       - 0
@@ -1615,7 +1333,7 @@ Dark Thorn:
       vars:
       - 0
       - 0
-Data Axel:
+Axel (Data):
   enabled: true
   enmp_index: 221
   hp: 100
@@ -1627,11 +1345,11 @@ Data Axel:
   size: 2742180
   type: boss
   variations:
-    Data Axel:
+    Axel (Data):
       vars:
       - 0
       - 0
-Data Demyx:
+Demyx (Data):
   enabled: true
   enmp_index: 216
   hp: 100
@@ -1643,11 +1361,11 @@ Data Demyx:
   size: 3528528
   type: boss
   variations:
-    Data Demyx:
+    Demyx (Data):
       vars:
       - 1
       - 0
-Data Final Xemnas:
+Final Xemnas (Data):
   enabled: false
   enmp_index: 215
   hp: 100
@@ -1660,15 +1378,15 @@ Data Final Xemnas:
   size: 4538944
   type: boss
   variations:
-    Data Final Xemnas:
+    Final Xemnas (Clone) (Data):
       vars:
       - 0
       - 0
-    Data Final Xemnas (1):
+    Final Xemnas (Data):
       vars:
       - 1
       - 0
-Data Luxord:
+Luxord (Data):
   enabled: true
   enmp_index: 219
   hp: 100
@@ -1681,11 +1399,11 @@ Data Luxord:
   size: 3430732
   type: boss
   variations:
-    Data Luxord:
+    Luxord (Data):
       vars:
       - 0
       - 0
-Data Saix:
+Saix (Data):
   can_be_enemy: true
   enabled: true
   enmp_index: 228
@@ -1700,11 +1418,11 @@ Data Saix:
   size: 3559034
   type: boss
   variations:
-    Data Saix:
+    Saix (Data):
       vars:
       - 0
       - 0
-Data Xaldin:
+Xaldin (Data):
   enabled: true
   enmp_index: 222
   hp: 100
@@ -1717,11 +1435,11 @@ Data Xaldin:
   size: 2741808
   type: boss
   variations:
-    Data Xaldin:
+    Xaldin (Data):
       vars:
       - 0
       - 0
-Data Xemnas:
+Xemnas (Data):
   aimod: true
   can_be_enemy: true
   enabled: true
@@ -1736,11 +1454,11 @@ Data Xemnas:
   size: 2607964
   type: boss
   variations:
-    Data Xemnas:
+    Xemnas (Data):
       vars:
       - 0
       - 0
-Data Xigbar:
+Xigbar (Data):
   blacklist:
   - Grim Reaper 1
   - Twilight Thorn
@@ -1764,7 +1482,7 @@ Data Xigbar:
   size: 557240
   type: boss
   variations:
-    Data Xigbar:
+    Xigbar (Data):
       vars:
       - 0
       - 0
@@ -1823,31 +1541,20 @@ Devastator:
   size: 941282
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Devastator:
       vars:
       - 0
       - 0
-    Devastator (1):
+    Devastator (Ranged Start):
       vars:
       - 2
       - 0
-    Devastator (2):
+    Devastator (Ranged):
       vars:
       - 3
-      - 0
-Dragon Xemnas:
-  enabled: false
-  model: B_EX330
-  obj_id: 2189
-  replace_allowed: false
-  size: 2689964
-  type: boss
-  variations:
-    Dragon Xemnas:
-      vars:
-      - 0
       - 0
 Dragoon:
   enabled: true
@@ -1867,7 +1574,7 @@ Dragoon:
       vars:
       - 0
       - 0
-    Dragoon (1):
+    Dragoon (99 0):
       vars:
       - 99
       - 0
@@ -1916,7 +1623,7 @@ Dusk:
       vars:
       - 0
       - 0
-    Dusk (1):
+    Dusk (99 0):
       vars:
       - 99
       - 0
@@ -1964,17 +1671,18 @@ Fat Bandit:
   size: 551572
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Fat Bandit:
       vars:
       - 0
       - 0
-    Fat Bandit (1):
+    Fat Bandit (1 0):
       vars:
       - 1
       - 0
-    Fat Bandit (2):
+    Fat Bandit (Passive):
       vars:
       - 0
       - 1
@@ -2048,7 +1756,7 @@ Fortuneteller:
       vars:
       - 0
       - 0
-    Fortuneteller (1):
+    Fortuneteller (Zipliner):
       vars:
       - 20
       - 0
@@ -2067,19 +1775,19 @@ Gambler:
       vars:
       - 0
       - 0
-    Gambler (1):
+    Gambler (Summons Darkness):
       vars:
       - 1
       - 0
-    Gambler (2):
+    Gambler (5 0):
       vars:
       - 5
       - 0
-    Gambler (3):
+    Gambler (90 0):
       vars:
       - 90
       - 0
-    Gambler (4):
+    Gambler (99 0):
       vars:
       - 99
       - 0
@@ -2112,6 +1820,7 @@ Graveyard NM:
   size: 616628
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Graveyard NM:
@@ -2208,6 +1917,7 @@ Hades I:
   msn: LK05_MS101.bar
   obj_id: 349
   replace_allowed: false
+  replace_as: Hades Cups
   size: 929856
   type: boss
   variations:
@@ -2296,11 +2006,11 @@ Hook Bat:
   size: 296752
   type: enemy
   variations:
-    Hook Bat:
+    Hook Bat (20 0):
       vars:
       - 20
       - 0
-    Hook Bat (1):
+    Hook Bat:
       vars:
       - 0
       - 0
@@ -2316,79 +2026,79 @@ Hook Bat AL:
   - al
   type: enemy
   variations:
-    Hook Bat AL:
+    Hook Bat AL (3 0):
       vars:
       - 3
       - 0
-    Hook Bat AL (1):
+    Hook Bat AL (9 0):
       vars:
       - 9
       - 0
-    Hook Bat AL (10):
+    Hook Bat AL (4 0):
       vars:
       - 4
       - 0
-    Hook Bat AL (11):
+    Hook Bat AL (15 30):
       vars:
       - 15
       - 30
-    Hook Bat AL (12):
+    Hook Bat AL (1 31):
       vars:
       - 1
       - 31
-    Hook Bat AL (13):
+    Hook Bat AL (3 30):
       vars:
       - 3
       - 30
-    Hook Bat AL (14):
+    Hook Bat AL (8 32):
       vars:
       - 8
       - 32
-    Hook Bat AL (15):
+    Hook Bat AL (13 31):
       vars:
       - 13
       - 31
-    Hook Bat AL (16):
+    Hook Bat AL (2 0):
       vars:
       - 2
       - 0
-    Hook Bat AL (17):
+    Hook Bat AL (5 0):
       vars:
       - 5
       - 0
-    Hook Bat AL (18):
+    Hook Bat AL (6 0):
       vars:
       - 6
       - 0
-    Hook Bat AL (2):
+    Hook Bat AL (11 0):
       vars:
       - 11
       - 0
-    Hook Bat AL (3):
+    Hook Bat AL (1 0):
       vars:
       - 1
       - 0
-    Hook Bat AL (4):
+    Hook Bat AL (10 0):
       vars:
       - 10
       - 0
-    Hook Bat AL (5):
+    Hook Bat AL (14 0):
       vars:
       - 14
       - 0
-    Hook Bat AL (6):
+    Hook Bat AL (12 0):
       vars:
       - 12
       - 0
-    Hook Bat AL (7):
+    Hook Bat AL (13 0):
       vars:
       - 13
       - 0
-    Hook Bat AL (8):
+    Hook Bat AL (7 0):
       vars:
       - 7
       - 0
-    Hook Bat AL (9):
+    Hook Bat AL (3 20):
       vars:
       - 3
       - 20
@@ -2538,6 +2248,7 @@ Lance Soldier:
       - 0
       - 0
 Lance Warrior:
+  isnightmare: true
   enabled: true
   enmp_index: 209
   hp: 100
@@ -2645,7 +2356,6 @@ Living Bone:
   enabled: true
   enmp_index: 7
   hp: 100
-  isnightmare: true
   level: 99
   limiter: 17
   model: M_EX670
@@ -2656,14 +2366,20 @@ Living Bone:
   type: enemy
   variations:
     Living Bone:
+      isnightmare: true
       vars:
       - 0
       - 0
-    Living Bone (1):
+    Living Bone (Headless with Necromancer):
+      tags:
+      - ranged
       vars:
       - 1
       - 0
-    Living Bone (2):
+    Living Bone (Necromancer):
+      isnightmare: true
+      tags:
+      - ranged
       vars:
       - 2
       - 0
@@ -2699,7 +2415,7 @@ Luna Bandit:
       vars:
       - 0
       - 0
-    Luna Bandit (1):
+    Luna Bandit (1 0):
       vars:
       - 1
       - 0
@@ -2749,6 +2465,8 @@ Magic Phantom:
   obj_id: 2403
   size: 1020616
   type: enemy
+  tags:
+  - ranged
   variations:
     Magic Phantom:
       vars:
@@ -2806,7 +2524,7 @@ Minute Bomb:
       vars:
       - 0
       - 0
-    Minute Bomb (1):
+    Minute Bomb (99 0):
       vars:
       - 99
       - 0
@@ -2843,7 +2561,7 @@ Morning Star:
       vars:
       - 0
       - 0
-    Morning Star (1):
+    Morning Star (99 0):
       vars:
       - 99
       - 0
@@ -2857,6 +2575,8 @@ Necromancer:
   obj_id: 2411
   size: 698584
   type: enemy
+  tags:
+  - ranged
   variations:
     Necromancer:
       vars:
@@ -2877,51 +2597,7 @@ Nightwalker:
       vars:
       - 0
       - 0
-No. 11:
-  enabled: false
-  model: M_EX350_11
-  obj_id: 2352
-  size: 772142
-  type: enemy
-  variations:
-    No. 11:
-      vars:
-      - 0
-      - 0
-No. 4:
-  enabled: false
-  model: M_EX350_04
-  obj_id: 2345
-  size: 2644106
-  type: enemy
-  variations:
-    No. 4:
-      vars:
-      - 0
-      - 0
-No. 7:
-  enabled: false
-  model: M_EX350_07
-  obj_id: 2348
-  size: 809722
-  type: enemy
-  variations:
-    No. 7:
-      vars:
-      - 0
-      - 0
-No. 8:
-  enabled: false
-  model: M_EX350_08
-  obj_id: 2349
-  size: 797468
-  type: enemy
-  variations:
-    No. 8:
-      vars:
-      - 0
-      - 0
-Nobody from Final Battle v1:
+Bomb Bell A:
   enabled: false
   hp: 100
   level: 99
@@ -2932,7 +2608,7 @@ Nobody from Final Battle v1:
   size: 87118
   type: enemy
   variations:
-    Nobody from Final Battle v1:
+    Bomb Bell A:
       vars:
       - 0
       - 0
@@ -2951,17 +2627,6 @@ Oogie Boogie:
     Oogie Boogie:
       vars:
       - 1
-      - 0
-Oogie Terminal Dummy:
-  enabled: false
-  model: F_NM080
-  obj_id: 1003
-  size: 434622
-  type: extra
-  variations:
-    Oogie Terminal Dummy:
-      vars:
-      - 0
       - 0
 Past Pete:
   can_be_enemy: true
@@ -3032,7 +2697,7 @@ Pete OC II:
       - 0
       - 0
 Pete TR:
-  enabled: false
+  enabled: true
   hp: 100
   level: 99
   limiter: 20
@@ -3041,6 +2706,7 @@ Pete TR:
   obj_id: 359
   size: 968770
   type: boss
+  replace_as: Pete Cups
   variations:
     Pete TR:
       vars:
@@ -3073,19 +2739,19 @@ Rapid Thruster:
   size: 251012
   type: enemy
   variations:
-    Rapid Thruster:
+    Rapid Thruster (Zipliner):
       vars:
       - 20
       - 0
-    Rapid Thruster (1):
+    Rapid Thruster:
       vars:
       - 0
       - 0
-    Rapid Thruster (2):
+    Rapid Thruster (90 0):
       vars:
       - 90
       - 0
-    Rapid Thruster (3):
+    Rapid Thruster (1 0):
       vars:
       - 1
       - 0
@@ -3102,83 +2768,83 @@ Rapid Thruster AL:
   - al
   type: enemy
   variations:
-    Rapid Thruster AL:
+    Rapid Thruster AL (12 0):
       vars:
       - 12
       - 0
-    Rapid Thruster AL (1):
+    Rapid Thruster AL (13 0):
       vars:
       - 13
       - 0
-    Rapid Thruster AL (10):
+    Rapid Thruster AL (4 0):
       vars:
       - 4
       - 0
-    Rapid Thruster AL (11):
+    Rapid Thruster AL (9 0):
       vars:
       - 9
       - 0
-    Rapid Thruster AL (12):
+    Rapid Thruster AL (14 30):
       vars:
       - 14
       - 30
-    Rapid Thruster AL (13):
+    Rapid Thruster AL (8 30):
       vars:
       - 8
       - 30
-    Rapid Thruster AL (14):
+    Rapid Thruster AL (4 30):
       vars:
       - 4
       - 30
-    Rapid Thruster AL (15):
+    Rapid Thruster AL (12 32):
       vars:
       - 12
       - 32
-    Rapid Thruster AL (16):
+    Rapid Thruster AL (6 31):
       vars:
       - 6
       - 31
-    Rapid Thruster AL (17):
+    Rapid Thruster AL (10 31):
       vars:
       - 10
       - 31
-    Rapid Thruster AL (18):
+    Rapid Thruster AL (2 32):
       vars:
       - 2
       - 32
-    Rapid Thruster AL (19):
+    Rapid Thruster AL (2 0):
       vars:
       - 2
       - 0
-    Rapid Thruster AL (2):
+    Rapid Thruster AL (7 0):
       vars:
       - 7
       - 0
-    Rapid Thruster AL (3):
+    Rapid Thruster AL (14 0):
       vars:
       - 14
       - 0
-    Rapid Thruster AL (4):
+    Rapid Thruster AL (11 0):
       vars:
       - 11
       - 0
-    Rapid Thruster AL (5):
+    Rapid Thruster AL (5 0):
       vars:
       - 5
       - 0
-    Rapid Thruster AL (6):
+    Rapid Thruster AL (6 0):
       vars:
       - 6
       - 0
-    Rapid Thruster AL (7):
+    Rapid Thruster AL (12 17):
       vars:
       - 12
       - 17
-    Rapid Thruster AL (8):
+    Rapid Thruster AL (1 0):
       vars:
       - 1
       - 0
-    Rapid Thruster AL (9):
+    Rapid Thruster AL (3 0):
       vars:
       - 3
       - 0
@@ -3251,6 +2917,7 @@ Runemaster:
   size: 352940
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Runemaster:
@@ -3291,7 +2958,7 @@ Samurai:
       vars:
       - 0
       - 0
-    Samurai (1):
+    Samurai (99 0):
       vars:
       - 99
       - 0
@@ -3409,11 +3076,11 @@ Shadow:
       vars:
       - 0
       - 0
-    Shadow (1):
+    Shadow (1 0):
       vars:
       - 1
       - 0
-    Shadow (2):
+    Shadow (Aggressive):
       vars:
       - 99
       - 0
@@ -3513,12 +3180,14 @@ Silver Rock:
   obj_id: 71
   size: 212176
   type: enemy
+  tags:
+  - ranged
   variations:
     Silver Rock:
       vars:
       - 0
       - 0
-    Silver Rock (1):
+    Silver Rock (1 0):
       vars:
       - 1
       - 0
@@ -3533,6 +3202,8 @@ Sniper:
   obj_id: 311
   size: 547096
   type: enemy
+  tags:
+  - ranged
   variations:
     Sniper:
       vars:
@@ -3553,11 +3224,11 @@ Soldier:
       vars:
       - 0
       - 0
-    Soldier (1):
+    Soldier (1 0):
       vars:
       - 1
       - 0
-    Soldier (2):
+    Soldier (99 0):
       vars:
       - 99
       - 0
@@ -3588,6 +3259,7 @@ Sorcerer:
   size: 1741312
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Sorcerer:
@@ -3604,6 +3276,8 @@ Spring Metal:
   obj_id: 2412
   size: 186364
   type: enemy
+  tags:
+  - ranged
   variations:
     Spring Metal:
       vars:
@@ -3634,7 +3308,7 @@ Storm Rider:
   - Groundshaker
   - Cerberus
   - Terra
-Strafer:
+Strafer RAW:
   enabled: true
   enmp_index: 94
   hp: 100
@@ -3645,11 +3319,11 @@ Strafer:
   size: 363704
   type: enemy
   variations:
-    Strafer:
+    Strafer RAW (0 10):
       vars:
       - 0
       - 10
-    Strafer (1):
+    Strafer RAW:
       vars:
       - 0
       - 0
@@ -3663,6 +3337,8 @@ Surveillance Robot:
   obj_id: 306
   size: 369292
   type: enemy
+  tags:
+  - ranged
   variations:
     Surveillance Robot:
       vars:
@@ -3715,39 +3391,6 @@ The Experiment:
   type: boss
   variations:
     The Experiment:
-      vars:
-      - 0
-      - 0
-The Experiment Head:
-  enabled: false
-  model: B_NM110_HEAD
-  obj_id: 1808
-  size: 771246
-  type: extra
-  variations:
-    The Experiment Head:
-      vars:
-      - 0
-      - 0
-The Experiment Left Hand:
-  enabled: false
-  model: B_NM110_L_ARM
-  obj_id: 1809
-  size: 788874
-  type: extra
-  variations:
-    The Experiment Left Hand:
-      vars:
-      - 0
-      - 0
-The Experiment Right Hand:
-  enabled: false
-  model: B_NM110_R_ARM
-  obj_id: 1810
-  size: 767918
-  type: extra
-  variations:
-    The Experiment Right Hand:
       vars:
       - 0
       - 0
@@ -3819,6 +3462,7 @@ Toy Soldier NM:
   size: 614828
   tags:
   - large
+  - ranged
   type: enemy
   variations:
     Toy Soldier NM:
@@ -3835,6 +3479,8 @@ Trick Ghost:
   obj_id: 2
   size: 1020248
   type: enemy
+  tags:
+  - ranged
   variations:
     Trick Ghost:
       vars:
@@ -3918,7 +3564,6 @@ Volcano Lord:
     Volcano Lord (Cups):
       msn: unknown
       vars:
-      - 0
       - 1
       - 0
 Wight Knight NM:
