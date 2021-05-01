@@ -7,8 +7,8 @@ with open('README.md') as f:
 setup(
 	name = 'khbr',
 	packages = find_packages(),
-	package_data={'': ['data/ai_mods/*', '*.json']},
-	version = 0.51,
+	package_data={'': ['data/ai_mods/*', '*.json', '*.yaml']},
+	version = 0.52,
 	long_description = long_description,
 	long_description_content_type='text/markdown',
 	license = 'MIT',
