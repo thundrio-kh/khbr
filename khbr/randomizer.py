@@ -370,6 +370,9 @@ class KingdomHearts2:
                                     if not old_boss_object["replace_allowed"]:
                                         continue
                                     _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
+                                    # Actually I have to be a little careful about this to make sure they are added to end
+                                    for obj in new_boss_object["adds"]:
+                                        _add_spawn(newspawns, "new", self.enemy_records[obj])
                                     # Bosses don't have spawn limiters normally, so don't need to set them
                                     if old_boss_object["msn_replace_allowed"]:
                                         msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"] 
