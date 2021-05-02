@@ -9874,7 +9874,7 @@ Hollow Bastion:
           '64':
           - index: 3
             isboss: true
-            name: Data Larxene
+            name: Larxene
       b_82:
         size: 0
         sp_ids:
@@ -9888,21 +9888,21 @@ Hollow Bastion:
           '128':
           - index: 3
             isboss: true
-            name: Data Larxene (1)
+            name: Larxene (Data)
       b_84:
         size: 0
         sp_ids:
           '160':
           - index: 3
             isboss: true
-            name: Vexen
+            name: Vexen (Data)
       b_85:
         size: 0
         sp_ids:
           '192':
           - index: 3
             isboss: true
-            name: Vexen (1)
+            name: Vexen
   The Dark Depths:
     size: 5000000
     spawnpoints:
@@ -10116,14 +10116,14 @@ Hollow Bastion:
           '32':
           - index: 3
             isboss: true
-            name: Vexen
+            name: Vexen (Data)
       b_81:
         size: 0
         sp_ids:
           '64':
           - index: 3
             isboss: true
-            name: Vexen (1)
+            name: Vexen
   Transport to Remembrance:
     size: 5000000
     spawnpoints:
@@ -23795,7 +23795,7 @@ Twilight Town:
           '55':
           - index: 0
             isboss: true
-            name: Vexen (1)
+            name: Vexen
       b_99:
         size: 0
         sp_ids:

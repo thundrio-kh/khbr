@@ -1414,7 +1414,8 @@ Dark Thorn:
       - 0
       - 0
 Axel (Data):
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 221
   hp: 100
   level: 99
@@ -1453,7 +1454,8 @@ Axel (Data):
       - 0
       - 0
 Demyx (Data):
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 216
   hp: 100
   level: 99
@@ -1472,6 +1474,7 @@ Demyx (Data):
       - 0
 Final Xemnas (Data):
   enabled: false
+  replace_allowed: false
   enmp_index: 215
   hp: 100
   isnightmare: true
@@ -1500,7 +1503,8 @@ Final Xemnas (Data):
       - 1
       - 0
 Luxord (Data):
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 219
   hp: 100
   level: 99
@@ -1521,7 +1525,8 @@ Luxord (Data):
       - 0
 Saix (Data):
   can_be_enemy: true
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 228
   hp: 100
   isnightmare: true
@@ -1541,7 +1546,8 @@ Saix (Data):
       - 0
       - 0
 Xaldin (Data):
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 222
   hp: 100
   isnightmare: true
@@ -1562,7 +1568,8 @@ Xaldin (Data):
 Xemnas (Data):
   aimod: true
   can_be_enemy: true
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 215
   hp: 100
   isnightmare: true
@@ -1614,7 +1621,8 @@ Xigbar (Data):
   - Axel II # TELEPORTER
   - Axel (Data) # TELEPORTER
   - Armor Xemnas II # TELEPORTER
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 227
   hp: 100
   isnightmare: true
@@ -2584,11 +2592,13 @@ Larxene:
   - Axel (Data) # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   variations:
-    Data Larxene:
+    Larxene:
       vars:
       - 0
       - 1
-    Data Larxene (1):
+    Larxene (Data):
+      enabled: false
+      replace_allowed: false
       msn: HB33_FM_LAR_RE
       program: 148
       vars:
@@ -2654,6 +2664,8 @@ Lexaeus:
       - 0
       - 0
     Lexaeus (Data):
+      enabled: false
+      replace_allowed: false
       isnightmare: true
       msn: HB33_FM_LEX_RE
       program: 147
@@ -2821,6 +2833,8 @@ Marluxia:
       - 0
       - 0
     Marluxia (Data):
+      enabled: false
+      replace_allowed: false
       isnightmare: true
       msn: HB38_FM_MAR_RE
       program: 150
@@ -3272,6 +3286,8 @@ Roxas:
       - 0
       - 0
     Roxas (Data):
+      enabled: false
+      replace_allowed: false
       isnightmare: true
       msn: EH21_MS101_RE
       program: 99
@@ -3782,7 +3798,8 @@ Surveillance Robot:
       - 0
 Terra:
   can_be_enemy: true
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 220
   hp: 100
   isnightmare: true
@@ -3983,14 +4000,15 @@ Vexen:
   roomsize: 8.97
   type: boss
   variations:
-    # Data vexen
-    Vexen:
+    Vexen (Data):
+      enabled: false
+      replace_allowed: false
       program: 146
       msn: HB32_FM_VEX_RE
       vars:
       - 1
       - 1
-    Vexen (1):
+    Vexen:
       program: 115
       msn: HB32_FM_VEX
       vars:
@@ -4236,6 +4254,8 @@ Zexion:
       - 0
       - 0
     Zexion (Data):
+      enabled: false
+      replace_allowed: false
       program: 152
       msn: HB34_FM_ZEX_RE
       vars:
