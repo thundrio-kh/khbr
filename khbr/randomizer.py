@@ -122,10 +122,15 @@ class KingdomHearts2:
             "can_be_enemy": False,
             "msn": None,
             "size": 0,
+            "roomsize": 0,
             "enmp_index": None,
             "enabled": True,
             "blacklist": [],
-            "whitelist": []
+            "whitelist": [],
+            "adds": [],
+            "subtracts": [],
+            "msn_list": [],
+            "program": None
         }
         with open(os.path.join(os.path.dirname(__file__), "enemies.yaml")) as f:
             bosses_f = yaml.load(f, Loader=yaml.FullLoader)
