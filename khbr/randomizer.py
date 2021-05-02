@@ -12,7 +12,7 @@ KH2_DIR = os.environ["USE_KH2_GITPATH"]
 RANDOMIZATIONS_DIR = os.path.join(KH2_DIR,"randomizations") if os.path.exists(os.path.join(KH2_DIR,"randomizations")) else "randomizations"
 
 UNLIMITED_SIZE = 99_999_999_999_999
-LIMITED_SIZE = 10_000_000
+LIMITED_SIZE = 16.8 # Size of AX I Room 
 NUM_RANDOMIZATION_MAPPINGS = 9
 
 HARDCAP = "-3.3895395E+38"
@@ -122,7 +122,7 @@ class KingdomHearts2:
             "can_be_enemy": False,
             "msn": None,
             "size": 0,
-            "roomsize": 0,
+            "room_size": 0,
             "enmp_index": None,
             "enabled": True,
             "blacklist": [],
@@ -162,17 +162,17 @@ class KingdomHearts2:
         if getavail:
             locations = self.get_locations()
 
-            for w in locations:
-                world = locations[w]
-                for r in world:
-                    room = world[r]
-                    for sp in room["spawnpoints"]:
-                        spawnpoint = room["spawnpoints"][sp]
-                        for spid in spawnpoint["sp_ids"].values():
-                            for ent in spid:
-                                if ent["isboss"]:
-                                    if ent["name"] in bosses:
-                                        bosses[ent["name"]]["room_size"] = room["size"]
+            # for w in locations:
+            #     world = locations[w]
+            #     for r in world:
+            #         room = world[r]
+            #         for sp in room["spawnpoints"]:
+            #             spawnpoint = room["spawnpoints"][sp]
+            #             for spid in spawnpoint["sp_ids"].values():
+            #                 for ent in spid:
+            #                     if ent["isboss"]:
+            #                         if ent["name"] in bosses:
+            #                             bosses[ent["name"]]["room_size"] = room["size"]
             for b in bosses:
                 boss = bosses[b]
                 avail = [] # These are bosses that are allowed to be here
@@ -188,12 +188,12 @@ class KingdomHearts2:
                     if boss["whitelist"]:
                         if bc not in boss["whitelist"]:
                             continue
-                    else:
-                        if boss["msn_required"]:
-                            if not boss_check["msn_replace_allowed"]:
-                                continue
-                        if boss["size"] + boss_check["room_size"] >= maxsize:
+                    if boss["msn_required"]:
+                        if not boss_check["msn_replace_allowed"]:
                             continue
+                    print("{} > {}: {} + {} >= {}".format(boss["name"], boss_check["name"], boss["size"], boss_check["room_size"], maxsize))
+                    if boss["size"] + boss_check["room_size"] >= maxsize:
+                        continue
                     avail.append(boss_check["name"])
                 boss["available"] = avail
         return bosses
