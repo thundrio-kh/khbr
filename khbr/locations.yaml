@@ -8779,6 +8779,9 @@ Hollow Bastion:
             name: Zexion
   Ravine Trail:
     size: 5000000
+    ignored: true 
+    pc:
+      ignored: false
     spawnpoints:
       b_00:
         size: 0
