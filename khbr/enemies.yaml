@@ -1153,6 +1153,7 @@ Blizzard Lord:
       msn: AL03_MS103
       program: 59
       roomsize: 10.32
+      roomsizemultiplier: 0.5
       vars:
       - 0
       - 0
@@ -1272,6 +1273,7 @@ Cloud:
       program: 196
       msn: HE_COL_8_25
       roomsize: 9.14
+      roomsizemultiplier: 0.5
       vars:
       - 1
       - 0
@@ -1279,6 +1281,7 @@ Cloud:
       program: 196
       msn: HE_COL_8_40
       roomsize: 9.14
+      roomsizemultiplier: 0.5
       vars:
       - 2
       - 0
@@ -1286,6 +1289,7 @@ Cloud:
       program: 196
       msn: HE_COL_8_49
       roomsize: 9.14
+      roomsizemultiplier: 0.25
       vars:
       - 3
       - 0
@@ -2620,6 +2624,7 @@ Leon:
       program: 189
       msn: HE_COL_1_10
       roomsize: 9.14
+      roomsizemultiplier: 0.5
       vars:
       - 1
       - 0
@@ -2627,6 +2632,7 @@ Leon:
       program: 196
       msn: HE_COL_8_40
       roomsize: 9.14
+      roomsizemultiplier: 0.5
       vars:
       - 3
       - 0
@@ -2634,6 +2640,7 @@ Leon:
       program: 196
       msn: HE_COL_8_49
       roomsize: 9.14
+      roomsizemultiplier: 0.25
       vars:
       - 4
       - 0
@@ -2641,6 +2648,7 @@ Leon:
       program: 193
       msn: HE_COL_5_10
       roomsize: 9.14
+      roomsizemultiplier: 0.5
       vars:
       - 2
       - 0
@@ -3900,6 +3908,7 @@ Tifa:
       program: 196
       msn: HE_COL_8_10
       roomsize: 9.14
+      roomsizemultiplier: 0.5
       can_be_enemy: true
       vars:
       - 1
@@ -3908,6 +3917,7 @@ Tifa:
       program: 196
       msn: HE_COL_8_25
       roomsize: 9.14
+      roomsizemultiplier: 0.5
       vars:
       - 2
       - 0
@@ -3915,6 +3925,7 @@ Tifa:
       program: 196
       msn: HE_COL_8_49
       roomsize: 9.14
+      roomsizemultiplier: 0.25
       vars:
       - 3
       - 0
@@ -4052,6 +4063,7 @@ Volcano Lord:
       msn: AL03_MS103
       program: 59
       roomsize: 10.32
+      roomsizemultiplier: 0.5
       vars:
       - 0
       - 0
@@ -4184,7 +4196,8 @@ Yuffie:
       can_be_enemy: true
       program: 189
       msn: HE_COL_1_10
-      roomsize: 0.95
+      roomsize: 9.14
+      roomsizemultiplier: 0.5
       vars:
       - 1
       - 0
@@ -4192,6 +4205,7 @@ Yuffie:
       program: 196
       msn: HE_COL_8_10
       roomsize: 9.14
+      roomsizemultiplier: 0.5
       size: 0.95
       vars:
       - 3
@@ -4200,6 +4214,7 @@ Yuffie:
       program: 196
       msn: HE_COL_8_49
       roomsize: 9.14
+      roomsizemultiplier: 0.25
       vars:
       - 4
       - 0
@@ -4207,6 +4222,7 @@ Yuffie:
       program: 193
       msn: HE_COL_5_10
       roomsize: 9.14
+      roomsizemultiplier: 0.5
       vars:
       - 2
       - 0
