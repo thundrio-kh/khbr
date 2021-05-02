@@ -2100,14 +2100,14 @@ Hades Cups:
   - Axel (Data) # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   variations:
-    msn_list:
-    - program: 192
-      msn: HE_COL_4_10
-      roomsize: 9.14
-    - program: 196
-      msn: HE_COL_8_30
-      roomsize: 9.14
     Hades Cups:
+      msn_list:
+      - program: 192
+        msn: HE_COL_4_10
+        roomsize: 9.14
+      - program: 196
+        msn: HE_COL_8_30
+        roomsize: 9.14
       vars:
       - 0
       - 0
