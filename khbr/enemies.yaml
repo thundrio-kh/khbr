@@ -993,6 +993,29 @@ Axel II:
   size: 3.74
   obj_id: 81
   type: boss
+  blacklist:
+  - Xemnas I # TELEPORTER
+  - Xemnas I (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Axel II:
       vars:
@@ -1403,6 +1426,27 @@ Axel (Data):
   roomsize: 3.65
   obj_id: 2500
   type: boss
+  blacklist:
+  - Xemnas I # TELEPORTER
+  - Xemnas I (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Axel (Data):
       vars:
@@ -1548,6 +1592,28 @@ Xigbar (Data):
   - Roxas
   - Roxas (Data)
   - Prison Keeper
+  - Xemnas I # TELEPORTER
+  - Xemnas I (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   enabled: true
   enmp_index: 227
   hp: 100
@@ -1592,6 +1658,7 @@ Demyx OC:
   limiter: 0
   model: B_EX120
   msn: HE17_MS105
+  replace_allowed: false
   obj_id: 795
   size: 2.74
   roomsize: 9.09
@@ -1997,6 +2064,29 @@ Hades Cups:
   obj_id: 2318
   size: 3.14
   type: boss
+  blacklist:
+  - Xemnas I # TELEPORTER
+  - Xemnas I (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     msn_list:
     - program: 192
@@ -2018,6 +2108,7 @@ Hades Escape:
   limiter: 34
   model: B_HE030_HE05
   msn: HE05_MS102
+  replace_allowed: false
   msn_replace_allowed: false
   obj_id: 2066
   replace_as: Hades Cups
@@ -2050,7 +2141,7 @@ Hades I:
       - 0
       - 0
 Hades II:
-  enabled: false
+  enabled: true
   enmp_index: 18
   hp: 100
   level: 99
@@ -2073,6 +2164,9 @@ Hades II:
       - program: 201
         msn: HE19_MS204
         roomsize: 8.23
+        enabled: false
+        msn_replace_allowed: false
+        replace_allowed: false
       - program: 202
         msn: HE19_MS205
         roomsize: 10.73
@@ -2466,6 +2560,29 @@ Larxene:
   size: 5.35
   roomsize: 8.3
   type: boss
+  blacklist:
+  - Xemnas I # TELEPORTER
+  - Xemnas I (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Data Larxene:
       vars:
@@ -3125,6 +3242,29 @@ Roxas:
   size: 5.85
   roomsize: 5.83
   type: boss
+  blacklist:
+  - Xemnas I # TELEPORTER
+  - Xemnas I (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Roxas:
       msn: EH21_MS101
@@ -3242,6 +3382,7 @@ Seifer:
   limiter: 0
   model: N_EX570_BTL
   obj_id: 1656
+  msn_replace_allowed: false
   size: 0.98
   type: boss
   variations:
@@ -3308,6 +3449,7 @@ Setzer:
   limiter: 0
   model: N_EX600_BTL
   obj_id: 2095
+  msn_replace_allowed: false
   size: 1.35
   type: boss
   variations:
@@ -3969,6 +4111,28 @@ Xigbar:
   - Roxas
   - Roxas (Data)
   - Prison Keeper
+  - Xemnas I # TELEPORTER
+  - Xemnas I (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   enabled: true
   enmp_index: 123
   hp: 100
@@ -4041,6 +4205,29 @@ Zexion:
   size: 4.44
   roomsize: 9.14
   type: boss
+  blacklist:
+  - Xemnas I # TELEPORTER
+  - Xemnas I (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Zexion:
       program: 151
