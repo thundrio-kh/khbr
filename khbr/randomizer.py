@@ -130,7 +130,8 @@ class KingdomHearts2:
             "adds": [],
             "subtracts": [],
             "msn_list": [],
-            "program": None
+            "program": None,
+            "roomsizemultiplier": 1
         }
         with open(os.path.join(os.path.dirname(__file__), "enemies.yaml")) as f:
             bosses_f = yaml.load(f, Loader=yaml.FullLoader)
@@ -191,8 +192,10 @@ class KingdomHearts2:
                     if boss["msn_required"]:
                         if not boss_check["msn_replace_allowed"]:
                             continue
-                    print("{} > {}: {} + {} >= {}".format(boss["name"], boss_check["name"], boss["size"], boss_check["room_size"], maxsize))
-                    if boss["size"] + boss_check["room_size"] >= maxsize:
+                    #print("{} > {}: {} + {} >= {}".format(boss["name"], boss_check["name"], boss["size"], boss_check["room_size"], maxsize))
+                    availablespace = (maxsize - boss_check["room_size"]) * boss["roomsizemultiplier"]
+                    #print("{} - {} ({}) >= 0".format(availablespace, boss["size"], availablespace - boss["size"]))
+                    if availablespace - boss["size"] < 0:
                         continue
                     avail.append(boss_check["name"])
                 boss["available"] = avail
