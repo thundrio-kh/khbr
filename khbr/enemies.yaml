@@ -2069,6 +2069,7 @@ Hades II:
   model: B_HE030
   obj_id: 350
   replace_as: Hades Cups
+  size: 3.15
   type: boss
   variations:
     Hades II:
@@ -2076,6 +2077,14 @@ Hades II:
       - 1
       - 0
     Hades II (1):
+      msn_list:
+      - program: 201
+        msn: HE19_MS204
+        roomsize: 8.23
+      - program: 202
+        msn: HE19_MS205
+        roomsize: 10.73
+  
       vars:
       - 0
       - 0
@@ -2101,13 +2110,19 @@ Hayner:
   level: 99
   limiter: 0
   model: N_EX500_BTL
-  msn: TT05_MS401
   msn_replace_allowed: false
   obj_id: 1239
-  size: 791734
+  size: 0.84
   type: boss
   variations:
     Hayner:
+      msn_list:
+      - program: 182
+        msn: TT04_MS00
+        roomsize: 7.61
+      - program: 84
+        msn: TT05_MS401
+        roomsize: 11.57
       vars:
       - 0
       - 0
@@ -3305,12 +3320,18 @@ Setzer:
   level: 99
   limiter: 0
   model: N_EX600_BTL
-  msn: TT05_MS405
   obj_id: 2095
-  size: 1330656
+  size: 1.35
   type: boss
   variations:
     Setzer:
+      msn_list:
+      - program: 183
+        msn: TT04_MS01
+        roomsize: 6.68
+      - program: 88
+        msn: TT05_MS405
+        roomsize: 11.56
       vars:
       - 0
       - 0
@@ -3383,10 +3404,16 @@ Shan-Yu:
   level: 99
   limiter: 34
   model: B_MU100
-  msn: MU_09_MS108
-  msn_replace_allowed: false
+  msn: MU09_MS108
   obj_id: 21
-  size: 2631800
+  size: 4.64
+  roomsize: 10.15
+  program: 75
+  adds:
+  - ObjectId: 22 # Hayabusa
+  - ObjectId: 10 # nightwalkers, this might not work as an add, test
+  subtracts:
+  - ObjectId: 733 # Door most likely
   type: boss
   variations:
     Shan-Yu:
@@ -3680,8 +3707,17 @@ The Experiment:
   model: B_NM110
   msn: NM07_MS204
   obj_id: 1488
-  size: 3549978
+  size: 1.82
+  roomsize: 11.7
+  program: 64
   type: boss
+  # these might need to be adds or something different
+  # I'm also not including them in the size calculation, which might be wrong
+  # i am including in the roomsize calc
+  subtracts:
+  - ObjectId: 1808 # Head
+  - ObjectId: 1809 # Left Hand
+  - ObjectId: 1810 # Right Hand
   variations:
     The Experiment:
       vars:
