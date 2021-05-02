@@ -69,6 +69,13 @@ class AreaDataScript:
             if "Mission" in line:
                 return True
         return False
+    def get_mission(self, number):
+        if not self.has_mission(number):
+            return None
+        program = self.get_program(number)
+        for line in program.split("\n"):
+            if "Mission" in line:
+                return line.split(" ")[-1]
 
 class KingdomHearts2:
     def __init__(self):
@@ -316,7 +323,8 @@ class KingdomHearts2:
             enemymapping = None
             if bossmode:
                 bossmapping = self.pickbossmapping(bosses, category) if not duplicate_bosses else None
-            enemymapping = self.pickenemymapping(enemies)
+            if enemies:
+                enemymapping = self.pickenemymapping(enemies)
             spawns = self.get_locations()
             newspawns = {}
             spawn_limiters = {}
@@ -336,6 +344,7 @@ class KingdomHearts2:
                     if enemies and enemymode == "One to One Per Room":
                         enemymapping = self.pickenemymapping(enemies)
                     for sp in room["spawnpoints"]:
+                        changesmade=False
                         spawnpoint = room["spawnpoints"][sp]
                         if "pc" in spawnpoint and self.unlimited_memory:
                             for k in spawnpoint["pc"]:
@@ -385,6 +394,7 @@ class KingdomHearts2:
                                     old_boss_object = self.enemy_records[ent["name"]]
                                     if not old_boss_object["replace_allowed"]:
                                         continue
+                                    changesmade = True
                                     _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
                                     # Bosses don't have spawn limiters normally, so don't need to set them
                                     if old_boss_object["msn_replace_allowed"]:
@@ -420,7 +430,7 @@ class KingdomHearts2:
                                         new_enemy = self.pick_enemy_to_replace(old_enemy_object, enemies)
                                     if new_enemy == ent["name"]:
                                         continue
-                                    
+                                    changesmade = True
                                     new_enemy_object = self.enemy_records[new_enemy]
                                     
                                     _add_spawn(newspawns, _get_new_ent(ent, new_enemy_object))
@@ -438,7 +448,11 @@ class KingdomHearts2:
                                 #         if new_enemy not in set_scaling:
                                 #             set_scaling[new_enemy] = []
                                 #         set_scaling[new_enemy].append(ent["name"])
-
+                        if changesmade:
+                            if "msn_replacement" in spawnpoint and spawnpoint["msn_replacement"]:
+                                oldmsn = spawnpoint["msn_replacement"]["original"]
+                                newmsn = spawnpoint["msn_replacement"]["new"]
+                                msn_mapping[oldmsn] = newmsn
             if diagnostics:
                 end_time = time.time()
                 print("Randomization Complete: {}s".format(end_time-start_time))
@@ -510,9 +524,12 @@ class KingdomHearts2:
                     script = AreaDataScript(open(btlfn).read(), ispc=self.unlimited_memory)
                     for p in script.programs:
                         if script.has_capacity(p):
-                            if (not script.ispc) and (not script.has_mission(p)):
+                            mission = script.get_mission(p)
+                            if (not script.ispc) and (not mission):
                                 # It's not a big deal if enemies fail to spawn properly in areas where you don't have a mission going on
                                 continue 
+                            if mission == "\"MU02_MS103B\"":
+                                continue # Ambush has some serious issues related to cost
                             script.update_program(p, HARDCAP)
                             programasset = self.writeAreaDataProgram(ardname, "btl", p, script.get_program(p), outdir, _writeMethod)
                             roomasset["source"].append(programasset)
@@ -794,6 +811,11 @@ if __name__ == '__main__':
     if options[0] == "{":
         options = json.loads(options)
 
+    if "randomization_only" in sys.argv:
+        randomization_only = True
+    else:
+        randomization_only = False
+
     if mode.startswith("dev"):
         # moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
         moddir = "C:\\Users\\Arcade\\Desktop\\git\\OpenKh\\OpenKh.Tools.ModsManager\\bin\\Debug\\net5.0-windows\\mods\\thundrio-kh"
@@ -810,4 +832,4 @@ if __name__ == '__main__':
     if mode == "read":
         b64 = rando.read_seed("kh2", seedfn=options, outfn=fn)
     else:
-        b64 = rando.generate_seed("kh2", options, seed=seed)
+        b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=randomization_only)
