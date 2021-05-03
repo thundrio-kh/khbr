@@ -125,7 +125,7 @@ class KingdomHearts2:
             #                     "possible_values": [True, False], "hidden_values": []},
 
             "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. Selected Boss will replace every boss with a single selected boss.",
-                                "possible_values": ["Disabled", "One to One", "Selected Boss", "Wild"], "hidden_values": []},#, "one_to_one_characters",
+                                "possible_values": ["Disabled", "Wild", "Selected Boss"], "hidden_values": ["One to One"]},#, "one_to_one_characters",
             "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game.",
                                 "possible_values": [False, True], "hidden_values": []},
             # "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
@@ -429,7 +429,7 @@ class KingdomHearts2:
                                         _add_to_subtract_map(subtract_map, obj)
                                     # Bosses don't have spawn limiters normally, so don't need to set them
                                     if old_boss_object["msn_replace_allowed"]:
-                                        msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"] 
+                                        msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"]
                                     if scale_boss:
                                         if new_boss not in set_scaling:
                                             hp = old_boss_object["hp"]
@@ -568,7 +568,6 @@ class KingdomHearts2:
                             if randomization.get("subtract_map", ""):
                                 # This is a pretty bad way to do this, tbh
                                 try:
-                                    print(world,room,spawnpoint)
                                     entities_to_remove = randomization.get("subtract_map")[w][room]["spawnpoints"][spawnpoint]  
                                 except:
                                     # No entities to remove for this spawnpoint

@@ -1491,6 +1491,7 @@ Final Xemnas (Data):
   program: 98
   size: 6.28
   room_size: 8.94
+  roomsizemultiplier: 0.5
   subtracts:
   - ObjectId: 2258 # electrified sora
   - ObjectId: 2506 # clone of
@@ -1898,6 +1899,7 @@ Final Xemnas:
   level: 99
   limiter: 0
   model: B_EX170_LAST
+  roomsizemultiplier: 0.5
   msn: EH20_MS113
   program: 74
   size: 6.29
