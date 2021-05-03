@@ -890,9 +890,9 @@ Armor Xemnas:
       replace_as: Armor Xemnas I
       size: 1.7
       room_size: 9.23
-      subtracts:
-      - ObjectId: 1766 # building
-      - ObjectId: 1895 # dragon
+      # subtracts: The subtracts get handled by the roommodedits
+      # - ObjectId: 1766 # building
+      # - ObjectId: 1895 # dragon
       vars:
       - 0
       - 0

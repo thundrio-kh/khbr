@@ -21711,6 +21711,10 @@ The World That Never Was:
             isboss: true
             name: Final Xemnas (Data)
   The World of Nothing 23:
+    roommodedits:
+      b_99: ax2_99 # characters
+      b_40: ax2_40 # buildings
+      m_50: ax2_50 # dragon
     size: 5000000
     spawnpoints:
       b_97:
