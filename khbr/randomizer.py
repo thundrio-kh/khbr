@@ -516,10 +516,11 @@ class KingdomHearts2:
                 with open(os.path.join(KH2_DIR, "subfiles", "bdx", "obj",  aifn), "rb") as f:
                     data = bytearray(f.read())
                 for mod in edits:
-                    data[mod["offset"]] = int(mod["value"][:2], 16)
-                    data[mod["offset"]+1] = int(mod["value"][2:4], 16)
-                    data[mod["offset"]+2] = int(mod["value"][4:6], 16)
-                    data[mod["offset"]+3] = int(mod["value"][6:8], 16)
+                    # They have to be reversed
+                    data[mod["offset"]+3] = int(mod["value"][:2], 16)
+                    data[mod["offset"]+2] = int(mod["value"][2:4], 16)
+                    data[mod["offset"]+1] = int(mod["value"][4:6], 16)
+                    data[mod["offset"]] = int(mod["value"][6:8], 16)
                 relfn = os.path.join("files", "ai", aifn)
                 outfn = os.path.join(outdir, relfn)
                 enemy = self.enemy_records[ai]
@@ -530,7 +531,7 @@ class KingdomHearts2:
                     "source": [
                         {
                             "method": "copy",
-                            "name": aifn.split(".")[0],
+                            "name": os.path.basename(aifn).split(".")[0],
                             "source": [{"name": relfn}],
                             "type": "Bdx"
                         }
@@ -800,5 +801,5 @@ if __name__ == '__main__':
     if mode == "read":
         b64 = rando.read_seed("kh2", seedfn=options, outfn=fn)
     else:
-        b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=True)
-        print(b64)
+        b64 = rando.generate_seed("kh2", options, seed=seed)
+        
