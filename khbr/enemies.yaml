@@ -882,16 +882,32 @@ Armor Xemnas:
   limiter: 0
   model: B_EX260
   obj_id: 2140
-  size: 1150276
   type: boss
   variations:
     Armor Xemnas II:
       msn: EH23_MS112
+      program: 73
+      replace_as: Armor Xemnas I
+      size: 1.7
+      room_size: 9.23
+      # subtracts: The subtracts get handled by the roommodedits
+      # - ObjectId: 1766 # building
+      # - ObjectId: 1895 # dragon
       vars:
       - 0
       - 0
     Armor Xemnas I:
       msn: EH24_MS110
+      program: 71
+      size: 3.82
+      room_size: 12.98
+      adds:
+      - ObjectId: 2116 # ???
+      - ObjectId: 2115 # Xig
+      - ObjectId: 2117 # xaldin
+      - ObjectId: 2118 # Axel
+        Argument1: 1
+      - ObjectId: 2294 # dancers
       vars:
       - 1
       - 0
@@ -953,9 +969,11 @@ Axel I:
   level: 99
   limiter: 0
   model: B_EX110_SKIRMISH
-  msn: TT05_AXEL
+  msn: TT05_MS404
+  program: 87
+  room_size: 9.43
+  size: 2.92
   obj_id: 2229
-  size: 1879368
   type: boss
   variations:
     Axel I:
@@ -970,9 +988,34 @@ Axel II:
   limiter: 34
   model: B_EX110
   msn: TT20_MS603
+  program: 137
+  room_size: 3.68
+  size: 3.74
   obj_id: 81
-  size: 2741104
   type: boss
+  blacklist:
+  - Xemnas # TELEPORTER
+  - Xemnas (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Axel II:
       vars:
@@ -985,23 +1028,29 @@ Banzai:
   level: 99
   limiter: 0
   model: B_LK100_10
-  msn: LK05_MS101.bar
   obj_id: 666
   replace_allowed: false
-  size: 699684
   type: boss
   variations:
     Banzai:
+      program: 51
+      msn: LK02_MS102
+      size: 0.56
+      room_size: 8.2
       vars:
       - 0
       - 0
     Banzai (1):
+      program: 57
+      msn: LK05_MS201
+      size: 0.56
+      room_size: 8.46
       vars:
       - 2
       - 0
 Barbossa:
   adds:
-  - name: Illuminator
+  - ObjectId: 358 #Illuminator
   enabled: false
   enmp_index: 92
   hp: 100
@@ -1009,8 +1058,10 @@ Barbossa:
   limiter: 0
   model: B_CA010
   msn: CA10_MS107
+  program: 60
+  size: 3.95
+  room_size: 11.84
   obj_id: 1015
-  size: 3175016
   type: boss
   variations:
     Barbossa:
@@ -1024,10 +1075,12 @@ Barrel:
   level: 99
   limiter: 0
   model: N_NM070_BTL
-  msn: LK05_MS101.bar
+  msn: NM10_MS201
+  program: 62
+  size: 1.32
+  room_size: 11.39
   obj_id: 129
   replace_allowed: false
-  size: 1006700
   type: boss
   variations:
     Barrel:
@@ -1091,18 +1144,23 @@ Blizzard Lord:
   model: B_AL100_ICE
   msn_replace_allowed: false
   obj_id: 1036
-  size: 1191968
+  size: 2.58
   tags:
   - large
   type: boss
   variations:
     Blizzard Lord:
       msn: AL03_MS103
+      program: 59
+      room_size: 10.32
+      room_sizemultiplier: 0.5
       vars:
       - 0
       - 0
     Blizzard Lord (Cups):
-      msn: unknown
+      msn: HE_COL_8TI_BOSS
+      program: 196
+      room_size: 9.14
       vars:
       - 1
       - 0
@@ -1173,18 +1231,30 @@ Cerberus:
   level: 99
   limiter: 0
   model: B_HE020
-  msn: LK05_MS101.bar
   obj_id: 351
-  size: 2494584
+  size: 3.2
   type: boss
   variations:
     Cerberus:
       msn: HE07_MS103
+      program: 114
+      room_size: 10.54
       vars:
       - 0
       - 0
     Cerberus (Cups):
-      msn: unknown
+      enabled: false
+      replace_allowed: false
+      msn_list:
+      - program: 194
+        msn: HE_COL_2_10
+        room_size: 6.19
+      - program: 196
+        msn: HE_COLOSSEUM_8_ONLY
+        room_size: 9.14
+      - program: 190
+        msn: HE_COL_2_10
+        room_size: 6.19
       msn_replace_allowed: false
       vars:
       - 1
@@ -1196,21 +1266,32 @@ Cloud:
   level: 99
   limiter: 0
   model: N_HB550_BTL2
-  msn: unknown
   msn_replace_allowed: false
   obj_id: 2297
-  size: 1642502
+  size: 1.9
   type: boss
   variations:
     Cloud:
+      program: 196
+      msn: HE_COL_8_25
+      room_size: 9.14
+      room_sizemultiplier: 0.5
       vars:
       - 1
       - 0
     Cloud (1):
+      program: 196
+      msn: HE_COL_8_40
+      room_size: 9.14
+      room_sizemultiplier: 0.5
       vars:
       - 2
       - 0
     Cloud (2):
+      program: 196
+      msn: HE_COL_8_49
+      room_size: 9.14
+      room_sizemultiplier: 0.25
       vars:
       - 3
       - 0
@@ -1325,8 +1406,13 @@ Dark Thorn:
   limiter: 0
   model: B_BB110
   msn: BB05_MS104B
+  program: 79
+  size: 4.19
+  room_size: 11.1
+  adds:
+  - ObjectId: 644 # chandelier
+    modPositionY: -1500
   obj_id: 354
-  size: 2177276
   type: boss
   variations:
     Dark Thorn:
@@ -1334,31 +1420,58 @@ Dark Thorn:
       - 0
       - 0
 Axel (Data):
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 221
   hp: 100
   level: 99
   limiter: 34
   model: B_EX110_LV99
   msn: TT20_MS603_RE
+  program: 213
+  size: 3.74
+  room_size: 3.65
   obj_id: 2500
-  size: 2742180
   type: boss
+  blacklist:
+  - Xemnas # TELEPORTER
+  - Xemnas (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Axel (Data):
       vars:
       - 0
       - 0
 Demyx (Data):
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 216
   hp: 100
   level: 99
   limiter: 0
   model: B_EX120_HB_LV99
-  msn: HB04_MS403
+  msn: HB04_MS403_RE
+  program: 114
+  size: 4.07
+  room_size: 10.62
   obj_id: 2508
-  size: 3528528
   type: boss
   variations:
     Demyx (Data):
@@ -1367,6 +1480,7 @@ Demyx (Data):
       - 0
 Final Xemnas (Data):
   enabled: false
+  replace_allowed: false
   enmp_index: 215
   hp: 100
   isnightmare: true
@@ -1374,11 +1488,20 @@ Final Xemnas (Data):
   limiter: 0
   model: B_EX170_LAST_LV99
   msn: EH20_MS113_RE
+  program: 98
+  size: 6.28
+  room_size: 8.94
+  roomsizemultiplier: 0.5
+  subtracts:
+  - ObjectId: 2258 # electrified sora
+  - ObjectId: 2506 # clone of
+    Argument1: 0
+    Argument2: 0
   obj_id: 2506
-  size: 4538944
   type: boss
   variations:
     Final Xemnas (Clone) (Data):
+      replace_allowed: false
       vars:
       - 0
       - 0
@@ -1387,13 +1510,17 @@ Final Xemnas (Data):
       - 1
       - 0
 Luxord (Data):
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 219
   hp: 100
   level: 99
   limiter: 0
   model: B_EX150_LV99
-  msn: EH14_MS103
+  msn: EH14_MS103_RE
+  program: 101
+  size: 4.64
+  room_size: 11.89
   msn_required: true
   obj_id: 2504
   size: 3430732
@@ -1405,17 +1532,20 @@ Luxord (Data):
       - 0
 Saix (Data):
   can_be_enemy: true
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 228
   hp: 100
   isnightmare: true
   level: 99
   limiter: 0
   model: B_EX160_LV99
-  msn: EH15_MS104
+  msn: EH15_MS104_RE
+  program: 102
+  size: 4.55
+  room_size: 10.30
   msn_required: true
   obj_id: 2502
-  size: 3559034
   type: boss
   variations:
     Saix (Data):
@@ -1423,7 +1553,8 @@ Saix (Data):
       - 0
       - 0
 Xaldin (Data):
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 222
   hp: 100
   isnightmare: true
@@ -1432,7 +1563,9 @@ Xaldin (Data):
   model: B_EX130_LV99
   msn: BB15_MS203_RE
   obj_id: 2507
-  size: 2741808
+  size: 3.63
+  program: 97
+  room_size: 9.61
   type: boss
   variations:
     Xaldin (Data):
@@ -1442,16 +1575,19 @@ Xaldin (Data):
 Xemnas (Data):
   aimod: true
   can_be_enemy: true
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 215
   hp: 100
   isnightmare: true
   level: 99
   limiter: 0
   model: B_EX170_LV99
-  msn: EH19_MS105
+  msn: EH19_MS105_RE
   obj_id: 2505
-  size: 2607964
+  size: 3.7
+  room_size: 6.16
+  program: 97
   type: boss
   variations:
     Xemnas (Data):
@@ -1470,16 +1606,41 @@ Xigbar (Data):
   - Roxas
   - Roxas (Data)
   - Prison Keeper
-  enabled: true
+  - Xemnas # TELEPORTER
+  - Xemnas (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
+  enabled: false
+  replace_allowed: false
   enmp_index: 227
   hp: 100
   isnightmare: true
   level: 99
   limiter: 0
   model: B_EX140_LV99
-  msn: EH10_MS102
+  msn: EH10_MS102_RE
   obj_id: 2501
-  size: 557240
+  size: 3.19
+  program: 100
+  room_size: 11.09
   type: boss
   variations:
     Xigbar (Data):
@@ -1496,7 +1657,9 @@ Demyx:
   msn: HB04_MS403
   msn_required: true
   obj_id: 2295
-  size: 3527072
+  size: 4.07
+  room_size: 10.62
+  program: 55
   type: boss
   variations:
     Demyx:
@@ -1510,8 +1673,11 @@ Demyx OC:
   limiter: 0
   model: B_EX120
   msn: HE17_MS105
+  replace_allowed: false
   obj_id: 795
-  size: 2132546
+  size: 2.74
+  room_size: 9.09
+  program: 123
   type: boss
   variations:
     Demyx OC:
@@ -1634,17 +1800,25 @@ Ed:
   level: 99
   limiter: 0
   model: B_LK100_20
-  msn: LK05_MS101.bar
   obj_id: 667
   replace_allowed: false
-  size: 700580
   type: boss
   variations:
     Ed:
+      program: 51
+      world: lk
+      msn: LK02_MS102
+      size: 0.56
+      room_size: 8.2
       vars:
       - 0
       - 0
     Ed (1):
+      program: 57
+      world: lk
+      msn: LK05_MS201
+      size: 0.56
+      room_size: 8.46
       vars:
       - 1
       - 0
@@ -1725,10 +1899,18 @@ Final Xemnas:
   level: 99
   limiter: 0
   model: B_EX170_LAST
+  roomsizemultiplier: 0.5
   msn: EH20_MS113
+  program: 74
+  size: 6.29
+  room_size: 8.92
+  subtracts:
+  - ObjectId: 2258 # electrified sora
+  - ObjectId: 2079 # clone of
+    Argument1: 0
+    Argument2: 0
   msn_replace_allowed: false
   obj_id: 2079
-  size: 4536360
   type: boss
   variations:
     Final Xemnas:
@@ -1797,11 +1979,14 @@ Giant Sark:
   hp: 100
   level: 99
   limiter: 0
+  replace_allowed: false
   model: N_TR010_BTL_L
-  msn: LK05_MS101.bar
+  msn: TR09_MS205
+  size: 1.41
+  program: 59
+  room_size: 10.35
   msn_replace_allowed: false
   obj_id: 964
-  size: 933824
   type: boss
   variations:
     Giant Sark:
@@ -1835,12 +2020,14 @@ Grim Reaper:
   limiter: 0
   model: B_CA050
   obj_id: 1543
-  size: 1499488
   type: boss
   variations:
     Grim Reaper I:
       can_be_enemy: true
       msn: CA18_MS202
+      program: 85
+      size: 2.35
+      room_size: 12.61
       tags:
       - large
       vars:
@@ -1850,7 +2037,14 @@ Grim Reaper:
       enabled: false
       isnightmare: true
       msn: CA01_MS204
+      program: 54
+      size: 2.58
+      room_size: 12.12
       requires_msn: true
+      adds:
+      - ObjectId: 1740 # chest
+      - ObjectId: 2200 # medallions, try the gambler version
+        Medal: 123
       vars:
       - 0
       - 0
@@ -1863,7 +2057,11 @@ Groundshaker:
   model: B_LK120
   msn: LK15_MS202
   obj_id: 1113
-  size: 3078386
+  size: 4.25
+  room_size: 6.15
+  subtracts:
+  - ObjectId: 1884
+  program: 59
   type: boss
   variations:
     Groundshaker:
@@ -1878,13 +2076,44 @@ Hades Cups:
   level: 99
   limiter: 34
   model: B_HE030_CLSM
-  msn: unknown
   msn_replace_allowed: false
   obj_id: 2318
-  size: 2347708
+  size: 3.14
   type: boss
+  blacklist:
+  - Xemnas # TELEPORTER
+  - Xemnas (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Hades Cups:
+      enabled: false
+      replace_allowed: false
+      msn_list:
+      - program: 192
+        msn: HE_COL_4_10
+        room_size: 9.14
+      - program: 196
+        msn: HE_COL_8_30
+        room_size: 9.14
       vars:
       - 0
       - 0
@@ -1897,10 +2126,13 @@ Hades Escape:
   limiter: 34
   model: B_HE030_HE05
   msn: HE05_MS102
+  replace_allowed: false
   msn_replace_allowed: false
   obj_id: 2066
   replace_as: Hades Cups
-  size: 1422564
+  size: 2.26
+  program: 111
+  room_size: 14.21
   type: boss
   variations:
     Hades Escape:
@@ -1914,11 +2146,10 @@ Hades I:
   level: 99
   limiter: 34
   model: B_HE030_PART
-  msn: LK05_MS101.bar
+  msn: HE06_MS101
   obj_id: 349
   replace_allowed: false
   replace_as: Hades Cups
-  size: 929856
   type: boss
   variations:
     Hades I:
@@ -1926,23 +2157,37 @@ Hades I:
       - 0
       - 0
 Hades II:
-  enabled: false
+  enabled: true
   enmp_index: 18
   hp: 100
   level: 99
   limiter: 0
   model: B_HE030
-  msn: unknown
   obj_id: 350
   replace_as: Hades Cups
-  size: 2351052
+  size: 3.15
   type: boss
   variations:
     Hades II:
+      program: 196
+      msn: HE_COL_8_50
+      room_size: 9.14
       vars:
       - 1
       - 0
     Hades II (1):
+      enabled: false
+      replace_allowed: false
+      msn_list:
+      - program: 201
+        msn: HE19_MS204
+        room_size: 8.23
+        enabled: false
+        msn_replace_allowed: false
+        replace_allowed: false
+      - program: 202
+        msn: HE19_MS205
+        room_size: 10.73
       vars:
       - 0
       - 0
@@ -1968,13 +2213,21 @@ Hayner:
   level: 99
   limiter: 0
   model: N_EX500_BTL
-  msn: TT05_MS401
   msn_replace_allowed: false
   obj_id: 1239
-  size: 791734
+  size: 0.84
   type: boss
   variations:
     Hayner:
+      enabled: false
+      replace_allowed: false
+      msn_list:
+      - program: 182
+        msn: TT04_MS00
+        room_size: 7.61
+      - program: 84
+        msn: TT05_MS401
+        room_size: 11.57
       vars:
       - 0
       - 0
@@ -1986,13 +2239,21 @@ Hercules:
   level: 99
   limiter: 17
   model: N_HE010_BTL_CLSM
-  msn: unknown
   msn_replace_allowed: false
   obj_id: 2320
-  size: 2280296
+  size: 2.48
   type: boss
   variations:
     Hercules:
+      enabled: false
+      replace_allowed: false
+      msn_list:
+      - program: 191
+        msn: HE_COLOSSEUM_3
+        room_size: 6.19
+      - program: 195
+        msn: HE_COLOSSEUM_7
+        room_size: 6.19
       vars:
       - 1
       - 0
@@ -2110,9 +2371,14 @@ Hostile Program:
   limiter: 0
   model: B_TR000
   msn: TR04_MS104
+  program: 55
+  world: tr
   msn_required: true
   obj_id: 1208
-  size: 1276992
+  size: 2.37
+  room_size: 9.16
+  adds:
+  - ObjectId: 1867 # tr prize
   type: boss
   variations:
     Hostile Program:
@@ -2138,7 +2404,19 @@ Hot Rod WI:
       - 0
       - 0
 Hydra:
-  enabled: false
+  enabled: true
+  whitelist:
+  - Armor Xemnas II
+  - Groundshaker
+  - Xemnas
+  - Xemnas (Data)
+  - Final Xemnas
+  - Final Xemnas (Data)
+  - Dark Thorn
+  - Shadow Stalker
+  - Storm Rider
+  - Cerberus
+  - Terra
   enmp_index: 20
   hp: 100
   level: 99
@@ -2146,7 +2424,17 @@ Hydra:
   model: B_HE100
   msn: HE18_MS108
   obj_id: 352
-  size: 2417732
+  size: 5.7
+  room_size: 10.22
+  program: 171
+  adds:
+  - ObjectId: 922 # hydra head
+    modPositionY: 1500
+  - ObjectId: 801 # yellow orb
+    Argument1: 99
+  - ObjectId: 364 # phil
+    Argument1: 1
+  - ObjectId: 363 # pegasus
   type: boss
   variations:
     Hydra:
@@ -2190,10 +2478,8 @@ Illuminator:
   level: 99
   limiter: 0
   model: B_CA000
-  msn: LK05_MS101.bar
   obj_id: 358
   replace_allowed: false
-  size: 258308
   type: boss
   variations:
     Illuminator:
@@ -2222,10 +2508,12 @@ Jafar:
   level: 99
   limiter: 0
   model: B_AL020
-  msn: LK05_MS101.bar
+  msn: AL05_MS203
+  program: 62
+  size: 1.86
+  room_size: 11.19
   obj_id: 348
   replace_allowed: false
-  size: 1017964
   type: boss
   variations:
     Jafar:
@@ -2289,15 +2577,44 @@ Larxene:
   limiter: 0
   model: B_EX400
   msn: HB33_FM_LAR
+  program: 143
   obj_id: 2402
-  size: 4443212
+  size: 5.35
+  room_size: 8.3
   type: boss
+  blacklist:
+  - Xemnas # TELEPORTER
+  - Xemnas (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
-    Data Larxene:
+    Larxene:
       vars:
       - 0
       - 1
-    Data Larxene (1):
+    Larxene (Data):
+      enabled: false
+      replace_allowed: false
+      msn: HB33_FM_LAR_RE
+      program: 148
       vars:
       - 0
       - 0
@@ -2308,25 +2625,40 @@ Leon:
   level: 99
   limiter: 0
   model: N_HB530_BTL2
-  msn: unknown
   msn_replace_allowed: false
   obj_id: 2296
-  size: 1278612
+  size: 1.67
   type: boss
   variations:
     Leon:
+      program: 189
+      msn: HE_COL_1_10
+      room_size: 9.14
+      room_sizemultiplier: 0.5
       vars:
       - 1
       - 0
     Leon (1):
+      program: 196
+      msn: HE_COL_8_40
+      room_size: 9.14
+      room_sizemultiplier: 0.5
       vars:
       - 3
       - 0
     Leon (2):
+      program: 196
+      msn: HE_COL_8_49
+      room_size: 9.14
+      room_sizemultiplier: 0.25
       vars:
       - 4
       - 0
     Leon (3):
+      program: 193
+      msn: HE_COL_5_10
+      room_size: 9.14
+      room_sizemultiplier: 0.5
       vars:
       - 2
       - 0
@@ -2338,9 +2670,11 @@ Lexaeus:
   limiter: 0
   model: N_CM020_BTL
   msn: HB33_FM_LEX
+  program: 142
+  room_size: 8.36
   msn_required: true
   obj_id: 2357
-  size: 2359752
+  size: 3.9
   type: boss
   variations:
     Lexaeus:
@@ -2348,7 +2682,11 @@ Lexaeus:
       - 0
       - 0
     Lexaeus (Data):
+      enabled: false
+      replace_allowed: false
       isnightmare: true
+      msn: HB33_FM_LEX_RE
+      program: 147
       vars:
       - 0
       - 1
@@ -2390,10 +2728,12 @@ Lock:
   level: 99
   limiter: 0
   model: N_NM050_BTL
-  msn: LK05_MS101.bar
+  msn: NM10_MS201
+  program: 62
+  size: 0.92
+  room_size: 11.39
   obj_id: 127
   replace_allowed: false
-  size: 599504
   type: boss
   variations:
     Lock:
@@ -2429,7 +2769,11 @@ Luxord:
   msn: EH14_MS103
   msn_required: true
   obj_id: 1528
-  size: 3429892
+  size: 4.67
+  room_size: 7.25
+  program: 58
+  adds:
+  - ObjectId: 2224 # ???
   type: boss
   variations:
     Luxord:
@@ -2497,7 +2841,9 @@ Marluxia:
   model: N_CM000_BTL
   msn: HB38_FM_MAR
   obj_id: 2339
-  size: 3252168
+  size: 4.57
+  room_size: 7.96
+  program: 145
   type: boss
   variations:
     Marluxia:
@@ -2505,7 +2851,11 @@ Marluxia:
       - 0
       - 0
     Marluxia (Data):
+      enabled: false
+      replace_allowed: false
       isnightmare: true
+      msn: HB38_FM_MAR_RE
+      program: 150
       vars:
       - 0
       - 1
@@ -2621,7 +2971,14 @@ Oogie Boogie:
   model: B_NM000
   msn: NM09_MS104
   obj_id: 126
-  size: 2223500
+  program: 55
+  size: 2.79
+  room_size: 12.41
+  adds:
+  - ObjectId: 969 # ???
+  - ObjectId: 1604 # oogies punch
+  - ObjectId: 928 # ???
+  - ObjectId: 1003 # present box
   type: boss
   variations:
     Oogie Boogie:
@@ -2638,7 +2995,9 @@ Past Pete:
   model: N_WI010_BTL_VS
   msn: WI01_MS101
   obj_id: 1607
-  size: 896764
+  size: 0.43
+  room_size: 11.16
+  program: 58
   type: boss
   variations:
     Past Pete:
@@ -2652,10 +3011,11 @@ Pete Cups:
   level: 99
   limiter: 20
   model: N_EX760_BTL_CLSM
-  msn: unknown
+  msn: HE_COL_8TI_BOSS
   msn_replace_allowed: false
   obj_id: 2319
-  size: 1022460
+  size: 1.57
+  program: 196
   type: boss
   variations:
     Pete Cups:
@@ -2672,7 +3032,9 @@ Pete OC I:
   msn: HE08_MS106
   obj_id: 1723
   replace_allowed: false
-  size: 1022804
+  size: 1.57
+  program: 115
+  room_size: 10.48
   type: boss
   variations:
     Pete OC I:
@@ -2689,7 +3051,9 @@ Pete OC II:
   msn: HE08_MS107
   msn_replace_allowed: false
   obj_id: 1724
-  size: 1022968
+  size: 1.57
+  room_size: 13.53
+  program: 116
   type: boss
   variations:
     Pete OC II:
@@ -2698,13 +3062,21 @@ Pete OC II:
       - 0
 Pete TR:
   enabled: true
+  replace_as: Pete Cups
   hp: 100
   level: 99
   limiter: 20
   model: N_EX760_BTL
   msn: WI03_MS104
   obj_id: 359
-  size: 968770
+  adds:
+  - ObjectId: 1758 # cannon tower
+  - ObjectId: 1759 # building sites platform
+  - ObjectId: 1612 # burning building
+  - ObjectId: 1610 # ???
+  size: 3.68
+  room_size: 12.16
+  program: 53
   type: boss
   replace_as: Pete Cups
   variations:
@@ -2721,7 +3093,13 @@ Prison Keeper:
   model: B_NM100
   msn: NM03_MS103
   obj_id: 1486
-  size: 2314684
+  size: 3.87
+  room_size: 9.21
+  program: 52
+  adds:
+  - ObjectId: 992 # lock
+  - ObjectId: 993 # shock
+  - ObjectId: 994 # barrel
   type: boss
   variations:
     Prison Keeper:
@@ -2864,7 +3242,8 @@ Rapid Thruster WI:
       - 0
       - 0
 Riku:
-  enabled: false
+  aimod: true
+  enabled: true
   enmp_index: 120
   hp: 100
   level: 99
@@ -2874,7 +3253,9 @@ Riku:
   msn_replace_allowed: false
   obj_id: 1596
   replace_allowed: false
-  size: 755026
+  size: 1.22
+  program: 76
+  room_size: 8.62
   type: boss
   variations:
     Riku:
@@ -2891,8 +3272,33 @@ Roxas:
   model: B_EX390
   msn: EH21_MS101
   obj_id: 2385
-  size: 3373592
+  program: 65
+  size: 5.85
+  room_size: 5.83
   type: boss
+  blacklist:
+  - Xemnas # TELEPORTER
+  - Xemnas (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Roxas:
       msn: EH21_MS101
@@ -2900,8 +3306,11 @@ Roxas:
       - 0
       - 0
     Roxas (Data):
+      enabled: false
+      replace_allowed: false
       isnightmare: true
-      msn: EH15_MS104
+      msn: EH21_MS101_RE
+      program: 99
       vars:
       - 0
       - 1
@@ -2933,9 +3342,11 @@ Saix:
   limiter: 0
   model: B_EX160
   msn: EH15_MS104
+  program: 56
+  size: 4.54
+  room_size: 10.30
   msn_required: true
   obj_id: 1737
-  size: 3557686
   type: boss
   variations:
     Saix:
@@ -2971,7 +3382,9 @@ Sark:
   model: N_TR010_BTL
   msn: TR09_MS204
   obj_id: 862
-  size: 956092
+  size: 1.22
+  room_size: 9.9
+  program: 58
   type: boss
   variations:
     Sark:
@@ -2988,7 +3401,9 @@ Scar:
   model: B_LK110
   msn: LK14_MS103
   obj_id: 668
-  size: 1196392
+  size: 1.63
+  room_size: 6.34
+  program: 55
   type: boss
   variations:
     Scar:
@@ -3003,27 +3418,42 @@ Seifer:
   limiter: 0
   model: N_EX570_BTL
   obj_id: 1656
-  size: 939680
+  msn_replace_allowed: false
+  size: 0.98
   type: boss
   variations:
     Seifer:
+      program: 180
+      msn: TT03_MS400
+      room_size: 6.3
       vars:
       - 3
       - 0
     Seifer (1):
       msn: TT04_MS107
+      program: 77
+      room_size: 7.2
       vars:
       - 1
       - 0
     Seifer (2):
+      msn: TT04_MS108
+      program: 78
+      room_size: 7.77
       vars:
       - 2
       - 0
     Seifer (3):
+      msn: TT04_MS500
+      program: 181
+      room_size: 6.10
       vars:
       - 4
       - 0
     Seifer (4):
+      msn: TT04_MS02
+      program: 184
+      room_size: 7.91
       vars:
       - 5
       - 0
@@ -3038,7 +3468,9 @@ Sephiroth:
   model: N_HB630
   msn: HB01_MS601
   obj_id: 2230
-  size: 2485952
+  size: 3.89
+  program: 75
+  room_size: 6.57
   type: boss
   variations:
     Sephiroth:
@@ -3052,12 +3484,19 @@ Setzer:
   level: 99
   limiter: 0
   model: N_EX600_BTL
-  msn: TT05_MS405
   obj_id: 2095
-  size: 1330656
+  msn_replace_allowed: false
+  size: 1.35
   type: boss
   variations:
     Setzer:
+      msn_list:
+      - program: 183
+        msn: TT04_MS01
+        room_size: 6.68
+      - program: 88
+        msn: TT05_MS405
+        room_size: 11.56
       vars:
       - 0
       - 0
@@ -3093,7 +3532,13 @@ Shadow Stalker:
   model: B_BB120
   msn: BB05_MS104A
   obj_id: 355
-  size: 887908
+  size: 4.28
+  room_size: 11.15
+  program: 78
+  adds:
+  - ObjectId: 646 # ground trap
+  - ObjectId: 645 # columns
+  - ObjectId: 644 # chandelier
   type: boss
   variations:
     Shadow Stalker:
@@ -3123,10 +3568,16 @@ Shan-Yu:
   level: 99
   limiter: 34
   model: B_MU100
-  msn: MU_09_MS108
-  msn_replace_allowed: false
+  msn: MU09_MS108
   obj_id: 21
-  size: 2631800
+  size: 4.64
+  room_size: 10.15
+  program: 75
+  adds:
+  - ObjectId: 22 # Hayabusa
+  - ObjectId: 10 # nightwalkers, this might not work as an add, test
+  subtracts:
+  - ObjectId: 733 # Door most likely
   type: boss
   variations:
     Shan-Yu:
@@ -3140,17 +3591,26 @@ Shenzie:
   level: 99
   limiter: 0
   model: B_LK100_00
-  msn: LK05_MS101.bar
   obj_id: 665
   replace_allowed: false
   size: 799588
   type: boss
   variations:
     Shenzie:
+      program: 51
+      world: lk
+      msn: LK02_MS102
+      size: 0.56
+      room_size: 8.2
       vars:
       - 0
       - 0
     Shenzie (1):
+      program: 57
+      world: lk
+      msn: LK05_MS201
+      size: 0.96
+      room_size: 8.46
       vars:
       - 3
       - 0
@@ -3161,7 +3621,10 @@ Shock:
   level: 99
   limiter: 0
   model: N_NM060_BTL
-  msn: LK05_MS101.bar
+  msn: NM10_MS201
+  program: 62
+  size: 1.3
+  room_size: 11.39
   obj_id: 128
   replace_allowed: false
   size: 977672
@@ -3292,7 +3755,13 @@ Storm Rider:
   model: B_MU120
   msn: MU08_MS204
   obj_id: 357
-  size: 2006116
+  size: 3.03
+  program: 79
+  room_size: 9.27
+  subtracts:
+  - ObjectId: 721 # Should probably be an add, but needs more testing
+  adds:
+  - ObjectId: 1111 # Wind
   type: boss
   variations:
     Storm Rider:
@@ -3300,12 +3769,15 @@ Storm Rider:
       - 0
       - 0
   whitelist:
-  - Final Xemnas
-  - Final Xemnas (Data)
   - Armor Xemnas II
+  - Groundshaker
   - Xemnas
   - Xemnas (Data)
-  - Groundshaker
+  - Final Xemnas
+  - Final Xemnas (Data)
+  - Dark Thorn
+  - Shadow Stalker
+  - Storm Rider
   - Cerberus
   - Terra
 Strafer RAW:
@@ -3346,7 +3818,8 @@ Surveillance Robot:
       - 0
 Terra:
   can_be_enemy: true
-  enabled: true
+  enabled: false
+  replace_allowed: false
   enmp_index: 220
   hp: 100
   isnightmare: true
@@ -3355,7 +3828,9 @@ Terra:
   model: B_EX420
   msn: DC07_FM_NAZO
   obj_id: 2415
-  size: 2854684
+  size: 5.38
+  room_size: 8.6
+  program: 73
   type: boss
   variations:
     Terra:
@@ -3363,15 +3838,21 @@ Terra:
       - 0
       - 0
 The Beast:
-  enabled: true
+  enabled: false
   enmp_index: 72
   hp: 100
   level: 99
   limiter: 0
+  msn_required: true
   model: P_BB000_BTL
   msn: BB03_MS103
   obj_id: 718
-  size: 1657608
+  size: 2.57
+  program: 69
+  room_size: 12.07
+  adds:
+  - ObjectId: 31 # cogsworth
+    dontSub: true
   type: boss
   variations:
     The Beast:
@@ -3387,8 +3868,17 @@ The Experiment:
   model: B_NM110
   msn: NM07_MS204
   obj_id: 1488
-  size: 3549978
+  size: 1.82
+  room_size: 11.7
+  program: 64
   type: boss
+  # these might need to be adds or something different
+  # I'm also not including them in the size calculation, which might be wrong
+  # i am including in the room_size calc
+  subtracts:
+  - ObjectId: 1808 # Head
+  - ObjectId: 1809 # Left Hand
+  - ObjectId: 1810 # Right Hand
   variations:
     The Experiment:
       vars:
@@ -3403,7 +3893,11 @@ Thresholder:
   model: B_BB100
   msn: BB11_MS102
   obj_id: 353
-  size: 1426680
+  size: 2.17
+  room_size: 12.13
+  adds:
+  - ObjectId: 356 # possessor
+  program: 72
   type: boss
   variations:
     Thresholder:
@@ -3417,22 +3911,33 @@ Tifa:
   level: 99
   limiter: 0
   model: N_HB570_BTL2
-  msn: unknown
   msn_replace_allowed: false
   obj_id: 2298
-  size: 1053854
+  size: 1.32
   type: boss
   variations:
     Tifa:
+      program: 196
+      msn: HE_COL_8_10
+      room_size: 9.14
+      room_sizemultiplier: 0.5
       can_be_enemy: true
       vars:
       - 1
       - 0
     Tifa (1):
+      program: 196
+      msn: HE_COL_8_25
+      room_size: 9.14
+      room_sizemultiplier: 0.5
       vars:
       - 2
       - 0
     Tifa (2):
+      program: 196
+      msn: HE_COL_8_49
+      room_size: 9.14
+      room_sizemultiplier: 0.25
       vars:
       - 3
       - 0
@@ -3496,7 +4001,9 @@ Twilight Thorn:
   model: B_EX100
   msn: TT34_MS304
   obj_id: 307
-  size: 3691716
+  size: 4.91
+  room_size: 3.93
+  program: 157
   type: boss
   variations:
     Twilight Thorn:
@@ -3510,17 +4017,23 @@ Vexen:
   level: 99
   limiter: 0
   model: N_CM040_BTL
-  msn: HB33_FM_VEX
   msn_required: true
   obj_id: 2355
-  size: 4708244
+  size: 6.22
+  room_size: 8.97
   type: boss
   variations:
-    Vexen:
+    Vexen (Data):
+      enabled: false
+      replace_allowed: false
+      program: 146
+      msn: HB32_FM_VEX_RE
       vars:
       - 1
       - 1
-    Vexen (1):
+    Vexen:
+      program: 115
+      msn: HB32_FM_VEX
       vars:
       - 1
       - 0
@@ -3534,7 +4047,9 @@ Vivi:
   msn: TT05_MS402
   msn_replace_allowed: false
   obj_id: 2156
-  size: 882418
+  size: 1.02
+  room_size: 11.57
+  program: 85
   type: boss
   variations:
     Vivi:
@@ -3549,20 +4064,25 @@ Volcano Lord:
   level: 99
   limiter: 0
   model: B_AL100_FIRE
-  msn: AL03_MS103
   msn_replace_allowed: false
   obj_id: 1035
-  size: 1720178
+  size: 2.23
   tags:
   - large
   type: boss
   variations:
     Volcano Lord:
+      msn: AL03_MS103
+      program: 59
+      room_size: 10.32
+      room_sizemultiplier: 0.5
       vars:
       - 0
       - 0
     Volcano Lord (Cups):
-      msn: unknown
+      msn: HE_COL_8_5
+      program: 196
+      room_size: 9.14
       vars:
       - 1
       - 0
@@ -3591,7 +4111,9 @@ Xaldin:
   model: B_EX130
   msn: BB15_MS203
   obj_id: 997
-  size: 2741336
+  size: 3.63
+  program: 82
+  room_size: 9.61
   type: boss
   variations:
     Xaldin:
@@ -3610,7 +4132,9 @@ Xemnas:
   model: B_EX170
   msn: EH19_MS105
   obj_id: 1606
-  size: 2607408
+  size: 3.7
+  room_size: 6.16
+  program: 59
   type: boss
   variations:
     Xemnas:
@@ -3629,6 +4153,28 @@ Xigbar:
   - Roxas
   - Roxas (Data)
   - Prison Keeper
+  - Xemnas # TELEPORTER
+  - Xemnas (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   enabled: true
   enmp_index: 123
   hp: 100
@@ -3637,7 +4183,9 @@ Xigbar:
   model: B_EX140
   msn: EH10_MS102
   obj_id: 1570
-  size: 2061008
+  size: 3.19
+  program: 57
+  room_size: 11.18
   type: boss
   variations:
     Xigbar:
@@ -3651,26 +4199,42 @@ Yuffie:
   level: 99
   limiter: 0
   model: N_HB580_BTL2
-  msn: unknown
   msn_replace_allowed: false
   obj_id: 2299
-  size: 755432
+  size: 0.95
   type: boss
   variations:
     Yuffie:
       can_be_enemy: true
+      program: 189
+      msn: HE_COL_1_10
+      room_size: 9.14
+      room_sizemultiplier: 0.5
       vars:
       - 1
       - 0
     Yuffie (1):
+      program: 196
+      msn: HE_COL_8_10
+      room_size: 9.14
+      room_sizemultiplier: 0.5
+      size: 0.95
       vars:
       - 3
       - 0
     Yuffie (2):
+      program: 196
+      msn: HE_COL_8_49
+      room_size: 9.14
+      room_sizemultiplier: 0.25
       vars:
       - 4
       - 0
     Yuffie (3):
+      program: 193
+      msn: HE_COL_5_10
+      room_size: 9.14
+      room_sizemultiplier: 0.5
       vars:
       - 2
       - 0
@@ -3682,17 +4246,46 @@ Zexion:
   level: 99
   limiter: 0
   model: B_EX370
-  msn: HB34_FM_ZEX
   msn_required: true
   obj_id: 2427
-  size: 1939060
+  size: 4.44
+  room_size: 9.14
   type: boss
+  blacklist:
+  - Xemnas # TELEPORTER
+  - Xemnas (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Zexion:
+      program: 151
+      msn: HB34_FM_ZEX
       vars:
       - 0
       - 0
     Zexion (Data):
+      enabled: false
+      replace_allowed: false
+      program: 152
+      msn: HB34_FM_ZEX_RE
       vars:
       - 0
       - 1

@@ -12,10 +12,39 @@ KH2_DIR = os.environ["USE_KH2_GITPATH"]
 RANDOMIZATIONS_DIR = os.path.join(KH2_DIR,"randomizations") if os.path.exists(os.path.join(KH2_DIR,"randomizations")) else "randomizations"
 
 UNLIMITED_SIZE = 99_999_999_999_999
-LIMITED_SIZE = 10_000_000
+LIMITED_SIZE = 16.8 # Size of AX I Room 
 NUM_RANDOMIZATION_MAPPINGS = 9
 
 HARDCAP = "-3.3895395E+38"
+
+def ax2_99(spawnpoint):
+    # set the characters Y values and X values properly
+    sora = spawnpoint[0]["Entities"][0]
+    sora["PositionY"] = 14940
+    # track for later
+    bossz = float(sora["PositionZ"])
+    sora["PositionZ"] = float(spawnpoint[0]["Entities"][2]["PositionZ"])
+
+    riku = spawnpoint[0]["Entities"][1]
+    riku["PositionY"] = 14940
+    riku["PositionZ"] = float(spawnpoint[0]["Entities"][2]["PositionZ"])
+
+    boss = spawnpoint[0]["Entities"][2]
+    boss["PositionY"] = 14940
+    boss["PositionZ"] = bossz
+def ax2_40(spawnpoint):
+    # remove the buildings
+    for spid in spawnpoint:
+        spid["Entities"] = []
+def ax2_50(spawnpoint):
+    # remove the dragon
+    spawnpoint[0]["Entities"] = []
+
+roommodedits = {
+    "ax2_99": ax2_99,
+    "ax2_40": ax2_40,
+    "ax2_50": ax2_50
+}
 
 class AreaDataScript:
     def __init__(self, txt, ispc=False):
@@ -82,11 +111,13 @@ class KingdomHearts2:
         self.schemaversion = "01"
         self.name = "kh2"
         self.unlimited_memory = False
+        self.spawns = self.get_locations()
         with open(os.path.join(os.path.dirname(__file__), "location-ard-map.json")) as f:
             self.locmap = json.load(f)
         with open(os.path.join(os.path.dirname(__file__), "msns.json")) as f:
             self.msninfo = json.load(f)
         self.enemy_records = self.get_bosses(usefilters=False, getavail=False)
+        spawns = self.get_locations()
     def get_valid_enemies(self):
         return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "enemy"]
     def get_valid_bosses(self):
@@ -111,7 +142,7 @@ class KingdomHearts2:
                                 "possible_values": [False, True], "hidden_values": []},
 
             "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. Selected Boss will replace every boss with a single selected boss.",
-                                "possible_values": ["Disabled", "One to One", "Selected Boss", "Wild"], "hidden_values": []},#, "one_to_one_characters",
+                                "possible_values": ["Disabled", "Wild", "Selected Boss"], "hidden_values": ["One to One"]},#, "one_to_one_characters",
             "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game.",
                                 "possible_values": [False, True], "hidden_values": []},
             # "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
@@ -139,10 +170,16 @@ class KingdomHearts2:
             "can_be_enemy": False,
             "msn": None,
             "size": 0,
+            "room_size": 0,
             "enmp_index": None,
             "enabled": True,
             "blacklist": [],
-            "whitelist": []
+            "whitelist": [],
+            "adds": [],
+            "subtracts": [],
+            "msn_list": [],
+            "program": None,
+            "roomsizemultiplier": 1
         }
         with open(os.path.join(os.path.dirname(__file__), "enemies.yaml")) as f:
             bosses_f = yaml.load(f, Loader=yaml.FullLoader)
@@ -174,17 +211,17 @@ class KingdomHearts2:
         if getavail:
             locations = self.get_locations()
 
-            for w in locations:
-                world = locations[w]
-                for r in world:
-                    room = world[r]
-                    for sp in room["spawnpoints"]:
-                        spawnpoint = room["spawnpoints"][sp]
-                        for spid in spawnpoint["sp_ids"].values():
-                            for ent in spid:
-                                if ent["isboss"]:
-                                    if ent["name"] in bosses:
-                                        bosses[ent["name"]]["room_size"] = room["size"]
+            # for w in locations:
+            #     world = locations[w]
+            #     for r in world:
+            #         room = world[r]
+            #         for sp in room["spawnpoints"]:
+            #             spawnpoint = room["spawnpoints"][sp]
+            #             for spid in spawnpoint["sp_ids"].values():
+            #                 for ent in spid:
+            #                     if ent["isboss"]:
+            #                         if ent["name"] in bosses:
+            #                             bosses[ent["name"]]["room_size"] = room["size"]
             for b in bosses:
                 boss = bosses[b]
                 avail = [] # These are bosses that are allowed to be here
@@ -200,12 +237,14 @@ class KingdomHearts2:
                     if boss["whitelist"]:
                         if bc not in boss["whitelist"]:
                             continue
-                    else:
-                        if boss["msn_required"]:
-                            if not boss_check["msn_replace_allowed"]:
-                                continue
-                        if boss["size"] + boss_check["room_size"] >= maxsize:
+                    if boss["msn_required"]:
+                        if not boss_check["msn_replace_allowed"]:
                             continue
+                    #print("{} > {}: {} + {} >= {}".format(boss["name"], boss_check["name"], boss["size"], boss_check["room_size"], maxsize))
+                    availablespace = (maxsize - boss_check["room_size"]) * boss["roomsizemultiplier"]
+                    #print("{} - {} ({}) >= 0".format(availablespace, boss["size"], availablespace - boss["size"]))
+                    if availablespace - boss["size"] < 0:
+                        continue
                     avail.append(boss_check["name"])
                 boss["available"] = avail
         return bosses
@@ -325,14 +364,15 @@ class KingdomHearts2:
                 bossmapping = self.pickbossmapping(bosses, category) if not duplicate_bosses else None
             if enemies:
                 enemymapping = self.pickenemymapping(enemies)
-            spawns = self.get_locations()
+            
             newspawns = {}
+            subtract_map = {}
             spawn_limiters = {}
             msn_mapping = {}
             set_scaling = {}
             ai_mods = {}
-            for w in spawns:
-                world = spawns[w]
+            for w in self.spawns:
+                world = self.spawns[w]
                 for r in world:
                     room = world[r]
                     if "pc" in room and self.unlimited_memory:
@@ -368,8 +408,21 @@ class KingdomHearts2:
                                         spawnsies[w][r]["spawnpoints"][sp]["sp_ids"][i] = []
                                     spawnsies[w][r]["spawnpoints"][sp]["sp_ids"][i].append(ent)
                                     return
-                                
+
+                                def _add_to_subtract_map(submap, objid):
+                                    if w not in submap:
+                                        submap[w] = {}
+                                    if r not in submap[w]:
+                                        submap[w][r] = {"spawnpoints": {}}
+                                    if sp not in submap[w][r]["spawnpoints"]:
+                                        submap[w][r]["spawnpoints"][sp] = []
+                                    submap[w][r]["spawnpoints"][sp].append(objid)
+
                                 def _get_new_ent(old_ent, new_object):
+                                    if old_ent == "new":
+                                        ent = dict(new_object)
+                                        ent["index"] = "new"
+                                        return ent
                                     ent = dict(old_ent)
                                     ent["name"] = new_object["name"]
                                     return ent
@@ -391,14 +444,22 @@ class KingdomHearts2:
                                     if new_boss == ent["name"]:
                                         continue
                                     new_boss_object = self.enemy_records[new_boss]
+                                    if new_boss_object["replace_as"]:
+                                        new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
                                     old_boss_object = self.enemy_records[ent["name"]]
                                     if not old_boss_object["replace_allowed"]:
                                         continue
                                     changesmade = True
                                     _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
+                                    for obj in new_boss_object["adds"]:
+                                        _add_spawn(newspawns, _get_new_ent("new", obj))
+                                    for obj in old_boss_object["subtracts"]+old_boss_object["adds"]:
+                                        if "dontSub" in obj and obj["dontSub"]:
+                                            continue
+                                        _add_to_subtract_map(subtract_map, obj)
                                     # Bosses don't have spawn limiters normally, so don't need to set them
                                     if old_boss_object["msn_replace_allowed"]:
-                                        msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"] 
+                                        msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"]
                                     if scale_boss:
                                         if new_boss not in set_scaling:
                                             hp = old_boss_object["hp"]
@@ -456,7 +517,7 @@ class KingdomHearts2:
             if diagnostics:
                 end_time = time.time()
                 print("Randomization Complete: {}s".format(end_time-start_time))
-            return {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters}
+            return {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
         raise Exception("Didn't randomize anything!")
 
     def generate_files(self, outdir='', randomization={}, outzip=[]):
@@ -479,7 +540,8 @@ class KingdomHearts2:
             raise Exception("one of outzip or outdir must be defined")
         assets = []
         if randomization.get("spawns", ""):
-            for world in randomization.get("spawns").values():
+            for w in randomization.get("spawns"):
+                world = randomization.get("spawns")[w]
                 for room in world:
                     ardname = self.locmap[room]
                     roomasset = {
@@ -487,8 +549,15 @@ class KingdomHearts2:
                         "name": "ard/{}.ard".format(ardname),
                         "source": []
                     }
+                    basespawns = self.spawns[w][room]
+                    roommods = {}
+                    if "roommodedits" in basespawns:
+                        for rm in basespawns["roommodedits"]:
+                            existing_rm = self.getSpawnpoint(ardname, rm)
+                            roommodedits[basespawns["roommodedits"][rm]](existing_rm)
+                            roommods[rm] = existing_rm
                     for spawnpoint in world[room]["spawnpoints"]:
-                        existing = self.getSpawnpoint(ardname, spawnpoint)
+                        existing = self.getSpawnpoint(ardname, spawnpoint, roommods)
                         for spid in world[room]["spawnpoints"][spawnpoint]["sp_ids"]:
                             sid = int(spid)
                             for ent in world[room]["spawnpoints"][spawnpoint]["sp_ids"][spid]:
@@ -498,11 +567,23 @@ class KingdomHearts2:
                                         if ent["index"] == "new":
                                             # adding new entity to list, defaulting all values to the first entity in the list
                                             new_ent = dict(instance["Entities"][0])
+                                            # Make a unique serial for the spawnpoint?? Maybe 6xx
+
+                                            for attr in ent:
+                                                if attr.startswith("mod"):
+                                                    baseattr = attr[3:]
+                                                    new_ent[baseattr] = new_ent[baseattr] + ent[attr]
+                                                elif attr in new_ent:
+                                                    new_ent[attr] = ent[attr]
+
+
                                             # put the new entity in the existing instance
                                             instance["Entities"].append(new_ent)
+                                            
+
                                             # set the ent index to the proper value
                                             ent["index"] = len(instance["Entities"])-1
-                                        if type(ent["name"]) == int:
+                                        elif type(ent["name"]) == int:
                                             for k in ent:
                                                 if k == "name":
                                                     instance["Entities"][ent["index"]]["ObjectId"] = ent[k]
@@ -518,7 +599,33 @@ class KingdomHearts2:
                                             instance["Entities"][ent["index"]]["ObjectId"] = oid
                                             instance["Entities"][ent["index"]]["Argument1"] = vrs[0]
                                             instance["Entities"][ent["index"]]["Argument2"] = vrs[1]
+                            if randomization.get("subtract_map", ""):
+                                # This is a pretty bad way to do this, tbh
+                                try:
+                                    entities_to_remove = randomization.get("subtract_map")[w][room]["spawnpoints"][spawnpoint]  
+                                except:
+                                    # No entities to remove for this spawnpoint
+                                    entities_to_remove = None
+                                if entities_to_remove:
+                                    for instance in existing:
+                                        toremove = []
+                                        for e in range(len(instance["Entities"])):
+                                            ent = instance["Entities"][e]
+                                            for etr in entities_to_remove:
+                                                if ent["ObjectId"] == etr["ObjectId"]:
+                                                    if "Argument1" in etr and etr["Argument1"] != ent["Argument1"]:
+                                                        continue
+                                                    if "Argument2" in etr and etr["Argument2"] != ent["Argument2"]:
+                                                        continue
+                                                    toremove.append(e)
+                                        for e in sorted(list(set(toremove)))[::-1]:
+                                            instance["Entities"].pop(e)
                         spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir, _writeMethod)
+                        roomasset["source"].append(spasset)
+                        if spawnpoint in roommods:
+                            del roommods[spawnpoint]
+                    for sp in roommods:
+                        spasset = self.writeSpawnpoint(ardname, sp, roommods[sp], outdir, _writeMethod)
                         roomasset["source"].append(spasset)
                     btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
                     script = AreaDataScript(open(btlfn).read(), ispc=self.unlimited_memory)
@@ -543,10 +650,11 @@ class KingdomHearts2:
                 with open(os.path.join(KH2_DIR, "subfiles", "bdx", "obj",  aifn), "rb") as f:
                     data = bytearray(f.read())
                 for mod in edits:
-                    data[mod["offset"]] = int(mod["value"][:2], 16)
-                    data[mod["offset"]+1] = int(mod["value"][2:4], 16)
-                    data[mod["offset"]+2] = int(mod["value"][4:6], 16)
-                    data[mod["offset"]+3] = int(mod["value"][6:8], 16)
+                    # They have to be reversed
+                    data[mod["offset"]+3] = int(mod["value"][:2], 16)
+                    data[mod["offset"]+2] = int(mod["value"][2:4], 16)
+                    data[mod["offset"]+1] = int(mod["value"][4:6], 16)
+                    data[mod["offset"]] = int(mod["value"][6:8], 16)
                 relfn = os.path.join("files", "ai", aifn)
                 outfn = os.path.join(outdir, relfn)
                 enemy = self.enemy_records[ai]
@@ -557,7 +665,7 @@ class KingdomHearts2:
                     "source": [
                         {
                             "method": "copy",
-                            "name": aifn.split(".")[0],
+                            "name": os.path.basename(aifn).split(".")[0],
                             "source": [{"name": relfn}],
                             "type": "Bdx"
                         }
@@ -601,7 +709,9 @@ class KingdomHearts2:
             "type": "AreaDataScript"
         }
 
-    def getSpawnpoint(self, ardname, spawnpoint):
+    def getSpawnpoint(self, ardname, spawnpoint, altspawns={}):
+        if spawnpoint in altspawns.keys():
+            return altspawns[spawnpoint]
         with open(os.path.join(KH2_DIR, "subfiles", "spawn", "ard", ardname, "{}.spawn".format(spawnpoint))) as f:
             return yaml.load(f, Loader=yaml.SafeLoader)
 

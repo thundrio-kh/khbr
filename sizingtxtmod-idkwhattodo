@@ -1,0 +1,94 @@
+*********************
+Hades II (1)
+*********************
+Location: he19
+Program: 201
+Mission: HE19_MS204
+Room Size: 11.38
+Size: 3.15
+
+
+*********************
+Hades II (1)
+*********************
+Location: he19
+Program: 202
+Mission: HE19_MS205
+Room Size: 13.88 
+Size: 3.15
+
+
+
+*********************
+Hayner
+*********************
+Location: tt04
+Program: 182
+Mission: TT04_MS00
+Room Size: 8.45
+Size: 0.84
+
+
+*********************
+Hayner
+*********************
+Location: tt05
+Program: 84
+Mission: TT05_MS401
+Room Size: 12.41
+Size: 0.84
+
+
+
+
+*********************
+Setzer
+*********************
+Location: tt04
+Program: 183
+Mission: TT04_MS01
+Room Size: 8.03
+Size: 1.35
+
+
+*********************
+Setzer
+*********************
+Location: tt05
+Program: 88
+Mission: TT05_MS405
+Room Size: 12.91
+Size: 1.35
+
+
+
+*********************
+Shan-Yu
+*********************
+Location: mu09
+Program: 75
+Mission: MU09_MS108
+Room Size: 14.79
+Size: 3.21
+adds:
+  B_MU110 (0.62)
+  M_EX580 (0.81)
+  F_MU030 (0.09) (door is a subtract and isn't needed)
+
+
+
+*********************
+The Experiment
+*********************
+Location: nm07
+Program: 64
+Mission: NM07_MS204
+Room Size: 15.89 
+Size: 1.82
+adds:
+  B_NM110_HEAD (1.39)
+  B_NM110_L_ARM (1.41)
+  B_NM110_R_ARM (1.39)
+that stuff should be there to not have hp gates
+blacklist him from ax2
+   all the teleporters should be banned from ax2

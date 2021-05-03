@@ -1,0 +1,2028 @@
+AX (16.08)
+	0.06 : msn/us/EH24_MS110.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	2.36 : map/eh24.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.42 : obj/P_EH000 (mdlx,a,mset) [(P) Riku]
+	0.36 : obj/W_EH000 (mdlx,a,mset) [(W) Way to Dawn]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	0.38 : obj/B_EX280 (mdlx,a,mset) [(F) Xemnas armor - Saïx's claymore]
+	0.29 : obj/B_EX290 (mdlx,a,mset) [(F) Xemnas armor - Xigbar's arrowgun]
+	0.17 : obj/B_EX300 (mdlx,a) [(?) Xemnas armor - ???]
+	0.69 : obj/B_EX310 (mdlx,a,mset) [(F) Xemnas armor - Xaldin's spears]
+	0.3 : obj/B_EX320 (mdlx,a,mset) [(F) Xemnas armor - Axel's chakrams]
+	1.7 : obj/B_EX260 (mdlx,a,mset) [(B) Xemnas (Armor)]
+	0.67 : obj/M_EX880_DANCER_EH (mdlx,a,mset) [(M) Demyx's water form (EH)]
+	1.25 : limit/us/riku.bar
+	0.42 : obj/B_EX210_EH (mdlx,a,mset) [(M) Luxord's card (time?) (EX)]
+	0.28 : obj/P_EH010 (mdlx,a,mset) [(P) ??? - Path? Pyramid? (EH)]
+
+
+
+AXII (13.8)
+	0.06 : msn/us/EH23_MS112.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.63 : map/eh23.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.68 : obj/F_EH060 (mdlx,a,mset) [(F) Floating building 2 (EH)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.42 : obj/P_EH000 (mdlx,a,mset) [(P) Riku]
+	0.36 : obj/W_EH000 (mdlx,a,mset) [(W) Way to Dawn]
+	2.2 : obj/B_EX180 (mdlx,a,mset) [(?) Xemnas's dragon (Throne)]
+	1.25 : limit/us/riku.bar
+	1.7 : obj/B_EX260 (mdlx,a,mset) [(B) Xemnas (Armor)]
+	0.28 : obj/P_EH010 (mdlx,a,mset) [(P) ??? - Path? Pyramid? (EH)]
+
+
+
+AxelI (12.35)
+	0.06 : msn/us/TT05_MS404.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	3.54 : map/tt05.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.21 : obj/N_EX650_BTL10 (mdlx) [(N) Villager (boy) (BTL10) (EX)]
+	0.89 : obj/N_EX650_RAW (mset) []
+	0.2 : obj/N_EX670_BTL10 (mdlx) [(N) Villager (girl) (BTL10) (EX)]
+	0.93 : obj/N_EX670_RAW (mset) []
+	0.19 : obj/N_EX690_BTL10 (mdlx) [(N) Villager (woman) (BTL10) (EX)]
+	0.8 : obj/N_EX690_RAW (mset) []
+	0.24 : obj/N_EX700_TT_GENTL_A_RTN (mdlx) [(N) Villager (gentleman) (TT_GENTL_A) (RTN) (EX)]
+	0.05 : obj/N_EX700_RTN (mset) []
+	2.92 : obj/B_EX110_SKIRMISH (mdlx,a,mset) [(B) Axel (boss, freezes when RC is used) (SKIRMISH) (EX)]
+
+
+
+AxelII (11.04)
+	0.06 : msn/us/TT20_MS603.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	1.54 : map/tt20.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.14 : obj/P_EX110_BTLF (mdlx,a,mset) [(P) Roxas (Valor) (dual wield)]
+	0.17 : obj/W_EX010_20 (mdlx,a) [(W) Oblivion]
+	0.09 : obj/W_EX010_RX_BTLF_R (mset) []
+	0.18 : obj/W_EX010_10 (mdlx,a) [(W) Oath Keeper]
+	0.05 : obj/W_EX010_RX_BTLF_L (mset) []
+	3.74 : obj/B_EX110 (mdlx,a,mset) [(B) Axel (Twilight Town, 2nd fight)]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.02 : obj/P_EX100 (a,mset) [(P) Sora]
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+
+
+
+AxelIIreal (7.42)
+	0.06 : msn/us/TT20_MS603.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	1.54 : map/tt20.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.14 : obj/P_EX110_BTLF (mdlx,a,mset) [(P) Roxas (Valor) (dual wield)]
+	0.17 : obj/W_EX010_20 (mdlx,a) [(W) Oblivion]
+	0.09 : obj/W_EX010_RX_BTLF_R (mset) []
+	0.18 : obj/W_EX010_10 (mdlx,a) [(W) Oath Keeper]
+	0.05 : obj/W_EX010_RX_BTLF_L (mset) []
+	3.74 : obj/B_EX110 (mdlx,a,mset) [(B) Axel (Twilight Town, 2nd fight)]
+
+
+
+Banzai (10.28)
+	0.08 : msn/us/LK02_MS102.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/lk.bar
+	0.01 : libretto-lk.bar
+	2.14 : map/lk02.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	1.18 : obj/P_LK100 (mdlx,a,mset) [(P) Sora (LK)]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.09 : obj/W_EX010_LK (mset) []
+	1.68 : obj/P_LK020 (mdlx,a,mset) [(P) Donald (LK)]
+	0.08 : obj/W_EX020 (mdlx,a) [(W) Mage's Staff]
+	0.04 : obj/W_EX020_LK (mset) []
+	0.74 : obj/P_LK030 (mdlx,a,mset) [(P) Goofy (LK)]
+	0.09 : obj/W_EX030 (mdlx,a) [(W) Knight's Shield]
+	0.03 : obj/W_EX030_LK (mset) []
+	0.95 : obj/N_LK020_BTL (mdlx,a,mset) [(N) Pumba (BTL) (LK)]
+	0.54 : obj/N_LK010_BTL (mdlx,a,mset) [(N) Timon (BTL) (LK)]
+	0.56 : obj/B_LK100_20 (mdlx,a) [(B) Ed]
+	0.3 : obj/B_LK100 (mset) [(B) Shenzi]
+	0.56 : obj/B_LK100_10 (mdlx,a) [(B) Banzai]
+	0.66 : obj/B_LK100_00 (mdlx,a) [(B) Shenzi]
+
+
+
+Banzai-1 (10.54)
+	0.13 : msn/us/LK05_MS201.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/lk.bar
+	0.01 : libretto-lk.bar
+	2.58 : map/lk05.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.1 : obj/F_EX050 (mdlx,a,mset) [(F) Treasure chest S (LK)]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	1.18 : obj/P_LK100 (mdlx,a,mset) [(P) Sora (LK)]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.09 : obj/W_EX010_LK (mset) []
+	1.22 : obj/P_LK000 (mdlx,a,mset) [(P) Simba]
+	0.06 : obj/W_LK000 (mdlx,a) [(W) Proud Fang]
+	1.68 : obj/P_LK020 (mdlx,a,mset) [(P) Donald (LK)]
+	0.08 : obj/W_EX020 (mdlx,a) [(W) Mage's Staff]
+	0.04 : obj/W_EX020_LK (mset) []
+	0.66 : obj/B_LK100_00 (mdlx,a) [(B) Shenzi]
+	0.3 : obj/B_LK100 (mset) [(B) Shenzi]
+	0.56 : obj/B_LK100_20 (mdlx,a) [(B) Ed]
+	0.74 : limit/us/simba.bar
+	0.56 : obj/B_LK100_10 (mdlx,a) [(B) Banzai]
+
+
+
+Barbossa (15.79)
+	0.06 : msn/us/CA10_MS107.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/ca.bar
+	0.01 : libretto-ca.bar
+	2.63 : map/ca10.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	0.75 : obj/P_CA000_LOW (mdlx,a) [(P) Jack Sparrow (LOW)]
+	1.37 : obj/P_CA000 (mset) [(P) Jack Sparrow]
+	0.17 : obj/W_CA000 (mdlx,a,mset) [(W) Skill and Crossbones]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	3.49 : obj/B_CA010 (mdlx,a,mset) [(B) Barbossa]
+	0.1 : obj/B_CA060 (mdlx,a) [(?) Port Royal enemy?]
+	0.87 : limit/us/sparrow.bar
+	0.47 : obj/B_CA000 (mdlx,a,mset) [(B) Illuminator]
+	0.15 : obj/F_EX040_SPARROW (mdlx,a,mset) [(F) Jack Sparrow's limit's treasure chest (EX)]
+
+
+
+Barrel (14.93)
+	0.14 : msn/us/NM10_MS201.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/nm.bar
+	0.01 : libretto-nm.bar
+	2.96 : map/nm10.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.01 : obj/F_NM150 (mdlx) [(F) ??? (NM)]
+	0.14 : obj/F_NM170_CATCH (mdlx,a,mset) [(F) Present minigame (CATCH) (NM)]
+	0.94 : obj/P_EX100_XM (mdlx,a) [(P) Sora (XM)]
+	2.5 : obj/P_EX100 (mset) [(P) Sora]
+	0.14 : obj/W_EX010_NM (mdlx,a) [(W) Kingdom Key (NM)]
+	0.26 : obj/W_EX010 (mset) [(W) Kingdom key]
+	0.53 : obj/P_NM000_SANTA (mdlx,a) [(P) Jack Skellington (XM)]
+	0.85 : obj/P_NM000 (mset) [(P) Jack Skellington]
+	0.05 : obj/W_NM000 (mdlx,a) [(W) Bone Fist]
+	0.59 : obj/P_EX020_XM (mdlx,a) [(P) Donald (XM)]
+	0.71 : obj/P_EX020 (mset) [(P) Donald]
+	0.08 : obj/W_EX020_NM (mdlx,a) [(W) Mage's Staff (NM)]
+	0.03 : obj/W_EX020 (mset) [(W) Mage's Staff]
+	0.92 : obj/N_NM050_BTL (mdlx,a,mset) [(N) Lock (BTL) (NM)]
+	1.3 : obj/N_NM060_BTL (mdlx,a,mset) [(N) Shock (BTL) (NM)]
+	1.08 : limit/us/jack.bar
+	1.32 : obj/N_NM070_BTL (mdlx,a,mset) [(N) Barrel (BTL) (NM)]
+
+
+
+BlizzardLord (15.13)
+	0.06 : msn/us/AL03_MS103.bar
+	0.27 : 00effect.bar
+	0.06 : msg/us/al.bar
+	0.01 : libretto-al.bar
+	2.33 : map/al03.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.07 : obj/F_AL050 (mdlx,a) [(F) ??? (AL)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.34 : obj/P_AL000 (mdlx,a,mset) [(P) Aladdin]
+	0.17 : obj/W_AL000 (mdlx,a,mset) [(W) Scimitar]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.76 : obj/B_AL100_FIRE (mdlx,a,mset) [(B) Volcanic Lord]
+	1.72 : obj/B_AL100_ICE (mdlx,a,mset) [(B) Blizzard Lord]
+	0.26 : obj/M_AL020_FIRE2 (mdlx,a,mset) [(M) Fiery Globe (2)]
+	0.5 : obj/B_AL110 (mdlx,a,mset) [(B) Volcanic Lord's lava pool]
+	0.36 : obj/M_AL020_ICEE2 (mdlx,a,mset) [(M) Icy Cube (2)]
+	0.63 : limit/us/aladdin.bar
+	0.21 : obj/B_AL120 (mdlx,a,mset) [(B) Blizzard Lord's ice spikes]
+
+
+
+Cerberus (13.74)
+	0.06 : msn/us/HE07_MS103.bar
+	0.27 : 00effect.bar
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	2.18 : map/he07.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.18 : obj/F_HE000 (mdlx,a,mset) [(F) Standing Torch (HE)]
+	0.2 : obj/F_HE020_A1 (mdlx,a) [(F) Rock 1 (grey) (HE)]
+	0.02 : obj/F_HE020 (mset) []
+	0.2 : obj/F_HE020_A2 (mdlx,a) [(F) Rock 2 (grey) (HE)]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.81 : obj/P_HE000 (mdlx,a,mset) [(P) Auron]
+	0.23 : obj/W_HE000 (mdlx,a,mset) [(W) Battlefields of War]
+	1.39 : limit/us/auron.bar
+	3.2 : obj/B_HE020 (mdlx,a,mset) [(B) Cerberus]
+
+
+
+DarkThorn (15.29)
+	0.06 : msn/us/BB05_MS104B.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/bb.bar
+	0.01 : libretto-bb.bar
+	2.15 : map/bb05.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.22 : obj/F_BB130 (mdlx,a,mset) [(F) ??? - Minigame related? (BB)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.95 : obj/P_BB000 (mdlx,a,mset) [(P) Beast]
+	0.05 : obj/W_BB000 (mdlx,a) [(W) Beast's Claw]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	2.86 : obj/B_BB110 (mdlx,a,mset) [(B) Dark Thorn]
+	0.94 : limit/us/beast.bar
+	1.33 : obj/F_BB050 (mdlx,a,mset) [(F) Shadow Stalker (Chandelier) (BB)]
+
+
+
+DataAxel (7.39)
+	0.06 : msn/us/TT20_MS603_RE.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	1.54 : map/tt20.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.14 : obj/P_EX110_BTLF (mdlx,a,mset) [(P) Roxas (Valor) (dual wield)]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.09 : obj/W_EX010_RX_BTLF_R (mset) []
+	0.18 : obj/W_EX010_10 (mdlx,a) [(W) Oath Keeper]
+	0.05 : obj/W_EX010_RX_BTLF_L (mset) []
+	3.74 : obj/B_EX110_LV99 (mdlx,a,mset) [(B99) Axel (Limit Cut)]
+
+
+
+DataDemyx (14.69)
+	0.17 : msn/us/HB04_MS403.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	3.26 : map/hb04.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	2.66 : obj/B_EX120_HB (mdlx,a,mset) [(B) Demyx]
+	1.41 : obj/M_EX880_DANCER (mdlx,a,mset) [(M) Demyx's water form]
+
+
+
+DataFinalXemnas (16.4)
+	0.06 : msn/us/EH20_MS113.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.3 : map/eh20.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.19 : obj/P_EX100_LAST (mdlx,mset) [(P) Sora (electrified by Xemnas) (final battle)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.44 : obj/P_EH000_LAST (mdlx,a,mset) [(P) Riku (final battle)]
+	0.24 : obj/W_EH000 (mdlx,a) [(W) Way to Dawn]
+	0.13 : obj/W_EH000_LAST (mset) []
+	1.25 : limit/us/riku.bar
+	6.29 : obj/B_EX170_LAST (mdlx,a,mset) [(B) Xemnas (Final)]
+	0.28 : obj/P_EH010 (mdlx,a,mset) [(P) ??? - Path? Pyramid? (EH)]
+
+
+
+DataLuxord (11.89)
+	0.4 : msn/us/EH14_MS103.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	2.36 : map/eh14.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	3.51 : obj/B_EX150 (mdlx,a,mset) [(B) Luxord (WORKS! can't be killed, or paused)]
+	0.03 : obj/B_EX230 (mdlx,a) [(B) ??? - Game acts as if an enemy is present]
+	0.87 : obj/B_EX210 (mdlx,a,mset) [(M) Luxord's card (attack)]
+	0.26 : obj/M_EX950_CARD (mdlx,a,mset) [(M) Sora (Gambler's card)]
+	0.24 : obj/M_EX950_DICE (mdlx,a,mset) [(M) Sora (Gambler's die)]
+
+
+
+DataSaix (14.84)
+	0.09 : msn/us/EH15_MS104.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	3.04 : map/eh15.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	3.91 : obj/B_EX160 (mdlx,a,mset) [(B) Saïx]
+	0.63 : obj/B_EX220 (mdlx,a,mset) [(F) Saix's claymore (Usable)]
+
+
+
+DataXaldin (13.24)
+	0.06 : msn/us/BB15_MS203_RE.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/bb.bar
+	0.01 : libretto-bb.bar
+	2.38 : map/bb15.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.48 : obj/B_EX130_LV99 (mdlx,a) [(B99) Xaldin (Limit Cut)]
+	2.15 : obj/B_EX130 (mset) [(B) Xaldin]
+
+
+
+Xemnas (9.86)
+	0.06 : msn/us/EH19_MS105.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.88 : map/eh19.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	3.7 : obj/B_EX170 (mdlx,a,mset) [(B) Xemnas]
+
+
+
+DataXemnas (9.86)
+	0.06 : msn/us/EH19_MS105.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.88 : map/eh19.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.64 : obj/B_EX170_LV99 (mdlx,a) [(B99) Xemnas (Limit Cut Memory's Contortion)]
+	2.06 : obj/B_EX170 (mset) [(B) Xemnas]
+
+
+
+Xaldin (13.28)
+	0.06 : msn/us/BB15_MS203.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/bb.bar
+	0.01 : libretto-bb.bar
+	2.38 : map/bb15.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	3.63 : obj/B_EX130 (mdlx,a,mset) [(B) Xaldin]
+
+
+
+DemyxOC (11.83)
+	0.17 : msn/us/HE17_MS105.bar
+	0.27 : 00effect.bar
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.7 : map/he17.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.33 : obj/B_EX120 (mdlx,a,mset) [(B) Demyx (Only playing sitar?)]
+	1.41 : obj/M_EX880_DANCER (mdlx,a,mset) [(M) Demyx's water form]
+
+
+
+FinalXemnas (16.4)
+	0.06 : msn/us/EH20_MS113.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.3 : map/eh20.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.19 : obj/P_EX100_LAST (mdlx,mset) [(P) Sora (electrified by Xemnas) (final battle)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.44 : obj/P_EH000_LAST (mdlx,a,mset) [(P) Riku (final battle)]
+	0.24 : obj/W_EH000 (mdlx,a) [(W) Way to Dawn]
+	0.13 : obj/W_EH000_LAST (mset) []
+	1.25 : limit/us/riku.bar
+	6.29 : obj/B_EX170_LAST (mdlx,a,mset) [(B) Xemnas (Final)]
+	0.28 : obj/P_EH010 (mdlx,a,mset) [(P) ??? - Path? Pyramid? (EH)]
+
+
+
+GiantSark (11.76)
+	0.06 : msn/us/TR09_MS205.bar
+	0.27 : 00effect.bar
+	0.06 : msg/us/tr.bar
+	0.01 : libretto-tr.bar
+	1.64 : map/tr09.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.33 : obj/F_TR060 (mdlx,a,mset) [(F) MCP wall (TR)]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	0.93 : obj/P_EX100_TR (mdlx,a) [(P) Sora (TR)]
+	2.5 : obj/P_EX100 (mset) [(P) Sora]
+	0.14 : obj/W_EX010_TR (mdlx,a) [(W) Kingdom Key (TR)]
+	0.26 : obj/W_EX010 (mset) [(W) Kingdom key]
+	1.05 : obj/P_TR000 (mdlx,a,mset) [(P) Tron]
+	0.17 : obj/W_TR000 (mdlx,a,mset) [(W) Identity Disk]
+	0.47 : obj/P_EX030_TR (mdlx,a) [(N) Goofy (TR)]
+	0.89 : obj/P_EX030 (mset) [(P) Goofy]
+	0.09 : obj/W_EX030_TR (mdlx,a) [(W) Knight's Shield (TR)]
+	0.07 : obj/W_EX030 (mset) [(W) Knight's Shield]
+	0.17 : obj/F_TR050 (mdlx,a,mset) [(F) MCP barrier (TR)]
+	0.64 : obj/B_TR020 (mdlx,a,mset) [(B) MCP]
+	1.41 : obj/N_TR010_BTL_L (mdlx,a,mset) [(N) Sark (large) (BTL) (TR)]
+	0.53 : obj/F_TR150 (mdlx,a,mset) [(F) ??? (TR)]
+
+
+
+GrimReaper1 (14.7)
+	0.15 : msn/us/CA01_MS204.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/ca.bar
+	0.01 : libretto-ca.bar
+	2.89 : map/ca01.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.2 : obj/F_CA690_BTL (mdlx,a,mset) [(F) Isla de Muerta's chest (Grim Reaper) (Open) (BTL) (CA)]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	0.03 : obj/PRIZE_CA_SEA (mdlx) [PRIZE_CA_SEA (medallion)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	0.75 : obj/P_CA000_LOW (mdlx,a) [(P) Jack Sparrow (LOW)]
+	1.37 : obj/P_CA000 (mset) [(P) Jack Sparrow]
+	0.17 : obj/W_CA000 (mdlx,a,mset) [(W) Skill and Crossbones]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	0.87 : limit/us/sparrow.bar
+	2.35 : obj/B_CA050 (mdlx,a,mset) [(B) Grim Reaper]
+	0.15 : obj/F_EX040_SPARROW (mdlx,a,mset) [(F) Jack Sparrow's limit's treasure chest (EX)]
+
+
+
+GrimReaper1IGNORETHISABOVEONEWASACTUALLYGRII (14.7)
+	0.15 : msn/us/CA01_MS204.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/ca.bar
+	0.01 : libretto-ca.bar
+	2.89 : map/ca01.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.2 : obj/F_CA690_BTL (mdlx,a,mset) [(F) Isla de Muerta's chest (Grim Reaper) (Open) (BTL) (CA)]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	0.03 : obj/PRIZE_CA_SEA (mdlx) [PRIZE_CA_SEA (medallion)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	0.75 : obj/P_CA000_LOW (mdlx,a) [(P) Jack Sparrow (LOW)]
+	1.37 : obj/P_CA000 (mset) [(P) Jack Sparrow]
+	0.17 : obj/W_CA000 (mdlx,a,mset) [(W) Skill and Crossbones]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	0.87 : limit/us/sparrow.bar
+	2.35 : obj/B_CA050 (mdlx,a,mset) [(B) Grim Reaper]
+	0.15 : obj/F_EX040_SPARROW (mdlx,a,mset) [(F) Jack Sparrow's limit's treasure chest (EX)]
+
+
+
+GrimReaper1FORREALTHISTIME (14.96)
+	0.06 : msn/us/CA18_MS202.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/ca.bar
+	0.01 : libretto-ca.bar
+	2.73 : map/ca18.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.74 : obj/F_CA550 (mdlx,mset) [(F) Interceptor (CA)]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	0.75 : obj/P_CA000_LOW (mdlx,a) [(P) Jack Sparrow (LOW)]
+	1.37 : obj/P_CA000 (mset) [(P) Jack Sparrow]
+	0.17 : obj/W_CA000 (mdlx,a,mset) [(W) Skill and Crossbones]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	0.87 : limit/us/sparrow.bar
+	2.35 : obj/B_CA050 (mdlx,a,mset) [(B) Grim Reaper]
+	0.15 : obj/F_EX040_SPARROW (mdlx,a,mset) [(F) Jack Sparrow's limit's treasure chest (EX)]
+
+
+
+Groundshaker (10.4)
+	0.06 : msn/us/LK15_MS202.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/lk.bar
+	0.01 : libretto-lk.bar
+	2.28 : map/lk15.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.18 : obj/P_LK100 (mdlx,a,mset) [(P) Sora (LK)]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.09 : obj/W_EX010_LK (mset) []
+	1.22 : obj/P_LK000 (mdlx,a,mset) [(P) Simba]
+	0.06 : obj/W_LK000 (mdlx,a) [(W) Proud Fang]
+	4.16 : obj/B_LK120 (mdlx,a,mset) [(B) Groundshaker]
+	0.74 : limit/us/simba.bar
+	0.09 : obj/B_LK130 (mdlx,mset) [(F) Path for Sora Lion's groundshaker RC]
+
+
+
+HadesEscape (16.47)
+	0.06 : msn/us/HE05_MS102.bar
+	0.27 : 00effect.bar
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.67 : map/he05.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.81 : obj/P_HE000 (mdlx,a,mset) [(P) Auron]
+	0.23 : obj/W_HE000 (mdlx,a,mset) [(W) Battlefields of War]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.78 : obj/B_HE030_HE05 (mdlx,a) [(B) Hades]
+	0.48 : obj/B_HE030_PART (mset) [(B) Hades (1st & 2nd fight)]
+	0.49 : obj/M_EX520 (mdlx,a,mset) [(M) Hook Bat]
+	0.53 : obj/M_EX020 (mdlx,a,mset) [(M) Shadow]
+	1.1 : obj/M_EX690 (mdlx,a,mset) [(M) Lance Soldier]
+	1.39 : limit/us/auron.bar
+	1.26 : obj/M_EX050 (mdlx,a,mset) [(M) Large Body]
+
+
+
+Hades1 (12.73)
+	0.06 : msn/us/HE06_MS101.bar
+	0.27 : 00effect.bar
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	2.65 : map/he06.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.18 : obj/F_HE000 (mdlx,a,mset) [(F) Standing Torch (HE)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	0.4 : obj/P_HE000_BTL (mdlx,mset) [(P) Auron (BTL)]
+	2.26 : obj/B_HE030_PART (mdlx,a,mset) [(B) Hades (1st & 2nd fight)]
+
+
+
+HadesII-1-no-herc (11.38)
+	0.06 : msn/us/HE19_MS204.bar
+	0.27 : 00effect.bar
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	0.99 : map/he19.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	3.15 : obj/B_HE030 (mdlx,a,mset) [(B) Hades (3rd & Paradox Hades Cup fight)]
+
+
+
+HadesII-1-with-herc (13.88)
+	0.06 : msn/us/HE19_MS205.bar
+	0.27 : 00effect.bar
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	0.99 : map/he19.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	2.5 : obj/N_HE010_BTL (mdlx,a,mset) [(N) Hercules (BTL) (HE)]
+	3.15 : obj/B_HE030 (mdlx,a,mset) [(B) Hades (3rd & Paradox Hades Cup fight)]
+
+
+
+HadesII-1-with-herc-game-has-crashed (13.88)
+	0.06 : msn/us/HE19_MS205.bar
+	0.27 : 00effect.bar
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	0.99 : map/he19.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	2.5 : obj/N_HE010_BTL (mdlx,a,mset) [(N) Hercules (BTL) (HE)]
+	3.15 : obj/B_HE030 (mdlx,a,mset) [(B) Hades (3rd & Paradox Hades Cup fight)]
+
+
+
+haynerroxasstruggle (8.45)
+	0.67 : msn/us/TT04_MS00.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	2.76 : map/tt04.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/PRIZE_TT (mdlx) [PRIZE_TT]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.11 : obj/W_EX010_W0 (mdlx,a) [(W) Struggle Sword]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.46 : obj/N_EX510_RTN (mdlx,mset) [(N) Pence (RTN) (EX)]
+	0.47 : obj/N_EX520_RTN (mdlx,mset) [(N) Olette (RTN) (EX)]
+	0.45 : obj/P_EX020_RTN (mdlx,mset) [(N) Donald (RTN)]
+	0.47 : obj/P_EX030_RTN (mdlx,mset) [(N) Goofy (RTN)]
+	0.84 : obj/N_EX500_BTL (mdlx,a,mset) [(N) Hayner (BTL) (EX)]
+
+
+
+haynerroxasstruggleagain (12.41)
+	0.68 : msn/us/TT05_MS401.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	3.54 : map/tt05.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/PRIZE_TT (mdlx) [PRIZE_TT]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.11 : obj/W_EX010_W0 (mdlx,a) [(W) Struggle Sword]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.21 : obj/N_EX650_BTL10 (mdlx) [(N) Villager (boy) (BTL10) (EX)]
+	0.89 : obj/N_EX650_RAW (mset) []
+	0.2 : obj/N_EX670_BTL10 (mdlx) [(N) Villager (girl) (BTL10) (EX)]
+	0.93 : obj/N_EX670_RAW (mset) []
+	0.2 : obj/N_EX680_BTL10 (mdlx,a) [(N) Villager (man) (BTL10) (EX)]
+	1.6 : obj/N_EX680_RAW (mset) []
+	0.19 : obj/N_EX690_BTL10 (mdlx) [(N) Villager (woman) (BTL10) (EX)]
+	0.8 : obj/N_EX690_RAW (mset) []
+	0.84 : obj/N_EX500_BTL (mdlx,a,mset) [(N) Hayner (BTL) (EX)]
+
+
+
+hostileprogram (11.53)
+	0.09 : msn/us/TR04_MS104.bar
+	0.27 : 00effect.bar
+	0.06 : msg/us/tr.bar
+	0.01 : libretto-tr.bar
+	2.0 : map/tr04.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.09 : obj/F_EX030_TR (mdlx,a) [(F) Treasure chest S (TR)]
+	0.04 : obj/F_EX030 (mset) [(F) Treasure chest S]
+	0.04 : obj/PRIZE_TR (mdlx) [PRIZE_TR]
+	0.93 : obj/P_EX100_TR (mdlx,a) [(P) Sora (TR)]
+	2.5 : obj/P_EX100 (mset) [(P) Sora]
+	0.14 : obj/W_EX010_TR (mdlx,a) [(W) Kingdom Key (TR)]
+	0.26 : obj/W_EX010 (mset) [(W) Kingdom key]
+	1.05 : obj/P_TR000 (mdlx,a,mset) [(P) Tron]
+	0.17 : obj/W_TR000 (mdlx,a,mset) [(W) Identity Disk]
+	0.47 : obj/P_EX030_TR (mdlx,a) [(N) Goofy (TR)]
+	0.89 : obj/P_EX030 (mset) [(P) Goofy]
+	0.09 : obj/W_EX030_TR (mdlx,a) [(W) Knight's Shield (TR)]
+	0.07 : obj/W_EX030 (mset) [(W) Knight's Shield]
+	2.33 : obj/B_TR000 (mdlx,a,mset) [(B) Hostile Program]
+
+
+
+hydra (15.92)
+	0.06 : msn/us/HE18_MS108.bar
+	0.27 : 00effect.bar
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	2.53 : map/he18.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.21 : obj/F_HE030_L (mdlx,a,mset) [(F) Phil minigame L (HE)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	0.64 : obj/N_HE020_BTL (mdlx,a,mset) [(N) Phil (BTL) (HE)]
+	0.77 : obj/N_HE040_BTL (mdlx,mset) [(N) Pegasus (BTL) (HE)]
+	0.45 : obj/N_HE030_BTL (mdlx,a,mset) [(N) Megara (Hydra battle) (BTL) (HE)]
+	3.22 : obj/B_HE100 (mdlx,a,mset) [(B) Hydra]
+	0.86 : obj/B_HE110 (mdlx,a,mset) [(B) Hydra head (Out of the ground)]
+
+
+
+jafar (13.05)
+	0.06 : msn/us/AL05_MS203.bar
+	0.27 : 00effect.bar
+	0.06 : msg/us/al.bar
+	0.01 : libretto-al.bar
+	4.84 : map/al05.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.01 : obj/P_EX100_AL_CARPET (mdlx,a,mset) [(P) Sora (magic carpet)]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.2 : obj/W_EX010_AL_CARPET (mset) []
+	0.51 : obj/P_AL000 (mdlx) [(P) Aladdin]
+	0.03 : obj/P_AL000_MEMO (mset) []
+	0.39 : obj/P_EX030 (mdlx) [(P) Goofy]
+	0.05 : obj/P_EX030_MEMO (mset) []
+	0.37 : obj/P_EX020 (mdlx) [(P) Donald]
+	0.04 : obj/P_EX020_MEMO (mset) []
+	0.41 : obj/N_AL010_BTL (mdlx,a,mset) [(N) Magic Carpet (BTL) (AL)]
+	1.86 : obj/B_AL020 (mdlx,a,mset) [(B) Jafar (Djinn)]
+	0.22 : obj/F_AL140 (mdlx,a,mset) [(F) Boxes and rugs (AL)]
+	0.18 : obj/F_AL150 (mdlx,a,mset) [(F) Piece of stone wall (AL)]
+	0.24 : obj/F_AL160 (mdlx,a,mset) [(F) Building floor (AL)]
+	0.13 : obj/F_AL170 (mdlx,a,mset) [(F) Tip of tower (AL)]
+
+
+
+larxene (13.65)
+	0.06 : msn/us/HB33_FM_LAR.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	1.05 : map/hb33.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	5.35 : obj/B_EX400 (mdlx,a,mset) [(B) Larxene (Absent Silhouette)]
+
+
+
+larxenedata (13.65)
+	0.06 : msn/us/HB33_FM_LAR.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	1.05 : map/hb33.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	5.35 : obj/B_EX400 (mdlx,a,mset) [(B) Larxene (Absent Silhouette)]
+
+
+
+lexaeus (12.26)
+	0.12 : msn/us/HB33_FM_LEX.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	1.05 : map/hb33.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	3.9 : obj/N_CM020_BTL (mdlx,a,mset) [(N) Lexaeus (BTL) (CM)]
+
+
+
+lockshockbarrel (14.93)
+	0.14 : msn/us/NM10_MS201.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/nm.bar
+	0.01 : libretto-nm.bar
+	2.96 : map/nm10.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.01 : obj/F_NM150 (mdlx) [(F) ??? (NM)]
+	0.14 : obj/F_NM170_CATCH (mdlx,a,mset) [(F) Present minigame (CATCH) (NM)]
+	0.94 : obj/P_EX100_XM (mdlx,a) [(P) Sora (XM)]
+	2.5 : obj/P_EX100 (mset) [(P) Sora]
+	0.14 : obj/W_EX010_NM (mdlx,a) [(W) Kingdom Key (NM)]
+	0.26 : obj/W_EX010 (mset) [(W) Kingdom key]
+	0.53 : obj/P_NM000_SANTA (mdlx,a) [(P) Jack Skellington (XM)]
+	0.85 : obj/P_NM000 (mset) [(P) Jack Skellington]
+	0.05 : obj/W_NM000 (mdlx,a) [(W) Bone Fist]
+	0.59 : obj/P_EX020_XM (mdlx,a) [(P) Donald (XM)]
+	0.71 : obj/P_EX020 (mset) [(P) Donald]
+	0.08 : obj/W_EX020_NM (mdlx,a) [(W) Mage's Staff (NM)]
+	0.03 : obj/W_EX020 (mset) [(W) Mage's Staff]
+	0.92 : obj/N_NM050_BTL (mdlx,a,mset) [(N) Lock (BTL) (NM)]
+	1.3 : obj/N_NM060_BTL (mdlx,a,mset) [(N) Shock (BTL) (NM)]
+	1.08 : limit/us/jack.bar
+	1.32 : obj/N_NM070_BTL (mdlx,a,mset) [(N) Barrel (BTL) (NM)]
+
+
+
+luxord (11.89)
+	0.4 : msn/us/EH14_MS103.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	2.36 : map/eh14.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	3.51 : obj/B_EX150 (mdlx,a,mset) [(B) Luxord (WORKS! can't be killed, or paused)]
+	0.03 : obj/B_EX230 (mdlx,a) [(B) ??? - Game acts as if an enemy is present]
+	0.87 : obj/B_EX210 (mdlx,a,mset) [(M) Luxord's card (attack)]
+	0.26 : obj/M_EX950_CARD (mdlx,a,mset) [(M) Sora (Gambler's card)]
+	0.24 : obj/M_EX950_DICE (mdlx,a,mset) [(M) Sora (Gambler's die)]
+
+
+
+marluxia (12.53)
+	0.06 : msn/us/HB38_FM_MAR.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	0.71 : map/hb38.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	4.57 : obj/N_CM000_BTL (mdlx,a,mset) [(N) Marluxia (BTL) (CM)]
+
+
+
+marluxiadata (12.53)
+	0.06 : msn/us/HB38_FM_MAR.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	0.71 : map/hb38.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	4.57 : obj/N_CM000_BTL (mdlx,a,mset) [(N) Marluxia (BTL) (CM)]
+
+
+
+oogieboogie (15.2)
+	0.06 : msn/us/NM09_MS104.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/nm.bar
+	0.01 : libretto-nm.bar
+	3.46 : map/nm09.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.09 : obj/F_NM120 (mdlx,a,mset) [(F) Oogie's spikes (NM)]
+	0.08 : obj/F_NM130 (mdlx,a,mset) [(F) ??? (NM)]
+	0.15 : obj/F_NM090 (mdlx,a,mset) [(F) Oogie's punch (NM)]
+	0.01 : obj/F_NM140 (mdlx) [(F) ??? (NM)]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	0.94 : obj/P_EX100_XM (mdlx,a) [(P) Sora (XM)]
+	2.5 : obj/P_EX100 (mset) [(P) Sora]
+	0.14 : obj/W_EX010_NM (mdlx,a) [(W) Kingdom Key (NM)]
+	0.26 : obj/W_EX010 (mset) [(W) Kingdom key]
+	1.37 : obj/P_NM000 (mdlx,a,mset) [(P) Jack Skellington]
+	0.05 : obj/W_NM000 (mdlx,a) [(W) Bone Fist]
+	0.59 : obj/P_EX020_XM (mdlx,a) [(P) Donald (XM)]
+	0.71 : obj/P_EX020 (mset) [(P) Donald]
+	0.08 : obj/W_EX020_NM (mdlx,a) [(W) Mage's Staff (NM)]
+	0.03 : obj/W_EX020 (mset) [(W) Mage's Staff]
+	0.57 : obj/F_NM080 (mdlx,a,mset) [(F) Oogie's present box (NM)]
+	1.23 : obj/B_NM000 (mdlx,a,mset) [(B) Oogie Boogie]
+	0.14 : obj/F_NM100 (mdlx,a,mset) [(F) Oogie's present (NM)]
+	0.08 : obj/F_NM110 (mdlx,a,mset) [(F) Oogie's bag (NM)]
+	0.34 : obj/M_EX200_NM (mdlx,a) [(M) Wight Knight (NM)]
+	0.36 : obj/M_EX200 (mset) [(M) Wight Knight]
+	0.38 : obj/M_EX120_NM (mdlx,a) [(M) Emerald Blues (NM)]
+	1.08 : limit/us/jack.bar
+	0.08 : obj/M_EX120 (mset) [(M) Emerald Blues]
+
+
+
+pastpete (11.59)
+	0.06 : msn/us/WI01_MS101.bar
+	0.27 : 00effect.bar
+	0.05 : msg/us/wi.bar
+	0.01 : libretto-wi.bar
+	2.82 : map/wi01.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.07 : obj/F_EX030_WI (mdlx,a) [(F) Treasure chest S (WI)]
+	0.04 : obj/F_EX030 (mset) [(F) Treasure chest S]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	0.92 : obj/P_EX100_WI (mdlx,a) [(P) Sora (WI)]
+	2.5 : obj/P_EX100 (mset) [(P) Sora]
+	0.14 : obj/W_EX010_WI (mdlx,a) [(W) Kingdom Key (WI)]
+	0.26 : obj/W_EX010 (mset) [(W) Kingdom key]
+	1.51 : obj/P_WI020 (mdlx,a,mset) [(P) Donald (WI)]
+	0.12 : obj/W_EX020_WI (mdlx,a,mset) [(W) Mage's Staff (WI)]
+	1.33 : obj/P_WI030 (mdlx,a,mset) [(P) Goofy (WI)]
+	0.16 : obj/W_EX030_WI (mdlx,a,mset) [(W) Knight's Shield (WI)]
+	0.83 : obj/N_WI010_BTL_VS (mdlx,a) [(N) Pete (captain) (BTL_VS) (WI)]
+	0.43 : obj/N_WI010_BTL (mset) [(N) Pete (captain) (BTL) (WI)]
+
+
+
+peteoc1 (12.05)
+	0.08 : msn/us/HE08_MS106.bar
+	0.27 : 00effect.bar
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.23 : map/he08.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	0.59 : obj/N_HE030_BTL_DEF (mdlx,a,mset) [(N) Megara (Pete battle) (BTL_DEF) (HE)]
+	0.95 : obj/N_EX760_BTL_MEGARA (mdlx,a) [(N) Pete (BTL_MEGARA) (EX)]
+	0.62 : obj/N_EX760_BTL (mset) [(B) Pete (BTL)]
+	0.49 : obj/M_EX520 (mdlx,a,mset) [(M) Hook Bat]
+	0.91 : obj/M_EX010 (mdlx,a,mset) [(M) Soldier]
+
+
+
+peteoc2 (15.1)
+	0.14 : msn/us/HE08_MS107.bar
+	0.27 : 00effect.bar
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.23 : map/he08.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.2 : obj/F_HE020_C2 (mdlx,a) [(F) Rock 2 (blue) (HE)]
+	0.02 : obj/F_HE020 (mset) []
+	0.2 : obj/F_HE020_C1 (mdlx,a) [(F) Rock 1 (blue) (HE)]
+	0.29 : obj/F_HE020_PETE (mdlx,a) [(F) Falling boulder (Pete battle) (HE)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	2.5 : obj/N_HE010_BTL (mdlx,a,mset) [(N) Hercules (BTL) (HE)]
+	0.95 : obj/N_EX760_BTL_HERCULES (mdlx,a) [(N) Pete (BTL_HERCULES) (EX)]
+	0.62 : obj/N_EX760_BTL (mset) [(B) Pete (BTL)]
+	1.28 : obj/M_EX500 (mdlx,a,mset) [(M) Trick Ghost]
+	0.49 : obj/M_EX520 (mdlx,a,mset) [(M) Hook Bat]
+
+
+
+petetr (15.84)
+	0.06 : msn/us/WI03_MS104.bar
+	0.27 : 00effect.bar
+	0.05 : msg/us/wi.bar
+	0.01 : libretto-wi.bar
+	3.54 : map/wi03.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.26 : obj/N_WI010_BTL (mdlx,a,mset) [(N) Pete (captain) (BTL) (WI)]
+	0.54 : obj/F_WI060_PETE (mdlx,a,mset) [(F) Cannon tower (PETE) (WI)]
+	0.36 : obj/F_WI360_PETE (mdlx,a,mset) [(F) Building site's platform (PETE) (WI)]
+	0.92 : obj/P_EX100_WI (mdlx,a) [(P) Sora (WI)]
+	2.5 : obj/P_EX100 (mset) [(P) Sora]
+	0.14 : obj/W_EX010_WI (mdlx,a) [(W) Kingdom Key (WI)]
+	0.26 : obj/W_EX010 (mset) [(W) Kingdom key]
+	1.51 : obj/P_WI020 (mdlx,a,mset) [(P) Donald (WI)]
+	0.12 : obj/W_EX020_WI (mdlx,a,mset) [(W) Mage's Staff (WI)]
+	1.33 : obj/P_WI030 (mdlx,a,mset) [(P) Goofy (WI)]
+	0.16 : obj/W_EX030_WI (mdlx,a,mset) [(W) Knight's Shield (WI)]
+	0.57 : obj/F_WI020_BOSS (mdlx,a) [(F) Burning building (BOSS) (WI)]
+	0.01 : obj/F_WI020 (mset) [(F) Burning building (WI)]
+	0.03 : obj/F_WI010_BOSS (mdlx,a) [(F) ??? - Path? Pyramid? Sparkle? White fire? (BOSS) (WI)]
+	0.01 : obj/F_WI000 (mset) [(F) ??? - Path? Pyramid? Sparkle? (WI)]
+	1.47 : obj/N_EX760_BTL (mdlx,a) [(B) Pete (BTL)]
+	0.57 : obj/N_EX760_BTL_BOSS (mset) []
+	0.12 : obj/F_WI310 (mdlx,a) [(F) ??? (WI)]
+
+
+
+prisonkeeper (13.09)
+	0.06 : msn/us/NM03_MS103.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/nm.bar
+	0.01 : libretto-nm.bar
+	1.92 : map/nm03.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	0.94 : obj/P_EX100_NM (mdlx,a) [(P) Sora (NM)]
+	2.5 : obj/P_EX100 (mset) [(P) Sora]
+	0.14 : obj/W_EX010_NM (mdlx,a) [(W) Kingdom Key (NM)]
+	0.26 : obj/W_EX010 (mset) [(W) Kingdom key]
+	1.37 : obj/P_NM000 (mdlx,a,mset) [(P) Jack Skellington]
+	0.05 : obj/W_NM000 (mdlx,a) [(W) Bone Fist]
+	0.55 : obj/P_EX020_NM (mdlx,a) [(P) Donald (NM)]
+	0.71 : obj/P_EX020 (mset) [(P) Donald]
+	0.08 : obj/W_EX020_NM (mdlx,a) [(W) Mage's Staff (NM)]
+	0.03 : obj/W_EX020 (mset) [(W) Mage's Staff]
+	2.09 : obj/B_NM100 (mdlx,a,mset) [(B) Prison Keeper]
+	0.29 : obj/N_NM050_BTL_2 (mdlx,a,mset) [(N) Lock (BTL2) (NM)]
+	0.31 : obj/N_NM060_BTL_2 (mdlx,a,mset) [(N) Shock (BTL2) (NM)]
+	1.08 : limit/us/jack.bar
+	0.29 : obj/N_NM070_BTL_2 (mdlx,a,mset) [(N) Barrel (BTL2) (NM)]
+
+
+
+riku (9.84)
+	0.06 : msn/us/MU07_MS201.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/mu.bar
+	0.01 : libretto-mu.bar
+	2.26 : map/mu07.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.1 : obj/M_EX660_CROWD (mdlx) [(M) Rapid Thruster (CROWD)]
+	1.98 : obj/M_EX660_RAW (mdlx,a,mset) [(M) Rapid Thruster (RAW)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.22 : obj/N_EX940_BTL (mdlx,a,mset) [(N) Riku (coat) (BTL) (EX)]
+
+
+
+roxas (11.68)
+	0.06 : msn/us/EH21_MS101.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.55 : map/eh21.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	5.01 : obj/B_EX390 (mdlx,a,mset) [(B) Hooded Roxas]
+	0.45 : obj/W_EX010_ROXAS_LIGHT (mdlx,a,mset) [(W) Roxas's Oathkeeper]
+	0.39 : obj/W_EX010_ROXAS_DARK (mdlx,a,mset) [(W) Roxas's Oblivion]
+
+
+
+roxasdata (11.68)
+	0.06 : msn/us/EH21_MS101.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.55 : map/eh21.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	5.01 : obj/B_EX390 (mdlx,a,mset) [(B) Hooded Roxas]
+	0.45 : obj/W_EX010_ROXAS_LIGHT (mdlx,a,mset) [(W) Roxas's Oathkeeper]
+	0.39 : obj/W_EX010_ROXAS_DARK (mdlx,a,mset) [(W) Roxas's Oblivion]
+
+
+
+saix (14.84)
+	0.09 : msn/us/EH15_MS104.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	3.04 : map/eh15.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	3.91 : obj/B_EX160 (mdlx,a,mset) [(B) Saïx]
+	0.63 : obj/B_EX220 (mdlx,a,mset) [(F) Saix's claymore (Usable)]
+
+
+
+sark (11.12)
+	0.06 : msn/us/TR09_MS204.bar
+	0.27 : 00effect.bar
+	0.06 : msg/us/tr.bar
+	0.01 : libretto-tr.bar
+	1.64 : map/tr09.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	0.93 : obj/P_EX100_TR (mdlx,a) [(P) Sora (TR)]
+	2.5 : obj/P_EX100 (mset) [(P) Sora]
+	0.14 : obj/W_EX010_TR (mdlx,a) [(W) Kingdom Key (TR)]
+	0.26 : obj/W_EX010 (mset) [(W) Kingdom key]
+	1.05 : obj/P_TR000 (mdlx,a,mset) [(P) Tron]
+	0.17 : obj/W_TR000 (mdlx,a,mset) [(W) Identity Disk]
+	0.47 : obj/P_EX030_TR (mdlx,a) [(N) Goofy (TR)]
+	0.89 : obj/P_EX030 (mset) [(P) Goofy]
+	0.09 : obj/W_EX030_TR (mdlx,a) [(W) Knight's Shield (TR)]
+	0.07 : obj/W_EX030 (mset) [(W) Knight's Shield]
+	1.22 : obj/N_TR010_BTL (mdlx,a,mset) [(N) Sark (BTL) (TR)]
+	0.64 : obj/B_TR020 (mdlx,a,mset) [(B) MCP]
+	0.58 : obj/M_EX610 (mdlx,a,mset) [(M) Strafer]
+
+
+
+scar (7.97)
+	0.06 : msn/us/LK14_MS103.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/lk.bar
+	0.01 : libretto-lk.bar
+	1.61 : map/lk14.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.18 : obj/P_LK100 (mdlx,a,mset) [(P) Sora (LK)]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.09 : obj/W_EX010_LK (mset) []
+	1.22 : obj/P_LK000 (mdlx,a,mset) [(P) Simba]
+	0.06 : obj/W_LK000 (mdlx,a) [(W) Proud Fang]
+	0.74 : obj/P_LK030 (mdlx,a,mset) [(P) Goofy (LK)]
+	0.09 : obj/W_EX030 (mdlx,a) [(W) Knight's Shield]
+	0.03 : obj/W_EX030_LK (mset) []
+	0.74 : limit/us/simba.bar
+	1.63 : obj/B_LK110 (mdlx,a,mset) [(B) Scar]
+
+scarduringwildcat (7.97)
+	0.06 : msn/us/LK14_MS103.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/lk.bar
+	0.01 : libretto-lk.bar
+	1.61 : map/lk14.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.18 : obj/P_LK100 (mdlx,a,mset) [(P) Sora (LK)]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.09 : obj/W_EX010_LK (mset) []
+	1.22 : obj/P_LK000 (mdlx,a,mset) [(P) Simba]
+	0.06 : obj/W_LK000 (mdlx,a) [(W) Proud Fang]
+	0.74 : obj/P_LK030 (mdlx,a,mset) [(P) Goofy (LK)]
+	0.09 : obj/W_EX030 (mdlx,a) [(W) Knight's Shield]
+	0.03 : obj/W_EX030_LK (mset) []
+	0.74 : limit/us/simba.bar
+	1.63 : obj/B_LK110 (mdlx,a,mset) [(B) Scar]
+
+
+
+seifer-isinalley (7.28)
+	0.06 : msn/us/TT03_MS400.bar
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	2.95 : map/tt03.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	0.01 : obj/F_EX000 (mdlx) [(F) ??? - Chest related (EX)]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.39 : obj/N_EX580_RTN (mdlx,mset) [(N) Raijin (RTN) (EX)]
+	0.45 : obj/N_EX590_RTN (mdlx,mset) [(N) Fujin (RTN) (EX)]
+	0.98 : obj/N_EX570_BTL (mdlx,a,mset) [(N) Seifer (BTL) (EX)]
+
+
+
+seifer-istutorial (8.7)
+	0.01 : msn/us/TT04_MS107.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	2.76 : map/tt04.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.47 : obj/N_EX500_RTN (mdlx,mset) [(N) Hayner (RTN) (EX)]
+	0.46 : obj/N_EX510_RTN (mdlx,mset) [(N) Pence (RTN) (EX)]
+	0.47 : obj/N_EX520_RTN (mdlx,mset) [(N) Olette (RTN) (EX)]
+	0.39 : obj/N_EX580_RTN (mdlx,mset) [(N) Raijin (RTN) (EX)]
+	0.45 : obj/N_EX590_RTN (mdlx,mset) [(N) Fujin (RTN) (EX)]
+	0.39 : obj/N_EX610_RTN (mdlx,mset) [(N) Vivi (RTN) (EX)]
+	0.98 : obj/N_EX570_BTL (mdlx,a,mset) [(N) Seifer (BTL) (EX)]
+
+
+
+seifer-2 (8.75)
+	0.06 : msn/us/TT04_MS108.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	2.76 : map/tt04.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.47 : obj/N_EX500_RTN (mdlx,mset) [(N) Hayner (RTN) (EX)]
+	0.46 : obj/N_EX510_RTN (mdlx,mset) [(N) Pence (RTN) (EX)]
+	0.47 : obj/N_EX520_RTN (mdlx,mset) [(N) Olette (RTN) (EX)]
+	0.39 : obj/N_EX580_RTN (mdlx,mset) [(N) Raijin (RTN) (EX)]
+	0.45 : obj/N_EX590_RTN (mdlx,mset) [(N) Fujin (RTN) (EX)]
+	0.39 : obj/N_EX610_RTN (mdlx,mset) [(N) Vivi (RTN) (EX)]
+	0.98 : obj/N_EX570_BTL (mdlx,a,mset) [(N) Seifer (BTL) (EX)]
+
+
+
+seifer-3-anotherfight (7.08)
+	0.06 : msn/us/TT04_MS500.bar
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	2.76 : map/tt04.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.39 : obj/N_EX580_RTN (mdlx,mset) [(N) Raijin (RTN) (EX)]
+	0.45 : obj/N_EX590_RTN (mdlx,mset) [(N) Fujin (RTN) (EX)]
+	0.98 : obj/N_EX570_BTL (mdlx,a,mset) [(N) Seifer (BTL) (EX)]
+
+
+
+seifer-4-struggle (8.89)
+	0.67 : msn/us/TT04_MS02.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	2.76 : map/tt04.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/PRIZE_TT (mdlx) [PRIZE_TT]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.11 : obj/W_EX010_W0 (mdlx,a) [(W) Struggle Sword]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.39 : obj/N_EX580_RTN (mdlx,mset) [(N) Raijin (RTN) (EX)]
+	0.45 : obj/N_EX590_RTN (mdlx,mset) [(N) Fujin (RTN) (EX)]
+	0.39 : obj/N_EX610_RTN (mdlx,mset) [(N) Vivi (RTN) (EX)]
+	0.45 : obj/P_EX020_RTN (mdlx,mset) [(N) Donald (RTN)]
+	0.47 : obj/P_EX030_RTN (mdlx,mset) [(N) Goofy (RTN)]
+	0.98 : obj/N_EX570_BTL (mdlx,a,mset) [(N) Seifer (BTL) (EX)]
+
+
+
+sephiroth (10.46)
+	0.06 : msn/us/HB01_MS601.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	2.26 : map/hb01.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	3.89 : obj/N_HB630 (mdlx,a,mset) [(N) Sephiroth (HB)]
+	0.01 : obj/B_EX360 (mdlx) [(B) ??? - Invisible enemy, can't be hurt. (EX)]
+
+
+
+setzer-struggle (8.03)
+	0.67 : msn/us/TT04_MS01.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	2.76 : map/tt04.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/PRIZE_TT (mdlx) [PRIZE_TT]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.11 : obj/W_EX010_W0 (mdlx,a) [(W) Struggle Sword]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.45 : obj/P_EX020_RTN (mdlx,mset) [(N) Donald (RTN)]
+	0.47 : obj/P_EX030_RTN (mdlx,mset) [(N) Goofy (RTN)]
+	1.35 : obj/N_EX600_BTL (mdlx,a,mset) [(N) Setzer (BTL) (EX)]
+
+
+
+setzer-struggle-2 (12.91)
+	0.67 : msn/us/TT05_MS405.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	3.54 : map/tt05.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/PRIZE_TT (mdlx) [PRIZE_TT]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.11 : obj/W_EX010_W0 (mdlx,a) [(W) Struggle Sword]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.21 : obj/N_EX650_BTL10 (mdlx) [(N) Villager (boy) (BTL10) (EX)]
+	0.89 : obj/N_EX650_RAW (mset) []
+	0.2 : obj/N_EX670_BTL10 (mdlx) [(N) Villager (girl) (BTL10) (EX)]
+	0.93 : obj/N_EX670_RAW (mset) []
+	0.2 : obj/N_EX680_BTL10 (mdlx,a) [(N) Villager (man) (BTL10) (EX)]
+	1.6 : obj/N_EX680_RAW (mset) []
+	0.19 : obj/N_EX690_BTL10 (mdlx) [(N) Villager (woman) (BTL10) (EX)]
+	0.8 : obj/N_EX690_RAW (mset) []
+	1.35 : obj/N_EX600_BTL (mdlx,a,mset) [(N) Setzer (BTL) (EX)]
+
+
+
+shadowstalker (15.43)
+	0.06 : msn/us/BB05_MS104A.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/bb.bar
+	0.01 : libretto-bb.bar
+	2.15 : map/bb05.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.27 : obj/F_BB090 (mdlx,a) [(F) ??? (BB)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.95 : obj/P_BB000 (mdlx,a,mset) [(P) Beast]
+	0.05 : obj/W_BB000 (mdlx,a) [(W) Beast's Claw]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.32 : obj/B_BB120 (mdlx,a,mset) [(B) Shadow Stalker]
+	0.36 : obj/F_BB080 (mdlx,a,mset) [(F) Shadow Stalker's ground trap (BB)]
+	1.33 : obj/F_BB050 (mdlx,a,mset) [(F) Shadow Stalker (Chandelier) (BB)]
+	0.94 : limit/us/beast.bar
+	1.27 : obj/F_BB060 (mdlx,a,mset) [(F) Shadow Stalker (Columns) (BB)]
+
+
+
+shanyu (14.79)
+	0.09 : msn/us/MU09_MS108.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/mu.bar
+	0.01 : libretto-mu.bar
+	2.31 : map/mu09.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.02 : obj/PRIZE_MU (mdlx) [PRIZE_MU]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.5 : obj/P_MU000 (mdlx,a,mset) [(P) Mulan]
+	0.16 : obj/W_MU000 (mdlx,a,mset) [(W) Sword of the Ancestor]
+	0.25 : obj/N_MU080_PLY (mdlx,mset) [(N) Mushu (PLY) (MU)]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	0.09 : obj/F_MU030 (mdlx,a) [(F) ??? (MU)]
+	3.21 : obj/B_MU100 (mdlx,a,mset) [(B) Shan-Yu]
+	0.62 : obj/B_MU110 (mdlx,a,mset) [(B) Hayabusa (Shan-Yu's Falcon)]
+	0.81 : obj/M_EX580 (mdlx,a,mset) [(M) Nightwalker]
+
+
+
+stormrider (12.64)
+	0.06 : msn/us/MU08_MS204.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/mu.bar
+	0.01 : libretto-mu.bar
+	1.57 : map/mu08.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.15 : obj/F_MU070_BOSS (mdlx,a,mset) [(F) Wind ride (Reaction Command) (BOSS) (MU)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.5 : obj/P_MU000 (mdlx,a,mset) [(P) Mulan]
+	0.16 : obj/W_MU000 (mdlx,a,mset) [(W) Sword of the Ancestor]
+	0.25 : obj/N_MU080_PLY (mdlx,mset) [(N) Mushu (PLY) (MU)]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	3.2 : obj/B_MU120 (mdlx,a,mset) [(B) Storm Rider]
+	0.02 : obj/B_MU130 (mdlx,a) [(B) ??? - Barriers from Storm Rider?]
+
+
+
+terra (13.98)
+	0.06 : msn/us/DC07_FM_NAZO.bar
+	0.27 : 00effect.bar
+	0.05 : msg/us/dc.bar
+	0.01 : libretto-dc.bar
+	1.37 : map/dc07.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	5.38 : obj/B_EX420 (mdlx,a,mset) [(B) Lingering Will]
+	0.02 : obj/B_EX430 (mdlx) [(?) Related to Lingering Will?]
+
+
+
+beast (13.78)
+	0.06 : msn/us/BB03_MS103.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/bb.bar
+	0.01 : libretto-bb.bar
+	3.54 : map/bb03.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.07 : obj/F_EX030_BB (mdlx,a) [(F) Treasure chest S (BB)]
+	0.04 : obj/F_EX030 (mset) [(F) Treasure chest S]
+	0.01 : obj/F_EX000 (mdlx) [(F) ??? - Chest related (EX)]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	0.28 : obj/F_BB000 (mdlx,a) [(F) ??? (BB)]
+	0.86 : obj/N_BB050_BTL (mdlx,a,mset) [(N) Cogsworth (BTL) (BB)]
+	1.71 : obj/P_BB000_BTL (mdlx,a,mset) [(P) Beast (BTL)]
+
+
+
+experiment (15.89)
+	0.06 : msn/us/NM07_MS204.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/nm.bar
+	0.01 : libretto-nm.bar
+	1.68 : map/nm07.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.94 : obj/P_EX100_XM (mdlx,a) [(P) Sora (XM)]
+	2.5 : obj/P_EX100 (mset) [(P) Sora]
+	0.14 : obj/W_EX010_NM (mdlx,a) [(W) Kingdom Key (NM)]
+	0.26 : obj/W_EX010 (mset) [(W) Kingdom key]
+	0.53 : obj/P_NM000_SANTA (mdlx,a) [(P) Jack Skellington (XM)]
+	0.85 : obj/P_NM000 (mset) [(P) Jack Skellington]
+	0.05 : obj/W_NM000 (mdlx,a) [(W) Bone Fist]
+	0.59 : obj/P_EX020_XM (mdlx,a) [(P) Donald (XM)]
+	0.71 : obj/P_EX020 (mset) [(P) Donald]
+	0.08 : obj/W_EX020_NM (mdlx,a) [(W) Mage's Staff (NM)]
+	0.03 : obj/W_EX020 (mset) [(W) Mage's Staff]
+	1.82 : obj/B_NM110 (mdlx,a,mset) [(B) The Experiment]
+	1.39 : obj/B_NM110_HEAD (mdlx,a,mset) [(B) The Experiment (Head)]
+	1.41 : obj/B_NM110_L_ARM (mdlx,a,mset) [(B) The Experiment (Left Hand)]
+	1.08 : limit/us/jack.bar
+	1.39 : obj/B_NM110_R_ARM (mdlx,a,mset) [(B) The Experiment (Right Hand)]
+
+
+
+thresholder (14.09)
+	0.06 : msn/us/BB11_MS102.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/bb.bar
+	0.01 : libretto-bb.bar
+	2.33 : map/bb11.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.01 : obj/F_EX000 (mdlx) [(F) ??? - Chest related (EX)]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.96 : obj/B_BB100 (mdlx,a,mset) [(B) Thresholder]
+	0.21 : obj/B_BB130 (mdlx,a) [(B) Thresholder's possessor?]
+	0.61 : obj/M_BB010_AX (mdlx,a) [(M) Gargoyle Warrior]
+	0.68 : obj/M_BB010 (mset) []
+	0.53 : obj/M_BB010_SWORD (mdlx,a) [(M) Gargoyle Knight]
+	0.49 : obj/M_EX520 (mdlx,a,mset) [(M) Hook Bat]
+
+
+
+twilightthorn (8.84)
+	0.06 : msn/us/TT34_MS304.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	1.55 : map/tt34.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.18 : obj/W_EX010_RX (mset) []
+	3.92 : obj/B_EX100 (mdlx,a,mset) [(B) Twilight Thorn]
+	0.27 : obj/B_EX200 (mdlx,a,mset) [(?) Piramid shape? Related to Xemnas?]
+	0.72 : obj/M_EX880 (mdlx,a,mset) [(M) Creeper]
+
+
+
+twilightthornduringrc (8.84)
+	0.06 : msn/us/TT34_MS304.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	1.55 : map/tt34.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.14 : obj/W_EX010 (mdlx,a) [(W) Kingdom key]
+	0.18 : obj/W_EX010_RX (mset) []
+	3.92 : obj/B_EX100 (mdlx,a,mset) [(B) Twilight Thorn]
+	0.27 : obj/B_EX200 (mdlx,a,mset) [(?) Piramid shape? Related to Xemnas?]
+	0.72 : obj/M_EX880 (mdlx,a,mset) [(M) Creeper]
+
+
+
+vexendata (15.19)
+	0.11 : msn/us/HB32_FM_VEX.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	1.67 : map/hb32.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	4.27 : obj/N_CM040_BTL (mdlx,a,mset) [(N) Vexen (BTL) (CM)]
+	1.95 : obj/P_EX100_HTLF_BTL (mdlx,a,mset) [(P) Vexen's Anti-Sora (BTL)]
+
+
+
+vexen (15.19)
+	0.11 : msn/us/HB32_FM_VEX.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	1.67 : map/hb32.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	4.27 : obj/N_CM040_BTL (mdlx,a,mset) [(N) Vexen (BTL) (CM)]
+	1.95 : obj/P_EX100_HTLF_BTL (mdlx,a,mset) [(P) Vexen's Anti-Sora (BTL)]
+
+
+
+vivi (12.59)
+	0.68 : msn/us/TT05_MS402.bar
+	0.27 : 00effect.bar
+	0.14 : msg/us/tt.bar
+	0.01 : libretto-tt.bar
+	3.54 : map/tt05.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/PRIZE_TT (mdlx) [PRIZE_TT]
+	1.55 : obj/P_EX110 (mdlx,a,mset) [(P) Roxas]
+	0.11 : obj/W_EX010_W0 (mdlx,a) [(W) Struggle Sword]
+	0.18 : obj/W_EX010_RX (mset) []
+	0.21 : obj/N_EX650_BTL10 (mdlx) [(N) Villager (boy) (BTL10) (EX)]
+	0.89 : obj/N_EX650_RAW (mset) []
+	0.2 : obj/N_EX670_BTL10 (mdlx) [(N) Villager (girl) (BTL10) (EX)]
+	0.93 : obj/N_EX670_RAW (mset) []
+	0.2 : obj/N_EX680_BTL10 (mdlx,a) [(N) Villager (man) (BTL10) (EX)]
+	1.6 : obj/N_EX680_RAW (mset) []
+	0.19 : obj/N_EX690_BTL10 (mdlx) [(N) Villager (woman) (BTL10) (EX)]
+	0.8 : obj/N_EX690_RAW (mset) []
+	1.02 : obj/N_EX610_BTL (mdlx,a,mset) [(N) Vivi (BTL) (EX)]
+
+
+
+xaldin (13.28)
+	0.06 : msn/us/BB15_MS203.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/bb.bar
+	0.01 : libretto-bb.bar
+	2.38 : map/bb15.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.04 : obj/F_EX260 (mdlx,a) [(F) Puzzle crown]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	3.63 : obj/B_EX130 (mdlx,a,mset) [(B) Xaldin]
+
+
+
+xemnas (9.86)
+	0.06 : msn/us/EH19_MS105.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.88 : map/eh19.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	3.7 : obj/B_EX170 (mdlx,a,mset) [(B) Xemnas]
+
+
+
+xigbar (14.37)
+	0.06 : msn/us/EH10_MS102.bar
+	0.09 : file/b_ex140.2ld
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	3.86 : map/eh10.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	3.19 : obj/B_EX140 (mdlx,a,mset) [(B) Xigbar]
+
+
+
+zexioncrashed (13.58)
+	0.06 : msn/us/HB34_FM_ZEX.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	1.89 : map/hb34.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	3.44 : obj/B_EX370 (mdlx,a,mset) [(B) Zexion (Absent Silhouette)]
+	0.39 : obj/B_EX380 (mdlx,a,mset) [(F) Zexion's book]
+	0.61 : obj/B_EX410 (mdlx,a,mset) [(P) Sora book]
+
+
+
+zexiondatacrashed (13.58)
+	0.06 : msn/us/HB34_FM_ZEX.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	1.89 : map/hb34.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	3.44 : obj/B_EX370 (mdlx,a,mset) [(B) Zexion (Absent Silhouette)]
+	0.39 : obj/B_EX380 (mdlx,a,mset) [(F) Zexion's book]
+	0.61 : obj/B_EX410 (mdlx,a,mset) [(P) Sora book]
+
+
+
+datademyxreal (14.69)
+	0.17 : msn/us/HB04_MS403.bar
+	0.27 : 00effect.bar
+	0.09 : msg/us/hb.bar
+	0.01 : libretto-hb.bar
+	3.26 : map/hb04.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.01 : obj/B_EX120_HB_LV99 (mdlx,a) [(B99) Demyx (Limit Cut)]
+	1.65 : obj/B_EX120_HB (mset) [(B) Demyx]
+	0.57 : obj/M_EX880_DANCER_LV99 (mdlx,a) [(M) Demyx's water form (Data)]
+	0.84 : obj/M_EX880_DANCER (mset) [(M) Demyx's water form]
+
+
+
+datafinalxemnasreal (16.41)
+	0.06 : msn/us/EH20_MS113_RE.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.3 : map/eh20.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	1.19 : obj/P_EX100_LAST (mdlx,mset) [(P) Sora (electrified by Xemnas) (final battle)]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.44 : obj/P_EH000_LAST (mdlx,a,mset) [(P) Riku (final battle)]
+	0.24 : obj/W_EH000 (mdlx,a) [(W) Way to Dawn]
+	0.13 : obj/W_EH000_LAST (mset) []
+	2.57 : obj/B_EX170_LAST_LV99 (mdlx,a) [(B99) Xemnas (Final) (Limit Cut The World of Nothing)?]
+	1.25 : limit/us/riku.bar
+	3.73 : obj/B_EX170_LAST (mset) [(B) Xemnas (Final)]
+	0.28 : obj/P_EH010 (mdlx,a,mset) [(P) ??? - Path? Pyramid? (EH)]
+
+
+
+datasaixreal (14.85)
+	0.09 : msn/us/EH15_MS104.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	3.04 : map/eh15.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.34 : obj/B_EX160_LV99 (mdlx,a) [(B99) Saïx (Limit Cut)]
+	2.58 : obj/B_EX160 (mset) [(B) Saïx]
+	0.5 : obj/B_EX220_LV99 (mdlx,a) [(F) Saix's claymore limit cut (Usable)]
+	0.13 : obj/B_EX220 (mset) [(F) Saix's claymore (Usable)]
+
+
+
+dataxaldinreal (13.24)
+	0.06 : msn/us/BB15_MS203_RE.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/bb.bar
+	0.01 : libretto-bb.bar
+	2.38 : map/bb15.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.48 : obj/B_EX130_LV99 (mdlx,a) [(B99) Xaldin (Limit Cut)]
+	2.15 : obj/B_EX130 (mset) [(B) Xaldin]
+
+
+
+dataxemnasreal (9.86)
+	0.06 : msn/us/EH19_MS105.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.88 : map/eh19.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.64 : obj/B_EX170_LV99 (mdlx,a) [(B99) Xemnas (Limit Cut Memory's Contortion)]
+	2.06 : obj/B_EX170 (mset) [(B) Xemnas]
+
+
+
+dataXigbar (14.28)
+	0.06 : msn/us/EH10_MS102.bar
+	0.27 : 00effect.bar
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	3.86 : map/eh10.map
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+	1.75 : obj/B_EX140_LV99 (mdlx,a) [(B99) Xigbar (Limit Cut)]
+	1.44 : obj/B_EX140 (mset) [(B) Xigbar]
+
+
+
+colloseum8wallpapered (2.35)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.84 : map/he09.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+
+
+
+colloseumm7 (6.19)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.84 : map/he09.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+
+
+
+colloseumm6 (6.19)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.84 : map/he09.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+
+
+
+colloseumm5 (9.14)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.84 : map/he09.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.33 : obj/P_EX020 (mdlx,a,mset) [(P) Donald]
+	0.11 : obj/W_EX020 (mdlx,a,mset) [(W) Mage's Staff]
+	1.35 : obj/P_EX030 (mdlx,a,mset) [(P) Goofy]
+	0.16 : obj/W_EX030 (mdlx,a,mset) [(W) Knight's Shield]
+
+
+
+colloseumm4wallpapered (2.53)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.84 : map/he09.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	0.18 : obj/F_HE000 (mdlx,a,mset) [(F) Standing Torch (HE)]
+
+
+
+colloseumm3 (6.19)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.84 : map/he09.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+
+
+
+colloseumm2 (6.19)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.84 : map/he09.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+
+
+
+colloseumm1wallpapered (2.35)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.08 : msg/us/he.bar
+	0.01 : libretto-he.bar
+	1.84 : map/he09.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+
+
+
+leononly (7.56)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.55 : map/eh21.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	0.95 : obj/N_HB530_BTL2 (mdlx,a) [(N) Squall / Leon (BTL2) (HB)]
+	0.72 : obj/N_HB530_BTL (mset) [(N) Squall / Leon (BTL) (HB)]
+
+
+
+hadesonly (9.03)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.55 : map/eh21.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.78 : obj/B_HE030_CLSM (mdlx,a) [(B) Hades (CLSM) (HE)]
+	1.36 : obj/B_HE030 (mset) [(B) Hades (3rd & Paradox Hades Cup fight)]
+
+
+
+cloudonly (7.79)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.55 : map/eh21.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	0.81 : obj/N_HB550_BTL2 (mdlx,a) [(N) Cloud (BTL2) (HB)]
+	1.09 : obj/N_HB550_BTL (mset) [(N) Cloud (BTL) (HB)]
+
+
+
+yuffieonly (6.84)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.55 : map/eh21.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	0.64 : obj/N_HB580_BTL2 (mdlx,a) [(N) Yuffie (BTL2) (HB)]
+	0.31 : obj/N_HB580_BTL (mset) [(N) Yuffie (BTL) (HB)]
+
+
+
+tifaonly (7.21)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.55 : map/eh21.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	0.69 : obj/N_HB570_BTL2 (mdlx,a) [(N) Tifa (BTL2) (HB)]
+	0.63 : obj/N_HB570_BTL (mset) [(N) Tifa (BTL) (HB)]
+
+
+
+herculesonly (8.37)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.55 : map/eh21.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	1.22 : obj/N_HE010_BTL_CLSM (mdlx,a) [(N) Hercules (BTL) (CLSM) (HE)]
+	1.26 : obj/N_HE010_BTL (mset) [(N) Hercules (BTL) (HE)]
+
+
+
+petecupsonly (7.46)
+	0.27 : 00effect.bar
+	0.03 : obj/PRIZE (mdlx) [PRIZE]
+	0.03 : obj/PRIZE_BOX_YELLOW (mdlx) [PRIZE_BOX_YELLOW]
+	0.03 : obj/PRIZE_BOX_RED (mdlx) [PRIZE_BOX_RED]
+	0.03 : obj/PRIZE_BOX_BLUE (mdlx) [PRIZE_BOX_BLUE]
+	0.07 : msg/us/eh.bar
+	0.01 : libretto-eh.bar
+	1.55 : map/eh21.map
+	0.03 : obj/PRIZE_BOX_GREEN (mdlx) [PRIZE_BOX_GREEN]
+	3.44 : obj/P_EX100 (mdlx,a,mset) [(P) Sora]
+	0.4 : obj/W_EX010 (mdlx,a,mset) [(W) Kingdom key]
+	0.95 : obj/N_EX760_BTL_CLSM (mdlx,a) [(N) Pete (BTL) (CLSM) (EX)]
+	0.62 : obj/N_EX760_BTL (mset) [(B) Pete (BTL)]
+
+
+

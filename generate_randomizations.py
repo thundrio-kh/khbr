@@ -6,7 +6,7 @@ bosses = kh2.get_bosses()
 
 
 # Fake number right now
-MAXCACHESIZE = 25_000_00_000_000_000#FAKE NUMBER # A little under Shan yu's max size, just a guess for right now
+MAXCACHESIZE = 25_000_00#FAKE NUMBER # A little under Shan yu's max size, just a guess for right now
 UNLIMITEDSIZE = 99_999_999_999_999
 SOLUTIONSWANTED = 10
 
