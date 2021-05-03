@@ -458,7 +458,7 @@ class KingdomHearts2:
                                             continue
                                         _add_to_subtract_map(subtract_map, obj)
                                     # Bosses don't have spawn limiters normally, so don't need to set them
-                                    if old_boss_object["msn_replace_allowed"]:
+                                    if old_boss_object["msn_replace_allowed"] and new_boss_object["msn_replace_allowed"]:
                                         msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"]
                                     if scale_boss:
                                         if new_boss not in set_scaling:

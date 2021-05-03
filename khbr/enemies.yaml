@@ -2049,7 +2049,7 @@ Grim Reaper:
       - 0
       - 0
 Groundshaker:
-  enabled: true
+  enabled: false
   enmp_index: 90
   hp: 100
   level: 99
@@ -2077,6 +2077,8 @@ Hades Cups:
   limiter: 34
   model: B_HE030_CLSM
   msn_replace_allowed: false
+  # This is not his actual msn but is to handle the replaceas
+  msn: HE18_MS108
   obj_id: 2318
   size: 3.14
   type: boss
