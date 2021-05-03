@@ -1243,6 +1243,8 @@ Cerberus:
       - 0
       - 0
     Cerberus (Cups):
+      enabled: false
+      replace_allowed: false
       msn_list:
       - program: 194
         msn: HE_COL_2_10
@@ -2101,6 +2103,8 @@ Hades Cups:
   - Armor Xemnas II # TELEPORTER
   variations:
     Hades Cups:
+      enabled: false
+      replace_allowed: false
       msn_list:
       - program: 192
         msn: HE_COL_4_10
@@ -2172,6 +2176,8 @@ Hades II:
       - 1
       - 0
     Hades II (1):
+      enabled: false
+      replace_allowed: false
       msn_list:
       - program: 201
         msn: HE19_MS204
@@ -2213,6 +2219,8 @@ Hayner:
   type: boss
   variations:
     Hayner:
+      enabled: false
+      replace_allowed: false
       msn_list:
       - program: 182
         msn: TT04_MS00
@@ -2237,6 +2245,8 @@ Hercules:
   type: boss
   variations:
     Hercules:
+      enabled: false
+      replace_allowed: false
       msn_list:
       - program: 191
         msn: HE_COLOSSEUM_3

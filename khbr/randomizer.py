@@ -370,6 +370,8 @@ class KingdomHearts2:
                                     if new_boss == ent["name"]:
                                         continue
                                     new_boss_object = self.enemy_records[new_boss]
+                                    if new_boss_object["replace_as"]:
+                                        new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
                                     old_boss_object = self.enemy_records[ent["name"]]
                                     if not old_boss_object["replace_allowed"]:
                                         continue
@@ -798,4 +800,5 @@ if __name__ == '__main__':
     if mode == "read":
         b64 = rando.read_seed("kh2", seedfn=options, outfn=fn)
     else:
-        b64 = rando.generate_seed("kh2", options, seed=seed)
+        b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=True)
+        print(b64)
