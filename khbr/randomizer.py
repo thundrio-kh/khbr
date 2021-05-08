@@ -214,6 +214,8 @@ class KingdomHearts2:
                     boss_check = bosses[bc]
                     if not boss_check["type"] == "boss":
                         continue
+                    if not boss_check["enabled"]:
+                        continue
                     if boss_check["name"] == boss["name"]:
                         # Boss should always be allowed to be in it's own location
                         avail.append(boss_check["name"])
