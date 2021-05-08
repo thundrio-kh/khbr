@@ -116,7 +116,7 @@ class KingdomHearts2:
             self.locmap = json.load(f)
         with open(os.path.join(os.path.dirname(__file__), "msns.json")) as f:
             self.msninfo = json.load(f)
-        self.enemy_records = self.get_bosses(usefilters=False, getavail=False)
+        self.enemy_records = self.get_bosses(usefilters=False, getavail=True)
         spawns = self.get_locations()
     def get_valid_enemies(self):
         return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "enemy"]
@@ -224,12 +224,20 @@ class KingdomHearts2:
             #                             bosses[ent["name"]]["room_size"] = room["size"]
             for b in bosses:
                 boss = bosses[b]
+                if not boss["type"] == "boss":
+                    continue
                 avail = [] # These are bosses that are allowed to be here
                 for bc in bosses:
                     boss_check = bosses[bc]
+                    if not boss_check["type"] == "boss":
+                        continue
+                    if not boss_check["enabled"]:
+                        continue
                     if boss_check["name"] == boss["name"]:
                         # Boss should always be allowed to be in it's own location
                         avail.append(boss_check["name"])
+                        continue
+                    if not boss_check["replace_allowed"]:
                         continue
                     if "blacklist" in boss:
                         if bc in boss["blacklist"]:
@@ -430,6 +438,9 @@ class KingdomHearts2:
                                 if ent["isboss"]:
                                     if not bosses:
                                         continue # Bosses aren't being randomized
+                                    old_boss_object = self.enemy_records[ent["name"]]
+                                    if not old_boss_object["replace_allowed"]:
+                                        continue
                                     if selected_boss:
                                         new_boss = selected_boss
                                     elif bossmapping:
@@ -438,17 +449,12 @@ class KingdomHearts2:
                                             continue
                                         new_boss = bossmapping[ent["name"]]
                                     else:
-                                        if ent["name"] not in bosses:
-                                            continue # Boss can't be randomized (eg jafar)
-                                        new_boss = self.pick_boss_to_replace(bosses[ent["name"]]["available"])
+                                        new_boss = self.pick_boss_to_replace(old_boss_object["available"])
                                     if new_boss == ent["name"]:
                                         continue
                                     new_boss_object = self.enemy_records[new_boss]
                                     if new_boss_object["replace_as"]:
                                         new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
-                                    old_boss_object = self.enemy_records[ent["name"]]
-                                    if not old_boss_object["replace_allowed"]:
-                                        continue
                                     changesmade = True
                                     _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
                                     for obj in new_boss_object["adds"]:
@@ -458,7 +464,16 @@ class KingdomHearts2:
                                             continue
                                         _add_to_subtract_map(subtract_map, obj)
                                     # Bosses don't have spawn limiters normally, so don't need to set them
-                                    if old_boss_object["msn_replace_allowed"] and new_boss_object["msn_replace_allowed"]:
+                                    if old_boss_object["msn_replace_allowed"]:
+                                        # This is fine because the only bosses with msn_list don't need the msn to be swapped
+                                        if not old_boss_object["msn"]:
+                                            if old_boss_object["msn_list"]:
+                                                continue
+                                            0/0
+                                        if not new_boss_object["msn"]:
+                                            if new_boss_object["msn_list"]:
+                                                continue
+                                            0/0
                                         msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"]
                                     if scale_boss:
                                         if new_boss not in set_scaling:
@@ -912,7 +927,7 @@ class Randomizer:
 
 if __name__ == '__main__':
     mode = sys.argv[1]
-    # run randomizer.py devgenerate "{\"enemy\": \"One to One\"}"
+    # run randomizer.py devgenerate "{\"enemy\": \"One to One\", \"boss\": \"Wild\"}"
     options = sys.argv[2]
     if len(sys.argv) > 3:
         seed = sys.argv[3]
