@@ -153,7 +153,7 @@ class KingdomHearts2:
     def get_enemies(self):
         enemies = self.get_valid_enemies()
         return [self.enemy_records[e] for e in self.get_valid_enemies() if self.enemy_records[e]["enabled"]]
-    def get_bosses(self, nightmare_mode=False, maxsize=UNLIMITED_SIZE, usefilters=True, getavail=True):
+    def get_bosses(self, nightmare_mode=False, maxsize=LIMITED_SIZE, usefilters=True, getavail=True):
         defaults = {
             "replace_as": None,
             "replace_allowed": True,
@@ -171,6 +171,7 @@ class KingdomHearts2:
             "msn": None,
             "size": 0,
             "room_size": 0,
+            "roommaxsize": None,
             "enmp_index": None,
             "enabled": True,
             "blacklist": [],
@@ -245,10 +246,12 @@ class KingdomHearts2:
                     if boss["whitelist"]:
                         if bc not in boss["whitelist"]:
                             continue
-                    if boss["msn_required"]:
-                        if not boss_check["msn_replace_allowed"]:
+                    if not boss["msn_replace_allowed"]:
+                        if boss_check["msn_required"]:
                             continue
                     #print("{} > {}: {} + {} >= {}".format(boss["name"], boss_check["name"], boss["size"], boss_check["room_size"], maxsize))
+                    # THIS NEEDS TO CHANGE ONCE I CAN DO UNLIMITED STUFF
+                    roommaxsize = boss_check["roommaxsize"] or maxsize
                     availablespace = (maxsize - boss_check["room_size"]) * boss["roomsizemultiplier"]
                     #print("{} - {} ({}) >= 0".format(availablespace, boss["size"], availablespace - boss["size"]))
                     if availablespace - boss["size"] < 0:
@@ -928,6 +931,7 @@ class Randomizer:
 if __name__ == '__main__':
     mode = sys.argv[1]
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\", \"boss\": \"Wild\"}"
+    # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Sephiroth\"}"
     options = sys.argv[2]
     if len(sys.argv) > 3:
         seed = sys.argv[3]

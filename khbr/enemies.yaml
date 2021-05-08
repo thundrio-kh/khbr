@@ -1666,6 +1666,7 @@ Xigbar (Data):
   size: 3.19
   program: 100
   room_size: 11.09
+  roommaxsize: 15.37
   type: boss
   variations:
     Xigbar (Data):
@@ -3095,6 +3096,7 @@ Pete OC II:
   room_size: 13.53
   program: 116
   type: boss
+  roommaxsize: 16.11
   variations:
     Pete OC II:
       vars:
@@ -3733,6 +3735,7 @@ Sniper:
   type: enemy
   tags:
   - ranged
+  - large
   variations:
     Sniper:
       vars:
@@ -4278,6 +4281,7 @@ Xigbar:
   size: 3.19
   program: 57
   room_size: 11.18
+  roommaxsize: 15.37
   type: boss
   variations:
     Xigbar:
