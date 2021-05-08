@@ -936,6 +936,14 @@ if __name__ == '__main__':
         seed=None
     if options[0] == "{":
         options = json.loads(options)
+    else:
+        options = {}
+        for arg in sys.argv:
+            print(arg)
+            if "=" in arg:
+                opt = arg.split("=")
+                print(opt)
+                options[opt[0]] = opt[1]
 
     if "randomization_only" in sys.argv:
         randomization_only = True
