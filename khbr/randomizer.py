@@ -200,7 +200,7 @@ class KingdomHearts2:
                 for d in defaults:
                     if d not in boss:
                         boss[d] = defaults[d]
-                boss["category"] = '-'.join(boss["tags"])
+                boss["category"] = '-'.join(sorted(boss["tags"]))
                 if usefilters:
                     if boss["type"] != 'boss':
                         continue
