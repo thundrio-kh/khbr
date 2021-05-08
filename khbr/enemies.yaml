@@ -1268,6 +1268,7 @@ Cerberus:
       - 0
       - 0
     Cerberus (Cups):
+      cups: false
       enabled: false
       replace_allowed: false
       msn_list:
@@ -1291,6 +1292,7 @@ Cloud:
   level: 99
   limiter: 0
   model: N_HB550_BTL2
+  cups: true
   msn_replace_allowed: false
   obj_id: 2297
   size: 1.9
@@ -1445,6 +1447,7 @@ Dark Thorn:
       - 0
       - 0
 Axel (Data):
+  data: true
   enabled: false
   replace_allowed: false
   enmp_index: 221
@@ -1485,6 +1488,7 @@ Axel (Data):
       - 0
       - 0
 Demyx (Data):
+  data: true
   enabled: false
   replace_allowed: false
   enmp_index: 216
@@ -1535,6 +1539,7 @@ Final Xemnas (Data):
       - 1
       - 0
 Luxord (Data):
+  data: true
   enabled: false
   replace_allowed: false
   enmp_index: 219
@@ -1556,6 +1561,7 @@ Luxord (Data):
       - 0
       - 0
 Saix (Data):
+  data: true
   can_be_enemy: true
   enabled: false
   replace_allowed: false
@@ -1578,6 +1584,7 @@ Saix (Data):
       - 0
       - 0
 Xaldin (Data):
+  data: true
   enabled: false
   replace_allowed: false
   enmp_index: 222
@@ -1598,6 +1605,7 @@ Xaldin (Data):
       - 0
       - 0
 Xemnas (Data):
+  data: true
   aimod: true
   can_be_enemy: true
   enabled: false
@@ -1654,6 +1662,7 @@ Xigbar (Data):
   - Axel (Data) # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   enabled: false
+  data: true
   replace_allowed: false
   enmp_index: 227
   hp: 100
@@ -2097,6 +2106,7 @@ Groundshaker:
 Hades Cups:
   can_be_enemy: true
   enabled: true
+  cups: true
   enmp_index: 156
   hp: 100
   level: 99
@@ -2284,6 +2294,7 @@ Hercules:
   obj_id: 2320
   size: 2.48
   type: boss
+  cups: false # will be true once he works
   variations:
     Hercules:
       enabled: false
@@ -2652,6 +2663,7 @@ Larxene:
       - 0
       - 1
     Larxene (Data):
+      data: true
       enabled: false
       replace_allowed: false
       msn: HB33_FM_LAR_RE
@@ -2670,6 +2682,7 @@ Leon:
   obj_id: 2296
   size: 1.67
   type: boss
+  cups: true
   variations:
     Leon:
       program: 189
@@ -2723,6 +2736,7 @@ Lexaeus:
       - 0
       - 0
     Lexaeus (Data):
+      data: true
       enabled: false
       replace_allowed: false
       isnightmare: true
@@ -3050,6 +3064,7 @@ Pete Cups:
   enmp_index: 158
   hp: 100
   level: 99
+  cups: true
   limiter: 20
   model: N_EX760_BTL_CLSM
   msn: HE_COL_8TI_BOSS
@@ -3348,6 +3363,7 @@ Roxas:
       - 0
       - 0
     Roxas (Data):
+      data: true
       enabled: false
       replace_allowed: false
       isnightmare: true
@@ -3887,6 +3903,7 @@ Surveillance Robot:
       - 0
 Terra:
   can_be_enemy: true
+  data: true
   enabled: false
   replace_allowed: false
   enmp_index: 220
@@ -3982,6 +3999,7 @@ Tifa:
   model: N_HB570_BTL2
   msn_replace_allowed: false
   obj_id: 2298
+  cups: true
   size: 1.32
   type: boss
   variations:
@@ -4106,6 +4124,7 @@ Vexen:
   type: boss
   variations:
     Vexen (Data):
+      data: true
       enabled: false
       replace_allowed: false
       program: 146
@@ -4297,6 +4316,7 @@ Yuffie:
   model: N_HB580_BTL2
   msn_replace_allowed: false
   obj_id: 2299
+  cups: true
   size: 0.95
   type: boss
   variations:
@@ -4378,6 +4398,7 @@ Zexion:
       - 0
       - 0
     Zexion (Data):
+      data: true
       enabled: false
       replace_allowed: false
       program: 152

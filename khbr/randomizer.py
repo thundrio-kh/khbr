@@ -143,12 +143,16 @@ class KingdomHearts2:
 
             "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. Selected Boss will replace every boss with a single selected boss.",
                                 "possible_values": ["Disabled", "Wild", "Selected Boss"], "hidden_values": ["One to One"]},#, "one_to_one_characters",
+            "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
+                                "possible_values": [None] + self.get_valid_bosses(), "hidden_values": []},
             "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game.",
                                 "possible_values": [False, True], "hidden_values": []},
-            # "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
-            #                     "possible_values": [True, False], "hidden_values": []},
-            "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
-                                "possible_values": [None] + self.get_valid_bosses(), "hidden_values": []}
+            "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
+                                "possible_values": [True, False], "hidden_values": []},
+            "cups_bosses": {"display_name": "Include Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One', this will cause these bosses to be prett common, as there are 3-4 separate instances of most cups bosses.",
+                                "possible_values": [True, False], "hidden_values": []},
+            "data_bosses": {"display_name": "Include Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra. Sephiroth is not controlled by this option.",
+                                "possible_values": [False, True], "hidden_values": []}
         }
     def get_enemies(self):
         enemies = self.get_valid_enemies()
@@ -160,6 +164,8 @@ class KingdomHearts2:
             "model": None,
             "msn_replace_allowed": True,
             "tags": [],
+            "cups": False,
+            "data": False,
             "category": None,
             "level": 0,
             "isnightmare": False,
