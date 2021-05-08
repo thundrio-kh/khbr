@@ -346,7 +346,7 @@ class KingdomHearts2:
             if "nightmare_bosses" in options and options["nightmare_bosses"]:
                 nightmare_bosses = True
                 duplicate_bosses = True
-            
+
         if bossmode or enemymode:
             #maxsize = UNLIMITED_SIZE if self.unlimited_memory else LIMITED_SIZE
             maxsize = LIMITED_SIZE
@@ -466,17 +466,14 @@ class KingdomHearts2:
                                         if "dontSub" in obj and obj["dontSub"]:
                                             continue
                                         _add_to_subtract_map(subtract_map, obj)
-                                    # Bosses don't have spawn limiters normally, so don't need to set them
-                                    if old_boss_object["msn_replace_allowed"]:
+                                    if old_boss_object["msn_replace_allowed"] and new_boss_object["msn_replace_allowed"]:
                                         # This is fine because the only bosses with msn_list don't need the msn to be swapped
                                         if not old_boss_object["msn"]:
                                             if old_boss_object["msn_list"]:
                                                 continue
-                                            0/0
                                         if not new_boss_object["msn"]:
                                             if new_boss_object["msn_list"]:
                                                 continue
-                                            0/0
                                         msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"]
                                     if scale_boss:
                                         if new_boss not in set_scaling:
