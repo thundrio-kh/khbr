@@ -862,11 +862,14 @@ class Randomizer:
         with open(os.path.join(outdir, "icon.png"), "wb") as f:
             f.write(raw_image)
         
-    def generate_mod(self, game, fn, randomization, newname=None):
+    def generate_mod(self, game, fn, randomization, newname=None, dumpspoilers=True):
         mod_yaml = game.generate_mod_basics(newname)
         moddir, rmmoddir = self._make_tmpdir()
         
         assets = game.generate_files(moddir, randomization)
+        if dumpspoilers:
+            with open(os.path.join(moddir, "spoilers.json"), "w") as f:
+                json.dump(randomization, f, indent=4)
         mod_yaml["assets"] = assets
         self._create_yaml(os.path.join(moddir, "mod.yml"), mod_yaml)
         
@@ -967,7 +970,8 @@ if __name__ == '__main__':
 
     if mode.startswith("dev"):
         # moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
-        moddir = "C:\\Users\\Arcade\\Desktop\\git\\OpenKh\\OpenKh.Tools.ModsManager\\bin\\Debug\\net5.0-windows\\mods\\thundrio-kh"
+        #moddir = "C:\\Users\\Arcade\\Desktop\\git\\OpenKh\\OpenKh.Tools.ModsManager\\bin\\Debug\\net5.0-windows\\mods\\thundrio-kh"
+        moddir = "C:\\Users\\Arcade\\Desktop\\pcsx2-ex\\openkh\\mods\\thundrio-kh"
         fn = "devmod"
         if os.path.exists(os.path.join(moddir, fn)):
             shutil.rmtree(os.path.join(moddir, fn))
