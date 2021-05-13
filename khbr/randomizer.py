@@ -17,6 +17,30 @@ NUM_RANDOMIZATION_MAPPINGS = 9
 
 HARDCAP = "-3.3895395E+38"
 
+def final_fight_text(source_enemy, new_name):
+    key = "{}-{}-{}".format(source_enemy["ObjectId"], source_enemy["Argument1"], source_enemy["Argument2"])
+    texts = {
+        "2079-1-0": { # Final Xemnas
+            "id": 18453,
+            "en": """{0} has problem grown even
+stronger, and is waiting for us.{{:clear }}This battle began with Ansem's
+research, Let´s finish it for him!"""},
+        "2140-0-0": { # AX 2
+            "id": 18456,
+            "en": """Don´t let your guard down. 
+{0} may separate us at any time.{{:clear }}Come on, let´s save the world again!"""},
+        "2140-1-0": { # AX1
+            "id": 18457,
+            "en": """The Kingdom Hearts opened the door
+to {0}.{{:clear }}We can´t let this chance slip by. It´s
+going to be a tough fight, but we can do it!"""}
+}
+    if key not in texts:
+        return ''
+    text = dict(texts[key])
+    text["en"] = text["en"].format(new_name)
+    return text
+
 def ax2_99(spawnpoint):
     # set the characters Y values and X values properly
     sora = spawnpoint[0]["Entities"][0]
@@ -574,6 +598,7 @@ class KingdomHearts2:
         assets = []
         if randomization.get("spawns", ""):
             self.set_spawns()
+            final_fights_spoilers = []
             for w in randomization.get("spawns"):
                 world = randomization.get("spawns")[w]
                 for room in world:
@@ -627,6 +652,12 @@ class KingdomHearts2:
                                                     instance["Entities"][ent["index"]][k] = ent[k]
                                         else:
                                             obj = self.lookupObject(ent["name"])
+
+                                            final_txt = final_fight_text(instance["Entities"][ent["index"]], ent["name"])
+                                            if final_txt:
+
+                                                final_fights_spoilers.append(final_txt)
+
                                             oid = obj["obj_id"]
                                             vrs = obj["vars"]
 
@@ -675,6 +706,9 @@ class KingdomHearts2:
                             programasset = self.writeAreaDataProgram(ardname, "btl", p, script.get_program(p), outdir, _writeMethod)
                             roomasset["source"].append(programasset)
                     assets.append(roomasset)
+            if final_fights_spoilers:
+                asset = self.writeMSG("eh", final_fights_spoilers, outdir, _writeMethod)
+                assets.append(asset)
         if randomization.get("ai_mods", ""):
             for ai in randomization.get("ai_mods"):
                 with open(os.path.join(os.path.dirname(__file__), "data", "ai_mods", ai)) as f:
@@ -733,8 +767,8 @@ class KingdomHearts2:
 
     def writeAreaDataProgram(self, ardname, scripttype, programnumber, program, outdir, writeMethod):
         filename = scripttype+"_"+str(programnumber)+".areadataprogram"
-        outfn = os.path.join(outdir, "files", ardname, filename)
-        fn = os.path.join("files", ardname, filename)
+        outfn = os.path.join(outdir, "files", "ard", ardname, filename)
+        fn = os.path.join("files", "ard", ardname, filename)
         writeMethod(outfn, fn, program)
         return {
             "method": "areadatascript",
@@ -750,8 +784,8 @@ class KingdomHearts2:
             return yaml.load(f, Loader=yaml.SafeLoader)
 
     def writeSpawnpoint(self, ardname, spawnpoint, obj, outdir, writeMethod):
-        outfn = os.path.join(outdir, "files", ardname, spawnpoint+".yml")
-        fn = os.path.join("files", ardname, spawnpoint+".yml")
+        outfn = os.path.join(outdir, "files", "ard", ardname, spawnpoint+".yml")
+        fn = os.path.join("files", "ard", ardname, spawnpoint+".yml")
         writeMethod(outfn, fn, yaml.dump(obj))
         return {
             "method": "spawnpoint",
@@ -759,6 +793,31 @@ class KingdomHearts2:
             "source": [{"name": fn}],
             "type": "AreaDataSpawn"
         }
+
+
+    def writeMSG(self, name, obj, outdir, writeMethod):
+        outfn = os.path.join(outdir, "files", "msg", name+".yml")
+        fn = os.path.join("files", "msg", name+".yml")
+        writeMethod(outfn, fn, yaml.dump(obj))
+        # Whole binarc at once is maybe weird to return
+        return {
+            "name": "msg/jp/{}.bar".format(name),
+            "method": "binarc",
+            "source": [
+                {
+                    "name": name,
+                    "type": "list",
+                    "method": "kh2msg",
+                    "source": [
+                        {
+                            "name": fn,
+                            "language": "en"
+                        }
+                    ]
+                }
+            ]
+        }
+
     def lookupObject(self, name):
         return self.enemy_records[name]
 
