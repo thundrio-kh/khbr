@@ -310,7 +310,7 @@ class KingdomHearts2:
     def pick_enemy_to_replace(self, oldenemy, enabledenemies):
         options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
         return c
-    def perform_randomization(self, options):
+    def perform_randomization(self, options, seed=None):
         if diagnostics:
             start_time = time.time()
             print("Starting Randomization: {}".format(options))
@@ -544,7 +544,10 @@ class KingdomHearts2:
             if diagnostics:
                 end_time = time.time()
                 print("Randomization Complete: {}s".format(end_time-start_time))
-            return {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
+            rand =  {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
+            if seed:
+                rand["seed"] = seed
+            return rand
         raise Exception("Didn't randomize anything!")
 
     def generate_files(self, outdir='', randomization={}, outzip=[]):
@@ -919,7 +922,7 @@ class Randomizer:
         # for both enemies and bosses
         # replacements are either decided beforehand, or at the time of replacement
         random.seed(seed)
-        randomization = game.perform_randomization(options)
+        randomization = game.perform_randomization(options, seed=seed)
         
         return randomization
 
