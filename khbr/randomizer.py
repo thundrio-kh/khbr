@@ -175,6 +175,7 @@ class KingdomHearts2:
             "hp": 100,
             "limiter": 1,
             "msn_required": False,
+            "msn_source_as": None,
             "aimod": None,
             "can_be_enemy": False,
             "msn": None,
@@ -487,6 +488,8 @@ class KingdomHearts2:
                                             if new_boss_object["msn_list"]:
                                                 continue
                                         msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"]
+                                    elif old_boss_object["msn_source_as"]:
+                                        msn_mapping[old_boss_object["msn"]] = old_boss_object["msn_source_as"]
                                     if scale_boss:
                                         if new_boss not in set_scaling:
                                             hp = old_boss_object["hp"]

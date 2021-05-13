@@ -1083,6 +1083,7 @@ Barbossa:
   limiter: 0
   model: B_CA010
   msn: CA10_MS107
+  msn_source_as: WI01_MS101
   program: 60
   size: 3.95
   room_size: 11.84
