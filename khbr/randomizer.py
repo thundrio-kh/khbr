@@ -111,13 +111,16 @@ class KingdomHearts2:
         self.schemaversion = "01"
         self.name = "kh2"
         self.unlimited_memory = False
-        self.spawns = self.get_locations()
+        self.spawns = None
         with open(os.path.join(os.path.dirname(__file__), "location-ard-map.json")) as f:
             self.locmap = json.load(f)
         with open(os.path.join(os.path.dirname(__file__), "msns.json")) as f:
             self.msninfo = json.load(f)
-        self.enemy_records = self.get_bosses(usefilters=False, getavail=True)
-        spawns = self.get_locations()
+        with open(os.path.join(os.path.dirname(__file__), "full_enemy_records.json")) as f:
+            self.enemy_records = json.load(f)        
+    def set_spawns(self):
+        if not self.spawns:
+            self.spawns = self.get_locations()
     def get_valid_enemies(self):
         return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "enemy"]
     def get_valid_bosses(self):
@@ -388,6 +391,7 @@ class KingdomHearts2:
             msn_mapping = {}
             set_scaling = {}
             ai_mods = {}
+            self.set_spawns()
             for w in self.spawns:
                 world = self.spawns[w]
                 for r in world:
@@ -561,6 +565,7 @@ class KingdomHearts2:
             raise Exception("one of outzip or outdir must be defined")
         assets = []
         if randomization.get("spawns", ""):
+            self.set_spawns()
             for w in randomization.get("spawns"):
                 world = randomization.get("spawns")[w]
                 for room in world:
@@ -932,6 +937,8 @@ class Randomizer:
         return game.get_options()
 
 if __name__ == '__main__':
+    import time
+    t = time.time()
     mode = sys.argv[1]
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\", \"boss\": \"Wild\"}"
     # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Sephiroth\"}"
@@ -973,3 +980,5 @@ if __name__ == '__main__':
         b64 = rando.read_seed("kh2", seedfn=options, outfn=fn)
     else:
         b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=randomization_only)
+
+    print("Total thing took {}s".format(time.time()-t))
