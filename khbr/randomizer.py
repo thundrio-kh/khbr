@@ -452,6 +452,8 @@ class KingdomHearts2:
                                     if not bosses:
                                         continue # Bosses aren't being randomized
                                     old_boss_object = self.enemy_records[ent["name"]]
+                                    if old_boss_object["name"] in ["Final Xemnas (Clone)", "Final Xemnas (Clone) (Data)"]:
+                                        continue # He gets removed later by subtracts, so don't replace
                                     if not old_boss_object["replace_allowed"]:
                                         continue
                                     if selected_boss:
