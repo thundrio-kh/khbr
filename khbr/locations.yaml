@@ -127,6 +127,7 @@ Agrabah:
             name: Jafar
   Agrabah:
     size: 5000000
+    ignored: true # TODO remove after spawn overhaul
     spawnpoints:
       b_00:
         size: 0

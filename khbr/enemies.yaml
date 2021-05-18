@@ -1178,6 +1178,7 @@ Blizzard Lord:
   type: boss
   variations:
     Blizzard Lord:
+      enabled: false # TODO remove after spawn overhaul
       msn: AL03_MS103
       program: 59
       room_size: 10.32
@@ -1262,6 +1263,9 @@ Cerberus:
   obj_id: 351
   size: 3.2
   type: boss
+  blacklist:
+  - Oogie Boogie
+  - The Beast
   variations:
     Cerberus:
       msn: HE07_MS103
@@ -1302,6 +1306,7 @@ Cloud:
   type: boss
   variations:
     Cloud:
+      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_25
       room_size: 9.14
@@ -1310,6 +1315,7 @@ Cloud:
       - 1
       - 0
     Cloud (1):
+      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_40
       room_size: 9.14
@@ -1524,7 +1530,6 @@ Final Xemnas (Data):
   program: 98
   size: 6.28
   room_size: 8.94
-  roomsizemultiplier: 0.5
   subtracts:
   - ObjectId: 2258 # electrified sora
   - ObjectId: 2506 # clone of
@@ -1938,7 +1943,6 @@ Final Xemnas:
   level: 99
   limiter: 0
   model: B_EX170_LAST
-  roomsizemultiplier: 0.5
   msn: EH20_MS113
   program: 74
   size: 6.29
@@ -1958,6 +1962,7 @@ Final Xemnas:
       - 1
       - 0
     Final Xemnas (Copy):
+      replace_allowed: false
       vars:
       - 0
       - 0
@@ -1997,6 +2002,7 @@ Gambler:
       - 0
       - 0
     Gambler (Summons Darkness):
+      enabled: false
       vars:
       - 1
       - 0
@@ -2689,6 +2695,7 @@ Leon:
   cups: true
   variations:
     Leon:
+      enabled: false # TODO remove after spawn overhaul
       program: 189
       msn: HE_COL_1_10
       room_size: 9.14
@@ -2697,6 +2704,7 @@ Leon:
       - 1
       - 0
     Leon (1):
+      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_40
       room_size: 9.14
@@ -2705,6 +2713,7 @@ Leon:
       - 3
       - 0
     Leon (2):
+      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
@@ -2734,6 +2743,9 @@ Lexaeus:
   obj_id: 2357
   size: 3.9
   type: boss
+  blacklist:
+  - Vexen # player can get thrown oob
+  - Vexen (Data) # player can get thrown oob
   variations:
     Lexaeus:
       vars:
@@ -3007,7 +3019,7 @@ Nightwalker:
       - 0
       - 0
 Bomb Bell A:
-  enabled: false
+  enabled: true
   hp: 100
   level: 99
   limiter: 1
@@ -3016,6 +3028,8 @@ Bomb Bell A:
   replace_allowed: false
   size: 87118
   type: enemy
+  tags:
+  - al
   variations:
     Bomb Bell A:
       vars:
@@ -3945,7 +3959,7 @@ The Beast:
   room_size: 12.07
   adds:
   - ObjectId: 31 # cogsworth
-    dontSub: true
+    dontSub: false # he can mess up other important RCs
   type: boss
   variations:
     The Beast:
@@ -3978,13 +3992,14 @@ The Experiment:
       - 0
       - 0
 Thresholder:
-  enabled: false
+  enabled: true
   enmp_index: 73
   hp: 100
   level: 99
   limiter: 25
   model: B_BB100
   msn: BB11_MS102
+  roomsizemultiplier: 0.5 # TODO remove after spawn overhaul
   obj_id: 353
   size: 2.17
   room_size: 12.13
@@ -4011,6 +4026,7 @@ Tifa:
   type: boss
   variations:
     Tifa:
+      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_10
       room_size: 9.14
@@ -4020,6 +4036,7 @@ Tifa:
       - 1
       - 0
     Tifa (1):
+      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_25
       room_size: 9.14
@@ -4193,6 +4210,7 @@ Volcano Lord:
   type: boss
   variations:
     Volcano Lord:
+      enabled: false # TODO remove after spawn overhaul
       msn: AL03_MS103
       program: 59
       room_size: 10.32
@@ -4328,6 +4346,7 @@ Yuffie:
   type: boss
   variations:
     Yuffie:
+      enabled: false # TODO remove after spawn overhaul
       can_be_enemy: true
       program: 189
       msn: HE_COL_1_10
@@ -4337,6 +4356,7 @@ Yuffie:
       - 1
       - 0
     Yuffie (1):
+      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_10
       room_size: 9.14
@@ -4346,6 +4366,7 @@ Yuffie:
       - 3
       - 0
     Yuffie (2):
+      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
