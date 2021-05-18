@@ -176,9 +176,9 @@ class KingdomHearts2:
                                 "possible_values": [False, True], "hidden_values": []},
             "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
                                 "possible_values": [True, False], "hidden_values": []},
-            "cups_bosses": {"display_name": "Include Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One', this will cause these bosses to be prett common, as there are 3-4 separate instances of most cups bosses.",
+            "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One', this will cause these bosses to be prett common, as there are 3-4 separate instances of most cups bosses.",
                                 "possible_values": [True, False], "hidden_values": []},
-            "data_bosses": {"display_name": "Include Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra. Sephiroth is not controlled by this option.",
+            "data_bosses": {"display_name": "Randomize Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra and Sephiroth",
                                 "possible_values": [False, True], "hidden_values": []}
         }
     def get_enemies(self):
@@ -196,6 +196,8 @@ class KingdomHearts2:
             "category": None,
             "level": 0,
             "isnightmare": False,
+            "parent": None,
+            "variationOf": None,
             "hp": 100,
             "limiter": 1,
             "msn_required": False,

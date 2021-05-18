@@ -1938,7 +1938,6 @@ Final Xemnas:
   level: 99
   limiter: 0
   model: B_EX170_LAST
-  roomsizemultiplier: 0.5
   msn: EH20_MS113
   program: 74
   size: 6.29
@@ -1958,6 +1957,7 @@ Final Xemnas:
       - 1
       - 0
     Final Xemnas (Copy):
+      replace_allowed: false
       vars:
       - 0
       - 0
@@ -1997,6 +1997,7 @@ Gambler:
       - 0
       - 0
     Gambler (Summons Darkness):
+      enabled: false
       vars:
       - 1
       - 0
@@ -3007,7 +3008,7 @@ Nightwalker:
       - 0
       - 0
 Bomb Bell A:
-  enabled: false
+  enabled: true
   hp: 100
   level: 99
   limiter: 1
@@ -3016,6 +3017,8 @@ Bomb Bell A:
   replace_allowed: false
   size: 87118
   type: enemy
+  tags:
+  - al
   variations:
     Bomb Bell A:
       vars:
