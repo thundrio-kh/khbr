@@ -2843,6 +2843,8 @@ Luxord:
   size: 4.67
   room_size: 7.25
   program: 58
+  blacklist:
+  - Thresholder # why does the memory allow him to be there
   adds:
   - ObjectId: 2224 # ???
   type: boss

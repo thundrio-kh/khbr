@@ -259,42 +259,43 @@ class KingdomHearts2:
             #                     if ent["isboss"]:
             #                         if ent["name"] in bosses:
             #                             bosses[ent["name"]]["room_size"] = room["size"]
-            for b in bosses:
-                boss = bosses[b]
-                if not boss["type"] == "boss":
+            for source_name in bosses:
+                source_boss = bosses[source_name]
+                if not source_boss["type"] == "boss":
                     continue
                 avail = [] # These are bosses that are allowed to be here
-                for bc in bosses:
-                    boss_check = bosses[bc]
-                    if not boss_check["type"] == "boss":
+                for dest_name in bosses:
+                    dest_boss = bosses[dest_name]
+                    if not dest_boss["type"] == "boss":
                         continue
-                    if not boss_check["enabled"]:
+                    if not dest_boss["enabled"]:
                         continue
-                    if boss_check["name"] == boss["name"]:
+                    if dest_boss["name"] == source_boss["name"]:
                         # Boss should always be allowed to be in it's own location
-                        avail.append(boss_check["name"])
+                        avail.append(dest_boss["name"])
                         continue
-                    if not boss_check["replace_allowed"]:
+                    # TODO is this right?
+                    if not dest_boss["replace_allowed"]:
                         continue
                     # Blacklist / Whitelists are destination modifiers, not source modifiers
-                    if boss_check["blacklist"]:
-                        if b in boss_check["blacklist"]:
+                    if dest_boss["blacklist"]:
+                        if source_name in dest_boss["blacklist"]:
                             continue
-                    if boss_check["whitelist"]:
-                        if b not in boss_check["whitelist"]:
+                    if dest_boss["whitelist"]:
+                        if source_name not in dest_boss["whitelist"]:
                             continue
-                    if not boss["msn_replace_allowed"]:
-                        if boss_check["msn_required"]:
+                    if not source_boss["msn_replace_allowed"]:
+                        if dest_boss["msn_required"]:
                             continue
-                    #print("{} > {}: {} + {} >= {}".format(boss["name"], boss_check["name"], boss["size"], boss_check["room_size"], maxsize))
+                    #print("{} > {}: {} + {} >= {}".format(source_boss["name"], dest_boss["name"], source_boss["size"], dest_boss["room_size"], maxsize))
                     # THIS NEEDS TO CHANGE ONCE I CAN DO UNLIMITED STUFF
-                    roommaxsize = boss_check["roommaxsize"] or maxsize
-                    availablespace = (maxsize - boss_check["room_size"]) * boss["roomsizemultiplier"]
-                    #print("{} - {} ({}) >= 0".format(availablespace, boss["size"], availablespace - boss["size"]))
-                    if availablespace - boss["size"] < 0:
+                    roommaxsize = source_boss["roommaxsize"] or maxsize
+                    availablespace = (roommaxsize - source_boss["room_size"]) * source_boss["roomsizemultiplier"]
+                    #print("{} - {} ({}) >= 0".format(availablespace, source_boss["size"], availablespace - source_boss["size"]))
+                    if availablespace - dest_boss["size"] < 0:
                         continue
-                    avail.append(boss_check["name"])
-                boss["available"] = avail
+                    avail.append(dest_boss["name"])
+                source_boss["available"] = avail
         return bosses
     def get_locations(self):
         with open(os.path.join(os.path.dirname(__file__), "locations.yaml")) as f:

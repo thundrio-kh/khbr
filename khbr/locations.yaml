@@ -2684,6 +2684,7 @@ Beast's Castle:
             isboss: true
             name: Dark Thorn
       b_99:
+        ignored: true
         size: 0
         sp_ids:
           '50':
@@ -4363,6 +4364,7 @@ Beast's Castle:
             name: Gargoyle Warrior (40 0)
       b_99:
         size: 0
+        ignored: true
         sp_ids:
           '93':
           - index: 4
@@ -5982,6 +5984,7 @@ Halloween Town:
             isboss: true
             name: The Experiment
       b_99:
+        ignored: true
         size: 0
         sp_ids:
           '60':
@@ -9902,6 +9905,7 @@ Hollow Bastion:
             isboss: true
             name: Larxene (Data)
       b_84:
+        ignored: true
         size: 0
         sp_ids:
           '160':
@@ -9909,6 +9913,7 @@ Hollow Bastion:
             isboss: true
             name: Vexen (Data)
       b_85:
+        ignored: true
         size: 0
         sp_ids:
           '192':
@@ -11259,6 +11264,7 @@ Olympus Coliseum:
             isboss: false
             name: Dusk
       b_99:
+        ignored: true
         size: 0
         sp_ids:
           '27':
@@ -17724,6 +17730,7 @@ Space Paranoids:
             name: Giant Sark
       b_99:
         size: 0
+        ignored: true
         sp_ids:
           '91':
           - index: 4
