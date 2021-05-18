@@ -4383,7 +4383,7 @@ Yuffie:
       - 2
       - 0
 Zexion:
-  aimod: true
+  aimod: false # TODO current ai mod is a bit crashy I think, so just ban from weird rooms
   enabled: true
   enmp_index: 193
   hp: 100

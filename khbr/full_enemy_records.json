@@ -17810,7 +17810,7 @@
             0
         ],
         "name": "Zexion",
-        "aimod": true,
+        "aimod": false,
         "enabled": true,
         "enmp_index": 193,
         "hp": 100,
@@ -17912,7 +17912,7 @@
             1
         ],
         "name": "Zexion (Data)",
-        "aimod": true,
+        "aimod": false,
         "enmp_index": 193,
         "hp": 100,
         "level": 99,
