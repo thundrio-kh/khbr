@@ -10754,7 +10754,7 @@
     "Larxene": {
         "vars": [
             0,
-            1
+            0
         ],
         "name": "Larxene",
         "can_be_enemy": true,
@@ -10861,7 +10861,7 @@
         "program": 148,
         "vars": [
             0,
-            0
+            1
         ],
         "name": "Larxene (Data)",
         "can_be_enemy": true,

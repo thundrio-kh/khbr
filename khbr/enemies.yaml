@@ -2671,7 +2671,7 @@ Larxene:
     Larxene:
       vars:
       - 0
-      - 1
+      - 0
     Larxene (Data):
       data: true
       enabled: false
@@ -2680,7 +2680,7 @@ Larxene:
       program: 148
       vars:
       - 0
-      - 0
+      - 1
 Leon:
   enabled: true
   enmp_index: 159
