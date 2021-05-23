@@ -1,23 +1,8 @@
 enemy
 
 update getbosses
-   variation of should become variations of the target
-   parent should be filled in
    available should only be done for the parents (make sure to min the free space between all the rooms of the variations
-
-update the pick enemy mapping
-     randomize the list of parents
-     after doing that go into the variations and do a 1->1 mapping
 
 update the pick boss wild
     pick from anong the list of parents
     then pick a variation to return
-
-
-config changes
-  condense the black/whitelists to only be parents
-  add og datas as variations of the originals
-  create a csv of enemies sorted by the tags
-  figure out the variationsof, and add in the nobody tag
-
-nobody option

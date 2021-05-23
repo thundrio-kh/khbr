@@ -127,7 +127,6 @@ Agrabah:
             name: Jafar
   Agrabah:
     size: 5000000
-    ignored: true # TODO remove after spawn overhaul
     spawnpoints:
       b_00:
         size: 0
@@ -1448,7 +1447,7 @@ Agrabah:
           '1314':
           - index: 0
             isboss: false
-            name: Fortuneteller (AL) (4 0)
+            name: Fortuneteller (AL)
           - index: 1
             isboss: false
             name: Hook Bat AL (1 0)
@@ -1514,7 +1513,7 @@ Agrabah:
             name: Crimson Jazz AL (12 0)
           - index: 1
             isboss: false
-            name: Crimson Jazz AL (4 0)
+            name: Crimson Jazz
           '1321':
           - index: 0
             isboss: false
@@ -1536,10 +1535,10 @@ Agrabah:
             name: Rapid Thruster AL (3 0)
           - index: 6
             isboss: false
-            name: Rapid Thruster AL (4 0)
+            name: Rapid Thruster AL
           - index: 7
             isboss: false
-            name: Hook Bat AL (4 0)
+            name: Hook Bat AL
           - index: 8
             isboss: false
             name: Hook Bat AL (9 0)
@@ -1622,7 +1621,7 @@ Agrabah:
             name: Hook Bat AL (14 0)
           - index: 1
             isboss: false
-            name: Rapid Thruster AL (4 0)
+            name: Rapid Thruster AL
           - index: 2
             isboss: false
             name: Rapid Thruster AL (5 0)
@@ -9984,7 +9983,7 @@ Hollow Bastion:
           '35':
           - index: 26
             isboss: false
-            name: (M) Surveillance Robot (1K Battle) (Disappears)
+            name: Surveillance Robot (1K Battle) (Disappears)
           - index: 27
             isboss: false
             name: Armored Knight (1K Battle, Disappears)
@@ -11876,7 +11875,7 @@ Olympus Coliseum:
           '589':
           - index: 16
             isboss: false
-            name: (M) Rapid Thruster (RAW)
+            name: Rapid Thruster (RAW)
       b_9l:
         size: 0
         sp_ids:
@@ -12177,7 +12176,7 @@ Olympus Coliseum:
           '942':
           - index: 1
             isboss: false
-            name: (M) Rapid Thruster (RAW)
+            name: Rapid Thruster (RAW)
       b_a9:
         size: 0
         sp_ids:
@@ -12756,7 +12755,7 @@ Olympus Coliseum:
           '1818':
           - index: 1
             isboss: false
-            name: (M) Rapid Thruster (RAW)
+            name: Rapid Thruster (RAW)
       b_d9:
         size: 0
         sp_ids:
@@ -13534,7 +13533,7 @@ Olympus Coliseum:
           '2660':
           - index: 0
             isboss: false
-            name: (M) Rapid Thruster (RAW)
+            name: Rapid Thruster (RAW)
       b_k6:
         size: 0
         sp_ids:
@@ -15255,13 +15254,13 @@ Port Royal:
           - index: 4
             isboss: true
             name: Illuminator
-      b_70:
-        size: 0
-        sp_ids:
-          '52':
-          - index: 0
-            isboss: false
-            name: Gambler (Summons Darkness)
+      # b_70:
+      #   size: 0
+      #   sp_ids:
+      #     '52':
+      #     - index: 0
+      #       isboss: false
+      #       name: Gambler (Summons Darkness)
       b_80:
         size: 0
         sp_ids:
@@ -16898,7 +16897,7 @@ Pride Land:
           '92':
           - index: 4
             isboss: false
-            name: (M) Rapid Thruster (RAW)
+            name: Rapid Thruster (RAW)
       b_21:
         size: 0
         sp_ids:
@@ -19509,7 +19508,7 @@ The Land of Dragons:
           '378':
           - index: 0
             isboss: false
-            name: (M) Rapid Thruster (RAW)
+            name: Rapid Thruster (RAW)
       b_60:
         size: 0
         sp_ids:
@@ -19624,7 +19623,7 @@ The Land of Dragons:
           '290':
           - index: 0
             isboss: false
-            name: (M) Rapid Thruster (RAW)
+            name: Rapid Thruster (RAW)
   Village Cave:
     ignored: true
     pc:

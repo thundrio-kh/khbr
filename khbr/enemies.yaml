@@ -42,6 +42,7 @@ Aeriel Champ:
   enabled: true
   enmp_index: 999
   model: M_EX780_HB
+  variationof: Aerial Knocker
   obj_id: 2410
   size: 0
   type: enemy
@@ -67,6 +68,7 @@ Aeroplane:
 Armored Knight (NM):
   enabled: true
   enmp_index: 999
+  variationof: Armored Knight
   model: M_EX760_NM
   obj_id: 1845
   size: 0
@@ -90,6 +92,7 @@ Armored Knight (1K Battle, Disappears):
       - 0
 Bolt Tower (MU):
   enabled: true
+  variationof: Bolt Tower
   enmp_index: 999
   model: M_EX800_MU
   obj_id: 2238
@@ -104,6 +107,7 @@ Bolt Tower (MU):
       - 0
 Bolt Tower (RAW):
   enabled: true
+  variationof: Bolt Tower
   enmp_index: 999
   model: M_EX800_RAW
   obj_id: 1576
@@ -125,6 +129,7 @@ Bookmaster:
   type: enemy
   tags:
   - ranged
+  - large
   variations:
     Bookmaster:
       vars:
@@ -139,6 +144,7 @@ Bookmaster (TR):
   type: enemy
   tags:
   - ranged
+  - large
   variations:
     Bookmaster (TR):
       vars:
@@ -220,6 +226,7 @@ Creeper Plant (NM):
   enabled: true
   enmp_index: 999
   model: M_EX750_NM
+  variationof: Creeper Plant
   obj_id: 1837
   size: 0
   type: enemy
@@ -256,6 +263,7 @@ Emerald Blues:
       - 0
 Emerald Blues (TR):
   enabled: true
+  variationof: Emerald Blues
   enmp_index: 999
   model: M_EX120_TR
   obj_id: 1852
@@ -271,6 +279,7 @@ Emerald Blues (TR):
 Fortuneteller (AL):
   enabled: true
   enmp_index: 999
+  isnightmare: true
   model: M_EX620_AL
   obj_id: 1760
   size: 0
@@ -278,7 +287,7 @@ Fortuneteller (AL):
   tags:
   - al
   variations:
-    Fortuneteller (AL) (4 0):
+    Fortuneteller (AL):
       vars:
       - 4
       - 0
@@ -402,11 +411,14 @@ Hot Rod:
       - 0
 Large Body WI:
   enabled: true
+  variationof: Large Body
   enmp_index: 999
   model: M_EX050_WI
   obj_id: 2025
   size: 0
   type: enemy
+  tags:
+  - large
   variations:
     Large Body WI:
       vars:
@@ -438,8 +450,10 @@ Neoshadow:
       - 0
 Neoshadow (NM):
   enabled: true
+  variationof: Shadow
   enmp_index: 999
   model: M_EX420_NM
+  variationof: Neoshadow
   obj_id: 1836
   size: 0
   type: enemy
@@ -463,13 +477,14 @@ Rabid Dog:
       - 0
 Rapid Thruster (RAW):
   enabled: true
+  variationof: Rapid Thruster
   enmp_index: 999
   model: M_EX660_RAW
   obj_id: 1368
   size: 0
   type: enemy
   variations:
-    (M) Rapid Thruster (RAW):
+    Rapid Thruster (RAW):
       vars:
       - 0
       - 0
@@ -482,11 +497,13 @@ Reckless:
   enmp_index: 999
   model: M_EX680_HB
   obj_id: 2408
+  variationof: Devastator
   size: 0
   type: enemy
   isnightmare: true
   tags:
   - large
+  - ranged
   variations:
     Reckless:
       vars:
@@ -518,6 +535,7 @@ Shadow (NM):
       - 0
 Shadow (RAW):
   enabled: true
+  variationof: Shadow
   enmp_index: 999
   model: M_EX020_RAW
   obj_id: 1365
@@ -564,6 +582,7 @@ Soldier (TR):
       - 0
 Soldier (WI):
   enabled: true
+  variationof: Soldier
   enmp_index: 999
   model: M_EX010_WI
   obj_id: 1849
@@ -596,12 +615,13 @@ Surveillance Robot (1K Battle) (Disappears):
   tags:
   - ranged
   variations:
-    (M) Surveillance Robot (1K Battle) (Disappears):
+    Surveillance Robot (1K Battle) (Disappears):
       vars:
       - 0
       - 0
 Surveillance Robot (TR):
   enabled: true
+  variationof: Surveillance Robot
   enmp_index: 999
   model: M_EX770_TR
   obj_id: 1847
@@ -621,12 +641,14 @@ Surveillance Robot (TR):
 Toy Soldier:
   enabled: true
   enmp_index: 999
+  isnightmare: true
   model: M_EX790_CHRISTMAS
   obj_id: 1776
   size: 0
   type: enemy
   tags:
   - large
+  - ranged
   variations:
     Toy Soldier:
       vars:
@@ -638,11 +660,14 @@ Toy Soldier:
       - 0
 Trick Ghost (NM):
   enabled: true
+  variationof: Trick Ghost
   enmp_index: 999
   model: M_EX500_NM
   obj_id: 1827
   size: 0
   type: enemy
+  tags:
+  - ranged
   variations:
     Trick Ghost (NM):
       vars:
@@ -840,6 +865,7 @@ Aerial Viking:
       - 0
 Aeroplane WI:
   enabled: true
+  variationof: Aeroplane
   enmp_index: 56
   hp: 100
   level: 99
@@ -857,6 +883,7 @@ Aeroplane WI:
       - 0
 Air Pirate:
   enabled: true
+  variationof: Aerial Viking
   enmp_index: 3
   hp: 100
   level: 99
@@ -874,7 +901,7 @@ Air Pirate:
       vars:
       - 1
       - 0
-Armor Xemnas:
+Armor Xemnas I:
   enabled: true
   enmp_index: 147
   hp: 100
@@ -1131,6 +1158,7 @@ Bees (Disappearing):
       - 0
 Beffudler:
   enabled: true
+  variationof: Hook Bat
   enmp_index: 201
   hp: 100
   level: 99
@@ -1216,6 +1244,7 @@ Bolt Tower:
       - 0
 Bolt Tower DC:
   enabled: true
+  variationof: Bolt Tower
   enmp_index: 38
   hp: 100
   level: 99
@@ -1276,7 +1305,7 @@ Cerberus:
       - 0
     Cerberus (Cups):
       cups: false
-      enabled: false
+      enabled: true
       replace_allowed: false
       msn_list:
       - program: 194
@@ -1410,7 +1439,7 @@ Crimson Jazz AL:
       vars:
       - 12
       - 0
-    Crimson Jazz AL (4 0):
+    Crimson Jazz AL:
       vars:
       - 4
       - 0
@@ -1458,6 +1487,7 @@ Dark Thorn:
 Axel (Data):
   data: true
   enabled: false
+  variationof: Axel II
   replace_allowed: false
   enmp_index: 221
   hp: 100
@@ -1470,27 +1500,6 @@ Axel (Data):
   room_size: 3.65
   obj_id: 2500
   type: boss
-  blacklist:
-  - Xemnas # TELEPORTER
-  - Xemnas (Data) # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Seifer (1) # TELEPORTER
-  - Seifer (2) # TELEPORTER
-  - Seifer (3) # TELEPORTER
-  - Seifer (4) # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
   variations:
     Axel (Data):
       vars:
@@ -1499,6 +1508,7 @@ Axel (Data):
 Demyx (Data):
   data: true
   enabled: false
+  variationof: Demyx
   replace_allowed: false
   enmp_index: 216
   hp: 100
@@ -1518,6 +1528,7 @@ Demyx (Data):
       - 0
 Final Xemnas (Data):
   enabled: false
+  variationof: Final Xemnas
   replace_allowed: false
   msn_replace_allowed: false # this might break things
   enmp_index: 215
@@ -1549,6 +1560,7 @@ Final Xemnas (Data):
       - 0
 Luxord (Data):
   data: true
+  variationof: Luxord
   enabled: false
   replace_allowed: false
   enmp_index: 219
@@ -1572,6 +1584,7 @@ Luxord (Data):
 Saix (Data):
   data: true
   can_be_enemy: true
+  variationof: Saix
   enabled: false
   replace_allowed: false
   enmp_index: 228
@@ -1595,6 +1608,7 @@ Saix (Data):
 Xaldin (Data):
   data: true
   enabled: false
+  variationof: Xaldin
   replace_allowed: false
   enmp_index: 222
   hp: 100
@@ -1618,6 +1632,7 @@ Xemnas (Data):
   aimod: true
   can_be_enemy: true
   enabled: false
+  variationof: Xemnas
   replace_allowed: false
   enmp_index: 215
   hp: 100
@@ -1637,41 +1652,9 @@ Xemnas (Data):
       - 0
       - 0
 Xigbar (Data):
-  blacklist:
-  - Grim Reaper 1
-  - Twilight Thorn
-  - Past Pete
-  - Scar
-  - Armor Xemnas I
-  - Pete OC II
-  - Sark
-  - Roxas
-  - Roxas (Data)
-  - Prison Keeper
-  - Xemnas # TELEPORTER
-  - Xemnas (Data) # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Seifer (1) # TELEPORTER
-  - Seifer (2) # TELEPORTER
-  - Seifer (3) # TELEPORTER
-  - Seifer (4) # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
-  - Axel (Data) # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
   enabled: false
   data: true
+  variationof: Xigbar
   replace_allowed: false
   enmp_index: 227
   hp: 100
@@ -1805,6 +1788,7 @@ Driller Mole:
       - 0
 Driller Mole NM:
   enabled: true
+  variationof: Driller Mole
   enmp_index: 67
   hp: 100
   level: 99
@@ -1868,11 +1852,12 @@ Ed:
       - 0
 Emerald Blues NM:
   enabled: true
+  variationof: Emerald Blues
   enmp_index: 1
   model: M_EX120_NM
   obj_id: 1834
   size: 109420
-  type: extra
+  type: enemy
   variations:
     Emerald Blues NM:
       vars:
@@ -1921,6 +1906,7 @@ Fiery Globe:
       - 0
 Fiery Globe Treasure Room:
   enabled: true
+  variationof: Fiery Globe
   enmp_index: 5
   hp: 100
   level: 99
@@ -2001,11 +1987,14 @@ Gambler:
       vars:
       - 0
       - 0
-    Gambler (Summons Darkness):
-      enabled: false
-      vars:
-      - 1
-      - 0
+    # Nobody "really" wants this, it would be cool for nightmare mode
+    # but it doesn't mesh with how I am doing the enemy mappings right now
+    # so #TODO to make this work in nightmare mode only
+    # Gambler (Summons Darkness):
+    #   enabled: false
+    #   vars:
+    #   - 1
+    #   - 0
     Gambler (5 0):
       vars:
       - 5
@@ -2057,7 +2046,7 @@ Graveyard NM:
       vars:
       - 0
       - 0
-Grim Reaper:
+Grim Reaper I:
   enabled: true
   enmp_index: 143
   hp: 100
@@ -2153,7 +2142,7 @@ Hades Cups:
   - Armor Xemnas II # TELEPORTER
   variations:
     Hades Cups:
-      enabled: false
+      enabled: true
       replace_allowed: false
       msn_list:
       - program: 192
@@ -2242,6 +2231,7 @@ Hades II:
 Hammer Frame WI:
   enabled: true
   enmp_index: 58
+  variationof: Hammer Frame
   hp: 100
   level: 99
   limiter: 12
@@ -2307,7 +2297,7 @@ Hercules:
   cups: false # will be true once he works
   variations:
     Hercules:
-      enabled: false
+      enabled: true
       replace_allowed: false
       msn_list:
       - program: 191
@@ -2320,7 +2310,7 @@ Hercules:
       - 1
       - 0
 Hook Bat:
-  enabled: false
+  enabled: true
   hp: 100
   level: 99
   limiter: 8
@@ -2338,7 +2328,7 @@ Hook Bat:
       - 0
       - 0
 Hook Bat AL:
-  enabled: false
+  enabled: true
   hp: 100
   level: 99
   limiter: 8
@@ -2357,7 +2347,7 @@ Hook Bat AL:
       vars:
       - 9
       - 0
-    Hook Bat AL (4 0):
+    Hook Bat AL:
       vars:
       - 4
       - 0
@@ -2449,6 +2439,7 @@ Hostile Program:
       - 0
 Hot Rod WI:
   enabled: true
+  variationof: Hot Rod
   enmp_index: 63
   hp: 100
   isnightmare: true
@@ -2520,6 +2511,7 @@ Icy Cube:
       - 0
 Icy Cube Treasure Room:
   enabled: true
+  variationof: Icy Cube
   enmp_index: 6
   hp: 100
   level: 99
@@ -2550,6 +2542,7 @@ Illuminator:
       - 0
 Iron Hammer:
   enabled: true
+  variationof: Hammer Frame
   enmp_index: 208
   hp: 100
   level: 99
@@ -2600,6 +2593,7 @@ Lance Soldier:
 Lance Warrior:
   isnightmare: true
   enabled: true
+  variationof: Lance Soldier
   enmp_index: 209
   hp: 100
   level: 99
@@ -2855,6 +2849,7 @@ Luxord:
       - 0
 Mad Ride:
   enabled: true
+  variationof: Hot Rod
   enmp_index: 211
   hp: 100
   isnightmare: true
@@ -2953,6 +2948,7 @@ Minute Bomb:
       - 0
 Minute Bomb WI:
   enabled: true
+  variationof: Minute Bomb
   enmp_index: 57
   hp: 100
   level: 99
@@ -2990,6 +2986,7 @@ Morning Star:
       - 0
 Necromancer:
   enabled: true
+  variationof: Shaman
   enmp_index: 210
   hp: 100
   level: 99
@@ -3231,7 +3228,7 @@ Rapid Thruster AL:
       vars:
       - 13
       - 0
-    Rapid Thruster AL (4 0):
+    Rapid Thruster AL:
       vars:
       - 4
       - 0
@@ -3305,6 +3302,7 @@ Rapid Thruster AL:
       - 0
 Rapid Thruster WI:
   enabled: true
+  variationof: Rapid Thruster
   enmp_index: 37
   hp: 100
   level: 99
@@ -3397,6 +3395,7 @@ Runemaster:
   enmp_index: 206
   hp: 100
   isnightmare: true
+  variationof: Bookmaster
   level: 99
   limiter: 10
   model: M_EX530_HB
@@ -3654,6 +3653,7 @@ Shadow Stalker:
       - 0
 Shadow WI:
   enabled: true
+  variationof: Shadow
   enmp_index: 33
   hp: 100
   level: 99
@@ -3805,6 +3805,8 @@ Soldier:
       - 0
 Soldier NM:
   enabled: true
+  variationof: Soldier
+  variationof: Soldier
   enmp_index: 32
   hp: 100
   level: 99
@@ -3839,6 +3841,8 @@ Sorcerer:
       - 0
 Spring Metal:
   enabled: true
+  isnightmare: true
+  variationof: Emerald Blues
   enmp_index: 205
   hp: 100
   level: 99
@@ -3890,6 +3894,7 @@ Storm Rider:
   - Terra
 Strafer RAW:
   enabled: true
+  variationof: Strafer
   enmp_index: 94
   hp: 100
   level: 99
@@ -4073,6 +4078,7 @@ Toy Soldier NM:
   enabled: true
   hp: 100
   isnightmare: true
+  variationof: Toy Soldier
   level: 99
   limiter: 9
   model: M_EX790_CHRISTMAS_NM
@@ -4229,6 +4235,7 @@ Volcano Lord:
       - 0
 Wight Knight NM:
   enabled: true
+  variationof: Wight Knight
   enmp_index: 8
   hp: 100
   isnightmare: true

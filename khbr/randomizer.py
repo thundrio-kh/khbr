@@ -183,7 +183,8 @@ class KingdomHearts2:
         }
     def get_enemies(self):
         enemies = self.get_valid_enemies()
-        return [self.enemy_records[e] for e in self.get_valid_enemies() if self.enemy_records[e]["enabled"]]
+        enabled_enemies = [self.enemy_records[e] for e in enemies if self.enemy_records[e]["enabled"]]
+        return enabled_enemies
     def get_bosses(self, nightmare_mode=False, maxsize=LIMITED_SIZE, usefilters=True, getavail=True):
         defaults = {
             "replace_as": None,
@@ -196,8 +197,9 @@ class KingdomHearts2:
             "category": None,
             "level": 0,
             "isnightmare": False,
-            # "parent": None,
-            # "variationOf": None,
+            "parent": None,
+            "variationof": None,
+            "children": [],
             "hp": 100,
             "limiter": 1,
             "msn_required": False,
@@ -209,6 +211,7 @@ class KingdomHearts2:
             "room_size": 0,
             "roommaxsize": None,
             "enmp_index": None,
+            "variations": [],
             "enabled": True,
             "blacklist": [],
             "whitelist": [],
@@ -221,15 +224,15 @@ class KingdomHearts2:
         with open(os.path.join(os.path.dirname(__file__), "enemies.yaml")) as f:
             bosses_f = yaml.load(f, Loader=yaml.FullLoader)
         bosses = {}
-        allkeys = []
-        for bn in bosses_f:
-            b = bosses_f[bn]
+        kidlist = {}
+        for name in bosses_f:
+            b = bosses_f[name]
             for v in b["variations"]:
                 boss = dict(b["variations"][v])
                 boss["name"] = v
                 for k in b:
-                    allkeys.append(k)
                     if k == "variations":
+                        boss[k] = list(b[k].keys())
                         continue
                     if k not in boss:
                         boss[k] = b[k]
@@ -244,21 +247,18 @@ class KingdomHearts2:
                         continue
                     if nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
                         continue
+                parent = boss["variationof"] or name
+                assert parent != None
+                boss["parent"] = parent
+                if parent not in kidlist:
+                    kidlist[parent] = []
+                kidlist[parent].append(name)
                 bosses[v] = boss
-        if getavail:
-            locations = self.get_locations()
+        
+        for parent in kidlist:
+            bosses[parent]["children"] = list(set(kidlist[parent]))
 
-            # for w in locations:
-            #     world = locations[w]
-            #     for r in world:
-            #         room = world[r]
-            #         for sp in room["spawnpoints"]:
-            #             spawnpoint = room["spawnpoints"][sp]
-            #             for spid in spawnpoint["sp_ids"].values():
-            #                 for ent in spid:
-            #                     if ent["isboss"]:
-            #                         if ent["name"] in bosses:
-            #                             bosses[ent["name"]]["room_size"] = room["size"]
+        if getavail:
             for source_name in bosses:
                 source_boss = bosses[source_name]
                 if not source_boss["type"] == "boss":
@@ -317,19 +317,35 @@ class KingdomHearts2:
         with open(os.path.join(dirname, str(num))) as f:
             return json.load(f)
     def pickenemymapping(self, enemylist):
+        # Create separate lists for each set of tags used by enemies
         categories = {}
         for e in enemylist:
-            if e["category"] not in categories:
-                categories[e["category"]] = []
-            categories[e["category"]].append(e)
+            parent = self.enemy_records[e["parent"]]
+            if parent["category"] not in categories:
+                categories[e["category"]] = {}
+            categories[parent["category"]][parent["name"]] = parent
         mapping = {}
         for c in categories:
-            og = list(categories[c])
+            og = list(categories[c].values()) # Remove duplicate parent entries
             new = list(og)
             random.shuffle(new)
             for i in range(len(og)):
-                mapping[og[i]["name"]] = new[i]["name"]
+                old_parent = og[i]
+                new_parent = new[i]
+                # So for each child of the new_parent, randomly pick a child of the old_parent
+                # Then go through the variations of each, and add them to the mapping
+                for old_child_name in old_parent["children"]:
+                    new_child_name = random.choice(new_parent["children"])
+                    new_child = self.enemy_records[new_child_name]
+                    old_child = self.enemy_records[old_child_name]
+                    for old_variation_name in old_child["variations"]:
+                        new_variation_name = random.choice(list(new_child["variations"]))
+                        if old_variation_name in mapping:
+                            raise Exception("TESTCHECK, something is getting incorrectly overwritten")
+                        mapping[old_variation_name] = new_variation_name
+        enemylistnames = [e["name"] for e in enemylist]
         assert len(enemylist) == len(list(mapping.keys()))
+        
         return mapping 
     def pick_boss_to_replace(self, bosslist):
         n = random.randint(0,len(bosslist)-1)
@@ -338,7 +354,7 @@ class KingdomHearts2:
         pass
     def pick_enemy_to_replace(self, oldenemy, enabledenemies):
         options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
-        return c
+        return random.choice(options)
     def perform_randomization(self, options, seed=None):
         if diagnostics:
             start_time = time.time()
@@ -1014,6 +1030,7 @@ if __name__ == '__main__':
     import time
     t = time.time()
     mode = sys.argv[1]
+    # run randomizer.py devgenerate "{\"enemy\": \"One to One\"}" randomization_only
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\", \"boss\": \"Wild\"}"
     # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Sephiroth\"}"
     options = sys.argv[2]
