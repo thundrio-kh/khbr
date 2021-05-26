@@ -119,8 +119,8 @@
         "parent": "Aerial Knocker",
         "variationof": null,
         "children": [
-            "Aerial Knocker",
-            "Aeriel Champ"
+            "Aeriel Champ",
+            "Aerial Knocker"
         ],
         "hp": 100,
         "limiter": 1,
@@ -489,8 +489,8 @@
         "parent": "Bookmaster",
         "variationof": null,
         "children": [
-            "Runemaster",
-            "Bookmaster"
+            "Bookmaster",
+            "Runemaster"
         ],
         "hp": 100,
         "limiter": 1,
@@ -865,8 +865,8 @@
         "parent": "Creeper Plant",
         "variationof": null,
         "children": [
-            "Creeper Plant (NM)",
-            "Creeper Plant"
+            "Creeper Plant",
+            "Creeper Plant (NM)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1004,10 +1004,10 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
-            "Emerald Blues NM",
-            "Spring Metal",
+            "Emerald Blues",
             "Emerald Blues (TR)",
-            "Emerald Blues"
+            "Spring Metal",
+            "Emerald Blues NM"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2167,9 +2167,9 @@
         "parent": "Hot Rod",
         "variationof": null,
         "children": [
-            "Mad Ride",
+            "Hot Rod",
             "Hot Rod WI",
-            "Hot Rod"
+            "Mad Ride"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2264,8 +2264,8 @@
         "parent": "Neoshadow",
         "variationof": null,
         "children": [
-            "Neoshadow",
-            "Neoshadow (NM)"
+            "Neoshadow (NM)",
+            "Neoshadow"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3048,8 +3048,8 @@
         "parent": "Strafer",
         "variationof": null,
         "children": [
-            "Strafer",
-            "Strafer RAW"
+            "Strafer RAW",
+            "Strafer"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3241,8 +3241,8 @@
         "parent": "Toy Soldier",
         "variationof": null,
         "children": [
-            "Toy Soldier NM",
-            "Toy Soldier"
+            "Toy Soldier",
+            "Toy Soldier NM"
         ],
         "hp": 100,
         "limiter": 1,
@@ -4896,8 +4896,8 @@
         "parent": "Wight Knight",
         "variationof": null,
         "children": [
-            "Wight Knight",
-            "Wight Knight NM"
+            "Wight Knight NM",
+            "Wight Knight"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5387,8 +5387,8 @@
         "parent": "Armored Knight",
         "variationof": null,
         "children": [
-            "Armored Knight (NM)",
-            "Armored Knight"
+            "Armored Knight",
+            "Armored Knight (NM)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -5809,6 +5809,7 @@
             "Armor Xemnas I",
             "Axel I",
             "Axel II",
+            "Banzai",
             "Blizzard Lord (Cups)",
             "Cerberus",
             "Cloud (2)",
@@ -5895,6 +5896,7 @@
             "Armor Xemnas I",
             "Axel I",
             "Axel II",
+            "Banzai (1)",
             "Blizzard Lord (Cups)",
             "Cerberus",
             "Cloud (2)",
@@ -5986,6 +5988,7 @@
             "Armor Xemnas I",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord (Cups)",
             "Cerberus",
             "Cloud (2)",
@@ -6070,6 +6073,7 @@
             "Armor Xemnas I",
             "Axel I",
             "Axel II",
+            "Barrel",
             "Blizzard Lord (Cups)",
             "Cerberus",
             "Cloud (2)",
@@ -6297,6 +6301,7 @@
             "Armor Xemnas I",
             "Axel I",
             "Axel II",
+            "Blizzard Lord",
             "Blizzard Lord (Cups)",
             "Cerberus",
             "Cloud (2)",
@@ -6440,10 +6445,10 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower (MU)",
-            "Bolt Tower (RAW)",
             "Bolt Tower DC",
-            "Bolt Tower"
+            "Bolt Tower",
+            "Bolt Tower (MU)",
+            "Bolt Tower (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6890,6 +6895,7 @@
             "Axel II",
             "Blizzard Lord (Cups)",
             "Cerberus",
+            "Cloud",
             "Cloud (2)",
             "Dark Thorn",
             "Grim Reaper I",
@@ -6971,6 +6977,7 @@
             "Axel II",
             "Blizzard Lord (Cups)",
             "Cerberus",
+            "Cloud (1)",
             "Cloud (2)",
             "Dark Thorn",
             "Grim Reaper I",
@@ -7705,6 +7712,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Axel (Data)",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -7786,6 +7794,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Demyx (Data)",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -7880,6 +7889,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Final Xemnas (Clone) (Data)",
             "Grim Reaper I",
             "Hades II",
             "Larxene",
@@ -7968,6 +7978,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Final Xemnas (Data)",
             "Grim Reaper I",
             "Hades II",
             "Hydra",
@@ -8048,6 +8059,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Luxord (Data)",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -8130,6 +8142,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Saix (Data)",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -8215,6 +8228,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Xaldin (Data)",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -8299,6 +8313,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Xemnas (Data)",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -8382,6 +8397,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Xigbar (Data)",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -8439,8 +8455,8 @@
         "parent": "Demyx",
         "variationof": null,
         "children": [
-            "Demyx",
-            "Demyx (Data)"
+            "Demyx (Data)",
+            "Demyx"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -8544,6 +8560,7 @@
             "Cloud (2)",
             "Dark Thorn",
             "Demyx",
+            "Demyx OC",
             "Grim Reaper I",
             "Hades II",
             "Hostile Program",
@@ -8652,8 +8669,8 @@
         "parent": "Devastator",
         "variationof": null,
         "children": [
-            "Devastator",
-            "Reckless"
+            "Reckless",
+            "Devastator"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -8893,8 +8910,8 @@
         "parent": "Driller Mole",
         "variationof": null,
         "children": [
-            "Driller Mole",
-            "Driller Mole NM"
+            "Driller Mole NM",
+            "Driller Mole"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9104,6 +9121,7 @@
             "Cloud (2)",
             "Dark Thorn",
             "Demyx",
+            "Ed",
             "Grim Reaper I",
             "Hades II",
             "Hostile Program",
@@ -9191,6 +9209,7 @@
             "Cloud (2)",
             "Dark Thorn",
             "Demyx",
+            "Ed (1)",
             "Grim Reaper I",
             "Hades II",
             "Hostile Program",
@@ -9445,8 +9464,8 @@
         "parent": "Fiery Globe",
         "variationof": null,
         "children": [
-            "Fiery Globe Treasure Room",
-            "Fiery Globe"
+            "Fiery Globe",
+            "Fiery Globe Treasure Room"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9572,6 +9591,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hydra",
@@ -9662,6 +9682,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Final Xemnas (Copy)",
             "Grim Reaper I",
             "Hades II",
             "Larxene",
@@ -10024,6 +10045,7 @@
             "Cerberus",
             "Cloud (2)",
             "Dark Thorn",
+            "Giant Sark",
             "Grim Reaper I",
             "Hades II",
             "Larxene",
@@ -10243,6 +10265,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hostile Program",
             "Leon (3)",
@@ -10326,6 +10349,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Groundshaker",
             "Hades II",
             "Hostile Program",
             "Hydra",
@@ -10519,6 +10543,7 @@
             "Blizzard Lord (Cups)",
             "Cloud (2)",
             "Grim Reaper I",
+            "Hades Escape",
             "Leon (3)",
             "Past Pete",
             "Pete Cups",
@@ -10588,6 +10613,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Hades I",
             "Hades II",
             "Hostile Program",
             "Larxene",
@@ -10777,6 +10803,7 @@
             "Demyx",
             "Grim Reaper I",
             "Hades II",
+            "Hades II (1)",
             "Hostile Program",
             "Larxene",
             "Leon (3)",
@@ -10930,6 +10957,7 @@
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
+            "Hayner",
             "Leon (3)",
             "Marluxia",
             "Past Pete",
@@ -12754,6 +12782,7 @@
             "Grim Reaper I",
             "Hades II",
             "Hostile Program",
+            "Illuminator",
             "Larxene",
             "Leon (3)",
             "Lexaeus",
@@ -12885,6 +12914,7 @@
             "Grim Reaper I",
             "Hades II",
             "Hostile Program",
+            "Jafar",
             "Larxene",
             "Leon (3)",
             "Lexaeus",
@@ -12941,8 +12971,8 @@
         "parent": "Lance Soldier",
         "variationof": null,
         "children": [
-            "Lance Warrior",
-            "Lance Soldier"
+            "Lance Soldier",
+            "Lance Warrior"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -13244,6 +13274,7 @@
             "Hades II",
             "Hostile Program",
             "Larxene",
+            "Larxene (Data)",
             "Leon (3)",
             "Lexaeus",
             "Luxord",
@@ -13333,6 +13364,7 @@
             "Grim Reaper I",
             "Hades II",
             "Larxene",
+            "Leon",
             "Leon (3)",
             "Marluxia",
             "Past Pete",
@@ -13415,6 +13447,7 @@
             "Grim Reaper I",
             "Hades II",
             "Larxene",
+            "Leon (1)",
             "Leon (3)",
             "Marluxia",
             "Past Pete",
@@ -13497,6 +13530,7 @@
             "Grim Reaper I",
             "Hades II",
             "Larxene",
+            "Leon (2)",
             "Leon (3)",
             "Marluxia",
             "Past Pete",
@@ -13756,6 +13790,7 @@
             "Larxene",
             "Leon (3)",
             "Lexaeus",
+            "Lexaeus (Data)",
             "Luxord",
             "Marluxia",
             "Past Pete",
@@ -13989,6 +14024,7 @@
             "Larxene",
             "Leon (3)",
             "Lexaeus",
+            "Lock",
             "Luxord",
             "Marluxia",
             "Past Pete",
@@ -14489,6 +14525,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Marluxia (Data)",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -14957,6 +14994,7 @@
             "Hostile Program",
             "Leon (3)",
             "Lexaeus",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -15200,6 +15238,7 @@
             "Marluxia",
             "Past Pete",
             "Pete Cups",
+            "Pete OC I",
             "Pete OC II",
             "Pete TR",
             "Prison Keeper",
@@ -15549,8 +15588,8 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
-            "Rapid Thruster WI",
             "Rapid Thruster (RAW)",
+            "Rapid Thruster WI",
             "Rapid Thruster"
         ],
         "msn_required": false,
@@ -17290,6 +17329,7 @@
             "Pete TR",
             "Prison Keeper",
             "Roxas",
+            "Roxas (Data)",
             "Saix",
             "Sark",
             "Scar",
@@ -17388,8 +17428,8 @@
         "parent": "Saix",
         "variationof": null,
         "children": [
-            "Saix (Data)",
-            "Saix"
+            "Saix",
+            "Saix (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -17784,6 +17824,7 @@
             "Prison Keeper",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -17875,6 +17916,7 @@
             "Prison Keeper",
             "Sark",
             "Scar",
+            "Seifer (1)",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -17971,6 +18013,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer (2)",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -18063,6 +18106,7 @@
             "Prison Keeper",
             "Sark",
             "Scar",
+            "Seifer (3)",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -18154,6 +18198,7 @@
             "Prison Keeper",
             "Sark",
             "Scar",
+            "Seifer (4)",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -18342,6 +18387,7 @@
             "Sark",
             "Scar",
             "Sephiroth",
+            "Setzer",
             "Shan-Yu",
             "The Experiment",
             "Thresholder",
@@ -18384,9 +18430,9 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
+            "Shadow (RAW)",
             "Shadow WI",
-            "Shadow",
-            "Shadow (RAW)"
+            "Shadow"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18577,6 +18623,7 @@
             "Sark",
             "Scar",
             "Sephiroth",
+            "Shadow Stalker",
             "Shan-Yu",
             "Storm Rider",
             "The Experiment",
@@ -18806,6 +18853,7 @@
             "Scar",
             "Sephiroth",
             "Shan-Yu",
+            "Shenzie",
             "The Experiment",
             "Thresholder",
             "Tifa (2)",
@@ -18893,6 +18941,7 @@
             "Scar",
             "Sephiroth",
             "Shan-Yu",
+            "Shenzie (1)",
             "The Experiment",
             "Thresholder",
             "Tifa (2)",
@@ -18979,6 +19028,7 @@
             "Scar",
             "Sephiroth",
             "Shan-Yu",
+            "Shock",
             "The Experiment",
             "Thresholder",
             "Tifa (2)",
@@ -19167,9 +19217,9 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
+            "Soldier",
             "Soldier (WI)",
-            "Soldier NM",
-            "Soldier"
+            "Soldier NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19738,6 +19788,7 @@
             "Sephiroth",
             "Shan-Yu",
             "Storm Rider",
+            "Terra",
             "The Experiment",
             "Thresholder",
             "Tifa (2)",
@@ -19827,6 +19878,7 @@
             "Scar",
             "Sephiroth",
             "Shan-Yu",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa (2)",
@@ -20071,6 +20123,7 @@
             "Shan-Yu",
             "The Experiment",
             "Thresholder",
+            "Tifa",
             "Tifa (2)",
             "Twilight Thorn",
             "Volcano Lord (Cups)",
@@ -20152,6 +20205,7 @@
             "Shan-Yu",
             "The Experiment",
             "Thresholder",
+            "Tifa (1)",
             "Tifa (2)",
             "Twilight Thorn",
             "Volcano Lord (Cups)",
@@ -20365,8 +20419,8 @@
         "parent": "Trick Ghost",
         "variationof": null,
         "children": [
-            "Trick Ghost",
-            "Trick Ghost (NM)"
+            "Trick Ghost (NM)",
+            "Trick Ghost"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20555,6 +20609,7 @@
             "Thresholder",
             "Tifa (2)",
             "Twilight Thorn",
+            "Vexen (Data)",
             "Vexen",
             "Volcano Lord (Cups)",
             "Xaldin",
@@ -20734,6 +20789,7 @@
             "Thresholder",
             "Tifa (2)",
             "Twilight Thorn",
+            "Vivi",
             "Volcano Lord (Cups)",
             "Xaldin",
             "Xemnas",
@@ -20817,6 +20873,7 @@
             "Thresholder",
             "Tifa (2)",
             "Twilight Thorn",
+            "Volcano Lord",
             "Volcano Lord (Cups)",
             "Xaldin",
             "Xemnas",
@@ -21307,6 +21364,7 @@
             "Xaldin",
             "Xemnas",
             "Xigbar",
+            "Yuffie",
             "Yuffie (3)"
         ]
     },
@@ -21389,6 +21447,7 @@
             "Xaldin",
             "Xemnas",
             "Xigbar",
+            "Yuffie (1)",
             "Yuffie (3)"
         ]
     },
@@ -21471,6 +21530,7 @@
             "Xaldin",
             "Xemnas",
             "Xigbar",
+            "Yuffie (2)",
             "Yuffie (3)"
         ]
     },
@@ -21773,7 +21833,8 @@
             "Xemnas",
             "Xigbar",
             "Yuffie (3)",
-            "Zexion"
+            "Zexion",
+            "Zexion (Data)"
         ]
     }
 }

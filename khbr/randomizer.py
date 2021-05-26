@@ -269,11 +269,11 @@ class KingdomHearts2:
                     dest_boss = bosses[dest_name]
                     if not dest_boss["type"] == "boss":
                         continue
-                    if not dest_boss["enabled"]:
-                        continue
                     if dest_boss["name"] == source_boss["name"]:
                         # Boss should always be allowed to be in it's own location
                         avail.append(dest_boss["name"])
+                        continue
+                    if not dest_boss["enabled"]:
                         continue
                     # TODO is this right?
                     if not dest_boss["replace_allowed"]:
