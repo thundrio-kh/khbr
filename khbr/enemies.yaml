@@ -1057,7 +1057,6 @@ Axel II:
   - Seifer (4) # TELEPORTER
   - Setzer # TELEPORTER
   - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
   - Axel (Data) # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   - Storm Rider
@@ -1578,6 +1577,28 @@ Luxord (Data):
   obj_id: 2504
   size: 3430732
   type: boss
+  blacklist:
+  - Xemnas # TELEPORTER
+  - Xemnas (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   variations:
     Luxord (Data):
       vars:
@@ -2742,6 +2763,7 @@ Lexaeus:
   blacklist:
   - Vexen # player can get thrown oob
   - Vexen (Data) # player can get thrown oob
+  - Groundshaker # player can get thrown oob
   variations:
     Lexaeus:
       vars:
@@ -2840,7 +2862,27 @@ Luxord:
   room_size: 7.25
   program: 58
   blacklist:
-  - Thresholder # why does the memory allow him to be there
+  - Xemnas # TELEPORTER
+  - Xemnas (Data) # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Seifer (1) # TELEPORTER
+  - Seifer (2) # TELEPORTER
+  - Seifer (3) # TELEPORTER
+  - Seifer (4) # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel (Data) # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
   adds:
   - ObjectId: 2224 # ???
   type: boss
@@ -2915,6 +2957,8 @@ Marluxia:
   room_size: 7.96
   program: 145
   type: boss
+  blacklist:
+  - Vexen # restore count puts you OOB
   variations:
     Marluxia:
       vars:
@@ -3137,7 +3181,8 @@ Pete OC II:
       - 0
       - 0
 Pete TR:
-  enabled: true
+  enabled: false
+  replace_allowed: false # TODO supposedly demyx super crashes here and most bosses cause crashes here
   replace_as: Pete Cups
   hp: 100
   level: 99
@@ -3567,6 +3612,14 @@ Sephiroth:
   program: 75
   room_size: 6.57
   type: boss
+  blacklist:
+  - Seifer
+  - Twilight Thorn
+  - Vivi
+  - Hayner
+  - Axel I
+  - Setzer
+  - Axel II
   variations:
     Sephiroth:
       vars:
