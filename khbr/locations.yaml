@@ -21764,7 +21764,6 @@ The World That Never Was:
     size: 5000000
     spawnpoints:
       b_40:
-        ignored: true # Not a used spawn
         size: 0
         sp_ids:
           '23':
@@ -21788,6 +21787,7 @@ The World That Never Was:
             isboss: false
             name: Demyx's water form (EH)
       b_99:
+        ignored: true # Not a used spawn
         size: 0
         sp_ids:
           '87':
