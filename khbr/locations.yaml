@@ -15528,6 +15528,10 @@ Port Royal:
             isboss: false
             name: Undead Pirate C (13 0)
   'Ship Graveyard: Seadrift Row':
+    # In worst case the medallion carrying heartless won't spawn
+    ignored: true
+    pc:
+      ignored: false
     size: 5000000
     spawnpoints:
       b_20:
