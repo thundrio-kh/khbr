@@ -330,6 +330,7 @@ Gargoyle Knight:
   obj_id: 367
   size: 0
   type: enemy
+  replace_as: Gargoyle Knight # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   variations:
     Gargoyle Knight (30 0):
       vars:
@@ -355,6 +356,7 @@ Gargoyle Warrior:
   enabled: true
   enmp_index: 999
   model: M_BB010_AX
+  replace_as: Gargoyle Warrior # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   obj_id: 368
   size: 0
   type: enemy

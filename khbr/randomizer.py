@@ -156,7 +156,7 @@ class KingdomHearts2:
             "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized",
                                   "possible_values": ["Disabled", "One to One", "One to One Per Room", "Selected Enemy"], "hidden_values": ["Wild"]},
             "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
-                                "possible_values": [None] + self.get_valid_enemies(), "hidden_values": []},
+                                "possible_values": [None] + sorted(self.get_valid_enemies()), "hidden_values": []},
             # "bosses_can_replace_enemies": {"display_name": "Bosses Can Replace Enemies", "description": "Replaces a small percentage of enemies in the game with a random boss. This option is intended for PC use only.",
             #                     "possible_values": [False, True], "hidden_values": []},
             "nightmare_enemies": {"display_name": "Nightmare Enemies", "description": "Replaces enemies using only the most difficult enemies in the game.",
@@ -172,7 +172,7 @@ class KingdomHearts2:
             "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. Selected Boss will replace every boss with a single selected boss.",
                                 "possible_values": ["Disabled", "Wild", "Selected Boss"], "hidden_values": ["One to One"]},#, "one_to_one_characters",
             "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
-                                "possible_values": [None] + self.get_valid_bosses(), "hidden_values": []},
+                                "possible_values": [None] + sorted(self.get_valid_bosses()), "hidden_values": []},
             "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game.",
                                 "possible_values": [False, True], "hidden_values": []},
             "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
@@ -523,7 +523,7 @@ class KingdomHearts2:
                                     if new_boss == ent["name"]:
                                         continue
                                     new_boss_object = self.enemy_records[new_boss]
-                                    if new_boss_object["replace_as"]:
+                                    if new_boss_object["replace_as"] and not selected_boss:
                                         new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
                                     changesmade = True
                                     _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
@@ -577,7 +577,8 @@ class KingdomHearts2:
                                         continue
                                     changesmade = True
                                     new_enemy_object = self.enemy_records[new_enemy]
-                                    
+                                    if new_enemy_object["replace_as"] and not selected_enemy:
+                                        new_enemy_object = self.enemy_records[new_enemy_object["replace_as"]]
                                     _add_spawn(newspawns, _get_new_ent(ent, new_enemy_object))
                                 #     elif enemymapping:
                                 #         new_enemy = enemymapping[ent["name"]]

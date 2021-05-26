@@ -257,8 +257,8 @@
         "parent": "Aeroplane",
         "variationof": null,
         "children": [
-            "Aeroplane WI",
-            "Aeroplane"
+            "Aeroplane",
+            "Aeroplane WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -489,8 +489,8 @@
         "parent": "Bookmaster",
         "variationof": null,
         "children": [
-            "Bookmaster",
-            "Runemaster"
+            "Runemaster",
+            "Bookmaster"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1004,9 +1004,9 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
-            "Emerald Blues (TR)",
-            "Spring Metal",
             "Emerald Blues NM",
+            "Spring Metal",
+            "Emerald Blues (TR)",
             "Emerald Blues"
         ],
         "hp": 100,
@@ -1572,6 +1572,7 @@
         "obj_id": 367,
         "size": 0,
         "type": "enemy",
+        "replace_as": "Gargoyle Knight",
         "variations": [
             "Gargoyle Knight (30 0)",
             "Gargoyle Knight (32 0)",
@@ -1579,7 +1580,6 @@
             "Gargoyle Knight (36 0)",
             "Gargoyle Knight"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -1620,6 +1620,7 @@
         "obj_id": 367,
         "size": 0,
         "type": "enemy",
+        "replace_as": "Gargoyle Knight",
         "variations": [
             "Gargoyle Knight (30 0)",
             "Gargoyle Knight (32 0)",
@@ -1627,7 +1628,6 @@
             "Gargoyle Knight (36 0)",
             "Gargoyle Knight"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -1668,6 +1668,7 @@
         "obj_id": 367,
         "size": 0,
         "type": "enemy",
+        "replace_as": "Gargoyle Knight",
         "variations": [
             "Gargoyle Knight (30 0)",
             "Gargoyle Knight (32 0)",
@@ -1675,7 +1676,6 @@
             "Gargoyle Knight (36 0)",
             "Gargoyle Knight"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -1716,6 +1716,7 @@
         "obj_id": 367,
         "size": 0,
         "type": "enemy",
+        "replace_as": "Gargoyle Knight",
         "variations": [
             "Gargoyle Knight (30 0)",
             "Gargoyle Knight (32 0)",
@@ -1723,7 +1724,6 @@
             "Gargoyle Knight (36 0)",
             "Gargoyle Knight"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -1764,6 +1764,7 @@
         "obj_id": 367,
         "size": 0,
         "type": "enemy",
+        "replace_as": "Gargoyle Knight",
         "variations": [
             "Gargoyle Knight (30 0)",
             "Gargoyle Knight (32 0)",
@@ -1771,7 +1772,6 @@
             "Gargoyle Knight (36 0)",
             "Gargoyle Knight"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -1811,6 +1811,7 @@
         "enabled": true,
         "enmp_index": 999,
         "model": "M_BB010_AX",
+        "replace_as": "Gargoyle Warrior",
         "obj_id": 368,
         "size": 0,
         "type": "enemy",
@@ -1821,7 +1822,6 @@
             "Gargoyle Warrior (46 0)",
             "Gargoyle Warrior"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -1859,6 +1859,7 @@
         "enabled": true,
         "enmp_index": 999,
         "model": "M_BB010_AX",
+        "replace_as": "Gargoyle Warrior",
         "obj_id": 368,
         "size": 0,
         "type": "enemy",
@@ -1869,7 +1870,6 @@
             "Gargoyle Warrior (46 0)",
             "Gargoyle Warrior"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -1907,6 +1907,7 @@
         "enabled": true,
         "enmp_index": 999,
         "model": "M_BB010_AX",
+        "replace_as": "Gargoyle Warrior",
         "obj_id": 368,
         "size": 0,
         "type": "enemy",
@@ -1917,7 +1918,6 @@
             "Gargoyle Warrior (46 0)",
             "Gargoyle Warrior"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -1955,6 +1955,7 @@
         "enabled": true,
         "enmp_index": 999,
         "model": "M_BB010_AX",
+        "replace_as": "Gargoyle Warrior",
         "obj_id": 368,
         "size": 0,
         "type": "enemy",
@@ -1965,7 +1966,6 @@
             "Gargoyle Warrior (46 0)",
             "Gargoyle Warrior"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -2003,6 +2003,7 @@
         "enabled": true,
         "enmp_index": 999,
         "model": "M_BB010_AX",
+        "replace_as": "Gargoyle Warrior",
         "obj_id": 368,
         "size": 0,
         "type": "enemy",
@@ -2013,7 +2014,6 @@
             "Gargoyle Warrior (46 0)",
             "Gargoyle Warrior"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -2072,9 +2072,9 @@
         "parent": "Hammer Frame",
         "variationof": null,
         "children": [
-            "Hammer Frame WI",
+            "Hammer Frame",
             "Iron Hammer",
-            "Hammer Frame"
+            "Hammer Frame WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2168,8 +2168,8 @@
         "variationof": null,
         "children": [
             "Mad Ride",
-            "Hot Rod",
-            "Hot Rod WI"
+            "Hot Rod WI",
+            "Hot Rod"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2264,8 +2264,8 @@
         "parent": "Neoshadow",
         "variationof": null,
         "children": [
-            "Neoshadow (NM)",
-            "Neoshadow"
+            "Neoshadow",
+            "Neoshadow (NM)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -4896,8 +4896,8 @@
         "parent": "Wight Knight",
         "variationof": null,
         "children": [
-            "Wight Knight NM",
-            "Wight Knight"
+            "Wight Knight",
+            "Wight Knight NM"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5387,8 +5387,8 @@
         "parent": "Armored Knight",
         "variationof": null,
         "children": [
-            "Armored Knight",
-            "Armored Knight (NM)"
+            "Armored Knight (NM)",
+            "Armored Knight"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -5707,8 +5707,8 @@
         "parent": "Axel II",
         "variationof": null,
         "children": [
-            "Axel (Data)",
-            "Axel II"
+            "Axel II",
+            "Axel (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6440,10 +6440,10 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower (RAW)",
             "Bolt Tower (MU)",
-            "Bolt Tower",
-            "Bolt Tower DC"
+            "Bolt Tower (RAW)",
+            "Bolt Tower DC",
+            "Bolt Tower"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -8893,8 +8893,8 @@
         "parent": "Driller Mole",
         "variationof": null,
         "children": [
-            "Driller Mole NM",
-            "Driller Mole"
+            "Driller Mole",
+            "Driller Mole NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9445,8 +9445,8 @@
         "parent": "Fiery Globe",
         "variationof": null,
         "children": [
-            "Fiery Globe",
-            "Fiery Globe Treasure Room"
+            "Fiery Globe Treasure Room",
+            "Fiery Globe"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -11117,8 +11117,8 @@
         "parent": "Hook Bat",
         "variationof": null,
         "children": [
-            "Hook Bat",
-            "Beffudler"
+            "Beffudler",
+            "Hook Bat"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12634,8 +12634,8 @@
         "parent": "Icy Cube",
         "variationof": null,
         "children": [
-            "Icy Cube Treasure Room",
-            "Icy Cube"
+            "Icy Cube",
+            "Icy Cube Treasure Room"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -15549,9 +15549,9 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
-            "Rapid Thruster",
             "Rapid Thruster WI",
-            "Rapid Thruster (RAW)"
+            "Rapid Thruster (RAW)",
+            "Rapid Thruster"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18384,8 +18384,8 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow",
             "Shadow WI",
+            "Shadow",
             "Shadow (RAW)"
         ],
         "msn_required": false,
@@ -19167,9 +19167,9 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
-            "Soldier",
+            "Soldier (WI)",
             "Soldier NM",
-            "Soldier (WI)"
+            "Soldier"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -21068,8 +21068,8 @@
         "parent": "Xemnas",
         "variationof": null,
         "children": [
-            "Xemnas",
-            "Xemnas (Data)"
+            "Xemnas (Data)",
+            "Xemnas"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -21184,8 +21184,8 @@
         "parent": "Xigbar",
         "variationof": null,
         "children": [
-            "Xigbar (Data)",
-            "Xigbar"
+            "Xigbar",
+            "Xigbar (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
