@@ -2,6 +2,7 @@ import time, json, random, os, shutil, yaml, base64, sys
 from zipfile import ZipFile
 import random
 
+DEBUG_LOCATIONS = []
 
 supported_games = ["kh2"]
 
@@ -300,6 +301,15 @@ class KingdomHearts2:
     def get_locations(self):
         with open(os.path.join(os.path.dirname(__file__), "locations.yaml")) as f:
             locations_f = yaml.load(f, Loader=yaml.FullLoader)
+        if DEBUG_LOCATIONS:
+            newlocations = {}
+            for world in locations_f:
+                for room in locations_f[world]:
+                    if room in DEBUG_LOCATIONS:
+                        if world not in newlocations:
+                            newlocations[world] = {}
+                        newlocations[world][room] = locations_f[world][room]
+            locations_f = newlocations
         return locations_f
     def add_tag(self, enemylist, tag):
         for enemy in enemylist:
