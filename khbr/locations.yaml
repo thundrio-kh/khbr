@@ -14183,6 +14183,7 @@ Olympus Coliseum:
             isboss: false
             name: Driller Mole
       b_40:
+        ignored: true # Is a fight that is pretty likely to cause tposing
         size: 0
         sp_ids:
           '12':
