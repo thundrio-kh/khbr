@@ -22966,6 +22966,7 @@ Twilight Town:
             isboss: false
             name: Assassin
       b_21:
+        ignored: true # Make sure you can level final form in the worst case
         size: 0
         sp_ids:
           '51':
