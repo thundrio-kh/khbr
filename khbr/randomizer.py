@@ -12,7 +12,7 @@ KH2_DIR = os.environ["USE_KH2_GITPATH"]
 RANDOMIZATIONS_DIR = os.path.join(KH2_DIR,"randomizations") if os.path.exists(os.path.join(KH2_DIR,"randomizations")) else "randomizations"
 
 UNLIMITED_SIZE = 99_999_999_999_999
-LIMITED_SIZE = 16.8 # Size of AX I Room 
+LIMITED_SIZE = 15.0 # Seems about right
 NUM_RANDOMIZATION_MAPPINGS = 9
 
 HARDCAP = "-3.3895395E+38"
