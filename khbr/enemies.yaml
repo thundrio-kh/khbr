@@ -27,7 +27,7 @@ Aerial Knocker:
   enmp_index: 999
   model: M_EX780
   obj_id: 20
-  size: 0
+  sizeTag: small
   type: enemy
   variations:
     Aerial Knocker:
@@ -56,7 +56,7 @@ Aeroplane:
   enmp_index: 999
   model: M_EX540
   obj_id: 6
-  size: 0
+  sizeTag: small
   type: enemy
   tags:
   - ranged
@@ -110,6 +110,7 @@ Bolt Tower (RAW):
   variationof: Bolt Tower
   enmp_index: 999
   model: M_EX800_RAW
+  replace_as: Bolt Tower
   obj_id: 1576
   size: 0
   type: enemy
@@ -142,6 +143,7 @@ Bookmaster (TR):
   obj_id: 1835
   size: 0
   type: enemy
+  variationof: Bookmaster
   tags:
   - ranged
   - large
@@ -189,6 +191,7 @@ Camo Cannon:
   obj_id: 2407
   size: 0
   type: enemy
+  variationof: Cannon Gun
   tags:
   - ranged
   variations:
@@ -203,6 +206,7 @@ Cannon Gun WI:
   obj_id: 1832
   size: 0
   type: enemy
+  variationof: Cannon Gun
   tags:
   - ranged
   variations:
@@ -215,7 +219,7 @@ Creeper Plant:
   enmp_index: 999
   model: M_EX750
   obj_id: 125
-  size: 0
+  sizeTag: medium
   type: enemy
   variations:
     Creeper Plant:
@@ -252,7 +256,7 @@ Emerald Blues:
   enmp_index: 999
   model: M_EX120
   obj_id: 72
-  size: 0
+  sizeTag: small
   type: enemy
   tags:
   - ranged
@@ -282,7 +286,7 @@ Fortuneteller (AL):
   isnightmare: true
   model: M_EX620_AL
   obj_id: 1760
-  size: 0
+  sizeTag: small
   type: enemy
   tags:
   - al
@@ -328,8 +332,9 @@ Gargoyle Knight:
   enmp_index: 999
   model: M_BB010_SWORD
   obj_id: 367
-  size: 0
+  sizeTag: medium
   type: enemy
+  isnightmare: true
   replace_as: Gargoyle Knight # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   variations:
     Gargoyle Knight (30 0):
@@ -358,7 +363,8 @@ Gargoyle Warrior:
   model: M_BB010_AX
   replace_as: Gargoyle Warrior # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   obj_id: 368
-  size: 0
+  isnightmare: true
+  sizeTag: medium
   type: enemy
   variations:
     Gargoyle Warrior (40 0):
@@ -386,7 +392,7 @@ Hammer Frame:
   enmp_index: 999
   model: M_EX560
   obj_id: 8
-  size: 0
+  sizeTag: medium
   type: enemy
   variations:
     Hammer Frame:
@@ -402,8 +408,9 @@ Hot Rod:
   enmp_index: 999
   model: M_EX640
   obj_id: 13
-  size: 0
+  sizeTag: big
   type: enemy
+  isnightmare: true
   tags:
   - large
   variations:
@@ -431,7 +438,7 @@ Neoshadow:
   enmp_index: 999
   model: M_EX420
   obj_id: 120
-  size: 0
+  sizeTag: big
   type: enemy
   variations:
     Neoshadow:
@@ -470,7 +477,7 @@ Rabid Dog:
   enmp_index: 999
   model: M_EX510
   obj_id: 3
-  size: 0
+  sizeTag: small
   type: enemy
   variations:
     Rabid Dog:
@@ -483,6 +490,7 @@ Rapid Thruster (RAW):
   enmp_index: 999
   model: M_EX660_RAW
   obj_id: 1368
+  replace_as: Rapid Thruster
   size: 0
   type: enemy
   variations:
@@ -540,6 +548,7 @@ Shadow (RAW):
   variationof: Shadow
   enmp_index: 999
   model: M_EX020_RAW
+  replace_as: Shadow
   obj_id: 1365
   size: 0
   type: enemy
@@ -557,7 +566,7 @@ Shaman:
   enmp_index: 999
   model: M_EX720
   obj_id: 19
-  size: 0
+  sizeTag: big
   type: enemy
   tags:
   - ranged
@@ -600,7 +609,7 @@ Strafer:
   enmp_index: 999
   model: M_EX610
   obj_id: 1114
-  size: 0
+  sizeTag: medium
   type: enemy
   variations:
     Strafer:
@@ -646,7 +655,7 @@ Toy Soldier:
   isnightmare: true
   model: M_EX790_CHRISTMAS
   obj_id: 1776
-  size: 0
+  sizeTag: small
   type: enemy
   tags:
   - large
@@ -680,7 +689,7 @@ Undead Pirate A:
   enmp_index: 999
   model: B_CA020
   obj_id: 1107
-  size: 0
+  sizeTag: big
   type: enemy
   tags:
   - pirate
@@ -726,7 +735,7 @@ Undead Pirate B:
   enmp_index: 999
   model: B_CA030
   obj_id: 1108
-  size: 0
+  sizeTag: big
   type: enemy
   tags:
   - pirate
@@ -752,7 +761,7 @@ Undead Pirate C:
   enmp_index: 999
   model: B_CA040
   obj_id: 1109
-  size: 0
+  sizeTag: big
   type: enemy
   isnightmare: true
   tags:
@@ -819,7 +828,7 @@ Wight Knight:
   enmp_index: 999
   model: M_EX200
   obj_id: 118
-  size: 0
+  sizeTag: medium
   type: enemy
   variations:
     Wight Knight:
@@ -858,7 +867,7 @@ Aerial Viking:
   limiter: 13
   model: M_EX210_HB
   obj_id: 2413
-  size: 603180
+  sizeTag: medium
   type: enemy
   variations:
     Aerial Viking:
@@ -950,7 +959,7 @@ Armored Knight:
   limiter: 7
   model: M_EX760
   obj_id: 305
-  size: 462904
+  sizeTag: medium
   type: enemy
   variations:
     Armored Knight:
@@ -969,7 +978,7 @@ Assassin:
   limiter: 10
   model: M_EX900
   obj_id: 309
-  size: 1531924
+  sizeTag: big
   type: enemy
   variations:
     Assassin:
@@ -985,7 +994,7 @@ Assault Rider:
   limiter: 20
   model: M_EX570
   obj_id: 9
-  size: 1404236
+  sizeTag: big
   tags:
   - large
   type: enemy
@@ -1182,7 +1191,7 @@ Berserker:
   limiter: 15
   model: M_EX940
   obj_id: 313
-  size: 848210
+  sizeTag: big
   tags:
   - large
   type: enemy
@@ -1230,7 +1239,7 @@ Bolt Tower:
   limiter: 1
   model: M_EX800
   obj_id: 1575
-  size: 337392
+  sizeTag: big
   tags:
   - large
   type: enemy
@@ -1270,7 +1279,7 @@ Cannon Gun:
   limiter: 10
   model: M_EX650
   obj_id: 14
-  size: 280926
+  sizeTag: medium
   type: enemy
   tags:
   - ranged
@@ -1369,7 +1378,7 @@ Creeper:
   limiter: 9
   model: M_EX880
   obj_id: 317
-  size: 563598
+  sizeTag: medium
   type: enemy
   variations:
     Creeper:
@@ -1384,7 +1393,7 @@ Crescendo:
   limiter: 7
   model: M_EX740
   obj_id: 124
-  size: 343104
+  sizeTag: medium
   type: enemy
   variations:
     Crescendo:
@@ -1399,7 +1408,7 @@ Crimson Jazz:
   limiter: 17
   model: M_EX130
   obj_id: 73
-  size: 290842
+  sizeTag: medium
   tags:
   - large
   - ranged
@@ -1426,7 +1435,7 @@ Crimson Jazz AL:
   limiter: 17
   model: M_EX130_AL
   obj_id: 1888
-  size: 285258
+  sizeTag: small
   tags:
   - al
   - ranged
@@ -1453,7 +1462,7 @@ Dancer:
   limiter: 15
   model: M_EX930
   obj_id: 312
-  size: 951352
+  sizeTag: big
   type: enemy
   variations:
     Dancer:
@@ -1754,7 +1763,7 @@ Devastator:
   limiter: 17
   model: M_EX680
   obj_id: 16
-  size: 941282
+  sizeTag: big
   tags:
   - large
   - ranged
@@ -1781,7 +1790,7 @@ Dragoon:
   limiter: 17
   model: M_EX890
   obj_id: 308
-  size: 1209752
+  sizeTag: big
   tags:
   - large
   type: enemy
@@ -1802,7 +1811,7 @@ Driller Mole:
   limiter: 9
   model: M_EX700
   obj_id: 18
-  size: 469358
+  sizeTag: medium
   type: enemy
   variations:
     Driller Mole:
@@ -1833,7 +1842,7 @@ Dusk:
   limiter: 13
   model: M_EX990
   obj_id: 318
-  size: 1013040
+  sizeTag: big
   type: enemy
   variations:
     Dusk:
@@ -1894,7 +1903,7 @@ Fat Bandit:
   limiter: 13
   model: M_EX060
   obj_id: 1
-  size: 551572
+  sizeTag: big
   tags:
   - large
   - ranged
@@ -1920,7 +1929,7 @@ Fiery Globe:
   limiter: 6
   model: M_AL020_FIRE
   obj_id: 76
-  size: 122640
+  sizeTag: medium
   type: enemy
   variations:
     Fiery Globe:
@@ -1984,7 +1993,7 @@ Fortuneteller:
   limiter: 20
   model: M_EX620
   obj_id: 11
-  size: 632600
+  sizeTag: big
   type: enemy
   variations:
     Fortuneteller:
@@ -2003,7 +2012,7 @@ Gambler:
   limiter: 17
   model: M_EX950
   obj_id: 314
-  size: 1672788
+  sizeTag: big
   type: enemy
   variations:
     Gambler:
@@ -2059,7 +2068,7 @@ Graveyard NM:
   limiter: 8
   model: M_EX790_HALLOWEEN_NM
   obj_id: 1775
-  size: 616628
+  sizeTag: small
   tags:
   - large
   - ranged
@@ -2339,7 +2348,7 @@ Hook Bat:
   limiter: 8
   model: M_EX520
   obj_id: 4
-  size: 296752
+  sizeTag: small
   type: enemy
   variations:
     Hook Bat (20 0):
@@ -2357,7 +2366,7 @@ Hook Bat AL:
   limiter: 8
   model: M_EX520_AL
   obj_id: 1887
-  size: 292560
+  sizeTag: small
   tags:
   - al
   type: enemy
@@ -2525,7 +2534,7 @@ Icy Cube:
   limiter: 7
   model: M_AL020_ICEE
   obj_id: 77
-  size: 189784
+  sizeTag: medium
   type: enemy
   variations:
     Icy Cube:
@@ -2606,7 +2615,7 @@ Lance Soldier:
   limiter: 13
   model: M_EX690
   obj_id: 17
-  size: 754672
+  sizeTag: big
   type: enemy
   variations:
     Lance Soldier:
@@ -2638,7 +2647,7 @@ Large Body:
   limiter: 15
   model: M_EX050
   obj_id: 303
-  size: 961136
+  sizeTag: big
   tags:
   - large
   type: enemy
@@ -2787,7 +2796,7 @@ Living Bone:
   limiter: 17
   model: M_EX670
   obj_id: 15
-  size: 1417332
+  sizeTag: big
   tags:
   - large
   type: enemy
@@ -2837,7 +2846,7 @@ Luna Bandit:
   limiter: 15
   model: M_EX630
   obj_id: 12
-  size: 1436676
+  sizeTag: big
   type: enemy
   variations:
     Luna Bandit:
@@ -2919,7 +2928,7 @@ Magic Phantom:
   limiter: 15
   model: M_EX500_HB
   obj_id: 2403
-  size: 1020616
+  sizeTag: medium
   type: enemy
   tags:
   - ranged
@@ -2937,7 +2946,7 @@ Magnum Loader:
   limiter: 10
   model: M_EX600
   obj_id: 121
-  size: 382620
+  sizeTag: medium
   type: enemy
   variations:
     Magnum Loader:
@@ -2981,7 +2990,7 @@ Minute Bomb:
   limiter: 9
   model: M_EX550
   obj_id: 7
-  size: 400712
+  sizeTag: medium
   type: enemy
   variations:
     Minute Bomb:
@@ -3017,7 +3026,7 @@ Morning Star:
   limiter: 15
   model: M_EX710
   obj_id: 122
-  size: 990288
+  sizeTag: big
   tags:
   - large
   type: enemy
@@ -3056,7 +3065,7 @@ Nightwalker:
   limiter: 15
   model: M_EX580
   obj_id: 10
-  size: 602620
+  sizeTag: medium
   type: enemy
   variations:
     Nightwalker:
@@ -3071,7 +3080,7 @@ Bomb Bell A:
   model: EH_G_EX250
   obj_id: 2202
   replace_allowed: false
-  size: 87118
+  sizeTag: small
   type: enemy
   tags:
   - al
@@ -3235,7 +3244,7 @@ Rapid Thruster:
   limiter: 7
   model: M_EX660
   obj_id: 304
-  size: 251012
+  sizeTag: medium
   type: enemy
   variations:
     Rapid Thruster (Zipliner):
@@ -3262,7 +3271,7 @@ Rapid Thruster AL:
   limiter: 7
   model: M_EX660_AL
   obj_id: 1889
-  size: 73460
+  sizeTag: small
   tags:
   - al
   type: enemy
@@ -3447,7 +3456,7 @@ Runemaster:
   limiter: 10
   model: M_EX530_HB
   obj_id: 2414
-  size: 352940
+  sizeTag: medium
   tags:
   - large
   - ranged
@@ -3486,7 +3495,7 @@ Samurai:
   limiter: 20
   model: M_EX910
   obj_id: 310
-  size: 791312
+  sizeTag: big
   type: enemy
   variations:
     Samurai:
@@ -3669,7 +3678,7 @@ Shadow:
   limiter: 8
   model: M_EX020
   obj_id: 302
-  size: 477686
+  sizeTag: small
   type: enemy
   variations:
     Shadow:
@@ -3803,7 +3812,7 @@ Silver Rock:
   limiter: 8
   model: M_EX110
   obj_id: 71
-  size: 212176
+  sizeTag: small
   type: enemy
   tags:
   - ranged
@@ -3825,7 +3834,7 @@ Sniper:
   limiter: 15
   model: M_EX920
   obj_id: 311
-  size: 547096
+  sizeTag: big
   type: enemy
   tags:
   - ranged
@@ -3843,7 +3852,7 @@ Soldier:
   limiter: 12
   model: M_EX010
   obj_id: 301
-  size: 787284
+  sizeTag: medium
   type: enemy
   variations:
     Soldier:
@@ -3884,7 +3893,7 @@ Sorcerer:
   limiter: 34
   model: M_EX870
   obj_id: 316
-  size: 1741312
+  sizeTag: small
   tags:
   - large
   - ranged
@@ -3975,7 +3984,7 @@ Surveillance Robot:
   limiter: 10
   model: M_EX770
   obj_id: 306
-  size: 369292
+  sizeTag: medium
   type: enemy
   tags:
   - ranged
@@ -4122,7 +4131,7 @@ Tornado Step:
   limiter: 10
   model: M_EX730
   obj_id: 123
-  size: 673368
+  sizeTag: medium
   type: enemy
   variations:
     Tornado Step:
@@ -4156,7 +4165,7 @@ Trick Ghost:
   limiter: 15
   model: M_EX500
   obj_id: 2
-  size: 1020248
+  sizeTag: big
   type: enemy
   tags:
   - ranged

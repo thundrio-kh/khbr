@@ -209,6 +209,7 @@ class KingdomHearts2:
             "can_be_enemy": False,
             "msn": None,
             "size": 0,
+            "sizeTag": None, #sizeSmall sizeMedium sizeLarge 
             "room_size": 0,
             "roommaxsize": None,
             "enmp_index": None,
@@ -241,6 +242,8 @@ class KingdomHearts2:
                     if d not in boss:
                         boss[d] = defaults[d]
                 boss["category"] = '-'.join(sorted(boss["tags"]))
+                if boss["sizeTag"]:
+                    boss["category"] = "-".join([boss["category"], boss["sizeTag"]])
                 if usefilters:
                     if boss["type"] != 'boss':
                         continue
@@ -331,8 +334,9 @@ class KingdomHearts2:
         categories = {}
         for e in enemylist:
             parent = self.enemy_records[e["parent"]]
+            # Might not be respecting childrens tags properly
             if parent["category"] not in categories:
-                categories[e["category"]] = {}
+                categories[parent["category"]] = {}
             categories[parent["category"]][parent["name"]] = parent
         mapping = {}
         for c in categories:
