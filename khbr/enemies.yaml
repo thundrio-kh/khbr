@@ -1480,7 +1480,7 @@ Dark Thorn:
   msn: BB05_MS104B
   program: 79
   size: 4.19
-  room_size: 11.1
+  room_size: 14.00
   adds:
   - ObjectId: 644 # chandelier
     modPositionY: -1500
@@ -1522,7 +1522,8 @@ Demyx (Data):
   level: 99
   limiter: 0
   model: B_EX120_HB_LV99
-  msn: HB04_MS403_RE
+  msn: HB04_MS403_RE # TODO DUPLICATE THE MSN
+  msn_replace_allowed: false
   program: 114
   size: 4.07
   room_size: 10.62
@@ -1569,19 +1570,18 @@ Luxord (Data):
   data: true
   variationof: Luxord
   enabled: false
-  replace_allowed: false
   enmp_index: 219
   hp: 100
   level: 99
   limiter: 0
   model: B_EX150_LV99
-  msn: EH14_MS103_RE
+  msn: EH14_MS103_RE # TODO DUPE MSN
+  msn_replace_allowed: false
   program: 101
   size: 4.64
   room_size: 11.89
   msn_required: true
   obj_id: 2504
-  size: 3430732
   type: boss
   blacklist:
   - Xemnas # TELEPORTER
@@ -1615,14 +1615,14 @@ Saix (Data):
   can_be_enemy: true
   variationof: Saix
   enabled: false
-  replace_allowed: false
   enmp_index: 228
   hp: 100
   isnightmare: true
   level: 99
   limiter: 0
   model: B_EX160_LV99
-  msn: EH15_MS104_RE
+  msn: EH15_MS104_RE # TODO DUPE MSN
+  msn_replace_allowed: false
   program: 102
   size: 4.55
   room_size: 10.30
@@ -1670,6 +1670,7 @@ Xemnas (Data):
   limiter: 0
   model: B_EX170_LV99
   msn: EH19_MS105_RE
+  msn_replace_allowed: false
   obj_id: 2505
   size: 3.7
   room_size: 6.16
@@ -1692,6 +1693,7 @@ Xigbar (Data):
   limiter: 0
   model: B_EX140_LV99
   msn: EH10_MS102_RE
+  msn_replace_allowed: false
   obj_id: 2501
   size: 3.19
   program: 100
@@ -1715,8 +1717,11 @@ Demyx:
   obj_id: 2295
   size: 4.07
   room_size: 10.62
+  roommaxsize: 14.90
   program: 55
   type: boss
+  blacklist:
+  - Storm Rider # Having demyx start in the sky locks him in a weird loop
   variations:
     Demyx:
       vars:
@@ -2698,7 +2703,7 @@ Larxene:
     Larxene (Data):
       data: true
       enabled: false
-      replace_allowed: false
+      msn_replace_allowed: false
       msn: HB33_FM_LAR_RE
       program: 148
       vars:
@@ -2775,8 +2780,8 @@ Lexaeus:
     Lexaeus (Data):
       data: true
       enabled: false
-      replace_allowed: false
       isnightmare: true
+      msn_replace_allowed: false
       msn: HB33_FM_LEX_RE
       program: 147
       vars:
@@ -2969,8 +2974,8 @@ Marluxia:
       - 0
     Marluxia (Data):
       enabled: false
-      replace_allowed: false
       isnightmare: true
+      msn_replace_allowed: false
       msn: HB38_FM_MAR_RE
       program: 150
       vars:
@@ -3433,8 +3438,8 @@ Roxas:
     Roxas (Data):
       data: true
       enabled: false
-      replace_allowed: false
       isnightmare: true
+      msn_replace_allowed: false
       msn: EH21_MS101_RE
       program: 99
       vars:
@@ -3697,9 +3702,10 @@ Shadow Stalker:
   msn: BB05_MS104A
   obj_id: 355
   size: 4.28
-  room_size: 11.15
+  room_size: 13.52
   program: 78
   adds:
+    #TODO the roommaxsize implies some of these are still being loaded into memory
   - ObjectId: 646 # ground trap
   - ObjectId: 645 # columns
   - ObjectId: 644 # chandelier
@@ -4022,6 +4028,7 @@ The Beast:
   size: 2.57
   program: 69
   room_size: 12.07
+  roommaxsize: 15.00
   adds:
   - ObjectId: 31 # cogsworth
     dontSub: false # he can mess up other important RCs
@@ -4064,6 +4071,7 @@ Thresholder:
   limiter: 25
   model: B_BB100
   msn: BB11_MS102
+  roomsizemultiplier: 0.3 # There are 3 different normal enemies loaded in here, TODO test if I need to be this safe
   obj_id: 353
   size: 2.17
   room_size: 12.13
@@ -4213,8 +4221,8 @@ Vexen:
     Vexen (Data):
       data: true
       enabled: false
-      replace_allowed: false
       program: 146
+      msn_replace_allowed: false
       msn: HB32_FM_VEX_RE
       vars:
       - 1
@@ -4488,9 +4496,9 @@ Zexion:
     Zexion (Data):
       data: true
       enabled: false
-      replace_allowed: false
       program: 152
       msn: HB34_FM_ZEX_RE
+      msn_replace_allowed: false
       vars:
       - 0
       - 1
