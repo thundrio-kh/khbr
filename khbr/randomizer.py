@@ -251,12 +251,14 @@ class KingdomHearts2:
                         continue
                     if nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
                         continue
+
                 parent = boss["variationof"] or name
                 assert parent != None
                 boss["parent"] = parent
                 if parent not in kidlist:
                     kidlist[parent] = []
                 kidlist[parent].append(name)
+                
                 bosses[v] = boss
         
         for parent in kidlist:
@@ -267,10 +269,15 @@ class KingdomHearts2:
                 source_boss = bosses[source_name]
                 if not source_boss["type"] == "boss":
                     continue
+                # Avail only needs to be filled in for the parent
+                if not source_boss["parent"] == source_name:
+                    continue
                 avail = [] # These are bosses that are allowed to be here
                 for dest_name in bosses:
                     dest_boss = bosses[dest_name]
                     if not dest_boss["type"] == "boss":
+                        continue
+                    if not dest_boss["parent"] == dest_name:
                         continue
                     if dest_boss["name"] == source_boss["name"]:
                         # Boss should always be allowed to be in it's own location
@@ -361,9 +368,10 @@ class KingdomHearts2:
         assert len(enemylist) == len(list(mapping.keys()))
         
         return mapping 
-    def pick_boss_to_replace(self, bosslist):
-        n = random.randint(0,len(bosslist)-1)
-        return bosslist[n]
+    def pick_boss_to_replace(self, bossparentlist):
+        bossparent = self.enemy_records[random.choice(bossparentlist)]
+        bosschild = self.enemy_records[random.choice(bossparent["children"])]
+        return random.choice(bosschild["variations"])
     def get_enemy_attribute(self, name, attribute):
         pass
     def pick_enemy_to_replace(self, oldenemy, enabledenemies):
@@ -511,6 +519,7 @@ class KingdomHearts2:
                                     if not bosses:
                                         continue # Bosses aren't being randomized
                                     old_boss_object = self.enemy_records[ent["name"]]
+                                    old_boss_parent = self.enemy_records[old_boss_object["parent"]]
                                     if old_boss_object["name"] in ["Final Xemnas (Clone)", "Final Xemnas (Clone) (Data)"]:
                                         continue # He gets removed later by subtracts, so don't replace
                                     if not old_boss_object["replace_allowed"]:
@@ -523,7 +532,7 @@ class KingdomHearts2:
                                             continue
                                         new_boss = bossmapping[ent["name"]]
                                     else:
-                                        new_boss = self.pick_boss_to_replace(old_boss_object["available"])
+                                        new_boss = self.pick_boss_to_replace(old_boss_parent["available"])
                                     if new_boss == ent["name"]:
                                         continue
                                     new_boss_object = self.enemy_records[new_boss]
@@ -549,15 +558,8 @@ class KingdomHearts2:
                                     elif old_boss_object["msn_source_as"]:
                                         msn_mapping[old_boss_object["msn"]] = old_boss_object["msn_source_as"]
                                     if scale_boss:
-                                        if new_boss not in set_scaling:
-                                            hp = old_boss_object["hp"]
-                                            level = old_boss_object["level"]
-                                            set_scaling[new_boss] = (hp, level)
-                                        else:
-                                            hp = old_boss_object["hp"]
-                                            level = old_boss_object["level"]
-                                            if hp > set_scaling[new_boss][0]:
-                                                set_scaling[new_boss] = (hp, level)
+                                        if old_boss not in set_scaling:
+                                            set_scaling[old_boss] = new_boss # So just the first instance of the boss will be used, which isn't great in every scenario
                                     if "aimod" in new_boss_object and new_boss_object["aimod"]:
                                         # In some cases it might be useful to know who is being replaced,
                                         ## IE the height Axel spawns the fire floor might be different on a per room basis
@@ -1046,7 +1048,7 @@ if __name__ == '__main__':
     t = time.time()
     mode = sys.argv[1]
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\"}" randomization_only
-    # run randomizer.py devgenerate "{\"enemy\": \"One to One\", \"boss\": \"Wild\"}"
+    # run randomizer.py devgenerate "{\"boss\": \"Wild\"}"
     # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Sephiroth\"}"
     options = sys.argv[2]
     if len(sys.argv) > 3:

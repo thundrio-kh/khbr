@@ -1216,7 +1216,6 @@ Blizzard Lord:
   type: boss
   variations:
     Blizzard Lord:
-      enabled: false # TODO remove after spawn overhaul
       msn: AL03_MS103
       program: 59
       room_size: 10.32
@@ -1345,7 +1344,6 @@ Cloud:
   type: boss
   variations:
     Cloud:
-      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_25
       room_size: 9.14
@@ -1354,7 +1352,6 @@ Cloud:
       - 1
       - 0
     Cloud (1):
-      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_40
       room_size: 9.14
@@ -2721,7 +2718,6 @@ Leon:
   cups: true
   variations:
     Leon:
-      enabled: false # TODO remove after spawn overhaul
       program: 189
       msn: HE_COL_1_10
       room_size: 9.14
@@ -2730,7 +2726,6 @@ Leon:
       - 1
       - 0
     Leon (1):
-      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_40
       room_size: 9.14
@@ -2739,7 +2734,6 @@ Leon:
       - 3
       - 0
     Leon (2):
-      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
@@ -4070,7 +4064,6 @@ Thresholder:
   limiter: 25
   model: B_BB100
   msn: BB11_MS102
-  roomsizemultiplier: 0.5 # TODO remove after spawn overhaul
   obj_id: 353
   size: 2.17
   room_size: 12.13
@@ -4097,7 +4090,6 @@ Tifa:
   type: boss
   variations:
     Tifa:
-      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_10
       room_size: 9.14
@@ -4107,7 +4099,6 @@ Tifa:
       - 1
       - 0
     Tifa (1):
-      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_25
       room_size: 9.14
@@ -4282,7 +4273,6 @@ Volcano Lord:
   type: boss
   variations:
     Volcano Lord:
-      enabled: false # TODO remove after spawn overhaul
       msn: AL03_MS103
       program: 59
       room_size: 10.32
@@ -4419,7 +4409,6 @@ Yuffie:
   type: boss
   variations:
     Yuffie:
-      enabled: false # TODO remove after spawn overhaul
       can_be_enemy: true
       program: 189
       msn: HE_COL_1_10
@@ -4429,7 +4418,6 @@ Yuffie:
       - 1
       - 0
     Yuffie (1):
-      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_10
       room_size: 9.14
@@ -4439,7 +4427,6 @@ Yuffie:
       - 3
       - 0
     Yuffie (2):
-      enabled: false # TODO remove after spawn overhaul
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
