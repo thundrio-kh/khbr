@@ -369,15 +369,19 @@ class KingdomHearts2:
         
         return mapping 
     def pick_boss_to_replace(self, bossparentlist):
-        bossparent = self.enemy_records[random.choice(bossparentlist)]
-        bosschild = self.enemy_records[random.choice(bossparent["children"])]
-        return random.choice(bosschild["variations"])
+        enabled_parents = [b for b in bossparentlist if self.enemy_records[b]["enabled"]]
+        bossparent = self.enemy_records[random.choice(enabled_parents)]
+        enabled_children = [b for b in bossparent["children"] if self.enemy_records[b]["enabled"]]
+        bosschild = self.enemy_records[random.choice(enabled_children)]
+        enabled_variations = [b for b in bosschild["variations"] if self.enemy_records[b]["enabled"]]
+        return random.choice(enabled_variations)
     def get_enemy_attribute(self, name, attribute):
         pass
     def pick_enemy_to_replace(self, oldenemy, enabledenemies):
         options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
         return random.choice(options)
     def perform_randomization(self, options, seed=None):
+        print("Enemy Seed: {}".format(seed))
         if diagnostics:
             start_time = time.time()
             print("Starting Randomization: {}".format(options))
