@@ -1493,9 +1493,8 @@ Dark Thorn:
       - 0
 Axel (Data):
   data: true
-  enabled: false
+  enabled: true
   variationof: Axel II
-  replace_allowed: false
   enmp_index: 221
   hp: 100
   level: 99
@@ -1516,7 +1515,7 @@ Demyx (Data):
   data: true
   enabled: false
   variationof: Demyx
-  replace_allowed: false
+  replace_allowed: true
   enmp_index: 216
   hp: 100
   level: 99
@@ -1537,7 +1536,7 @@ Demyx (Data):
 Final Xemnas (Data):
   enabled: false
   variationof: Final Xemnas
-  replace_allowed: false
+  replace_allowed: true
   msn_replace_allowed: false # this might break things
   enmp_index: 215
   hp: 100
@@ -1636,9 +1635,9 @@ Saix (Data):
       - 0
 Xaldin (Data):
   data: true
-  enabled: false
+  enabled: true
   variationof: Xaldin
-  replace_allowed: false
+  replace_allowed: true
   enmp_index: 222
   hp: 100
   isnightmare: true
@@ -1660,7 +1659,7 @@ Xemnas (Data):
   data: true
   aimod: true
   can_be_enemy: true
-  enabled: false
+  enabled: true
   variationof: Xemnas
   replace_allowed: false
   enmp_index: 215
@@ -1682,7 +1681,7 @@ Xemnas (Data):
       - 0
       - 0
 Xigbar (Data):
-  enabled: false
+  enabled: true
   data: true
   variationof: Xigbar
   replace_allowed: false
@@ -2702,7 +2701,7 @@ Larxene:
       - 0
     Larxene (Data):
       data: true
-      enabled: false
+      enabled: true
       msn_replace_allowed: false
       msn: HB33_FM_LAR_RE
       program: 148
@@ -2973,7 +2972,7 @@ Marluxia:
       - 0
       - 0
     Marluxia (Data):
-      enabled: false
+      enabled: true
       isnightmare: true
       msn_replace_allowed: false
       msn: HB38_FM_MAR_RE
@@ -3437,7 +3436,7 @@ Roxas:
       - 0
     Roxas (Data):
       data: true
-      enabled: false
+      enabled: true
       isnightmare: true
       msn_replace_allowed: false
       msn: EH21_MS101_RE
@@ -3606,6 +3605,7 @@ Seifer:
       - 5
       - 0
 Sephiroth:
+  data: true
   can_be_enemy: true
   enabled: true
   enmp_index: 130
@@ -3996,7 +3996,7 @@ Surveillance Robot:
 Terra:
   can_be_enemy: true
   data: true
-  enabled: false
+  enabled: true
   replace_allowed: false
   enmp_index: 220
   hp: 100
