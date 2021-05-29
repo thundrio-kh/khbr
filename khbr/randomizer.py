@@ -558,9 +558,10 @@ class KingdomHearts2:
                                         if not new_boss_object["msn"]:
                                             if new_boss_object["msn_list"]:
                                                 continue
-                                        msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"]
+                                        # TEMP FIX THIS WONT ALWAYS WORK PROPER THING TO DO IS DUPLICATE MSNS TO MAKE _RE WORK TODO
+                                        msn_mapping[old_boss_object["msn"].replace("_RE", "")] = new_boss_object["msn"].replace("_RE", "")
                                     elif old_boss_object["msn_source_as"]:
-                                        msn_mapping[old_boss_object["msn"]] = old_boss_object["msn_source_as"]
+                                        msn_mapping[old_boss_object["msn"].replace("_RE", "")] = old_boss_object["msn_source_as"].replace("_RE", "")
                                     if scale_boss:
                                         if new_boss not in set_scaling:
                                             set_scaling[new_boss_object["name"]] = old_boss_object["name"] # So just the first instance of the boss will be used, which isn't great in every scenario TODO

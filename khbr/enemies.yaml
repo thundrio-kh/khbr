@@ -1513,7 +1513,7 @@ Axel (Data):
       - 0
 Demyx (Data):
   data: true
-  enabled: false
+  enabled: true
   variationof: Demyx
   replace_allowed: true
   enmp_index: 216
@@ -1522,7 +1522,6 @@ Demyx (Data):
   limiter: 0
   model: B_EX120_HB_LV99
   msn: HB04_MS403_RE # TODO DUPLICATE THE MSN
-  msn_replace_allowed: false
   program: 114
   size: 4.07
   room_size: 10.62
@@ -1568,14 +1567,13 @@ Final Xemnas (Data):
 Luxord (Data):
   data: true
   variationof: Luxord
-  enabled: false
+  enabled: true
   enmp_index: 219
   hp: 100
   level: 99
   limiter: 0
   model: B_EX150_LV99
   msn: EH14_MS103_RE # TODO DUPE MSN
-  msn_replace_allowed: false
   program: 101
   size: 4.64
   room_size: 11.89
@@ -1613,7 +1611,7 @@ Saix (Data):
   data: true
   can_be_enemy: true
   variationof: Saix
-  enabled: false
+  enabled: true
   enmp_index: 228
   hp: 100
   isnightmare: true
@@ -1621,7 +1619,6 @@ Saix (Data):
   limiter: 0
   model: B_EX160_LV99
   msn: EH15_MS104_RE # TODO DUPE MSN
-  msn_replace_allowed: false
   program: 102
   size: 4.55
   room_size: 10.30
@@ -1669,7 +1666,6 @@ Xemnas (Data):
   limiter: 0
   model: B_EX170_LV99
   msn: EH19_MS105_RE
-  msn_replace_allowed: false
   obj_id: 2505
   size: 3.7
   room_size: 6.16
@@ -1692,7 +1688,6 @@ Xigbar (Data):
   limiter: 0
   model: B_EX140_LV99
   msn: EH10_MS102_RE
-  msn_replace_allowed: false
   obj_id: 2501
   size: 3.19
   program: 100
@@ -2702,7 +2697,6 @@ Larxene:
     Larxene (Data):
       data: true
       enabled: true
-      msn_replace_allowed: false
       msn: HB33_FM_LAR_RE
       program: 148
       vars:
@@ -2778,9 +2772,8 @@ Lexaeus:
       - 0
     Lexaeus (Data):
       data: true
-      enabled: false
+      enabled: true
       isnightmare: true
-      msn_replace_allowed: false
       msn: HB33_FM_LEX_RE
       program: 147
       vars:
@@ -2974,7 +2967,6 @@ Marluxia:
     Marluxia (Data):
       enabled: true
       isnightmare: true
-      msn_replace_allowed: false
       msn: HB38_FM_MAR_RE
       program: 150
       vars:
@@ -3438,7 +3430,6 @@ Roxas:
       data: true
       enabled: true
       isnightmare: true
-      msn_replace_allowed: false
       msn: EH21_MS101_RE
       program: 99
       vars:
@@ -4220,9 +4211,8 @@ Vexen:
   variations:
     Vexen (Data):
       data: true
-      enabled: false
+      enabled: true
       program: 146
-      msn_replace_allowed: false
       msn: HB32_FM_VEX_RE
       vars:
       - 1
@@ -4495,10 +4485,9 @@ Zexion:
       - 0
     Zexion (Data):
       data: true
-      enabled: false
+      enabled: true
       program: 152
       msn: HB34_FM_ZEX_RE
-      msn_replace_allowed: false
       vars:
       - 0
       - 1

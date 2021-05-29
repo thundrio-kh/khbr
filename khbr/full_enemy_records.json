@@ -121,8 +121,8 @@
         "parent": "Aerial Knocker",
         "variationof": null,
         "children": [
-            "Aerial Knocker",
-            "Aeriel Champ"
+            "Aeriel Champ",
+            "Aerial Knocker"
         ],
         "hp": 100,
         "limiter": 1,
@@ -499,9 +499,9 @@
         "parent": "Bookmaster",
         "variationof": null,
         "children": [
-            "Bookmaster",
+            "Bookmaster (TR)",
             "Runemaster",
-            "Bookmaster (TR)"
+            "Bookmaster"
         ],
         "hp": 100,
         "limiter": 1,
@@ -878,8 +878,8 @@
         "parent": "Creeper Plant",
         "variationof": null,
         "children": [
-            "Creeper Plant",
-            "Creeper Plant (NM)"
+            "Creeper Plant (NM)",
+            "Creeper Plant"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1020,10 +1020,10 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
-            "Emerald Blues NM",
-            "Emerald Blues (TR)",
             "Spring Metal",
-            "Emerald Blues"
+            "Emerald Blues NM",
+            "Emerald Blues",
+            "Emerald Blues (TR)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2206,9 +2206,9 @@
         "parent": "Hot Rod",
         "variationof": null,
         "children": [
-            "Mad Ride",
+            "Hot Rod WI",
             "Hot Rod",
-            "Hot Rod WI"
+            "Mad Ride"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2305,8 +2305,8 @@
         "parent": "Neoshadow",
         "variationof": null,
         "children": [
-            "Neoshadow",
-            "Neoshadow (NM)"
+            "Neoshadow (NM)",
+            "Neoshadow"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2918,8 +2918,8 @@
         "parent": "Shaman",
         "variationof": null,
         "children": [
-            "Necromancer",
-            "Shaman"
+            "Shaman",
+            "Necromancer"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5763,8 +5763,8 @@
         "parent": "Axel II",
         "variationof": null,
         "children": [
-            "Axel (Data)",
-            "Axel II"
+            "Axel II",
+            "Axel (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6387,10 +6387,10 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower",
-            "Bolt Tower (RAW)",
             "Bolt Tower (MU)",
-            "Bolt Tower DC"
+            "Bolt Tower DC",
+            "Bolt Tower (RAW)",
+            "Bolt Tower"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -7528,7 +7528,7 @@
         ],
         "name": "Demyx (Data)",
         "data": true,
-        "enabled": false,
+        "enabled": true,
         "variationof": "Demyx",
         "replace_allowed": true,
         "enmp_index": 216,
@@ -7537,7 +7537,6 @@
         "limiter": 0,
         "model": "B_EX120_HB_LV99",
         "msn": "HB04_MS403_RE",
-        "msn_replace_allowed": false,
         "program": 114,
         "size": 4.07,
         "room_size": 10.62,
@@ -7547,6 +7546,7 @@
             "Demyx (Data)"
         ],
         "replace_as": null,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "category": "",
@@ -7684,14 +7684,13 @@
         "name": "Luxord (Data)",
         "data": true,
         "variationof": "Luxord",
-        "enabled": false,
+        "enabled": true,
         "enmp_index": 219,
         "hp": 100,
         "level": 99,
         "limiter": 0,
         "model": "B_EX150_LV99",
         "msn": "EH14_MS103_RE",
-        "msn_replace_allowed": false,
         "program": 101,
         "size": 4.64,
         "room_size": 11.89,
@@ -7726,6 +7725,7 @@
         ],
         "replace_as": null,
         "replace_allowed": true,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "category": "",
@@ -7752,7 +7752,7 @@
         "data": true,
         "can_be_enemy": true,
         "variationof": "Saix",
-        "enabled": false,
+        "enabled": true,
         "enmp_index": 228,
         "hp": 100,
         "isnightmare": true,
@@ -7760,7 +7760,6 @@
         "limiter": 0,
         "model": "B_EX160_LV99",
         "msn": "EH15_MS104_RE",
-        "msn_replace_allowed": false,
         "program": 102,
         "size": 4.55,
         "room_size": 10.3,
@@ -7772,6 +7771,7 @@
         ],
         "replace_as": null,
         "replace_allowed": true,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "category": "",
@@ -7852,7 +7852,6 @@
         "limiter": 0,
         "model": "B_EX170_LV99",
         "msn": "EH19_MS105_RE",
-        "msn_replace_allowed": false,
         "obj_id": 2505,
         "size": 3.7,
         "room_size": 6.16,
@@ -7862,6 +7861,7 @@
             "Xemnas (Data)"
         ],
         "replace_as": null,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "category": "",
@@ -7895,7 +7895,6 @@
         "limiter": 0,
         "model": "B_EX140_LV99",
         "msn": "EH10_MS102_RE",
-        "msn_replace_allowed": false,
         "obj_id": 2501,
         "size": 3.19,
         "program": 100,
@@ -7906,6 +7905,7 @@
             "Xigbar (Data)"
         ],
         "replace_as": null,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "category": "",
@@ -7960,8 +7960,8 @@
         "parent": "Demyx",
         "variationof": null,
         "children": [
-            "Demyx",
-            "Demyx (Data)"
+            "Demyx (Data)",
+            "Demyx"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -8162,8 +8162,8 @@
         "parent": "Devastator",
         "variationof": null,
         "children": [
-            "Devastator",
-            "Reckless"
+            "Reckless",
+            "Devastator"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -8408,8 +8408,8 @@
         "parent": "Driller Mole",
         "variationof": null,
         "children": [
-            "Driller Mole NM",
-            "Driller Mole"
+            "Driller Mole",
+            "Driller Mole NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -10468,8 +10468,8 @@
         "parent": "Hook Bat",
         "variationof": null,
         "children": [
-            "Hook Bat",
-            "Beffudler"
+            "Beffudler",
+            "Hook Bat"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12296,8 +12296,8 @@
         "parent": "Lance Soldier",
         "variationof": null,
         "children": [
-            "Lance Soldier",
-            "Lance Warrior"
+            "Lance Warrior",
+            "Lance Soldier"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12391,8 +12391,8 @@
         "parent": "Large Body",
         "variationof": null,
         "children": [
-            "Large Body WI",
-            "Large Body"
+            "Large Body",
+            "Large Body WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12523,7 +12523,6 @@
     "Larxene (Data)": {
         "data": true,
         "enabled": true,
-        "msn_replace_allowed": false,
         "msn": "HB33_FM_LAR_RE",
         "program": 148,
         "vars": [
@@ -12571,6 +12570,7 @@
         ],
         "replace_as": null,
         "replace_allowed": true,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "category": "",
@@ -12912,9 +12912,8 @@
     },
     "Lexaeus (Data)": {
         "data": true,
-        "enabled": false,
+        "enabled": true,
         "isnightmare": true,
-        "msn_replace_allowed": false,
         "msn": "HB33_FM_LEX_RE",
         "program": 147,
         "vars": [
@@ -12943,6 +12942,7 @@
         ],
         "replace_as": null,
         "replace_allowed": true,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "category": "",
@@ -13620,7 +13620,6 @@
     "Marluxia (Data)": {
         "enabled": true,
         "isnightmare": true,
-        "msn_replace_allowed": false,
         "msn": "HB38_FM_MAR_RE",
         "program": 150,
         "vars": [
@@ -13646,6 +13645,7 @@
         ],
         "replace_as": null,
         "replace_allowed": true,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "data": false,
@@ -13695,8 +13695,8 @@
         "parent": "Minute Bomb",
         "variationof": null,
         "children": [
-            "Minute Bomb",
-            "Minute Bomb WI"
+            "Minute Bomb WI",
+            "Minute Bomb"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -14660,9 +14660,9 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
-            "Rapid Thruster",
+            "Rapid Thruster WI",
             "Rapid Thruster (RAW)",
-            "Rapid Thruster WI"
+            "Rapid Thruster"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -16336,7 +16336,6 @@
         "data": true,
         "enabled": true,
         "isnightmare": true,
-        "msn_replace_allowed": false,
         "msn": "EH21_MS101_RE",
         "program": 99,
         "vars": [
@@ -16384,6 +16383,7 @@
         ],
         "replace_as": null,
         "replace_allowed": true,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "category": "",
@@ -17355,9 +17355,9 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow (RAW)",
             "Shadow",
-            "Shadow WI"
+            "Shadow WI",
+            "Shadow (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18053,9 +18053,9 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
-            "Soldier NM",
+            "Soldier",
             "Soldier (WI)",
-            "Soldier"
+            "Soldier NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18534,8 +18534,8 @@
         "parent": "Surveillance Robot",
         "variationof": null,
         "children": [
-            "Surveillance Robot (TR)",
-            "Surveillance Robot"
+            "Surveillance Robot",
+            "Surveillance Robot (TR)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19263,9 +19263,8 @@
     },
     "Vexen (Data)": {
         "data": true,
-        "enabled": false,
+        "enabled": true,
         "program": 146,
-        "msn_replace_allowed": false,
         "msn": "HB32_FM_VEX_RE",
         "vars": [
             1,
@@ -19288,6 +19287,7 @@
         ],
         "replace_as": null,
         "replace_allowed": true,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "category": "",
@@ -19677,8 +19677,8 @@
         "parent": "Xaldin",
         "variationof": null,
         "children": [
-            "Xaldin",
-            "Xaldin (Data)"
+            "Xaldin (Data)",
+            "Xaldin"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19761,8 +19761,8 @@
         "parent": "Xemnas",
         "variationof": null,
         "children": [
-            "Xemnas (Data)",
-            "Xemnas"
+            "Xemnas",
+            "Xemnas (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19875,8 +19875,8 @@
         "parent": "Xigbar",
         "variationof": null,
         "children": [
-            "Xigbar (Data)",
-            "Xigbar"
+            "Xigbar",
+            "Xigbar (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20257,10 +20257,9 @@
     },
     "Zexion (Data)": {
         "data": true,
-        "enabled": false,
+        "enabled": true,
         "program": 152,
         "msn": "HB34_FM_ZEX_RE",
-        "msn_replace_allowed": false,
         "vars": [
             0,
             1
@@ -20307,6 +20306,7 @@
         ],
         "replace_as": null,
         "replace_allowed": true,
+        "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
         "category": "",
