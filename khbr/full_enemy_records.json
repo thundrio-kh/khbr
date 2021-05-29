@@ -123,8 +123,8 @@
         "parent": "Aerial Knocker",
         "variationof": null,
         "children": [
-            "Aeriel Champ",
-            "Aerial Knocker"
+            "Aerial Knocker",
+            "Aeriel Champ"
         ],
         "hp": 100,
         "limiter": 1,
@@ -267,8 +267,8 @@
         "parent": "Aeroplane",
         "variationof": null,
         "children": [
-            "Aeroplane WI",
-            "Aeroplane"
+            "Aeroplane",
+            "Aeroplane WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1041,9 +1041,9 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
+            "Emerald Blues (TR)",
             "Spring Metal",
             "Emerald Blues NM",
-            "Emerald Blues (TR)",
             "Emerald Blues"
         ],
         "hp": 100,
@@ -2152,8 +2152,8 @@
         "variationof": null,
         "children": [
             "Hammer Frame",
-            "Iron Hammer",
-            "Hammer Frame WI"
+            "Hammer Frame WI",
+            "Iron Hammer"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2251,8 +2251,8 @@
         "variationof": null,
         "children": [
             "Mad Ride",
-            "Hot Rod",
-            "Hot Rod WI"
+            "Hot Rod WI",
+            "Hot Rod"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2351,8 +2351,8 @@
         "parent": "Neoshadow",
         "variationof": null,
         "children": [
-            "Neoshadow (NM)",
-            "Neoshadow"
+            "Neoshadow",
+            "Neoshadow (NM)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2977,8 +2977,8 @@
         "parent": "Shaman",
         "variationof": null,
         "children": [
-            "Necromancer",
-            "Shaman"
+            "Shaman",
+            "Necromancer"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3169,8 +3169,8 @@
         "parent": "Strafer",
         "variationof": null,
         "children": [
-            "Strafer RAW",
-            "Strafer"
+            "Strafer",
+            "Strafer RAW"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5515,6 +5515,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Tifa",
             "Yuffie"
@@ -5796,6 +5797,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Shan-Yu",
             "The Experiment",
             "Thresholder",
@@ -5912,6 +5914,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Shan-Yu",
             "The Experiment",
             "Thresholder",
@@ -5998,6 +6001,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -6125,6 +6129,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -6194,6 +6199,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -6415,6 +6421,7 @@
             "Prison Keeper",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -6508,9 +6515,9 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower",
             "Bolt Tower (RAW)",
             "Bolt Tower DC",
+            "Bolt Tower",
             "Bolt Tower (MU)"
         ],
         "msn_required": false,
@@ -6659,9 +6666,9 @@
         "parent": "Cannon Gun",
         "variationof": null,
         "children": [
-            "Cannon Gun",
+            "Camo Cannon",
             "Cannon Gun WI",
-            "Camo Cannon"
+            "Cannon Gun"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6947,6 +6954,7 @@
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -7615,6 +7623,7 @@
         "available": [
             "Dark Thorn",
             "Past Pete",
+            "Seifer",
             "Yuffie"
         ]
     },
@@ -8222,6 +8231,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -8567,8 +8577,8 @@
         "parent": "Driller Mole",
         "variationof": null,
         "children": [
-            "Driller Mole",
-            "Driller Mole NM"
+            "Driller Mole NM",
+            "Driller Mole"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -8804,6 +8814,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -9207,8 +9218,8 @@
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
-            "Final Xemnas",
-            "Final Xemnas (Data)"
+            "Final Xemnas (Data)",
+            "Final Xemnas"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9243,6 +9254,7 @@
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "Storm Rider",
@@ -9673,6 +9685,7 @@
             "Prison Keeper",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -9796,6 +9809,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -10046,6 +10060,7 @@
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -10184,6 +10199,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -10272,6 +10288,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -10482,6 +10499,7 @@
             "Prison Keeper",
             "Sark",
             "Scar",
+            "Seifer",
             "Shan-Yu",
             "The Experiment",
             "Thresholder",
@@ -10572,6 +10590,7 @@
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -12014,6 +12033,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -12354,6 +12374,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -12478,6 +12499,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -12517,8 +12539,8 @@
         "parent": "Lance Soldier",
         "variationof": null,
         "children": [
-            "Lance Soldier",
-            "Lance Warrior"
+            "Lance Warrior",
+            "Lance Soldier"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12614,8 +12636,8 @@
         "parent": "Large Body",
         "variationof": null,
         "children": [
-            "Large Body",
-            "Large Body WI"
+            "Large Body WI",
+            "Large Body"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12725,6 +12747,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Tifa",
             "Twilight Thorn",
@@ -12878,6 +12901,7 @@
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -13113,6 +13137,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Tifa",
             "Twilight Thorn",
@@ -13390,6 +13415,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -13555,8 +13581,8 @@
         "parent": "Luxord",
         "variationof": null,
         "children": [
-            "Luxord",
-            "Luxord (Data)"
+            "Luxord (Data)",
+            "Luxord"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -13593,6 +13619,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -13824,6 +13851,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Tifa",
             "Twilight Thorn",
@@ -14346,6 +14374,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -14415,6 +14444,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -14491,6 +14521,7 @@
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -14572,6 +14603,7 @@
             "Prison Keeper",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "The Experiment",
             "Thresholder",
@@ -14641,6 +14673,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -14720,6 +14753,7 @@
             "Pete TR",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -14896,9 +14930,9 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
+            "Rapid Thruster (RAW)",
             "Rapid Thruster",
-            "Rapid Thruster WI",
-            "Rapid Thruster (RAW)"
+            "Rapid Thruster WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -16471,6 +16505,7 @@
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -16580,6 +16615,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -16747,8 +16783,8 @@
         "parent": "Saix",
         "variationof": null,
         "children": [
-            "Saix",
-            "Saix (Data)"
+            "Saix (Data)",
+            "Saix"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -16961,6 +16997,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -17046,6 +17083,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -17069,7 +17107,10 @@
             0
         ],
         "name": "Seifer",
-        "enabled": false,
+        "objEdits": {
+            "ObjectType": "BOSS"
+        },
+        "enabled": true,
         "enmp_index": 125,
         "hp": 100,
         "level": 99,
@@ -17155,6 +17196,7 @@
     },
     "Seifer (1)": {
         "msn": "TT04_MS107",
+        "replace_as": "Seifer",
         "msn_replace_allowed": false,
         "program": 77,
         "room_size": 7.2,
@@ -17163,7 +17205,10 @@
             0
         ],
         "name": "Seifer (1)",
-        "enabled": false,
+        "objEdits": {
+            "ObjectType": "BOSS"
+        },
+        "enabled": true,
         "enmp_index": 125,
         "hp": 100,
         "level": 99,
@@ -17193,7 +17238,6 @@
             "Seifer (3)",
             "Seifer (4)"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "tags": [],
         "cups": false,
@@ -17218,6 +17262,7 @@
     },
     "Seifer (2)": {
         "msn": "TT04_MS108",
+        "replace_as": "Seifer",
         "msn_replace_allowed": true,
         "replace_allowed": false,
         "program": 78,
@@ -17227,7 +17272,10 @@
             0
         ],
         "name": "Seifer (2)",
-        "enabled": false,
+        "objEdits": {
+            "ObjectType": "BOSS"
+        },
+        "enabled": true,
         "enmp_index": 125,
         "hp": 100,
         "level": 99,
@@ -17257,7 +17305,6 @@
             "Seifer (3)",
             "Seifer (4)"
         ],
-        "replace_as": null,
         "tags": [],
         "cups": false,
         "data": false,
@@ -17280,6 +17327,7 @@
         "unchanged_file_size": false
     },
     "Seifer (3)": {
+        "replace_as": "Seifer",
         "msn": "TT04_MS500",
         "program": 181,
         "room_size": 6.1,
@@ -17288,7 +17336,10 @@
             0
         ],
         "name": "Seifer (3)",
-        "enabled": false,
+        "objEdits": {
+            "ObjectType": "BOSS"
+        },
+        "enabled": true,
         "enmp_index": 125,
         "hp": 100,
         "level": 99,
@@ -17319,7 +17370,6 @@
             "Seifer (3)",
             "Seifer (4)"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "tags": [],
         "cups": false,
@@ -17343,6 +17393,7 @@
         "unchanged_file_size": false
     },
     "Seifer (4)": {
+        "replace_as": "Seifer",
         "msn": "TT04_MS02",
         "program": 184,
         "room_size": 7.91,
@@ -17351,7 +17402,10 @@
             0
         ],
         "name": "Seifer (4)",
-        "enabled": false,
+        "objEdits": {
+            "ObjectType": "BOSS"
+        },
+        "enabled": true,
         "enmp_index": 125,
         "hp": 100,
         "level": 99,
@@ -17382,7 +17436,6 @@
             "Seifer (3)",
             "Seifer (4)"
         ],
-        "replace_as": null,
         "replace_allowed": true,
         "tags": [],
         "cups": false,
@@ -17485,6 +17538,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -17588,6 +17642,7 @@
             "Prison Keeper",
             "Sark",
             "Scar",
+            "Seifer",
             "Setzer",
             "Shan-Yu",
             "The Experiment",
@@ -17631,9 +17686,9 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow",
             "Shadow WI",
-            "Shadow (RAW)"
+            "Shadow (RAW)",
+            "Shadow"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -17808,6 +17863,7 @@
         "available": [
             "Past Pete",
             "Sark",
+            "Seifer",
             "Shadow Stalker",
             "Tifa",
             "Yuffie"
@@ -18025,6 +18081,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "Shenzie",
@@ -18150,6 +18207,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "Shock",
             "The Experiment",
             "Thresholder",
@@ -18341,8 +18399,8 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
-            "Soldier (WI)",
             "Soldier NM",
+            "Soldier (WI)",
             "Soldier"
         ],
         "msn_required": false,
@@ -18924,6 +18982,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "Storm Rider",
@@ -19005,6 +19064,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Beast",
             "The Experiment",
             "Thresholder",
@@ -19084,6 +19144,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19218,6 +19279,7 @@
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -19558,6 +19620,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Shan-Yu",
             "The Experiment",
             "Thresholder",
@@ -19683,6 +19746,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Tifa",
             "Twilight Thorn",
@@ -19768,6 +19832,7 @@
             "Pete OC II",
             "Sark",
             "Scar",
+            "Seifer",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19845,6 +19910,7 @@
             "Prison Keeper",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -20184,8 +20250,8 @@
         "parent": "Xigbar",
         "variationof": null,
         "children": [
-            "Xigbar (Data)",
-            "Xigbar"
+            "Xigbar",
+            "Xigbar (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20297,6 +20363,7 @@
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",
@@ -20556,6 +20623,7 @@
             "Saix",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
             "Shan-Yu",
             "The Experiment",

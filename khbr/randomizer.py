@@ -641,6 +641,17 @@ class KingdomHearts2:
         else:
             raise Exception("one of outzip or outdir must be defined")
         assets = []
+        if randomization.get("object_map", ""):
+            object_map = randomization.get("object_map", "")
+            new_object_map = {}
+            with open(os.path.join(os.path.dirname(__file__), "data", "objVanilla.yml")) as f:
+                obj_data = yaml.load(f)
+            for oid in object_map:
+                for k in object_map[oid]:
+                    obj_data[oid][k] = object_map[oid][k]
+                new_object_map[oid] = obj_data[oid]
+            asset = self.writeObj(new_object_map, outdir, _writeMethod)
+            assets.append(asset)
         if randomization.get("scale_map", ""):
             scale_map = randomization.get("scale_map", "")
             with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
@@ -660,7 +671,8 @@ class KingdomHearts2:
                 new_enmp_data = enmp_data_mod[new_enmp_index]
                 new_enmp_data["health"] = [1 for _ in original_enmp_data["health"]]
                 new_enmp_data["level"] = 0 # All bosses are level 0 to take the worlds battle level EXCEPT for datas/terra, which are 99
-            self.writeEnmp(enmp_data_mod, outdir, _writeMethod)
+            asset = self.writeEnmp(enmp_data_mod, outdir, _writeMethod)
+            assets.append(asset)
         if randomization.get("spawns", ""):
             self.set_spawns()
             final_fights_spoilers = []
@@ -870,13 +882,28 @@ class KingdomHearts2:
             "source": [
                 {
                     "name": "enmp",
-                    "type": "list",
+                    "type": "List",
                     "method": "copy",
                     "source": [
                         {
                             "name": fn
                         }
                     ]
+                }
+            ]
+        }
+
+    def writeObj(self, obj, outdir, writeMethod):
+        outfn = os.path.join(outdir, "files", "root", "00objentry.bin")
+        fn = os.path.join("files", "root", "00objentry.bin")
+        writeMethod(outfn, fn, yaml.dump(obj))
+        return {
+            "name": "00objentry.bin",
+            "method": "listpatch",
+            "source": [
+                {
+                    "name": fn,
+                    "type": "objentry"
                 }
             ]
         }
