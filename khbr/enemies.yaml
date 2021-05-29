@@ -3536,7 +3536,7 @@ Scar:
       - 0
       - 0
 Seifer:
-  objEdits:
+  obj_edits:
     ObjectType: BOSS
   enabled: true # Uses an objentry edit to be treated as an enemy
   enmp_index: 125

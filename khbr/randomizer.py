@@ -222,7 +222,8 @@ class KingdomHearts2:
             "msn_list": [],
             "program": None,
             "roomsizemultiplier": 1,
-            "unchanged_file_size": False
+            "unchanged_file_size": False,
+            "obj_edits": {}
         }
         with open(os.path.join(os.path.dirname(__file__), "enemies.yaml")) as f:
             bosses_f = yaml.load(f, Loader=yaml.FullLoader)
@@ -464,6 +465,7 @@ class KingdomHearts2:
             spawn_limiters = {}
             msn_mapping = {}
             set_scaling = {}
+            object_map = {}
             ai_mods = {}
             self.set_spawns()
             for w in self.spawns:
@@ -529,9 +531,12 @@ class KingdomHearts2:
                                     old_boss_parent = self.enemy_records[old_boss_object["parent"]]
                                     if old_boss_object["name"] in ["Final Xemnas (Clone)", "Final Xemnas (Clone) (Data)"]:
                                         continue # He gets removed later by subtracts, so don't replace
-                                    if not old_boss_object["replace_allowed"]:
+                                    if not old_boss_object["replace_allowed"] and old_boss_object["name"] != "Seifer (2)":
                                         continue
-                                    if selected_boss:
+                                    # TODO SEIFER Can't be replaced here normally because it wants an enemy, so just put shadow roxas here
+                                    if  old_boss_object["name"] == "Seifer (2)":
+                                        new_boss = "Shadow Roxas"
+                                    elif selected_boss:
                                         new_boss = selected_boss
                                     elif bossmapping:
                                         if ent["name"] not in bossmapping:
@@ -547,6 +552,8 @@ class KingdomHearts2:
                                         new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
                                     changesmade = True
                                     _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
+                                    if new_boss == "Shadow Roxas":
+                                        continue
                                     for obj in new_boss_object["adds"]:
                                         _add_spawn(newspawns, _get_new_ent("new", obj))
                                     for obj in old_boss_object["subtracts"]+old_boss_object["adds"]:
@@ -568,6 +575,8 @@ class KingdomHearts2:
                                     if scale_boss:
                                         if new_boss not in set_scaling:
                                             set_scaling[new_boss_object["name"]] = old_boss_object["name"] # So just the first instance of the boss will be used, which isn't great in every scenario TODO
+                                    if new_boss_object["obj_edits"]:
+                                        object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
                                     if "aimod" in new_boss_object and new_boss_object["aimod"]:
                                         # In some cases it might be useful to know who is being replaced,
                                         ## IE the height Axel spawns the fire floor might be different on a per room basis
@@ -616,7 +625,7 @@ class KingdomHearts2:
             if diagnostics:
                 end_time = time.time()
                 print("Randomization Complete: {}s".format(end_time-start_time))
-            rand =  {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
+            rand =  {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "object_map": object_map, "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
             if seed:
                 rand["seed"] = seed
             return rand
@@ -669,7 +678,7 @@ class KingdomHearts2:
                     continue
                 original_enmp_data = enmp_data_vanilla[original_enmp_index]
                 new_enmp_data = enmp_data_mod[new_enmp_index]
-                new_enmp_data["health"] = [1 for _ in original_enmp_data["health"]]
+                new_enmp_data["health"] = original_enmp_data["health"]
                 new_enmp_data["level"] = 0 # All bosses are level 0 to take the worlds battle level EXCEPT for datas/terra, which are 99
             asset = self.writeEnmp(enmp_data_mod, outdir, _writeMethod)
             assets.append(asset)
@@ -1158,7 +1167,7 @@ if __name__ == '__main__':
     mode = sys.argv[1]
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\"}" randomization_only
     # run randomizer.py devgenerate "{\"boss\": \"Wild\"}"
-    # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Sephiroth\"}"
+    # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Seifer\"}"
     options = sys.argv[2]
     if len(sys.argv) > 3:
         seed = sys.argv[3]
