@@ -44,7 +44,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bees TT PO": {
         "vars": [
@@ -91,7 +92,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Aerial Knocker": {
         "vars": [
@@ -140,7 +142,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Aerial Knocker (1 0)": {
         "vars": [
@@ -186,7 +189,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Aeriel Champ": {
         "vars": [
@@ -231,7 +235,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Aeroplane": {
         "vars": [
@@ -262,8 +267,8 @@
         "parent": "Aeroplane",
         "variationof": null,
         "children": [
-            "Aeroplane",
-            "Aeroplane WI"
+            "Aeroplane WI",
+            "Aeroplane"
         ],
         "hp": 100,
         "limiter": 1,
@@ -281,7 +286,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Armored Knight (NM)": {
         "vars": [
@@ -326,7 +332,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Armored Knight (1K Battle, Disappears)": {
         "vars": [
@@ -373,7 +380,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bolt Tower (MU)": {
         "vars": [
@@ -420,7 +428,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bolt Tower (RAW)": {
         "vars": [
@@ -467,7 +476,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bookmaster": {
         "vars": [
@@ -499,8 +509,8 @@
         "parent": "Bookmaster",
         "variationof": null,
         "children": [
-            "Bookmaster (TR)",
             "Runemaster",
+            "Bookmaster (TR)",
             "Bookmaster"
         ],
         "hp": 100,
@@ -519,7 +529,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bookmaster (TR)": {
         "vars": [
@@ -567,7 +578,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bulky Vendor (Disappears)": {
         "vars": [
@@ -613,7 +625,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bulky Vendor": {
         "vars": [
@@ -661,7 +674,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bulky Vendor (NM) (Disappears)": {
         "vars": [
@@ -707,7 +721,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bulky Vendor (NM)": {
         "vars": [
@@ -755,7 +770,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Camo Cannon": {
         "vars": [
@@ -802,7 +818,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Cannon Gun WI": {
         "vars": [
@@ -849,7 +866,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Creeper Plant": {
         "vars": [
@@ -878,8 +896,8 @@
         "parent": "Creeper Plant",
         "variationof": null,
         "children": [
-            "Creeper Plant (NM)",
-            "Creeper Plant"
+            "Creeper Plant",
+            "Creeper Plant (NM)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -897,7 +915,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Creeper Plant (NM)": {
         "vars": [
@@ -942,7 +961,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Demyx's water form (EH)": {
         "vars": [
@@ -989,7 +1009,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Emerald Blues": {
         "vars": [
@@ -1022,8 +1043,8 @@
         "children": [
             "Spring Metal",
             "Emerald Blues NM",
-            "Emerald Blues",
-            "Emerald Blues (TR)"
+            "Emerald Blues (TR)",
+            "Emerald Blues"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1041,7 +1062,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Emerald Blues (TR)": {
         "vars": [
@@ -1088,7 +1110,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller (AL)": {
         "vars": [
@@ -1145,7 +1168,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller (AL) (14 20)": {
         "vars": [
@@ -1200,7 +1224,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller (AL) (13 0)": {
         "vars": [
@@ -1255,7 +1280,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller (AL) (10 32)": {
         "vars": [
@@ -1310,7 +1336,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller (AL) (13 32)": {
         "vars": [
@@ -1365,7 +1392,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller (AL) (1 30)": {
         "vars": [
@@ -1420,7 +1448,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller (AL) (6 30)": {
         "vars": [
@@ -1475,7 +1504,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller (AL) (7 0)": {
         "vars": [
@@ -1530,7 +1560,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller (AL) (10 0)": {
         "vars": [
@@ -1585,7 +1616,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gargoyle Knight (30 0)": {
         "vars": [
@@ -1634,7 +1666,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gargoyle Knight (32 0)": {
         "vars": [
@@ -1683,7 +1716,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gargoyle Knight (34 0)": {
         "vars": [
@@ -1732,7 +1766,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gargoyle Knight (36 0)": {
         "vars": [
@@ -1781,7 +1816,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gargoyle Knight": {
         "vars": [
@@ -1832,7 +1868,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gargoyle Warrior (40 0)": {
         "vars": [
@@ -1881,7 +1918,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gargoyle Warrior (42 0)": {
         "vars": [
@@ -1930,7 +1968,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gargoyle Warrior (44 0)": {
         "vars": [
@@ -1979,7 +2018,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gargoyle Warrior (46 0)": {
         "vars": [
@@ -2028,7 +2068,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gargoyle Warrior": {
         "vars": [
@@ -2079,7 +2120,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hammer Frame": {
         "vars": [
@@ -2110,8 +2152,8 @@
         "variationof": null,
         "children": [
             "Hammer Frame",
-            "Hammer Frame WI",
-            "Iron Hammer"
+            "Iron Hammer",
+            "Hammer Frame WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2129,7 +2171,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hammer Frame (99 0)": {
         "vars": [
@@ -2175,7 +2218,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hot Rod": {
         "vars": [
@@ -2206,9 +2250,9 @@
         "parent": "Hot Rod",
         "variationof": null,
         "children": [
-            "Hot Rod WI",
+            "Mad Ride",
             "Hot Rod",
-            "Mad Ride"
+            "Hot Rod WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2226,7 +2270,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Large Body WI": {
         "vars": [
@@ -2273,7 +2318,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Neoshadow": {
         "vars": [
@@ -2324,7 +2370,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Neoshadow (1 0)": {
         "vars": [
@@ -2372,7 +2419,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Neoshadow (44 0)": {
         "vars": [
@@ -2420,7 +2468,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Neoshadow (99 0)": {
         "vars": [
@@ -2468,7 +2517,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Neoshadow (NM)": {
         "vars": [
@@ -2513,7 +2563,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rabid Dog": {
         "vars": [
@@ -2560,7 +2611,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster (RAW)": {
         "vars": [
@@ -2606,7 +2658,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster (RAW) (1 0)": {
         "vars": [
@@ -2652,7 +2705,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Reckless": {
         "vars": [
@@ -2700,7 +2754,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Scar Ghost": {
         "vars": [
@@ -2747,7 +2802,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shadow (NM)": {
         "vars": [
@@ -2794,7 +2850,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shadow (RAW)": {
         "vars": [
@@ -2840,7 +2897,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shadow (RAW) (99 0)": {
         "vars": [
@@ -2886,7 +2944,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shaman": {
         "vars": [
@@ -2918,8 +2977,8 @@
         "parent": "Shaman",
         "variationof": null,
         "children": [
-            "Shaman",
-            "Necromancer"
+            "Necromancer",
+            "Shaman"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2937,7 +2996,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shaman (1 0)": {
         "vars": [
@@ -2985,7 +3045,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Soldier (TR)": {
         "vars": [
@@ -3032,7 +3093,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Soldier (WI)": {
         "vars": [
@@ -3077,7 +3139,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Strafer": {
         "vars": [
@@ -3125,7 +3188,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Surveillance Robot (1K Battle) (Disappears)": {
         "vars": [
@@ -3174,7 +3238,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Surveillance Robot (TR)": {
         "vars": [
@@ -3222,7 +3287,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Surveillance Robot (TR) (2 0)": {
         "vars": [
@@ -3270,7 +3336,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Toy Soldier": {
         "vars": [
@@ -3303,8 +3370,8 @@
         "parent": "Toy Soldier",
         "variationof": null,
         "children": [
-            "Toy Soldier NM",
-            "Toy Soldier"
+            "Toy Soldier",
+            "Toy Soldier NM"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3322,7 +3389,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Toy Soldier (2 0)": {
         "vars": [
@@ -3371,7 +3439,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Trick Ghost (NM)": {
         "vars": [
@@ -3418,7 +3487,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate A": {
         "vars": [
@@ -3475,7 +3545,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate A (Jumps up)": {
         "vars": [
@@ -3530,7 +3601,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate A (Jumps Forward)": {
         "vars": [
@@ -3585,7 +3657,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate A (90 0)": {
         "vars": [
@@ -3640,7 +3713,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate A (93 0)": {
         "vars": [
@@ -3695,7 +3769,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate A (22 0)": {
         "vars": [
@@ -3750,7 +3825,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate A (24 0)": {
         "vars": [
@@ -3805,7 +3881,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate A (20 0)": {
         "vars": [
@@ -3860,7 +3937,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate A (91 0)": {
         "vars": [
@@ -3915,7 +3993,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate B": {
         "vars": [
@@ -3967,7 +4046,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate B (90 0)": {
         "vars": [
@@ -4017,7 +4097,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate B (93 0)": {
         "vars": [
@@ -4067,7 +4148,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate B (92 0)": {
         "vars": [
@@ -4117,7 +4199,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C": {
         "vars": [
@@ -4179,7 +4262,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (Jumps Down)": {
         "vars": [
@@ -4239,7 +4323,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (28 0)": {
         "vars": [
@@ -4299,7 +4384,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (91 0)": {
         "vars": [
@@ -4359,7 +4445,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (Jumps Up)": {
         "vars": [
@@ -4419,7 +4506,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (90 0)": {
         "vars": [
@@ -4479,7 +4567,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (13 0)": {
         "vars": [
@@ -4539,7 +4628,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (92 0)": {
         "vars": [
@@ -4599,7 +4689,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (93 0)": {
         "vars": [
@@ -4659,7 +4750,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (12 0)": {
         "vars": [
@@ -4719,7 +4811,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (6 0)": {
         "vars": [
@@ -4779,7 +4872,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (2 0)": {
         "vars": [
@@ -4839,7 +4933,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (8 0)": {
         "vars": [
@@ -4899,7 +4994,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Undead Pirate C (26 0)": {
         "vars": [
@@ -4959,7 +5055,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Wight Knight": {
         "vars": [
@@ -4988,8 +5085,8 @@
         "parent": "Wight Knight",
         "variationof": null,
         "children": [
-            "Wight Knight",
-            "Wight Knight NM"
+            "Wight Knight NM",
+            "Wight Knight"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5007,7 +5104,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Vivi (clones)": {
         "vars": [
@@ -5054,7 +5152,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shadow Roxas": {
         "vars": [
@@ -5101,7 +5200,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Aerial Viking": {
         "vars": [
@@ -5132,8 +5232,8 @@
         "parent": "Aerial Viking",
         "variationof": null,
         "children": [
-            "Aerial Viking",
-            "Air Pirate"
+            "Air Pirate",
+            "Aerial Viking"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -5149,7 +5249,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Aeroplane WI": {
         "vars": [
@@ -5196,7 +5297,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Air Pirate": {
         "vars": [
@@ -5242,7 +5344,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Air Pirate (1 0)": {
         "vars": [
@@ -5288,7 +5391,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Armor Xemnas II": {
         "msn": "EH23_MS112",
@@ -5334,7 +5438,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Armor Xemnas I": {
         "msn": "EH24_MS110",
@@ -5400,6 +5505,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Cloud",
@@ -5444,8 +5550,8 @@
         "parent": "Armored Knight",
         "variationof": null,
         "children": [
-            "Armored Knight (NM)",
-            "Armored Knight"
+            "Armored Knight",
+            "Armored Knight (NM)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -5461,7 +5567,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Armored Knight (90 0)": {
         "vars": [
@@ -5507,7 +5614,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Assassin": {
         "vars": [
@@ -5554,7 +5662,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Assault Rider": {
         "vars": [
@@ -5603,7 +5712,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Axel I": {
         "vars": [
@@ -5664,6 +5774,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -5763,8 +5874,8 @@
         "parent": "Axel II",
         "variationof": null,
         "children": [
-            "Axel II",
-            "Axel (Data)"
+            "Axel (Data)",
+            "Axel II"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -5777,6 +5888,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -5859,6 +5971,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -5944,7 +6057,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Barbossa": {
         "vars": [
@@ -5996,6 +6110,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Axel I",
             "Barbossa",
@@ -6063,6 +6178,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Axel I",
             "Barrel",
@@ -6131,7 +6247,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Beffudler": {
         "vars": [
@@ -6176,7 +6293,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Berserker": {
         "vars": [
@@ -6225,7 +6343,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Blizzard Lord": {
         "msn": "AL03_MS103",
@@ -6277,6 +6396,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -6353,7 +6473,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bolt Tower": {
         "vars": [
@@ -6387,10 +6508,10 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower (MU)",
-            "Bolt Tower DC",
+            "Bolt Tower",
             "Bolt Tower (RAW)",
-            "Bolt Tower"
+            "Bolt Tower DC",
+            "Bolt Tower (MU)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6406,7 +6527,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bolt Tower (1)": {
         "vars": [
@@ -6454,7 +6576,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bolt Tower DC": {
         "vars": [
@@ -6501,7 +6624,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Cannon Gun": {
         "vars": [
@@ -6535,9 +6659,9 @@
         "parent": "Cannon Gun",
         "variationof": null,
         "children": [
-            "Camo Cannon",
+            "Cannon Gun",
             "Cannon Gun WI",
-            "Cannon Gun"
+            "Camo Cannon"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6553,7 +6677,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Cannon Gun (1)": {
         "vars": [
@@ -6601,7 +6726,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Cerberus": {
         "msn": "HE07_MS103",
@@ -6653,6 +6779,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -6747,7 +6874,8 @@
         "adds": [],
         "subtracts": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Cloud": {
         "program": 196,
@@ -6798,6 +6926,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -6877,7 +7006,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Cloud (2)": {
         "program": 196,
@@ -6925,7 +7055,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Creeper": {
         "vars": [
@@ -6972,7 +7103,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Crescendo": {
         "vars": [
@@ -7019,7 +7151,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Crimson Jazz": {
         "vars": [
@@ -7071,7 +7204,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Crimson Jazz (1 0)": {
         "vars": [
@@ -7121,7 +7255,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Crimson Jazz (Zipliner)": {
         "vars": [
@@ -7171,7 +7306,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Crimson Jazz AL (8 1)": {
         "vars": [
@@ -7221,7 +7357,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Crimson Jazz AL (12 0)": {
         "vars": [
@@ -7271,7 +7408,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Crimson Jazz AL": {
         "vars": [
@@ -7323,7 +7461,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Dancer": {
         "vars": [
@@ -7371,7 +7510,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Dancer (99 0)": {
         "vars": [
@@ -7417,7 +7557,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Dark Thorn": {
         "vars": [
@@ -7470,6 +7611,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Dark Thorn",
             "Past Pete",
@@ -7519,7 +7661,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Demyx (Data)": {
         "vars": [
@@ -7564,7 +7707,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Final Xemnas (Clone) (Data)": {
         "replace_allowed": false,
@@ -7619,7 +7763,8 @@
         "whitelist": [],
         "adds": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Final Xemnas (Data)": {
         "vars": [
@@ -7674,7 +7819,8 @@
         "whitelist": [],
         "adds": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Luxord (Data)": {
         "vars": [
@@ -7741,7 +7887,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Saix (Data)": {
         "vars": [
@@ -7786,7 +7933,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Xaldin (Data)": {
         "vars": [
@@ -7831,7 +7979,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Xemnas (Data)": {
         "vars": [
@@ -7876,7 +8025,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Xigbar (Data)": {
         "vars": [
@@ -7921,7 +8071,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Demyx": {
         "vars": [
@@ -7960,8 +8111,8 @@
         "parent": "Demyx",
         "variationof": null,
         "children": [
-            "Demyx (Data)",
-            "Demyx"
+            "Demyx",
+            "Demyx (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -7972,6 +8123,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -8047,6 +8199,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -8126,7 +8279,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Devastator": {
         "vars": [
@@ -8179,7 +8333,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Devastator (Ranged Start)": {
         "vars": [
@@ -8229,7 +8384,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Devastator (Ranged)": {
         "vars": [
@@ -8279,7 +8435,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Dragoon": {
         "vars": [
@@ -8329,7 +8486,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Dragoon (99 0)": {
         "vars": [
@@ -8377,7 +8535,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Driller Mole": {
         "vars": [
@@ -8425,7 +8584,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Driller Mole NM": {
         "vars": [
@@ -8470,7 +8630,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Dusk": {
         "vars": [
@@ -8518,7 +8679,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Dusk (99 0)": {
         "vars": [
@@ -8564,7 +8726,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Ed": {
         "program": 51,
@@ -8614,6 +8777,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -8700,7 +8864,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Emerald Blues NM": {
         "vars": [
@@ -8745,7 +8910,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fat Bandit": {
         "vars": [
@@ -8797,7 +8963,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fat Bandit (1 0)": {
         "vars": [
@@ -8847,7 +9014,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fat Bandit (Passive)": {
         "vars": [
@@ -8897,7 +9065,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fiery Globe": {
         "vars": [
@@ -8928,8 +9097,8 @@
         "parent": "Fiery Globe",
         "variationof": null,
         "children": [
-            "Fiery Globe Treasure Room",
-            "Fiery Globe"
+            "Fiery Globe",
+            "Fiery Globe Treasure Room"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -8945,7 +9114,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fiery Globe Treasure Room": {
         "vars": [
@@ -8990,7 +9160,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Final Xemnas": {
         "enabled": false,
@@ -9036,8 +9207,8 @@
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
-            "Final Xemnas (Data)",
-            "Final Xemnas"
+            "Final Xemnas",
+            "Final Xemnas (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9049,6 +9220,7 @@
         "adds": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -9138,7 +9310,8 @@
         "whitelist": [],
         "adds": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller": {
         "vars": [
@@ -9186,7 +9359,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Fortuneteller (Zipliner)": {
         "vars": [
@@ -9232,7 +9406,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gambler": {
         "vars": [
@@ -9282,7 +9457,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gambler (5 0)": {
         "vars": [
@@ -9330,7 +9506,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gambler (90 0)": {
         "vars": [
@@ -9378,7 +9555,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Gambler (99 0)": {
         "vars": [
@@ -9426,7 +9604,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Giant Sark": {
         "vars": [
@@ -9474,6 +9653,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -9553,7 +9733,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Grim Reaper I": {
         "can_be_enemy": true,
@@ -9604,6 +9785,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Cloud",
             "Grim Reaper I",
@@ -9674,7 +9856,8 @@
         "whitelist": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Groundshaker": {
         "vars": [
@@ -9726,6 +9909,7 @@
         "adds": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -9840,6 +10024,7 @@
         "subtracts": [],
         "program": null,
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -9920,6 +10105,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Hades Escape",
             "Past Pete"
@@ -9971,6 +10157,7 @@
         "msn_list": [],
         "program": null,
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -10059,6 +10246,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -10156,7 +10344,8 @@
         "adds": [],
         "subtracts": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hammer Frame WI": {
         "vars": [
@@ -10201,7 +10390,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hayner": {
         "enabled": false,
@@ -10273,6 +10463,7 @@
         "subtracts": [],
         "program": null,
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -10359,6 +10550,7 @@
         "subtracts": [],
         "program": null,
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -10437,7 +10629,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat": {
         "vars": [
@@ -10486,7 +10679,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (3 0)": {
         "vars": [
@@ -10551,7 +10745,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (9 0)": {
         "vars": [
@@ -10616,7 +10811,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL": {
         "vars": [
@@ -10683,7 +10879,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (15 30)": {
         "vars": [
@@ -10748,7 +10945,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (1 31)": {
         "vars": [
@@ -10813,7 +11011,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (3 30)": {
         "vars": [
@@ -10878,7 +11077,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (8 32)": {
         "vars": [
@@ -10943,7 +11143,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (13 31)": {
         "vars": [
@@ -11008,7 +11209,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (2 0)": {
         "vars": [
@@ -11073,7 +11275,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (5 0)": {
         "vars": [
@@ -11138,7 +11341,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (6 0)": {
         "vars": [
@@ -11203,7 +11407,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (11 0)": {
         "vars": [
@@ -11268,7 +11473,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (1 0)": {
         "vars": [
@@ -11333,7 +11539,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (10 0)": {
         "vars": [
@@ -11398,7 +11605,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (14 0)": {
         "vars": [
@@ -11463,7 +11671,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (12 0)": {
         "vars": [
@@ -11528,7 +11737,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (13 0)": {
         "vars": [
@@ -11593,7 +11803,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (7 0)": {
         "vars": [
@@ -11658,7 +11869,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hook Bat AL (3 20)": {
         "vars": [
@@ -11723,7 +11935,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hostile Program": {
         "vars": [
@@ -11776,6 +11989,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -11859,7 +12073,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Hydra": {
         "vars": [
@@ -11935,6 +12150,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -11999,8 +12215,8 @@
         "parent": "Icy Cube",
         "variationof": null,
         "children": [
-            "Icy Cube",
-            "Icy Cube Treasure Room"
+            "Icy Cube Treasure Room",
+            "Icy Cube"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12016,7 +12232,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Icy Cube Treasure Room": {
         "vars": [
@@ -12061,7 +12278,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Illuminator": {
         "vars": [
@@ -12109,6 +12327,7 @@
         "msn_list": [],
         "program": null,
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -12193,7 +12412,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Jafar": {
         "vars": [
@@ -12241,6 +12461,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Axel I",
             "Axel II",
@@ -12296,8 +12517,8 @@
         "parent": "Lance Soldier",
         "variationof": null,
         "children": [
-            "Lance Warrior",
-            "Lance Soldier"
+            "Lance Soldier",
+            "Lance Warrior"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12313,7 +12534,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Lance Warrior": {
         "vars": [
@@ -12358,7 +12580,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Large Body": {
         "vars": [
@@ -12408,7 +12631,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Larxene": {
         "vars": [
@@ -12429,6 +12653,7 @@
         "size": 5.35,
         "room_size": 8.3,
         "type": "boss",
+        "unchanged_file_size": true,
         "blacklist": [
             "Xemnas",
             "Xemnas (Data)",
@@ -12481,34 +12706,26 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "available": [
-            "Armor Xemnas I",
             "Axel I",
             "Axel II",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
-            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
-            "Hostile Program",
             "Larxene",
             "Leon",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Roxas",
             "Saix",
             "Sark",
             "Scar",
             "Sephiroth",
-            "Shan-Yu",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vexen",
@@ -12540,6 +12757,7 @@
         "size": 5.35,
         "room_size": 8.3,
         "type": "boss",
+        "unchanged_file_size": true,
         "blacklist": [
             "Xemnas",
             "Xemnas (Data)",
@@ -12639,6 +12857,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -12719,7 +12938,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Leon (2)": {
         "program": 196,
@@ -12768,7 +12988,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Leon (3)": {
         "program": 193,
@@ -12817,7 +13038,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Lexaeus": {
         "vars": [
@@ -12838,6 +13060,7 @@
         "obj_id": 2357,
         "size": 3.9,
         "type": "boss",
+        "unchanged_file_size": true,
         "blacklist": [
             "Vexen",
             "Vexen (Data)",
@@ -12871,34 +13094,26 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "available": [
-            "Armor Xemnas I",
             "Axel I",
             "Axel II",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
-            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
-            "Hostile Program",
             "Larxene",
             "Leon",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Roxas",
             "Saix",
             "Sark",
             "Scar",
             "Sephiroth",
-            "Shan-Yu",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vexen",
@@ -12931,6 +13146,7 @@
         "obj_id": 2357,
         "size": 3.9,
         "type": "boss",
+        "unchanged_file_size": true,
         "blacklist": [
             "Vexen",
             "Vexen (Data)",
@@ -13009,7 +13225,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Living Bone (Headless with Necromancer)": {
         "tags": [
@@ -13058,7 +13275,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Living Bone (Necromancer)": {
         "isnightmare": true,
@@ -13107,7 +13325,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Lock": {
         "vars": [
@@ -13155,6 +13374,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Axel I",
             "Blizzard Lord",
@@ -13224,7 +13444,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Luna Bandit (1 0)": {
         "vars": [
@@ -13270,7 +13491,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Luxord": {
         "vars": [
@@ -13345,6 +13567,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -13430,7 +13653,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Magic Phantom": {
         "vars": [
@@ -13479,7 +13703,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Magnum Loader": {
         "vars": [
@@ -13526,7 +13751,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Marluxia": {
         "vars": [
@@ -13546,6 +13772,7 @@
         "room_size": 7.96,
         "program": 145,
         "type": "boss",
+        "unchanged_file_size": true,
         "blacklist": [
             "Vexen"
         ],
@@ -13578,34 +13805,26 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "available": [
-            "Armor Xemnas I",
             "Axel I",
             "Axel II",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
-            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
-            "Hostile Program",
             "Larxene",
             "Leon",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Roxas",
             "Saix",
             "Sark",
             "Scar",
             "Sephiroth",
-            "Shan-Yu",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vexen",
@@ -13636,6 +13855,7 @@
         "size": 4.57,
         "room_size": 7.96,
         "type": "boss",
+        "unchanged_file_size": true,
         "blacklist": [
             "Vexen"
         ],
@@ -13695,8 +13915,8 @@
         "parent": "Minute Bomb",
         "variationof": null,
         "children": [
-            "Minute Bomb WI",
-            "Minute Bomb"
+            "Minute Bomb",
+            "Minute Bomb WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -13712,7 +13932,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Minute Bomb (99 0)": {
         "vars": [
@@ -13758,7 +13979,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Minute Bomb WI": {
         "vars": [
@@ -13803,7 +14025,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Morning Star": {
         "vars": [
@@ -13853,7 +14076,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Morning Star (99 0)": {
         "vars": [
@@ -13901,7 +14125,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Necromancer": {
         "vars": [
@@ -13948,7 +14173,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Nightwalker": {
         "vars": [
@@ -13995,7 +14221,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Bomb Bell A": {
         "vars": [
@@ -14044,7 +14271,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Oogie Boogie": {
         "vars": [
@@ -14105,6 +14333,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Blizzard Lord",
             "Cloud",
@@ -14170,6 +14399,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -14240,6 +14470,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -14319,6 +14550,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -14398,6 +14630,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Blizzard Lord",
             "Cloud",
@@ -14474,6 +14707,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Blizzard Lord",
             "Cloud",
@@ -14549,6 +14783,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -14626,7 +14861,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster": {
         "vars": [
@@ -14660,9 +14896,9 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
+            "Rapid Thruster",
             "Rapid Thruster WI",
-            "Rapid Thruster (RAW)",
-            "Rapid Thruster"
+            "Rapid Thruster (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -14678,7 +14914,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster (90 0)": {
         "vars": [
@@ -14726,7 +14963,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster (1 0)": {
         "vars": [
@@ -14774,7 +15012,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (12 0)": {
         "vars": [
@@ -14840,7 +15079,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (13 0)": {
         "vars": [
@@ -14906,7 +15146,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL": {
         "vars": [
@@ -14974,7 +15215,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (9 0)": {
         "vars": [
@@ -15040,7 +15282,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (14 30)": {
         "vars": [
@@ -15106,7 +15349,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (8 30)": {
         "vars": [
@@ -15172,7 +15416,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (4 30)": {
         "vars": [
@@ -15238,7 +15483,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (12 32)": {
         "vars": [
@@ -15304,7 +15550,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (6 31)": {
         "vars": [
@@ -15370,7 +15617,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (10 31)": {
         "vars": [
@@ -15436,7 +15684,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (2 32)": {
         "vars": [
@@ -15502,7 +15751,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (2 0)": {
         "vars": [
@@ -15568,7 +15818,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (7 0)": {
         "vars": [
@@ -15634,7 +15885,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (14 0)": {
         "vars": [
@@ -15700,7 +15952,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (11 0)": {
         "vars": [
@@ -15766,7 +16019,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (5 0)": {
         "vars": [
@@ -15832,7 +16086,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (6 0)": {
         "vars": [
@@ -15898,7 +16153,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (12 17)": {
         "vars": [
@@ -15964,7 +16220,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (1 0)": {
         "vars": [
@@ -16030,7 +16287,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster AL (3 0)": {
         "vars": [
@@ -16096,7 +16354,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Rapid Thruster WI": {
         "vars": [
@@ -16141,7 +16400,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Riku": {
         "vars": [
@@ -16189,6 +16449,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -16293,6 +16554,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -16399,7 +16661,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Runemaster": {
         "vars": [
@@ -16447,7 +16710,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Saix": {
         "vars": [
@@ -16483,8 +16747,8 @@
         "parent": "Saix",
         "variationof": null,
         "children": [
-            "Saix (Data)",
-            "Saix"
+            "Saix",
+            "Saix (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -16496,6 +16760,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -16576,7 +16841,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Samurai (99 0)": {
         "vars": [
@@ -16622,7 +16888,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Sark": {
         "vars": [
@@ -16670,6 +16937,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -16752,6 +17020,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -16854,6 +17123,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -16943,7 +17213,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Seifer (2)": {
         "msn": "TT04_MS108",
@@ -17005,7 +17276,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Seifer (3)": {
         "msn": "TT04_MS500",
@@ -17067,7 +17339,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Seifer (4)": {
         "msn": "TT04_MS02",
@@ -17129,7 +17402,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Sephiroth": {
         "vars": [
@@ -17185,6 +17459,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -17295,6 +17570,7 @@
         "subtracts": [],
         "program": null,
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -17373,7 +17649,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shadow (1 0)": {
         "vars": [
@@ -17420,7 +17697,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shadow (Aggressive)": {
         "vars": [
@@ -17467,7 +17745,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shadow Stalker": {
         "vars": [
@@ -17525,6 +17804,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Past Pete",
             "Sark",
@@ -17576,7 +17856,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shan-Yu": {
         "vars": [
@@ -17635,6 +17916,7 @@
         "whitelist": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -17717,6 +17999,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -17803,7 +18086,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Shock": {
         "vars": [
@@ -17851,6 +18135,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Axel I",
             "Blizzard Lord",
@@ -17922,7 +18207,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Silver Rock (1 0)": {
         "vars": [
@@ -17970,7 +18256,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Sniper": {
         "vars": [
@@ -18020,7 +18307,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Soldier": {
         "vars": [
@@ -18053,9 +18341,9 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
-            "Soldier",
             "Soldier (WI)",
-            "Soldier NM"
+            "Soldier NM",
+            "Soldier"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18071,7 +18359,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Soldier (1 0)": {
         "vars": [
@@ -18118,7 +18407,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Soldier (99 0)": {
         "vars": [
@@ -18165,7 +18455,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Soldier NM": {
         "vars": [
@@ -18210,7 +18501,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Sorcerer": {
         "vars": [
@@ -18260,7 +18552,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Spring Metal": {
         "vars": [
@@ -18307,7 +18600,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Storm Rider": {
         "vars": [
@@ -18375,6 +18669,7 @@
         "blacklist": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -18455,7 +18750,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Strafer RAW": {
         "vars": [
@@ -18501,7 +18797,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Surveillance Robot": {
         "vars": [
@@ -18534,8 +18831,8 @@
         "parent": "Surveillance Robot",
         "variationof": null,
         "children": [
-            "Surveillance Robot",
-            "Surveillance Robot (TR)"
+            "Surveillance Robot (TR)",
+            "Surveillance Robot"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18551,7 +18848,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Terra": {
         "vars": [
@@ -18599,6 +18897,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -18693,6 +18992,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Axel I",
             "Blizzard Lord",
@@ -18769,6 +19069,7 @@
         "adds": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Axel I",
             "Blizzard Lord",
@@ -18841,6 +19142,7 @@
         "whitelist": [],
         "subtracts": [],
         "msn_list": [],
+        "unchanged_file_size": false,
         "available": [
             "Past Pete",
             "Thresholder"
@@ -18895,6 +19197,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -18974,7 +19277,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Tifa (2)": {
         "program": 196,
@@ -19022,7 +19326,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Tornado Step": {
         "vars": [
@@ -19069,7 +19374,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Toy Soldier NM": {
         "vars": [
@@ -19117,7 +19423,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Trick Ghost": {
         "vars": [
@@ -19149,8 +19456,8 @@
         "parent": "Trick Ghost",
         "variationof": null,
         "children": [
-            "Trick Ghost (NM)",
-            "Trick Ghost"
+            "Trick Ghost",
+            "Trick Ghost (NM)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19167,7 +19474,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Twilight Thorn": {
         "vars": [
@@ -19228,6 +19536,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -19281,6 +19590,7 @@
         "size": 6.22,
         "room_size": 8.97,
         "type": "boss",
+        "unchanged_file_size": true,
         "variations": [
             "Vexen (Data)",
             "Vexen"
@@ -19326,6 +19636,7 @@
         "size": 6.22,
         "room_size": 8.97,
         "type": "boss",
+        "unchanged_file_size": true,
         "variations": [
             "Vexen (Data)",
             "Vexen"
@@ -19355,32 +19666,24 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "available": [
-            "Armor Xemnas I",
             "Axel I",
             "Axel II",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
-            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
-            "Hostile Program",
             "Larxene",
             "Leon",
-            "Luxord",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Roxas",
             "Saix",
             "Sark",
             "Scar",
             "Sephiroth",
-            "Shan-Yu",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vexen",
@@ -19451,6 +19754,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Axel I",
             "Blizzard Lord",
@@ -19522,6 +19826,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -19598,7 +19903,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Wight Knight NM": {
         "vars": [
@@ -19643,7 +19949,8 @@
         "subtracts": [],
         "msn_list": [],
         "program": null,
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Xaldin": {
         "vars": [
@@ -19677,8 +19984,8 @@
         "parent": "Xaldin",
         "variationof": null,
         "children": [
-            "Xaldin (Data)",
-            "Xaldin"
+            "Xaldin",
+            "Xaldin (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19692,6 +19999,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -19761,8 +20069,8 @@
         "parent": "Xemnas",
         "variationof": null,
         "children": [
-            "Xemnas",
-            "Xemnas (Data)"
+            "Xemnas (Data)",
+            "Xemnas"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19774,6 +20082,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -19875,8 +20184,8 @@
         "parent": "Xigbar",
         "variationof": null,
         "children": [
-            "Xigbar",
-            "Xigbar (Data)"
+            "Xigbar (Data)",
+            "Xigbar"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19888,6 +20197,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Blizzard Lord",
@@ -19966,6 +20276,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -20046,7 +20357,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Yuffie (2)": {
         "program": 196,
@@ -20095,7 +20407,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Yuffie (3)": {
         "program": 193,
@@ -20144,7 +20457,8 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     },
     "Zexion": {
         "program": 151,
@@ -20216,6 +20530,7 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
         "available": [
             "Armor Xemnas I",
             "Axel I",
@@ -20322,6 +20637,7 @@
         "adds": [],
         "subtracts": [],
         "msn_list": [],
-        "roomsizemultiplier": 1
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false
     }
 }

@@ -221,7 +221,8 @@ class KingdomHearts2:
             "subtracts": [],
             "msn_list": [],
             "program": None,
-            "roomsizemultiplier": 1
+            "roomsizemultiplier": 1,
+            "unchanged_file_size": False
         }
         with open(os.path.join(os.path.dirname(__file__), "enemies.yaml")) as f:
             bosses_f = yaml.load(f, Loader=yaml.FullLoader)
@@ -284,6 +285,8 @@ class KingdomHearts2:
                         avail.append(dest_boss["name"])
                         continue
                     if not dest_boss["enabled"]:
+                        continue
+                    if source_boss["unchanged_file_size"] and (dest_boss["adds"] or dest_boss["subtracts"]):
                         continue
                     # TODO is this right?
                     if not dest_boss["replace_allowed"]:

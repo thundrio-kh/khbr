@@ -2666,6 +2666,7 @@ Larxene:
   size: 5.35
   room_size: 8.3
   type: boss
+  unchanged_file_size: true
   blacklist:
   - Xemnas # TELEPORTER
   - Xemnas (Data) # TELEPORTER
@@ -2761,6 +2762,7 @@ Lexaeus:
   obj_id: 2357
   size: 3.9
   type: boss
+  unchanged_file_size: true
   blacklist:
   - Vexen # player can get thrown oob
   - Vexen (Data) # player can get thrown oob
@@ -2957,6 +2959,7 @@ Marluxia:
   room_size: 7.96
   program: 145
   type: boss
+  unchanged_file_size: true
   blacklist:
   - Vexen # restore count puts you OOB
   variations:
@@ -4208,6 +4211,7 @@ Vexen:
   size: 6.22
   room_size: 8.97
   type: boss
+  unchanged_file_size: true
   variations:
     Vexen (Data):
       data: true
