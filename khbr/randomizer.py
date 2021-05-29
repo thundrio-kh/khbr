@@ -558,8 +558,8 @@ class KingdomHearts2:
                                     elif old_boss_object["msn_source_as"]:
                                         msn_mapping[old_boss_object["msn"]] = old_boss_object["msn_source_as"]
                                     if scale_boss:
-                                        if old_boss not in set_scaling:
-                                            set_scaling[old_boss] = new_boss # So just the first instance of the boss will be used, which isn't great in every scenario
+                                        if new_boss not in set_scaling:
+                                            set_scaling[new_boss_object["name"]] = old_boss_object["name"] # So just the first instance of the boss will be used, which isn't great in every scenario TODO
                                     if "aimod" in new_boss_object and new_boss_object["aimod"]:
                                         # In some cases it might be useful to know who is being replaced,
                                         ## IE the height Axel spawns the fire floor might be different on a per room basis
@@ -633,6 +633,26 @@ class KingdomHearts2:
         else:
             raise Exception("one of outzip or outdir must be defined")
         assets = []
+        if randomization.get("scale_map", ""):
+            scale_map = randomization.get("scale_map", "")
+            with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
+                enmp_data_vanilla = yaml.load(f)
+                enmp_data_mod = yaml.load(yaml.dump(enmp_data_vanilla))
+            for new_enemy in scale_map:
+                original_enemy = scale_map[new_enemy]
+                new_enmp_index = self.enemy_records[new_enemy]["enmp_index"]
+                original_enmp_index = self.enemy_records[original_enemy]["enmp_index"]
+                if not new_enmp_index:
+                    print("WARNING: Can't scale {}, no ENMP index found".format(new_enemy))
+                    continue
+                if not original_enmp_index:
+                    print("WARNING: Can't scale {}, no ENMP index found".format(original_enemy))
+                    continue
+                original_enmp_data = enmp_data_vanilla[original_enmp_index]
+                new_enmp_data = enmp_data_mod[new_enmp_index]
+                new_enmp_data["health"] = [1 for _ in original_enmp_data["health"]]
+                new_enmp_data["level"] = 0 # All bosses are level 0 to take the worlds battle level EXCEPT for datas/terra, which are 99
+            self.writeEnmp(enmp_data_mod, outdir, _writeMethod)
         if randomization.get("spawns", ""):
             self.set_spawns()
             final_fights_spoilers = []
@@ -831,6 +851,60 @@ class KingdomHearts2:
             "type": "AreaDataSpawn"
         }
 
+    def writeEnmp(self, enmp, outdir, writeMethod):
+        outfn = os.path.join(outdir, "files", "root", "enmp.list")
+        fn = os.path.join("files", "root", "enmp.list")
+        data = self.dumpEnmpData(enmp)
+        writeMethod(outfn, fn, data)
+        return {
+            "name": "00battle.bin",
+            "method": "binarc",
+            "source": [
+                {
+                    "name": "enmp",
+                    "type": "list",
+                    "method": "copy",
+                    "source": [
+                        {
+                            "name": fn
+                        }
+                    ]
+                }
+            ]
+        }
+
+    def dumpEnmpData(self, enmplist):
+        # Every enmp entry is u16
+        entrylen = 2
+        entries = [
+            "id",
+            "level",
+            "health",
+            "maxDamage",
+            "minDamage",
+            "physicalWeakness",
+            "fireWeakness",
+            "iceWeakness",
+            "thunderWeakness",
+            "darkWeakness",
+            "lightWeakness",
+            "generalWeakness",
+            "experience",
+            "prize",
+            "bonusLevel"
+        ]
+        def _toBytes(n):
+            return n.to_bytes(2, "little")
+        header = [2, 0, 0, 0, 229, 0, 0, 0] #taken from vanilla file
+        enmp_bytes = bytearray(header)
+        for enemy in enmplist:
+            for k in entries:
+                if k == "health":
+                    for healthentry in enemy[k]:
+                        enmp_bytes += _toBytes(healthentry)
+                    continue
+                enmp_bytes += _toBytes(enemy[k])
+        return bytes(enmp_bytes)
 
     def writeMSG(self, name, obj, outdir, writeMethod):
         outfn = os.path.join(outdir, "files", "msg", name+".yml")
