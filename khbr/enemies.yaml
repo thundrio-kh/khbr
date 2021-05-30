@@ -124,6 +124,7 @@ Bolt Tower (RAW):
 Bookmaster:
   enabled: true
   enmp_index: 999
+  isnightmare: true
   model: M_EX530
   obj_id: 5
   size: 0
@@ -219,6 +220,7 @@ Creeper Plant:
   enabled: true
   enmp_index: 999
   model: M_EX750
+  isnightmare: true
   obj_id: 125
   sizeTag: memoryMedium
   type: enemy
@@ -257,6 +259,7 @@ Demyx's water form (EH):
 Emerald Blues:
   enabled: true
   enmp_index: 999
+  isnightmare: true
   model: M_EX120
   obj_id: 72
   sizeTag: memorySmall
@@ -439,6 +442,7 @@ Large Body WI:
       - 0
 Neoshadow:
   enabled: true
+  isnightmare: true
   enmp_index: 999
   model: M_EX420
   obj_id: 120
@@ -470,7 +474,6 @@ Neoshadow (NM):
   obj_id: 1836
   size: 0
   type: enemy
-  isnightmare: true
   variations:
     Neoshadow (NM):
       vars:
@@ -514,7 +517,6 @@ Reckless:
   variationof: Devastator
   size: 0
   type: enemy
-  isnightmare: true
   tags:
   - large
   - ranged
@@ -658,7 +660,6 @@ Surveillance Robot (TR):
 Toy Soldier:
   enabled: true
   enmp_index: 999
-  isnightmare: true
   model: M_EX790_CHRISTMAS
   obj_id: 1776
   sizeTag: memoryMedium
@@ -833,6 +834,7 @@ Wight Knight:
   enabled: true
   enmp_index: 999
   model: M_EX200
+  isnightmare: true
   obj_id: 118
   sizeTag: memoryMedium
   type: enemy
@@ -1331,6 +1333,7 @@ Cerberus:
       - 0
 Cloud:
   enabled: true
+  isnightmare: true
   enmp_index: 160
   hp: 100
   level: 99
@@ -1536,7 +1539,6 @@ Final Xemnas (Data):
   msn_replace_allowed: false # this might break things
   enmp_index: 215
   hp: 100
-  isnightmare: true
   level: 99
   limiter: 0
   model: B_EX170_LAST_LV99
@@ -1606,7 +1608,6 @@ Saix (Data):
   enabled: true
   enmp_index: 228
   hp: 100
-  isnightmare: true
   level: 99
   limiter: 0
   model: B_EX160_LV99
@@ -1628,7 +1629,6 @@ Xaldin (Data):
   variationof: Xaldin
   enmp_index: 222
   hp: 100
-  isnightmare: true
   level: 99
   limiter: 0
   model: B_EX130_LV99
@@ -1651,7 +1651,6 @@ Xemnas (Data):
   variationof: Xemnas
   enmp_index: 215
   hp: 100
-  isnightmare: true
   level: 99
   limiter: 0
   model: B_EX170_LV99
@@ -1672,7 +1671,6 @@ Xigbar (Data):
   variationof: Xigbar
   enmp_index: 227
   hp: 100
-  isnightmare: true
   level: 99
   limiter: 0
   model: B_EX140_LV99
@@ -2453,7 +2451,6 @@ Hot Rod WI:
   variationof: Hot Rod
   enmp_index: 63
   hp: 100
-  isnightmare: true
   level: 99
   limiter: 15
   model: M_EX640_WI
@@ -2587,6 +2584,7 @@ Jafar:
 Lance Soldier:
   enabled: true
   enmp_index: 66
+  isnightmare: true
   hp: 100
   level: 99
   limiter: 13
@@ -2642,6 +2640,7 @@ Larxene:
   limiter: 0
   model: B_EX400
   msn: HB33_FM_LAR
+  isnightmare: true
   program: 143
   obj_id: 2402
   size: 5.35
@@ -2733,6 +2732,7 @@ Lexaeus:
   msn: HB33_FM_LEX
   program: 142
   room_size: 8.36
+  isnightmare: true
   msn_required: true
   obj_id: 2357
   size: 3.9
@@ -2751,7 +2751,6 @@ Lexaeus:
     Lexaeus (Data):
       data: true
       enabled: true
-      isnightmare: true
       msn: HB33_FM_LEX_RE
       program: 147
       vars:
@@ -2764,6 +2763,7 @@ Living Bone:
   level: 99
   limiter: 17
   model: M_EX670
+  isnightmare: true
   obj_id: 15
   sizeTag: memoryLarge
   tags:
@@ -2771,7 +2771,6 @@ Living Bone:
   type: enemy
   variations:
     Living Bone:
-      isnightmare: true
       vars:
       - 0
       - 0
@@ -2782,7 +2781,6 @@ Living Bone:
       - 1
       - 0
     Living Bone (Necromancer):
-      isnightmare: true
       tags:
       - ranged
       vars:
@@ -2869,7 +2867,6 @@ Mad Ride:
   variationof: Hot Rod
   enmp_index: 211
   hp: 100
-  isnightmare: true
   level: 99
   limiter: 15
   model: M_EX640_HB
@@ -2925,6 +2922,7 @@ Marluxia:
   limiter: 0
   model: N_CM000_BTL
   msn: HB38_FM_MAR
+  isnightmare: true
   obj_id: 2339
   size: 4.57
   room_size: 7.96
@@ -2940,7 +2938,6 @@ Marluxia:
       - 0
     Marluxia (Data):
       enabled: true
-      isnightmare: true
       msn: HB38_FM_MAR_RE
       program: 150
       vars:
@@ -3366,6 +3363,7 @@ Roxas:
   limiter: 0
   model: B_EX390
   msn: EH21_MS101
+  isnightmare: true
   obj_id: 2385
   program: 65
   size: 5.85
@@ -3397,7 +3395,6 @@ Roxas:
     Roxas (Data):
       data: true
       enabled: true
-      isnightmare: true
       msn: EH21_MS101_RE
       program: 99
       vars:
@@ -3868,7 +3865,6 @@ Sorcerer:
       - 0
 Spring Metal:
   enabled: true
-  isnightmare: true
   variationof: Emerald Blues
   enmp_index: 205
   hp: 100
@@ -4102,7 +4098,6 @@ Tornado Step:
 Toy Soldier NM:
   enabled: true
   hp: 100
-  isnightmare: true
   variationof: Toy Soldier
   level: 99
   limiter: 9
@@ -4278,6 +4273,7 @@ Xaldin:
   hp: 100
   level: 99
   limiter: 0
+  isnightmare: true
   model: B_EX130
   msn: BB15_MS203
   obj_id: 997
@@ -4345,6 +4341,7 @@ Xigbar:
   hp: 100
   level: 99
   limiter: 0
+  isnightmare: true
   model: B_EX140
   msn: EH10_MS102
   obj_id: 1570

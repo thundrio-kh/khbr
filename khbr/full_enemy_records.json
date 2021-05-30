@@ -282,8 +282,8 @@
         "parent": "Aeroplane",
         "variationof": null,
         "children": [
-            "Aeroplane WI",
-            "Aeroplane"
+            "Aeroplane",
+            "Aeroplane WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -517,6 +517,7 @@
         "name": "Bookmaster",
         "enabled": true,
         "enmp_index": 999,
+        "isnightmare": true,
         "model": "M_EX530",
         "obj_id": 5,
         "size": 0,
@@ -536,13 +537,12 @@
         "data": false,
         "category": "large-ranged-memoryMedium",
         "level": 0,
-        "isnightmare": false,
         "parent": "Bookmaster",
         "variationof": null,
         "children": [
             "Runemaster",
-            "Bookmaster (TR)",
-            "Bookmaster"
+            "Bookmaster",
+            "Bookmaster (TR)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -932,6 +932,7 @@
         "enabled": true,
         "enmp_index": 999,
         "model": "M_EX750",
+        "isnightmare": true,
         "obj_id": 125,
         "sizeTag": "memoryMedium",
         "type": "enemy",
@@ -948,12 +949,11 @@
         "data": false,
         "category": "ranged-memoryMedium",
         "level": 0,
-        "isnightmare": false,
         "parent": "Creeper Plant",
         "variationof": null,
         "children": [
-            "Creeper Plant",
-            "Creeper Plant (NM)"
+            "Creeper Plant (NM)",
+            "Creeper Plant"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1085,6 +1085,7 @@
         "name": "Emerald Blues",
         "enabled": true,
         "enmp_index": 999,
+        "isnightmare": true,
         "model": "M_EX120",
         "obj_id": 72,
         "sizeTag": "memorySmall",
@@ -1102,14 +1103,13 @@
         "data": false,
         "category": "ranged-memorySmall",
         "level": 0,
-        "isnightmare": false,
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
-            "Emerald Blues",
-            "Spring Metal",
             "Emerald Blues NM",
-            "Emerald Blues (TR)"
+            "Spring Metal",
+            "Emerald Blues (TR)",
+            "Emerald Blues"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2477,6 +2477,7 @@
         ],
         "name": "Neoshadow",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 999,
         "model": "M_EX420",
         "obj_id": 120,
@@ -2496,7 +2497,6 @@
         "data": false,
         "category": "memoryLarge",
         "level": 0,
-        "isnightmare": false,
         "parent": "Neoshadow",
         "variationof": null,
         "children": [
@@ -2532,6 +2532,7 @@
         ],
         "name": "Neoshadow (1 0)",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 999,
         "model": "M_EX420",
         "obj_id": 120,
@@ -2551,7 +2552,6 @@
         "data": false,
         "category": "memoryLarge",
         "level": 0,
-        "isnightmare": false,
         "parent": "Neoshadow",
         "variationof": null,
         "children": [],
@@ -2584,6 +2584,7 @@
         ],
         "name": "Neoshadow (44 0)",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 999,
         "model": "M_EX420",
         "obj_id": 120,
@@ -2603,7 +2604,6 @@
         "data": false,
         "category": "memoryLarge",
         "level": 0,
-        "isnightmare": false,
         "parent": "Neoshadow",
         "variationof": null,
         "children": [],
@@ -2636,6 +2636,7 @@
         ],
         "name": "Neoshadow (99 0)",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 999,
         "model": "M_EX420",
         "obj_id": 120,
@@ -2655,7 +2656,6 @@
         "data": false,
         "category": "memoryLarge",
         "level": 0,
-        "isnightmare": false,
         "parent": "Neoshadow",
         "variationof": null,
         "children": [],
@@ -2694,7 +2694,6 @@
         "obj_id": 1836,
         "size": 0,
         "type": "enemy",
-        "isnightmare": true,
         "variations": [
             "Neoshadow (NM)"
         ],
@@ -2706,6 +2705,7 @@
         "data": false,
         "category": "",
         "level": 0,
+        "isnightmare": false,
         "parent": "Neoshadow",
         "children": [],
         "hp": 100,
@@ -2894,7 +2894,6 @@
         "variationof": "Devastator",
         "size": 0,
         "type": "enemy",
-        "isnightmare": true,
         "tags": [
             "large",
             "ranged"
@@ -2909,6 +2908,7 @@
         "data": false,
         "category": "large-ranged",
         "level": 0,
+        "isnightmare": false,
         "parent": "Devastator",
         "children": [],
         "hp": 100,
@@ -3365,8 +3365,8 @@
         "parent": "Strafer",
         "variationof": null,
         "children": [
-            "Strafer",
-            "Strafer RAW"
+            "Strafer RAW",
+            "Strafer"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3555,7 +3555,6 @@
         "name": "Toy Soldier",
         "enabled": true,
         "enmp_index": 999,
-        "isnightmare": true,
         "model": "M_EX790_CHRISTMAS",
         "obj_id": 1776,
         "sizeTag": "memoryMedium",
@@ -3575,11 +3574,12 @@
         "data": false,
         "category": "large-ranged-memoryMedium",
         "level": 0,
+        "isnightmare": false,
         "parent": "Toy Soldier",
         "variationof": null,
         "children": [
-            "Toy Soldier",
-            "Toy Soldier NM"
+            "Toy Soldier NM",
+            "Toy Soldier"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3611,7 +3611,6 @@
         "name": "Toy Soldier (2 0)",
         "enabled": true,
         "enmp_index": 999,
-        "isnightmare": true,
         "model": "M_EX790_CHRISTMAS",
         "obj_id": 1776,
         "sizeTag": "memoryMedium",
@@ -3631,6 +3630,7 @@
         "data": false,
         "category": "large-ranged-memoryMedium",
         "level": 0,
+        "isnightmare": false,
         "parent": "Toy Soldier",
         "variationof": null,
         "children": [],
@@ -5365,6 +5365,7 @@
         "enabled": true,
         "enmp_index": 999,
         "model": "M_EX200",
+        "isnightmare": true,
         "obj_id": 118,
         "sizeTag": "memoryMedium",
         "type": "enemy",
@@ -5379,7 +5380,6 @@
         "data": false,
         "category": "memoryMedium",
         "level": 0,
-        "isnightmare": false,
         "parent": "Wight Knight",
         "variationof": null,
         "children": [
@@ -6896,10 +6896,10 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower (MU)",
             "Bolt Tower DC",
-            "Bolt Tower",
-            "Bolt Tower (RAW)"
+            "Bolt Tower (MU)",
+            "Bolt Tower (RAW)",
+            "Bolt Tower"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -7303,6 +7303,7 @@
         ],
         "name": "Cloud",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 160,
         "hp": 100,
         "level": 99,
@@ -7323,7 +7324,6 @@
         "tags": [],
         "data": false,
         "category": "",
-        "isnightmare": false,
         "parent": "Cloud",
         "variationof": null,
         "children": [
@@ -7394,6 +7394,7 @@
         ],
         "name": "Cloud (1)",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 160,
         "hp": 100,
         "level": 99,
@@ -7414,7 +7415,6 @@
         "tags": [],
         "data": false,
         "category": "",
-        "isnightmare": false,
         "parent": "Cloud",
         "variationof": null,
         "children": [],
@@ -7446,6 +7446,7 @@
         ],
         "name": "Cloud (2)",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 160,
         "hp": 100,
         "level": 99,
@@ -7466,7 +7467,6 @@
         "tags": [],
         "data": false,
         "category": "",
-        "isnightmare": false,
         "parent": "Cloud",
         "variationof": null,
         "children": [],
@@ -8191,7 +8191,6 @@
         "msn_replace_allowed": false,
         "enmp_index": 215,
         "hp": 100,
-        "isnightmare": true,
         "level": 99,
         "limiter": 0,
         "model": "B_EX170_LAST_LV99",
@@ -8221,6 +8220,7 @@
         "cups": false,
         "data": false,
         "category": "",
+        "isnightmare": false,
         "parent": "Final Xemnas",
         "children": [],
         "msn_required": false,
@@ -8250,7 +8250,6 @@
         "msn_replace_allowed": false,
         "enmp_index": 215,
         "hp": 100,
-        "isnightmare": true,
         "level": 99,
         "limiter": 0,
         "model": "B_EX170_LAST_LV99",
@@ -8280,6 +8279,7 @@
         "cups": false,
         "data": false,
         "category": "",
+        "isnightmare": false,
         "parent": "Final Xemnas",
         "children": [],
         "msn_required": false,
@@ -8376,7 +8376,6 @@
         "enabled": true,
         "enmp_index": 228,
         "hp": 100,
-        "isnightmare": true,
         "level": 99,
         "limiter": 0,
         "model": "B_EX160_LV99",
@@ -8396,6 +8395,7 @@
         "tags": [],
         "cups": false,
         "category": "",
+        "isnightmare": false,
         "parent": "Saix",
         "children": [],
         "msn_source_as": null,
@@ -8424,7 +8424,6 @@
         "variationof": "Xaldin",
         "enmp_index": 222,
         "hp": 100,
-        "isnightmare": true,
         "level": 99,
         "limiter": 0,
         "model": "B_EX130_LV99",
@@ -8443,6 +8442,7 @@
         "tags": [],
         "cups": false,
         "category": "",
+        "isnightmare": false,
         "parent": "Xaldin",
         "children": [],
         "msn_required": false,
@@ -8475,7 +8475,6 @@
         "variationof": "Xemnas",
         "enmp_index": 215,
         "hp": 100,
-        "isnightmare": true,
         "level": 99,
         "limiter": 0,
         "model": "B_EX170_LV99",
@@ -8494,6 +8493,7 @@
         "tags": [],
         "cups": false,
         "category": "",
+        "isnightmare": false,
         "parent": "Xemnas",
         "children": [],
         "msn_required": false,
@@ -8522,7 +8522,6 @@
         "variationof": "Xigbar",
         "enmp_index": 227,
         "hp": 100,
-        "isnightmare": true,
         "level": 99,
         "limiter": 0,
         "model": "B_EX140_LV99",
@@ -8542,6 +8541,7 @@
         "tags": [],
         "cups": false,
         "category": "",
+        "isnightmare": false,
         "parent": "Xigbar",
         "children": [],
         "msn_required": false,
@@ -8787,8 +8787,8 @@
         "parent": "Devastator",
         "variationof": null,
         "children": [
-            "Devastator",
-            "Reckless"
+            "Reckless",
+            "Devastator"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9692,8 +9692,8 @@
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
-            "Final Xemnas",
-            "Final Xemnas (Data)"
+            "Final Xemnas (Data)",
+            "Final Xemnas"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -10702,8 +10702,8 @@
         "parent": "Hades II",
         "variationof": null,
         "children": [
-            "Hades II",
-            "Hades Cups"
+            "Hades Cups",
+            "Hades II"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12605,7 +12605,6 @@
         "variationof": "Hot Rod",
         "enmp_index": 63,
         "hp": 100,
-        "isnightmare": true,
         "level": 99,
         "limiter": 15,
         "model": "M_EX640_WI",
@@ -12624,6 +12623,7 @@
         "cups": false,
         "data": false,
         "category": "large",
+        "isnightmare": false,
         "parent": "Hot Rod",
         "children": [],
         "msn_required": false,
@@ -13030,6 +13030,7 @@
         "name": "Lance Soldier",
         "enabled": true,
         "enmp_index": 66,
+        "isnightmare": true,
         "hp": 100,
         "level": 99,
         "limiter": 13,
@@ -13047,7 +13048,6 @@
         "cups": false,
         "data": false,
         "category": "memoryLarge",
-        "isnightmare": false,
         "parent": "Lance Soldier",
         "variationof": null,
         "children": [
@@ -13191,6 +13191,7 @@
         "limiter": 0,
         "model": "B_EX400",
         "msn": "HB33_FM_LAR",
+        "isnightmare": true,
         "program": 143,
         "obj_id": 2402,
         "size": 5.35,
@@ -13226,7 +13227,6 @@
         "cups": false,
         "data": false,
         "category": "",
-        "isnightmare": false,
         "parent": "Larxene",
         "variationof": null,
         "children": [
@@ -13298,6 +13298,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_EX400",
+        "isnightmare": true,
         "obj_id": 2402,
         "size": 5.35,
         "room_size": 8.3,
@@ -13331,7 +13332,6 @@
         "tags": [],
         "cups": false,
         "category": "",
-        "isnightmare": false,
         "parent": "Larxene",
         "variationof": null,
         "children": [],
@@ -13615,6 +13615,7 @@
         "msn": "HB33_FM_LEX",
         "program": 142,
         "room_size": 8.36,
+        "isnightmare": true,
         "msn_required": true,
         "obj_id": 2357,
         "size": 3.9,
@@ -13637,7 +13638,6 @@
         "cups": false,
         "data": false,
         "category": "",
-        "isnightmare": false,
         "parent": "Lexaeus",
         "variationof": null,
         "children": [
@@ -13696,7 +13696,6 @@
     "Lexaeus (Data)": {
         "data": true,
         "enabled": true,
-        "isnightmare": true,
         "msn": "HB33_FM_LEX_RE",
         "program": 147,
         "vars": [
@@ -13710,6 +13709,7 @@
         "limiter": 0,
         "model": "N_CM020_BTL",
         "room_size": 8.36,
+        "isnightmare": true,
         "msn_required": true,
         "obj_id": 2357,
         "size": 3.9,
@@ -13749,7 +13749,6 @@
         "obj_edits": {}
     },
     "Living Bone": {
-        "isnightmare": true,
         "vars": [
             0,
             0
@@ -13761,6 +13760,7 @@
         "level": 99,
         "limiter": 17,
         "model": "M_EX670",
+        "isnightmare": true,
         "obj_id": 15,
         "sizeTag": "memoryLarge",
         "tags": [
@@ -13818,6 +13818,7 @@
         "level": 99,
         "limiter": 17,
         "model": "M_EX670",
+        "isnightmare": true,
         "obj_id": 15,
         "sizeTag": "memoryLarge",
         "type": "enemy",
@@ -13832,7 +13833,6 @@
         "cups": false,
         "data": false,
         "category": "ranged-memoryLarge",
-        "isnightmare": false,
         "parent": "Living Bone",
         "variationof": null,
         "children": [],
@@ -13857,7 +13857,6 @@
         "obj_edits": {}
     },
     "Living Bone (Necromancer)": {
-        "isnightmare": true,
         "tags": [
             "ranged"
         ],
@@ -13872,6 +13871,7 @@
         "level": 99,
         "limiter": 17,
         "model": "M_EX670",
+        "isnightmare": true,
         "obj_id": 15,
         "sizeTag": "memoryLarge",
         "type": "enemy",
@@ -14193,7 +14193,6 @@
         "variationof": "Hot Rod",
         "enmp_index": 211,
         "hp": 100,
-        "isnightmare": true,
         "level": 99,
         "limiter": 15,
         "model": "M_EX640_HB",
@@ -14212,6 +14211,7 @@
         "cups": false,
         "data": false,
         "category": "large",
+        "isnightmare": false,
         "parent": "Hot Rod",
         "children": [],
         "msn_required": false,
@@ -14351,6 +14351,7 @@
         "limiter": 0,
         "model": "N_CM000_BTL",
         "msn": "HB38_FM_MAR",
+        "isnightmare": true,
         "obj_id": 2339,
         "size": 4.57,
         "room_size": 7.96,
@@ -14371,7 +14372,6 @@
         "cups": false,
         "data": false,
         "category": "",
-        "isnightmare": false,
         "parent": "Marluxia",
         "variationof": null,
         "children": [
@@ -14430,7 +14430,6 @@
     },
     "Marluxia (Data)": {
         "enabled": true,
-        "isnightmare": true,
         "msn": "HB38_FM_MAR_RE",
         "program": 150,
         "vars": [
@@ -14443,6 +14442,7 @@
         "level": 99,
         "limiter": 0,
         "model": "N_CM000_BTL",
+        "isnightmare": true,
         "obj_id": 2339,
         "size": 4.57,
         "room_size": 7.96,
@@ -14510,8 +14510,8 @@
         "parent": "Minute Bomb",
         "variationof": null,
         "children": [
-            "Minute Bomb",
-            "Minute Bomb WI"
+            "Minute Bomb WI",
+            "Minute Bomb"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -15520,9 +15520,9 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
-            "Rapid Thruster",
+            "Rapid Thruster WI",
             "Rapid Thruster (RAW)",
-            "Rapid Thruster WI"
+            "Rapid Thruster"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -17202,6 +17202,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_EX390",
+        "isnightmare": true,
         "obj_id": 2385,
         "program": 65,
         "size": 5.85,
@@ -17236,7 +17237,6 @@
         "cups": false,
         "data": false,
         "category": "",
-        "isnightmare": false,
         "parent": "Roxas",
         "variationof": null,
         "children": [
@@ -17303,7 +17303,6 @@
     "Roxas (Data)": {
         "data": true,
         "enabled": true,
-        "isnightmare": true,
         "msn": "EH21_MS101_RE",
         "program": 99,
         "vars": [
@@ -17317,6 +17316,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_EX390",
+        "isnightmare": true,
         "obj_id": 2385,
         "size": 5.85,
         "room_size": 5.83,
@@ -18399,10 +18399,10 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow",
             "Shadow (NM)",
-            "Shadow (RAW)",
-            "Shadow WI"
+            "Shadow WI",
+            "Shadow",
+            "Shadow (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19167,9 +19167,9 @@
         "variationof": null,
         "children": [
             "Soldier (TR)",
-            "Soldier NM",
             "Soldier (WI)",
-            "Soldier"
+            "Soldier",
+            "Soldier NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19403,7 +19403,6 @@
         ],
         "name": "Spring Metal",
         "enabled": true,
-        "isnightmare": true,
         "variationof": "Emerald Blues",
         "enmp_index": 205,
         "hp": 100,
@@ -19425,6 +19424,7 @@
         "cups": false,
         "data": false,
         "category": "ranged",
+        "isnightmare": false,
         "parent": "Emerald Blues",
         "children": [],
         "msn_required": false,
@@ -20290,7 +20290,6 @@
         "name": "Toy Soldier NM",
         "enabled": true,
         "hp": 100,
-        "isnightmare": true,
         "variationof": "Toy Soldier",
         "level": 99,
         "limiter": 9,
@@ -20311,6 +20310,7 @@
         "cups": false,
         "data": false,
         "category": "large-ranged",
+        "isnightmare": false,
         "parent": "Toy Soldier",
         "children": [],
         "msn_required": false,
@@ -20364,8 +20364,8 @@
         "parent": "Trick Ghost",
         "variationof": null,
         "children": [
-            "Trick Ghost",
-            "Trick Ghost (NM)"
+            "Trick Ghost (NM)",
+            "Trick Ghost"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20904,6 +20904,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "isnightmare": true,
         "model": "B_EX130",
         "msn": "BB15_MS203",
         "obj_id": 997,
@@ -20921,12 +20922,11 @@
         "cups": false,
         "data": false,
         "category": "",
-        "isnightmare": false,
         "parent": "Xaldin",
         "variationof": null,
         "children": [
-            "Xaldin (Data)",
-            "Xaldin"
+            "Xaldin",
+            "Xaldin (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -21120,6 +21120,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "isnightmare": true,
         "model": "B_EX140",
         "msn": "EH10_MS102",
         "obj_id": 1570,
@@ -21138,7 +21139,6 @@
         "cups": false,
         "data": false,
         "category": "",
-        "isnightmare": false,
         "parent": "Xigbar",
         "variationof": null,
         "children": [
