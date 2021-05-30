@@ -109,6 +109,7 @@
         "name": "Aerial Knocker",
         "enabled": true,
         "enmp_index": 999,
+        "isnightmare": true,
         "model": "M_EX780",
         "obj_id": 20,
         "sizeTag": "memorySmall",
@@ -125,7 +126,6 @@
         "data": false,
         "category": "memorySmall",
         "level": 0,
-        "isnightmare": false,
         "parent": "Aerial Knocker",
         "variationof": null,
         "children": [
@@ -162,6 +162,7 @@
         "name": "Aerial Knocker (1 0)",
         "enabled": true,
         "enmp_index": 999,
+        "isnightmare": true,
         "model": "M_EX780",
         "obj_id": 20,
         "sizeTag": "memorySmall",
@@ -178,7 +179,6 @@
         "data": false,
         "category": "memorySmall",
         "level": 0,
-        "isnightmare": false,
         "parent": "Aerial Knocker",
         "variationof": null,
         "children": [],
@@ -282,8 +282,8 @@
         "parent": "Aeroplane",
         "variationof": null,
         "children": [
-            "Aeroplane",
-            "Aeroplane WI"
+            "Aeroplane WI",
+            "Aeroplane"
         ],
         "hp": 100,
         "limiter": 1,
@@ -541,8 +541,8 @@
         "variationof": null,
         "children": [
             "Runemaster",
-            "Bookmaster",
-            "Bookmaster (TR)"
+            "Bookmaster (TR)",
+            "Bookmaster"
         ],
         "hp": 100,
         "limiter": 1,
@@ -952,8 +952,8 @@
         "parent": "Creeper Plant",
         "variationof": null,
         "children": [
-            "Creeper Plant (NM)",
-            "Creeper Plant"
+            "Creeper Plant",
+            "Creeper Plant (NM)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1106,10 +1106,10 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
-            "Emerald Blues NM",
+            "Emerald Blues",
             "Spring Metal",
-            "Emerald Blues (TR)",
-            "Emerald Blues"
+            "Emerald Blues NM",
+            "Emerald Blues (TR)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3365,8 +3365,8 @@
         "parent": "Strafer",
         "variationof": null,
         "children": [
-            "Strafer RAW",
-            "Strafer"
+            "Strafer",
+            "Strafer RAW"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3578,8 +3578,8 @@
         "parent": "Toy Soldier",
         "variationof": null,
         "children": [
-            "Toy Soldier NM",
-            "Toy Soldier"
+            "Toy Soldier",
+            "Toy Soldier NM"
         ],
         "hp": 100,
         "limiter": 1,
@@ -4248,6 +4248,7 @@
         "name": "Undead Pirate B",
         "enabled": true,
         "enmp_index": 999,
+        "isnightmare": true,
         "model": "B_CA030",
         "obj_id": 1108,
         "sizeTag": "memoryLarge",
@@ -4268,7 +4269,6 @@
         "data": false,
         "category": "pirate-memoryLarge",
         "level": 0,
-        "isnightmare": false,
         "parent": "Undead Pirate B",
         "variationof": null,
         "children": [
@@ -4304,6 +4304,7 @@
         "name": "Undead Pirate B (90 0)",
         "enabled": true,
         "enmp_index": 999,
+        "isnightmare": true,
         "model": "B_CA030",
         "obj_id": 1108,
         "sizeTag": "memoryLarge",
@@ -4324,7 +4325,6 @@
         "data": false,
         "category": "pirate-memoryLarge",
         "level": 0,
-        "isnightmare": false,
         "parent": "Undead Pirate B",
         "variationof": null,
         "children": [],
@@ -4358,6 +4358,7 @@
         "name": "Undead Pirate B (93 0)",
         "enabled": true,
         "enmp_index": 999,
+        "isnightmare": true,
         "model": "B_CA030",
         "obj_id": 1108,
         "sizeTag": "memoryLarge",
@@ -4378,7 +4379,6 @@
         "data": false,
         "category": "pirate-memoryLarge",
         "level": 0,
-        "isnightmare": false,
         "parent": "Undead Pirate B",
         "variationof": null,
         "children": [],
@@ -4412,6 +4412,7 @@
         "name": "Undead Pirate B (92 0)",
         "enabled": true,
         "enmp_index": 999,
+        "isnightmare": true,
         "model": "B_CA030",
         "obj_id": 1108,
         "sizeTag": "memoryLarge",
@@ -4432,7 +4433,6 @@
         "data": false,
         "category": "pirate-memoryLarge",
         "level": 0,
-        "isnightmare": false,
         "parent": "Undead Pirate B",
         "variationof": null,
         "children": [],
@@ -6896,10 +6896,10 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower DC",
             "Bolt Tower (MU)",
-            "Bolt Tower (RAW)",
-            "Bolt Tower"
+            "Bolt Tower DC",
+            "Bolt Tower",
+            "Bolt Tower (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -7603,6 +7603,7 @@
         "model": "M_EX130",
         "obj_id": 73,
         "sizeTag": "memoryMedium",
+        "isnightmare": true,
         "tags": [
             "large",
             "ranged"
@@ -7619,7 +7620,6 @@
         "cups": false,
         "data": false,
         "category": "large-ranged-memoryMedium",
-        "isnightmare": false,
         "parent": "Crimson Jazz",
         "variationof": null,
         "children": [
@@ -7659,6 +7659,7 @@
         "model": "M_EX130",
         "obj_id": 73,
         "sizeTag": "memoryMedium",
+        "isnightmare": true,
         "tags": [
             "large",
             "ranged"
@@ -7675,7 +7676,6 @@
         "cups": false,
         "data": false,
         "category": "large-ranged-memoryMedium",
-        "isnightmare": false,
         "parent": "Crimson Jazz",
         "variationof": null,
         "children": [],
@@ -7713,6 +7713,7 @@
         "model": "M_EX130",
         "obj_id": 73,
         "sizeTag": "memoryMedium",
+        "isnightmare": true,
         "tags": [
             "large",
             "ranged"
@@ -7729,7 +7730,6 @@
         "cups": false,
         "data": false,
         "category": "large-ranged-memoryMedium",
-        "isnightmare": false,
         "parent": "Crimson Jazz",
         "variationof": null,
         "children": [],
@@ -8787,8 +8787,8 @@
         "parent": "Devastator",
         "variationof": null,
         "children": [
-            "Reckless",
-            "Devastator"
+            "Devastator",
+            "Reckless"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9692,8 +9692,8 @@
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
-            "Final Xemnas (Data)",
-            "Final Xemnas"
+            "Final Xemnas",
+            "Final Xemnas (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -10702,8 +10702,8 @@
         "parent": "Hades II",
         "variationof": null,
         "children": [
-            "Hades Cups",
-            "Hades II"
+            "Hades II",
+            "Hades Cups"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -11092,6 +11092,7 @@
         "level": 99,
         "limiter": 8,
         "model": "M_EX520",
+        "isnightmare": true,
         "obj_id": 4,
         "sizeTag": "memorySmall",
         "type": "enemy",
@@ -11106,7 +11107,6 @@
         "cups": false,
         "data": false,
         "category": "memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat",
         "variationof": null,
         "children": [],
@@ -11142,6 +11142,7 @@
         "level": 99,
         "limiter": 8,
         "model": "M_EX520",
+        "isnightmare": true,
         "obj_id": 4,
         "sizeTag": "memorySmall",
         "type": "enemy",
@@ -11156,7 +11157,6 @@
         "cups": false,
         "data": false,
         "category": "memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat",
         "variationof": null,
         "children": [
@@ -11194,6 +11194,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11228,7 +11229,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -11263,6 +11263,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11297,7 +11298,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -11332,6 +11332,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11366,7 +11367,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [
@@ -11403,6 +11403,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11437,7 +11438,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -11472,6 +11472,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11506,7 +11507,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -11541,6 +11541,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11575,7 +11576,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -11610,6 +11610,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11644,7 +11645,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -11679,6 +11679,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11713,7 +11714,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -11748,6 +11748,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11782,7 +11783,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -11817,6 +11817,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11851,7 +11852,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -11886,6 +11886,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11920,7 +11921,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -11955,6 +11955,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -11989,7 +11990,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -12024,6 +12024,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -12058,7 +12059,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -12093,6 +12093,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -12127,7 +12128,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -12162,6 +12162,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -12196,7 +12197,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -12231,6 +12231,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -12265,7 +12266,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -12300,6 +12300,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -12334,7 +12335,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -12369,6 +12369,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -12403,7 +12404,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -12438,6 +12438,7 @@
         "hp": 100,
         "level": 99,
         "limiter": 8,
+        "isnightmare": true,
         "model": "M_EX520_AL",
         "obj_id": 1887,
         "sizeTag": "memorySmall",
@@ -12472,7 +12473,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Hook Bat AL",
         "variationof": null,
         "children": [],
@@ -14510,8 +14510,8 @@
         "parent": "Minute Bomb",
         "variationof": null,
         "children": [
-            "Minute Bomb WI",
-            "Minute Bomb"
+            "Minute Bomb",
+            "Minute Bomb WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -14848,6 +14848,7 @@
         "name": "Bomb Bell A",
         "enabled": true,
         "hp": 100,
+        "isnightmare": true,
         "level": 99,
         "limiter": 1,
         "model": "EH_G_EX250",
@@ -14866,7 +14867,6 @@
         "cups": false,
         "data": false,
         "category": "al-memorySmall",
-        "isnightmare": false,
         "parent": "Bomb Bell A",
         "variationof": null,
         "children": [
@@ -15520,9 +15520,9 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
-            "Rapid Thruster WI",
+            "Rapid Thruster",
             "Rapid Thruster (RAW)",
-            "Rapid Thruster"
+            "Rapid Thruster WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18399,10 +18399,10 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow (NM)",
-            "Shadow WI",
             "Shadow",
-            "Shadow (RAW)"
+            "Shadow (NM)",
+            "Shadow (RAW)",
+            "Shadow WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18988,6 +18988,7 @@
         "model": "M_EX110",
         "obj_id": 71,
         "sizeTag": "memorySmall",
+        "isnightmare": true,
         "type": "enemy",
         "tags": [
             "ranged"
@@ -19002,7 +19003,6 @@
         "cups": false,
         "data": false,
         "category": "ranged-memorySmall",
-        "isnightmare": false,
         "parent": "Silver Rock",
         "variationof": null,
         "children": [
@@ -19042,6 +19042,7 @@
         "model": "M_EX110",
         "obj_id": 71,
         "sizeTag": "memorySmall",
+        "isnightmare": true,
         "type": "enemy",
         "tags": [
             "ranged"
@@ -19056,7 +19057,6 @@
         "cups": false,
         "data": false,
         "category": "ranged-memorySmall",
-        "isnightmare": false,
         "parent": "Silver Rock",
         "variationof": null,
         "children": [],
@@ -19167,9 +19167,9 @@
         "variationof": null,
         "children": [
             "Soldier (TR)",
+            "Soldier NM",
             "Soldier (WI)",
-            "Soldier",
-            "Soldier NM"
+            "Soldier"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19351,7 +19351,6 @@
         "enabled": true,
         "enmp_index": 50,
         "hp": 100,
-        "isnightmare": true,
         "level": 99,
         "limiter": 34,
         "model": "M_EX870",
@@ -19371,6 +19370,7 @@
         "cups": false,
         "data": false,
         "category": "large-ranged-memoryMedium",
+        "isnightmare": false,
         "parent": "Sorcerer",
         "variationof": null,
         "children": [
@@ -20364,8 +20364,8 @@
         "parent": "Trick Ghost",
         "variationof": null,
         "children": [
-            "Trick Ghost (NM)",
-            "Trick Ghost"
+            "Trick Ghost",
+            "Trick Ghost (NM)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20925,8 +20925,8 @@
         "parent": "Xaldin",
         "variationof": null,
         "children": [
-            "Xaldin",
-            "Xaldin (Data)"
+            "Xaldin (Data)",
+            "Xaldin"
         ],
         "msn_required": false,
         "msn_source_as": null,

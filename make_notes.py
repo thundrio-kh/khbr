@@ -22,17 +22,17 @@ start_time = time.time()
 
 kh2 = KingdomHearts2()
 bosses = kh2.get_bosses(usefilters=["boss"])
-
+boss_names = sorted(bosses)
 sources = []
 
-for source_boss_name in bosses:
+for source_boss_name in boss_names:
     if source_boss_name in exclusions:
         continue
     source_boss = bosses[source_boss_name]
     if source_boss["parent"] != source_boss["name"]:
         continue
     source_boss_compatability = [source_boss_name]
-    for new_boss_name in bosses:
+    for new_boss_name in boss_names:
         if new_boss_name in exclusions:
             continue
         new_boss = bosses[new_boss_name]
@@ -190,7 +190,7 @@ for l in range(len(lines_nightmare)):
 for i in title_rows:
     enemy_sheet_nightmare.cell((i, 1)).set_text_format('bold', True).set_text_format('fontSize', 20)
 
-print("Nightmare Enemy rows updated: {}".format(time.time()-start_time))
+print("NightmareEnemy rows updated: {}".format(time.time()-start_time))
 sys.stdout.flush()
 
 # gc.run_batch()

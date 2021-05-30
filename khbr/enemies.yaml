@@ -25,6 +25,7 @@ Bees TT PO:
 Aerial Knocker:
   enabled: true
   enmp_index: 999
+  isnightmare: true
   model: M_EX780
   obj_id: 20
   sizeTag: memorySmall
@@ -740,6 +741,7 @@ Undead Pirate A:
 Undead Pirate B:
   enabled: true
   enmp_index: 999
+  isnightmare: true
   model: B_CA030
   obj_id: 1108
   sizeTag: memoryLarge
@@ -1408,6 +1410,7 @@ Crimson Jazz:
   model: M_EX130
   obj_id: 73
   sizeTag: memoryMedium
+  isnightmare: true
   tags:
   - large
   - ranged
@@ -2324,6 +2327,7 @@ Hook Bat:
   level: 99
   limiter: 8
   model: M_EX520
+  isnightmare: true
   obj_id: 4
   sizeTag: memorySmall
   type: enemy
@@ -2341,6 +2345,7 @@ Hook Bat AL:
   hp: 100
   level: 99
   limiter: 8
+  isnightmare: true
   model: M_EX520_AL
   obj_id: 1887
   sizeTag: memorySmall
@@ -3036,6 +3041,7 @@ Nightwalker:
 Bomb Bell A:
   enabled: true
   hp: 100
+  isnightmare: true
   level: 99
   limiter: 1
   model: EH_G_EX250
@@ -3773,6 +3779,7 @@ Silver Rock:
   model: M_EX110
   obj_id: 71
   sizeTag: memorySmall
+  isnightmare: true
   type: enemy
   tags:
   - ranged
@@ -3848,7 +3855,6 @@ Sorcerer:
   enabled: true
   enmp_index: 50
   hp: 100
-  isnightmare: true
   level: 99
   limiter: 34
   model: M_EX870
