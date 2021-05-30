@@ -27,7 +27,7 @@ Aerial Knocker:
   enmp_index: 999
   model: M_EX780
   obj_id: 20
-  sizeTag: small
+  sizeTag: memorySmall
   type: enemy
   variations:
     Aerial Knocker:
@@ -56,7 +56,7 @@ Aeroplane:
   enmp_index: 999
   model: M_EX540
   obj_id: 6
-  sizeTag: small
+  sizeTag: memorySmall
   type: enemy
   tags:
   - ranged
@@ -127,6 +127,7 @@ Bookmaster:
   model: M_EX530
   obj_id: 5
   size: 0
+  sizeTag: memoryMedium
   type: enemy
   tags:
   - ranged
@@ -219,8 +220,10 @@ Creeper Plant:
   enmp_index: 999
   model: M_EX750
   obj_id: 125
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
+  tags:
+  - ranged
   variations:
     Creeper Plant:
       vars:
@@ -256,7 +259,7 @@ Emerald Blues:
   enmp_index: 999
   model: M_EX120
   obj_id: 72
-  sizeTag: small
+  sizeTag: memorySmall
   type: enemy
   tags:
   - ranged
@@ -286,10 +289,11 @@ Fortuneteller (AL):
   isnightmare: true
   model: M_EX620_AL
   obj_id: 1760
-  sizeTag: small
+  sizeTag: memorySmall
   type: enemy
   tags:
   - al
+  - ranged
   variations:
     Fortuneteller (AL):
       vars:
@@ -332,7 +336,7 @@ Gargoyle Knight:
   enmp_index: 999
   model: M_BB010_SWORD
   obj_id: 367
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   isnightmare: true
   replace_as: Gargoyle Knight # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
@@ -364,7 +368,7 @@ Gargoyle Warrior:
   replace_as: Gargoyle Warrior # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   obj_id: 368
   isnightmare: true
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Gargoyle Warrior (40 0):
@@ -392,7 +396,7 @@ Hammer Frame:
   enmp_index: 999
   model: M_EX560
   obj_id: 8
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Hammer Frame:
@@ -408,7 +412,7 @@ Hot Rod:
   enmp_index: 999
   model: M_EX640
   obj_id: 13
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   isnightmare: true
   tags:
@@ -438,7 +442,7 @@ Neoshadow:
   enmp_index: 999
   model: M_EX420
   obj_id: 120
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Neoshadow:
@@ -477,7 +481,7 @@ Rabid Dog:
   enmp_index: 999
   model: M_EX510
   obj_id: 3
-  sizeTag: small
+  sizeTag: memorySmall
   type: enemy
   variations:
     Rabid Dog:
@@ -535,6 +539,7 @@ Shadow (NM):
   enabled: true
   enmp_index: 999
   model: M_EX020_NM
+  variationof: Shadow
   obj_id: 1220
   size: 0
   type: enemy
@@ -566,7 +571,7 @@ Shaman:
   enmp_index: 999
   model: M_EX720
   obj_id: 19
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   tags:
   - ranged
@@ -583,6 +588,7 @@ Soldier (TR):
   enabled: true
   enmp_index: 999
   model: M_EX010_TR
+  variationof: Soldier
   obj_id: 1839
   size: 0
   type: enemy
@@ -609,7 +615,7 @@ Strafer:
   enmp_index: 999
   model: M_EX610
   obj_id: 1114
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Strafer:
@@ -655,7 +661,7 @@ Toy Soldier:
   isnightmare: true
   model: M_EX790_CHRISTMAS
   obj_id: 1776
-  sizeTag: small
+  sizeTag: memoryMedium
   type: enemy
   tags:
   - large
@@ -689,7 +695,7 @@ Undead Pirate A:
   enmp_index: 999
   model: B_CA020
   obj_id: 1107
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   tags:
   - pirate
@@ -735,7 +741,7 @@ Undead Pirate B:
   enmp_index: 999
   model: B_CA030
   obj_id: 1108
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   tags:
   - pirate
@@ -761,7 +767,7 @@ Undead Pirate C:
   enmp_index: 999
   model: B_CA040
   obj_id: 1109
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   isnightmare: true
   tags:
@@ -828,7 +834,7 @@ Wight Knight:
   enmp_index: 999
   model: M_EX200
   obj_id: 118
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Wight Knight:
@@ -867,7 +873,7 @@ Aerial Viking:
   limiter: 13
   model: M_EX210_HB
   obj_id: 2413
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Aerial Viking:
@@ -926,6 +932,7 @@ Armor Xemnas I:
       msn: EH23_MS112
       program: 73
       replace_as: Armor Xemnas I
+      parent: Armor Xemnas II
       msn_replace_allowed: false
       size: 1.7
       room_size: 9.23
@@ -959,7 +966,7 @@ Armored Knight:
   limiter: 7
   model: M_EX760
   obj_id: 305
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Armored Knight:
@@ -978,7 +985,7 @@ Assassin:
   limiter: 10
   model: M_EX900
   obj_id: 309
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Assassin:
@@ -994,7 +1001,7 @@ Assault Rider:
   limiter: 20
   model: M_EX570
   obj_id: 9
-  sizeTag: big
+  sizeTag: memoryLarge
   tags:
   - large
   type: enemy
@@ -1015,7 +1022,7 @@ Axel I:
   size: 2.92
   obj_id: 2229
   type: boss
-  blacklist:
+  blacklist_source:
   - Storm Rider
   - Hydra
   - Saix
@@ -1027,7 +1034,6 @@ Axel I:
   - Xaldin
   - Xemnas
   - Cerberus
-  - Cerberus (Cups)
   variations:
     Axel I:
       vars:
@@ -1046,9 +1052,8 @@ Axel II:
   size: 3.74
   obj_id: 81
   type: boss
-  blacklist:
+  blacklist_source:
   - Xemnas # TELEPORTER
-  - Xemnas (Data) # TELEPORTER
   - Past Pete # TELEPORTER
   - Prison Keeper # TELEPORTER
   - Oogie Boogie # TELEPORTER
@@ -1060,13 +1065,9 @@ Axel II:
   - Vivi # TELEPORTER
   - Hayner # TELEPORTER
   - Seifer # TELEPORTER
-  - Seifer (1) # TELEPORTER
-  - Seifer (2) # TELEPORTER
-  - Seifer (3) # TELEPORTER
-  - Seifer (4) # TELEPORTER
   - Setzer # TELEPORTER
   - Demyx OC # TELEPORTER
-  - Axel (Data) # TELEPORTER
+  - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   - Storm Rider
   - Hydra
@@ -1079,7 +1080,6 @@ Axel II:
   - Xaldin
   - Xemnas
   - Cerberus
-  - Cerberus (Cups)
   variations:
     Axel II:
       vars:
@@ -1093,7 +1093,7 @@ Banzai:
   limiter: 0
   model: B_LK100_10
   obj_id: 666
-  replace_allowed: false
+  souce_replace_allowed: false
   type: boss
   variations:
     Banzai:
@@ -1145,7 +1145,7 @@ Barrel:
   size: 1.32
   room_size: 11.39
   obj_id: 129
-  replace_allowed: false
+  source_replace_allowed: false
   type: boss
   variations:
     Barrel:
@@ -1191,7 +1191,7 @@ Berserker:
   limiter: 15
   model: M_EX940
   obj_id: 313
-  sizeTag: big
+  sizeTag: memoryLarge
   tags:
   - large
   type: enemy
@@ -1238,7 +1238,7 @@ Bolt Tower:
   limiter: 1
   model: M_EX800
   obj_id: 1575
-  sizeTag: big
+  sizeTag: memoryLarge
   tags:
   - large
   type: enemy
@@ -1278,7 +1278,7 @@ Cannon Gun:
   limiter: 10
   model: M_EX650
   obj_id: 14
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   tags:
   - ranged
@@ -1301,7 +1301,7 @@ Cerberus:
   obj_id: 351
   size: 3.2
   type: boss
-  blacklist:
+  blacklist_destination:
   - Oogie Boogie
   - The Beast
   variations:
@@ -1315,7 +1315,6 @@ Cerberus:
     Cerberus (Cups):
       cups: false
       enabled: true
-      replace_allowed: false
       msn_list:
       - program: 194
         msn: HE_COL_2_10
@@ -1375,7 +1374,7 @@ Creeper:
   limiter: 9
   model: M_EX880
   obj_id: 317
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Creeper:
@@ -1390,7 +1389,7 @@ Crescendo:
   limiter: 7
   model: M_EX740
   obj_id: 124
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Crescendo:
@@ -1405,7 +1404,7 @@ Crimson Jazz:
   limiter: 17
   model: M_EX130
   obj_id: 73
-  sizeTag: medium
+  sizeTag: memoryMedium
   tags:
   - large
   - ranged
@@ -1432,7 +1431,7 @@ Crimson Jazz AL:
   limiter: 17
   model: M_EX130_AL
   obj_id: 1888
-  sizeTag: small
+  sizeTag: memorySmall
   tags:
   - al
   - ranged
@@ -1459,7 +1458,7 @@ Dancer:
   limiter: 15
   model: M_EX930
   obj_id: 312
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Dancer:
@@ -1515,7 +1514,6 @@ Demyx (Data):
   data: true
   enabled: true
   variationof: Demyx
-  replace_allowed: true
   enmp_index: 216
   hp: 100
   level: 99
@@ -1535,7 +1533,6 @@ Demyx (Data):
 Final Xemnas (Data):
   enabled: false
   variationof: Final Xemnas
-  replace_allowed: true
   msn_replace_allowed: false # this might break things
   enmp_index: 215
   hp: 100
@@ -1580,9 +1577,8 @@ Luxord (Data):
   msn_required: true
   obj_id: 2504
   type: boss
-  blacklist:
+  blacklist_destination:
   - Xemnas # TELEPORTER
-  - Xemnas (Data) # TELEPORTER
   - Past Pete # TELEPORTER
   - Prison Keeper # TELEPORTER
   - Oogie Boogie # TELEPORTER
@@ -1594,13 +1590,9 @@ Luxord (Data):
   - Vivi # TELEPORTER
   - Hayner # TELEPORTER
   - Seifer # TELEPORTER
-  - Seifer (1) # TELEPORTER
-  - Seifer (2) # TELEPORTER
-  - Seifer (3) # TELEPORTER
-  - Seifer (4) # TELEPORTER
   - Setzer # TELEPORTER
   - Demyx OC # TELEPORTER
-  - Axel (Data) # TELEPORTER
+  - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   variations:
     Luxord (Data):
@@ -1634,7 +1626,6 @@ Xaldin (Data):
   data: true
   enabled: true
   variationof: Xaldin
-  replace_allowed: true
   enmp_index: 222
   hp: 100
   isnightmare: true
@@ -1658,7 +1649,6 @@ Xemnas (Data):
   can_be_enemy: true
   enabled: true
   variationof: Xemnas
-  replace_allowed: false
   enmp_index: 215
   hp: 100
   isnightmare: true
@@ -1680,7 +1670,6 @@ Xigbar (Data):
   enabled: true
   data: true
   variationof: Xigbar
-  replace_allowed: false
   enmp_index: 227
   hp: 100
   isnightmare: true
@@ -1714,7 +1703,7 @@ Demyx:
   roommaxsize: 14.90
   program: 55
   type: boss
-  blacklist:
+  blacklist_destination:
   - Storm Rider # Having demyx start in the sky locks him in a weird loop
   variations:
     Demyx:
@@ -1728,7 +1717,7 @@ Demyx OC:
   limiter: 0
   model: B_EX120
   msn: HE17_MS105
-  replace_allowed: false
+  source_replace_allowed: false
   obj_id: 795
   size: 2.74
   room_size: 9.09
@@ -1759,7 +1748,7 @@ Devastator:
   limiter: 17
   model: M_EX680
   obj_id: 16
-  sizeTag: big
+  sizeTag: memoryLarge
   tags:
   - large
   - ranged
@@ -1786,7 +1775,7 @@ Dragoon:
   limiter: 17
   model: M_EX890
   obj_id: 308
-  sizeTag: big
+  sizeTag: memoryLarge
   tags:
   - large
   type: enemy
@@ -1807,7 +1796,7 @@ Driller Mole:
   limiter: 9
   model: M_EX700
   obj_id: 18
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Driller Mole:
@@ -1838,7 +1827,7 @@ Dusk:
   limiter: 13
   model: M_EX990
   obj_id: 318
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Dusk:
@@ -1857,7 +1846,7 @@ Ed:
   limiter: 0
   model: B_LK100_20
   obj_id: 667
-  replace_allowed: false
+  source_replace_allowed: false
   type: boss
   variations:
     Ed:
@@ -1899,7 +1888,7 @@ Fat Bandit:
   limiter: 13
   model: M_EX060
   obj_id: 1
-  sizeTag: big
+  sizeTag: memoryLarge
   tags:
   - large
   - ranged
@@ -1925,7 +1914,7 @@ Fiery Globe:
   limiter: 6
   model: M_AL020_FIRE
   obj_id: 76
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Fiery Globe:
@@ -1989,7 +1978,9 @@ Fortuneteller:
   limiter: 20
   model: M_EX620
   obj_id: 11
-  sizeTag: big
+  sizeTag: memoryLarge
+  tags:
+  - ranged
   type: enemy
   variations:
     Fortuneteller:
@@ -2008,7 +1999,7 @@ Gambler:
   limiter: 17
   model: M_EX950
   obj_id: 314
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Gambler:
@@ -2041,7 +2032,7 @@ Giant Sark:
   hp: 100
   level: 99
   limiter: 0
-  replace_allowed: false
+  source_replace_allowed: false
   model: N_TR010_BTL_L
   msn: TR09_MS205
   size: 1.41
@@ -2064,7 +2055,7 @@ Graveyard NM:
   limiter: 8
   model: M_EX790_HALLOWEEN_NM
   obj_id: 1775
-  sizeTag: small
+  sizeTag: memoryLarge
   tags:
   - large
   - ranged
@@ -2097,6 +2088,7 @@ Grim Reaper I:
       - 0
     Grim Reaper II:
       enabled: false
+      parent: Grim Reaper II
       isnightmare: true
       msn: CA01_MS204
       program: 54
@@ -2137,6 +2129,7 @@ Hades Cups:
   enmp_index: 156
   hp: 100
   level: 99
+  variationof: Hades II
   limiter: 34
   model: B_HE030_CLSM
   msn_replace_allowed: false
@@ -2145,9 +2138,8 @@ Hades Cups:
   obj_id: 2318
   size: 3.14
   type: boss
-  blacklist:
+  blacklist_source:
   - Xemnas # TELEPORTER
-  - Xemnas (Data) # TELEPORTER
   - Past Pete # TELEPORTER
   - Prison Keeper # TELEPORTER
   - Oogie Boogie # TELEPORTER
@@ -2159,19 +2151,13 @@ Hades Cups:
   - Vivi # TELEPORTER
   - Hayner # TELEPORTER
   - Seifer # TELEPORTER
-  - Seifer (1) # TELEPORTER
-  - Seifer (2) # TELEPORTER
-  - Seifer (3) # TELEPORTER
-  - Seifer (4) # TELEPORTER
   - Setzer # TELEPORTER
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
-  - Axel (Data) # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   variations:
     Hades Cups:
       enabled: true
-      replace_allowed: false
       msn_list:
       - program: 192
         msn: HE_COL_4_10
@@ -2182,7 +2168,6 @@ Hades Cups:
       vars:
       - 0
       - 0
-  whitelist: []
 Hades Escape:
   enabled: false
   enmp_index: 18
@@ -2191,7 +2176,7 @@ Hades Escape:
   limiter: 34
   model: B_HE030_HE05
   msn: HE05_MS102
-  replace_allowed: false
+  source_replace_allowed: false
   msn_replace_allowed: false
   obj_id: 2066
   replace_as: Hades Cups
@@ -2213,7 +2198,7 @@ Hades I:
   model: B_HE030_PART
   msn: HE06_MS101
   obj_id: 349
-  replace_allowed: false
+  source_replace_allowed: false
   replace_as: Hades Cups
   type: boss
   variations:
@@ -2241,8 +2226,8 @@ Hades II:
       - 1
       - 0
     Hades II (1):
-      enabled: false
-      replace_allowed: false
+      enabled: true
+      msn_replace_allowed: false
       msn_list:
       - program: 201
         msn: HE19_MS204
@@ -2283,7 +2268,7 @@ Hayner:
   obj_id: 1239
   size: 0.84
   type: boss
-  blacklist:
+  blacklist_source:
   - Storm Rider
   - Hydra
   - Saix
@@ -2295,7 +2280,6 @@ Hayner:
   - Xaldin
   - Xemnas
   - Cerberus
-  - Cerberus (Cups)
   variations:
     Hayner:
       enabled: false
@@ -2326,7 +2310,6 @@ Hercules:
   variations:
     Hercules:
       enabled: true
-      replace_allowed: false
       msn_list:
       - program: 191
         msn: HE_COLOSSEUM_3
@@ -2344,7 +2327,7 @@ Hook Bat:
   limiter: 8
   model: M_EX520
   obj_id: 4
-  sizeTag: small
+  sizeTag: memorySmall
   type: enemy
   variations:
     Hook Bat (20 0):
@@ -2362,7 +2345,7 @@ Hook Bat AL:
   limiter: 8
   model: M_EX520_AL
   obj_id: 1887
-  sizeTag: small
+  sizeTag: memorySmall
   tags:
   - al
   type: enemy
@@ -2486,13 +2469,11 @@ Hot Rod WI:
       - 0
 Hydra:
   enabled: true
-  whitelist:
+  whitelist_destination:
   - Armor Xemnas II
   - Groundshaker
   - Xemnas
-  - Xemnas (Data)
   - Final Xemnas
-  - Final Xemnas (Data)
   - Dark Thorn
   - Shadow Stalker
   - Storm Rider
@@ -2530,7 +2511,7 @@ Icy Cube:
   limiter: 7
   model: M_AL020_ICEE
   obj_id: 77
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Icy Cube:
@@ -2561,7 +2542,7 @@ Illuminator:
   limiter: 0
   model: B_CA000
   obj_id: 358
-  replace_allowed: false
+  source_replace_allowed: false
   type: boss
   variations:
     Illuminator:
@@ -2596,7 +2577,7 @@ Jafar:
   size: 1.86
   room_size: 11.19
   obj_id: 348
-  replace_allowed: false
+  source_replace_allowed: false
   type: boss
   variations:
     Jafar:
@@ -2611,7 +2592,7 @@ Lance Soldier:
   limiter: 13
   model: M_EX690
   obj_id: 17
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Lance Soldier:
@@ -2643,7 +2624,7 @@ Large Body:
   limiter: 15
   model: M_EX050
   obj_id: 303
-  sizeTag: big
+  sizeTag: memoryLarge
   tags:
   - large
   type: enemy
@@ -2667,9 +2648,8 @@ Larxene:
   room_size: 8.3
   type: boss
   unchanged_file_size: true
-  blacklist:
+  blacklist_destination:
   - Xemnas # TELEPORTER
-  - Xemnas (Data) # TELEPORTER
   - Past Pete # TELEPORTER
   - Prison Keeper # TELEPORTER
   - Oogie Boogie # TELEPORTER
@@ -2681,14 +2661,9 @@ Larxene:
   - Vivi # TELEPORTER
   - Hayner # TELEPORTER
   - Seifer # TELEPORTER
-  - Seifer (1) # TELEPORTER
-  - Seifer (2) # TELEPORTER
-  - Seifer (3) # TELEPORTER
-  - Seifer (4) # TELEPORTER
   - Setzer # TELEPORTER
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
-  - Axel (Data) # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   variations:
     Larxene:
@@ -2763,9 +2738,8 @@ Lexaeus:
   size: 3.9
   type: boss
   unchanged_file_size: true
-  blacklist:
+  blacklist_destination:
   - Vexen # player can get thrown oob
-  - Vexen (Data) # player can get thrown oob
   - Groundshaker # player can get thrown oob
   - Prison Keeper
   - Axel II
@@ -2791,7 +2765,7 @@ Living Bone:
   limiter: 17
   model: M_EX670
   obj_id: 15
-  sizeTag: big
+  sizeTag: memoryLarge
   tags:
   - large
   type: enemy
@@ -2826,7 +2800,7 @@ Lock:
   size: 0.92
   room_size: 11.39
   obj_id: 127
-  replace_allowed: false
+  source_replace_allowed: false
   type: boss
   variations:
     Lock:
@@ -2841,7 +2815,7 @@ Luna Bandit:
   limiter: 15
   model: M_EX630
   obj_id: 12
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Luna Bandit:
@@ -2865,9 +2839,8 @@ Luxord:
   size: 4.67
   room_size: 7.25
   program: 58
-  blacklist:
+  blacklist_destination:
   - Xemnas # TELEPORTER
-  - Xemnas (Data) # TELEPORTER
   - Past Pete # TELEPORTER
   - Prison Keeper # TELEPORTER
   - Oogie Boogie # TELEPORTER
@@ -2879,13 +2852,9 @@ Luxord:
   - Vivi # TELEPORTER
   - Hayner # TELEPORTER
   - Seifer # TELEPORTER
-  - Seifer (1) # TELEPORTER
-  - Seifer (2) # TELEPORTER
-  - Seifer (3) # TELEPORTER
-  - Seifer (4) # TELEPORTER
   - Setzer # TELEPORTER
   - Demyx OC # TELEPORTER
-  - Axel (Data) # TELEPORTER
+  - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   adds:
   - ObjectId: 2224 # ???
@@ -2923,7 +2892,7 @@ Magic Phantom:
   limiter: 15
   model: M_EX500_HB
   obj_id: 2403
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   tags:
   - ranged
@@ -2941,7 +2910,7 @@ Magnum Loader:
   limiter: 10
   model: M_EX600
   obj_id: 121
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Magnum Loader:
@@ -2962,7 +2931,7 @@ Marluxia:
   program: 145
   type: boss
   unchanged_file_size: true
-  blacklist:
+  blacklist_destination:
   - Vexen # restore count puts you OOB
   variations:
     Marluxia:
@@ -2985,7 +2954,7 @@ Minute Bomb:
   limiter: 9
   model: M_EX550
   obj_id: 7
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Minute Bomb:
@@ -3021,7 +2990,7 @@ Morning Star:
   limiter: 15
   model: M_EX710
   obj_id: 122
-  sizeTag: big
+  sizeTag: memoryLarge
   tags:
   - large
   type: enemy
@@ -3060,7 +3029,7 @@ Nightwalker:
   limiter: 15
   model: M_EX580
   obj_id: 10
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Nightwalker:
@@ -3074,8 +3043,8 @@ Bomb Bell A:
   limiter: 1
   model: EH_G_EX250
   obj_id: 2202
-  replace_allowed: false
-  sizeTag: small
+  source_replace_allowed: false
+  sizeTag: memorySmall
   type: enemy
   tags:
   - al
@@ -3154,7 +3123,7 @@ Pete OC I:
   model: N_EX760_BTL_MEGARA
   msn: HE08_MS106
   obj_id: 1723
-  replace_allowed: false
+  source_replace_allowed: false
   size: 1.57
   program: 115
   room_size: 10.48
@@ -3186,7 +3155,7 @@ Pete OC II:
       - 0
 Pete TR:
   enabled: false
-  replace_allowed: false # TODO supposedly demyx super crashes here and most bosses cause crashes here
+  source_replace_allowed: false # TODO supposedly demyx super crashes here and most bosses cause crashes here
   replace_as: Pete Cups
   hp: 100
   level: 99
@@ -3239,7 +3208,7 @@ Rapid Thruster:
   limiter: 7
   model: M_EX660
   obj_id: 304
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Rapid Thruster (Zipliner):
@@ -3266,7 +3235,7 @@ Rapid Thruster AL:
   limiter: 7
   model: M_EX660_AL
   obj_id: 1889
-  sizeTag: small
+  sizeTag: memorySmall
   tags:
   - al
   type: enemy
@@ -3402,9 +3371,8 @@ Roxas:
   size: 5.85
   room_size: 5.83
   type: boss
-  blacklist:
+  blacklist_destination:
   - Xemnas # TELEPORTER
-  - Xemnas (Data) # TELEPORTER
   - Past Pete # TELEPORTER
   - Prison Keeper # TELEPORTER
   - Oogie Boogie # TELEPORTER
@@ -3416,14 +3384,9 @@ Roxas:
   - Vivi # TELEPORTER
   - Hayner # TELEPORTER
   - Seifer # TELEPORTER
-  - Seifer (1) # TELEPORTER
-  - Seifer (2) # TELEPORTER
-  - Seifer (3) # TELEPORTER
-  - Seifer (4) # TELEPORTER
   - Setzer # TELEPORTER
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
-  - Axel (Data) # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   variations:
     Roxas:
@@ -3450,7 +3413,7 @@ Runemaster:
   limiter: 10
   model: M_EX530_HB
   obj_id: 2414
-  sizeTag: medium
+  sizeTag: memoryMedium
   tags:
   - large
   - ranged
@@ -3489,7 +3452,7 @@ Samurai:
   limiter: 20
   model: M_EX910
   obj_id: 310
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Samurai:
@@ -3550,7 +3513,7 @@ Seifer:
   msn_replace_allowed: false
   size: 0.98
   type: boss
-  blacklist:
+  blacklist_source:
   - Storm Rider
   - Hydra
   - Saix
@@ -3562,7 +3525,6 @@ Seifer:
   - Xaldin
   - Xemnas
   - Cerberus
-  - Cerberus (Cups)
   variations:
     Seifer:
       program: 180
@@ -3622,7 +3584,7 @@ Sephiroth:
   program: 75
   room_size: 6.57
   type: boss
-  blacklist:
+  blacklist_destination:
   - Seifer
   - Twilight Thorn
   - Vivi
@@ -3646,7 +3608,7 @@ Setzer:
   msn_replace_allowed: false
   size: 1.35
   type: boss
-  blacklist:
+  blacklist_source:
   - Storm Rider
   - Hydra
   - Saix
@@ -3658,7 +3620,6 @@ Setzer:
   - Xaldin
   - Xemnas
   - Cerberus
-  - Cerberus (Cups)
   variations:
     Setzer:
       msn_list:
@@ -3679,7 +3640,7 @@ Shadow:
   limiter: 8
   model: M_EX020
   obj_id: 302
-  sizeTag: small
+  sizeTag: memorySmall
   type: enemy
   variations:
     Shadow:
@@ -3814,7 +3775,7 @@ Silver Rock:
   limiter: 8
   model: M_EX110
   obj_id: 71
-  sizeTag: small
+  sizeTag: memorySmall
   type: enemy
   tags:
   - ranged
@@ -3836,7 +3797,7 @@ Sniper:
   limiter: 15
   model: M_EX920
   obj_id: 311
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   tags:
   - ranged
@@ -3854,7 +3815,7 @@ Soldier:
   limiter: 12
   model: M_EX010
   obj_id: 301
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Soldier:
@@ -3895,7 +3856,7 @@ Sorcerer:
   limiter: 34
   model: M_EX870
   obj_id: 316
-  sizeTag: small
+  sizeTag: memoryMedium
   tags:
   - large
   - ranged
@@ -3946,13 +3907,13 @@ Storm Rider:
       vars:
       - 0
       - 0
-  whitelist:
+  whitelist_destination:
   - Armor Xemnas II
   - Groundshaker
   - Xemnas
-  - Xemnas (Data)
+  - Hydra
+  - Luxord
   - Final Xemnas
-  - Final Xemnas (Data)
   - Dark Thorn
   - Shadow Stalker
   - Storm Rider
@@ -3986,7 +3947,7 @@ Surveillance Robot:
   limiter: 10
   model: M_EX770
   obj_id: 306
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   tags:
   - ranged
@@ -3999,7 +3960,6 @@ Terra:
   can_be_enemy: true
   data: true
   enabled: true
-  replace_allowed: false
   enmp_index: 220
   hp: 100
   isnightmare: true
@@ -4132,7 +4092,7 @@ Tornado Step:
   limiter: 10
   model: M_EX730
   obj_id: 123
-  sizeTag: medium
+  sizeTag: memoryMedium
   type: enemy
   variations:
     Tornado Step:
@@ -4166,7 +4126,7 @@ Trick Ghost:
   limiter: 15
   model: M_EX500
   obj_id: 2
-  sizeTag: big
+  sizeTag: memoryLarge
   type: enemy
   tags:
   - ranged
@@ -4189,7 +4149,7 @@ Twilight Thorn:
   room_size: 3.93
   program: 157
   type: boss
-  blacklist:
+  blacklist_source:
   - Storm Rider
   - Hydra
   - Saix
@@ -4201,7 +4161,6 @@ Twilight Thorn:
   - Xaldin
   - Xemnas
   - Cerberus
-  - Cerberus (Cups)
   variations:
     Twilight Thorn:
       vars:
@@ -4249,7 +4208,7 @@ Vivi:
   room_size: 11.57
   program: 85
   type: boss
-  blacklist:
+  blacklist_source:
   - Storm Rider
   - Hydra
   - Saix
@@ -4261,7 +4220,6 @@ Vivi:
   - Xaldin
   - Xemnas
   - Cerberus
-  - Cerberus (Cups)
   variations:
     Vivi:
       vars:
@@ -4354,7 +4312,7 @@ Xemnas:
       - 0
       - 0
 Xigbar:
-  blacklist:
+  blacklist_destination:
   - Grim Reaper 1
   - Twilight Thorn
   - Past Pete
@@ -4378,14 +4336,9 @@ Xigbar:
   - Vivi # TELEPORTER
   - Hayner # TELEPORTER
   - Seifer # TELEPORTER
-  - Seifer (1) # TELEPORTER
-  - Seifer (2) # TELEPORTER
-  - Seifer (3) # TELEPORTER
-  - Seifer (4) # TELEPORTER
   - Setzer # TELEPORTER
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
-  - Axel (Data) # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   enabled: true
   enmp_index: 123
@@ -4465,9 +4418,8 @@ Zexion:
   size: 4.44
   room_size: 9.14
   type: boss
-  blacklist:
+  blacklist_destination:
   - Xemnas # TELEPORTER
-  - Xemnas (Data) # TELEPORTER
   - Past Pete # TELEPORTER
   - Prison Keeper # TELEPORTER
   - Oogie Boogie # TELEPORTER
@@ -4479,14 +4431,9 @@ Zexion:
   - Vivi # TELEPORTER
   - Hayner # TELEPORTER
   - Seifer # TELEPORTER
-  - Seifer (1) # TELEPORTER
-  - Seifer (2) # TELEPORTER
-  - Seifer (3) # TELEPORTER
-  - Seifer (4) # TELEPORTER
   - Setzer # TELEPORTER
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
-  - Axel (Data) # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   variations:
     Zexion:

@@ -186,10 +186,10 @@ class KingdomHearts2:
         enemies = self.get_valid_enemies()
         enabled_enemies = [self.enemy_records[e] for e in enemies if self.enemy_records[e]["enabled"]]
         return enabled_enemies
-    def get_bosses(self, nightmare_mode=False, maxsize=LIMITED_SIZE, usefilters=True, getavail=True):
+    def get_bosses(self, nightmare_mode=False, maxsize=LIMITED_SIZE, usefilters=["boss", "enabled", "nightmare"], getavail=True):
         defaults = {
             "replace_as": None,
-            "replace_allowed": True,
+            "source_replace_allowed": True,
             "model": None,
             "msn_replace_allowed": True,
             "tags": [],
@@ -215,8 +215,10 @@ class KingdomHearts2:
             "enmp_index": None,
             "variations": [],
             "enabled": True,
-            "blacklist": [],
-            "whitelist": [],
+            "blacklist_source": [],
+            "blacklist_destination": [],
+            "whitelist_source": [],
+            "whitelist_destination": [],
             "adds": [],
             "subtracts": [],
             "msn_list": [],
@@ -246,17 +248,21 @@ class KingdomHearts2:
                 boss["category"] = '-'.join(sorted(boss["tags"]))
                 if boss["sizeTag"]:
                     boss["category"] = "-".join([boss["category"], boss["sizeTag"]])
+
+                if len(boss["category"]) > 0 and boss["category"][0] == "-":
+                    boss["category"] = boss["category"][1:]
                 if usefilters:
-                    if boss["type"] != 'boss':
+                    if "boss" in usefilters and boss["type"] != 'boss':
                         continue
-                    if not boss['enabled']:
+                    if "enabled" in usefilters and not boss['enabled']:
                         continue
-                    if nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
+                    if "nightmare" in usefilters and nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
                         continue
 
                 parent = boss["variationof"] or name
                 assert parent != None
-                boss["parent"] = parent
+                if not boss["parent"]:
+                    boss["parent"] = parent
                 if parent not in kidlist:
                     kidlist[parent] = []
                 kidlist[parent].append(name)
@@ -289,15 +295,19 @@ class KingdomHearts2:
                         continue
                     if source_boss["unchanged_file_size"] and (dest_boss["adds"] or dest_boss["subtracts"]):
                         continue
-                    # TODO is this right?
-                    if not dest_boss["replace_allowed"]:
+                    if not source_boss["source_replace_allowed"]:
                         continue
-                    # Blacklist / Whitelists are destination modifiers, not source modifiers
-                    if dest_boss["blacklist"]:
-                        if source_name in dest_boss["blacklist"]:
+                    if dest_boss["blacklist_destination"]:
+                        if source_name in dest_boss["blacklist_destination"]:
                             continue
-                    if dest_boss["whitelist"]:
-                        if source_name not in dest_boss["whitelist"]:
+                    if dest_boss["whitelist_destination"]:
+                        if source_name not in dest_boss["whitelist_destination"]:
+                            continue
+                    if source_boss["blacklist_source"]:
+                        if dest_name in source_boss["blacklist_source"]:
+                            continue
+                    if source_boss["whitelist_source"]:
+                        if dest_name not in source_boss["whitelist_source"]:
                             continue
                     if not source_boss["msn_replace_allowed"]:
                         if dest_boss["msn_required"]:
@@ -534,7 +544,7 @@ class KingdomHearts2:
                                     old_boss_parent = self.enemy_records[old_boss_object["parent"]]
                                     if old_boss_object["name"] in ["Final Xemnas (Clone)", "Final Xemnas (Clone) (Data)"]:
                                         continue # He gets removed later by subtracts, so don't replace
-                                    if not old_boss_object["replace_allowed"] and old_boss_object["name"] != "Seifer (2)":
+                                    if not old_boss_object["source_replace_allowed"] and old_boss_object["name"] != "Seifer (2)":
                                         continue
                                     # TODO SEIFER Can't be replaced here normally because it wants an enemy, so just put shadow roxas here
                                     if  old_boss_object["name"] == "Seifer (2)":
@@ -588,7 +598,7 @@ class KingdomHearts2:
                                     if not enemies:
                                         continue
                                     old_enemy_object = self.enemy_records[ent["name"]]
-                                    if not old_enemy_object["replace_allowed"]:
+                                    if not old_enemy_object["source_replace_allowed"]:
                                         continue
                                     if selected_enemy:
                                         new_enemy = selected_enemy

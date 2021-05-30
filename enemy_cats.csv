@@ -1,81 +1,76 @@
--small,,
-Aerial Knocker,Aeriel Champ-Aerial Knocker,
-Rabid Dog,Rabid Dog,
-Shadow,Shadow WI-Shadow (RAW)-Shadow,Shadow NM is missing wtf
-Hook Bat,Beffudler-Hook Bat,
-ranged-small,,
-Aeroplane,Aeroplane WI-Aeroplane,
-Emerald Blues,Emerald Blues-Spring Metal-Emerald Blues NM-Emerald Blues (TR),
-Silver Rock,Silver Rock,
--medium,,
-Armored Knight,Armored Knight (NM)-Armored Knight,
-Creeper Plant,Creeper Plant (NM)-Creeper Plant,
-Gargoyle Knight,Gargoyle Knight,
-Gargoyle Warrior,Gargoyle Warrior,
-Hammer Frame,Hammer Frame-Hammer Frame WI-Iron Hammer,
-Rapid Thruster,Rapid Thruster (RAW)-Rapid Thruster-Rapid Thruster WI,
-Soldier,Soldier (WI)-Soldier NM-Soldier,
-Strafer,Strafer-Strafer RAW,
-Wight Knight,Wight Knight NM-Wight Knight,
-Aerial Viking,Aerial Viking-Air Pirate,
-Creeper,Creeper,
-Crescendo,Crescendo,
-Driller Mole,Driller Mole NM-Driller Mole,
-Fiery Globe,Fiery Globe Treasure Room-Fiery Globe,
-Icy Cube,Icy Cube-Icy Cube Treasure Room,
-Magnum Loader,Magnum Loader,
-Minute Bomb,Minute Bomb WI-Minute Bomb,
-Nightwalker,Nightwalker,
-Tornado Step,Tornado Step,
-large-big,,
-Bolt Tower,Bolt Tower (RAW)-Bolt Tower-Bolt Tower DC-Bolt Tower (MU),
-Hot Rod,Mad Ride-Hot Rod-Hot Rod WI,
-Large Body,Large Body-Large Body WI,
-Assault Rider,Assault Rider,
-Berserker,Berserker,
-Dragoon,Dragoon,
-Living Bone,Living Bone,
-Morning Star,Morning Star,
-large-ranged,,
-Bookmaster,Bookmaster (TR)-Runemaster-Bookmaster,
-ranged-medium,,
-Cannon Gun,Cannon Gun-Cannon Gun WI-Camo Cannon,
-Surveillance Robot,Surveillance Robot-Surveillance Robot (TR),
-Magic Phantom,Magic Phantom,
-al-small,,
-Fortuneteller (AL),Fortuneteller (AL),
-Hook Bat AL,Hook Bat AL,
-Bomb Bell A,Bomb Bell A,
-Rapid Thruster AL,Rapid Thruster AL,
--big,,
-Neoshadow,Neoshadow-Neoshadow (NM),
-Assassin,Assassin,
-Dancer,Dancer,
-Dusk,Dusk,
-Fortuneteller,Fortuneteller,
-Gambler,Gambler,
-Lance Soldier,Lance Soldier-Lance Warrior,
-Luna Bandit,Luna Bandit,
-Samurai,Samurai,
-large-ranged-big,,
-Devastator,Devastator-Reckless,
-Fat Bandit,Fat Bandit,
-Sniper,Sniper,
-,,
-Shadow (NM),Shadow (NM),
-Soldier (TR),Soldier (TR),
-ranged-big,,
-Shaman,Necromancer-Shaman,
-Trick Ghost,Trick Ghost-Trick Ghost (NM),
-large-ranged-small,,
-Toy Soldier,Toy Soldier-Toy Soldier NM,
-Graveyard NM,Graveyard NM,
-Sorcerer,Sorcerer,
-pirate-big,,
-Undead Pirate A,Undead Pirate A,
-Undead Pirate B,Undead Pirate B,
-Undead Pirate C,Undead Pirate C,
-large-ranged-medium,,
-Crimson Jazz,Crimson Jazz,
-al-ranged-small,,
-Crimson Jazz AL,Crimson Jazz AL,
+memorySmall
+Aerial Knocker,Aeriel Champ
+Beffudler,Hook Bat
+Rabid Dog
+Shadow,Shadow (NM),Shadow (RAW),Shadow WI
+ranged-memorySmall
+Aeroplane,Aeroplane WI
+Emerald Blues,Emerald Blues (TR),Emerald Blues NM,Spring Metal
+Silver Rock
+memoryMedium
+Aerial Viking,Air Pirate
+Armored Knight,Armored Knight (NM)
+Creeper
+Crescendo
+Driller Mole,Driller Mole NM
+Fiery Globe,Fiery Globe Treasure Room
+Gargoyle Knight
+Gargoyle Warrior
+Hammer Frame,Hammer Frame WI,Iron Hammer
+Icy Cube,Icy Cube Treasure Room
+Magnum Loader
+Minute Bomb,Minute Bomb WI
+Nightwalker
+Rapid Thruster,Rapid Thruster (RAW),Rapid Thruster WI
+Soldier,Soldier (TR),Soldier (WI),Soldier NM
+Strafer,Strafer RAW
+Tornado Step
+Wight Knight,Wight Knight NM
+large-memoryLarge
+Assault Rider
+Berserker
+Bolt Tower,Bolt Tower (MU),Bolt Tower (RAW),Bolt Tower DC
+Dragoon
+Hot Rod,Hot Rod WI,Mad Ride
+Large Body,Large Body WI
+Living Bone
+Morning Star
+large-ranged-memoryMedium
+Bookmaster,Bookmaster (TR),Runemaster
+Crimson Jazz
+Sorcerer
+Toy Soldier,Toy Soldier NM
+ranged-memoryMedium
+Camo Cannon,Cannon Gun,Cannon Gun WI
+Creeper Plant,Creeper Plant (NM)
+Magic Phantom
+Surveillance Robot,Surveillance Robot (TR)
+al-ranged-memorySmall
+Crimson Jazz AL
+Fortuneteller (AL)
+memoryLarge
+Assassin
+Dancer
+Dusk
+Gambler
+Lance Soldier,Lance Warrior
+Luna Bandit
+Neoshadow,Neoshadow (NM)
+Samurai
+large-ranged-memoryLarge
+Devastator,Reckless
+Fat Bandit
+Graveyard NM
+Sniper
+ranged-memoryLarge
+Fortuneteller
+Necromancer,Shaman
+Trick Ghost,Trick Ghost (NM)
+pirate-memoryLarge
+Undead Pirate A
+Undead Pirate B
+Undead Pirate C
+al-memorySmall
+Bomb Bell A
+Hook Bat AL
+Rapid Thruster AL

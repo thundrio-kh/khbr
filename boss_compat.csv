@@ -1,45 +1,57 @@
-,Armor Xemnas I,Axel I,Axel II,Blizzard Lord,Cerberus,Cloud,Dark Thorn,Demyx,Grim Reaper I,Hades Cups,Hades II,Hercules,Hostile Program,Hydra,Larxene,Leon,Lexaeus,Luxord,Marluxia,Past Pete,Pete Cups,Pete OC II,Prison Keeper,Riku,Roxas,Saix,Sark,Scar,Seifer,Sephiroth,Shan-Yu,Storm Rider,Terra,The Experiment,Thresholder,Tifa,Twilight Thorn,Vexen,Volcano Lord,Xaldin,Xemnas,Xigbar,Yuffie,Zexion
-Armor Xemnas I,O,X,X,X,X,O,X,X,X,X,X,X,X,X,X,O,X,X,X,O,O,O,X,X,X,X,O,O,O,X,X,X,X,O,X,O,X,X,X,X,X,X,O,X
-Axel I,O,O,X,O,O,O,O,O,O,X,O,X,O,X,X,O,O,X,O,O,O,O,O,X,X,O,O,O,O,X,O,X,X,O,O,O,O,X,O,O,O,X,O,X
-Axel II,O,O,O,O,O,O,O,O,O,X,O,X,O,X,X,O,X,O,O,O,O,O,O,X,X,O,O,O,O,X,O,X,X,O,O,O,O,O,O,O,O,X,O,X
-Blizzard Lord,O,O,O,O,O,O,O,X,O,X,O,X,X,X,X,O,X,X,O,O,O,O,O,X,X,X,O,O,O,O,O,X,X,O,O,O,X,X,O,O,O,O,O,X
-Cerberus,O,X,X,O,O,O,O,O,O,X,O,X,O,X,X,O,O,X,X,O,O,O,O,X,X,X,O,O,X,O,X,O,X,O,O,O,X,X,O,O,O,O,O,O
-Cloud,O,O,O,O,O,O,O,X,O,X,O,X,X,X,O,O,X,X,O,O,O,O,O,X,O,X,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,X
-Dark Thorn,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X
-Demyx,O,X,X,O,O,O,O,O,O,X,O,X,O,X,X,O,O,X,X,O,O,O,O,X,X,X,O,O,X,O,X,X,X,O,O,O,X,X,O,O,O,O,O,X
-Grim Reaper I,X,X,X,X,X,O,X,X,O,X,X,X,O,X,X,O,X,X,X,O,O,O,X,X,X,X,O,O,O,X,X,X,X,O,O,O,X,X,O,X,X,X,O,X
-Hades Cups,O,O,O,O,O,O,O,X,O,O,O,X,X,X,O,O,X,X,O,O,O,O,O,X,O,X,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,X
-Hades II,O,O,O,O,O,O,O,O,O,X,O,X,O,X,O,O,O,O,O,O,O,O,O,X,O,O,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,O
-Hercules,O,O,O,O,O,O,O,X,O,X,O,O,X,X,O,O,X,X,O,O,O,O,O,X,O,X,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,X
-Hostile Program,O,O,O,O,O,O,O,O,O,X,O,X,O,X,O,O,O,O,O,O,O,O,O,X,X,O,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,O
-Hydra,O,X,X,O,O,O,O,O,O,X,O,X,O,O,X,O,O,O,O,O,O,O,O,X,X,O,O,O,X,O,O,X,X,O,O,O,X,X,O,O,O,O,O,O
-Larxene,X,O,O,O,O,O,X,O,O,X,O,X,X,X,O,O,O,X,O,O,O,O,X,X,O,O,O,O,O,O,X,X,X,X,X,O,O,O,O,O,O,O,O,O
-Leon,O,O,O,O,O,O,O,X,O,X,O,X,X,X,O,O,X,X,O,O,O,O,O,X,O,X,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,X
-Lexaeus,X,O,O,O,O,O,X,O,O,X,O,X,X,X,O,O,O,X,O,O,O,O,X,X,O,O,O,O,O,O,X,X,X,X,X,O,O,O,O,O,O,O,O,O
-Luxord,O,O,O,O,O,O,O,O,O,X,O,X,O,X,O,O,O,O,O,O,O,O,O,X,O,O,O,O,O,O,O,X,X,O,O,O,O,O,O,O,O,O,O,O
-Marluxia,X,O,O,O,O,O,X,O,O,X,O,X,X,X,O,O,O,X,O,O,O,O,X,X,O,O,O,O,O,O,X,X,X,X,X,O,O,O,O,O,O,O,O,O
-Past Pete,O,O,X,O,O,O,X,X,O,X,O,X,O,X,X,O,X,X,X,O,O,O,X,X,X,X,O,O,O,X,X,X,X,O,O,O,X,X,O,O,O,X,O,X
-Pete Cups,O,O,O,O,O,O,O,X,O,X,O,X,X,X,O,O,X,X,O,O,O,O,O,X,O,X,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,X
-Pete OC II,X,X,X,O,X,O,X,X,O,X,X,X,X,X,X,O,X,X,X,O,O,O,X,X,X,X,O,O,O,X,X,X,X,O,O,O,X,X,O,X,X,X,O,X
-Prison Keeper,O,X,X,O,O,O,O,O,O,X,O,X,O,X,X,O,X,X,O,O,O,O,O,X,X,O,O,O,X,O,O,X,X,O,O,O,X,X,O,O,O,X,O,X
-Riku,O,O,O,O,O,O,O,X,O,X,O,X,X,X,O,O,X,X,O,O,O,O,O,O,O,X,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,X
-Roxas,O,O,O,O,O,O,O,O,O,X,O,X,O,X,O,O,O,O,O,O,O,O,O,X,O,O,O,O,O,O,O,X,X,O,O,O,O,O,O,O,O,X,O,O
-Saix,O,X,X,O,O,O,O,O,O,X,O,X,O,X,X,O,O,O,O,O,O,O,O,X,X,O,O,O,X,O,O,X,X,O,O,O,X,X,O,O,O,O,O,O
-Sark,O,O,O,O,O,O,O,O,O,X,O,X,O,X,X,O,O,O,O,O,O,O,O,X,X,O,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,X,O,O
-Scar,O,O,O,O,O,O,O,O,O,X,O,X,O,X,O,O,O,O,O,O,O,O,O,X,O,O,O,O,O,O,O,X,X,O,O,O,O,O,O,O,O,X,O,O
-Seifer,O,O,X,O,O,O,O,X,O,X,O,X,X,X,X,O,X,X,O,O,O,O,O,X,X,X,O,O,O,X,O,X,X,O,O,O,O,X,O,O,O,X,O,X
-Sephiroth,O,O,O,O,O,O,O,O,O,X,O,X,O,X,O,O,O,O,O,O,O,O,O,X,O,O,O,O,O,O,O,X,X,O,O,O,O,O,O,O,O,O,O,O
-Shan-Yu,O,X,X,O,O,O,O,O,O,X,O,X,O,X,X,O,O,O,O,O,O,O,O,X,X,O,O,O,X,O,O,X,X,O,O,O,X,X,O,O,O,O,O,O
-Storm Rider,O,X,X,O,O,O,O,X,O,X,O,X,O,O,O,O,O,O,O,O,O,O,O,X,X,O,O,O,X,O,O,O,X,O,O,O,X,X,O,O,O,O,O,O
-Terra,O,O,O,O,O,O,O,O,O,X,O,X,O,O,O,O,O,O,O,O,O,O,O,X,O,O,O,O,O,O,O,O,O,O,O,O,O,O,O,O,O,O,O,O
-The Experiment,X,O,X,O,O,O,X,X,O,X,O,X,O,X,X,O,X,X,X,O,O,O,X,X,X,X,O,O,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,X
-Thresholder,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X
-Tifa,O,O,O,O,O,O,O,X,O,X,O,X,X,X,O,O,X,X,O,O,O,O,O,X,O,X,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,X
-Twilight Thorn,O,O,X,O,O,O,O,O,O,X,O,X,O,X,X,O,O,X,O,O,O,O,O,X,X,O,O,O,O,X,O,X,X,O,O,O,O,O,O,O,O,X,O,X
-Vexen,X,O,O,O,O,O,X,O,O,X,O,X,X,X,O,O,X,X,X,O,O,O,X,X,O,O,O,O,O,O,X,X,X,X,X,O,O,O,O,O,O,O,O,O
-Volcano Lord,O,O,O,O,O,O,O,X,O,X,O,X,X,X,X,O,X,X,O,O,O,O,O,X,X,X,O,O,O,O,O,X,X,O,O,O,X,X,O,O,O,O,O,X
-Xaldin,O,X,X,O,O,O,O,O,O,X,O,X,O,X,O,O,O,O,O,O,O,O,O,X,X,O,O,O,X,O,O,X,X,O,O,O,X,X,O,O,O,O,O,O
-Xemnas,O,X,X,O,O,O,O,O,O,X,O,X,O,O,X,O,O,X,O,O,O,O,O,X,X,O,O,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,O,X
-Xigbar,O,X,X,O,O,O,X,O,O,X,O,X,O,X,X,O,O,X,X,O,O,O,O,X,X,X,O,O,X,O,X,X,X,O,O,O,X,X,O,O,O,O,O,X
-Yuffie,O,O,O,O,O,O,O,X,O,X,O,X,X,X,O,O,X,X,O,O,O,O,O,X,O,X,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,X
-Zexion,O,O,O,O,O,O,O,O,O,X,O,X,O,X,O,O,O,O,O,O,O,O,O,X,O,O,O,O,O,O,O,X,X,O,O,O,O,X,O,O,O,O,O,O
+,Armor Xemnas II,Armor Xemnas I,Axel I,Axel II,Barbossa,Blizzard Lord,Cerberus,Cloud,Dark Thorn,Demyx,Final Xemnas,Grim Reaper I,Grim Reaper II,Groundshaker,Hades I,Hades II,Hayner,Hercules,Hostile Program,Hydra,Larxene,Leon,Lexaeus,Luxord,Marluxia,Oogie Boogie,Past Pete,Pete Cups,Pete OC II,Pete TR,Prison Keeper,Riku,Roxas,Saix,Sark,Scar,Seifer,Sephiroth,Setzer,Shadow Stalker,Shan-Yu,Storm Rider,Terra,The Beast,The Experiment,Thresholder,Tifa,Twilight Thorn,Vexen,Vivi,Volcano Lord,Xaldin,Xemnas,Xigbar,Yuffie,Zexion
+Armor Xemnas II,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,O,X,O,X,X,O,X,O,O,O,X,O,O,X,X,O,O,O,O,X,X,O,O,O,X,O,O,O,O,X,X,O,O,O,X,O,X
+Armor Xemnas I,O,O,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,X,O,X,X,X,X,X,X,X,O,X
+Axel I,O,O,O,O,X,O,X,O,O,X,X,O,X,X,X,O,X,O,O,X,X,O,O,X,O,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,O,X,O,O,O,O,X,X,O,X,X,X,O,X
+Axel II,X,O,X,O,X,O,X,O,O,X,X,O,X,X,X,O,X,O,O,X,X,O,X,X,O,X,X,O,O,X,X,O,X,X,O,O,X,X,X,X,X,X,O,X,O,O,O,X,O,X,O,X,X,X,O,X
+Barbossa,O,X,O,X,O,O,X,O,X,X,X,O,X,X,X,O,X,O,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,X,O,X,X,X,O,X
+Blizzard Lord,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,X,O,X,X,O,X,O,O,O,X,O,O,X,X,O,O,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,O,O,O,O,X
+Cerberus,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,O,X,X,X,O,O,O,X,O,O,X,X,O,O,O,O,X,X,X,O,X,X,O,O,O,X,X,X,O,O,O,O,O,O
+Cloud,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,X
+Dark Thorn,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X
+Demyx,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,O,X,X,X,O,O,O,X,O,O,X,X,O,O,O,O,X,X,X,X,X,X,O,O,O,X,X,X,O,O,O,O,O,X
+Final Xemnas,O,O,O,O,X,O,O,O,O,X,O,O,X,X,X,O,X,O,X,O,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,O,O,X,O,O,O,O,X,X,O,O,O,O,O,X
+Grim Reaper I,O,X,X,X,X,X,X,O,X,X,X,O,X,X,X,X,X,X,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,X,O,X,X,X,O,X
+Grim Reaper II,O,X,X,X,X,O,X,O,X,X,X,O,O,X,X,X,X,O,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,X,O,X,X,X,O,X
+Groundshaker,O,O,O,O,X,O,O,O,O,O,X,O,X,O,X,O,X,O,O,O,X,O,X,X,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,O,O,X,O,O,O,O,O,X,O,O,O,X,O,X
+Hades I,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X
+Hades II,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,O
+Hayner,O,O,O,O,X,O,X,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,X,X,O,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,O,X,O,O,O,O,X,X,O,X,X,X,O,X
+Hercules,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,X
+Hostile Program,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,O
+Hydra,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,O,X,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,O,X,X,O,O,O,X,X,X,O,O,O,O,O,O
+Larxene,O,X,O,O,X,O,O,O,X,O,X,O,X,X,X,O,X,O,X,X,O,O,O,X,O,X,O,O,O,X,X,O,O,O,O,O,O,O,X,X,X,X,O,X,X,X,O,O,O,X,O,O,O,O,O,O
+Leon,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,X
+Lexaeus,O,X,O,O,X,O,O,O,X,O,X,O,X,X,X,O,X,O,X,X,O,O,O,X,O,X,O,O,O,X,X,O,O,O,O,O,O,O,X,X,X,X,O,X,X,X,O,O,O,X,O,O,O,O,O,O
+Luxord,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,O,O,X,O,O,O,O,O,X,O,O,O,O,O,O
+Marluxia,O,X,O,O,X,O,O,O,X,O,X,O,X,X,X,O,X,O,X,X,O,O,O,X,O,X,O,O,O,X,X,O,O,O,O,O,O,O,X,X,X,X,O,X,X,X,O,O,O,X,O,O,O,O,O,O
+Oogie Boogie,O,X,X,X,X,O,X,O,X,X,X,O,X,X,X,X,X,O,O,X,X,O,X,X,X,O,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,X,O,X,X,X,O,X
+Past Pete,O,O,O,O,X,O,O,O,X,X,X,O,X,X,X,O,X,O,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,X,O,O,O,X,O,X
+Pete Cups,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,X
+Pete OC II,O,X,X,X,X,O,X,O,X,X,X,O,X,X,X,X,X,O,X,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,X,O,X,X,X,O,X
+Pete TR,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X
+Prison Keeper,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,X,X,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,X,O,X
+Riku,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,X
+Roxas,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,O,X,O,O,O,X,O,O
+Saix,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,O,O,O,O,O
+Sark,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,X,X,O,O,O,O,X,X,O,O,O,X,O,O
+Scar,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,O,X,O,O,O,X,O,O
+Seifer,O,O,O,O,X,O,X,O,O,X,X,O,X,X,X,O,X,O,X,X,X,O,X,X,O,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,O,X,O,O,O,O,X,X,O,X,X,X,O,X
+Sephiroth,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,O,X,O,O,O,O,O,O
+Setzer,O,O,O,O,X,O,X,O,O,X,X,O,X,X,X,O,X,O,X,X,X,O,X,X,O,X,O,O,O,X,X,O,X,X,O,O,O,X,O,X,X,X,O,X,O,O,O,O,X,X,O,X,X,X,O,X
+Shadow Stalker,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,O,X,X,O,X,O,X,X,O,X,X,X,X,X,X,O,X,X,X,X,X,X,X,O,X
+Shan-Yu,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,O,O,O,O,O
+Storm Rider,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,O,O,O,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,O,O,X,O,O,O,O,X,X,O,O,O,O,O,O
+Terra,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,O,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,O,O,X,O,O,O,O,O,X,O,O,O,O,O,O
+The Beast,O,X,O,X,X,O,X,O,X,X,X,O,X,X,X,X,X,O,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,O,O,O,O,X,X,X,O,X,X,X,O,X
+The Experiment,O,X,O,X,X,O,O,O,X,X,X,O,X,X,X,O,X,O,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,X,O,X,X,O,O,X
+Thresholder,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X
+Tifa,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,X
+Twilight Thorn,O,O,O,O,X,O,X,O,O,X,X,O,X,X,X,O,X,O,O,X,X,O,O,X,O,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,O,X,O,O,O,O,O,X,O,X,X,X,O,X
+Vexen,O,X,O,O,X,O,O,O,X,O,X,O,X,X,X,O,X,O,X,X,O,O,X,X,X,X,O,O,O,X,X,O,O,O,O,O,O,O,X,X,X,X,O,X,X,X,O,O,O,X,O,O,O,O,O,O
+Vivi,O,X,O,X,X,O,X,O,X,X,X,O,X,X,X,O,X,O,X,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,O,O,X,X,X,O,X
+Volcano Lord,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,X,O,X,X,O,X,O,O,O,X,O,O,X,X,O,O,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,O,O,O,O,X
+Xaldin,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,O
+Xemnas,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,O,X,O,O,X,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,O,O,X,O,O,O,O,O,X,O,O,O,X,O,X
+Xigbar,O,O,O,O,X,O,O,O,X,O,X,O,X,X,X,O,X,O,O,X,X,O,O,X,X,X,O,O,O,X,O,O,X,X,O,O,O,O,X,X,X,X,X,X,O,O,O,X,X,X,O,O,O,O,O,X
+Yuffie,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,X
+Zexion,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,O

@@ -1,5 +1,6 @@
 from khbr.randomizer import KingdomHearts2
-import random, os, json, time
+import random, os, json, time, string
+
 
 # These bosses I'm not planning on ever randomizing, so can exclude them
 exclusions = ["Banzai", "Barrel", "Demyx OC", "Ed", "Giant Sark", "MCP", "Hades Escape", "Jafar",
@@ -16,10 +17,10 @@ exclusions = ["Banzai", "Barrel", "Demyx OC", "Ed", "Giant Sark", "MCP", "Hades 
 # Illuminator
 
 
-exclusions_enemies = []
+
+start_time = time.time()
 
 kh2 = KingdomHearts2()
-
 bosses = kh2.get_bosses(usefilters=["boss"])
 
 sources = []
@@ -46,10 +47,8 @@ for source_boss_name in bosses:
         source_boss_compatability.append(compat)
     sources.append(source_boss_compatability)
 
-lines = [[""]+[s[0] for s in sources]]+sources
 
-with open("boss_compat.csv", "w") as f:
-    f.write("\n".join([",".join(s) for s in lines]))
+boss_lines = [[""]+[s[0] for s in sources]]+sources
 
 title_rows = []
 lines = []
@@ -67,5 +66,51 @@ for c in categories:
         if enemy["name"] == enemy["parent"]:
             lines.append(sorted(enemy["children"]))
 
-with open("enemy_cats.csv", "w") as f:
-    f.write("\n".join([",".join(s) for s in lines]))
+
+print("Data made: {}".format(time.time()-start_time))
+import sys; sys.stdout.flush()
+
+import pygsheets
+gc = pygsheets.authorize()
+# gc.set_batch_mode(True)
+
+print("Authorized: {}".format(time.time()-start_time))
+sys.stdout.flush()
+
+sheet = gc.open("KH2 Enemy/Boss Randomizer Notes")
+
+print("Sheet opened: {}".format(time.time()-start_time))
+sys.stdout.flush()
+
+boss_sheet=sheet[2]
+
+red = (1, 0, 0, 0)
+green = (0.5, 1, 0, 0)
+for row_index in range(len(boss_lines)):
+    row = boss_lines[row_index]
+    for col_index in range(len(row)):
+        value = row[col_index]
+        cell = boss_sheet.cell((row_index+1, col_index+1))
+        cell.value = value
+        if value in ['X', 'O']:
+            cell.color = green if value == 'O' else red
+        cell.update()
+
+print("Boss rows updated: {}".format(time.time()-start_time))
+sys.stdout.flush()
+
+enemy_sheet = sheet[1]
+
+for l in range(len(lines)):
+    enemy_sheet.update_row(l+1, lines[l])
+
+print("Enemy rows updated: {}".format(time.time()-start_time))
+sys.stdout.flush()
+
+for i in title_rows:
+    enemy_sheet.cell((i, 1)).set_text_format('bold', True).set_text_format('fontSize', 20)
+
+# gc.run_batch()
+
+print("All Done")
+import sys; sys.stdout.flush()
