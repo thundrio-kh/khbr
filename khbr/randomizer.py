@@ -340,8 +340,7 @@ class KingdomHearts2:
         num = random.randint(1,num_files)
         with open(os.path.join(dirname, str(num))) as f:
             return json.load(f)
-    def pickenemymapping(self, enemylist):
-        # Create separate lists for each set of tags used by enemies
+    def categorize_enemies(self, enemylist):
         categories = {}
         for e in enemylist:
             parent = self.enemy_records[e["parent"]]
@@ -349,6 +348,10 @@ class KingdomHearts2:
             if parent["category"] not in categories:
                 categories[parent["category"]] = {}
             categories[parent["category"]][parent["name"]] = parent
+        return categories
+    def pickenemymapping(self, enemylist):
+        # Create separate lists for each set of tags used by enemies
+        categories = self.categorize_enemies(enemylist)
         mapping = {}
         for c in categories:
             og = list(categories[c].values()) # Remove duplicate parent entries
