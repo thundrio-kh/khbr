@@ -123,8 +123,8 @@
         "parent": "Aerial Knocker",
         "variationof": null,
         "children": [
-            "Aeriel Champ",
-            "Aerial Knocker"
+            "Aerial Knocker",
+            "Aeriel Champ"
         ],
         "hp": 100,
         "limiter": 1,
@@ -270,8 +270,8 @@
         "parent": "Aeroplane",
         "variationof": null,
         "children": [
-            "Aeroplane WI",
-            "Aeroplane"
+            "Aeroplane",
+            "Aeroplane WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -519,8 +519,8 @@
         "variationof": null,
         "children": [
             "Bookmaster (TR)",
-            "Bookmaster",
-            "Runemaster"
+            "Runemaster",
+            "Bookmaster"
         ],
         "hp": 100,
         "limiter": 1,
@@ -914,8 +914,8 @@
         "parent": "Creeper Plant",
         "variationof": null,
         "children": [
-            "Creeper Plant (NM)",
-            "Creeper Plant"
+            "Creeper Plant",
+            "Creeper Plant (NM)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1062,10 +1062,10 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
-            "Emerald Blues NM",
             "Emerald Blues (TR)",
             "Emerald Blues",
-            "Spring Metal"
+            "Spring Metal",
+            "Emerald Blues NM"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2202,8 +2202,8 @@
         "parent": "Hammer Frame",
         "variationof": null,
         "children": [
-            "Iron Hammer",
             "Hammer Frame WI",
+            "Iron Hammer",
             "Hammer Frame"
         ],
         "hp": 100,
@@ -2304,8 +2304,8 @@
         "variationof": null,
         "children": [
             "Hot Rod",
-            "Hot Rod WI",
-            "Mad Ride"
+            "Mad Ride",
+            "Hot Rod WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3237,8 +3237,8 @@
         "parent": "Strafer",
         "variationof": null,
         "children": [
-            "Strafer RAW",
-            "Strafer"
+            "Strafer",
+            "Strafer RAW"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3442,8 +3442,8 @@
         "parent": "Toy Soldier",
         "variationof": null,
         "children": [
-            "Toy Soldier",
-            "Toy Soldier NM"
+            "Toy Soldier NM",
+            "Toy Soldier"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5187,8 +5187,8 @@
         "parent": "Wight Knight",
         "variationof": null,
         "children": [
-            "Wight Knight",
-            "Wight Knight NM"
+            "Wight Knight NM",
+            "Wight Knight"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5337,8 +5337,8 @@
         "parent": "Aerial Viking",
         "variationof": null,
         "children": [
-            "Aerial Viking",
-            "Air Pirate"
+            "Air Pirate",
+            "Aerial Viking"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -5700,8 +5700,8 @@
         "parent": "Armored Knight",
         "variationof": null,
         "children": [
-            "Armored Knight",
-            "Armored Knight (NM)"
+            "Armored Knight (NM)",
+            "Armored Knight"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -5968,6 +5968,9 @@
             0
         ],
         "name": "Axel II",
+        "tags": [
+            "organization"
+        ],
         "enabled": true,
         "enmp_index": 138,
         "hp": 100,
@@ -6015,14 +6018,13 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "isnightmare": false,
         "parent": "Axel II",
         "variationof": null,
         "children": [
-            "Axel (Data)",
-            "Axel II"
+            "Axel II",
+            "Axel (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6653,9 +6655,9 @@
         "variationof": null,
         "children": [
             "Bolt Tower",
-            "Bolt Tower (RAW)",
+            "Bolt Tower (MU)",
             "Bolt Tower DC",
-            "Bolt Tower (MU)"
+            "Bolt Tower (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6806,8 +6808,8 @@
         "parent": "Cannon Gun",
         "variationof": null,
         "children": [
-            "Cannon Gun",
             "Cannon Gun WI",
+            "Cannon Gun",
             "Camo Cannon"
         ],
         "msn_required": false,
@@ -7831,7 +7833,8 @@
         ],
         "name": "Axel (Data)",
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": true,
         "variationof": "Axel II",
@@ -7852,7 +7855,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Axel II",
         "children": [],
@@ -7880,7 +7883,8 @@
         ],
         "name": "Demyx (Data)",
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": true,
         "variationof": "Demyx",
@@ -7901,7 +7905,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Demyx",
         "children": [],
@@ -7930,7 +7934,8 @@
         ],
         "name": "Final Xemnas (Clone) (Data)",
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": false,
         "variationof": "Final Xemnas",
@@ -7961,7 +7966,7 @@
             "Final Xemnas (Data)"
         ],
         "replace_as": null,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Final Xemnas",
         "children": [],
@@ -7988,7 +7993,8 @@
         ],
         "name": "Final Xemnas (Data)",
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": false,
         "variationof": "Final Xemnas",
@@ -8020,7 +8026,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Final Xemnas",
         "children": [],
@@ -8047,7 +8053,8 @@
         ],
         "name": "Luxord (Data)",
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "variationof": "Luxord",
         "enabled": true,
@@ -8087,7 +8094,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Luxord",
         "children": [],
@@ -8113,7 +8120,8 @@
         ],
         "name": "Saix (Data)",
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "can_be_enemy": true,
         "variationof": "Saix",
@@ -8136,7 +8144,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Saix",
         "children": [],
@@ -8162,7 +8170,8 @@
         ],
         "name": "Xaldin (Data)",
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": true,
         "variationof": "Xaldin",
@@ -8183,7 +8192,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Xaldin",
         "children": [],
@@ -8211,7 +8220,8 @@
         ],
         "name": "Xemnas (Data)",
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "aimod": true,
         "can_be_enemy": true,
@@ -8234,7 +8244,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Xemnas",
         "children": [],
@@ -8261,7 +8271,8 @@
         "name": "Xigbar (Data)",
         "enabled": true,
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "variationof": "Xigbar",
         "enmp_index": 227,
@@ -8282,7 +8293,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Xigbar",
         "children": [],
@@ -8308,6 +8319,9 @@
             0
         ],
         "name": "Demyx",
+        "tags": [
+            "organization"
+        ],
         "enabled": true,
         "enmp_index": 83,
         "hp": 100,
@@ -8331,8 +8345,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "isnightmare": false,
         "parent": "Demyx",
         "variationof": null,
@@ -8521,8 +8534,8 @@
         "parent": "Devastator",
         "variationof": null,
         "children": [
-            "Reckless",
-            "Devastator"
+            "Devastator",
+            "Reckless"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9392,8 +9405,8 @@
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
-            "Final Xemnas (Data)",
-            "Final Xemnas"
+            "Final Xemnas",
+            "Final Xemnas (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12755,6 +12768,9 @@
             0
         ],
         "name": "Larxene",
+        "tags": [
+            "organization"
+        ],
         "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 192,
@@ -12795,8 +12811,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "parent": "Larxene",
         "variationof": null,
         "children": [
@@ -12854,7 +12869,8 @@
     },
     "Larxene (Data)": {
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": true,
         "msn": "HB33_FM_LAR_RE",
@@ -12901,7 +12917,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "parent": "Larxene",
         "variationof": null,
         "children": [],
@@ -13176,6 +13192,9 @@
             0
         ],
         "name": "Lexaeus",
+        "tags": [
+            "organization"
+        ],
         "enabled": true,
         "enmp_index": 190,
         "hp": 100,
@@ -13204,8 +13223,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "parent": "Lexaeus",
         "variationof": null,
         "children": [
@@ -13263,7 +13281,8 @@
     },
     "Lexaeus (Data)": {
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": true,
         "msn": "HB33_FM_LEX_RE",
@@ -13298,7 +13317,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "parent": "Lexaeus",
         "variationof": null,
         "children": [],
@@ -13627,6 +13646,9 @@
             0
         ],
         "name": "Luxord",
+        "tags": [
+            "organization"
+        ],
         "enabled": true,
         "enmp_index": 84,
         "hp": 100,
@@ -13669,14 +13691,13 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "isnightmare": false,
         "parent": "Luxord",
         "variationof": null,
         "children": [
-            "Luxord (Data)",
-            "Luxord"
+            "Luxord",
+            "Luxord (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -13892,6 +13913,9 @@
             0
         ],
         "name": "Marluxia",
+        "tags": [
+            "organization"
+        ],
         "enabled": true,
         "enmp_index": 191,
         "hp": 100,
@@ -13916,8 +13940,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "parent": "Marluxia",
         "variationof": null,
         "children": [
@@ -13976,7 +13999,8 @@
     },
     "Marluxia (Data)": {
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": true,
         "msn": "HB38_FM_MAR_RE",
@@ -14007,7 +14031,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "parent": "Marluxia",
         "variationof": null,
         "children": [],
@@ -15034,9 +15058,9 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
-            "Rapid Thruster (RAW)",
             "Rapid Thruster",
-            "Rapid Thruster WI"
+            "Rapid Thruster WI",
+            "Rapid Thruster (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -16626,6 +16650,9 @@
             0
         ],
         "name": "Roxas",
+        "tags": [
+            "organization"
+        ],
         "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 218,
@@ -16664,8 +16691,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "parent": "Roxas",
         "variationof": null,
         "children": [
@@ -16731,7 +16757,8 @@
     },
     "Roxas (Data)": {
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": true,
         "msn": "EH21_MS101_RE",
@@ -16777,7 +16804,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "parent": "Roxas",
         "variationof": null,
         "children": [],
@@ -16852,6 +16879,9 @@
             0
         ],
         "name": "Saix",
+        "tags": [
+            "organization"
+        ],
         "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 124,
@@ -16872,8 +16902,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "isnightmare": false,
         "parent": "Saix",
         "variationof": null,
@@ -17801,10 +17830,10 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow (RAW)",
             "Shadow (NM)",
-            "Shadow WI",
-            "Shadow"
+            "Shadow (RAW)",
+            "Shadow",
+            "Shadow WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18489,10 +18518,10 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
-            "Soldier NM",
-            "Soldier (WI)",
+            "Soldier",
             "Soldier (TR)",
-            "Soldier"
+            "Soldier (WI)",
+            "Soldier NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19674,8 +19703,8 @@
         "parent": "Trick Ghost",
         "variationof": null,
         "children": [
-            "Trick Ghost",
-            "Trick Ghost (NM)"
+            "Trick Ghost (NM)",
+            "Trick Ghost"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19792,7 +19821,8 @@
     },
     "Vexen (Data)": {
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": true,
         "program": 146,
@@ -19820,7 +19850,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Vexen",
         "variationof": null,
@@ -19848,6 +19878,9 @@
             0
         ],
         "name": "Vexen",
+        "tags": [
+            "organization"
+        ],
         "enabled": true,
         "enmp_index": 177,
         "hp": 100,
@@ -19867,8 +19900,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "isnightmare": false,
         "parent": "Vexen",
         "variationof": null,
@@ -20197,6 +20229,9 @@
             0
         ],
         "name": "Xaldin",
+        "tags": [
+            "organization"
+        ],
         "enabled": true,
         "enmp_index": 82,
         "hp": 100,
@@ -20216,8 +20251,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "parent": "Xaldin",
         "variationof": null,
         "children": [
@@ -20289,6 +20323,9 @@
             0
         ],
         "name": "Xemnas",
+        "tags": [
+            "organization"
+        ],
         "aimod": true,
         "can_be_enemy": true,
         "enabled": true,
@@ -20310,8 +20347,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "parent": "Xemnas",
         "variationof": null,
         "children": [
@@ -20410,6 +20446,9 @@
             "Armor Xemnas II"
         ],
         "enabled": true,
+        "tags": [
+            "organization"
+        ],
         "enmp_index": 123,
         "hp": 100,
         "level": 99,
@@ -20429,8 +20468,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "parent": "Xigbar",
         "variationof": null,
         "children": [
@@ -20744,6 +20782,9 @@
             0
         ],
         "name": "Zexion",
+        "tags": [
+            "organization"
+        ],
         "aimod": false,
         "enabled": true,
         "enmp_index": 193,
@@ -20781,8 +20822,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "organization",
         "isnightmare": false,
         "parent": "Zexion",
         "variationof": null,
@@ -20848,7 +20888,8 @@
     },
     "Zexion (Data)": {
         "tags": [
-            "data"
+            "data",
+            "organization"
         ],
         "enabled": true,
         "program": 152,
@@ -20894,7 +20935,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-organization",
         "isnightmare": false,
         "parent": "Zexion",
         "variationof": null,

@@ -174,7 +174,7 @@ class KingdomHearts2:
                                 "possible_values": ["Disabled", "Wild", "Selected Boss"], "hidden_values": ["One to One"]},#, "one_to_one_characters",
             "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
                                 "possible_values": [None] + sorted(self.get_valid_bosses()), "hidden_values": []},
-            "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game.",
+            "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game. Forces Boss Randomization Mode to be 'Wild'",
                                 "possible_values": [False, True], "hidden_values": []},
             "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
                                 "possible_values": [True, False], "hidden_values": []},
@@ -480,6 +480,8 @@ class KingdomHearts2:
                     duplicate_bosses = True
                     selected_boss = options["selected_boss"]
                 elif nightmare_bosses:
+                    bossmode = "Wild"
+                    duplicate_bosses = True
                     bosses = {b: bosses[b] for b in bosses if bosses[b]["isnightmare"]}
                 else:
                     bosses = {b: bosses[b] for b in bosses if len(set(bosses[b]["tags"]).intersection(set(exclude_tags))) == 0}
@@ -496,8 +498,6 @@ class KingdomHearts2:
                     if boss["name"] == boss["parent"]:
                         boss["children"] = [b for b in boss["children"] if b in bosses]
                         boss["available"] = [b for b in boss["available"] if b in bosses]
-                        if "Leon" in boss["available"]:
-                            0/0
                         for child_name in boss["children"]:
                             child = self.enemy_records[child_name]
                             child["variations"] = [b for b in boss["variations"] if b in bosses]
@@ -526,6 +526,7 @@ class KingdomHearts2:
             set_scaling = {}
             object_map = {}
             ai_mods = {}
+            data_replacements = {}
             self.set_spawns()
             for w in self.spawns:
                 world = self.spawns[w]
@@ -603,11 +604,20 @@ class KingdomHearts2:
                                             continue
                                         new_boss = bossmapping[ent["name"]]
                                     else:
-                                        new_boss = self.pick_boss_to_replace(old_boss_parent["available"])
+                                        if old_boss_parent["name"] in data_replacements:
+                                            bosspicklist = [data_replacements[old_boss_parent["name"]]]
+                                        else:
+                                            bosspicklist = old_boss_parent["available"]
+                                        new_boss = self.pick_boss_to_replace(bosspicklist)
                                     self.spoilers["boss"][ent["name"]] = new_boss
                                     if new_boss == ent["name"]:
                                         continue
                                     new_boss_object = self.enemy_records[new_boss]
+                                    # Due to how they use the same MSN in a lot of cases, org replacements should be the same between nobody + data versions
+                                    if "organization" in old_boss_object["tags"]:
+                                        new_parent = new_boss_object["parent"]
+                                        data_replacements[old_boss_parent["name"]] = new_parent
+
                                     if new_boss_object["replace_as"] and not selected_boss:
                                         new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
                                     changesmade = True
@@ -685,6 +695,9 @@ class KingdomHearts2:
             if diagnostics:
                 end_time = time.time()
                 print("Randomization Complete: {}s".format(end_time-start_time))
+            # DEBUG
+            # print(self.create_spoiler_text())
+            # 0/0
             rand =  {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "object_map": object_map, "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
             if seed:
                 rand["seed"] = seed
@@ -886,6 +899,7 @@ class KingdomHearts2:
                     ]
                 }
                 assets.append(asset)
+        #TODO need way for adjusting the final fight MSNs to make retrying retry directly, but the value is a bitflag array, so treat carefully
         if randomization.get("msn_map", ""):
             for oldmsn in randomization.get("msn_map"):
                 # Load in the entire msn to memory

@@ -1053,6 +1053,8 @@ Axel I:
       - 1
       - 0
 Axel II:
+  tags:
+  - organization
   enabled: true
   enmp_index: 138
   hp: 100
@@ -1514,6 +1516,7 @@ Dark Thorn:
 Axel (Data):
   tags:
   - data
+  - organization
   enabled: true
   variationof: Axel II
   enmp_index: 221
@@ -1535,6 +1538,7 @@ Axel (Data):
 Demyx (Data):
   tags:
   - data
+  - organization
   enabled: true
   variationof: Demyx
   enmp_index: 216
@@ -1556,6 +1560,7 @@ Demyx (Data):
 Final Xemnas (Data):
   tags:
   - data
+  - organization
   enabled: false
   variationof: Final Xemnas
   msn_replace_allowed: false # this might break things
@@ -1588,6 +1593,7 @@ Final Xemnas (Data):
 Luxord (Data):
   tags:
   - data
+  - organization
   variationof: Luxord
   enabled: true
   enmp_index: 219
@@ -1627,6 +1633,7 @@ Luxord (Data):
 Saix (Data):
   tags:
   - data
+  - organization
   can_be_enemy: true
   variationof: Saix
   enabled: true
@@ -1650,6 +1657,7 @@ Saix (Data):
 Xaldin (Data):
   tags:
   - data
+  - organization
   enabled: true
   variationof: Xaldin
   enmp_index: 222
@@ -1671,6 +1679,7 @@ Xaldin (Data):
 Xemnas (Data):
   tags:
   - data
+  - organization
   aimod: true
   can_be_enemy: true
   enabled: true
@@ -1695,6 +1704,7 @@ Xigbar (Data):
   enabled: true
   tags:
   - data
+  - organization
   variationof: Xigbar
   enmp_index: 227
   hp: 100
@@ -1714,6 +1724,8 @@ Xigbar (Data):
       - 0
       - 0
 Demyx:
+  tags:
+  - organization
   enabled: true
   enmp_index: 83
   hp: 100
@@ -2672,6 +2684,8 @@ Large Body:
       - 0
       - 0
 Larxene:
+  tags:
+  - organization
   can_be_enemy: true
   enabled: true
   enmp_index: 192
@@ -2712,6 +2726,7 @@ Larxene:
     Larxene (Data):
       tags:
       - data
+      - organization
       enabled: true
       msn: HB33_FM_LAR_RE
       program: 148
@@ -2765,6 +2780,8 @@ Leon:
       - 2
       - 0
 Lexaeus:
+  tags:
+  - organization
   enabled: true
   enmp_index: 190
   hp: 100
@@ -2793,6 +2810,7 @@ Lexaeus:
     Lexaeus (Data):
       tags:
       - data
+      - organization
       enabled: true
       msn: HB33_FM_LEX_RE
       program: 147
@@ -2868,6 +2886,8 @@ Luna Bandit:
       - 1
       - 0
 Luxord:
+  tags:
+  - organization
   enabled: true
   enmp_index: 84
   hp: 100
@@ -2958,6 +2978,8 @@ Magnum Loader:
       - 0
       - 0
 Marluxia:
+  tags:
+  - organization
   enabled: true
   enmp_index: 191
   hp: 100
@@ -2982,6 +3004,7 @@ Marluxia:
     Marluxia (Data):
       tags:
       - data
+      - organization
       enabled: true
       msn: HB38_FM_MAR_RE
       program: 150
@@ -3402,6 +3425,8 @@ Riku:
       - 0
       - 0
 Roxas:
+  tags:
+  - organization
   can_be_enemy: true
   enabled: true
   enmp_index: 218
@@ -3442,6 +3467,7 @@ Roxas:
     Roxas (Data):
       tags:
       - data
+      - organization
       enabled: true
       msn: EH21_MS101_RE
       program: 99
@@ -3469,6 +3495,8 @@ Runemaster:
       - 0
       - 0
 Saix:
+  tags:
+  - organization
   can_be_enemy: true
   enabled: true
   enmp_index: 124
@@ -4217,6 +4245,8 @@ Twilight Thorn:
       - 0
       - 0
 Vexen:
+  tags:
+  - organization
   enabled: true
   enmp_index: 177
   hp: 100
@@ -4233,6 +4263,7 @@ Vexen:
     Vexen (Data):
       tags:
       - data
+      - organization
       enabled: true
       program: 146
       msn: HB32_FM_VEX_RE
@@ -4326,6 +4357,8 @@ Wight Knight NM:
       - 0
       - 0
 Xaldin:
+  tags:
+  - organization
   enabled: true
   enmp_index: 82
   hp: 100
@@ -4345,6 +4378,8 @@ Xaldin:
       - 0
       - 0
 Xemnas:
+  tags:
+  - organization
   aimod: true
   can_be_enemy: true
   enabled: true
@@ -4395,6 +4430,8 @@ Xigbar:
   - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
   enabled: true
+  tags:
+  - organization
   enmp_index: 123
   hp: 100
   level: 99
@@ -4463,6 +4500,8 @@ Yuffie:
       - 2
       - 0
 Zexion:
+  tags:
+  - organization
   aimod: false # TODO current ai mod is a bit crashy I think, so just ban from weird rooms
   enabled: true
   enmp_index: 193
@@ -4502,6 +4541,7 @@ Zexion:
     Zexion (Data):
       tags:
       - data
+      - organization
       enabled: true
       program: 152
       msn: HB34_FM_ZEX_RE
