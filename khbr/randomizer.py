@@ -134,6 +134,7 @@ class AreaDataScript:
 class KingdomHearts2:
     def __init__(self):
         self.schemaversion = "01"
+        self.spoilers = {"enemy": {}, "boss": {}}
         self.name = "kh2"
         self.unlimited_memory = False
         self.spawns = None
@@ -182,6 +183,17 @@ class KingdomHearts2:
             "data_bosses": {"display_name": "Randomize Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra and Sephiroth",
                                 "possible_values": [False, True], "hidden_values": []}
         }
+    def create_spoiler_text(self):
+        text = ''
+        if self.spoilers["boss"]:
+            text += 'BOSSES\n'
+            for oldboss in sorted(self.spoilers["boss"]):
+                text += "\t{} became {}\n".format(self.spoilers["boss"][oldboss])
+            text += '\n'
+        if self.spoilers["enemy"]:
+            text += 'ENEMIES\n'
+            for oldenemy in sorted(self.spoilers["enemy"]):
+                text += "\t{} became {}\n".format(self.spoilers["enemy"][oldenemy])
     def get_enemies(self):
         enemies = self.get_valid_enemies()
         enabled_enemies = [self.enemy_records[e] for e in enemies if self.enemy_records[e]["enabled"]]
@@ -381,7 +393,7 @@ class KingdomHearts2:
                         if old_variation_name in mapping:
                             raise Exception("TESTCHECK, something is getting incorrectly overwritten")
                         mapping[old_variation_name] = new_variation_name
-        enemylistnames = [e["name"] for e in enemylist]
+                        self.spoilers["enemy"][old_variation_name] = new_variation_name
         assert len(enemylist) == len(list(mapping.keys()))
         
         return mapping 
@@ -558,6 +570,7 @@ class KingdomHearts2:
                                         new_boss = bossmapping[ent["name"]]
                                     else:
                                         new_boss = self.pick_boss_to_replace(old_boss_parent["available"])
+                                    self.spoilers["boss"][ent["name"]] = new_boss
                                     if new_boss == ent["name"]:
                                         continue
                                     new_boss_object = self.enemy_records[new_boss]
@@ -1101,8 +1114,12 @@ class Randomizer:
         
         assets = game.generate_files(moddir, randomization)
         if dumpspoilers:
-            with open(os.path.join(moddir, "spoilers.json"), "w") as f:
-                json.dump(randomization, f, indent=4)
+            if game.spoilers["boss"] or game.spoilers["enemy"]:
+                with open(os.path.join(moddir, "spoilers.txt")) as f:
+                    f.write(game.create_spoiler_text())
+            else:
+                with open(os.path.join(moddir, "spoilers.json"), "w") as f:
+                    json.dump(randomization, f, indent=4)
         mod_yaml["assets"] = assets
         self._create_yaml(os.path.join(moddir, "mod.yml"), mod_yaml)
         
