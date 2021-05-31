@@ -123,8 +123,8 @@
         "parent": "Aerial Knocker",
         "variationof": null,
         "children": [
-            "Aerial Knocker",
-            "Aeriel Champ"
+            "Aeriel Champ",
+            "Aerial Knocker"
         ],
         "hp": 100,
         "limiter": 1,
@@ -270,8 +270,8 @@
         "parent": "Aeroplane",
         "variationof": null,
         "children": [
-            "Aeroplane",
-            "Aeroplane WI"
+            "Aeroplane WI",
+            "Aeroplane"
         ],
         "hp": 100,
         "limiter": 1,
@@ -518,9 +518,9 @@
         "parent": "Bookmaster",
         "variationof": null,
         "children": [
+            "Bookmaster",
             "Bookmaster (TR)",
-            "Runemaster",
-            "Bookmaster"
+            "Runemaster"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1062,10 +1062,10 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
-            "Emerald Blues (TR)",
-            "Emerald Blues",
             "Spring Metal",
-            "Emerald Blues NM"
+            "Emerald Blues (TR)",
+            "Emerald Blues NM",
+            "Emerald Blues"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2202,8 +2202,8 @@
         "parent": "Hammer Frame",
         "variationof": null,
         "children": [
-            "Hammer Frame WI",
             "Iron Hammer",
+            "Hammer Frame WI",
             "Hammer Frame"
         ],
         "hp": 100,
@@ -2303,9 +2303,9 @@
         "parent": "Hot Rod",
         "variationof": null,
         "children": [
-            "Hot Rod",
+            "Hot Rod WI",
             "Mad Ride",
-            "Hot Rod WI"
+            "Hot Rod"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3237,8 +3237,8 @@
         "parent": "Strafer",
         "variationof": null,
         "children": [
-            "Strafer",
-            "Strafer RAW"
+            "Strafer RAW",
+            "Strafer"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5700,8 +5700,8 @@
         "parent": "Armored Knight",
         "variationof": null,
         "children": [
-            "Armored Knight (NM)",
-            "Armored Knight"
+            "Armored Knight",
+            "Armored Knight (NM)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6023,8 +6023,8 @@
         "parent": "Axel II",
         "variationof": null,
         "children": [
-            "Axel II",
-            "Axel (Data)"
+            "Axel (Data)",
+            "Axel II"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6655,8 +6655,8 @@
         "variationof": null,
         "children": [
             "Bolt Tower",
-            "Bolt Tower (MU)",
             "Bolt Tower DC",
+            "Bolt Tower (MU)",
             "Bolt Tower (RAW)"
         ],
         "msn_required": false,
@@ -6808,9 +6808,9 @@
         "parent": "Cannon Gun",
         "variationof": null,
         "children": [
-            "Cannon Gun WI",
+            "Camo Cannon",
             "Cannon Gun",
-            "Camo Cannon"
+            "Cannon Gun WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -8790,8 +8790,8 @@
         "parent": "Driller Mole",
         "variationof": null,
         "children": [
-            "Driller Mole NM",
-            "Driller Mole"
+            "Driller Mole",
+            "Driller Mole NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9405,8 +9405,8 @@
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
-            "Final Xemnas",
-            "Final Xemnas (Data)"
+            "Final Xemnas (Data)",
+            "Final Xemnas"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -10805,8 +10805,8 @@
         "parent": "Hook Bat",
         "variationof": null,
         "children": [
-            "Hook Bat",
-            "Beffudler"
+            "Beffudler",
+            "Hook Bat"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12640,8 +12640,8 @@
         "parent": "Lance Soldier",
         "variationof": null,
         "children": [
-            "Lance Soldier",
-            "Lance Warrior"
+            "Lance Warrior",
+            "Lance Soldier"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12739,8 +12739,8 @@
         "parent": "Large Body",
         "variationof": null,
         "children": [
-            "Large Body",
-            "Large Body WI"
+            "Large Body WI",
+            "Large Body"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -17830,10 +17830,10 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow (NM)",
-            "Shadow (RAW)",
+            "Shadow WI",
             "Shadow",
-            "Shadow WI"
+            "Shadow (RAW)",
+            "Shadow (NM)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18519,9 +18519,9 @@
         "variationof": null,
         "children": [
             "Soldier",
+            "Soldier NM",
             "Soldier (TR)",
-            "Soldier (WI)",
-            "Soldier NM"
+            "Soldier (WI)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19703,8 +19703,8 @@
         "parent": "Trick Ghost",
         "variationof": null,
         "children": [
-            "Trick Ghost (NM)",
-            "Trick Ghost"
+            "Trick Ghost",
+            "Trick Ghost (NM)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20351,8 +20351,8 @@
         "parent": "Xemnas",
         "variationof": null,
         "children": [
-            "Xemnas",
-            "Xemnas (Data)"
+            "Xemnas (Data)",
+            "Xemnas"
         ],
         "msn_required": false,
         "msn_source_as": null,
