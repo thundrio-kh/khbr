@@ -282,8 +282,8 @@
         "parent": "Aeroplane",
         "variationof": null,
         "children": [
-            "Aeroplane WI",
-            "Aeroplane"
+            "Aeroplane",
+            "Aeroplane WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -540,8 +540,8 @@
         "parent": "Bookmaster",
         "variationof": null,
         "children": [
-            "Runemaster",
             "Bookmaster (TR)",
+            "Runemaster",
             "Bookmaster"
         ],
         "hp": 100,
@@ -1107,8 +1107,8 @@
         "variationof": null,
         "children": [
             "Emerald Blues",
-            "Spring Metal",
             "Emerald Blues NM",
+            "Spring Metal",
             "Emerald Blues (TR)"
         ],
         "hp": 100,
@@ -2288,8 +2288,8 @@
         "parent": "Hammer Frame",
         "variationof": null,
         "children": [
-            "Hammer Frame",
             "Iron Hammer",
+            "Hammer Frame",
             "Hammer Frame WI"
         ],
         "hp": 100,
@@ -2393,8 +2393,8 @@
         "parent": "Hot Rod",
         "variationof": null,
         "children": [
-            "Hot Rod",
             "Mad Ride",
+            "Hot Rod",
             "Hot Rod WI"
         ],
         "hp": 100,
@@ -3578,8 +3578,8 @@
         "parent": "Toy Soldier",
         "variationof": null,
         "children": [
-            "Toy Soldier",
-            "Toy Soldier NM"
+            "Toy Soldier NM",
+            "Toy Soldier"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5914,8 +5914,8 @@
         "parent": "Armored Knight",
         "variationof": null,
         "children": [
-            "Armored Knight (NM)",
-            "Armored Knight"
+            "Armored Knight",
+            "Armored Knight (NM)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6896,9 +6896,9 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower (MU)",
             "Bolt Tower DC",
             "Bolt Tower",
+            "Bolt Tower (MU)",
             "Bolt Tower (RAW)"
         ],
         "msn_required": false,
@@ -7056,9 +7056,9 @@
         "parent": "Cannon Gun",
         "variationof": null,
         "children": [
+            "Cannon Gun",
             "Cannon Gun WI",
-            "Camo Cannon",
-            "Cannon Gun"
+            "Camo Cannon"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -8035,6 +8035,10 @@
         "program": 79,
         "size": 4.19,
         "room_size": 14.0,
+        "roommaxsize": 17.03,
+        "blacklist_source": [
+            "Storm Rider"
+        ],
         "adds": [
             {
                 "ObjectId": 644,
@@ -8064,8 +8068,6 @@
         "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
-        "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -8075,9 +8077,26 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
+            "Armor Xemnas II",
+            "Axel I",
+            "Blizzard Lord",
+            "Cloud",
             "Dark Thorn",
+            "Grim Reaper I",
+            "Hercules",
+            "Hostile Program",
+            "Leon",
             "Past Pete",
+            "Pete Cups",
+            "Pete OC II",
+            "Riku",
+            "Sark",
+            "Scar",
             "Seifer",
+            "The Experiment",
+            "Thresholder",
+            "Tifa",
+            "Volcano Lord",
             "Yuffie"
         ]
     },
@@ -8180,7 +8199,7 @@
         "obj_edits": {}
     },
     "Final Xemnas (Clone) (Data)": {
-        "replace_allowed": false,
+        "source_replace_allowed": false,
         "vars": [
             0,
             0
@@ -8215,7 +8234,6 @@
             "Final Xemnas (Data)"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
         "tags": [],
         "cups": false,
         "data": false,
@@ -8597,8 +8615,8 @@
         "parent": "Demyx",
         "variationof": null,
         "children": [
-            "Demyx",
-            "Demyx (Data)"
+            "Demyx (Data)",
+            "Demyx"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -8787,8 +8805,8 @@
         "parent": "Devastator",
         "variationof": null,
         "children": [
-            "Devastator",
-            "Reckless"
+            "Reckless",
+            "Devastator"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9053,8 +9071,8 @@
         "parent": "Driller Mole",
         "variationof": null,
         "children": [
-            "Driller Mole NM",
-            "Driller Mole"
+            "Driller Mole",
+            "Driller Mole NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9576,8 +9594,8 @@
         "parent": "Fiery Globe",
         "variationof": null,
         "children": [
-            "Fiery Globe",
-            "Fiery Globe Treasure Room"
+            "Fiery Globe Treasure Room",
+            "Fiery Globe"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9751,7 +9769,7 @@
         ]
     },
     "Final Xemnas (Copy)": {
-        "replace_allowed": false,
+        "source_replace_allowed": false,
         "vars": [
             0,
             0
@@ -9787,7 +9805,6 @@
             "Final Xemnas (Copy)"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
         "tags": [],
         "cups": false,
         "data": false,
@@ -10702,8 +10719,8 @@
         "parent": "Hades II",
         "variationof": null,
         "children": [
-            "Hades II",
-            "Hades Cups"
+            "Hades Cups",
+            "Hades II"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -10775,7 +10792,7 @@
                 "room_size": 8.23,
                 "enabled": false,
                 "msn_replace_allowed": false,
-                "replace_allowed": false
+                "source_replace_allowed": false
             },
             {
                 "program": 202,
@@ -10880,7 +10897,7 @@
     },
     "Hayner": {
         "enabled": false,
-        "replace_allowed": false,
+        "source_replace_allowed": false,
         "msn_list": [
             {
                 "program": 182,
@@ -10924,7 +10941,6 @@
             "Hayner"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
         "tags": [],
         "cups": false,
         "data": false,
@@ -10953,33 +10969,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas II",
-            "Armor Xemnas I",
-            "Axel I",
-            "Axel II",
-            "Blizzard Lord",
-            "Cloud",
-            "Dark Thorn",
-            "Grim Reaper I",
-            "Hades II",
-            "Hayner",
-            "Hercules",
-            "Leon",
-            "Marluxia",
-            "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Riku",
-            "Sark",
-            "Scar",
-            "Seifer",
-            "Terra",
-            "The Experiment",
-            "Thresholder",
-            "Tifa",
-            "Twilight Thorn",
-            "Volcano Lord",
-            "Yuffie"
+            "Hayner"
         ]
     },
     "Hercules": {
@@ -12793,8 +12783,8 @@
         "parent": "Icy Cube",
         "variationof": null,
         "children": [
-            "Icy Cube Treasure Room",
-            "Icy Cube"
+            "Icy Cube",
+            "Icy Cube Treasure Room"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -13051,8 +13041,8 @@
         "parent": "Lance Soldier",
         "variationof": null,
         "children": [
-            "Lance Soldier",
-            "Lance Warrior"
+            "Lance Warrior",
+            "Lance Soldier"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -13154,8 +13144,8 @@
         "parent": "Large Body",
         "variationof": null,
         "children": [
-            "Large Body WI",
-            "Large Body"
+            "Large Body",
+            "Large Body WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -14510,8 +14500,8 @@
         "parent": "Minute Bomb",
         "variationof": null,
         "children": [
-            "Minute Bomb",
-            "Minute Bomb WI"
+            "Minute Bomb WI",
+            "Minute Bomb"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -15521,8 +15511,8 @@
         "variationof": null,
         "children": [
             "Rapid Thruster",
-            "Rapid Thruster (RAW)",
-            "Rapid Thruster WI"
+            "Rapid Thruster WI",
+            "Rapid Thruster (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -17115,7 +17105,7 @@
         "msn": "MU07_MS201",
         "msn_replace_allowed": false,
         "obj_id": 1596,
-        "replace_allowed": false,
+        "source_replace_allowed": false,
         "size": 1.22,
         "program": 76,
         "room_size": 8.62,
@@ -17124,7 +17114,6 @@
             "Riku"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
         "tags": [],
         "cups": false,
         "data": false,
@@ -17151,41 +17140,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas II",
-            "Armor Xemnas I",
-            "Axel I",
-            "Axel II",
-            "Blizzard Lord",
-            "Cerberus",
-            "Cloud",
-            "Dark Thorn",
-            "Grim Reaper I",
-            "Hades II",
-            "Hercules",
-            "Larxene",
-            "Leon",
-            "Marluxia",
-            "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Prison Keeper",
-            "Riku",
-            "Roxas",
-            "Sark",
-            "Scar",
-            "Seifer",
-            "Sephiroth",
-            "Shan-Yu",
-            "Terra",
-            "The Experiment",
-            "Thresholder",
-            "Tifa",
-            "Twilight Thorn",
-            "Volcano Lord",
-            "Xaldin",
-            "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Riku"
         ]
     },
     "Roxas": {
@@ -17453,8 +17408,8 @@
         "parent": "Saix",
         "variationof": null,
         "children": [
-            "Saix",
-            "Saix (Data)"
+            "Saix (Data)",
+            "Saix"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -17964,7 +17919,7 @@
         "msn": "TT04_MS108",
         "replace_as": "Seifer",
         "msn_replace_allowed": true,
-        "replace_allowed": false,
+        "source_replace_allowed": false,
         "program": 78,
         "room_size": 7.77,
         "vars": [
@@ -18004,7 +17959,6 @@
             "Seifer (3)",
             "Seifer (4)"
         ],
-        "source_replace_allowed": true,
         "tags": [],
         "cups": false,
         "data": false,
@@ -18399,10 +18353,10 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow",
+            "Shadow WI",
             "Shadow (NM)",
             "Shadow (RAW)",
-            "Shadow WI"
+            "Shadow"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18542,6 +18496,7 @@
         "obj_id": 355,
         "size": 4.28,
         "room_size": 13.52,
+        "roommaxsize": 16.1,
         "program": 78,
         "adds": [
             {
@@ -18576,7 +18531,6 @@
         "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
-        "roommaxsize": null,
         "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
@@ -18587,12 +18541,25 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
+            "Armor Xemnas II",
+            "Blizzard Lord",
+            "Cloud",
+            "Grim Reaper I",
+            "Hercules",
+            "Hostile Program",
+            "Leon",
             "Past Pete",
+            "Pete Cups",
+            "Pete OC II",
             "Riku",
             "Sark",
+            "Scar",
             "Seifer",
             "Shadow Stalker",
+            "The Experiment",
+            "Thresholder",
             "Tifa",
+            "Volcano Lord",
             "Yuffie"
         ]
     },
@@ -18764,14 +18731,13 @@
         "limiter": 0,
         "model": "B_LK100_00",
         "obj_id": 665,
-        "replace_allowed": false,
+        "source_replace_allowed": false,
         "type": "boss",
         "variations": [
             "Shenzie",
             "Shenzie (1)"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
@@ -18800,49 +18766,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas II",
-            "Armor Xemnas I",
-            "Axel I",
-            "Axel II",
-            "Blizzard Lord",
-            "Cerberus",
-            "Cloud",
-            "Dark Thorn",
-            "Demyx",
-            "Grim Reaper I",
-            "Hades II",
-            "Hercules",
-            "Hostile Program",
-            "Larxene",
-            "Leon",
-            "Lexaeus",
-            "Luxord",
-            "Marluxia",
-            "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Prison Keeper",
-            "Riku",
-            "Roxas",
-            "Saix",
-            "Sark",
-            "Scar",
-            "Seifer",
-            "Sephiroth",
-            "Shan-Yu",
-            "Shenzie",
-            "Terra",
-            "The Experiment",
-            "Thresholder",
-            "Tifa",
-            "Twilight Thorn",
-            "Vexen",
-            "Volcano Lord",
-            "Xaldin",
-            "Xemnas",
-            "Xigbar",
-            "Yuffie",
-            "Zexion"
+            "Shenzie"
         ]
     },
     "Shenzie (1)": {
@@ -18863,14 +18787,13 @@
         "limiter": 0,
         "model": "B_LK100_00",
         "obj_id": 665,
-        "replace_allowed": false,
+        "source_replace_allowed": false,
         "type": "boss",
         "variations": [
             "Shenzie",
             "Shenzie (1)"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
@@ -18914,13 +18837,12 @@
         "size": 977672,
         "room_size": 11.39,
         "obj_id": 128,
-        "replace_allowed": false,
+        "source_replace_allowed": false,
         "type": "boss",
         "variations": [
             "Shock"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
         "cups": false,
@@ -18949,30 +18871,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas II",
-            "Axel I",
-            "Blizzard Lord",
-            "Cerberus",
-            "Cloud",
-            "Grim Reaper I",
-            "Hades II",
-            "Hercules",
-            "Hostile Program",
-            "Leon",
-            "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Riku",
-            "Sark",
-            "Scar",
-            "Seifer",
-            "Shock",
-            "The Experiment",
-            "Thresholder",
-            "Tifa",
-            "Volcano Lord",
-            "Xigbar",
-            "Yuffie"
+            "Shock"
         ]
     },
     "Silver Rock": {
@@ -19166,10 +19065,10 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
-            "Soldier (TR)",
-            "Soldier NM",
             "Soldier (WI)",
-            "Soldier"
+            "Soldier (TR)",
+            "Soldier",
+            "Soldier NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19994,6 +19893,7 @@
         "obj_id": 353,
         "size": 2.17,
         "room_size": 12.13,
+        "roommaxsize": 14.71,
         "adds": [
             {
                 "ObjectId": 356
@@ -20022,7 +19922,6 @@
         "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
-        "roommaxsize": null,
         "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
@@ -21021,8 +20920,8 @@
         "parent": "Xemnas",
         "variationof": null,
         "children": [
-            "Xemnas (Data)",
-            "Xemnas"
+            "Xemnas",
+            "Xemnas (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,

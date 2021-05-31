@@ -1486,6 +1486,9 @@ Dark Thorn:
   program: 79
   size: 4.19
   room_size: 14.00
+  roommaxsize: 17.03
+  blacklist_source:
+  - Storm Rider # Gets stuck on edges of map
   adds:
   - ObjectId: 644 # chandelier
     modPositionY: -1500
@@ -1558,7 +1561,7 @@ Final Xemnas (Data):
   type: boss
   variations:
     Final Xemnas (Clone) (Data):
-      replace_allowed: false
+      source_replace_allowed: false
       vars:
       - 0
       - 0
@@ -1966,7 +1969,7 @@ Final Xemnas:
       - 1
       - 0
     Final Xemnas (Copy):
-      replace_allowed: false
+      source_replace_allowed: false
       vars:
       - 0
       - 0
@@ -2235,7 +2238,7 @@ Hades II:
         room_size: 8.23
         enabled: false
         msn_replace_allowed: false
-        replace_allowed: false
+        source_replace_allowed: false
       - program: 202
         msn: HE19_MS205
         room_size: 10.73
@@ -2284,7 +2287,7 @@ Hayner:
   variations:
     Hayner:
       enabled: false
-      replace_allowed: false
+      source_replace_allowed: false
       msn_list:
       - program: 182
         msn: TT04_MS00
@@ -3350,7 +3353,7 @@ Riku:
   msn: MU07_MS201
   msn_replace_allowed: false
   obj_id: 1596
-  replace_allowed: false
+  source_replace_allowed: false
   size: 1.22
   program: 76
   room_size: 8.62
@@ -3549,7 +3552,7 @@ Seifer:
       msn: TT04_MS108
       replace_as: Seifer
       msn_replace_allowed: true
-      replace_allowed: false # breaks of fade to white
+      source_replace_allowed: false # breaks of fade to white
       program: 78
       room_size: 7.77
       vars:
@@ -3668,7 +3671,9 @@ Shadow Stalker:
   msn: BB05_MS104A
   obj_id: 355
   size: 4.28
+  #I feel like this is probably off
   room_size: 13.52
+  roommaxsize: 16.10
   program: 78
   adds:
     #TODO the roommaxsize implies some of these are still being loaded into memory
@@ -3729,7 +3734,7 @@ Shenzie:
   limiter: 0
   model: B_LK100_00
   obj_id: 665
-  replace_allowed: false
+  source_replace_allowed: false
   size: 799588
   type: boss
   variations:
@@ -3763,7 +3768,7 @@ Shock:
   size: 1.3
   room_size: 11.39
   obj_id: 128
-  replace_allowed: false
+  source_replace_allowed: false
   size: 977672
   type: boss
   variations:
@@ -4039,6 +4044,7 @@ Thresholder:
   obj_id: 353
   size: 2.17
   room_size: 12.13
+  roommaxsize: 14.71
   adds:
   - ObjectId: 356 # possessor
   program: 72

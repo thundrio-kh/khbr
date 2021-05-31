@@ -15,7 +15,6 @@ exclusions = ["Banzai", "Barrel", "Demyx OC", "Ed", "Giant Sark", "MCP", "Hades 
 # Gambler (version that summons darkness)
 # Illuminator
 
-
 exclusions_enemies = []
 
 kh2 = KingdomHearts2()

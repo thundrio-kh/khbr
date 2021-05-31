@@ -142,6 +142,8 @@ for row_index in range(len(boss_lines)):
     for col_index in range(len(row)):
         value = row[col_index]
         cell = boss_sheet.cell((row_index+1, col_index+1))
+        if cell.value == value:
+            continue # No change needed
         cell.value = value
         if value in ['X', 'O']:
             cell.color = green if value == 'O' else red

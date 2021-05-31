@@ -1126,7 +1126,12 @@ class Randomizer:
             randomization = seed
         else:
             with open(seedfn) as f:
-                randomization = json.load(f)
+                if seedfn.endswith("json"):
+                    randomization = json.load(f)
+                elif seedfn.endswith("yaml"):
+                    randomization = yaml.load(f)
+                else:
+                    raise Exception("Unsupported Seed Format! Need json or yaml")
         return self.generate_mod(game, outfn, randomization, newname=os.path.basename(outfn))
 
     # My zipped functionality is broken, as the mod randomizer wants just the files in the root of the zip
@@ -1215,9 +1220,10 @@ if __name__ == '__main__':
         fn = None
 
     rando = Randomizer(tempdir=moddir, tempfn=fn, deletetmp=False)
-    
+    print("what the fuck")
     if mode == "read":
-        b64 = rando.read_seed("kh2", seedfn=options, outfn=fn)
+        print(options)
+        b64 = rando.read_seed("kh2", seedfn=options["seed"], outfn=fn)
     else:
         b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=randomization_only)
 
