@@ -171,7 +171,7 @@ class KingdomHearts2:
                                 "possible_values": [False, True], "hidden_values": []},
 
             "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. Selected Boss will replace every boss with a single selected boss.",
-                                "possible_values": ["Disabled", "Wild", "Selected Boss"], "hidden_values": ["One to One"]},#, "one_to_one_characters",
+                                "possible_values": ["Disabled", "One to One", "Wild", "Selected Boss"], "hidden_values": ["One to One"]},
             "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
                                 "possible_values": [None] + sorted(self.get_valid_bosses()), "hidden_values": []},
             "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game. Forces Boss Randomization Mode to be 'Wild'",
@@ -353,14 +353,18 @@ class KingdomHearts2:
     def remove_tag(self, enemylist, tag):
         for enemy in enemylist:
             enemy["tags"] = list(filter(lambda k: k != tag), enemylist)
-    def pickbossmapping(self, bosslist, category):
-        # Randomization with limitations can take a while, so pregenerate 100K randomizations for each option
-        # then just pick one of the right type
-        num_files = NUM_RANDOMIZATION_MAPPINGS
-        dirname = os.path.join(RANDOMIZATIONS_DIR, category)
-        num = random.randint(1,num_files)
-        with open(os.path.join(dirname, str(num))) as f:
-            return json.load(f)
+    def pickbossmapping(self, bossdict):
+        while 1:
+            bosslist = [b for b in bossdict if bossdict[b]["name"] == bossdict[b]["parent"]]
+            chosen = []
+            for k in sorted(bosslist, key=lambda k: len(bossdict[k]["available"])):
+                avail = [b for b in bossdict[k]["available"] if not b in chosen]
+                if len(avail) == 0:
+                    break
+                else:
+                    chosen.append(random.choice(avail))
+            if len(bosslist) == len(chosen):
+                return {bosslist[i]: chosen[i] for i in range(len(bosslist))}
     def categorize_enemies(self, enemylist):
         categories = {}
         for e in enemylist:
@@ -515,7 +519,7 @@ class KingdomHearts2:
             bossmapping = None
             enemymapping = None
             if bossmode:
-                bossmapping = self.pickbossmapping(bosses, category) if not duplicate_bosses else None
+                bossmapping = self.pickbossmapping(bosses) if not duplicate_bosses else None
             if enemies:
                 enemymapping = self.pickenemymapping(enemies, nightmare=nightmare_enemies)
             
@@ -598,13 +602,16 @@ class KingdomHearts2:
                                         new_boss = "Shadow Roxas"
                                     elif selected_boss:
                                         new_boss = selected_boss
-                                    elif bossmapping:
-                                        if ent["name"] not in bossmapping:
-                                            # Boss is not being randomized
-                                            continue
-                                        new_boss = bossmapping[ent["name"]]
                                     else:
-                                        if old_boss_parent["name"] in data_replacements:
+                                        new_boss_parent = None
+                                        if bossmapping:
+                                            if old_boss_parent["name"] not in bossmapping:
+                                                # Boss is not being randomized
+                                                continue
+                                            new_boss_parent = bossmapping[old_boss_parent["name"]]
+                                        if new_boss_parent:
+                                            bosspicklist = [new_boss_parent]
+                                        elif old_boss_parent["name"] in data_replacements:
                                             bosspicklist = [data_replacements[old_boss_parent["name"]]]
                                         else:
                                             bosspicklist = old_boss_parent["available"]
