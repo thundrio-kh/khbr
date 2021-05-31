@@ -932,20 +932,6 @@ Armor Xemnas I:
   obj_id: 2140
   type: boss
   variations:
-    Armor Xemnas II:
-      msn: EH23_MS112
-      program: 73
-      replace_as: Armor Xemnas I
-      parent: Armor Xemnas II
-      msn_replace_allowed: false
-      size: 1.7
-      room_size: 9.23
-      # subtracts: The subtracts get handled by the roommodedits
-      # - ObjectId: 1766 # building
-      # - ObjectId: 1895 # dragon
-      vars:
-      - 0
-      - 0
     Armor Xemnas I:
       msn: EH24_MS110
       msn_replace_allowed: false
@@ -961,6 +947,29 @@ Armor Xemnas I:
       - ObjectId: 2294 # dancers
       vars:
       - 1
+      - 0
+Armor Xemnas II:
+  enabled: true
+  enmp_index: 147
+  hp: 100
+  level: 99
+  limiter: 0
+  model: B_EX260
+  obj_id: 2140
+  type: boss
+  variations:
+    Armor Xemnas II:
+      msn: EH23_MS112
+      program: 73
+      replace_as: Armor Xemnas I
+      msn_replace_allowed: false
+      size: 1.7
+      room_size: 9.23
+      # subtracts: The subtracts get handled by the roommodedits
+      # - ObjectId: 1766 # building
+      # - ObjectId: 1895 # dragon
+      vars:
+      - 0
       - 0
 Armored Knight:
   enabled: true
@@ -1228,6 +1237,8 @@ Blizzard Lord:
       - 0
       - 0
     Blizzard Lord (Cups):
+      tags:
+      - cups
       msn: HE_COL_8TI_BOSS
       program: 196
       room_size: 9.14
@@ -1317,7 +1328,8 @@ Cerberus:
       - 0
       - 0
     Cerberus (Cups):
-      cups: false
+      tags:
+      - cups
       enabled: true
       msn_list:
       - program: 194
@@ -1341,7 +1353,8 @@ Cloud:
   level: 99
   limiter: 0
   model: N_HB550_BTL2
-  cups: true
+  tags:
+  - cups
   msn_replace_allowed: false
   obj_id: 2297
   size: 1.9
@@ -1500,7 +1513,8 @@ Dark Thorn:
       - 0
       - 0
 Axel (Data):
-  data: true
+  tags:
+  - data
   enabled: true
   variationof: Axel II
   enmp_index: 221
@@ -1520,7 +1534,8 @@ Axel (Data):
       - 0
       - 0
 Demyx (Data):
-  data: true
+  tags:
+  - data
   enabled: true
   variationof: Demyx
   enmp_index: 216
@@ -1540,6 +1555,8 @@ Demyx (Data):
       - 1
       - 0
 Final Xemnas (Data):
+  tags:
+  - data
   enabled: false
   variationof: Final Xemnas
   msn_replace_allowed: false # this might break things
@@ -1570,7 +1587,8 @@ Final Xemnas (Data):
       - 1
       - 0
 Luxord (Data):
-  data: true
+  tags:
+  - data
   variationof: Luxord
   enabled: true
   enmp_index: 219
@@ -1608,7 +1626,8 @@ Luxord (Data):
       - 0
       - 0
 Saix (Data):
-  data: true
+  tags:
+  - data
   can_be_enemy: true
   variationof: Saix
   enabled: true
@@ -1630,7 +1649,8 @@ Saix (Data):
       - 0
       - 0
 Xaldin (Data):
-  data: true
+  tags:
+  - data
   enabled: true
   variationof: Xaldin
   enmp_index: 222
@@ -1650,7 +1670,8 @@ Xaldin (Data):
       - 0
       - 0
 Xemnas (Data):
-  data: true
+  tags:
+  - data
   aimod: true
   can_be_enemy: true
   enabled: true
@@ -1673,7 +1694,8 @@ Xemnas (Data):
       - 0
 Xigbar (Data):
   enabled: true
-  data: true
+  tags:
+  - data
   variationof: Xigbar
   enmp_index: 227
   hp: 100
@@ -2106,6 +2128,31 @@ Grim Reaper I:
       vars:
       - 0
       - 0
+Grim Reaper II:
+  enabled: false
+  enmp_index: 143
+  hp: 100
+  level: 99
+  limiter: 0
+  model: B_CA050
+  obj_id: 1543
+  type: boss
+  variations:
+    Grim Reaper II:
+      enabled: false
+      isnightmare: true
+      msn: CA01_MS204
+      program: 54
+      size: 2.58
+      room_size: 12.12
+      requires_msn: true
+      adds:
+      - ObjectId: 1740 # chest
+      - ObjectId: 2200 # medallions, try the gambler version
+        Medal: 123
+      vars:
+      - 0
+      - 0
 Groundshaker:
   enabled: false
   enmp_index: 90
@@ -2128,8 +2175,9 @@ Groundshaker:
       - 0
 Hades Cups:
   can_be_enemy: true
+  tags:
+  - cups
   enabled: true
-  cups: true
   enmp_index: 156
   hp: 100
   level: 99
@@ -2310,7 +2358,8 @@ Hercules:
   obj_id: 2320
   size: 2.48
   type: boss
-  cups: false # will be true once he works
+  tags:
+  - cups
   variations:
     Hercules:
       enabled: true
@@ -2678,7 +2727,8 @@ Larxene:
       - 0
       - 0
     Larxene (Data):
-      data: true
+      tags:
+      - data
       enabled: true
       msn: HB33_FM_LAR_RE
       program: 148
@@ -2696,7 +2746,8 @@ Leon:
   obj_id: 2296
   size: 1.67
   type: boss
-  cups: true
+  tags:
+  - cups
   variations:
     Leon:
       program: 189
@@ -2757,7 +2808,8 @@ Lexaeus:
       - 0
       - 0
     Lexaeus (Data):
-      data: true
+      tags:
+      - data
       enabled: true
       msn: HB33_FM_LEX_RE
       program: 147
@@ -2945,6 +2997,8 @@ Marluxia:
       - 0
       - 0
     Marluxia (Data):
+      tags:
+      - data
       enabled: true
       msn: HB38_FM_MAR_RE
       program: 150
@@ -3103,10 +3157,11 @@ Past Pete:
       - 0
 Pete Cups:
   enabled: true
+  tags:
+  - cups
   enmp_index: 158
   hp: 100
   level: 99
-  cups: true
   limiter: 20
   model: N_EX760_BTL_CLSM
   msn: HE_COL_8TI_BOSS
@@ -3402,7 +3457,8 @@ Roxas:
       - 0
       - 0
     Roxas (Data):
-      data: true
+      tags:
+      - data
       enabled: true
       msn: EH21_MS101_RE
       program: 99
@@ -3575,7 +3631,8 @@ Seifer:
       - 5
       - 0
 Sephiroth:
-  data: true
+  tags:
+  - data
   can_be_enemy: true
   enabled: true
   enmp_index: 130
@@ -3965,7 +4022,8 @@ Surveillance Robot:
       - 0
 Terra:
   can_be_enemy: true
-  data: true
+  tags:
+  - data
   enabled: true
   enmp_index: 220
   hp: 100
@@ -4063,7 +4121,8 @@ Tifa:
   model: N_HB570_BTL2
   msn_replace_allowed: false
   obj_id: 2298
-  cups: true
+  tags:
+  - cups
   size: 1.32
   type: boss
   variations:
@@ -4188,7 +4247,8 @@ Vexen:
   unchanged_file_size: true
   variations:
     Vexen (Data):
-      data: true
+      tags:
+      - data
       enabled: true
       program: 146
       msn: HB32_FM_VEX_RE
@@ -4256,6 +4316,8 @@ Volcano Lord:
       - 0
       - 0
     Volcano Lord (Cups):
+      tags:
+      - cups
       msn: HE_COL_8_5
       program: 196
       room_size: 9.14
@@ -4376,7 +4438,8 @@ Yuffie:
   model: N_HB580_BTL2
   msn_replace_allowed: false
   obj_id: 2299
-  cups: true
+  tags:
+  - cups
   size: 0.95
   type: boss
   variations:
@@ -4452,7 +4515,8 @@ Zexion:
       - 0
       - 0
     Zexion (Data):
-      data: true
+      tags:
+      - data
       enabled: true
       program: 152
       msn: HB34_FM_ZEX_RE

@@ -178,7 +178,7 @@ class KingdomHearts2:
                                 "possible_values": [False, True], "hidden_values": []},
             "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
                                 "possible_values": [True, False], "hidden_values": []},
-            "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One', this will cause these bosses to be prett common, as there are 3-4 separate instances of most cups bosses.",
+            "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One'.",
                                 "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra and Sephiroth",
                                 "possible_values": [False, True], "hidden_values": []}
@@ -188,12 +188,13 @@ class KingdomHearts2:
         if self.spoilers["boss"]:
             text += 'BOSSES\n'
             for oldboss in sorted(self.spoilers["boss"]):
-                text += "\t{} became {}\n".format(self.spoilers["boss"][oldboss])
+                text += "\t{} became {}\n".format(oldboss, self.spoilers["boss"][oldboss])
             text += '\n'
         if self.spoilers["enemy"]:
             text += 'ENEMIES\n'
             for oldenemy in sorted(self.spoilers["enemy"]):
-                text += "\t{} became {}\n".format(self.spoilers["enemy"][oldenemy])
+                text += "\t{} became {}\n".format(oldenemy, self.spoilers["enemy"][oldenemy])
+        return text
     def get_enemies(self):
         enemies = self.get_valid_enemies()
         enabled_enemies = [self.enemy_records[e] for e in enemies if self.enemy_records[e]["enabled"]]
@@ -205,8 +206,6 @@ class KingdomHearts2:
             "model": None,
             "msn_replace_allowed": True,
             "tags": [],
-            "cups": False,
-            "data": False,
             "category": None,
             "level": 0,
             "isnightmare": False,
@@ -403,7 +402,8 @@ class KingdomHearts2:
         enabled_children = [b for b in bossparent["children"] if self.enemy_records[b]["enabled"]]
         bosschild = self.enemy_records[random.choice(enabled_children)]
         enabled_variations = [b for b in bosschild["variations"] if self.enemy_records[b]["enabled"]]
-        return random.choice(enabled_variations)
+        chosen_boss = random.choice(enabled_variations)
+        return chosen_boss
     def get_enemy_attribute(self, name, attribute):
         pass
     def pick_enemy_to_replace(self, oldenemy, enabledenemies):
@@ -464,10 +464,38 @@ class KingdomHearts2:
                 if "scale_boss_stats" in options:
                     scale_boss = options["scale_boss_stats"]
 
+                # cups and superbosses are turned off by default
+                # This feels too imperative to me, I want the randomizer to be as moduler/functional as possible
+                exclude_tags = []
+                if "cups_bosses" in options and not options["cups_bosses"]:
+                    exclude_tags.append("cups")
+                if "data_bosses" in options and not options["data_bosses"]:
+                    exclude_tags.append("data")
+
                 if "selected_boss" in options and options["selected_boss"] and options["boss"] == "Selected Boss":
                     bossmode = "Wild"
                     duplicate_bosses = True
                     selected_boss = options["selected_boss"]
+
+                bosses = {b: bosses[b] for b in bosses if len(set(bosses[b]["tags"]).intersection(set(exclude_tags))) == 0}
+                boss_names = list(bosses.keys())
+
+                # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
+                # this still feels pretty imperative, maybe during a refactor it will become obvious how to be more functional
+                # have to look at every source boss too so adjusting those sources, not just the ones that are available
+                for boss_name in self.enemy_records:
+                    boss = self.enemy_records[boss_name]
+                    if boss["type"] != "boss":
+                        continue
+                    if boss["name"] == boss["parent"]:
+                        boss["children"] = [b for b in boss["children"] if b in bosses]
+                        boss["available"] = [b for b in boss["available"] if b in bosses]
+                        if "Leon" in boss["available"]:
+                            0/0
+                        for child_name in boss["children"]:
+                            child = self.enemy_records[child_name]
+                            child["variations"] = [b for b in boss["variations"] if b in bosses]
+
             if enemymode:
                 if "selected_enemy" in options and options["selected_enemy"] and options["enemy"] == "Selected Enemy":
                     enemymode = "Wild"
@@ -680,7 +708,7 @@ class KingdomHearts2:
             object_map = randomization.get("object_map", "")
             new_object_map = {}
             with open(os.path.join(os.path.dirname(__file__), "data", "objVanilla.yml")) as f:
-                obj_data = yaml.load(f)
+                obj_data = yaml.load(f, Loader=yaml.SafeLoader)
             for oid in object_map:
                 for k in object_map[oid]:
                     obj_data[oid][k] = object_map[oid][k]
@@ -690,8 +718,8 @@ class KingdomHearts2:
         if randomization.get("scale_map", ""):
             scale_map = randomization.get("scale_map", "")
             with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
-                enmp_data_vanilla = yaml.load(f)
-                enmp_data_mod = yaml.load(yaml.dump(enmp_data_vanilla))
+                enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)
+                enmp_data_mod = yaml.load(yaml.dump(enmp_data_vanilla), Loader=yaml.SafeLoader)
             for new_enemy in scale_map:
                 original_enemy = scale_map[new_enemy]
                 new_enmp_index = self.enemy_records[new_enemy]["enmp_index"]
@@ -1115,7 +1143,7 @@ class Randomizer:
         assets = game.generate_files(moddir, randomization)
         if dumpspoilers:
             if game.spoilers["boss"] or game.spoilers["enemy"]:
-                with open(os.path.join(moddir, "spoilers.txt")) as f:
+                with open(os.path.join(moddir, "spoilers.txt"), "w") as f:
                     f.write(game.create_spoiler_text())
             else:
                 with open(os.path.join(moddir, "spoilers.json"), "w") as f:
@@ -1133,12 +1161,14 @@ class Randomizer:
 
         return zipped
 
-    def read_seed(self, g, seedfn=False, seed=False, outfn="fn"):
+    def read_seed(self, g, seedfn=False, seed=False, outfn="fn", spoilers=None):
         if g not in supported_games:
             raise Exception("Game not supported")
         if not (seedfn or seed):
             raise Exception("Need one of seedfn or seed")
         game = self._get_game(g)
+        if spoilers:
+            game.spoilers=spoilers
         if seed:
             randomization = seed
         else:
@@ -1167,7 +1197,7 @@ class Randomizer:
         if randomization_only:
             return randomization
 
-        zipped = self.read_seed(g, seed=randomization, outfn=fn)
+        zipped = self.read_seed(g, seed=randomization, outfn=fn, spoilers=game.spoilers)
         return zipped
 
     def generate_randomization(self, game, options, seed):
@@ -1202,6 +1232,7 @@ if __name__ == '__main__':
     mode = sys.argv[1]
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\"}" randomization_only
     # run randomizer.py devgenerate "{\"boss\": \"Wild\"}"
+    # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Seifer\"}"
     options = sys.argv[2]
     if len(sys.argv) > 3:
@@ -1237,7 +1268,6 @@ if __name__ == '__main__':
         fn = None
 
     rando = Randomizer(tempdir=moddir, tempfn=fn, deletetmp=False)
-    print("what the fuck")
     if mode == "read":
         print(options)
         b64 = rando.read_seed("kh2", seedfn=options["seed"], outfn=fn)
