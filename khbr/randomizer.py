@@ -370,17 +370,19 @@ class KingdomHearts2:
                 categories[parent["category"]] = {}
             categories[parent["category"]][parent["name"]] = parent
         return categories
-    def pickenemymapping(self, enemylist):
+    def pickenemymapping(self, enemylist, nightmare=None):
         # Create separate lists for each set of tags used by enemies
         categories = self.categorize_enemies(enemylist)
         mapping = {}
         for c in categories:
             og = list(categories[c].values()) # Remove duplicate parent entries
             new = list(og)
+            if nightmare:
+                new = [e for e in new if e["isnightmare"]]
             random.shuffle(new)
             for i in range(len(og)):
                 old_parent = og[i]
-                new_parent = new[i]
+                new_parent = new[i % len(new)]
                 # So for each child of the new_parent, randomly pick a child of the old_parent
                 # Then go through the variations of each, and add them to the mapping
                 for old_child_name in old_parent["children"]:
@@ -389,8 +391,6 @@ class KingdomHearts2:
                     old_child = self.enemy_records[old_child_name]
                     for old_variation_name in old_child["variations"]:
                         new_variation_name = random.choice(list(new_child["variations"]))
-                        if old_variation_name in mapping:
-                            raise Exception("TESTCHECK, something is getting incorrectly overwritten")
                         mapping[old_variation_name] = new_variation_name
                         self.spoilers["enemy"][old_variation_name] = new_variation_name
         assert len(enemylist) == len(list(mapping.keys()))
@@ -424,6 +424,7 @@ class KingdomHearts2:
         duplicate_enemies = None
         duplicate_bosses = None
         bossmode = None
+        nightmare_enemies = False
         enemymode = None
         if "enemy" in options and options["enemy"] != "Disabled":
             enemymode = options["enemy"]
@@ -440,7 +441,8 @@ class KingdomHearts2:
         #         enemies = enemies + bossenemies
             if "nightmare_enemies" in options and options["nightmare_enemies"]:
         #         duplicate_enemies = True
-                enemies = [e for e in enemies if e["isnightmare"]]
+                #ewwww imperative
+                nightmare_enemies = True
         #     if not ("separate_small_big_enemies" in options and options["separate_small_big_enemies"]):
         #         enemies = self.remove_tag(enemies, "large")
         #     if "selected_enemy" in options and options["selected_enemy"]:
@@ -472,12 +474,16 @@ class KingdomHearts2:
                 if "data_bosses" in options and not options["data_bosses"]:
                     exclude_tags.append("data")
 
+                # Nightmare mode forces mode to wild and ignores the datas and cups options
                 if "selected_boss" in options and options["selected_boss"] and options["boss"] == "Selected Boss":
                     bossmode = "Wild"
                     duplicate_bosses = True
                     selected_boss = options["selected_boss"]
+                elif nightmare_bosses:
+                    bosses = {b: bosses[b] for b in bosses if bosses[b]["isnightmare"]}
+                else:
+                    bosses = {b: bosses[b] for b in bosses if len(set(bosses[b]["tags"]).intersection(set(exclude_tags))) == 0}
 
-                bosses = {b: bosses[b] for b in bosses if len(set(bosses[b]["tags"]).intersection(set(exclude_tags))) == 0}
                 boss_names = list(bosses.keys())
 
                 # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
@@ -511,7 +517,7 @@ class KingdomHearts2:
             if bossmode:
                 bossmapping = self.pickbossmapping(bosses, category) if not duplicate_bosses else None
             if enemies:
-                enemymapping = self.pickenemymapping(enemies)
+                enemymapping = self.pickenemymapping(enemies, nightmare=nightmare_enemies)
             
             newspawns = {}
             subtract_map = {}
@@ -532,7 +538,7 @@ class KingdomHearts2:
                         # print("Ignoring: ", r)
                         continue
                     if enemies and enemymode == "One to One Per Room":
-                        enemymapping = self.pickenemymapping(enemies)
+                        enemymapping = self.pickenemymapping(enemies, nightmare=nightmare_enemies)
                     for sp in room["spawnpoints"]:
                         changesmade=False
                         spawnpoint = room["spawnpoints"][sp]

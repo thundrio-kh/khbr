@@ -519,8 +519,8 @@
         "variationof": null,
         "children": [
             "Bookmaster (TR)",
-            "Runemaster",
-            "Bookmaster"
+            "Bookmaster",
+            "Runemaster"
         ],
         "hp": 100,
         "limiter": 1,
@@ -914,8 +914,8 @@
         "parent": "Creeper Plant",
         "variationof": null,
         "children": [
-            "Creeper Plant",
-            "Creeper Plant (NM)"
+            "Creeper Plant (NM)",
+            "Creeper Plant"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1062,10 +1062,10 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
+            "Emerald Blues NM",
             "Emerald Blues (TR)",
-            "Spring Metal",
             "Emerald Blues",
-            "Emerald Blues NM"
+            "Spring Metal"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2202,9 +2202,9 @@
         "parent": "Hammer Frame",
         "variationof": null,
         "children": [
-            "Hammer Frame",
             "Iron Hammer",
-            "Hammer Frame WI"
+            "Hammer Frame WI",
+            "Hammer Frame"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2303,9 +2303,9 @@
         "parent": "Hot Rod",
         "variationof": null,
         "children": [
-            "Mad Ride",
             "Hot Rod",
-            "Hot Rod WI"
+            "Hot Rod WI",
+            "Mad Ride"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3043,8 +3043,8 @@
         "parent": "Shaman",
         "variationof": null,
         "children": [
-            "Shaman",
-            "Necromancer"
+            "Necromancer",
+            "Shaman"
         ],
         "hp": 100,
         "limiter": 1,
@@ -7049,7 +7049,6 @@
         ],
         "name": "Cloud",
         "enabled": true,
-        "isnightmare": true,
         "enmp_index": 160,
         "hp": 100,
         "level": 99,
@@ -7070,6 +7069,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "category": "cups",
+        "isnightmare": false,
         "parent": "Cloud",
         "variationof": null,
         "children": [
@@ -7140,7 +7140,6 @@
         ],
         "name": "Cloud (1)",
         "enabled": true,
-        "isnightmare": true,
         "enmp_index": 160,
         "hp": 100,
         "level": 99,
@@ -7161,6 +7160,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "category": "cups",
+        "isnightmare": false,
         "parent": "Cloud",
         "variationof": null,
         "children": [],
@@ -7192,7 +7192,6 @@
         ],
         "name": "Cloud (2)",
         "enabled": true,
-        "isnightmare": true,
         "enmp_index": 160,
         "hp": 100,
         "level": 99,
@@ -7213,6 +7212,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "category": "cups",
+        "isnightmare": false,
         "parent": "Cloud",
         "variationof": null,
         "children": [],
@@ -8337,8 +8337,8 @@
         "parent": "Demyx",
         "variationof": null,
         "children": [
-            "Demyx",
-            "Demyx (Data)"
+            "Demyx (Data)",
+            "Demyx"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -8777,8 +8777,8 @@
         "parent": "Driller Mole",
         "variationof": null,
         "children": [
-            "Driller Mole",
-            "Driller Mole NM"
+            "Driller Mole NM",
+            "Driller Mole"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9392,8 +9392,8 @@
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
-            "Final Xemnas",
-            "Final Xemnas (Data)"
+            "Final Xemnas (Data)",
+            "Final Xemnas"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9938,8 +9938,7 @@
         "obj_id": 1543,
         "type": "boss",
         "variations": [
-            "Grim Reaper I",
-            "Grim Reaper II"
+            "Grim Reaper I"
         ],
         "replace_as": null,
         "source_replace_allowed": true,
@@ -12628,8 +12627,8 @@
         "parent": "Lance Soldier",
         "variationof": null,
         "children": [
-            "Lance Warrior",
-            "Lance Soldier"
+            "Lance Soldier",
+            "Lance Warrior"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -13676,8 +13675,8 @@
         "parent": "Luxord",
         "variationof": null,
         "children": [
-            "Luxord",
-            "Luxord (Data)"
+            "Luxord (Data)",
+            "Luxord"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -14055,8 +14054,8 @@
         "parent": "Minute Bomb",
         "variationof": null,
         "children": [
-            "Minute Bomb",
-            "Minute Bomb WI"
+            "Minute Bomb WI",
+            "Minute Bomb"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -16879,8 +16878,8 @@
         "parent": "Saix",
         "variationof": null,
         "children": [
-            "Saix (Data)",
-            "Saix"
+            "Saix",
+            "Saix (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -17041,6 +17040,7 @@
         ],
         "name": "Sark",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 93,
         "hp": 100,
         "level": 99,
@@ -17060,7 +17060,6 @@
         "msn_replace_allowed": true,
         "tags": [],
         "category": "",
-        "isnightmare": false,
         "parent": "Sark",
         "variationof": null,
         "children": [
@@ -17129,6 +17128,7 @@
         ],
         "name": "Scar",
         "can_be_enemy": true,
+        "isnightmare": true,
         "enabled": true,
         "enmp_index": 89,
         "hp": 100,
@@ -17149,7 +17149,6 @@
         "msn_replace_allowed": true,
         "tags": [],
         "category": "",
-        "isnightmare": false,
         "parent": "Scar",
         "variationof": null,
         "children": [
@@ -17802,9 +17801,9 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow WI",
-            "Shadow (NM)",
             "Shadow (RAW)",
+            "Shadow (NM)",
+            "Shadow WI",
             "Shadow"
         ],
         "msn_required": false,
@@ -18490,10 +18489,10 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
-            "Soldier",
-            "Soldier (TR)",
+            "Soldier NM",
             "Soldier (WI)",
-            "Soldier NM"
+            "Soldier (TR)",
+            "Soldier"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18998,8 +18997,8 @@
         "parent": "Surveillance Robot",
         "variationof": null,
         "children": [
-            "Surveillance Robot",
-            "Surveillance Robot (TR)"
+            "Surveillance Robot (TR)",
+            "Surveillance Robot"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19292,7 +19291,6 @@
         "limiter": 25,
         "model": "B_BB100",
         "msn": "BB11_MS102",
-        "roomsizemultiplier": 0.3,
         "obj_id": 353,
         "size": 2.17,
         "room_size": 12.13,
@@ -19329,11 +19327,29 @@
         "whitelist_destination": [],
         "subtracts": [],
         "msn_list": [],
+        "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
+            "Armor Xemnas II",
+            "Blizzard Lord",
+            "Cloud",
+            "Grim Reaper I",
+            "Hercules",
+            "Hostile Program",
+            "Leon",
             "Past Pete",
-            "Thresholder"
+            "Pete Cups",
+            "Pete OC II",
+            "Riku",
+            "Sark",
+            "Scar",
+            "Seifer",
+            "The Experiment",
+            "Thresholder",
+            "Tifa",
+            "Volcano Lord",
+            "Yuffie"
         ]
     },
     "Tifa": {
@@ -20205,8 +20221,8 @@
         "parent": "Xaldin",
         "variationof": null,
         "children": [
-            "Xaldin (Data)",
-            "Xaldin"
+            "Xaldin",
+            "Xaldin (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20481,6 +20497,7 @@
         ],
         "name": "Yuffie",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 162,
         "hp": 100,
         "level": 99,
@@ -20502,7 +20519,6 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "category": "cups",
-        "isnightmare": false,
         "parent": "Yuffie",
         "variationof": null,
         "children": [
@@ -20573,6 +20589,7 @@
         ],
         "name": "Yuffie (1)",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 162,
         "hp": 100,
         "level": 99,
@@ -20593,7 +20610,6 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "category": "cups",
-        "isnightmare": false,
         "parent": "Yuffie",
         "variationof": null,
         "children": [],
@@ -20625,6 +20641,7 @@
         ],
         "name": "Yuffie (2)",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 162,
         "hp": 100,
         "level": 99,
@@ -20646,7 +20663,6 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "category": "cups",
-        "isnightmare": false,
         "parent": "Yuffie",
         "variationof": null,
         "children": [],
@@ -20678,6 +20694,7 @@
         ],
         "name": "Yuffie (3)",
         "enabled": true,
+        "isnightmare": true,
         "enmp_index": 162,
         "hp": 100,
         "level": 99,
@@ -20699,7 +20716,6 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "category": "cups",
-        "isnightmare": false,
         "parent": "Yuffie",
         "variationof": null,
         "children": [],

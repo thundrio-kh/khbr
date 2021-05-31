@@ -7,7 +7,7 @@ Barbossa,O,X,X,X,X,X,X,X,X,X,X,X
 Blizzard Lord,O,X,X,X,X,O,X,O,X,O,O,O
 Cerberus,O,X,X,X,O,X,X,O,X,O,O,O
 Cloud,O,X,X,O,X,O,O,O,O,O,O,O
-Dark Thorn,X,X,X,X,X,X,X,X,X,X,X,X
+Dark Thorn,O,X,X,X,X,X,X,X,X,X,X,X
 Demyx,O,X,X,X,O,X,X,O,X,O,O,O
 Final Xemnas,O,O,X,O,X,O,O,O,O,O,O,O
 Grim Reaper I,O,X,X,X,X,X,X,X,X,X,X,X
@@ -15,7 +15,7 @@ Grim Reaper II,O,X,O,X,X,X,X,X,X,X,X,X
 Groundshaker,O,X,X,X,X,O,X,O,O,O,O,X
 Hades I,X,X,X,X,X,X,X,X,X,X,X,X
 Hades II,O,X,X,O,O,O,O,O,O,O,O,O
-Hayner,O,X,X,X,X,O,X,X,O,X,X,X
+Hayner,X,X,X,X,X,X,X,X,X,X,X,X
 Hercules,O,X,X,O,X,O,O,O,O,O,O,O
 Hostile Program,O,X,X,O,O,O,X,O,O,O,O,O
 Hydra,O,X,X,X,O,O,X,O,X,O,O,O
@@ -30,7 +30,7 @@ Pete Cups,O,X,X,O,X,O,O,O,O,O,O,O
 Pete OC II,O,X,X,X,X,X,X,X,X,X,X,X
 Pete TR,X,X,X,X,X,X,X,X,X,X,X,X
 Prison Keeper,O,X,X,X,X,O,X,O,O,O,O,X
-Riku,O,X,X,O,X,O,O,O,O,O,O,O
+Riku,X,X,X,X,X,X,X,X,X,X,X,X
 Roxas,O,X,X,O,O,O,O,O,O,O,O,X
 Saix,O,X,X,X,O,O,X,O,X,O,O,O
 Sark,O,X,X,X,O,O,X,O,X,O,O,X
@@ -38,7 +38,7 @@ Scar,O,X,X,O,O,O,O,O,O,O,O,X
 Seifer,O,X,X,X,X,O,X,X,O,X,X,X
 Sephiroth,O,X,X,O,O,O,O,O,O,O,O,O
 Setzer,O,X,X,X,X,O,X,X,O,X,X,X
-Shadow Stalker,X,X,X,X,X,X,X,X,X,X,X,X
+Shadow Stalker,O,X,X,X,X,X,X,X,X,X,X,X
 Shan-Yu,O,X,X,X,O,O,X,O,X,O,O,O
 Storm Rider,O,X,X,O,O,O,X,O,O,O,O,O
 Terra,O,X,X,O,O,O,O,O,O,O,O,O

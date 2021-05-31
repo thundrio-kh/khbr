@@ -7,7 +7,7 @@ Barbossa,X,O,O,X,O,O,X,O,X,X,X,O,X,X,X,O,X,O,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O
 Blizzard Lord,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,X,O,X,X,O,X,O,O,O,X,O,O,X,X,O,O,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,O,O,O,O,X
 Cerberus,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,O,X,X,X,O,O,O,X,O,O,X,X,O,O,O,O,X,X,X,O,X,X,O,O,O,X,X,X,O,O,O,O,O,O
 Cloud,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,X
-Dark Thorn,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X
+Dark Thorn,X,O,O,X,X,O,X,O,O,X,X,O,X,X,X,X,X,O,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,X,O,X,X,X,O,X
 Demyx,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,O,X,X,X,O,O,O,X,O,O,X,X,O,O,O,O,X,X,X,X,X,X,O,O,O,X,X,X,O,O,O,O,O,X
 Final Xemnas,O,O,O,O,X,O,O,O,O,X,O,O,X,X,X,O,X,O,X,O,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,O,O,X,O,O,O,O,X,X,O,O,O,O,O,X
 Grim Reaper I,X,O,X,X,X,X,X,O,X,X,X,O,X,X,X,X,X,X,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,X,O,X,X,X,O,X
@@ -15,7 +15,7 @@ Grim Reaper II,X,O,X,X,X,O,X,O,X,X,X,O,O,X,X,X,X,O,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X
 Groundshaker,O,O,O,O,X,O,O,O,O,O,X,O,X,O,X,O,X,O,O,O,X,O,X,X,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,O,O,X,O,O,O,O,O,X,O,O,O,X,O,X
 Hades I,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X
 Hades II,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,O
-Hayner,O,O,O,O,X,O,X,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,X,X,O,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,O,X,O,O,O,O,X,X,O,X,X,X,O,X
+Hayner,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X
 Hercules,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,X
 Hostile Program,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,O
 Hydra,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,O,X,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,O,X,X,O,O,O,X,X,X,O,O,O,O,O,O
@@ -30,7 +30,7 @@ Pete Cups,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,
 Pete OC II,X,O,X,X,X,O,X,O,X,X,X,O,X,X,X,X,X,O,X,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,X,X,O,O,O,X,X,X,O,X,X,X,O,X
 Pete TR,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X
 Prison Keeper,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,X,X,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,X,O,X
-Riku,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,X,X,O,O,X,X,O,X,O,O,O,X,O,O,O,X,O,O,O,O,X,X,O,X,O,X,O,O,O,O,X,X,O,O,O,O,O,X
+Riku,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X
 Roxas,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,O,X,O,O,O,X,O,O
 Saix,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,O,O,O,O,O
 Sark,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,X,X,O,O,O,O,X,X,O,O,O,X,O,O
@@ -38,7 +38,7 @@ Scar,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O
 Seifer,O,O,O,O,X,O,X,O,O,X,X,O,X,X,X,O,X,O,X,X,X,O,X,X,O,X,O,O,O,X,X,O,X,X,O,O,O,X,X,X,X,X,O,X,O,O,O,O,X,X,O,X,X,X,O,X
 Sephiroth,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,X,O,X,O,O,O,O,O,X,O,O,O,O,O,O
 Setzer,O,O,O,O,X,O,X,O,O,X,X,O,X,X,X,O,X,O,X,X,X,O,X,X,O,X,O,O,O,X,X,O,X,X,O,O,O,X,O,X,X,X,O,X,O,O,O,O,X,X,O,X,X,X,O,X
-Shadow Stalker,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,X,O,X,X,X,X,O,X,X,O,X,O,X,X,O,X,X,X,X,X,X,O,X,X,X,X,X,X,X,O,X
+Shadow Stalker,X,O,X,X,X,O,X,O,X,X,X,O,X,X,X,X,X,O,O,X,X,O,X,X,X,X,O,O,O,X,X,O,X,X,O,O,O,X,X,O,X,X,X,X,O,O,O,X,X,X,O,X,X,X,O,X
 Shan-Yu,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,X,X,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,X,X,X,O,O,O,X,X,X,O,O,O,O,O,O
 Storm Rider,O,O,O,O,X,O,O,O,O,X,X,O,X,X,X,O,X,O,O,O,O,O,O,O,O,X,O,O,O,X,O,O,X,O,O,O,O,O,X,X,O,O,O,X,O,O,O,O,X,X,O,O,O,O,O,O
 Terra,O,O,O,O,X,O,O,O,O,O,X,O,X,X,X,O,X,O,O,O,O,O,O,O,O,X,O,O,O,X,O,O,O,O,O,O,O,O,X,X,O,O,O,X,O,O,O,O,O,X,O,O,O,O,O,O

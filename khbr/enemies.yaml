@@ -1347,7 +1347,6 @@ Cerberus:
       - 0
 Cloud:
   enabled: true
-  isnightmare: true
   enmp_index: 160
   hp: 100
   level: 99
@@ -2111,22 +2110,6 @@ Grim Reaper I:
       - large
       vars:
       - 1
-      - 0
-    Grim Reaper II:
-      enabled: false
-      parent: Grim Reaper II
-      isnightmare: true
-      msn: CA01_MS204
-      program: 54
-      size: 2.58
-      room_size: 12.12
-      requires_msn: true
-      adds:
-      - ObjectId: 1740 # chest
-      - ObjectId: 2200 # medallions, try the gambler version
-        Medal: 123
-      vars:
-      - 0
       - 0
 Grim Reaper II:
   enabled: false
@@ -3527,6 +3510,7 @@ Samurai:
       - 0
 Sark:
   enabled: true
+  isnightmare: true
   enmp_index: 93
   hp: 100
   level: 99
@@ -3545,6 +3529,7 @@ Sark:
       - 0
 Scar:
   can_be_enemy: true
+  isnightmare: true
   enabled: true
   enmp_index: 89
   hp: 100
@@ -4098,7 +4083,6 @@ Thresholder:
   limiter: 25
   model: B_BB100
   msn: BB11_MS102
-  roomsizemultiplier: 0.3 # There are 3 different normal enemies loaded in here, TODO test if I need to be this safe
   obj_id: 353
   size: 2.17
   room_size: 12.13
@@ -4431,6 +4415,7 @@ Xigbar:
       - 0
 Yuffie:
   enabled: true
+  isnightmare: true
   enmp_index: 162
   hp: 100
   level: 99
