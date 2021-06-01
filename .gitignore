@@ -37,3 +37,5 @@ khbr.egg-info
 
 client_secret.json
 sheets.googleapis.com-python.json
+
+tmp

@@ -358,7 +358,7 @@ class KingdomHearts2:
             bosslist = [b for b in bossdict if bossdict[b]["name"] == bossdict[b]["parent"]]
             chosen = []
             for k in sorted(bosslist, key=lambda k: len(bossdict[k]["available"])):
-                avail = [b for b in bossdict[k]["available"] if not b in chosen]
+                avail = [b for b in self.enemy_records[k]["available"] if not b in chosen]
                 if len(avail) == 0:
                     break
                 else:
@@ -402,10 +402,16 @@ class KingdomHearts2:
         return mapping 
     def pick_boss_to_replace(self, bossparentlist):
         enabled_parents = [b for b in bossparentlist if self.enemy_records[b]["enabled"]]
+        if len(enabled_parents) == 0:
+            raise Exception("No available parent bosses!")
         bossparent = self.enemy_records[random.choice(enabled_parents)]
         enabled_children = [b for b in bossparent["children"] if self.enemy_records[b]["enabled"]]
+        if len(enabled_children) == 0:
+            raise Exception("{} has no enabled children!".format(bossparent["name"]))
         bosschild = self.enemy_records[random.choice(enabled_children)]
         enabled_variations = [b for b in bosschild["variations"] if self.enemy_records[b]["enabled"]]
+        if len(enabled_variations) == 0:
+            raise Exception("{} has no enabled variations!".format(bosschild["name"]))
         chosen_boss = random.choice(enabled_variations)
         return chosen_boss
     def get_enemy_attribute(self, name, attribute):
@@ -414,7 +420,7 @@ class KingdomHearts2:
         options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
         return random.choice(options)
     def perform_randomization(self, options, seed=None):
-        print("Enemy Seed: {}".format(seed))
+        print("Enemy Seed: {}".format(random.seed))
         if diagnostics:
             start_time = time.time()
             print("Starting Randomization: {}".format(options))
@@ -473,9 +479,9 @@ class KingdomHearts2:
                 # cups and superbosses are turned off by default
                 # This feels too imperative to me, I want the randomizer to be as moduler/functional as possible
                 exclude_tags = []
-                if "cups_bosses" in options and not options["cups_bosses"]:
+                if not ("cups_bosses" in options and options["cups_bosses"]):
                     exclude_tags.append("cups")
-                if "data_bosses" in options and not options["data_bosses"]:
+                if not ("data_bosses" in options and options["data_bosses"]):
                     exclude_tags.append("data")
 
                 # Nightmare mode forces mode to wild and ignores the datas and cups options
@@ -859,7 +865,8 @@ class KingdomHearts2:
                         spasset = self.writeSpawnpoint(ardname, sp, roommods[sp], outdir, _writeMethod)
                         roomasset["source"].append(spasset)
                     btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
-                    script = AreaDataScript(open(btlfn).read(), ispc=self.unlimited_memory)
+                    with open(btlfn) as f:
+                        script = AreaDataScript(f.read(), ispc=self.unlimited_memory)
                     for p in script.programs:
                         if script.has_capacity(p):
                             mission = script.get_mission(p)
