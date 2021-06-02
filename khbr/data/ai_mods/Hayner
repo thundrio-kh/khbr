@@ -1,0 +1,4 @@
+# N_EX500_BTL/n_ex.bdx
+# don't set minimum HP
+#00000e94 0054004A
+00000e94 000000007
