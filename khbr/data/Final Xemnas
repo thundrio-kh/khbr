@@ -1,0 +1,7 @@
+# posible interesting lines
+# trap_attack_rc_receiver 3db8
+
+# trap_effect_start_bind 6452
+
+# definitely a boss where you need the debug output of a fight in ps3 ver 
+# spawn in somewhere, play until crash, then ccheck log output

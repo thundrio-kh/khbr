@@ -1,0 +1,7 @@
+# B_CA050/b_ca.bdx
+#future improvements
+# start in phase 3
+# 
+#This sets the number of medals in the chest equal to 882-107, but at least in ballroom, its easy for medals to be lost
+0000192a 03070080
+

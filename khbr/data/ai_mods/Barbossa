@@ -1,0 +1,19 @@
+# B_CA010/b_ca.bdx
+
+# Actually if theres a trap_sheet_hp_rate it's totally possible that sets you invincible/not
+# I think it really is the set_element_rate
+
+#trap_obj_is_pirate_shade
+00000c34 00e6004a
+
+# more promising trap_obj_is_pirate_shade
+#00000faa 00e6004a
+# result jz to jnz
+# jz +5 = 87 00 03 00
+# jnz +6 =  47 00 0c 00
+#00000fb0 000C0047
+
+# maybe replace above with trap_sheet_hp_rate, or just a push Imm 1 (which is seen at e46)
+
+# L2005 and L2028 seem to be opposite functions, one enables and one disables
+# I need ghidra to check this though, it's too hard to directly through hex

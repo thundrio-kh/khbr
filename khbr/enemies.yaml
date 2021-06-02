@@ -1128,6 +1128,7 @@ Banzai:
       - 2
       - 0
 Barbossa:
+  aimod: false
   adds:
   - ObjectId: 358 #Illuminator
   enabled: false
@@ -2124,10 +2125,14 @@ Grim Reaper I:
       - 1
       - 0
 Grim Reaper II:
-  enabled: false
+  aimod: true
+  enabled: true
   enmp_index: 143
   hp: 100
   level: 99
+  blacklist:
+  - Dark Thorn # medals get lost on ground
+  - Shadow Stalker # medals get lost on ground
   limiter: 0
   model: B_CA050
   obj_id: 1543
