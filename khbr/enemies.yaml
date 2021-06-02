@@ -4060,12 +4060,13 @@ Terra:
       - 0
       - 0
 The Beast:
+  aimod: false
   enabled: false
   enmp_index: 72
   hp: 100
   level: 99
   limiter: 0
-  msn_required: true
+  msn_replace_allowed: false
   model: P_BB000_BTL
   msn: BB03_MS103
   obj_id: 718

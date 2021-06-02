@@ -123,8 +123,8 @@
         "parent": "Aerial Knocker",
         "variationof": null,
         "children": [
-            "Aeriel Champ",
-            "Aerial Knocker"
+            "Aerial Knocker",
+            "Aeriel Champ"
         ],
         "hp": 100,
         "limiter": 1,
@@ -914,8 +914,8 @@
         "parent": "Creeper Plant",
         "variationof": null,
         "children": [
-            "Creeper Plant",
-            "Creeper Plant (NM)"
+            "Creeper Plant (NM)",
+            "Creeper Plant"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1063,8 +1063,8 @@
         "variationof": null,
         "children": [
             "Spring Metal",
-            "Emerald Blues NM",
             "Emerald Blues",
+            "Emerald Blues NM",
             "Emerald Blues (TR)"
         ],
         "hp": 100,
@@ -2202,9 +2202,9 @@
         "parent": "Hammer Frame",
         "variationof": null,
         "children": [
+            "Iron Hammer",
             "Hammer Frame",
-            "Hammer Frame WI",
-            "Iron Hammer"
+            "Hammer Frame WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2303,9 +2303,9 @@
         "parent": "Hot Rod",
         "variationof": null,
         "children": [
-            "Mad Ride",
             "Hot Rod",
-            "Hot Rod WI"
+            "Hot Rod WI",
+            "Mad Ride"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2406,8 +2406,8 @@
         "parent": "Neoshadow",
         "variationof": null,
         "children": [
-            "Neoshadow",
-            "Neoshadow (NM)"
+            "Neoshadow (NM)",
+            "Neoshadow"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3043,8 +3043,8 @@
         "parent": "Shaman",
         "variationof": null,
         "children": [
-            "Shaman",
-            "Necromancer"
+            "Necromancer",
+            "Shaman"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3237,8 +3237,8 @@
         "parent": "Strafer",
         "variationof": null,
         "children": [
-            "Strafer RAW",
-            "Strafer"
+            "Strafer",
+            "Strafer RAW"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5337,8 +5337,8 @@
         "parent": "Aerial Viking",
         "variationof": null,
         "children": [
-            "Air Pirate",
-            "Aerial Viking"
+            "Aerial Viking",
+            "Air Pirate"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -5667,6 +5667,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -5962,6 +5963,7 @@
             "Seifer",
             "Setzer",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -6068,6 +6070,7 @@
             "Sark",
             "Scar",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -6161,6 +6164,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -6296,6 +6300,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -6581,6 +6586,7 @@
             "Sephiroth",
             "Setzer",
             "Shan-Yu",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -6827,8 +6833,8 @@
         "variationof": null,
         "children": [
             "Cannon Gun",
-            "Cannon Gun WI",
-            "Camo Cannon"
+            "Camo Cannon",
+            "Cannon Gun WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6980,6 +6986,7 @@
             "Sephiroth",
             "Setzer",
             "Storm Rider",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -7143,6 +7150,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -7845,6 +7853,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -8377,8 +8386,8 @@
         "parent": "Demyx",
         "variationof": null,
         "children": [
-            "Demyx (Data)",
-            "Demyx"
+            "Demyx",
+            "Demyx (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -8420,6 +8429,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -8820,8 +8830,8 @@
         "parent": "Driller Mole",
         "variationof": null,
         "children": [
-            "Driller Mole NM",
-            "Driller Mole"
+            "Driller Mole",
+            "Driller Mole NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9323,8 +9333,8 @@
         "parent": "Fiery Globe",
         "variationof": null,
         "children": [
-            "Fiery Globe",
-            "Fiery Globe Treasure Room"
+            "Fiery Globe Treasure Room",
+            "Fiery Globe"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9484,6 +9494,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -10109,6 +10120,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -10202,6 +10214,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -10426,8 +10439,8 @@
         "parent": "Hades II",
         "variationof": null,
         "children": [
-            "Hades II",
-            "Hades Cups"
+            "Hades Cups",
+            "Hades II"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -10479,6 +10492,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -10697,6 +10711,7 @@
             "Seifer",
             "Setzer",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -10796,6 +10811,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -10883,8 +10899,8 @@
         "parent": "Hook Bat",
         "variationof": null,
         "children": [
-            "Hook Bat",
-            "Beffudler"
+            "Beffudler",
+            "Hook Bat"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12268,6 +12284,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -12437,6 +12454,7 @@
             "Setzer",
             "Shan-Yu",
             "Storm Rider",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -12823,8 +12841,8 @@
         "parent": "Large Body",
         "variationof": null,
         "children": [
-            "Large Body",
-            "Large Body WI"
+            "Large Body WI",
+            "Large Body"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -13105,6 +13123,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -13789,8 +13808,8 @@
         "parent": "Luxord",
         "variationof": null,
         "children": [
-            "Luxord (Data)",
-            "Luxord"
+            "Luxord",
+            "Luxord (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -13840,6 +13859,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -14177,8 +14197,8 @@
         "parent": "Minute Bomb",
         "variationof": null,
         "children": [
-            "Minute Bomb",
-            "Minute Bomb WI"
+            "Minute Bomb WI",
+            "Minute Bomb"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -14625,6 +14645,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -14703,6 +14724,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -14792,6 +14814,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -14920,6 +14943,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -15081,6 +15105,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -15172,9 +15197,9 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
-            "Rapid Thruster",
+            "Rapid Thruster (RAW)",
             "Rapid Thruster WI",
-            "Rapid Thruster (RAW)"
+            "Rapid Thruster"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -16859,6 +16884,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -17024,8 +17050,8 @@
         "parent": "Saix",
         "variationof": null,
         "children": [
-            "Saix (Data)",
-            "Saix"
+            "Saix",
+            "Saix (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -17072,6 +17098,7 @@
             "Sephiroth",
             "Setzer",
             "Shan-Yu",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -17261,6 +17288,7 @@
             "Sephiroth",
             "Setzer",
             "Shan-Yu",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -17355,6 +17383,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -17457,6 +17486,7 @@
             "Seifer",
             "Setzer",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -17818,6 +17848,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -17928,6 +17959,7 @@
             "Seifer",
             "Setzer",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -17966,10 +17998,10 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow",
+            "Shadow (NM)",
             "Shadow WI",
-            "Shadow (RAW)",
-            "Shadow (NM)"
+            "Shadow",
+            "Shadow (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18165,6 +18197,7 @@
             "Seifer",
             "Setzer",
             "Shadow Stalker",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -18310,6 +18343,7 @@
             "Sephiroth",
             "Setzer",
             "Shan-Yu",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -18660,10 +18694,10 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
-            "Soldier",
-            "Soldier (TR)",
+            "Soldier (WI)",
             "Soldier NM",
-            "Soldier (WI)"
+            "Soldier (TR)",
+            "Soldier"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19033,6 +19067,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19171,8 +19206,8 @@
         "parent": "Surveillance Robot",
         "variationof": null,
         "children": [
-            "Surveillance Robot",
-            "Surveillance Robot (TR)"
+            "Surveillance Robot (TR)",
+            "Surveillance Robot"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19280,6 +19315,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19300,12 +19336,13 @@
             0
         ],
         "name": "The Beast",
-        "enabled": false,
+        "aimod": false,
+        "enabled": true,
         "enmp_index": 72,
         "hp": 100,
         "level": 99,
         "limiter": 0,
-        "msn_required": true,
+        "msn_replace_allowed": false,
         "model": "P_BB000_BTL",
         "msn": "BB03_MS103",
         "obj_id": 718,
@@ -19325,7 +19362,6 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "msn_replace_allowed": true,
         "tags": [],
         "category": "",
         "isnightmare": false,
@@ -19334,8 +19370,8 @@
         "children": [
             "The Beast"
         ],
+        "msn_required": false,
         "msn_source_as": null,
-        "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
         "blacklist_source": [],
@@ -19355,7 +19391,6 @@
             "Grim Reaper I",
             "Hayner",
             "Hercules",
-            "Hostile Program",
             "Leon",
             "Past Pete",
             "Pete Cups",
@@ -19452,6 +19487,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19530,6 +19566,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19620,6 +19657,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19972,6 +20010,7 @@
             "Seifer",
             "Setzer",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -20202,6 +20241,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -20288,6 +20328,7 @@
             "Sephiroth",
             "Setzer",
             "Shan-Yu",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -20428,8 +20469,8 @@
         "parent": "Xaldin",
         "variationof": null,
         "children": [
-            "Xaldin (Data)",
-            "Xaldin"
+            "Xaldin",
+            "Xaldin (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20480,6 +20521,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -20577,6 +20619,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -20694,6 +20737,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -20788,6 +20832,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -21061,6 +21106,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
