@@ -356,15 +356,16 @@ class KingdomHearts2:
     def pickbossmapping(self, bossdict):
         while 1:
             bosslist = [b for b in bossdict if bossdict[b]["name"] == bossdict[b]["parent"]]
-            chosen = []
+            chosen = {}
             for k in sorted(bosslist, key=lambda k: len(bossdict[k]["available"])):
                 avail = [b for b in self.enemy_records[k]["available"] if not b in chosen]
                 if len(avail) == 0:
                     break
                 else:
-                    chosen.append(random.choice(avail))
+                    chosen_new_boss = random.choice(avail)
+                    chosen[k] = chosen_new_boss
             if len(bosslist) == len(chosen):
-                return {bosslist[i]: chosen[i] for i in range(len(bosslist))}
+                return chosen
     def categorize_enemies(self, enemylist):
         categories = {}
         for e in enemylist:
@@ -420,7 +421,7 @@ class KingdomHearts2:
         options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
         return random.choice(options)
     def perform_randomization(self, options, seed=None):
-        print("Enemy Seed: {}".format(random.seed))
+        print("Enemy Seed: {}".format(seed))
         if diagnostics:
             start_time = time.time()
             print("Starting Randomization: {}".format(options))

@@ -58,30 +58,37 @@ class Tests(unittest.TestCase):
         randomization3 = self._generateSeed(options, seed="6789")
         assert randomization1 == randomization2
         assert randomization1 != randomization3
+        self._validate_boss_placements(randomization1)
 
     def test_seedgen_enemy_one_to_one(self):
         options = {"enemy": "One to One"}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_enemy_one_to_one_nightmare(self):
         options = {"enemy": "One to One", "nightmare_enemies": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_enemy_one_to_one_room(self):
         options = {"enemy": "One to One Per Room"}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_enemy_one_to_one_room_nightmare(self):
         options = {"enemy": "One to One Per Room", "nightmare_enemies": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_enemy_selected(self):
         options = {"enemy": "Selected Enemy", "selected_enemy": "Shadow WI"}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_boss_one_to_one(self):
         options = {"boss": "One to One"}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
         # Validate hades is the same boss in all locations
         # Validate Validate all the parent bosses are still present
         # Validate cups and superbosses were not randomized, and no datas present
@@ -89,60 +96,74 @@ class Tests(unittest.TestCase):
     def test_seedgen_boss_one_to_one_scaled(self):
         options = {"boss": "One to One", "scale_boss_stats": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_boss_one_to_one_cups(self):
         options = {"boss": "One to One", "cups_bosses": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_boss_one_to_one_datas(self):
         options = {"boss": "One to One", "data_bosses": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_boss_one_to_one_cups_datas(self):
         options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_boss_wild(self):
         options = {"boss": "Wild"}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
         # validate cups/datas are off
 
     def test_seedgen_boss_wild_scaled(self):
         options = {"boss": "Wild", "scale_boss_stats": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_boss_wild_cups(self):
         options = {"boss": "Wild", "cups_bosses": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_boss_wild_datas(self):
         options = {"boss": "Wild", "data_bosses": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_boss_wild_cups_datas(self):
         options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_boss_wild_nightmare(self):
         options = {"boss": "Wild", "nightmare_bosses": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
         # validate no cups or datas
 
     def test_seedgen_boss_wild_nightmare_cups(self):
         options = {"boss": "Wild", "nightmare_bosses": True, "cups_bosses": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_boss_wild_nightmare_datas(self):
         options = {"boss": "Wild", "nightmare_bosses": True, "data_bosses": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
         
     def test_seedgen_boss_wild_nightmare_cups_datas(self):
         options = {"boss": "Wild", "nightmare_bosses": True, "cups_bosses": True, "data_bosses": True}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_seedgen_proderror1(self):
         options = {'boss': 'One to One', 'nightmare_bosses': False, 'selected_boss': None, 'enemy': 'One to One', 'selected_enemy': None, 'nightmare_enemies': False, 'scale_boss_stats': False, 'cups_bosses': False, 'data_bosses': False, 'memory_expansion': False}
         randomization = self._generateSeed(options)
+        self._validate_boss_placements(randomization)
 
     def test_getbosses(self):
         kh2 = KingdomHearts2()
@@ -158,11 +179,45 @@ class Tests(unittest.TestCase):
             enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)
         generated_enmp = kh2.dumpEnmpData(enmp_data_vanilla)
 
+    def _validate_boss_placements(self, randomization):
+        import yaml
+        kh2 = KingdomHearts2()
+        vanilla = yaml.load(open("locations.yaml"))
+        for world_name in randomization["spawns"]:
+            world = randomization["spawns"][world_name]
+            for room_name in world:
+                room = world[room_name]
+                for spawnpoint_name in room["spawnpoints"]:
+                    spawnpoint = room["spawnpoints"][spawnpoint_name]
+                    for sp_id_name in spawnpoint["sp_ids"]:
+                        spid = spawnpoint["sp_ids"][sp_id_name]
+                        for e in range(len(spid)):
+                            new_ent = spid[e]
+                            if not new_ent.get("isboss"):
+                                continue
+                            old_spid = vanilla[world_name][room_name]["spawnpoints"][spawnpoint_name]["sp_ids"][sp_id_name] 
+                            new_name = spid[e]["name"]
+                            # TODO handle checking these guys properly
+                            # They aren't always in the old parents avail list, due to replaceAs nonsense
+                            # but they are still their own parent
+                            if new_name in ["Armor Xemnas I", "Armor Xemnas II", "Grim Reaper I", "Grim Reaper II", "Shadow Roxas"]:
+                                continue
+                            new_index = spid[e]["index"]
+                            new_enemy_record = kh2.enemy_records[new_name]
+                            new_parent = kh2.enemy_records[new_enemy_record["parent"]]
+                            for old_ent in old_spid:
+                                if new_index == old_ent["index"]:
+                                    old_enemy = kh2.enemy_records[old_ent["name"]]
+                                    avail_list = kh2.enemy_records[old_enemy["parent"]]["available"]
+                                    # prob need to do something about the parent
+                                    assert new_parent["name"] in avail_list, "{} is not in {}'s available list".format(new_name, old_enemy["name"])
+
+
 # Uncomment to run the actual tests
 unittest.main()
 
 # Uncomment to run a single test through ipython
 # ut = Tests()
-# ut.test_seedgen_proderror1()
+# ut.test_seedgen_boss_one_to_one()
 
 # memory expansion=true test for enemies, validate certain rooms were ignored/not ignored
