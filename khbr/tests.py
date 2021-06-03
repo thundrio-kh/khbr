@@ -64,26 +64,33 @@ class Tests(unittest.TestCase):
         options = {"enemy": "One to One"}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # Validate shadows outside tower are same as shadows outside enemy
 
     def test_seedgen_enemy_one_to_one_nightmare(self):
         options = {"enemy": "One to One", "nightmare_enemies": True}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        #validate shadows are not found anywhere and shadows outside tower are same as star room shadows
 
     def test_seedgen_enemy_one_to_one_room(self):
         options = {"enemy": "One to One Per Room"}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # Validate all shadows outside tower are same
+        # but in star tower they are all same but different
 
     def test_seedgen_enemy_one_to_one_room_nightmare(self):
         options = {"enemy": "One to One Per Room", "nightmare_enemies": True}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # Validate no shadows exist
+        # but in star tower they are different than outside
 
     def test_seedgen_enemy_selected(self):
         options = {"enemy": "Selected Enemy", "selected_enemy": "Shadow WI"}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # Validate all enemies are shadow wi
 
     def test_seedgen_boss_one_to_one(self):
         options = {"boss": "One to One"}
@@ -97,42 +104,50 @@ class Tests(unittest.TestCase):
         options = {"boss": "One to One", "scale_boss_stats": True}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # validate the scale map matches the randomization map
 
     def test_seedgen_boss_one_to_one_cups(self):
         options = {"boss": "One to One", "cups_bosses": True}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # validate cups bosses are present
 
     def test_seedgen_boss_one_to_one_datas(self):
         options = {"boss": "One to One", "data_bosses": True}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # validate datas are present
 
     def test_seedgen_boss_one_to_one_cups_datas(self):
         options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # validate cups and datas are both present
 
     def test_seedgen_boss_wild(self):
         options = {"boss": "Wild"}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
         # validate cups/datas are off
+        # validate those like FX are randomized, but Jafar isn't
 
     def test_seedgen_boss_wild_scaled(self):
         options = {"boss": "Wild", "scale_boss_stats": True}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # validate scaling worked right
 
     def test_seedgen_boss_wild_cups(self):
         options = {"boss": "Wild", "cups_bosses": True}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # validate datas are present
 
     def test_seedgen_boss_wild_datas(self):
         options = {"boss": "Wild", "data_bosses": True}
         randomization = self._generateSeed(options)
         self._validate_boss_placements(randomization)
+        # validate datas are present
 
     def test_seedgen_boss_wild_cups_datas(self):
         options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True}
@@ -221,3 +236,5 @@ unittest.main()
 # ut.test_seedgen_boss_one_to_one()
 
 # memory expansion=true test for enemies, validate certain rooms were ignored/not ignored
+
+# I think I'm going to want a lot of "analyze randomization" functions so I can easily test lots of things in each test
