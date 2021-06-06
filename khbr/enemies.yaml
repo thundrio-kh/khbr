@@ -1035,18 +1035,30 @@ Axel I:
   size: 2.92
   obj_id: 2229
   type: boss
-  blacklist_source:
-  - Storm Rider
-  - Hydra
-  - Saix
-  - Demyx
-  - Xigbar
-  - Groundshaker
-  - Shan-Yu
-  - Prison Keeper
-  - Xaldin
-  - Xemnas
-  - Cerberus
+  whitelist_source:
+  - Axel I
+  - Axel II
+  - Barbossa
+  - Blizzard Lord
+  - Cloud
+  - Dark Thorn
+  - Grim Reaper I
+  - Hades II
+  - Hayner
+  - Hercules
+  - Leon
+  - Past Pete
+  - Pete Cups
+  - Pete TR
+  - Pete OC II
+  - Sark
+  - Seifer
+  - Setzer
+  - Tifa
+  - Twilight Thorn
+  - Vivi
+  - Volcano Lord
+  - Yuffie
   variations:
     Axel I:
       vars:
@@ -1067,34 +1079,30 @@ Axel II:
   size: 3.74
   obj_id: 81
   type: boss
-  blacklist_source:
-  - Xemnas # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
-  - Storm Rider
-  - Hydra
-  - Saix
-  - Demyx
-  - Xigbar
-  - Groundshaker
-  - Shan-Yu
-  - Prison Keeper
-  - Xaldin
-  - Xemnas
-  - Cerberus
+  whitelist_source:
+  - Axel I
+  - Axel II
+  - Barbossa
+  - Blizzard Lord
+  - Cloud
+  - Dark Thorn
+  - Grim Reaper I
+  - Hades II
+  - Hayner
+  - Hercules
+  - Leon
+  - Past Pete
+  - Pete Cups
+  - Pete TR
+  - Pete OC II
+  - Sark
+  - Seifer
+  - Setzer
+  - Tifa
+  - Twilight Thorn
+  - Vivi
+  - Volcano Lord
+  - Yuffie
   variations:
     Axel II:
       vars:
@@ -2315,18 +2323,30 @@ Hayner:
   obj_id: 1239
   size: 0.84
   type: boss
-  blacklist_source:
-  - Storm Rider
-  - Hydra
-  - Saix
-  - Demyx
-  - Xigbar
-  - Groundshaker
-  - Shan-Yu
-  - Prison Keeper
-  - Xaldin
-  - Xemnas
-  - Cerberus
+  whitelist_source:
+  - Axel I
+  - Axel II
+  - Barbossa
+  - Blizzard Lord
+  - Cloud
+  - Dark Thorn
+  - Grim Reaper I
+  - Hades II
+  - Hayner
+  - Hercules
+  - Leon
+  - Past Pete
+  - Pete Cups
+  - Pete TR
+  - Pete OC II
+  - Sark
+  - Seifer
+  - Setzer
+  - Tifa
+  - Twilight Thorn
+  - Vivi
+  - Volcano Lord
+  - Yuffie
   variations:
     Hayner:
       enabled: false
@@ -3588,18 +3608,30 @@ Seifer:
   msn_replace_allowed: false
   size: 0.98
   type: boss
-  blacklist_source:
-  - Storm Rider
-  - Hydra
-  - Saix
-  - Demyx
-  - Xigbar
-  - Groundshaker
-  - Shan-Yu
-  - Prison Keeper
-  - Xaldin
-  - Xemnas
-  - Cerberus
+  whitelist_source:
+  - Axel I
+  - Axel II
+  - Barbossa
+  - Blizzard Lord
+  - Cloud
+  - Dark Thorn
+  - Grim Reaper I
+  - Hades II
+  - Hayner
+  - Hercules
+  - Leon
+  - Past Pete
+  - Pete Cups
+  - Pete TR
+  - Pete OC II
+  - Sark
+  - Seifer
+  - Setzer
+  - Tifa
+  - Twilight Thorn
+  - Vivi
+  - Volcano Lord
+  - Yuffie
   variations:
     Seifer:
       program: 180
@@ -3684,18 +3716,30 @@ Setzer:
   msn_replace_allowed: false
   size: 1.35
   type: boss
-  blacklist_source:
-  - Storm Rider
-  - Hydra
-  - Saix
-  - Demyx
-  - Xigbar
-  - Groundshaker
-  - Shan-Yu
-  - Prison Keeper
-  - Xaldin
-  - Xemnas
-  - Cerberus
+  whitelist_source:
+  - Axel I
+  - Axel II
+  - Barbossa
+  - Blizzard Lord
+  - Cloud
+  - Dark Thorn
+  - Grim Reaper I
+  - Hades II
+  - Hayner
+  - Hercules
+  - Leon
+  - Past Pete
+  - Pete Cups
+  - Pete TR
+  - Pete OC II
+  - Sark
+  - Seifer
+  - Setzer
+  - Tifa
+  - Twilight Thorn
+  - Vivi
+  - Volcano Lord
+  - Yuffie
   variations:
     Setzer:
       msn_list:
@@ -4227,18 +4271,30 @@ Twilight Thorn:
   room_size: 3.93
   program: 157
   type: boss
-  blacklist_source:
-  - Storm Rider
-  - Hydra
-  - Saix
-  - Demyx
-  - Xigbar
-  - Groundshaker
-  - Shan-Yu
-  - Prison Keeper
-  - Xaldin
-  - Xemnas
-  - Cerberus
+  whitelist_source:
+  - Axel I
+  - Axel II
+  - Barbossa
+  - Blizzard Lord
+  - Cloud
+  - Dark Thorn
+  - Grim Reaper I
+  - Hades II
+  - Hayner
+  - Hercules
+  - Leon
+  - Past Pete
+  - Pete Cups
+  - Pete TR
+  - Pete OC II
+  - Sark
+  - Seifer
+  - Setzer
+  - Tifa
+  - Twilight Thorn
+  - Vivi
+  - Volcano Lord
+  - Yuffie
   variations:
     Twilight Thorn:
       vars:
@@ -4290,18 +4346,30 @@ Vivi:
   room_size: 11.57
   program: 85
   type: boss
-  blacklist_source:
-  - Storm Rider
-  - Hydra
-  - Saix
-  - Demyx
-  - Xigbar
-  - Groundshaker
-  - Shan-Yu
-  - Prison Keeper
-  - Xaldin
-  - Xemnas
-  - Cerberus
+  whitelist_source:
+  - Axel I
+  - Axel II
+  - Barbossa
+  - Blizzard Lord
+  - Cloud
+  - Dark Thorn
+  - Grim Reaper I
+  - Hades II
+  - Hayner
+  - Hercules
+  - Leon
+  - Past Pete
+  - Pete Cups
+  - Pete TR
+  - Pete OC II
+  - Sark
+  - Seifer
+  - Setzer
+  - Tifa
+  - Twilight Thorn
+  - Vivi
+  - Volcano Lord
+  - Yuffie
   variations:
     Vivi:
       vars:
