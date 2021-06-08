@@ -4303,9 +4303,11 @@ Beast's Castle:
           - index: 0
             isboss: false
             name: Gargoyle Warrior (40 0)
+            nameForReplace: Hook Bat
           - index: 1
             isboss: false
             name: Gargoyle Knight (30 0)
+            nameForReplace: Hook Bat
           - index: 2
             isboss: false
             name: Hook Bat

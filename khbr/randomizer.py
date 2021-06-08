@@ -668,16 +668,17 @@ class KingdomHearts2:
                                 else:
                                     if not enemies:
                                         continue
-                                    old_enemy_object = self.enemy_records[ent["name"]]
+                                    old_name = ent["nameForReplace"] if "nameForReplace" in ent else ent["name"]
+                                    old_enemy_object = self.enemy_records[old_name]
                                     if not old_enemy_object["source_replace_allowed"]:
                                         continue
                                     if selected_enemy:
                                         new_enemy = selected_enemy
                                     elif enemymapping:
-                                        if ent["name"] not in enemymapping:
+                                        if old_name not in enemymapping:
                                             continue
                                             # if it's not in mapping it's not enabled
-                                        new_enemy = enemymapping[ent["name"]]
+                                        new_enemy = enemymapping[old_name]
                                     elif enemymode == "Wild":
                                         new_enemy = self.pick_enemy_to_replace(old_enemy_object, enemies)
                                     if new_enemy == ent["name"]:

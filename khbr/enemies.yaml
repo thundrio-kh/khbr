@@ -1234,6 +1234,9 @@ Blizzard Lord:
   msn_replace_allowed: false
   obj_id: 1036
   size: 2.58
+  blacklist_source:
+  - Sephiroth # Too hard in multi boss fights
+  - Terra # Too hard in multi boss fights
   tags:
   - large
   type: boss
@@ -4386,6 +4389,9 @@ Volcano Lord:
   msn_replace_allowed: false
   obj_id: 1035
   size: 2.23
+  blacklist_source:
+  - Sephiroth # Too hard in multi boss fights
+  - Terra # Too hard in multi boss fights
   tags:
   - large
   type: boss
