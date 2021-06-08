@@ -1245,7 +1245,7 @@ Blizzard Lord:
       msn: AL03_MS103
       program: 59
       room_size: 10.32
-      room_sizemultiplier: 0.5
+      room_sizemultiplier: 0.3 # Not sure how low to go but 0.5 is too much
       vars:
       - 0
       - 0
@@ -2825,6 +2825,7 @@ Lexaeus:
   - Groundshaker # player can get thrown oob
   - Prison Keeper
   - Axel II
+  - Cerberus # Phase 3 can result in pcsx2 crashes
   variations:
     Lexaeus:
       vars:
@@ -4097,6 +4098,8 @@ Terra:
   room_size: 8.6
   program: 73
   type: boss
+  blacklist_destination:
+  - Hostile Program # Report of getting stuck in bike loop
   variations:
     Terra:
       vars:
@@ -4400,7 +4403,7 @@ Volcano Lord:
       msn: AL03_MS103
       program: 59
       room_size: 10.32
-      room_sizemultiplier: 0.5
+      room_sizemultiplier: 0.3 # Not sure how low to go but 0.5 is too much
       vars:
       - 0
       - 0

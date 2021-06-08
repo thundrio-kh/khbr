@@ -270,8 +270,8 @@
         "parent": "Aeroplane",
         "variationof": null,
         "children": [
-            "Aeroplane",
-            "Aeroplane WI"
+            "Aeroplane WI",
+            "Aeroplane"
         ],
         "hp": 100,
         "limiter": 1,
@@ -914,8 +914,8 @@
         "parent": "Creeper Plant",
         "variationof": null,
         "children": [
-            "Creeper Plant (NM)",
-            "Creeper Plant"
+            "Creeper Plant",
+            "Creeper Plant (NM)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1062,10 +1062,10 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
-            "Spring Metal",
-            "Emerald Blues",
             "Emerald Blues NM",
-            "Emerald Blues (TR)"
+            "Emerald Blues",
+            "Emerald Blues (TR)",
+            "Spring Metal"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2202,8 +2202,8 @@
         "parent": "Hammer Frame",
         "variationof": null,
         "children": [
-            "Hammer Frame",
             "Hammer Frame WI",
+            "Hammer Frame",
             "Iron Hammer"
         ],
         "hp": 100,
@@ -3043,8 +3043,8 @@
         "parent": "Shaman",
         "variationof": null,
         "children": [
-            "Necromancer",
-            "Shaman"
+            "Shaman",
+            "Necromancer"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3442,8 +3442,8 @@
         "parent": "Toy Soldier",
         "variationof": null,
         "children": [
-            "Toy Soldier",
-            "Toy Soldier NM"
+            "Toy Soldier NM",
+            "Toy Soldier"
         ],
         "hp": 100,
         "limiter": 1,
@@ -6485,7 +6485,7 @@
         "msn": "AL03_MS103",
         "program": 59,
         "room_size": 10.32,
-        "room_sizemultiplier": 0.5,
+        "room_sizemultiplier": 0.3,
         "vars": [
             0,
             0
@@ -6501,6 +6501,10 @@
         "msn_replace_allowed": false,
         "obj_id": 1036,
         "size": 2.58,
+        "blacklist_source": [
+            "Sephiroth",
+            "Terra"
+        ],
         "tags": [
             "large"
         ],
@@ -6523,7 +6527,6 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -6555,7 +6558,6 @@
             "Sark",
             "Scar",
             "Seifer",
-            "Sephiroth",
             "Shan-Yu",
             "The Experiment",
             "Thresholder",
@@ -6589,6 +6591,10 @@
         "msn_replace_allowed": false,
         "obj_id": 1036,
         "size": 2.58,
+        "blacklist_source": [
+            "Sephiroth",
+            "Terra"
+        ],
         "type": "boss",
         "variations": [
             "Blizzard Lord",
@@ -6606,7 +6612,6 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -6647,10 +6652,10 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower DC",
+            "Bolt Tower",
             "Bolt Tower (MU)",
-            "Bolt Tower (RAW)",
-            "Bolt Tower"
+            "Bolt Tower DC",
+            "Bolt Tower (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6942,7 +6947,6 @@
             "Hercules",
             "Hostile Program",
             "Leon",
-            "Lexaeus",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -8527,8 +8531,8 @@
         "parent": "Devastator",
         "variationof": null,
         "children": [
-            "Devastator",
-            "Reckless"
+            "Reckless",
+            "Devastator"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9286,8 +9290,8 @@
         "parent": "Fiery Globe",
         "variationof": null,
         "children": [
-            "Fiery Globe",
-            "Fiery Globe Treasure Room"
+            "Fiery Globe Treasure Room",
+            "Fiery Globe"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9398,8 +9402,8 @@
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
-            "Final Xemnas",
-            "Final Xemnas (Data)"
+            "Final Xemnas (Data)",
+            "Final Xemnas"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12192,7 +12196,6 @@
             "Seifer",
             "Sephiroth",
             "Shan-Yu",
-            "Terra",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -12397,8 +12400,8 @@
         "parent": "Icy Cube",
         "variationof": null,
         "children": [
-            "Icy Cube",
-            "Icy Cube Treasure Room"
+            "Icy Cube Treasure Room",
+            "Icy Cube"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12645,8 +12648,8 @@
         "parent": "Lance Soldier",
         "variationof": null,
         "children": [
-            "Lance Warrior",
-            "Lance Soldier"
+            "Lance Soldier",
+            "Lance Warrior"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -13219,7 +13222,8 @@
             "Vexen",
             "Groundshaker",
             "Prison Keeper",
-            "Axel II"
+            "Axel II",
+            "Cerberus"
         ],
         "variations": [
             "Lexaeus",
@@ -13313,7 +13317,8 @@
             "Vexen",
             "Groundshaker",
             "Prison Keeper",
-            "Axel II"
+            "Axel II",
+            "Cerberus"
         ],
         "variations": [
             "Lexaeus",
@@ -15063,9 +15068,9 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
+            "Rapid Thruster",
             "Rapid Thruster (RAW)",
-            "Rapid Thruster WI",
-            "Rapid Thruster"
+            "Rapid Thruster WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -16912,8 +16917,8 @@
         "parent": "Saix",
         "variationof": null,
         "children": [
-            "Saix",
-            "Saix (Data)"
+            "Saix (Data)",
+            "Saix"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -17891,10 +17896,10 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow",
-            "Shadow (RAW)",
             "Shadow (NM)",
-            "Shadow WI"
+            "Shadow (RAW)",
+            "Shadow WI",
+            "Shadow"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18580,8 +18585,8 @@
         "variationof": null,
         "children": [
             "Soldier (TR)",
-            "Soldier",
             "Soldier (WI)",
+            "Soldier",
             "Soldier NM"
         ],
         "msn_required": false,
@@ -19087,8 +19092,8 @@
         "parent": "Surveillance Robot",
         "variationof": null,
         "children": [
-            "Surveillance Robot (TR)",
-            "Surveillance Robot"
+            "Surveillance Robot",
+            "Surveillance Robot (TR)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19133,6 +19138,9 @@
         "room_size": 8.6,
         "program": 73,
         "type": "boss",
+        "blacklist_destination": [
+            "Hostile Program"
+        ],
         "variations": [
             "Terra"
         ],
@@ -19151,7 +19159,6 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [],
@@ -19764,8 +19771,8 @@
         "parent": "Trick Ghost",
         "variationof": null,
         "children": [
-            "Trick Ghost (NM)",
-            "Trick Ghost"
+            "Trick Ghost",
+            "Trick Ghost (NM)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20113,7 +20120,7 @@
         "msn": "AL03_MS103",
         "program": 59,
         "room_size": 10.32,
-        "room_sizemultiplier": 0.5,
+        "room_sizemultiplier": 0.3,
         "vars": [
             0,
             0
@@ -20129,6 +20136,10 @@
         "msn_replace_allowed": false,
         "obj_id": 1035,
         "size": 2.23,
+        "blacklist_source": [
+            "Sephiroth",
+            "Terra"
+        ],
         "tags": [
             "large"
         ],
@@ -20151,7 +20162,6 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -20183,7 +20193,6 @@
             "Sark",
             "Scar",
             "Seifer",
-            "Sephiroth",
             "Shan-Yu",
             "The Experiment",
             "Thresholder",
@@ -20217,6 +20226,10 @@
         "msn_replace_allowed": false,
         "obj_id": 1035,
         "size": 2.23,
+        "blacklist_source": [
+            "Sephiroth",
+            "Terra"
+        ],
         "type": "boss",
         "variations": [
             "Volcano Lord",
@@ -20234,7 +20247,6 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],

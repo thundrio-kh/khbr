@@ -64,7 +64,6 @@ class Tests(unittest.TestCase):
     def test_seedgen_enemy_one_to_one(self):
         options = {"enemy": "One to One"}
         randomization = self._generateSeed(options)
-        self._validate_enemies(randomization)
         self._validate_enemies_general(randomization)
         # Validate shadows outside tower are same as shadows outside enemy
 
@@ -94,9 +93,18 @@ class Tests(unittest.TestCase):
         self._validate_enemies_general(randomization)
         # Validate all enemies are shadow wi
 
+    def test_seedgen_boss_selected(self):
+        options = {"boss": "Selected Boss", "selected_boss": "Xemnas"}
+        randomization = self._generateSeed(options)
+        print("Selected Boss")
+        print(randomization)
+        # Validate all enemies are xemnas
+
     def test_seedgen_boss_one_to_one(self):
         options = {"boss": "One to One"}
         randomization = self._generateSeed(options)
+        print("One to ONe")
+        print(randomization)
         self._validate_bosses_general(randomization)
         # Validate hades is the same boss in all locations
         # Validate Validate all the parent bosses are still present
@@ -129,6 +137,8 @@ class Tests(unittest.TestCase):
     def test_seedgen_boss_wild(self):
         options = {"boss": "Wild"}
         randomization = self._generateSeed(options)
+        print("Wild")
+        print(randomization)
         self._validate_bosses_general(randomization)
         # validate cups/datas are off
         # validate those like FX are randomized, but Jafar isn't
@@ -159,6 +169,8 @@ class Tests(unittest.TestCase):
     def test_seedgen_boss_wild_nightmare(self):
         options = {"boss": "Wild", "nightmare_bosses": True}
         randomization = self._generateSeed(options)
+        print("Nightmare")
+        print(randomization) 
         self._validate_bosses_general(randomization)
         # validate no cups or datas
 
@@ -196,8 +208,23 @@ class Tests(unittest.TestCase):
             enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)
         generated_enmp = kh2.dumpEnmpData(enmp_data_vanilla)
 
-    def test_boss_mapper(self):
-        pass
+    def test_pickbossmapping(self):
+        kh2 = KingdomHearts2()
+        bosses = kh2.get_boss_list({})
+        mapping = kh2.pickbossmapping(bosses)
+        def getcounts(mapping):
+            counts = {}
+            maxcounts = 0
+            for old, new in mapping.items():
+                if new not in counts:
+                    counts[new] = 0
+                if old not in counts:
+                    counts[old] = 0
+                counts[new] += 1
+            return counts
+        counted = getcounts(mapping)
+        assert min(counted.values()) == 1
+        assert max(counted.values()) == 1
 
     def _validate_nameforreplace(self, randomization):
         undercroft = randomization["spawns"]["Beast's Castle"]["Undercroft"]["spawnpoints"]["b_40"]
@@ -212,7 +239,7 @@ class Tests(unittest.TestCase):
         self._validate_boss_placements(randomization)
 
     def _validate_all_bosses_used(self, randomization):
-        pass
+        pass #TODO add in check to make sure all the bosses from the mapping are in the right spot with the children/etc
 
     def _validate_boss_placements(self, randomization):
         import yaml
@@ -247,12 +274,14 @@ class Tests(unittest.TestCase):
                                     # prob need to do something about the parent
                                     assert new_parent["name"] in avail_list, "{} is not in {}'s available list".format(new_name, old_enemy["name"])
 
-# Uncomment to run the actual tests
-unittest.main()
 
 # Uncomment to run a single test through ipython
 # ut = Tests()
-# ut.test_seedgen_boss_and_enemy_one_to_one()
+# ut.test_seedgen_boss_selected()
+
+
+# Uncomment to run the actual tests
+unittest.main()
 
 # memory expansion=true test for enemies, validate certain rooms were ignored/not ignored
 

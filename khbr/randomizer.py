@@ -358,7 +358,7 @@ class KingdomHearts2:
             bosslist = [b for b in bossdict if bossdict[b]["name"] == bossdict[b]["parent"]]
             chosen = {}
             for k in sorted(bosslist, key=lambda k: len(bossdict[k]["available"])):
-                avail = [b for b in self.enemy_records[k]["available"] if not b in chosen]
+                avail = [b for b in self.enemy_records[k]["available"] if not b in chosen.values()]
                 if len(avail) == 0:
                     break
                 else:
@@ -420,6 +420,43 @@ class KingdomHearts2:
     def pick_enemy_to_replace(self, oldenemy, enabledenemies):
         options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
         return random.choice(options)
+    def get_boss_list(self, options):
+        nightmare_bosses = "nightmare_bosses" in options and options["nightmare_bosses"]
+        maxsize = LIMITED_SIZE
+        bosses = self.get_bosses(nightmare_mode=nightmare_bosses, maxsize=maxsize)
+        if "scale_boss_stats" in options:
+            scale_boss = options["scale_boss_stats"]
+
+        # cups and superbosses are turned off by default
+        # This feels too imperative to me, I want the randomizer to be as moduler/functional as possible
+        exclude_tags = []
+        if not ("cups_bosses" in options and options["cups_bosses"]):
+            exclude_tags.append("cups")
+        if not ("data_bosses" in options and options["data_bosses"]):
+            exclude_tags.append("data")
+
+        # Nightmare mode ignores the datas and cups options
+        if nightmare_bosses:
+            bosses = {b: bosses[b] for b in bosses if bosses[b]["isnightmare"]}
+        else:
+            bosses = {b: bosses[b] for b in bosses if len(set(bosses[b]["tags"]).intersection(set(exclude_tags))) == 0}
+
+        boss_names = list(bosses.keys())
+
+        # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
+        # this still feels pretty imperative, maybe during a refactor it will become obvious how to be more functional
+        # have to look at every source boss too so adjusting those sources, not just the ones that are available
+        for boss_name in self.enemy_records:
+            boss = self.enemy_records[boss_name]
+            if boss["type"] != "boss":
+                continue
+            if boss["name"] == boss["parent"]:
+                boss["children"] = [b for b in boss["children"] if b in bosses]
+                boss["available"] = [b for b in boss["available"] if b in bosses]
+                for child_name in boss["children"]:
+                    child = self.enemy_records[child_name]
+                    child["variations"] = [b for b in boss["variations"] if b in bosses]
+        return bosses
     def perform_randomization(self, options, seed=None):
         print("Enemy Seed: {}".format(seed))
         if diagnostics:
@@ -473,19 +510,8 @@ class KingdomHearts2:
             #maxsize = UNLIMITED_SIZE if self.unlimited_memory else LIMITED_SIZE
             maxsize = LIMITED_SIZE
             if bossmode:
-                bosses = self.get_bosses(nightmare_mode=nightmare_bosses, maxsize=maxsize)
-                if "scale_boss_stats" in options:
-                    scale_boss = options["scale_boss_stats"]
+                bosses = self.get_boss_list(options)
 
-                # cups and superbosses are turned off by default
-                # This feels too imperative to me, I want the randomizer to be as moduler/functional as possible
-                exclude_tags = []
-                if not ("cups_bosses" in options and options["cups_bosses"]):
-                    exclude_tags.append("cups")
-                if not ("data_bosses" in options and options["data_bosses"]):
-                    exclude_tags.append("data")
-
-                # Nightmare mode forces mode to wild and ignores the datas and cups options
                 if "selected_boss" in options and options["selected_boss"] and options["boss"] == "Selected Boss":
                     bossmode = "Wild"
                     duplicate_bosses = True
@@ -493,25 +519,6 @@ class KingdomHearts2:
                 elif nightmare_bosses:
                     bossmode = "Wild"
                     duplicate_bosses = True
-                    bosses = {b: bosses[b] for b in bosses if bosses[b]["isnightmare"]}
-                else:
-                    bosses = {b: bosses[b] for b in bosses if len(set(bosses[b]["tags"]).intersection(set(exclude_tags))) == 0}
-
-                boss_names = list(bosses.keys())
-
-                # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
-                # this still feels pretty imperative, maybe during a refactor it will become obvious how to be more functional
-                # have to look at every source boss too so adjusting those sources, not just the ones that are available
-                for boss_name in self.enemy_records:
-                    boss = self.enemy_records[boss_name]
-                    if boss["type"] != "boss":
-                        continue
-                    if boss["name"] == boss["parent"]:
-                        boss["children"] = [b for b in boss["children"] if b in bosses]
-                        boss["available"] = [b for b in boss["available"] if b in bosses]
-                        for child_name in boss["children"]:
-                            child = self.enemy_records[child_name]
-                            child["variations"] = [b for b in boss["variations"] if b in bosses]
 
             if enemymode:
                 if "selected_enemy" in options and options["selected_enemy"] and options["enemy"] == "Selected Enemy":
