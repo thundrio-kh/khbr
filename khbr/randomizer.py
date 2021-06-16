@@ -1255,11 +1255,13 @@ class Randomizer:
             raise Exception("Game not supported")
         game = self._get_game(g)
         self._validate_options(game.get_options(), options)
-        print(random.randint(0,1000000))
 
         randomization = game.perform_randomization(options)
         assets = game.generate_files(randomization=randomization, outzip=outZip)
         modobj["assets"] += assets
+        spoilers = randomization
+        if game.spoilers["boss"] or game.spoilers["enemy"]:
+            return game.create_spoiler_text()
         return randomization
     
     def getSchemaForGame(self, g):
