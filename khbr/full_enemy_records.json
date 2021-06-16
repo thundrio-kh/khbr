@@ -123,8 +123,8 @@
         "parent": "Aerial Knocker",
         "variationof": null,
         "children": [
-            "Aerial Knocker",
-            "Aeriel Champ"
+            "Aeriel Champ",
+            "Aerial Knocker"
         ],
         "hp": 100,
         "limiter": 1,
@@ -519,8 +519,8 @@
         "variationof": null,
         "children": [
             "Runemaster",
-            "Bookmaster",
-            "Bookmaster (TR)"
+            "Bookmaster (TR)",
+            "Bookmaster"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1062,10 +1062,10 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
-            "Emerald Blues NM",
-            "Emerald Blues",
+            "Spring Metal",
             "Emerald Blues (TR)",
-            "Spring Metal"
+            "Emerald Blues",
+            "Emerald Blues NM"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2202,9 +2202,9 @@
         "parent": "Hammer Frame",
         "variationof": null,
         "children": [
+            "Iron Hammer",
             "Hammer Frame WI",
-            "Hammer Frame",
-            "Iron Hammer"
+            "Hammer Frame"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2303,9 +2303,9 @@
         "parent": "Hot Rod",
         "variationof": null,
         "children": [
-            "Mad Ride",
             "Hot Rod",
-            "Hot Rod WI"
+            "Hot Rod WI",
+            "Mad Ride"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5187,8 +5187,8 @@
         "parent": "Wight Knight",
         "variationof": null,
         "children": [
-            "Wight Knight",
-            "Wight Knight NM"
+            "Wight Knight NM",
+            "Wight Knight"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5337,8 +5337,8 @@
         "parent": "Aerial Viking",
         "variationof": null,
         "children": [
-            "Air Pirate",
-            "Aerial Viking"
+            "Aerial Viking",
+            "Air Pirate"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6652,9 +6652,9 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower",
             "Bolt Tower (MU)",
             "Bolt Tower DC",
+            "Bolt Tower",
             "Bolt Tower (RAW)"
         ],
         "msn_required": false,
@@ -8347,8 +8347,8 @@
         "parent": "Demyx",
         "variationof": null,
         "children": [
-            "Demyx",
-            "Demyx (Data)"
+            "Demyx (Data)",
+            "Demyx"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -8787,8 +8787,8 @@
         "parent": "Driller Mole",
         "variationof": null,
         "children": [
-            "Driller Mole",
-            "Driller Mole NM"
+            "Driller Mole NM",
+            "Driller Mole"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9402,8 +9402,8 @@
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
-            "Final Xemnas (Data)",
-            "Final Xemnas"
+            "Final Xemnas",
+            "Final Xemnas (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -10381,8 +10381,8 @@
         "parent": "Hades II",
         "variationof": null,
         "children": [
-            "Hades II",
-            "Hades Cups"
+            "Hades Cups",
+            "Hades II"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12267,7 +12267,6 @@
         "whitelist_destination": [
             "Armor Xemnas II",
             "Groundshaker",
-            "Xemnas",
             "Final Xemnas",
             "Dark Thorn",
             "Shadow Stalker",
@@ -12400,8 +12399,8 @@
         "parent": "Icy Cube",
         "variationof": null,
         "children": [
-            "Icy Cube Treasure Room",
-            "Icy Cube"
+            "Icy Cube",
+            "Icy Cube Treasure Room"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -12747,8 +12746,8 @@
         "parent": "Large Body",
         "variationof": null,
         "children": [
-            "Large Body WI",
-            "Large Body"
+            "Large Body",
+            "Large Body WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -14088,8 +14087,8 @@
         "parent": "Minute Bomb",
         "variationof": null,
         "children": [
-            "Minute Bomb",
-            "Minute Bomb WI"
+            "Minute Bomb WI",
+            "Minute Bomb"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -16917,8 +16916,8 @@
         "parent": "Saix",
         "variationof": null,
         "children": [
-            "Saix (Data)",
-            "Saix"
+            "Saix",
+            "Saix (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -17896,10 +17895,10 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow (NM)",
-            "Shadow (RAW)",
             "Shadow WI",
-            "Shadow"
+            "Shadow",
+            "Shadow (NM)",
+            "Shadow (RAW)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -18584,10 +18583,10 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
-            "Soldier (TR)",
-            "Soldier (WI)",
+            "Soldier NM",
             "Soldier",
-            "Soldier NM"
+            "Soldier (WI)",
+            "Soldier (TR)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19771,8 +19770,8 @@
         "parent": "Trick Ghost",
         "variationof": null,
         "children": [
-            "Trick Ghost",
-            "Trick Ghost (NM)"
+            "Trick Ghost (NM)",
+            "Trick Ghost"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20336,8 +20335,8 @@
         "parent": "Xaldin",
         "variationof": null,
         "children": [
-            "Xaldin",
-            "Xaldin (Data)"
+            "Xaldin (Data)",
+            "Xaldin"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20463,7 +20462,6 @@
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Hydra",
             "Leon",
             "Lexaeus",
             "Marluxia",

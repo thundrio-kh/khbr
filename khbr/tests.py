@@ -201,6 +201,37 @@ class Tests(unittest.TestCase):
         # check children/variations set correctly (including variation attributes set to parent, etc)
         # check tags set properly
 
+    def test_one_to_one_luxord_source(self):
+        print("One to One Luxord Test")
+        options = {"boss": "One to One"}
+        storm_rider_count = 0
+        N = 100
+        max_percent = 0.4
+        results = []
+        for _ in range(N):
+            randomization = self._generateSeed(options, str(_))
+            rep = self._get_luxord_replacement(randomization)
+            if rep == "Storm Rider":
+                storm_rider_count += 1
+            results.append(rep)
+        print(results)
+        assert storm_rider_count <= N * max_percent
+
+    def test_wild_luxord_source(self):
+        print("Wild Luxord Test")
+        options = {"boss": "Wild"}
+        storm_rider_count = 0
+        N = 100
+        max_percent = 0.4
+        for _ in range(N):
+            randomization = self._generateSeed(options, str(_))
+            rep = self._get_luxord_replacement(randomization)
+            if rep == "Storm Rider":
+                storm_rider_count += 1
+            print(rep)
+        print(results)
+        assert storm_rider_count <= N * max_percent
+
     def test_enmp(self):
         import yaml
         kh2 = KingdomHearts2()
@@ -225,6 +256,12 @@ class Tests(unittest.TestCase):
         counted = getcounts(mapping)
         assert min(counted.values()) == 1
         assert max(counted.values()) == 1
+
+    def _get_luxord_replacement(self, randomization):
+        try:
+            return randomization["spawns"]["The World That Never Was"]["Havocs Divide"]["spawnpoints"]["b_40"]["sp_ids"]["69"][0]["name"]
+        except KeyError:
+            return "Luxord"
 
     def _validate_nameforreplace(self, randomization):
         undercroft = randomization["spawns"]["Beast's Castle"]["Undercroft"]["spawnpoints"]["b_40"]
@@ -277,7 +314,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 # ut = Tests()
-# ut.test_seedgen_boss_selected()
+# ut.test_wild_luxord_source()
 
 
 # Uncomment to run the actual tests
