@@ -1128,10 +1128,10 @@ Banzai:
       - 2
       - 0
 Barbossa:
-  aimod: false
+  aimod: true
   adds:
   - ObjectId: 358 #Illuminator
-  enabled: false
+  enabled: true
   enmp_index: 92
   hp: 100
   level: 99

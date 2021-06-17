@@ -123,8 +123,8 @@
         "parent": "Aerial Knocker",
         "variationof": null,
         "children": [
-            "Aerial Knocker",
-            "Aeriel Champ"
+            "Aeriel Champ",
+            "Aerial Knocker"
         ],
         "hp": 100,
         "limiter": 1,
@@ -270,8 +270,8 @@
         "parent": "Aeroplane",
         "variationof": null,
         "children": [
-            "Aeroplane WI",
-            "Aeroplane"
+            "Aeroplane",
+            "Aeroplane WI"
         ],
         "hp": 100,
         "limiter": 1,
@@ -519,8 +519,8 @@
         "variationof": null,
         "children": [
             "Bookmaster (TR)",
-            "Bookmaster",
-            "Runemaster"
+            "Runemaster",
+            "Bookmaster"
         ],
         "hp": 100,
         "limiter": 1,
@@ -1062,10 +1062,10 @@
         "parent": "Emerald Blues",
         "variationof": null,
         "children": [
-            "Emerald Blues NM",
             "Emerald Blues",
-            "Spring Metal",
-            "Emerald Blues (TR)"
+            "Emerald Blues (TR)",
+            "Emerald Blues NM",
+            "Spring Metal"
         ],
         "hp": 100,
         "limiter": 1,
@@ -2203,8 +2203,8 @@
         "variationof": null,
         "children": [
             "Hammer Frame",
-            "Iron Hammer",
-            "Hammer Frame WI"
+            "Hammer Frame WI",
+            "Iron Hammer"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3237,8 +3237,8 @@
         "parent": "Strafer",
         "variationof": null,
         "children": [
-            "Strafer RAW",
-            "Strafer"
+            "Strafer",
+            "Strafer RAW"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3442,8 +3442,8 @@
         "parent": "Toy Soldier",
         "variationof": null,
         "children": [
-            "Toy Soldier",
-            "Toy Soldier NM"
+            "Toy Soldier NM",
+            "Toy Soldier"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5187,8 +5187,8 @@
         "parent": "Wight Knight",
         "variationof": null,
         "children": [
-            "Wight Knight NM",
-            "Wight Knight"
+            "Wight Knight",
+            "Wight Knight NM"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5337,8 +5337,8 @@
         "parent": "Aerial Viking",
         "variationof": null,
         "children": [
-            "Aerial Viking",
-            "Air Pirate"
+            "Air Pirate",
+            "Aerial Viking"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -5643,6 +5643,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -5706,8 +5707,8 @@
         "parent": "Armored Knight",
         "variationof": null,
         "children": [
-            "Armored Knight (NM)",
-            "Armored Knight"
+            "Armored Knight",
+            "Armored Knight (NM)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -5942,6 +5943,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -6032,8 +6034,8 @@
         "parent": "Axel II",
         "variationof": null,
         "children": [
-            "Axel II",
-            "Axel (Data)"
+            "Axel (Data)",
+            "Axel II"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6053,6 +6055,7 @@
         "available": [
             "Armor Xemnas I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -6132,6 +6135,7 @@
             "Axel I",
             "Axel II",
             "Banzai",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -6230,13 +6234,13 @@
             0
         ],
         "name": "Barbossa",
-        "aimod": false,
+        "aimod": true,
         "adds": [
             {
                 "ObjectId": 358
             }
         ],
-        "enabled": false,
+        "enabled": true,
         "enmp_index": 92,
         "hp": 100,
         "level": 99,
@@ -6560,6 +6564,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -6672,10 +6677,10 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
-            "Bolt Tower",
             "Bolt Tower (MU)",
+            "Bolt Tower (RAW)",
             "Bolt Tower DC",
-            "Bolt Tower (RAW)"
+            "Bolt Tower"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6826,9 +6831,9 @@
         "parent": "Cannon Gun",
         "variationof": null,
         "children": [
-            "Cannon Gun",
+            "Camo Cannon",
             "Cannon Gun WI",
-            "Camo Cannon"
+            "Cannon Gun"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6957,6 +6962,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -7119,6 +7125,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -8398,6 +8405,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -8564,8 +8572,8 @@
         "parent": "Devastator",
         "variationof": null,
         "children": [
-            "Reckless",
-            "Devastator"
+            "Devastator",
+            "Reckless"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -8820,8 +8828,8 @@
         "parent": "Driller Mole",
         "variationof": null,
         "children": [
-            "Driller Mole NM",
-            "Driller Mole"
+            "Driller Mole",
+            "Driller Mole NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9435,8 +9443,8 @@
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
-            "Final Xemnas (Data)",
-            "Final Xemnas"
+            "Final Xemnas",
+            "Final Xemnas (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -9457,6 +9465,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -10060,6 +10069,10 @@
         "enmp_index": 143,
         "hp": 100,
         "level": 99,
+        "blacklist": [
+            "Dark Thorn",
+            "Shadow Stalker"
+        ],
         "limiter": 0,
         "model": "B_CA050",
         "obj_id": 1543,
@@ -10174,6 +10187,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -10450,6 +10464,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -10679,6 +10694,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -10772,6 +10788,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -12240,6 +12257,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -12409,6 +12427,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -13081,6 +13100,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -13789,8 +13809,8 @@
         "parent": "Luxord",
         "variationof": null,
         "children": [
-            "Luxord",
-            "Luxord (Data)"
+            "Luxord (Data)",
+            "Luxord"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -13810,6 +13830,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -14177,8 +14198,8 @@
         "parent": "Minute Bomb",
         "variationof": null,
         "children": [
-            "Minute Bomb",
-            "Minute Bomb WI"
+            "Minute Bomb WI",
+            "Minute Bomb"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -14768,6 +14789,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -15056,6 +15078,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -16830,6 +16853,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -17024,8 +17048,8 @@
         "parent": "Saix",
         "variationof": null,
         "children": [
-            "Saix",
-            "Saix (Data)"
+            "Saix (Data)",
+            "Saix"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -17046,6 +17070,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -17235,6 +17260,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -17326,6 +17352,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -17439,6 +17466,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -17789,6 +17817,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -17910,6 +17939,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -17967,8 +17997,8 @@
         "variationof": null,
         "children": [
             "Shadow WI",
-            "Shadow (NM)",
             "Shadow (RAW)",
+            "Shadow (NM)",
             "Shadow"
         ],
         "msn_required": false,
@@ -18284,6 +18314,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -18660,10 +18691,10 @@
         "parent": "Soldier",
         "variationof": null,
         "children": [
+            "Soldier",
             "Soldier (TR)",
-            "Soldier NM",
             "Soldier (WI)",
-            "Soldier"
+            "Soldier NM"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -19004,6 +19035,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -19249,6 +19281,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -19595,6 +19628,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -19951,6 +19985,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -20266,6 +20301,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -20427,8 +20463,8 @@
         "parent": "Xaldin",
         "variationof": null,
         "children": [
-            "Xaldin",
-            "Xaldin (Data)"
+            "Xaldin (Data)",
+            "Xaldin"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20451,6 +20487,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -20548,6 +20585,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -20650,8 +20688,8 @@
         "parent": "Xigbar",
         "variationof": null,
         "children": [
-            "Xigbar",
-            "Xigbar (Data)"
+            "Xigbar (Data)",
+            "Xigbar"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20672,6 +20710,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -20763,6 +20802,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -21031,6 +21071,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
