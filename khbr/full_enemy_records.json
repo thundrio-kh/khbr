@@ -518,9 +518,9 @@
         "parent": "Bookmaster",
         "variationof": null,
         "children": [
+            "Bookmaster",
             "Bookmaster (TR)",
-            "Runemaster",
-            "Bookmaster"
+            "Runemaster"
         ],
         "hp": 100,
         "limiter": 1,
@@ -914,8 +914,8 @@
         "parent": "Creeper Plant",
         "variationof": null,
         "children": [
-            "Creeper Plant (NM)",
-            "Creeper Plant"
+            "Creeper Plant",
+            "Creeper Plant (NM)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -3045,8 +3045,8 @@
         "parent": "Shaman",
         "variationof": null,
         "children": [
-            "Shaman",
-            "Necromancer"
+            "Necromancer",
+            "Shaman"
         ],
         "hp": 100,
         "limiter": 1,
@@ -5970,9 +5970,6 @@
             "Sark",
             "Seifer",
             "Setzer",
-            "Terra",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vivi",
@@ -6064,6 +6061,7 @@
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
+            "Hayner",
             "Hercules",
             "Leon",
             "Past Pete",
@@ -6071,8 +6069,10 @@
             "Pete OC II",
             "Sark",
             "Seifer",
+            "Setzer",
             "Tifa",
             "Twilight Thorn",
+            "Vivi",
             "Volcano Lord",
             "Yuffie"
         ]
@@ -6584,7 +6584,6 @@
             "Sark",
             "Scar",
             "Seifer",
-            "Sephiroth",
             "Setzer",
             "Shan-Yu",
             "The Experiment",
@@ -6681,10 +6680,10 @@
         "parent": "Bolt Tower",
         "variationof": null,
         "children": [
+            "Bolt Tower",
             "Bolt Tower (MU)",
             "Bolt Tower (RAW)",
-            "Bolt Tower DC",
-            "Bolt Tower"
+            "Bolt Tower DC"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -6836,8 +6835,8 @@
         "variationof": null,
         "children": [
             "Camo Cannon",
-            "Cannon Gun WI",
-            "Cannon Gun"
+            "Cannon Gun",
+            "Cannon Gun WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -10765,8 +10764,6 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "available": [
-            "Armor Xemnas I",
-            "Armor Xemnas II",
             "Axel I",
             "Axel II",
             "Barbossa",
@@ -10778,18 +10775,12 @@
             "Hayner",
             "Hercules",
             "Leon",
-            "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Riku",
             "Sark",
-            "Scar",
             "Seifer",
             "Setzer",
-            "Terra",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vivi",
@@ -13884,8 +13875,8 @@
         "parent": "Luxord",
         "variationof": null,
         "children": [
-            "Luxord (Data)",
-            "Luxord"
+            "Luxord",
+            "Luxord (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -15270,9 +15261,9 @@
         "parent": "Rapid Thruster",
         "variationof": null,
         "children": [
-            "Rapid Thruster WI",
             "Rapid Thruster",
-            "Rapid Thruster (RAW)"
+            "Rapid Thruster (RAW)",
+            "Rapid Thruster WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -17123,8 +17114,8 @@
         "parent": "Saix",
         "variationof": null,
         "children": [
-            "Saix (Data)",
-            "Saix"
+            "Saix",
+            "Saix (Data)"
         ],
         "msn_source_as": null,
         "aimod": null,
@@ -17566,9 +17557,6 @@
             "Sark",
             "Seifer",
             "Setzer",
-            "Terra",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vivi",
@@ -18130,10 +18118,10 @@
         "parent": "Shadow",
         "variationof": null,
         "children": [
-            "Shadow WI",
-            "Shadow (RAW)",
+            "Shadow",
             "Shadow (NM)",
-            "Shadow"
+            "Shadow (RAW)",
+            "Shadow WI"
         ],
         "msn_required": false,
         "msn_source_as": null,
@@ -20146,12 +20134,8 @@
             "Sark",
             "Seifer",
             "Setzer",
-            "Terra",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
-            "Vexen",
             "Vivi",
             "Volcano Lord",
             "Yuffie"
@@ -20386,8 +20370,6 @@
             "Sark",
             "Seifer",
             "Setzer",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Vivi",
             "Volcano Lord",
@@ -20473,7 +20455,6 @@
             "Sark",
             "Scar",
             "Seifer",
-            "Sephiroth",
             "Setzer",
             "Shan-Yu",
             "The Experiment",
@@ -20619,8 +20600,8 @@
         "parent": "Xaldin",
         "variationof": null,
         "children": [
-            "Xaldin (Data)",
-            "Xaldin"
+            "Xaldin",
+            "Xaldin (Data)"
         ],
         "msn_required": false,
         "msn_source_as": null,
