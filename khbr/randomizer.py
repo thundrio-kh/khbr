@@ -242,46 +242,55 @@ class KingdomHearts2:
             bosses_f = yaml.load(f, Loader=yaml.FullLoader)
         bosses = {}
         kidlist = {}
+        def _inheritConfig(parent, variation):
+            for k in parent:
+                if k == "variations":
+                    if k not in variation:
+                        variation[k] = list(parent[k].keys())
+                    continue
+                if k not in variation:
+                    variation[k] = parent[k]
+            for d in defaults:
+                if d not in variation:
+                    variation[d] = defaults[d]
+                else:
+                    if variation[d] == defaults[d] and d in parent:
+                        if d not in ["children", "sizeTag"]:
+                            variation[d] = parent[d]
         for name in bosses_f:
-            b = bosses_f[name]
-            for v in b["variations"]:
-                boss = dict(b["variations"][v])
-                boss["name"] = v
-                for k in b:
-                    if k == "variations":
-                        boss[k] = list(b[k].keys())
-                        continue
-                    if k not in boss:
-                        boss[k] = b[k]
-                for d in defaults:
-                    if d not in boss:
-                        boss[d] = defaults[d]
-                boss["category"] = '-'.join(sorted(boss["tags"]))
-                if boss["sizeTag"]:
-                    boss["category"] = "-".join([boss["category"], boss["sizeTag"]])
+            main = bosses_f[name]
+            for v in main["variations"]:
+                variation = dict(main["variations"][v])
+                variation["name"] = v
+                _inheritConfig(main, variation)
+                variation["category"] = '-'.join(sorted(variation["tags"]))
+                if variation["sizeTag"]:
+                    variation["category"] = "-".join([variation["category"], variation["sizeTag"]])
 
-                if len(boss["category"]) > 0 and boss["category"][0] == "-":
-                    boss["category"] = boss["category"][1:]
+                if len(variation["category"]) > 0 and variation["category"][0] == "-":
+                    variation["category"] = variation["category"][1:]
                 if usefilters:
-                    if "boss" in usefilters and boss["type"] != 'boss':
+                    if "boss" in usefilters and variation["type"] != 'boss':
                         continue
-                    if "enabled" in usefilters and not boss['enabled']:
+                    if "enabled" in usefilters and not variation['enabled']:
                         continue
-                    if "nightmare" in usefilters and nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
+                    if "nightmare" in usefilters and nightmare_mode and not ("isnightmare" in variation and variation["isnightmare"]):
                         continue
 
-                parent = boss["variationof"] or name
+                parent = variation["variationof"] or name
                 assert parent != None
-                if not boss["parent"]:
-                    boss["parent"] = parent
+                if not variation["parent"]:
+                    variation["parent"] = parent
                 if parent not in kidlist:
                     kidlist[parent] = []
                 kidlist[parent].append(name)
                 
-                bosses[v] = boss
+                bosses[v] = variation
         
         for parent in kidlist:
-            bosses[parent]["children"] = list(set(kidlist[parent]))
+            bosses[parent]["children"] = sorted(list(set(kidlist[parent])))
+            for child in bosses[parent]["children"]:
+                _inheritConfig(bosses[parent], bosses[child])
 
         if getavail:
             for source_name in bosses:
