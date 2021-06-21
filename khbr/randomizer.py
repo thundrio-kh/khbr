@@ -245,46 +245,55 @@ class KingdomHearts2:
             bosses_f = yaml.load(f, Loader=yaml.FullLoader)
         bosses = {}
         kidlist = {}
+        def _inheritConfig(parent, variation):
+            for k in parent:
+                if k == "variations":
+                    if k not in variation:
+                        variation[k] = list(parent[k].keys())
+                    continue
+                if k not in variation:
+                    variation[k] = parent[k]
+            for d in defaults:
+                if d not in variation:
+                    variation[d] = defaults[d]
+                else:
+                    if variation[d] == defaults[d] and d in parent:
+                        if d not in ["children", "sizeTag"]:
+                            variation[d] = parent[d]
         for name in bosses_f:
-            b = bosses_f[name]
-            for v in b["variations"]:
-                boss = dict(b["variations"][v])
-                boss["name"] = v
-                for k in b:
-                    if k == "variations":
-                        boss[k] = list(b[k].keys())
-                        continue
-                    if k not in boss:
-                        boss[k] = b[k]
-                for d in defaults:
-                    if d not in boss:
-                        boss[d] = defaults[d]
-                boss["category"] = '-'.join(sorted(boss["tags"]))
-                if boss["sizeTag"]:
-                    boss["category"] = "-".join([boss["category"], boss["sizeTag"]])
+            main = bosses_f[name]
+            for v in main["variations"]:
+                variation = dict(main["variations"][v])
+                variation["name"] = v
+                _inheritConfig(main, variation)
+                variation["category"] = '-'.join(sorted(variation["tags"]))
+                if variation["sizeTag"]:
+                    variation["category"] = "-".join([variation["category"], variation["sizeTag"]])
 
-                if len(boss["category"]) > 0 and boss["category"][0] == "-":
-                    boss["category"] = boss["category"][1:]
+                if len(variation["category"]) > 0 and variation["category"][0] == "-":
+                    variation["category"] = variation["category"][1:]
                 if usefilters:
-                    if "boss" in usefilters and boss["type"] != 'boss':
+                    if "boss" in usefilters and variation["type"] != 'boss':
                         continue
-                    if "enabled" in usefilters and not boss['enabled']:
+                    if "enabled" in usefilters and not variation['enabled']:
                         continue
-                    if "nightmare" in usefilters and nightmare_mode and not ("isnightmare" in boss and boss["isnightmare"]):
+                    if "nightmare" in usefilters and nightmare_mode and not ("isnightmare" in variation and variation["isnightmare"]):
                         continue
 
-                parent = boss["variationof"] or name
+                parent = variation["variationof"] or name
                 assert parent != None
-                if not boss["parent"]:
-                    boss["parent"] = parent
+                if not variation["parent"]:
+                    variation["parent"] = parent
                 if parent not in kidlist:
                     kidlist[parent] = []
                 kidlist[parent].append(name)
                 
-                bosses[v] = boss
+                bosses[v] = variation
         
         for parent in kidlist:
-            bosses[parent]["children"] = list(set(kidlist[parent]))
+            bosses[parent]["children"] = sorted(list(set(kidlist[parent])))
+            for child in bosses[parent]["children"]:
+                _inheritConfig(bosses[parent], bosses[child])
 
         if getavail:
             for source_name in bosses:
@@ -359,15 +368,16 @@ class KingdomHearts2:
     def pickbossmapping(self, bossdict):
         while 1:
             bosslist = [b for b in bossdict if bossdict[b]["name"] == bossdict[b]["parent"]]
-            chosen = []
+            chosen = {}
             for k in sorted(bosslist, key=lambda k: len(bossdict[k]["available"])):
-                avail = [b for b in self.enemy_records[k]["available"] if not b in chosen]
+                avail = [b for b in self.enemy_records[k]["available"] if not b in chosen.values()]
                 if len(avail) == 0:
                     break
                 else:
-                    chosen.append(random.choice(avail))
+                    chosen_new_boss = random.choice(avail)
+                    chosen[k] = chosen_new_boss
             if len(bosslist) == len(chosen):
-                return {bosslist[i]: chosen[i] for i in range(len(bosslist))}
+                return chosen
     def categorize_enemies(self, enemylist):
         categories = {}
         for e in enemylist:
@@ -422,8 +432,45 @@ class KingdomHearts2:
     def pick_enemy_to_replace(self, oldenemy, enabledenemies):
         options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
         return random.choice(options)
+    def get_boss_list(self, options):
+        nightmare_bosses = "nightmare_bosses" in options and options["nightmare_bosses"]
+        maxsize = LIMITED_SIZE
+        bosses = self.get_bosses(nightmare_mode=nightmare_bosses, maxsize=maxsize)
+        if "scale_boss_stats" in options:
+            scale_boss = options["scale_boss_stats"]
+
+        # cups and superbosses are turned off by default
+        # This feels too imperative to me, I want the randomizer to be as moduler/functional as possible
+        exclude_tags = []
+        if not ("cups_bosses" in options and options["cups_bosses"]):
+            exclude_tags.append("cups")
+        if not ("data_bosses" in options and options["data_bosses"]):
+            exclude_tags.append("data")
+
+        # Nightmare mode ignores the datas and cups options
+        if nightmare_bosses:
+            bosses = {b: bosses[b] for b in bosses if bosses[b]["isnightmare"]}
+        else:
+            bosses = {b: bosses[b] for b in bosses if len(set(bosses[b]["tags"]).intersection(set(exclude_tags))) == 0}
+
+        boss_names = list(bosses.keys())
+
+        # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
+        # this still feels pretty imperative, maybe during a refactor it will become obvious how to be more functional
+        # have to look at every source boss too so adjusting those sources, not just the ones that are available
+        for boss_name in self.enemy_records:
+            boss = self.enemy_records[boss_name]
+            if boss["type"] != "boss":
+                continue
+            if boss["name"] == boss["parent"]:
+                boss["children"] = [b for b in boss["children"] if b in bosses]
+                boss["available"] = [b for b in boss["available"] if b in bosses]
+                for child_name in boss["children"]:
+                    child = self.enemy_records[child_name]
+                    child["variations"] = [b for b in boss["variations"] if b in bosses]
+        return bosses
     def perform_randomization(self, options, seed=None):
-        print("Enemy Seed: {}".format(random.seed))
+        print("Enemy Seed: {}".format(seed))
         if diagnostics:
             start_time = time.time()
             print("Starting Randomization: {}".format(options))
@@ -475,19 +522,8 @@ class KingdomHearts2:
             #maxsize = UNLIMITED_SIZE if self.unlimited_memory else LIMITED_SIZE
             maxsize = LIMITED_SIZE
             if bossmode:
-                bosses = self.get_bosses(nightmare_mode=nightmare_bosses, maxsize=maxsize)
-                if "scale_boss_stats" in options:
-                    scale_boss = options["scale_boss_stats"]
+                bosses = self.get_boss_list(options)
 
-                # cups and superbosses are turned off by default
-                # This feels too imperative to me, I want the randomizer to be as moduler/functional as possible
-                exclude_tags = []
-                if not ("cups_bosses" in options and options["cups_bosses"]):
-                    exclude_tags.append("cups")
-                if not ("data_bosses" in options and options["data_bosses"]):
-                    exclude_tags.append("data")
-
-                # Nightmare mode forces mode to wild and ignores the datas and cups options
                 if "selected_boss" in options and options["selected_boss"] and options["boss"] == "Selected Boss":
                     bossmode = "Wild"
                     duplicate_bosses = True
@@ -495,25 +531,6 @@ class KingdomHearts2:
                 elif nightmare_bosses:
                     bossmode = "Wild"
                     duplicate_bosses = True
-                    bosses = {b: bosses[b] for b in bosses if bosses[b]["isnightmare"]}
-                else:
-                    bosses = {b: bosses[b] for b in bosses if len(set(bosses[b]["tags"]).intersection(set(exclude_tags))) == 0}
-
-                boss_names = list(bosses.keys())
-
-                # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
-                # this still feels pretty imperative, maybe during a refactor it will become obvious how to be more functional
-                # have to look at every source boss too so adjusting those sources, not just the ones that are available
-                for boss_name in self.enemy_records:
-                    boss = self.enemy_records[boss_name]
-                    if boss["type"] != "boss":
-                        continue
-                    if boss["name"] == boss["parent"]:
-                        boss["children"] = [b for b in boss["children"] if b in bosses]
-                        boss["available"] = [b for b in boss["available"] if b in bosses]
-                        for child_name in boss["children"]:
-                            child = self.enemy_records[child_name]
-                            child["variations"] = [b for b in boss["variations"] if b in bosses]
 
             if enemymode:
                 if "selected_enemy" in options and options["selected_enemy"] and options["enemy"] == "Selected Enemy":
@@ -531,7 +548,6 @@ class KingdomHearts2:
                 bossmapping = self.pickbossmapping(bosses) if not duplicate_bosses else None
             if enemies:
                 enemymapping = self.pickenemymapping(enemies, nightmare=nightmare_enemies)
-            
             newspawns = {}
             subtract_map = {}
             spawn_limiters = {}
@@ -670,16 +686,17 @@ class KingdomHearts2:
                                 else:
                                     if not enemies:
                                         continue
-                                    old_enemy_object = self.enemy_records[ent["name"]]
+                                    old_name = ent["nameForReplace"] if "nameForReplace" in ent else ent["name"]
+                                    old_enemy_object = self.enemy_records[old_name]
                                     if not old_enemy_object["source_replace_allowed"]:
                                         continue
                                     if selected_enemy:
                                         new_enemy = selected_enemy
                                     elif enemymapping:
-                                        if ent["name"] not in enemymapping:
+                                        if old_name not in enemymapping:
                                             continue
                                             # if it's not in mapping it's not enabled
-                                        new_enemy = enemymapping[ent["name"]]
+                                        new_enemy = enemymapping[old_name]
                                     elif enemymode == "Wild":
                                         new_enemy = self.pick_enemy_to_replace(old_enemy_object, enemies)
                                     if new_enemy == ent["name"]:
@@ -1252,11 +1269,13 @@ class Randomizer:
             raise Exception("Game not supported")
         game = self._get_game(g)
         self._validate_options(game.get_options(), options)
-        print(random.randint(0,1000000))
 
         randomization = game.perform_randomization(options)
         assets = game.generate_files(randomization=randomization, outzip=outZip)
         modobj["assets"] += assets
+        spoilers = randomization
+        if game.spoilers["boss"] or game.spoilers["enemy"]:
+            return game.create_spoiler_text()
         return randomization
     
     def getSchemaForGame(self, g):
@@ -1297,7 +1316,7 @@ if __name__ == '__main__':
     if mode.startswith("dev"):
         # moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
         #moddir = "C:\\Users\\Arcade\\Desktop\\git\\OpenKh\\OpenKh.Tools.ModsManager\\bin\\Debug\\net5.0-windows\\mods\\thundrio-kh"
-        moddir = "C:\\Users\\Arcade\\Desktop\\pcsx2-ex\\openkh\\mods\\thundrio-kh"
+        moddir = "C:\\Users\\12sam\\Desktop\\openkh\\mods\\thundrio-kh"
         fn = "devmod"
         if os.path.exists(os.path.join(moddir, fn)):
             shutil.rmtree(os.path.join(moddir, fn))
