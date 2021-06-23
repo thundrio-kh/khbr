@@ -2240,7 +2240,7 @@ Hades Escape:
   limiter: 34
   model: B_HE030_HE05
   msn: HE05_MS102
-  source_replace_allowed: false
+  source_replace_allowed: true
   msn_replace_allowed: false
   obj_id: 2066
   replace_as: Hades Cups
