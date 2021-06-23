@@ -433,8 +433,6 @@ class KingdomHearts2:
         nightmare_bosses = "nightmare_bosses" in options and options["nightmare_bosses"]
         maxsize = LIMITED_SIZE
         bosses = self.get_bosses(nightmare_mode=nightmare_bosses, maxsize=maxsize)
-        if "scale_boss_stats" in options:
-            scale_boss = options["scale_boss_stats"]
 
         # cups and superbosses are turned off by default
         # This feels too imperative to me, I want the randomizer to be as moduler/functional as possible
@@ -474,6 +472,8 @@ class KingdomHearts2:
         self.unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
         scale_enemy = False
         scale_boss = False
+        if "scale_boss_stats" in options:
+            scale_boss = options["scale_boss_stats"]
         selected_boss = False
         selected_enemy = False
         enemies = None
