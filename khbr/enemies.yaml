@@ -2001,7 +2001,8 @@ Final Xemnas:
   room_size: 8.92
   subtracts:
   - ObjectId: 2258 # electrified sora
-  - ObjectId: 2079 # clone of
+  adds:
+  - ObjectId: 2079 # clone 
     Argument1: 0
     Argument2: 0
   msn_replace_allowed: false

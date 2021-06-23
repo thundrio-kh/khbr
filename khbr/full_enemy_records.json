@@ -8102,7 +8102,13 @@
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
-        "adds": [],
+        "adds": [
+            {
+                "ObjectId": 2079,
+                "Argument1": 0,
+                "Argument2": 0
+            }
+        ],
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
@@ -9484,7 +9490,9 @@
         "subtracts": [
             {
                 "ObjectId": 2258
-            },
+            }
+        ],
+        "adds": [
             {
                 "ObjectId": 2079,
                 "Argument1": 0,
@@ -9517,7 +9525,6 @@
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
-        "adds": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
@@ -9589,7 +9596,9 @@
         "subtracts": [
             {
                 "ObjectId": 2258
-            },
+            }
+        ],
+        "adds": [
             {
                 "ObjectId": 2079,
                 "Argument1": 0,
@@ -9618,7 +9627,6 @@
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
-        "adds": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
