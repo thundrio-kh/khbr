@@ -129,7 +129,7 @@ Bookmaster:
   model: M_EX530
   obj_id: 5
   size: 0
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   type: enemy
   tags:
   - ranged
@@ -223,7 +223,7 @@ Creeper Plant:
   model: M_EX750
   isnightmare: true
   obj_id: 125
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   tags:
   - ranged
@@ -340,7 +340,7 @@ Gargoyle Knight:
   enmp_index: 999
   model: M_BB010_SWORD
   obj_id: 367
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   isnightmare: true
   replace_as: Gargoyle Knight # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
@@ -372,7 +372,7 @@ Gargoyle Warrior:
   replace_as: Gargoyle Warrior # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   obj_id: 368
   isnightmare: true
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Gargoyle Warrior (40 0):
@@ -400,7 +400,7 @@ Hammer Frame:
   enmp_index: 999
   model: M_EX560
   obj_id: 8
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Hammer Frame:
@@ -618,7 +618,7 @@ Strafer:
   enmp_index: 999
   model: M_EX610
   obj_id: 1114
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Strafer:
@@ -663,7 +663,7 @@ Toy Soldier:
   enmp_index: 999
   model: M_EX790_CHRISTMAS
   obj_id: 1776
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   tags:
   - large
@@ -838,7 +838,7 @@ Wight Knight:
   model: M_EX200
   isnightmare: true
   obj_id: 118
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Wight Knight:
@@ -877,7 +877,7 @@ Aerial Viking:
   limiter: 13
   model: M_EX210_HB
   obj_id: 2413
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Aerial Viking:
@@ -979,7 +979,7 @@ Armored Knight:
   limiter: 7
   model: M_EX760
   obj_id: 305
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Armored Knight:
@@ -1307,7 +1307,7 @@ Cannon Gun:
   limiter: 10
   model: M_EX650
   obj_id: 14
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   tags:
   - ranged
@@ -1405,7 +1405,7 @@ Creeper:
   limiter: 9
   model: M_EX880
   obj_id: 317
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Creeper:
@@ -1420,7 +1420,7 @@ Crescendo:
   limiter: 7
   model: M_EX740
   obj_id: 124
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Crescendo:
@@ -1435,7 +1435,7 @@ Crimson Jazz:
   limiter: 17
   model: M_EX130
   obj_id: 73
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   isnightmare: true
   tags:
   - large
@@ -1845,7 +1845,7 @@ Driller Mole:
   limiter: 9
   model: M_EX700
   obj_id: 18
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Driller Mole:
@@ -1963,7 +1963,7 @@ Fiery Globe:
   limiter: 6
   model: M_AL020_FIRE
   obj_id: 76
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Fiery Globe:
@@ -2589,7 +2589,7 @@ Icy Cube:
   limiter: 7
   model: M_AL020_ICEE
   obj_id: 77
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Icy Cube:
@@ -2982,7 +2982,7 @@ Magic Phantom:
   limiter: 15
   model: M_EX500_HB
   obj_id: 2403
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   type: enemy
   tags:
   - ranged
@@ -3000,7 +3000,7 @@ Magnum Loader:
   limiter: 10
   model: M_EX600
   obj_id: 121
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Magnum Loader:
@@ -3049,7 +3049,7 @@ Minute Bomb:
   limiter: 9
   model: M_EX550
   obj_id: 7
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Minute Bomb:
@@ -3124,7 +3124,7 @@ Nightwalker:
   limiter: 15
   model: M_EX580
   obj_id: 10
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Nightwalker:
@@ -3305,7 +3305,7 @@ Rapid Thruster:
   limiter: 7
   model: M_EX660
   obj_id: 304
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Rapid Thruster (Zipliner):
@@ -3514,7 +3514,7 @@ Runemaster:
   limiter: 10
   model: M_EX530_HB
   obj_id: 2414
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   tags:
   - large
   - ranged
@@ -3951,7 +3951,7 @@ Soldier:
   limiter: 12
   model: M_EX010
   obj_id: 301
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Soldier:
@@ -3991,7 +3991,7 @@ Sorcerer:
   limiter: 34
   model: M_EX870
   obj_id: 316
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   tags:
   - large
   - ranged
@@ -4081,7 +4081,7 @@ Surveillance Robot:
   limiter: 10
   model: M_EX770
   obj_id: 306
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   tags:
   - ranged
@@ -4231,7 +4231,7 @@ Tornado Step:
   limiter: 10
   model: M_EX730
   obj_id: 123
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Tornado Step:
