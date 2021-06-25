@@ -17,7 +17,7 @@ LIMITED_SIZE = 15.0 # Seems about right
 NUM_RANDOMIZATION_MAPPINGS = 9
 
 # Force all bosses with health swaps to a certain value, for testing
-#DEBUG_HEALTH = 20
+#DEBUG_HEALTH = 100
 
 HARDCAP = "-3.3895395E+38"
 

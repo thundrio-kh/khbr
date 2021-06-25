@@ -4566,7 +4566,7 @@ Disney Castle:
             isboss: false
             name: Bolt Tower DC
   Colonnade:
-    ignored: true
+    ignored: false # I think it's fine
     pc:
       ignored: false
     size: 5000000
@@ -14185,7 +14185,7 @@ Olympus Coliseum:
             isboss: false
             name: Driller Mole
       b_40:
-        ignored: true # Is a fight that is pretty likely to cause tposing
+        ignored: false # Is a fight that is might cause tposing
         size: 0
         sp_ids:
           '12':
@@ -18118,7 +18118,7 @@ Space Paranoids:
             isboss: false
             name: Cannon Gun WI
   Solar Sailer Simulation 07:
-    ignored: true # randomized weights mess up the gauge
+    ignored: false # randomized weights mess up the gauge ???
     size: 5000000
     spawnpoints:
       b_60:
@@ -19258,7 +19258,7 @@ The Land of Dragons:
             isboss: false
             name: Nightwalker
   Ridge:
-    ignored: true
+    ignored: false
     pc:
       ignored: false
     size: 5000000
