@@ -16,10 +16,10 @@ UNLIMITED_SIZE = 99_999_999_999_999
 LIMITED_SIZE = 15.0 # Seems about right
 NUM_RANDOMIZATION_MAPPINGS = 9
 
-DEBUG_PRINT = True
+DEBUG_PRINT = False
 
-def print_debug(msg):
-    if DEBUG_PRINT:
+def print_debug(msg, override=False):
+    if override or DEBUG_PRINT:
         print(msg)
 
 HARDCAP = "-3.3895395E+38"
@@ -297,7 +297,6 @@ class KingdomHearts2:
             bosses[parent]["children"] = sorted(list(set(kidlist[parent])))
             for child in bosses[parent]["children"]:
                 _inheritConfig(bosses[parent], bosses[child])
-
         if getavail:
             for source_name in bosses:
                 source_boss = bosses[source_name]
@@ -468,10 +467,13 @@ class KingdomHearts2:
                 boss["available"] = [b for b in boss["available"] if b in bosses]
                 for child_name in boss["children"]:
                     child = self.enemy_records[child_name]
-                    child["variations"] = [b for b in boss["variations"] if b in bosses]
+                    # I don't think this is needed???????????????????????????????????
+                    # DEBUG CHECKING UNIT TESTS WORK IF I JUST COMMENT THIS OUT
+                    #child["variations"] = [b for b in boss["variations"] if b in bosses]
+
         return bosses
     def perform_randomization(self, options, seed=None):
-        print_debug("Enemy Seed: {}".format(seed))
+        print_debug("Enemy Seed: {}".format(seed), override=False)
         if diagnostics:
             start_time = time.time()
             print_debug("Starting Randomization: {}".format(options))
@@ -526,7 +528,6 @@ class KingdomHearts2:
             maxsize = LIMITED_SIZE
             if bossmode:
                 bosses = self.get_boss_list(options)
-
                 if "selected_boss" in options and options["selected_boss"] and options["boss"] == "Selected Boss":
                     bossmode = "Wild"
                     duplicate_bosses = True
@@ -559,6 +560,7 @@ class KingdomHearts2:
             object_map = {}
             ai_mods = {}
             data_replacements = {}
+            
             self.set_spawns()
             for w in self.spawns:
                 world = self.spawns[w]
@@ -615,7 +617,6 @@ class KingdomHearts2:
                                     ent = dict(old_ent)
                                     ent["name"] = new_object["name"]
                                     return ent
-
                                 if ent["isboss"]:
                                     if not bosses:
                                         continue # Bosses aren't being randomized
@@ -730,9 +731,9 @@ class KingdomHearts2:
                                 msn_mapping[oldmsn] = newmsn
             if diagnostics:
                 end_time = time.time()
-                print("Enemy Randomization Complete: {}s".format(end_time-start_time))
+                print_debug("Enemy Randomization Complete: {}s".format(end_time-start_time))
             # DEBUG
-            # print_debug(self.create_spoiler_text())
+            #print_debug(self.create_spoiler_text(), override=True)
             # 0/0
             rand =  {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "object_map": object_map, "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
             if seed:
@@ -1290,7 +1291,7 @@ if __name__ == '__main__':
     t = time.time()
     mode = sys.argv[1]
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\"}" randomization_only
-    # run randomizer.py devgenerate "{\"boss\": \"Wild\"}"
+    # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"data_bosses\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Seifer\"}"
     options = sys.argv[2]
