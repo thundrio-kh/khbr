@@ -59,40 +59,35 @@ class Tests(unittest.TestCase):
         options = {"enemy": "One to One"}
         randomization = testutils.generateSeed(options)
         testutils.validate_enemies_general(randomization)
-        # Validate shadows outside tower are same as shadows outside enemy
 
     def test_seedgen_enemy_one_to_one_nightmare(self):
         options = {"enemy": "One to One", "nightmare_enemies": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_enemies_general(randomization)
-        #validate shadows are not found anywhere and shadows outside tower are same as star room shadows
+        assert False == testutils.get_found(randomization, "Shadow")
+        
 
     def test_seedgen_enemy_one_to_one_room(self):
         options = {"enemy": "One to One Per Room"}
         randomization = testutils.generateSeed(options)
-        testutils.validate_enemies_general(randomization)
-        # Validate all shadows outside tower are same
-        # but in star tower they are all same but different
+        testutils.validate_enemies_general_perroom(randomization)
 
     def test_seedgen_enemy_one_to_one_room_nightmare(self):
         options = {"enemy": "One to One Per Room", "nightmare_enemies": True}
         randomization = testutils.generateSeed(options)
-        testutils.validate_enemies_general(randomization)
-        # Validate no shadows exist
-        # but in star tower they are different than outside
+        testutils.validate_enemies_general_perroom(randomization)
+        assert False == testutils.get_found(randomization, "Shadow")
 
     def test_seedgen_enemy_selected(self):
         options = {"enemy": "Selected Enemy", "selected_enemy": "Shadow WI"}
         randomization = testutils.generateSeed(options)
-        testutils.validate_enemies_general(randomization)
-        # Validate all enemies are shadow wi
+        testutils.validate_selected(randomization, "Shadow WI", isboss=False)
 
     def test_seedgen_boss_selected(self):
         options = {"boss": "Selected Boss", "selected_boss": "Xemnas"}
         randomization = testutils.generateSeed(options)
         print("Selected Boss")
-        print(randomization)
-        # Validate all enemies are xemnas
+        testutils.validate_selected(randomization, "Xemnas", isboss=False)
 
     def test_seedgen_boss_one_to_one(self):
         options = {"boss": "One to One"}
@@ -100,33 +95,32 @@ class Tests(unittest.TestCase):
         print("One to One")
         print(randomization)
         testutils.validate_bosses_general(randomization)
-        # Validate hades is the same boss in all locations
-        # Validate Validate all the parent bosses are still present
-        # Validate cups and superbosses were not randomized, and no datas present
+        testutils.validate_bosses_onetoone(randomization)
+        assert False == testutils.get_found(randomization, tags=["data", "cups"])
 
     def test_seedgen_boss_one_to_one_scaled(self):
         options = {"boss": "One to One", "scale_boss_stats": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
-        # validate the scale map matches the randomization map
+        testutils.validate_scale_map(randomization)
 
     def test_seedgen_boss_one_to_one_cups(self):
         options = {"boss": "One to One", "cups_bosses": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
-        # validate cups bosses are present
+        assert True == testutils.get_found(randomization, tags=["cups"])
 
     def test_seedgen_boss_one_to_one_datas(self):
         options = {"boss": "One to One", "data_bosses": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
-        # validate datas are present
+        assert True == testutils.get_found(randomization, tags=["data"])
 
     def test_seedgen_boss_one_to_one_cups_datas(self):
         options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
-        # validate cups and datas are both present
+        assert True == testutils.get_found(randomization, tags=["data", "cups"])
 
     def test_seedgen_boss_wild(self):
         options = {"boss": "Wild"}
@@ -134,31 +128,30 @@ class Tests(unittest.TestCase):
         print("Wild")
         print(randomization)
         testutils.validate_bosses_general(randomization)
-        # validate cups/datas are off
-        # validate those like FX are randomized, but Jafar isn't
-
-    def test_seedgen_boss_wild_scaled(self):
-        options = {"boss": "Wild", "scale_boss_stats": True}
-        randomization = testutils.generateSeed(options)
-        testutils.validate_bosses_general(randomization)
-        # validate scaling worked right
+        assert True == testutils.get_randomized(randomization, "Final Xemnas")
+        assert False == testutils.get_randomized(randomization, "Jafar")
+        assert False == testutils.get_found(randomized, tags=["data", "cups"])
 
     def test_seedgen_boss_wild_cups(self):
         options = {"boss": "Wild", "cups_bosses": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
-        # validate datas are present
+        assert True == testutils.get_found(randomization, tags=["cups"])
+        assert False == testutils.get_found(randomization, tags=["data"])
 
     def test_seedgen_boss_wild_datas(self):
         options = {"boss": "Wild", "data_bosses": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
-        # validate datas are present
+        assert False == testutils.get_found(randomization, tags=["cups"])
+        assert True == testutils.get_found(randomization, tags=["data"])
 
     def test_seedgen_boss_wild_cups_datas(self):
         options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
+        assert True == testutils.get_found(randomization, tags=["cups"])
+        assert True == testutils.get_found(randomization, tags=["data"])
 
     def test_seedgen_boss_wild_nightmare(self):
         options = {"boss": "Wild", "nightmare_bosses": True}
@@ -166,22 +159,28 @@ class Tests(unittest.TestCase):
         print("Nightmare")
         print(randomization) 
         testutils.validate_bosses_general(randomization)
-        # validate no cups or datas
+        assert False == testutils.get_found(randomization, tags=["data", "cups"])
 
     def test_seedgen_boss_wild_nightmare_cups(self):
         options = {"boss": "Wild", "nightmare_bosses": True, "cups_bosses": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
+        assert True == testutils.get_found(randomization, tags=["cups"])
+        assert False == testutils.get_found(randomization, tags=["data"])
 
     def test_seedgen_boss_wild_nightmare_datas(self):
         options = {"boss": "Wild", "nightmare_bosses": True, "data_bosses": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
+        assert False == testutils.get_found(randomization, tags=["cups"])
+        assert True == testutils.get_found(randomization, tags=["data"])
         
     def test_seedgen_boss_wild_nightmare_cups_datas(self):
         options = {"boss": "Wild", "nightmare_bosses": True, "cups_bosses": True, "data_bosses": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
+        assert True == testutils.get_found(randomization, tags=["cups"])
+        assert True == testutils.get_found(randomization, tags=["data"])
 
     def test_seedgen_proderror1(self):
         options = {'boss': 'One to One', 'nightmare_bosses': False, 'selected_boss': None, 'enemy': 'One to One', 'selected_enemy': None, 'nightmare_enemies': False, 'scale_boss_stats': False, 'cups_bosses': False, 'data_bosses': False, 'memory_expansion': False}
@@ -191,9 +190,7 @@ class Tests(unittest.TestCase):
     def test_getbosses(self):
         kh2 = KingdomHearts2()
         kh2.get_bosses(usefilters=False, getavail=True)
-        # check avail is mostly set correctly
-        # check children/variations set correctly (including variation attributes set to parent, etc)
-        # check tags set properly
+        testutils.validate_enemy_records(kh2.enemy_records)
 
     def test_enmp(self):
         import yaml
@@ -220,12 +217,24 @@ class Tests(unittest.TestCase):
         assert min(counted.values()) == 1
         assert max(counted.values()) == 1
 
+    def validate_memory_expansion(self):
+        options = {"enemy": "One to One Per Room", "memory_expansion": True}
+        randomization_pc = testutils.generateSeed(options)
+        options["memory_expansion"] = False
+        randomization_ps2 = testutils.generateSeed(options)
+        assert True == testutils.get_room_randomized(randomization_pc, "Agrabah", "The Cave of Wonders: Treasure Room", "b_40")
+        assert False == testutils.get_room_randomized(randomization_ps2, "Agrabah", "The Cave of Wonders: Treasure Room", "b_40")
 
 # Uncomment to run a single test through ipython
-# ut = Tests()
-# ut.test_wild_luxord_source()
+ut = Tests()
+ut.test_seedgen_boss_one_to_one()
 
 # Uncomment to run the actual tests
-unittest.main()
+#unittest.main()
 
-# memory expansion=true test for enemies, validate certain rooms were ignored/not ignored
+# Failing Tests
+# 
+# test_seedgen_boss_one_to_one_scaled
+# test_seedgen_boss_wild (__main__.Tests)
+# test_seedgen_boss_wild_datas
+# test_seedgen_enemy_one_to_one_room_nightmare
