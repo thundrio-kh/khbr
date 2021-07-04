@@ -187,6 +187,10 @@ class KingdomHearts2:
             "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One'.",
                                 "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra and Sephiroth",
+                                "possible_values": [False, True], "hidden_values": []},
+        
+            # utility mod options
+            "remove_damage_cap": {"display_name": "Remove Damage Cap", "description": "Removes the damage cap for all enemies in the game.",
                                 "possible_values": [False, True], "hidden_values": []}
         }
     def create_spoiler_text(self):
@@ -491,6 +495,9 @@ class KingdomHearts2:
         bossmode = None
         nightmare_enemies = False
         enemymode = None
+        utility_mods = []
+        if options.get("remove_damage_cap"):
+            utility_mods.append("remove_damage_cap")
         if "enemy" in options and options["enemy"] != "Disabled":
             enemymode = options["enemy"]
         #duplicate_enemies = enemymode in ["spawnpoint_one_to_one", "wild"]
@@ -735,11 +742,13 @@ class KingdomHearts2:
             # DEBUG
             #print_debug(self.create_spoiler_text(), override=True)
             # 0/0
-            rand =  {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "object_map": object_map, "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
+            rand =  {"utility_mods": utility_mods,"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "object_map": object_map, "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
             if seed:
                 rand["seed"] = seed
             return rand
-        raise Exception("Didn't randomize anything!")
+        if not utility_mods:
+            raise Exception("Didn't randomize anything!")
+        return {"utility_mods": utility_mods}
 
     def generate_files(self, outdir='', randomization={}, outzip=[]):
         # Generates files in the zip folder and also returns the list of 
@@ -760,6 +769,7 @@ class KingdomHearts2:
         else:
             raise Exception("one of outzip or outdir must be defined")
         assets = []
+        utility_mods = randomization.get("utility_mods", [])
         if randomization.get("object_map", ""):
             object_map = randomization.get("object_map", "")
             new_object_map = {}
@@ -771,8 +781,8 @@ class KingdomHearts2:
                 new_object_map[oid] = obj_data[oid]
             asset = self.writeObj(new_object_map, outdir, _writeMethod)
             assets.append(asset)
-        if randomization.get("scale_map", ""):
-            scale_map = randomization.get("scale_map", "")
+        if randomization.get("scale_map", {}) or "remove_damage_cap" in utility_mods:
+            scale_map = randomization.get("scale_map", {})
             with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
                 enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)
                 enmp_data_mod = yaml.load(yaml.dump(enmp_data_vanilla), Loader=yaml.SafeLoader)
@@ -790,6 +800,9 @@ class KingdomHearts2:
                 new_enmp_data = enmp_data_mod[new_enmp_index]
                 new_enmp_data["health"] = original_enmp_data["health"]
                 new_enmp_data["level"] = 0 # All bosses are level 0 to take the worlds battle level EXCEPT for datas/terra, which are 99
+            if "remove_damage_cap" in utility_mods:
+                for en in enmp_data_mod:
+                    en["maxDamage"] = 0xFFFF
             asset = self.writeEnmp(enmp_data_mod, outdir, _writeMethod)
             assets.append(asset)
         if randomization.get("spawns", ""):
