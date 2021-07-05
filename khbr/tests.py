@@ -157,26 +157,6 @@ class Tests(unittest.TestCase):
         print("Nightmare")
         print(randomization) 
         testutils.validate_bosses_general(randomization)
-        assert False == testutils.get_found(randomization, tags=["data", "cups"])
-
-    def test_seedgen_boss_wild_nightmare_cups(self):
-        options = {"boss": "Wild", "nightmare_bosses": True, "cups_bosses": True}
-        randomization = testutils.generateSeed(options)
-        testutils.validate_bosses_general(randomization)
-        assert True == testutils.get_found(randomization, tags=["cups"])
-        assert False == testutils.get_found(randomization, tags=["data"])
-
-    def test_seedgen_boss_wild_nightmare_datas(self):
-        options = {"boss": "Wild", "nightmare_bosses": True, "data_bosses": True}
-        randomization = testutils.generateSeed(options)
-        testutils.validate_bosses_general(randomization)
-        assert False == testutils.get_found(randomization, tags=["cups"])
-        assert True == testutils.get_found(randomization, tags=["data"])
-        
-    def test_seedgen_boss_wild_nightmare_cups_datas(self):
-        options = {"boss": "Wild", "nightmare_bosses": True, "cups_bosses": True, "data_bosses": True}
-        randomization = testutils.generateSeed(options)
-        testutils.validate_bosses_general(randomization)
         assert True == testutils.get_found(randomization, tags=["cups"])
         assert True == testutils.get_found(randomization, tags=["data"])
 
@@ -225,10 +205,14 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_seedgen_enemy_one_to_one_room_nightmare()
+ut.test_seedgen_boss_one_to_one_scaled()
+
+# test_seedgen_boss_wild_cups_datas
+# test_seedgen_boss_one_to_one_scaled
+# test_seedgen_enemy_one_to_one_room_nightmare
 
 # Uncomment to run the actual tests
-unittest.main()
+#unittest.main()
 
 # Failing Tests
 # 
