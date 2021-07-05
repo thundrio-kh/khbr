@@ -1,31 +1,30 @@
 memorySmall
 Aerial Knocker,Aeriel Champ
-Beffudler,Hook Bat
-Rabid Dog
-Shadow,Shadow (NM),Shadow (RAW),Shadow WI
-ranged-memorySmall
-Aeroplane,Aeroplane WI
-Emerald Blues,Emerald Blues (TR),Emerald Blues NM,Spring Metal
-Silver Rock
-memoryMedium
-Aerial Viking,Air Pirate
 Armored Knight,Armored Knight (NM)
 Creeper
-Crescendo
 Driller Mole,Driller Mole NM
 Fiery Globe,Fiery Globe Treasure Room
 Gargoyle Knight
 Gargoyle Warrior
 Hammer Frame,Hammer Frame WI,Iron Hammer
+Beffudler,Hook Bat
 Icy Cube,Icy Cube Treasure Room
 Magnum Loader
 Minute Bomb,Minute Bomb WI
-Nightwalker
+Rabid Dog
 Rapid Thruster,Rapid Thruster (RAW),Rapid Thruster WI
+Shadow,Shadow (NM),Shadow (RAW),Shadow WI
 Soldier,Soldier (TR),Soldier (WI),Soldier NM
 Strafer,Strafer RAW
 Tornado Step
 Wight Knight,Wight Knight NM
+ranged-memorySmall
+Aeroplane,Aeroplane WI
+Camo Cannon,Cannon Gun,Cannon Gun WI
+Creeper Plant,Creeper Plant (NM)
+Emerald Blues,Emerald Blues (TR),Emerald Blues NM,Spring Metal
+Silver Rock
+Surveillance Robot,Surveillance Robot (TR)
 large-memoryLarge
 Assault Rider
 Berserker
@@ -35,37 +34,36 @@ Hot Rod,Hot Rod WI,Mad Ride
 Large Body,Large Body WI
 Living Bone
 Morning Star
-large-ranged-memoryMedium
+large-ranged-memoryLarge
 Bookmaster,Bookmaster (TR),Runemaster
 Crimson Jazz
+Devastator,Reckless
+Fat Bandit
+Graveyard NM
+Sniper
 Sorcerer
-Toy Soldier,Toy Soldier NM
-ranged-memoryMedium
-Camo Cannon,Cannon Gun,Cannon Gun WI
-Creeper Plant,Creeper Plant (NM)
-Magic Phantom
-Surveillance Robot,Surveillance Robot (TR)
 al-ranged-memorySmall
 Crimson Jazz AL
 Fortuneteller (AL)
 memoryLarge
+Aerial Viking,Air Pirate
 Assassin
+Crescendo
 Dancer
 Dusk
 Gambler
 Lance Soldier,Lance Warrior
 Luna Bandit
 Neoshadow,Neoshadow (NM)
+Nightwalker
 Samurai
-large-ranged-memoryLarge
-Devastator,Reckless
-Fat Bandit
-Graveyard NM
-Sniper
 ranged-memoryLarge
 Fortuneteller
+Magic Phantom
 Necromancer,Shaman
 Trick Ghost,Trick Ghost (NM)
+large-ranged-memorySmall
+Toy Soldier,Toy Soldier NM
 pirate-memoryLarge
 Undead Pirate A
 Undead Pirate B

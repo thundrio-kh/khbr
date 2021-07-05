@@ -79,9 +79,13 @@ def get_tmp_path():
     return os.path.join(os.getcwd(), "tmp")
 
 def get_enemies_in(randomization, world, room, spn, spid=None):
-    spawnpoint = randomization["spawns"][world][room]["spawnpoints"][spn]
     original = yaml.load(open("locations.yaml"))
     og_spawnpoint = original[world][room]["spawnpoints"][spn]
+    try:
+        spawnpoint = randomization["spawns"][world][room]["spawnpoints"][spn]
+    except KeyError:
+        # Spawnpoint isn't in the randomization, so it's all vanilla
+        spawnpoint = og_spawnpoint
     enemies = []
     for spid_src in og_spawnpoint["sp_ids"]:
         if spid and spid != spid_src:
@@ -129,16 +133,24 @@ def validate_shadows(randomization):
 def validate_shadows_perroom(randomization):
     # validate all shadows in the same room are the same
     # also validate 2 different ones are different
+    kh2 = KingdomHearts2()
     first_location = get_enemies_in(randomization, "Twilight Town", "The Tower", "b_00")
     first_enemies = set([e["name"] for e in first_location])
     assert len(first_enemies) == 1
     first = list(first_enemies)[0]
+    first_parent = kh2.enemy_records[first]["parent"]
     second_location = get_enemies_in(randomization, "Timeless River", "Scene of the Fire", "b_40", "42")
     second_enemies = set([e["name"] for e in second_location])
     assert len(second_enemies) == 1
     second = list(second_enemies)[0]
-    kh2 = KingdomHearts2()
-    assert kh2.enemy_records[first]["parent"] != kh2.enemy_records[second]["parent"]
+    second_parent = kh2.enemy_records[second]["parent"]
+    third_location = get_enemies_in(randomization, "The World That Never Was", "Fragment Crossing", "b_10")
+    third_enemies = set([e["name"] for e in third_location])
+    assert len(third_enemies) == 1
+    third = list(third_enemies)[0]
+    third_parent = kh2.enemy_records[third]["parent"]
+    enemy_variety = set([first_parent, second_parent, third_parent])
+    assert len(enemy_variety) > 1
 
 def get_found(randomization, name=None, tags=[]):
     kh2 = KingdomHearts2()

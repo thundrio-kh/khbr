@@ -663,7 +663,7 @@ Toy Soldier:
   enmp_index: 999
   model: M_EX790_CHRISTMAS
   obj_id: 1776
-  sizeTag: memorySmall
+  sizeTag: memoryLarge
   type: enemy
   tags:
   - large
@@ -1024,10 +1024,13 @@ Assault Rider:
       - 0
       - 0
 Axel I:
+  # Apparantly Axel I can sometimes act like axel 2 thats weird
   enabled: true
   hp: 100
   level: 99
   limiter: 0
+  tags:
+  - roxas
   model: B_EX110_SKIRMISH
   msn: TT05_MS404
   program: 87
@@ -1067,6 +1070,7 @@ Axel I:
 Axel II:
   tags:
   - organization
+  - roxas
   enabled: true
   enmp_index: 138
   hp: 100
@@ -1246,7 +1250,7 @@ Blizzard Lord:
       msn: AL03_MS103
       program: 59
       room_size: 10.32
-      room_sizemultiplier: 0.3 # Not sure how low to go but 0.5 is too much
+      roommaxsize: 13.36 # instead of roomsizemultiplier
       vars:
       - 0
       - 0
@@ -1324,6 +1328,8 @@ Cerberus:
   enabled: true
   enmp_index: 176
   hp: 100
+  tags:
+  - solo # not really but data demyx would still be kinda stupid here
   level: 99
   limiter: 0
   model: B_HE020
@@ -1573,6 +1579,7 @@ Final Xemnas (Data):
   tags:
   - data
   - organization
+  - solo
   enabled: false
   variationof: Final Xemnas
   msn_replace_allowed: false # this might break things
@@ -1988,6 +1995,8 @@ Fiery Globe Treasure Room:
       - 0
 Final Xemnas:
   can_be_enemy: true
+  tags:
+  - solo
   enabled: false
   enmp_index: 85
   hp: 100
@@ -2151,7 +2160,7 @@ Grim Reaper II:
   type: boss
   variations:
     Grim Reaper II:
-      enabled: false
+      enabled: true
       isnightmare: true
       msn: CA01_MS204
       program: 54
@@ -2240,7 +2249,7 @@ Hades Escape:
   limiter: 34
   model: B_HE030_HE05
   msn: HE05_MS102
-  source_replace_allowed: true
+  source_replace_allowed: false
   msn_replace_allowed: false
   obj_id: 2066
   replace_as: Hades Cups
@@ -2324,6 +2333,8 @@ Hammer Frame WI:
 Hayner:
   aimod: true
   enabled: true
+  tags:
+  - roxas
   enmp_index: 140
   hp: 100
   level: 99
@@ -2918,6 +2929,7 @@ Luna Bandit:
 Luxord:
   tags:
   - organization
+  - solo
   enabled: true
   enmp_index: 84
   hp: 100
@@ -3437,6 +3449,8 @@ Riku:
   aimod: true
   enabled: true
   enmp_index: 120
+  tags:
+  - solo
   hp: 100
   level: 99
   limiter: 0
@@ -3457,6 +3471,7 @@ Riku:
 Roxas:
   tags:
   - organization
+  - solo
   can_be_enemy: true
   enabled: true
   enmp_index: 218
@@ -3610,6 +3625,8 @@ Seifer:
     ObjectType: BOSS
   enabled: true # Uses an objentry edit to be treated as an enemy
   enmp_index: 125
+  tags:
+  - roxas
   hp: 100
   level: 99
   limiter: 0
@@ -3688,6 +3705,7 @@ Seifer:
 Sephiroth:
   tags:
   - data
+  - solo
   can_be_enemy: true
   enabled: true
   enmp_index: 130
@@ -3719,6 +3737,8 @@ Setzer:
   aimod: true
   enabled: true
   enmp_index: 146
+  tags:
+  - roxas
   hp: 100
   level: 99
   limiter: 0
@@ -3841,11 +3861,12 @@ Shan-Yu:
   obj_id: 21
   size: 4.64
   room_size: 10.15
+  roommaxsize: 14.35
   program: 75
   adds:
   - ObjectId: 22 # Hayabusa
-  - ObjectId: 10 # nightwalkers, this might not work as an add, test
   subtracts:
+  - ObjectId: 10 # nightwalkers
   - ObjectId: 733 # Door most likely
   type: boss
   variations:
@@ -4149,6 +4170,9 @@ The Experiment:
   size: 1.82
   room_size: 11.7
   program: 64
+  blacklist_destination:
+  - Shadow Stalker # memory
+  - Dark Thorn # memory
   type: boss
   # these might need to be adds or something different
   # I'm also not including them in the size calculation, which might be wrong
@@ -4276,6 +4300,8 @@ Twilight Thorn:
   aimod: true
   enabled: true
   enmp_index: 81
+  tags:
+  - roxas
   hp: 100
   level: 99
   limiter: 0
@@ -4351,6 +4377,8 @@ Vivi:
   aimod: true
   enabled: true
   enmp_index: 145
+  tags:
+  - roxas
   hp: 100
   level: 99
   limiter: 1
@@ -4415,7 +4443,7 @@ Volcano Lord:
       msn: AL03_MS103
       program: 59
       room_size: 10.32
-      room_sizemultiplier: 0.3 # Not sure how low to go but 0.5 is too much
+      roommaxsize: 13.36 # instead of roomsize multiplier I went and manually figured it out
       vars:
       - 0
       - 0
@@ -4469,6 +4497,7 @@ Xaldin:
 Xemnas:
   tags:
   - organization
+  - solo
   aimod: true
   can_be_enemy: true
   enabled: true
@@ -4620,6 +4649,8 @@ Zexion:
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
+  - Scar # LK can't do book RCs
+  - Groundshaker # LK can't do book RCs
   variations:
     Zexion:
       program: 151

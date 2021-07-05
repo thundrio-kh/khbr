@@ -205,17 +205,8 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_seedgen_boss_one_to_one_scaled()
-
-# test_seedgen_boss_wild_cups_datas
-# test_seedgen_boss_one_to_one_scaled
-# test_seedgen_enemy_one_to_one_room_nightmare
+#ut.test_seedgen_boss_wild_nightmare()
 
 # Uncomment to run the actual tests
-#unittest.main()
+unittest.main()
 
-# Failing Tests
-# 
-# 
-#  (__main__.Tests)
-# test_seedgen_enemy_one_to_one_room_nightmare

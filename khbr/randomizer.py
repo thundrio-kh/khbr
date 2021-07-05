@@ -475,8 +475,7 @@ class KingdomHearts2:
                 for child_name in boss["children"]:
                     child = self.enemy_records[child_name]
                     # This is involved in ommitting children that are excluded via tag
-                    child["variations"] = [b for b in boss["variations"] if b in bosses]
-
+                    child["variations"] = [b for b in child["variations"] if b in bosses]
         return bosses
     def perform_randomization(self, options, seed=None):
         print_debug("Enemy Seed: {}".format(seed), override=False)
@@ -654,6 +653,13 @@ class KingdomHearts2:
                                         else:
                                             bosspicklist = old_boss_parent["available"]
                                         new_boss = self.pick_boss_to_replace(bosspicklist)
+                                        if "roxas" in old_boss_object["tags"]:
+                                            if new_boss == "Axel (Data)":
+                                                # This fight is probably not very winnable as roxas, so force to normal axel II
+                                                new_boss = "Axel II"
+                                        if "solo" in old_boss_object["tags"]:
+                                            if new_boss == "Demyx (Data)":
+                                                new_boss = "Demyx" # Actual fix would be to just mod the ai to increase the time for destroying clones
                                     self.spoilers["boss"][ent["name"]] = new_boss
                                     if new_boss == ent["name"]:
                                         continue

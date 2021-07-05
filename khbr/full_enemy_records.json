@@ -3425,7 +3425,7 @@
         "enmp_index": 999,
         "model": "M_EX790_CHRISTMAS",
         "obj_id": 1776,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "tags": [
             "large",
@@ -3438,7 +3438,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "large-ranged-memorySmall",
+        "category": "large-ranged-memoryLarge",
         "level": 0,
         "isnightmare": false,
         "parent": "Toy Soldier",
@@ -3479,7 +3479,7 @@
         "enmp_index": 999,
         "model": "M_EX790_CHRISTMAS",
         "obj_id": 1776,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "tags": [
             "large",
@@ -3492,7 +3492,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "large-ranged-memorySmall",
+        "category": "large-ranged-memoryLarge",
         "level": 0,
         "isnightmare": false,
         "parent": "Toy Soldier",
@@ -5651,6 +5651,7 @@
             "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -5890,6 +5891,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "tags": [
+            "roxas"
+        ],
         "model": "B_EX110_SKIRMISH",
         "msn": "TT05_MS404",
         "program": 87,
@@ -5928,8 +5932,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "roxas",
         "isnightmare": false,
         "parent": "Axel I",
         "variationof": null,
@@ -5984,7 +5987,8 @@
         ],
         "name": "Axel II",
         "tags": [
-            "organization"
+            "organization",
+            "roxas"
         ],
         "enabled": true,
         "enmp_index": 138,
@@ -6029,7 +6033,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization",
+        "category": "organization-roxas",
         "isnightmare": false,
         "parent": "Axel II",
         "variationof": null,
@@ -6140,6 +6144,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -6285,6 +6290,7 @@
             "Blizzard Lord",
             "Cloud",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -6509,7 +6515,7 @@
         "msn": "AL03_MS103",
         "program": 59,
         "room_size": 10.32,
-        "room_sizemultiplier": 0.3,
+        "roommaxsize": 13.36,
         "vars": [
             0,
             0
@@ -6550,7 +6556,6 @@
         "msn_source_as": null,
         "aimod": null,
         "sizeTag": null,
-        "roommaxsize": null,
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -6561,39 +6566,28 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
-            "Barbossa",
             "Blizzard Lord",
-            "Cerberus",
             "Cloud",
-            "Dark Thorn",
             "Grim Reaper I",
-            "Hades II",
+            "Grim Reaper II",
             "Hayner",
             "Hercules",
             "Leon",
-            "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Riku",
             "Sark",
             "Scar",
             "Seifer",
             "Setzer",
-            "Shan-Yu",
             "The Experiment",
             "Thresholder",
             "Tifa",
             "Vivi",
             "Volcano Lord",
-            "Xaldin",
-            "Xemnas",
-            "Xigbar",
             "Yuffie"
         ]
     },
@@ -6920,6 +6914,9 @@
         "enabled": true,
         "enmp_index": 176,
         "hp": 100,
+        "tags": [
+            "solo"
+        ],
         "level": 99,
         "limiter": 0,
         "model": "B_HE020",
@@ -6937,8 +6934,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "solo",
         "isnightmare": false,
         "parent": "Cerberus",
         "variationof": null,
@@ -6972,6 +6968,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -7133,6 +7130,7 @@
             "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -7842,6 +7840,7 @@
             "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hayner",
             "Hercules",
             "Hostile Program",
@@ -7854,7 +7853,6 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vivi",
@@ -7997,7 +7995,8 @@
         "name": "Final Xemnas (Clone) (Data)",
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "solo"
         ],
         "enabled": false,
         "variationof": "Final Xemnas",
@@ -8028,7 +8027,7 @@
             "Final Xemnas (Data)"
         ],
         "replace_as": null,
-        "category": "data-organization",
+        "category": "data-organization-solo",
         "isnightmare": false,
         "parent": "Final Xemnas",
         "children": [],
@@ -8056,7 +8055,8 @@
         "name": "Final Xemnas (Data)",
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "solo"
         ],
         "enabled": false,
         "variationof": "Final Xemnas",
@@ -8088,7 +8088,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "data-organization",
+        "category": "data-organization-solo",
         "isnightmare": true,
         "parent": "Final Xemnas",
         "children": [],
@@ -8478,6 +8478,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -9477,6 +9478,9 @@
         ],
         "name": "Final Xemnas",
         "can_be_enemy": true,
+        "tags": [
+            "solo"
+        ],
         "enmp_index": 85,
         "hp": 100,
         "isnightmare": true,
@@ -9508,8 +9512,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "solo",
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
@@ -9541,6 +9544,7 @@
             "Dark Thorn",
             "Final Xemnas",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -9582,6 +9586,9 @@
         ],
         "name": "Final Xemnas (Copy)",
         "can_be_enemy": true,
+        "tags": [
+            "solo"
+        ],
         "enabled": false,
         "enmp_index": 85,
         "hp": 100,
@@ -9613,8 +9620,7 @@
             "Final Xemnas (Copy)"
         ],
         "replace_as": null,
-        "tags": [],
-        "category": "",
+        "category": "solo",
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [],
@@ -10114,7 +10120,7 @@
         ]
     },
     "Grim Reaper II": {
-        "enabled": false,
+        "enabled": true,
         "isnightmare": true,
         "msn": "CA01_MS204",
         "program": 54,
@@ -10264,6 +10270,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Groundshaker",
             "Hades II",
             "Hayner",
@@ -10388,7 +10395,7 @@
         "limiter": 34,
         "model": "B_HE030_HE05",
         "msn": "HE05_MS102",
-        "source_replace_allowed": true,
+        "source_replace_allowed": false,
         "msn_replace_allowed": false,
         "obj_id": 2066,
         "replace_as": "Hades Cups",
@@ -10424,8 +10431,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Hades Escape",
-            "Past Pete"
+            "Hades Escape"
         ]
     },
     "Hades I": {
@@ -10542,6 +10548,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -10707,6 +10714,9 @@
         "name": "Hayner",
         "aimod": true,
         "enabled": true,
+        "tags": [
+            "roxas"
+        ],
         "enmp_index": 140,
         "hp": 100,
         "level": 99,
@@ -10749,8 +10759,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "roxas",
         "isnightmare": false,
         "parent": "Hayner",
         "variationof": null,
@@ -10869,6 +10878,7 @@
             "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -12339,6 +12349,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -12507,6 +12518,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -13179,6 +13191,7 @@
             "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -13835,7 +13848,8 @@
         ],
         "name": "Luxord",
         "tags": [
-            "organization"
+            "organization",
+            "solo"
         ],
         "enabled": true,
         "enmp_index": 84,
@@ -13879,7 +13893,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization",
+        "category": "organization-solo",
         "isnightmare": false,
         "parent": "Luxord",
         "variationof": null,
@@ -13912,6 +13926,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -14708,6 +14723,7 @@
             "Blizzard Lord",
             "Cloud",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hayner",
             "Hercules",
             "Hostile Program",
@@ -14786,6 +14802,7 @@
             "Cerberus",
             "Cloud",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -14870,6 +14887,7 @@
             "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -15006,6 +15024,7 @@
             "Blizzard Lord",
             "Cloud",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hayner",
             "Hercules",
             "Leon",
@@ -15160,6 +15179,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -16812,6 +16832,9 @@
         "aimod": true,
         "enabled": true,
         "enmp_index": 120,
+        "tags": [
+            "solo"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -16828,8 +16851,7 @@
             "Riku"
         ],
         "replace_as": null,
-        "tags": [],
-        "category": "",
+        "category": "solo",
         "isnightmare": false,
         "parent": "Riku",
         "variationof": null,
@@ -16863,7 +16885,8 @@
         ],
         "name": "Roxas",
         "tags": [
-            "organization"
+            "organization",
+            "solo"
         ],
         "can_be_enemy": true,
         "enabled": true,
@@ -16903,7 +16926,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization",
+        "category": "organization-solo",
         "parent": "Roxas",
         "variationof": null,
         "children": [
@@ -16935,6 +16958,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -17152,6 +17176,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -17342,6 +17367,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -17434,6 +17460,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -17466,8 +17493,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Seifer": {
@@ -17484,6 +17510,9 @@
         },
         "enabled": true,
         "enmp_index": 125,
+        "tags": [
+            "roxas"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -17526,8 +17555,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "roxas",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17589,6 +17617,9 @@
         },
         "enabled": true,
         "enmp_index": 125,
+        "tags": [
+            "roxas"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -17629,8 +17660,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "roxas",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17667,6 +17697,9 @@
         },
         "enabled": true,
         "enmp_index": 125,
+        "tags": [
+            "roxas"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -17706,8 +17739,7 @@
             "Seifer (3)",
             "Seifer (4)"
         ],
-        "tags": [],
-        "category": "",
+        "category": "roxas",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17742,6 +17774,9 @@
         },
         "enabled": true,
         "enmp_index": 125,
+        "tags": [
+            "roxas"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -17783,8 +17818,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "roxas",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17819,6 +17853,9 @@
         },
         "enabled": true,
         "enmp_index": 125,
+        "tags": [
+            "roxas"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -17860,8 +17897,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "roxas",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17888,7 +17924,8 @@
         ],
         "name": "Sephiroth",
         "tags": [
-            "data"
+            "data",
+            "solo"
         ],
         "can_be_enemy": true,
         "enabled": true,
@@ -17919,7 +17956,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "data-solo",
         "parent": "Sephiroth",
         "variationof": null,
         "children": [
@@ -17951,6 +17988,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -18009,6 +18047,9 @@
         "aimod": true,
         "enabled": true,
         "enmp_index": 146,
+        "tags": [
+            "roxas"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -18050,8 +18091,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "roxas",
         "isnightmare": false,
         "parent": "Setzer",
         "variationof": null,
@@ -18313,6 +18353,7 @@
             "Blizzard Lord",
             "Cloud",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hayner",
             "Hercules",
             "Hostile Program",
@@ -18326,7 +18367,6 @@
             "Seifer",
             "Setzer",
             "Shadow Stalker",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vivi",
@@ -18398,16 +18438,17 @@
         "obj_id": 21,
         "size": 4.64,
         "room_size": 10.15,
+        "roommaxsize": 14.35,
         "program": 75,
         "adds": [
             {
                 "ObjectId": 22
-            },
-            {
-                "ObjectId": 10
             }
         ],
         "subtracts": [
+            {
+                "ObjectId": 10
+            },
             {
                 "ObjectId": 733
             }
@@ -18431,7 +18472,6 @@
         "msn_source_as": null,
         "aimod": null,
         "sizeTag": null,
-        "roommaxsize": null,
         "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
@@ -18452,20 +18492,18 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
             "Hostile Program",
             "Leon",
             "Lexaeus",
-            "Luxord",
-            "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Prison Keeper",
             "Riku",
-            "Saix",
             "Sark",
             "Scar",
             "Seifer",
@@ -18480,8 +18518,7 @@
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Shenzie": {
@@ -19171,6 +19208,7 @@
             "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -19420,6 +19458,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -19518,6 +19557,7 @@
             "Blizzard Lord",
             "Cloud",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hayner",
             "Hercules",
             "Leon",
@@ -19555,6 +19595,10 @@
         "size": 1.82,
         "room_size": 11.7,
         "program": 64,
+        "blacklist_destination": [
+            "Shadow Stalker",
+            "Dark Thorn"
+        ],
         "type": "boss",
         "subtracts": [
             {
@@ -19588,7 +19632,6 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [],
@@ -19603,6 +19646,7 @@
             "Cerberus",
             "Cloud",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -19682,6 +19726,7 @@
             "Blizzard Lord",
             "Cloud",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hayner",
             "Hercules",
             "Hostile Program",
@@ -19766,6 +19811,7 @@
             "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -20061,6 +20107,9 @@
         "aimod": true,
         "enabled": true,
         "enmp_index": 81,
+        "tags": [
+            "roxas"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -20102,8 +20151,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "roxas",
         "isnightmare": false,
         "parent": "Twilight Thorn",
         "variationof": null,
@@ -20298,6 +20346,9 @@
         "aimod": true,
         "enabled": true,
         "enmp_index": 145,
+        "tags": [
+            "roxas"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 1,
@@ -20342,8 +20393,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "roxas",
         "isnightmare": false,
         "parent": "Vivi",
         "variationof": null,
@@ -20388,7 +20438,7 @@
         "msn": "AL03_MS103",
         "program": 59,
         "room_size": 10.32,
-        "room_sizemultiplier": 0.3,
+        "roommaxsize": 13.36,
         "vars": [
             0,
             0
@@ -20429,7 +20479,6 @@
         "msn_source_as": null,
         "aimod": null,
         "sizeTag": null,
-        "roommaxsize": null,
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -20440,39 +20489,28 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
-            "Barbossa",
             "Blizzard Lord",
-            "Cerberus",
             "Cloud",
-            "Dark Thorn",
             "Grim Reaper I",
-            "Hades II",
+            "Grim Reaper II",
             "Hayner",
             "Hercules",
             "Leon",
-            "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Riku",
             "Sark",
             "Scar",
             "Seifer",
             "Setzer",
-            "Shan-Yu",
             "The Experiment",
             "Thresholder",
             "Tifa",
             "Vivi",
             "Volcano Lord",
-            "Xaldin",
-            "Xemnas",
-            "Xigbar",
             "Yuffie"
         ]
     },
@@ -20639,6 +20677,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -20681,7 +20720,8 @@
         ],
         "name": "Xemnas",
         "tags": [
-            "organization"
+            "organization",
+            "solo"
         ],
         "aimod": true,
         "can_be_enemy": true,
@@ -20704,7 +20744,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization",
+        "category": "organization-solo",
         "parent": "Xemnas",
         "variationof": null,
         "children": [
@@ -20737,6 +20777,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -20859,6 +20900,7 @@
             "Cloud",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -20951,6 +20993,7 @@
             "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21180,7 +21223,9 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Scar",
+            "Groundshaker"
         ],
         "variations": [
             "Zexion",
@@ -21221,6 +21266,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21297,7 +21343,9 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Scar",
+            "Groundshaker"
         ],
         "variations": [
             "Zexion",

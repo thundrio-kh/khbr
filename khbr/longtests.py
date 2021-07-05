@@ -31,7 +31,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_one_to_one_long()
+#ut.test_wild_long()
 
 # Uncomment to run the actual tests
 unittest.main()

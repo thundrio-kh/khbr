@@ -1,14 +1,15 @@
 memorySmall
 Aerial Knocker,Aeriel Champ
-Beffudler,Hook Bat
-ranged-memorySmall
-Emerald Blues,Emerald Blues (TR),Emerald Blues NM,Spring Metal
-Silver Rock
-memoryMedium
 Gargoyle Knight
 Gargoyle Warrior
+Beffudler,Hook Bat
 Magnum Loader
 Wight Knight,Wight Knight NM
+ranged-memorySmall
+Camo Cannon,Cannon Gun,Cannon Gun WI
+Creeper Plant,Creeper Plant (NM)
+Emerald Blues,Emerald Blues (TR),Emerald Blues NM,Spring Metal
+Silver Rock
 large-memoryLarge
 Assault Rider
 Berserker
@@ -16,13 +17,12 @@ Dragoon
 Hot Rod,Hot Rod WI,Mad Ride
 Living Bone
 Morning Star
-large-ranged-memoryMedium
+large-ranged-memoryLarge
 Bookmaster,Bookmaster (TR),Runemaster
 Crimson Jazz
-ranged-memoryMedium
-Camo Cannon,Cannon Gun,Cannon Gun WI
-Creeper Plant,Creeper Plant (NM)
-Magic Phantom
+Devastator,Reckless
+Graveyard NM
+Sniper
 al-ranged-memorySmall
 Crimson Jazz AL
 Fortuneteller (AL)
@@ -31,13 +31,11 @@ Dancer
 Lance Soldier,Lance Warrior
 Neoshadow,Neoshadow (NM)
 Samurai
-large-ranged-memoryLarge
-Devastator,Reckless
-Graveyard NM
-Sniper
 ranged-memoryLarge
 Fortuneteller
+Magic Phantom
 Trick Ghost,Trick Ghost (NM)
+large-ranged-memorySmall
 pirate-memoryLarge
 Undead Pirate B
 Undead Pirate C
