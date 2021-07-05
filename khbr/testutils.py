@@ -147,13 +147,14 @@ def get_found(randomization, name=None, tags=[]):
             for spawnpoint in room["spawnpoints"].values():
                 for spid in spawnpoint["sp_ids"]:
                     for enemy in spawnpoint["sp_ids"][spid]:
-                        print(name)
                         if name:
                             if enemy["name"] == name:
                                 return True
                         for tag in tags:
                             if "name" in enemy and tag in kh2.enemy_records[enemy["name"]]["tags"]:
-                                return True
+                                # TODO THIS IS A HACK BECAUSE HADES CUPS IS A REPLACEAS TARGET BUT HAS THE CUPS TAG
+                                if enemy["name"] != "Hades Cups":
+                                    return True
     return False
 
 def get_randomized(randomization, source_name):
@@ -168,7 +169,7 @@ def get_randomized(randomization, source_name):
                             
                             new_ent = _find_index(new_spawns, ent["index"])
                             if new_ent:
-                                return ent["name"] == new_ent["name"]
+                                return ent["name"] != new_ent["name"]
                             return False # Wasn't replaced, is vanilla
                             
     raise Exception("Could not find source_name: {}".format(source_name))
@@ -234,13 +235,11 @@ def validate_scale_map(randomization):
                     for ent in spawns:
                         if ent["isboss"]:
                             og_boss = ent["name"]
-                            new_boss_spawns = randomization["spawns"].get(world, {}).get(room, {}).get("spawnpoints", {}).get(spn, {}).get("sp_id", {}).get(spid, [])
-                            new_boss = _find_index(new_boss_spawns, og_boss["index"])
+                            new_boss_spawns = randomization["spawns"].get(w, {}).get(r, {}).get("spawnpoints", {}).get(spn, {}).get("sp_ids", {}).get(spid, [])
+                            new_boss = _find_index(new_boss_spawns, ent["index"])
                             if new_boss:
-                                scaled_new = randomization["scale_map"][og_boss]
-                                assert scaled_new == new_boss["name"]
-                            else:
-                                assert og_boss not in randomization["scale_map"]
+                                scaled_og = randomization["scale_map"][new_boss["name"]]
+                                assert scaled_og == og_boss
 
 def validate_enemy_records(enemy_records):
     enemies_yaml = yaml.load(open("enemies.yaml"))

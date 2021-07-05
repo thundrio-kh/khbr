@@ -459,6 +459,7 @@ class KingdomHearts2:
 
         boss_names = list(bosses.keys())
 
+
         # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
         # this still feels pretty imperative, maybe during a refactor it will become obvious how to be more functional
         # have to look at every source boss too so adjusting those sources, not just the ones that are available
@@ -471,9 +472,8 @@ class KingdomHearts2:
                 boss["available"] = [b for b in boss["available"] if b in bosses]
                 for child_name in boss["children"]:
                     child = self.enemy_records[child_name]
-                    # I don't think this is needed???????????????????????????????????
-                    # DEBUG CHECKING UNIT TESTS WORK IF I JUST COMMENT THIS OUT
-                    #child["variations"] = [b for b in boss["variations"] if b in bosses]
+                    # This is involved in ommitting children that are excluded via tag
+                    child["variations"] = [b for b in boss["variations"] if b in bosses]
 
         return bosses
     def perform_randomization(self, options, seed=None):
