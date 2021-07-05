@@ -16,6 +16,8 @@ UNLIMITED_SIZE = 99_999_999_999_999
 LIMITED_SIZE = 15.0 # Seems about right
 NUM_RANDOMIZATION_MAPPINGS = 9
 
+DEBUG_HEALTH = False
+
 DEBUG_PRINT = False
 
 def print_debug(msg, override=False):
