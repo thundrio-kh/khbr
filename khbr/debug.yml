@@ -1,0 +1,555 @@
+ai_mods:
+- Xemnas
+- Twilight Thorn
+limiter_map: {}
+msn_map:
+  BB05_MS104B: TR04_MS104
+  BB15_MS203: HB33_FM_LAR
+  DC07_FM_NAZO: HE18_MS108
+  EH10_MS102: TT05_MS404
+  EH14_MS103: MU08_MS204
+  EH15_MS104: HB33_FM_LEX
+  EH19_MS105: BB15_MS203
+  EH21_MS101: HB34_FM_ZEX
+  HB01_MS601: EH19_MS105
+  HB04_MS403: NM07_MS204
+  HB32_FM_VEX: HB01_MS601
+  HB33_FM_LAR: DC07_FM_NAZO
+  HB33_FM_LEX: WI01_MS101
+  HB34_FM_ZEX: TT34_MS304
+  HE18_MS108: NM03_MS103
+  LK14_MS103: HB32_FM_VEX
+  MU09_MS108: CA18_MS202
+  NM03_MS103: EH15_MS104
+  NM07_MS204: EH10_MS102
+  TR04_MS104: HB04_MS403
+  TR09_MS204: EH14_MS103
+  TT20_MS603: TR09_MS204
+object_map: {}
+scale_map: {}
+seed: '0'
+spawns:
+  Agrabah:
+    The Palace:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '10':
+            - index: 3
+              isboss: true
+              name: Pete OC II
+            - index: 4
+              isboss: true
+              name: Marluxia (Data)
+  Beast's Castle:
+    Ballroom 05:
+      spawnpoints:
+        b_41:
+          sp_ids:
+            '27':
+            - index: 3
+              isboss: true
+              name: Hostile Program
+            - ObjectId: 1867
+              index: new
+    Bridge:
+      spawnpoints:
+        b_60:
+          sp_ids:
+            '13':
+            - index: 3
+              isboss: true
+              name: Larxene (Data)
+        b_80:
+          sp_ids:
+            '79':
+            - index: 3
+              isboss: true
+              name: Larxene
+    Undercroft:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '14':
+            - index: 3
+              isboss: true
+              name: Cloud
+  Disney Castle:
+    The Wilderness:
+      spawnpoints:
+        b_80:
+          sp_ids:
+            '32':
+            - index: 0
+              isboss: true
+              name: Hydra
+            - ObjectId: 922
+              index: new
+              modPositionY: 1500
+            - Argument1: 99
+              ObjectId: 801
+              index: new
+            - Argument1: 1
+              ObjectId: 364
+              index: new
+            - ObjectId: 363
+              index: new
+  Halloween Town:
+    Christmas Tree Plaza:
+      spawnpoints:
+        b_60:
+          sp_ids:
+            '7':
+            - index: 3
+              isboss: true
+              name: Xigbar
+    Curly Hill:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '6':
+            - index: 3
+              isboss: true
+              name: Saix
+  Hollow Bastion:
+    Castle Gate:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '42':
+            - index: 3
+              isboss: true
+              name: The Experiment
+        b_80:
+          sp_ids:
+            '202':
+            - index: 3
+              isboss: true
+              name: The Experiment
+    Destiny Island:
+      spawnpoints:
+        b_80:
+          sp_ids:
+            '32':
+            - index: 3
+              isboss: true
+              name: Twilight Thorn
+        b_81:
+          sp_ids:
+            '64':
+            - index: 3
+              isboss: true
+              name: Twilight Thorn
+    Station of Oblivion:
+      spawnpoints:
+        b_80:
+          sp_ids:
+            '32':
+            - index: 3
+              isboss: true
+              name: Hades Cups
+        b_81:
+          sp_ids:
+            '64':
+            - index: 3
+              isboss: true
+              name: Hades Cups
+    Station of Remembrance:
+      spawnpoints:
+        b_80:
+          sp_ids:
+            '32':
+            - index: 3
+              isboss: true
+              name: Past Pete
+        b_81:
+          sp_ids:
+            '64':
+            - index: 3
+              isboss: true
+              name: Terra
+        b_82:
+          sp_ids:
+            '96':
+            - index: 3
+              isboss: true
+              name: Past Pete
+        b_83:
+          sp_ids:
+            '128':
+            - index: 3
+              isboss: true
+              name: Terra
+    The Dark Depths:
+      spawnpoints:
+        b_60:
+          sp_ids:
+            '162':
+            - index: 3
+              isboss: true
+              name: Xemnas
+    The Old Mansion 32:
+      spawnpoints:
+        b_80:
+          sp_ids:
+            '32':
+            - index: 3
+              isboss: true
+              name: Sephiroth
+        b_81:
+          sp_ids:
+            '64':
+            - index: 3
+              isboss: true
+              name: Sephiroth
+  Olympus Coliseum:
+    'Cave of the Dead: Entrance':
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '13':
+            - index: 0
+              isboss: true
+              name: Pete Cups
+    Coliseum Gates:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '41':
+            - index: 0
+              isboss: true
+              name: Prison Keeper
+            - ObjectId: 992
+              index: new
+            - ObjectId: 993
+              index: new
+            - ObjectId: 994
+              index: new
+    The Underdrome:
+      spawnpoints:
+        b_62:
+          sp_ids:
+            '38':
+            - index: 3
+              isboss: true
+              name: Roxas (Data)
+        b_63:
+          sp_ids:
+            '60':
+            - index: 3
+              isboss: true
+              name: Roxas
+    Well of Captivity:
+      spawnpoints:
+        b_41:
+          sp_ids:
+            '10':
+            - index: 3
+              isboss: true
+              name: Hercules
+  Port Royal:
+    The Black Pearl 18:
+      spawnpoints:
+        b_60:
+          sp_ids:
+            '245':
+            - index: 3
+              isboss: true
+              name: Yuffie (1)
+  Pride Land:
+    Scars Darkness:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '13':
+            - index: 3
+              isboss: true
+              name: Vexen
+  Space Paranoids:
+    Central Computer Core:
+      spawnpoints:
+        b_60:
+          sp_ids:
+            '57':
+            - index: 3
+              isboss: true
+              name: Luxord
+            - ObjectId: 2224
+              index: new
+    'I/O Tower: Hallway':
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '84':
+            - index: 3
+              isboss: true
+              name: Demyx
+  The Land of Dragons:
+    Imperial Square:
+      spawnpoints:
+        b_61:
+          sp_ids:
+            '96':
+            - index: 0
+              isboss: true
+              name: Volcano Lord (Cups)
+    Palace Gate 09:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '82':
+            - index: 3
+              isboss: true
+              name: Grim Reaper I
+  The World That Never Was:
+    Addled Impasse 15:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '69':
+            - index: 3
+              isboss: true
+              name: Lexaeus
+        b_80:
+          sp_ids:
+            '356':
+            - index: 3
+              isboss: true
+              name: Lexaeus (Data)
+    Hall of Empty Melodies 10:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '124':
+            - index: 3
+              isboss: true
+              name: Axel I
+        b_80:
+          sp_ids:
+            '434':
+            - index: 3
+              isboss: true
+              name: Axel I
+    Havocs Divide:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '69':
+            - index: 3
+              isboss: true
+              name: Storm Rider
+            - ObjectId: 1111
+              index: new
+        b_80:
+          sp_ids:
+            '378':
+            - index: 3
+              isboss: true
+              name: Storm Rider
+            - ObjectId: 1111
+              index: new
+    Memorys Contortion:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '47':
+            - index: 3
+              isboss: true
+              name: Xaldin
+        b_80:
+          sp_ids:
+            '99':
+            - index: 3
+              isboss: true
+              name: Xaldin
+    Station of Awakening 21:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '23':
+            - index: 3
+              isboss: true
+              name: Zexion
+        b_80:
+          sp_ids:
+            '87':
+            - index: 3
+              isboss: true
+              name: Zexion
+    The World of Nothing 23:
+      spawnpoints:
+        b_99:
+          sp_ids:
+            '87':
+            - index: 2
+              isboss: true
+              name: Scar
+    The World of Nothing 24:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '23':
+            - index: 11
+              isboss: true
+              name: Armor Xemnas I
+            - ObjectId: 2116
+              index: new
+            - ObjectId: 2115
+              index: new
+            - ObjectId: 2117
+              index: new
+            - Argument1: 1
+              ObjectId: 2118
+              index: new
+            - ObjectId: 2294
+              index: new
+  Timeless River:
+    Pier:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '26':
+            - index: 3
+              isboss: true
+              name: Tifa (1)
+  Twilight Town:
+    Back Alley:
+      spawnpoints:
+        b_41:
+          sp_ids:
+            '858':
+            - index: 3
+              isboss: true
+              name: Axel II
+    'Mansion: Basement Hall':
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '67':
+            - index: 3
+              isboss: true
+              name: Sark
+        b_80:
+          sp_ids:
+            '89':
+            - index: 3
+              isboss: true
+              name: Sark
+    Sandlot:
+      spawnpoints:
+        b_43:
+          sp_ids:
+            '144':
+            - index: 3
+              isboss: true
+              name: Leon (2)
+    Sandlot 04:
+      spawnpoints:
+        b_41:
+          sp_ids:
+            '71':
+            - index: 3
+              isboss: true
+              name: Axel II
+        b_42:
+          sp_ids:
+            '93':
+            - index: 3
+              isboss: true
+              name: Shadow Roxas
+        b_45:
+          sp_ids:
+            '2215':
+            - index: 3
+              isboss: true
+              name: Axel II
+        b_51:
+          sp_ids:
+            '2375':
+            - index: 3
+              isboss: true
+              name: Axel II
+    Station of Awakening:
+      spawnpoints:
+        b_40:
+          sp_ids:
+            '13':
+            - index: 0
+              isboss: true
+              name: Blizzard Lord
+    The Old Mansion:
+      spawnpoints:
+        b_80:
+          sp_ids:
+            '55':
+            - index: 0
+              isboss: true
+              name: Sephiroth
+subtract_map:
+  Beast's Castle:
+    Ballroom 05:
+      spawnpoints:
+        b_41:
+        - ObjectId: 644
+          modPositionY: -1500
+    Undercroft:
+      spawnpoints:
+        b_40:
+        - ObjectId: 356
+  Halloween Town:
+    Christmas Tree Plaza:
+      spawnpoints:
+        b_60:
+        - ObjectId: 1808
+        - ObjectId: 1809
+        - ObjectId: 1810
+    Curly Hill:
+      spawnpoints:
+        b_40:
+        - ObjectId: 992
+        - ObjectId: 993
+        - ObjectId: 994
+  Olympus Coliseum:
+    Coliseum Gates:
+      spawnpoints:
+        b_40:
+        - ObjectId: 922
+          modPositionY: 1500
+        - Argument1: 99
+          ObjectId: 801
+        - Argument1: 1
+          ObjectId: 364
+        - ObjectId: 363
+  Space Paranoids:
+    'I/O Tower: Hallway':
+      spawnpoints:
+        b_40:
+        - ObjectId: 1867
+  The Land of Dragons:
+    Imperial Square:
+      spawnpoints:
+        b_61:
+        - ObjectId: 721
+        - ObjectId: 1111
+    Palace Gate 09:
+      spawnpoints:
+        b_40:
+        - ObjectId: 733
+        - ObjectId: 22
+        - ObjectId: 10
+  The World That Never Was:
+    Havocs Divide:
+      spawnpoints:
+        b_40:
+        - ObjectId: 2224
+        b_80:
+        - ObjectId: 2224
+    The World of Nothing 24:
+      spawnpoints:
+        b_40:
+        - ObjectId: 2116
+        - ObjectId: 2115
+        - ObjectId: 2117
+        - Argument1: 1
+          ObjectId: 2118
+        - ObjectId: 2294

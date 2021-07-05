@@ -16,8 +16,11 @@ UNLIMITED_SIZE = 99_999_999_999_999
 LIMITED_SIZE = 15.0 # Seems about right
 NUM_RANDOMIZATION_MAPPINGS = 9
 
-# Force all bosses with health swaps to a certain value, for testing
-DEBUG_HEALTH = None#2
+DEBUG_PRINT = False
+
+def print_debug(msg, override=False):
+    if override or DEBUG_PRINT:
+        print(msg)
 
 HARDCAP = "-3.3895395E+38"
 
@@ -184,6 +187,10 @@ class KingdomHearts2:
             "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One'.",
                                 "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra and Sephiroth",
+                                "possible_values": [False, True], "hidden_values": []},
+        
+            # utility mod options
+            "remove_damage_cap": {"display_name": "Remove Damage Cap", "description": "Removes the damage cap for all enemies in the game.",
                                 "possible_values": [False, True], "hidden_values": []}
         }
     def create_spoiler_text(self):
@@ -294,7 +301,6 @@ class KingdomHearts2:
             bosses[parent]["children"] = sorted(list(set(kidlist[parent])))
             for child in bosses[parent]["children"]:
                 _inheritConfig(bosses[parent], bosses[child])
-
         if getavail:
             for source_name in bosses:
                 source_boss = bosses[source_name]
@@ -335,11 +341,11 @@ class KingdomHearts2:
                     if not source_boss["msn_replace_allowed"]:
                         if dest_boss["msn_required"]:
                             continue
-                    #print("{} > {}: {} + {} >= {}".format(source_boss["name"], dest_boss["name"], source_boss["size"], dest_boss["room_size"], maxsize))
+                    #print_debug("{} > {}: {} + {} >= {}".format(source_boss["name"], dest_boss["name"], source_boss["size"], dest_boss["room_size"], maxsize))
                     # THIS NEEDS TO CHANGE ONCE I CAN DO UNLIMITED STUFF
                     roommaxsize = source_boss["roommaxsize"] or maxsize
                     availablespace = (roommaxsize - source_boss["room_size"]) * source_boss["roomsizemultiplier"]
-                    #print("{} - {} ({}) >= 0".format(availablespace, source_boss["size"], availablespace - source_boss["size"]))
+                    #print_debug("{} - {} ({}) >= 0".format(availablespace, source_boss["size"], availablespace - source_boss["size"]))
                     if availablespace - dest_boss["size"] < 0:
                         continue
                     avail.append(dest_boss["name"])
@@ -453,6 +459,7 @@ class KingdomHearts2:
 
         boss_names = list(bosses.keys())
 
+
         # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
         # this still feels pretty imperative, maybe during a refactor it will become obvious how to be more functional
         # have to look at every source boss too so adjusting those sources, not just the ones that are available
@@ -465,13 +472,15 @@ class KingdomHearts2:
                 boss["available"] = [b for b in boss["available"] if b in bosses]
                 for child_name in boss["children"]:
                     child = self.enemy_records[child_name]
+                    # This is involved in ommitting children that are excluded via tag
                     child["variations"] = [b for b in boss["variations"] if b in bosses]
+
         return bosses
     def perform_randomization(self, options, seed=None):
-        print("Enemy Seed: {}".format(seed))
+        print_debug("Enemy Seed: {}".format(seed), override=False)
         if diagnostics:
             start_time = time.time()
-            print("Starting Randomization: {}".format(options))
+            print_debug("Starting Randomization: {}".format(options))
         self.unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
         scale_enemy = False
         scale_boss = False
@@ -486,6 +495,9 @@ class KingdomHearts2:
         bossmode = None
         nightmare_enemies = False
         enemymode = None
+        utility_mods = []
+        if options.get("remove_damage_cap"):
+            utility_mods.append("remove_damage_cap")
         if "enemy" in options and options["enemy"] != "Disabled":
             enemymode = options["enemy"]
         #duplicate_enemies = enemymode in ["spawnpoint_one_to_one", "wild"]
@@ -523,7 +535,6 @@ class KingdomHearts2:
             maxsize = LIMITED_SIZE
             if bossmode:
                 bosses = self.get_boss_list(options)
-
                 if "selected_boss" in options and options["selected_boss"] and options["boss"] == "Selected Boss":
                     bossmode = "Wild"
                     duplicate_bosses = True
@@ -556,6 +567,7 @@ class KingdomHearts2:
             object_map = {}
             ai_mods = {}
             data_replacements = {}
+            
             self.set_spawns()
             for w in self.spawns:
                 world = self.spawns[w]
@@ -565,7 +577,7 @@ class KingdomHearts2:
                         for k in room["pc"]:
                             room[k] = room["pc"][k]
                     if "ignored" in room and room["ignored"]:
-                        # print("Ignoring: ", r)
+                        # print_debug("Ignoring: ", r)
                         continue
                     if enemies and enemymode == "One to One Per Room":
                         enemymapping = self.pickenemymapping(enemies, nightmare=nightmare_enemies)
@@ -576,7 +588,7 @@ class KingdomHearts2:
                             for k in spawnpoint["pc"]:
                                 spawnpoint[k] = spawnpoint["pc"][k]
                         if "ignored" in spawnpoint and spawnpoint["ignored"]:
-                            # print("Ignoring: ", sp)
+                            # print_debug("Ignoring: ", sp)
                             continue
                         for i in spawnpoint["sp_ids"]:
                             entities = spawnpoint["sp_ids"][i]
@@ -612,7 +624,6 @@ class KingdomHearts2:
                                     ent = dict(old_ent)
                                     ent["name"] = new_object["name"]
                                     return ent
-
                                 if ent["isboss"]:
                                     if not bosses:
                                         continue # Bosses aren't being randomized
@@ -727,21 +738,23 @@ class KingdomHearts2:
                                 msn_mapping[oldmsn] = newmsn
             if diagnostics:
                 end_time = time.time()
-                print("Randomization Complete: {}s".format(end_time-start_time))
+                print_debug("Enemy Randomization Complete: {}s".format(end_time-start_time))
             # DEBUG
-            # print(self.create_spoiler_text())
+            #print_debug(self.create_spoiler_text(), override=True)
             # 0/0
-            rand =  {"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "object_map": object_map, "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
+            rand =  {"utility_mods": utility_mods,"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "object_map": object_map, "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
             if seed:
                 rand["seed"] = seed
             return rand
-        raise Exception("Didn't randomize anything!")
+        if not utility_mods:
+            raise Exception("Didn't randomize anything!")
+        return {"utility_mods": utility_mods}
 
     def generate_files(self, outdir='', randomization={}, outzip=[]):
         # Generates files in the zip folder and also returns the list of 
         if diagnostics:
             start_time = time.time()
-            print("Starting generation of files")
+            print_debug("Starting generation of files")
         if outdir:
             def _writeMethod(outfn, relfn, data):
                 if not os.path.isdir(os.path.dirname(outfn)):
@@ -756,6 +769,7 @@ class KingdomHearts2:
         else:
             raise Exception("one of outzip or outdir must be defined")
         assets = []
+        utility_mods = randomization.get("utility_mods", [])
         if randomization.get("object_map", ""):
             object_map = randomization.get("object_map", "")
             new_object_map = {}
@@ -767,8 +781,8 @@ class KingdomHearts2:
                 new_object_map[oid] = obj_data[oid]
             asset = self.writeObj(new_object_map, outdir, _writeMethod)
             assets.append(asset)
-        if randomization.get("scale_map", ""):
-            scale_map = randomization.get("scale_map", "")
+        if randomization.get("scale_map", {}) or "remove_damage_cap" in utility_mods:
+            scale_map = randomization.get("scale_map", {})
             with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
                 enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)
                 enmp_data_mod = yaml.load(yaml.dump(enmp_data_vanilla), Loader=yaml.SafeLoader)
@@ -777,10 +791,10 @@ class KingdomHearts2:
                 new_enmp_index = self.enemy_records[new_enemy]["enmp_index"]
                 original_enmp_index = self.enemy_records[original_enemy]["enmp_index"]
                 if not new_enmp_index:
-                    print("WARNING: Can't scale {}, no ENMP index found".format(new_enemy))
+                    print_debug("WARNING: Can't scale {}, no ENMP index found".format(new_enemy))
                     continue
                 if not original_enmp_index:
-                    print("WARNING: Can't scale {}, no ENMP index found".format(original_enemy))
+                    print_debug("WARNING: Can't scale {}, no ENMP index found".format(original_enemy))
                     continue
                 original_enmp_data = enmp_data_vanilla[original_enmp_index]
                 new_enmp_data = enmp_data_mod[new_enmp_index]
@@ -788,6 +802,9 @@ class KingdomHearts2:
                 if DEBUG_HEALTH:
                     new_enmp_data["health"] = [DEBUG_HEALTH for _ in original_enmp_data["health"]]
                 new_enmp_data["level"] = 0 # All bosses are level 0 to take the worlds battle level EXCEPT for datas/terra, which are 99
+            if "remove_damage_cap" in utility_mods:
+                for en in enmp_data_mod:
+                    en["maxDamage"] = 0xFFFF
             asset = self.writeEnmp(enmp_data_mod, outdir, _writeMethod)
             assets.append(asset)
         if randomization.get("spawns", ""):
@@ -958,7 +975,7 @@ class KingdomHearts2:
                 assets.append(asset)
         if diagnostics:
             end_time = time.time()
-            print("Files Generated: {}s".format(end_time-start_time))
+            print_debug("Files Generated: {}s".format(end_time-start_time))
         return assets
 
     def writeAreaDataProgram(self, ardname, scripttype, programnumber, program, outdir, writeMethod):
@@ -1117,7 +1134,7 @@ class Randomizer:
         else:
             fn = os.path.join(self.tempdir, ''.join(list(str(random.randint(0,10)) for _ in range(7))))
         if os.path.exists(fn):
-            print(fn)
+            print_debug(fn)
             # Realistically this should never happen
             raise Exception("TMP dir already exists, try again")
         os.mkdir(fn)
@@ -1289,7 +1306,7 @@ if __name__ == '__main__':
     t = time.time()
     mode = sys.argv[1]
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\"}" randomization_only
-    # run randomizer.py devgenerate "{\"boss\": \"Wild\"}"
+    # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"data_bosses\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Seifer\"}"
     options = sys.argv[2]
@@ -1302,10 +1319,10 @@ if __name__ == '__main__':
     else:
         options = {}
         for arg in sys.argv:
-            print(arg)
+            print_debug(arg)
             if "=" in arg:
                 opt = arg.split("=")
-                print(opt)
+                print_debug(opt)
                 options[opt[0]] = opt[1]
 
     if "randomization_only" in sys.argv:
