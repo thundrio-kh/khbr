@@ -1,0 +1,11 @@
+# P_BB000_BTL/p_bb.bdx
+# don't set minimum HP
+00001150 00000007
+# teamwork alloc
+# This is at the end doesn't seem to do anything
+#00004186 00000089
+
+#set a jnz to jmp +1
+# something around here might be the way
+00001094 00000007
+#might be a jnz around 1090

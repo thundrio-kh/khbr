@@ -129,7 +129,7 @@ Bookmaster:
   model: M_EX530
   obj_id: 5
   size: 0
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   type: enemy
   tags:
   - ranged
@@ -223,7 +223,7 @@ Creeper Plant:
   model: M_EX750
   isnightmare: true
   obj_id: 125
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   tags:
   - ranged
@@ -340,7 +340,7 @@ Gargoyle Knight:
   enmp_index: 999
   model: M_BB010_SWORD
   obj_id: 367
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   isnightmare: true
   replace_as: Gargoyle Knight # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
@@ -372,7 +372,7 @@ Gargoyle Warrior:
   replace_as: Gargoyle Warrior # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   obj_id: 368
   isnightmare: true
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Gargoyle Warrior (40 0):
@@ -400,7 +400,7 @@ Hammer Frame:
   enmp_index: 999
   model: M_EX560
   obj_id: 8
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Hammer Frame:
@@ -618,7 +618,7 @@ Strafer:
   enmp_index: 999
   model: M_EX610
   obj_id: 1114
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Strafer:
@@ -663,7 +663,7 @@ Toy Soldier:
   enmp_index: 999
   model: M_EX790_CHRISTMAS
   obj_id: 1776
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   tags:
   - large
@@ -838,7 +838,7 @@ Wight Knight:
   model: M_EX200
   isnightmare: true
   obj_id: 118
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Wight Knight:
@@ -877,7 +877,7 @@ Aerial Viking:
   limiter: 13
   model: M_EX210_HB
   obj_id: 2413
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Aerial Viking:
@@ -979,7 +979,7 @@ Armored Knight:
   limiter: 7
   model: M_EX760
   obj_id: 305
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Armored Knight:
@@ -1136,9 +1136,10 @@ Banzai:
       - 2
       - 0
 Barbossa:
+  aimod: true
   adds:
   - ObjectId: 358 #Illuminator
-  enabled: false
+  enabled: true
   enmp_index: 92
   hp: 100
   level: 99
@@ -1306,7 +1307,7 @@ Cannon Gun:
   limiter: 10
   model: M_EX650
   obj_id: 14
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   tags:
   - ranged
@@ -1404,7 +1405,7 @@ Creeper:
   limiter: 9
   model: M_EX880
   obj_id: 317
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Creeper:
@@ -1419,7 +1420,7 @@ Crescendo:
   limiter: 7
   model: M_EX740
   obj_id: 124
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Crescendo:
@@ -1434,7 +1435,7 @@ Crimson Jazz:
   limiter: 17
   model: M_EX130
   obj_id: 73
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   isnightmare: true
   tags:
   - large
@@ -1844,7 +1845,7 @@ Driller Mole:
   limiter: 9
   model: M_EX700
   obj_id: 18
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Driller Mole:
@@ -1962,7 +1963,7 @@ Fiery Globe:
   limiter: 6
   model: M_AL020_FIRE
   obj_id: 76
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Fiery Globe:
@@ -2000,7 +2001,8 @@ Final Xemnas:
   room_size: 8.92
   subtracts:
   - ObjectId: 2258 # electrified sora
-  - ObjectId: 2079 # clone of
+  adds:
+  - ObjectId: 2079 # clone 
     Argument1: 0
     Argument2: 0
   msn_replace_allowed: false
@@ -2135,10 +2137,14 @@ Grim Reaper I:
       - 1
       - 0
 Grim Reaper II:
-  enabled: false
+  aimod: true
+  enabled: true
   enmp_index: 143
   hp: 100
   level: 99
+  blacklist:
+  - Dark Thorn # medals get lost on ground
+  - Shadow Stalker # medals get lost on ground
   limiter: 0
   model: B_CA050
   obj_id: 1543
@@ -2234,7 +2240,7 @@ Hades Escape:
   limiter: 34
   model: B_HE030_HE05
   msn: HE05_MS102
-  source_replace_allowed: false
+  source_replace_allowed: true
   msn_replace_allowed: false
   obj_id: 2066
   replace_as: Hades Cups
@@ -2316,10 +2322,13 @@ Hammer Frame WI:
       - 0
       - 0
 Hayner:
-  enabled: false
+  aimod: true
+  enabled: true
   enmp_index: 140
   hp: 100
   level: 99
+  obj_edits:
+    ObjectType: BOSS
   limiter: 0
   model: N_EX500_BTL
   msn_replace_allowed: false
@@ -2352,8 +2361,6 @@ Hayner:
   - Yuffie
   variations:
     Hayner:
-      enabled: false
-      source_replace_allowed: false
       msn_list:
       - program: 182
         msn: TT04_MS00
@@ -2582,7 +2589,7 @@ Icy Cube:
   limiter: 7
   model: M_AL020_ICEE
   obj_id: 77
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Icy Cube:
@@ -2975,7 +2982,7 @@ Magic Phantom:
   limiter: 15
   model: M_EX500_HB
   obj_id: 2403
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   type: enemy
   tags:
   - ranged
@@ -2993,7 +3000,7 @@ Magnum Loader:
   limiter: 10
   model: M_EX600
   obj_id: 121
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Magnum Loader:
@@ -3042,7 +3049,7 @@ Minute Bomb:
   limiter: 9
   model: M_EX550
   obj_id: 7
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Minute Bomb:
@@ -3117,7 +3124,7 @@ Nightwalker:
   limiter: 15
   model: M_EX580
   obj_id: 10
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   type: enemy
   variations:
     Nightwalker:
@@ -3298,7 +3305,7 @@ Rapid Thruster:
   limiter: 7
   model: M_EX660
   obj_id: 304
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Rapid Thruster (Zipliner):
@@ -3507,7 +3514,7 @@ Runemaster:
   limiter: 10
   model: M_EX530_HB
   obj_id: 2414
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   tags:
   - large
   - ranged
@@ -3709,12 +3716,15 @@ Sephiroth:
       - 0
       - 0
 Setzer:
-  enabled: false
+  aimod: true
+  enabled: true
   enmp_index: 146
   hp: 100
   level: 99
   limiter: 0
   model: N_EX600_BTL
+  obj_edits:
+    ObjectType: BOSS
   obj_id: 2095
   msn_replace_allowed: false
   size: 1.35
@@ -3941,7 +3951,7 @@ Soldier:
   limiter: 12
   model: M_EX010
   obj_id: 301
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Soldier:
@@ -3981,7 +3991,7 @@ Sorcerer:
   limiter: 34
   model: M_EX870
   obj_id: 316
-  sizeTag: memoryMedium
+  sizeTag: memoryLarge
   tags:
   - large
   - ranged
@@ -4070,7 +4080,7 @@ Surveillance Robot:
   limiter: 10
   model: M_EX770
   obj_id: 306
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   tags:
   - ranged
@@ -4104,12 +4114,13 @@ Terra:
       - 0
       - 0
 The Beast:
+  aimod: false
   enabled: false
   enmp_index: 72
   hp: 100
   level: 99
   limiter: 0
-  msn_required: true
+  msn_replace_allowed: false
   model: P_BB000_BTL
   msn: BB03_MS103
   obj_id: 718
@@ -4219,7 +4230,7 @@ Tornado Step:
   limiter: 10
   model: M_EX730
   obj_id: 123
-  sizeTag: memoryMedium
+  sizeTag: memorySmall
   type: enemy
   variations:
     Tornado Step:
@@ -4337,13 +4348,16 @@ Vexen:
       - 1
       - 0
 Vivi:
-  enabled: false
+  aimod: true
+  enabled: true
   enmp_index: 145
   hp: 100
   level: 99
   limiter: 1
   model: N_EX610_BTL
   msn: TT05_MS402
+  obj_edits:
+    ObjectType: BOSS
   msn_replace_allowed: false
   obj_id: 2156
   size: 1.02

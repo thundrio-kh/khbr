@@ -16,6 +16,8 @@ UNLIMITED_SIZE = 99_999_999_999_999
 LIMITED_SIZE = 15.0 # Seems about right
 NUM_RANDOMIZATION_MAPPINGS = 9
 
+DEBUG_HEALTH = False
+
 DEBUG_PRINT = False
 
 def print_debug(msg, override=False):
@@ -799,6 +801,8 @@ class KingdomHearts2:
                 original_enmp_data = enmp_data_vanilla[original_enmp_index]
                 new_enmp_data = enmp_data_mod[new_enmp_index]
                 new_enmp_data["health"] = original_enmp_data["health"]
+                if DEBUG_HEALTH:
+                    new_enmp_data["health"] = [DEBUG_HEALTH for _ in original_enmp_data["health"]]
                 new_enmp_data["level"] = 0 # All bosses are level 0 to take the worlds battle level EXCEPT for datas/terra, which are 99
             if "remove_damage_cap" in utility_mods:
                 for en in enmp_data_mod:

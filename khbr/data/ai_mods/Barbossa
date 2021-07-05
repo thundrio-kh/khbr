@@ -1,0 +1,5 @@
+# B_CA010/b_ca.bdx
+
+# Make him always able to be damaged
+00000fcc 00640000
+00000fe0 00D4004A
