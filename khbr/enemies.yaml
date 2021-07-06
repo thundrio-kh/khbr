@@ -1564,7 +1564,7 @@ Demyx (Data):
   level: 99
   limiter: 0
   model: B_EX120_HB_LV99
-  msn: HB04_MS403_RE # TODO DUPLICATE THE MSN
+  msn: HB04_MS403 # TODO DUPLICATE THE MSN
   program: 114
   size: 4.07
   room_size: 10.62
@@ -1620,7 +1620,7 @@ Luxord (Data):
   level: 99
   limiter: 0
   model: B_EX150_LV99
-  msn: EH14_MS103_RE # TODO DUPE MSN
+  msn: EH14_MS103 # TODO DUPE MSN
   program: 101
   size: 4.64
   room_size: 11.89
@@ -1661,7 +1661,7 @@ Saix (Data):
   level: 99
   limiter: 0
   model: B_EX160_LV99
-  msn: EH15_MS104_RE # TODO DUPE MSN
+  msn: EH15_MS104 # TODO DUPE MSN
   program: 102
   size: 4.55
   room_size: 10.30
@@ -1708,7 +1708,7 @@ Xemnas (Data):
   level: 99
   limiter: 0
   model: B_EX170_LV99
-  msn: EH19_MS105_RE
+  msn: EH19_MS105
   obj_id: 2505
   size: 3.7
   room_size: 6.16
@@ -1730,7 +1730,7 @@ Xigbar (Data):
   level: 99
   limiter: 0
   model: B_EX140_LV99
-  msn: EH10_MS102_RE
+  msn: EH10_MS102
   obj_id: 2501
   size: 3.19
   program: 100
@@ -2770,7 +2770,7 @@ Larxene:
       - data
       - organization
       enabled: true
-      msn: HB33_FM_LAR_RE
+      msn: HB33_FM_LAR
       program: 148
       vars:
       - 0
@@ -2855,7 +2855,7 @@ Lexaeus:
       - data
       - organization
       enabled: true
-      msn: HB33_FM_LEX_RE
+      msn: HB33_FM_LEX
       program: 147
       vars:
       - 0
@@ -3050,7 +3050,7 @@ Marluxia:
       - data
       - organization
       enabled: true
-      msn: HB38_FM_MAR_RE
+      msn: HB38_FM_MAR
       program: 150
       vars:
       - 0
@@ -3516,7 +3516,7 @@ Roxas:
       - data
       - organization
       enabled: true
-      msn: EH21_MS101_RE
+      msn: EH21_MS101
       program: 99
       vars:
       - 0
@@ -4368,7 +4368,7 @@ Vexen:
       - organization
       enabled: true
       program: 146
-      msn: HB32_FM_VEX_RE
+      msn: HB32_FM_VEX
       vars:
       - 1
       - 1
@@ -4671,7 +4671,7 @@ Zexion:
       - organization
       enabled: true
       program: 152
-      msn: HB34_FM_ZEX_RE
+      msn: HB34_FM_ZEX
       vars:
       - 0
       - 1

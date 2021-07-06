@@ -7951,7 +7951,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_EX120_HB_LV99",
-        "msn": "HB04_MS403_RE",
+        "msn": "HB04_MS403",
         "program": 114,
         "size": 4.07,
         "room_size": 10.62,
@@ -8131,7 +8131,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_EX150_LV99",
-        "msn": "EH14_MS103_RE",
+        "msn": "EH14_MS103",
         "program": 101,
         "size": 4.64,
         "room_size": 11.89,
@@ -8203,7 +8203,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_EX160_LV99",
-        "msn": "EH15_MS104_RE",
+        "msn": "EH15_MS104",
         "program": 102,
         "size": 4.55,
         "room_size": 10.3,
@@ -8304,7 +8304,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_EX170_LV99",
-        "msn": "EH19_MS105_RE",
+        "msn": "EH19_MS105",
         "obj_id": 2505,
         "size": 3.7,
         "room_size": 6.16,
@@ -8352,7 +8352,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_EX140_LV99",
-        "msn": "EH10_MS102_RE",
+        "msn": "EH10_MS102",
         "obj_id": 2501,
         "size": 3.19,
         "program": 100,
@@ -10715,7 +10715,9 @@
         "aimod": true,
         "enabled": true,
         "tags": [
-            "roxas"
+            "roxas",
+            "sourcemaxhp",
+            "onetooneonly"
         ],
         "enmp_index": 140,
         "hp": 100,
@@ -10759,7 +10761,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "roxas",
+        "category": "onetooneonly-roxas-sourcemaxhp",
         "isnightmare": false,
         "parent": "Hayner",
         "variationof": null,
@@ -13064,7 +13066,7 @@
             "organization"
         ],
         "enabled": true,
-        "msn": "HB33_FM_LAR_RE",
+        "msn": "HB33_FM_LAR",
         "program": 148,
         "vars": [
             0,
@@ -13485,7 +13487,7 @@
             "organization"
         ],
         "enabled": true,
-        "msn": "HB33_FM_LEX_RE",
+        "msn": "HB33_FM_LEX",
         "program": 147,
         "vars": [
             0,
@@ -14213,7 +14215,7 @@
             "organization"
         ],
         "enabled": true,
-        "msn": "HB38_FM_MAR_RE",
+        "msn": "HB38_FM_MAR",
         "program": 150,
         "vars": [
             0,
@@ -17001,7 +17003,7 @@
             "organization"
         ],
         "enabled": true,
-        "msn": "EH21_MS101_RE",
+        "msn": "EH21_MS101",
         "program": 99,
         "vars": [
             0,
@@ -17511,7 +17513,8 @@
         "enabled": true,
         "enmp_index": 125,
         "tags": [
-            "roxas"
+            "roxas",
+            "sourcemaxhp"
         ],
         "hp": 100,
         "level": 99,
@@ -17555,7 +17558,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "roxas",
+        "category": "roxas-sourcemaxhp",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17618,7 +17621,8 @@
         "enabled": true,
         "enmp_index": 125,
         "tags": [
-            "roxas"
+            "roxas",
+            "sourcemaxhp"
         ],
         "hp": 100,
         "level": 99,
@@ -17660,7 +17664,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "roxas",
+        "category": "roxas-sourcemaxhp",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17698,7 +17702,8 @@
         "enabled": true,
         "enmp_index": 125,
         "tags": [
-            "roxas"
+            "roxas",
+            "sourcemaxhp"
         ],
         "hp": 100,
         "level": 99,
@@ -17739,7 +17744,7 @@
             "Seifer (3)",
             "Seifer (4)"
         ],
-        "category": "roxas",
+        "category": "roxas-sourcemaxhp",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17775,7 +17780,8 @@
         "enabled": true,
         "enmp_index": 125,
         "tags": [
-            "roxas"
+            "roxas",
+            "sourcemaxhp"
         ],
         "hp": 100,
         "level": 99,
@@ -17818,7 +17824,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "roxas",
+        "category": "roxas-sourcemaxhp",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17854,7 +17860,8 @@
         "enabled": true,
         "enmp_index": 125,
         "tags": [
-            "roxas"
+            "roxas",
+            "sourcemaxhp"
         ],
         "hp": 100,
         "level": 99,
@@ -17897,7 +17904,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "roxas",
+        "category": "roxas-sourcemaxhp",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -18048,7 +18055,9 @@
         "enabled": true,
         "enmp_index": 146,
         "tags": [
-            "roxas"
+            "roxas",
+            "sourcemaxhp",
+            "onetooneonly"
         ],
         "hp": 100,
         "level": 99,
@@ -18091,7 +18100,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "roxas",
+        "category": "onetooneonly-roxas-sourcemaxhp",
         "isnightmare": false,
         "parent": "Setzer",
         "variationof": null,
@@ -20204,7 +20213,7 @@
         ],
         "enabled": true,
         "program": 146,
-        "msn": "HB32_FM_VEX_RE",
+        "msn": "HB32_FM_VEX",
         "vars": [
             1,
             1
@@ -20347,7 +20356,9 @@
         "enabled": true,
         "enmp_index": 145,
         "tags": [
-            "roxas"
+            "roxas",
+            "sourcemaxhp",
+            "onetooneonly"
         ],
         "hp": 100,
         "level": 99,
@@ -20393,7 +20404,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "roxas",
+        "category": "onetooneonly-roxas-sourcemaxhp",
         "isnightmare": false,
         "parent": "Vivi",
         "variationof": null,
@@ -21310,7 +21321,7 @@
         ],
         "enabled": true,
         "program": 152,
-        "msn": "HB34_FM_ZEX_RE",
+        "msn": "HB34_FM_ZEX",
         "vars": [
             0,
             1

@@ -467,8 +467,6 @@ class KingdomHearts2:
             exclude_tags.append("cups")
         if not ("data_bosses" in options and options["data_bosses"]):
             exclude_tags.append("data")
-        if options["boss"] != "One to One":
-            exclude_tags.append("onetooneonly") # mainly struggle fights
 
         # Nightmare mode ignores the datas and cups options
         if nightmare_bosses:
@@ -504,7 +502,6 @@ class KingdomHearts2:
         scale_boss = False
         if "scale_boss_stats" in options:
             scale_boss = options["scale_boss_stats"]
-        print(scale_boss)
         selected_boss = False
         selected_enemy = False
         enemies = None
@@ -652,6 +649,8 @@ class KingdomHearts2:
                                         continue # He gets removed later by subtracts, so don't replace
                                     if not old_boss_object["source_replace_allowed"] and old_boss_object["name"] != "Seifer (2)":
                                         continue
+                                    if bossmode == "Wild" and "onetooneonly" in old_boss_object["tags"]:
+                                        continue
                                     # TODO SEIFER Can't be replaced here normally because it wants an enemy, so just put shadow roxas here
                                     if  old_boss_object["name"] == "Seifer (2)":
                                         new_boss = "Shadow Roxas"
@@ -719,8 +718,9 @@ class KingdomHearts2:
                                     if scale_boss:
                                         if new_boss not in set_scaling:
                                             set_scaling[new_boss_object["name"]] = old_boss_object["name"] # So just the first instance of the boss will be used, which isn't great in every scenario TODO
-                                            if "sourcemaxhp" in set_scaling:
-                                                set_scaling[new_boss_object["name"]] = 2000 # I think this will be fine because it's all in stt but could theoretically overload the max hp display which crashes with scan
+                                    if new_boss not in set_scaling:
+                                        if "sourcemaxhp" in old_boss_object["tags"]:
+                                            set_scaling[new_boss_object["name"]] = 2000 # I think this will be fine because it's all in stt but could theoretically overload the max hp display which crashes with scan
                                     if new_boss_object["obj_edits"]:
                                         object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
                                     if "aimod" in new_boss_object and new_boss_object["aimod"]:
