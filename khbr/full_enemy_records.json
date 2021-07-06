@@ -5540,6 +5540,9 @@
         "enmp_index": 147,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "The Experiment"
+        ],
         "limiter": 0,
         "model": "B_EX260",
         "obj_id": 2140,
@@ -5563,7 +5566,6 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -5586,7 +5588,6 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Experiment",
             "Tifa",
             "Vivi",
             "Yuffie"

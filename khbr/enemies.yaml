@@ -927,6 +927,8 @@ Armor Xemnas I:
   enmp_index: 147
   hp: 100
   level: 99
+  blacklist_source:
+  - The Experiment
   limiter: 0
   model: B_EX260
   obj_id: 2140
