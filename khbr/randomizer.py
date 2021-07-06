@@ -690,9 +690,14 @@ class KingdomHearts2:
                                             if new_boss_object["msn_list"]:
                                                 continue
                                         # TEMP FIX THIS WONT ALWAYS WORK PROPER THING TO DO IS DUPLICATE MSNS TO MAKE _RE WORK TODO
-                                        msn_mapping[old_boss_object["msn"].replace("_RE", "")] = new_boss_object["msn"].replace("_RE", "")
+                                        # I don't think the .replace is needed because datas and normal fights are the same
+                                        # but in some cases the _RE does need to be replaced like Xaldin
+                                        # but for ones where the _RE doesn't exist, it's not doing any harm
+                                        # msn_mapping[old_boss_object["msn"].replace("_RE", "")] = new_boss_object["msn"].replace("_RE", "")
+                                        msn_mapping[old_boss_object["msn"] = new_boss_object["msn"]
                                     elif old_boss_object["msn_source_as"]:
-                                        msn_mapping[old_boss_object["msn"].replace("_RE", "")] = old_boss_object["msn_source_as"].replace("_RE", "")
+                                        #msn_mapping[old_boss_object["msn"].replace("_RE", "")] = old_boss_object["msn_source_as"].replace("_RE", "")
+                                        msn_mapping[old_boss_object["msn"] = old_boss_object["msn_source_as"]
                                     if scale_boss:
                                         if new_boss not in set_scaling:
                                             set_scaling[new_boss_object["name"]] = old_boss_object["name"] # So just the first instance of the boss will be used, which isn't great in every scenario TODO
