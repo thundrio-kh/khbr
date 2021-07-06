@@ -18787,6 +18787,8 @@ The Land of Dragons:
             isboss: false
             name: Nightwalker
   Imperial Square:
+    roommodedits:
+      b_61: stormrider_61 # height 0
     size: 5000000
     spawnpoints:
       b_00:

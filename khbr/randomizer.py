@@ -73,10 +73,25 @@ def ax2_50(spawnpoint):
     # remove the dragon
     spawnpoint[0]["Entities"] = []
 
+def stormrider_61(spawnpoint):
+    # move enemies height to the bottom
+    sora = spawnpoint[0]["Entities"][0]
+    sora["PositionY"] = 0
+
+    donald = spawnpoint[0]["Entities"][1]
+    donald["PositionY"] = 0
+
+    goofy = spawnpoint[0]["Entities"][2]
+    goofy["PositionY"] = 0
+
+    boss = spawnpoint[0]["Entities"][3]
+    boss["PositionY"] = 0
+
 roommodedits = {
     "ax2_99": ax2_99,
     "ax2_40": ax2_40,
-    "ax2_50": ax2_50
+    "ax2_50": ax2_50,
+    "stormrider_61": stormrider_61
 }
 
 class AreaDataScript:
@@ -184,7 +199,7 @@ class KingdomHearts2:
                                 "possible_values": [None] + sorted(self.get_valid_bosses()), "hidden_values": []},
             "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game. Forces Boss Randomization Mode to be 'Wild'",
                                 "possible_values": [False, True], "hidden_values": []},
-            "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts to scale bosses to the level/HP of the boss it is replacing.",
+            "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts force bosses level/HP to the scale of the boss it is replacing. When turned off uses the games scaling which is partially based on the battle level of the world except for Datas/Terra which are always level 99.",
                                 "possible_values": [True, False], "hidden_values": []},
             "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One'.",
                                 "possible_values": [True, False], "hidden_values": []},
