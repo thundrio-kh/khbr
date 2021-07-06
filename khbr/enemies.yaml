@@ -2286,6 +2286,7 @@ Hades II:
   level: 99
   limiter: 0
   model: B_HE030
+  roommaxsize: 13 # just a random guess
   obj_id: 350
   replace_as: Hades Cups
   size: 3.15
