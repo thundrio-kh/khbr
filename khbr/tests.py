@@ -95,6 +95,7 @@ class Tests(unittest.TestCase):
         testutils.validate_bosses_general(randomization)
         testutils.validate_bosses_onetoone(randomization)
         assert False == testutils.get_found(randomization, tags=["data", "cups"])
+        assert True == testutils.get_found(randomization, tags=["onetooneonly"])
 
     def test_seedgen_boss_one_to_one_scaled(self):
         options = {"boss": "One to One", "scale_boss_stats": True}
@@ -107,6 +108,7 @@ class Tests(unittest.TestCase):
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
         assert True == testutils.get_found(randomization, tags=["cups"])
+        
 
     def test_seedgen_boss_one_to_one_datas(self):
         options = {"boss": "One to One", "data_bosses": True}
@@ -129,6 +131,7 @@ class Tests(unittest.TestCase):
         assert True == testutils.get_randomized(randomization, "Final Xemnas")
         assert False == testutils.get_randomized(randomization, "Jafar")
         assert False == testutils.get_found(randomization, tags=["data", "cups"])
+        assert False == testutils.get_found(randomization, tags=["onetooneonly"])
 
     def test_seedgen_boss_wild_cups(self):
         options = {"boss": "Wild", "cups_bosses": True}

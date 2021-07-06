@@ -2335,6 +2335,8 @@ Hayner:
   enabled: true
   tags:
   - roxas
+  - sourcemaxhp
+  - onetooneonly
   enmp_index: 140
   hp: 100
   level: 99
@@ -3627,6 +3629,7 @@ Seifer:
   enmp_index: 125
   tags:
   - roxas
+  - sourcemaxhp
   hp: 100
   level: 99
   limiter: 0
@@ -3739,6 +3742,8 @@ Setzer:
   enmp_index: 146
   tags:
   - roxas
+  - sourcemaxhp
+  - onetooneonly
   hp: 100
   level: 99
   limiter: 0
@@ -4379,6 +4384,8 @@ Vivi:
   enmp_index: 145
   tags:
   - roxas
+  - sourcemaxhp
+  - onetooneonly
   hp: 100
   level: 99
   limiter: 1

@@ -467,6 +467,8 @@ class KingdomHearts2:
             exclude_tags.append("cups")
         if not ("data_bosses" in options and options["data_bosses"]):
             exclude_tags.append("data")
+        if options["boss"] != "One to One":
+            exclude_tags.append("onetooneonly") # mainly struggle fights
 
         # Nightmare mode ignores the datas and cups options
         if nightmare_bosses:
@@ -502,6 +504,7 @@ class KingdomHearts2:
         scale_boss = False
         if "scale_boss_stats" in options:
             scale_boss = options["scale_boss_stats"]
+        print(scale_boss)
         selected_boss = False
         selected_enemy = False
         enemies = None
@@ -709,13 +712,15 @@ class KingdomHearts2:
                                         # but in some cases the _RE does need to be replaced like Xaldin
                                         # but for ones where the _RE doesn't exist, it's not doing any harm
                                         # msn_mapping[old_boss_object["msn"].replace("_RE", "")] = new_boss_object["msn"].replace("_RE", "")
-                                        msn_mapping[old_boss_object["msn"] = new_boss_object["msn"]
+                                        msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"]
                                     elif old_boss_object["msn_source_as"]:
                                         #msn_mapping[old_boss_object["msn"].replace("_RE", "")] = old_boss_object["msn_source_as"].replace("_RE", "")
-                                        msn_mapping[old_boss_object["msn"] = old_boss_object["msn_source_as"]
+                                        msn_mapping[old_boss_object["msn"]] = old_boss_object["msn_source_as"]
                                     if scale_boss:
                                         if new_boss not in set_scaling:
                                             set_scaling[new_boss_object["name"]] = old_boss_object["name"] # So just the first instance of the boss will be used, which isn't great in every scenario TODO
+                                            if "sourcemaxhp" in set_scaling:
+                                                set_scaling[new_boss_object["name"]] = 2000 # I think this will be fine because it's all in stt but could theoretically overload the max hp display which crashes with scan
                                     if new_boss_object["obj_edits"]:
                                         object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
                                     if "aimod" in new_boss_object and new_boss_object["aimod"]:
@@ -1337,7 +1342,7 @@ if __name__ == '__main__':
     import time
     t = time.time()
     mode = sys.argv[1]
-    # run randomizer.py devgenerate "{\"enemy\": \"One to One\"}" randomization_only
+    # run randomizer.py devgenerate "{\"enemy\": \"One to One\",  \"scale_boss_stats\": true}" randomization_only
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"data_bosses\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Seifer\"}"
