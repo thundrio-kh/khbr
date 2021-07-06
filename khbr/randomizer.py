@@ -1092,6 +1092,10 @@ class KingdomHearts2:
         # Whole binarc at once is maybe weird to return
         return {
             "name": "msg/jp/{}.bar".format(name),
+            "multi": [
+                {"name": "msg/us/{}.bar".format(name)},
+                {"name": "msg/uk/{}.bar".format(name)}
+            ],
             "method": "binarc",
             "source": [
                 {
