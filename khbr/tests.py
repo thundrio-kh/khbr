@@ -66,7 +66,6 @@ class Tests(unittest.TestCase):
         testutils.validate_enemies_general(randomization)
         assert False == testutils.get_found(randomization, "Shadow")
         
-
     def test_seedgen_enemy_one_to_one_room(self):
         options = {"enemy": "One to One Per Room"}
         randomization = testutils.generateSeed(options)
@@ -166,6 +165,16 @@ class Tests(unittest.TestCase):
         randomization = testutils.generateSeed(options)
         testutils.validate_bosses_general(randomization)
 
+    def test_seedgen_error2(self):
+        options = {'boss': 'One to One', 'nightmare_bosses': False, 'selected_boss': None, 'enemy': 'Disabled', 'selected_enemy': None, 'nightmare_enemies': False, 'scale_boss_stats': True, 'cups_bosses': True, 'data_bosses': False, 'remove_damage_cap': False, 'memory_expansion': False}
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        # Make sure it's valid base64
+        base64.decodebytes(b64)
+
+
+
     def test_getbosses(self):
         kh2 = KingdomHearts2()
         kh2.get_bosses(usefilters=False, getavail=True)
@@ -206,8 +215,8 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_generate_one_one()
+ut.test_seedgen_error2()
 
 # Uncomment to run the actual tests
-unittest.main()
+#unittest.main()
 

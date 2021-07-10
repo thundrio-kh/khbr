@@ -2128,7 +2128,7 @@ Graveyard NM:
       - 0
 Grim Reaper I:
   enabled: true
-  enmp_index: 143
+  enmp_index: 154
   hp: 100
   level: 99
   limiter: 0
@@ -3734,6 +3734,7 @@ Sephiroth:
   - Axel I
   - Setzer
   - Axel II
+  - Armor Xemnas II # TELEPORTING
   variations:
     Sephiroth:
       vars:
@@ -4146,6 +4147,8 @@ The Beast:
   aimod: false
   enabled: false
   enmp_index: 72
+  blacklist_source:
+  - Grim Reaper II
   hp: 100
   level: 99
   limiter: 0
@@ -4173,6 +4176,9 @@ The Experiment:
   level: 99
   limiter: 0
   model: B_NM110
+  blacklist_destination:
+  - Blizzard Lord
+  - Volcano Lord
   msn: NM07_MS204
   obj_id: 1488
   size: 1.82
@@ -4202,6 +4208,9 @@ Thresholder:
   limiter: 25
   model: B_BB100
   msn: BB11_MS102
+  blacklist_destination:
+  - Blizzard Lord
+  - Volcano Lord
   obj_id: 353
   size: 2.17
   room_size: 12.13

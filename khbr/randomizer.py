@@ -503,7 +503,7 @@ class KingdomHearts2:
         print_debug("Enemy Seed: {}".format(seed), override=False)
         if diagnostics:
             start_time = time.time()
-            print_debug("Starting Randomization: {}".format(options))
+            print_debug("Starting Randomization: {}".format(options), override=True)
         self.unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
         scale_enemy = False
         scale_boss = False
@@ -727,7 +727,7 @@ class KingdomHearts2:
                                             set_scaling[new_boss_object["name"]] = old_boss_object["name"] # So just the first instance of the boss will be used, which isn't great in every scenario TODO
                                     if new_boss not in set_scaling:
                                         if "sourcemaxhp" in old_boss_object["tags"]:
-                                            set_scaling[new_boss_object["name"]] = 2000 # I think this will be fine because it's all in stt but could theoretically overload the max hp display which crashes with scan
+                                            set_scaling[new_boss_object["name"]] = 5000 # I think this will be fine because it's all in stt but could theoretically overload the max hp display which crashes with scan
                                     if new_boss_object["obj_edits"]:
                                         object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
                                     if "aimod" in new_boss_object and new_boss_object["aimod"]:
@@ -826,19 +826,26 @@ class KingdomHearts2:
             with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
                 enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)
                 enmp_data_mod = yaml.load(yaml.dump(enmp_data_vanilla), Loader=yaml.SafeLoader)
+            print(scale_map)
             for new_enemy in scale_map:
                 original_enemy = scale_map[new_enemy]
                 new_enmp_index = self.enemy_records[new_enemy]["enmp_index"]
-                original_enmp_index = self.enemy_records[original_enemy]["enmp_index"]
                 if not new_enmp_index:
                     print_debug("WARNING: Can't scale {}, no ENMP index found".format(new_enemy))
                     continue
-                if not original_enmp_index:
-                    print_debug("WARNING: Can't scale {}, no ENMP index found".format(original_enemy))
-                    continue
-                original_enmp_data = enmp_data_vanilla[original_enmp_index]
                 new_enmp_data = enmp_data_mod[new_enmp_index]
-                new_enmp_data["health"] = original_enmp_data["health"]
+
+                if type(original_enemy) == int: #ie 2000
+                    new_enmp_data["health"][0] = original_enemy
+                else:
+                
+                    original_enmp_index = self.enemy_records[original_enemy]["enmp_index"]
+                
+                    if not original_enmp_index:
+                        print_debug("WARNING: Can't scale {}, no ENMP index found".format(original_enemy))
+                        continue
+                    original_enmp_data = enmp_data_vanilla[original_enmp_index]
+                    new_enmp_data["health"] = original_enmp_data["health"]
                 if DEBUG_HEALTH:
                     new_enmp_data["health"] = [DEBUG_HEALTH for _ in original_enmp_data["health"]]
                 new_enmp_data["level"] = 0 # All bosses are level 0 to take the worlds battle level EXCEPT for datas/terra, which are 99
@@ -1212,7 +1219,8 @@ class Randomizer:
             key = sortedkeys[o]
             if key in options:
                 translated.append(str(o))
-                translated.append( str(validoptions[key]["possible_values"].index(options[key])) )
+                optionslist = validoptions[key]["possible_values"] + validoptions[key]["hidden_values"]
+                translated.append( str(optionslist.index(options[key])) )
         name += '-'.join(translated)
         name += ".zip"
         return name

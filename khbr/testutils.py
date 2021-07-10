@@ -255,6 +255,8 @@ def validate_scale_map(randomization):
                                     continue # These bosses don't get scaled properly for mostly replaceas reasons
                                 # maybe something strange here that needs to be looked at again to ensure scaling done right
                                 scaled_og = randomization["scale_map"][new_boss["name"]]
+                                if type(scaled_og) == int:
+                                    continue 
                                 scaled_og_parent = kh2.enemy_records[scaled_og]["parent"]
                                 og_parent = kh2.enemy_records[og_boss]["parent"]
                                 assert scaled_og_parent == og_parent
