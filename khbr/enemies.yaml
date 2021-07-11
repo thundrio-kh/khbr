@@ -924,7 +924,7 @@ Air Pirate:
       - 0
 Armor Xemnas I:
   enabled: true
-  enmp_index: 147
+  enmp_index: 0xA0
   hp: 100
   level: 99
   blacklist_source:
@@ -952,7 +952,7 @@ Armor Xemnas I:
       - 0
 Armor Xemnas II:
   enabled: true
-  enmp_index: 147
+  enmp_index: 0xA0
   hp: 100
   level: 99
   limiter: 0
@@ -1035,6 +1035,7 @@ Axel I:
   - roxas
   model: B_EX110_SKIRMISH
   msn: TT05_MS404
+  enmp_index: 0x94
   program: 87
   room_size: 9.43
   size: 2.92
@@ -1074,7 +1075,7 @@ Axel II:
   - organization
   - roxas
   enabled: true
-  enmp_index: 138
+  enmp_index: 0x4E
   hp: 100
   level: 99
   limiter: 34
@@ -1116,7 +1117,7 @@ Axel II:
       - 0
 Banzai:
   enabled: false
-  enmp_index: 86
+  enmp_index: 0x5B
   hp: 100
   level: 99
   limiter: 0
@@ -1146,7 +1147,7 @@ Barbossa:
   adds:
   - ObjectId: 358 #Illuminator
   enabled: true
-  enmp_index: 92
+  enmp_index: 0x63
   hp: 100
   level: 99
   limiter: 0
@@ -1233,7 +1234,7 @@ Berserker:
 Blizzard Lord:
   can_be_enemy: true
   enabled: true
-  enmp_index: 113
+  enmp_index: 0x7B
   hp: 100
   level: 99
   limiter: 0
@@ -1328,7 +1329,7 @@ Cannon Gun:
       - 0
 Cerberus:
   enabled: true
-  enmp_index: 176
+  enmp_index: 0x13
   hp: 100
   tags:
   - solo # not really but data demyx would still be kinda stupid here
@@ -1369,7 +1370,7 @@ Cerberus:
       - 0
 Cloud:
   enabled: true
-  enmp_index: 160
+  enmp_index: 0xBD
   hp: 100
   level: 99
   limiter: 0
@@ -1511,7 +1512,7 @@ Dancer:
       - 0
 Dark Thorn:
   enabled: true
-  enmp_index: 21
+  enmp_index: 0x16
   hp: 100
   level: 99
   limiter: 0
@@ -1539,7 +1540,7 @@ Axel (Data):
   - organization
   enabled: true
   variationof: Axel II
-  enmp_index: 221
+  enmp_index: 0xF5
   hp: 100
   level: 99
   limiter: 34
@@ -1561,7 +1562,7 @@ Demyx (Data):
   - organization
   enabled: true
   variationof: Demyx
-  enmp_index: 216
+  enmp_index: 0xF0
   hp: 100
   level: 99
   limiter: 0
@@ -1585,7 +1586,6 @@ Final Xemnas (Data):
   enabled: false
   variationof: Final Xemnas
   msn_replace_allowed: false # this might break things
-  enmp_index: 215
   hp: 100
   level: 99
   limiter: 0
@@ -1617,7 +1617,7 @@ Luxord (Data):
   - organization
   variationof: Luxord
   enabled: true
-  enmp_index: 219
+  enmp_index: 0xF3
   hp: 100
   level: 99
   limiter: 0
@@ -1658,7 +1658,7 @@ Saix (Data):
   can_be_enemy: true
   variationof: Saix
   enabled: true
-  enmp_index: 228
+  enmp_index: 0xFD
   hp: 100
   level: 99
   limiter: 0
@@ -1681,7 +1681,7 @@ Xaldin (Data):
   - organization
   enabled: true
   variationof: Xaldin
-  enmp_index: 222
+  enmp_index: 0xF6
   hp: 100
   level: 99
   limiter: 0
@@ -1705,7 +1705,7 @@ Xemnas (Data):
   can_be_enemy: true
   enabled: true
   variationof: Xemnas
-  enmp_index: 215
+  enmp_index: 0xEF
   hp: 100
   level: 99
   limiter: 0
@@ -1727,7 +1727,7 @@ Xigbar (Data):
   - data
   - organization
   variationof: Xigbar
-  enmp_index: 227
+  enmp_index: 0xFC
   hp: 100
   level: 99
   limiter: 0
@@ -1748,7 +1748,7 @@ Demyx:
   tags:
   - organization
   enabled: true
-  enmp_index: 83
+  enmp_index: 0x58
   hp: 100
   level: 99
   limiter: 0
@@ -1898,7 +1898,7 @@ Dusk:
       - 0
 Ed:
   enabled: false
-  enmp_index: 86
+  enmp_index: 0x5B
   hp: 100
   level: 99
   limiter: 0
@@ -2000,7 +2000,6 @@ Final Xemnas:
   tags:
   - solo
   enabled: false
-  enmp_index: 85
   hp: 100
   isnightmare: true
   level: 99
@@ -2089,7 +2088,7 @@ Gambler:
       - 0
 Giant Sark:
   enabled: false
-  enmp_index: 107
+  enmp_index: 0x72
   hp: 100
   level: 99
   limiter: 0
@@ -2128,7 +2127,7 @@ Graveyard NM:
       - 0
 Grim Reaper I:
   enabled: true
-  enmp_index: 154
+  enmp_index: 0x9A
   hp: 100
   level: 99
   limiter: 0
@@ -2150,7 +2149,7 @@ Grim Reaper I:
 Grim Reaper II:
   aimod: true
   enabled: true
-  enmp_index: 143
+  enmp_index: 0x7C
   hp: 100
   level: 99
   blacklist:
@@ -2178,7 +2177,7 @@ Grim Reaper II:
       - 0
 Groundshaker:
   enabled: false
-  enmp_index: 90
+  enmp_index: 0x5F
   hp: 100
   level: 99
   limiter: 0
@@ -2201,7 +2200,7 @@ Hades Cups:
   tags:
   - cups
   enabled: true
-  enmp_index: 156
+  enmp_index: 0xB1
   hp: 100
   level: 99
   variationof: Hades II
@@ -2340,7 +2339,7 @@ Hayner:
   - roxas
   - sourcemaxhp
   - onetooneonly
-  enmp_index: 140
+  enmp_index: 0x96
   hp: 100
   level: 99
   obj_edits:
@@ -2390,7 +2389,7 @@ Hayner:
 Hercules:
   can_be_enemy: true
   enabled: true
-  enmp_index: 157
+  enmp_index: 0xB2
   hp: 100
   level: 99
   limiter: 17
@@ -2524,7 +2523,7 @@ Hook Bat AL:
       - 20
 Hostile Program:
   enabled: true
-  enmp_index: 99
+  enmp_index: 0x6A
   hp: 100
   level: 99
   limiter: 0
@@ -2630,7 +2629,7 @@ Icy Cube Treasure Room:
       - 0
 Illuminator:
   enabled: false
-  enmp_index: 91
+  enmp_index: 0x62
   hp: 100
   level: 99
   limiter: 0
@@ -2661,7 +2660,7 @@ Iron Hammer:
       - 0
 Jafar:
   enabled: false
-  enmp_index: 128
+  enmp_index: 0x8A
   hp: 100
   level: 99
   limiter: 0
@@ -2733,7 +2732,7 @@ Larxene:
   - organization
   can_be_enemy: true
   enabled: true
-  enmp_index: 192
+  enmp_index: 0xD8
   hp: 100
   level: 99
   limiter: 0
@@ -2780,7 +2779,7 @@ Larxene:
       - 1
 Leon:
   enabled: true
-  enmp_index: 159
+  enmp_index: 0xB4
   hp: 100
   level: 99
   limiter: 0
@@ -2828,7 +2827,7 @@ Lexaeus:
   tags:
   - organization
   enabled: true
-  enmp_index: 190
+  enmp_index: 0xD6
   hp: 100
   level: 99
   limiter: 0
@@ -2895,7 +2894,7 @@ Living Bone:
       - 0
 Lock:
   enabled: false
-  enmp_index: 15
+  enmp_index: 0x0F
   hp: 100
   level: 99
   limiter: 0
@@ -2936,7 +2935,7 @@ Luxord:
   - organization
   - solo
   enabled: true
-  enmp_index: 84
+  enmp_index: 0x59
   hp: 100
   level: 99
   limiter: 0
@@ -3028,7 +3027,7 @@ Marluxia:
   tags:
   - organization
   enabled: true
-  enmp_index: 191
+  enmp_index: 0xD7
   hp: 100
   level: 99
   limiter: 0
@@ -3168,7 +3167,7 @@ Bomb Bell A:
       - 0
 Oogie Boogie:
   enabled: false
-  enmp_index: 74
+  enmp_index: 0x4B
   hp: 100
   level: 99
   limiter: 0
@@ -3192,7 +3191,7 @@ Oogie Boogie:
 Past Pete:
   can_be_enemy: true
   enabled: true
-  enmp_index: 106
+  enmp_index: 0x71
   hp: 100
   level: 99
   limiter: 0
@@ -3212,7 +3211,7 @@ Pete Cups:
   enabled: true
   tags:
   - cups
-  enmp_index: 158
+  enmp_index: 0xB3
   hp: 100
   level: 99
   limiter: 20
@@ -3230,7 +3229,7 @@ Pete Cups:
       - 0
 Pete OC I:
   enabled: false
-  enmp_index: 25
+  enmp_index: 0x1A
   hp: 100
   level: 99
   limiter: 20
@@ -3249,7 +3248,7 @@ Pete OC I:
       - 0
 Pete OC II:
   enabled: true
-  enmp_index: 25
+  enmp_index: 0x1A
   hp: 100
   level: 99
   limiter: 20
@@ -3294,7 +3293,7 @@ Pete TR:
       - 0
 Prison Keeper:
   enabled: true
-  enmp_index: 109
+  enmp_index: 0x77
   hp: 100
   level: 99
   limiter: 0
@@ -3453,7 +3452,7 @@ Rapid Thruster WI:
 Riku:
   aimod: true
   enabled: true
-  enmp_index: 120
+  enmp_index: 0x82
   tags:
   - solo
   hp: 100
@@ -3479,7 +3478,7 @@ Roxas:
   - solo
   can_be_enemy: true
   enabled: true
-  enmp_index: 218
+  enmp_index: 0xD5
   hp: 100
   level: 99
   limiter: 0
@@ -3549,7 +3548,7 @@ Saix:
   - organization
   can_be_enemy: true
   enabled: true
-  enmp_index: 124
+  enmp_index: 0x86
   hp: 100
   level: 99
   limiter: 0
@@ -3589,7 +3588,7 @@ Samurai:
 Sark:
   enabled: true
   isnightmare: true
-  enmp_index: 93
+  enmp_index: 0x64
   hp: 100
   level: 99
   limiter: 25
@@ -3609,7 +3608,7 @@ Scar:
   can_be_enemy: true
   isnightmare: true
   enabled: true
-  enmp_index: 89
+  enmp_index: 0x5E
   hp: 100
   level: 99
   limiter: 0
@@ -3629,7 +3628,7 @@ Seifer:
   obj_edits:
     ObjectType: BOSS
   enabled: true # Uses an objentry edit to be treated as an enemy
-  enmp_index: 125
+  enmp_index: 0x87
   tags:
   - roxas
   - sourcemaxhp
@@ -3714,7 +3713,7 @@ Sephiroth:
   - solo
   can_be_enemy: true
   enabled: true
-  enmp_index: 130
+  enmp_index: 0x8C
   hp: 100
   isnightmare: true
   level: 99
@@ -3743,7 +3742,7 @@ Sephiroth:
 Setzer:
   aimod: true
   enabled: true
-  enmp_index: 146
+  enmp_index: 0x9E
   tags:
   - roxas
   - sourcemaxhp
@@ -3819,7 +3818,7 @@ Shadow:
       - 0
 Shadow Stalker:
   enabled: false
-  enmp_index: 22
+  enmp_index: 0x17
   hp: 100
   level: 99
   limiter: 0
@@ -3861,7 +3860,7 @@ Shadow WI:
 Shan-Yu:
   can_be_enemy: true
   enabled: true
-  enmp_index: 70
+  enmp_index: 0x47
   hp: 100
   level: 99
   limiter: 34
@@ -3885,7 +3884,7 @@ Shan-Yu:
       - 0
 Shenzie:
   enabled: false
-  enmp_index: 86
+  enmp_index: 0x5B
   hp: 100
   level: 99
   limiter: 0
@@ -3915,7 +3914,7 @@ Shenzie:
       - 0
 Shock:
   enabled: false
-  enmp_index: 16
+  enmp_index: 0x10
   hp: 100
   level: 99
   limiter: 0
@@ -4051,7 +4050,7 @@ Spring Metal:
       - 0
 Storm Rider:
   enabled: true
-  enmp_index: 24
+  enmp_index: 0x19
   hp: 100
   level: 99
   limiter: 0
@@ -4124,7 +4123,7 @@ Terra:
   tags:
   - data
   enabled: true
-  enmp_index: 220
+  enmp_index: 0xF4
   hp: 100
   isnightmare: true
   level: 99
@@ -4146,7 +4145,7 @@ Terra:
 The Beast:
   aimod: false
   enabled: false
-  enmp_index: 72
+  enmp_index: 0x49
   blacklist_source:
   - Grim Reaper II
   hp: 100
@@ -4171,7 +4170,7 @@ The Beast:
       - 0
 The Experiment:
   enabled: true
-  enmp_index: 110
+  enmp_index: 0x78
   hp: 100
   level: 99
   limiter: 0
@@ -4202,7 +4201,7 @@ The Experiment:
       - 0
 Thresholder:
   enabled: true
-  enmp_index: 73
+  enmp_index: 0x4A
   hp: 100
   level: 99
   limiter: 25
@@ -4226,7 +4225,7 @@ Thresholder:
       - 0
 Tifa:
   enabled: true
-  enmp_index: 161
+  enmp_index: 0xB6
   hp: 100
   level: 99
   limiter: 0
@@ -4316,7 +4315,7 @@ Trick Ghost:
 Twilight Thorn:
   aimod: true
   enabled: true
-  enmp_index: 81
+  enmp_index: 0x56
   tags:
   - roxas
   hp: 100
@@ -4362,7 +4361,7 @@ Vexen:
   tags:
   - organization
   enabled: true
-  enmp_index: 177
+  enmp_index: 0xC8
   hp: 100
   level: 99
   limiter: 0
@@ -4393,7 +4392,7 @@ Vexen:
 Vivi:
   aimod: true
   enabled: true
-  enmp_index: 145
+  enmp_index: 0x9D
   tags:
   - roxas
   - sourcemaxhp
@@ -4443,7 +4442,7 @@ Vivi:
 Volcano Lord:
   can_be_enemy: true
   enabled: true
-  enmp_index: 174
+  enmp_index: 0x7A
   hp: 100
   level: 99
   limiter: 0
@@ -4496,7 +4495,7 @@ Xaldin:
   tags:
   - organization
   enabled: true
-  enmp_index: 82
+  enmp_index: 0x57
   hp: 100
   level: 99
   limiter: 0
@@ -4520,7 +4519,7 @@ Xemnas:
   aimod: true
   can_be_enemy: true
   enabled: true
-  enmp_index: 85
+  enmp_index: 0x5A
   hp: 100
   isnightmare: true
   level: 99
@@ -4569,7 +4568,7 @@ Xigbar:
   enabled: true
   tags:
   - organization
-  enmp_index: 123
+  enmp_index: 0x85
   hp: 100
   level: 99
   limiter: 0
@@ -4590,7 +4589,7 @@ Xigbar:
 Yuffie:
   enabled: true
   isnightmare: true
-  enmp_index: 162
+  enmp_index: 0xB7
   hp: 100
   level: 99
   limiter: 0
@@ -4641,7 +4640,6 @@ Zexion:
   - organization
   aimod: false # TODO current ai mod is a bit crashy I think, so just ban from weird rooms
   enabled: true
-  enmp_index: 193
   hp: 100
   level: 99
   limiter: 0

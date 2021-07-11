@@ -722,12 +722,12 @@ class KingdomHearts2:
                                     elif old_boss_object["msn_source_as"]:
                                         #msn_mapping[old_boss_object["msn"].replace("_RE", "")] = old_boss_object["msn_source_as"].replace("_RE", "")
                                         msn_mapping[old_boss_object["msn"]] = old_boss_object["msn_source_as"]
-                                    if scale_boss:
-                                        if new_boss not in set_scaling:
-                                            set_scaling[new_boss_object["name"]] = old_boss_object["name"] # So just the first instance of the boss will be used, which isn't great in every scenario TODO
                                     if new_boss not in set_scaling:
                                         if "sourcemaxhp" in old_boss_object["tags"]:
                                             set_scaling[new_boss_object["name"]] = 5000 # I think this will be fine because it's all in stt but could theoretically overload the max hp display which crashes with scan
+                                    if scale_boss:
+                                        if new_boss not in set_scaling:
+                                            set_scaling[new_boss_object["name"]] = old_boss_object["name"] # So just the first instance of the boss will be used, which isn't great in every scenario TODO
                                     if new_boss_object["obj_edits"]:
                                         object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
                                     if "aimod" in new_boss_object and new_boss_object["aimod"]:
@@ -829,22 +829,26 @@ class KingdomHearts2:
             print(scale_map)
             for new_enemy in scale_map:
                 original_enemy = scale_map[new_enemy]
-                new_enmp_index = self.enemy_records[new_enemy]["enmp_index"]
+                new_enmp_index = self.enemy_records[new_enemy]["enmp_index"] # really its the id not the index anymore
                 if not new_enmp_index:
                     print_debug("WARNING: Can't scale {}, no ENMP index found".format(new_enemy))
                     continue
-                new_enmp_data = enmp_data_mod[new_enmp_index]
+                def _get_index(source, idnum):
+                    for i in range(len(source)):
+                        if source[i]["id"] == idnum:
+                            return i
+                    raise Exception("This shouldn't happen")
+                new_enmp_data = enmp_data_mod[_get_index(enmp_data_vanilla, new_enmp_index)]
 
                 if type(original_enemy) == int: #ie 2000
                     new_enmp_data["health"][0] = original_enemy
                 else:
-                
                     original_enmp_index = self.enemy_records[original_enemy]["enmp_index"]
                 
                     if not original_enmp_index:
                         print_debug("WARNING: Can't scale {}, no ENMP index found".format(original_enemy))
                         continue
-                    original_enmp_data = enmp_data_vanilla[original_enmp_index]
+                    original_enmp_data = enmp_data_vanilla[_get_index(enmp_data_vanilla, original_enmp_index)]
                     new_enmp_data["health"] = original_enmp_data["health"]
                 if DEBUG_HEALTH:
                     new_enmp_data["health"] = [DEBUG_HEALTH for _ in original_enmp_data["health"]]
@@ -1357,7 +1361,7 @@ if __name__ == '__main__':
     import time
     t = time.time()
     mode = sys.argv[1]
-    # run randomizer.py devgenerate "{\"enemy\": \"One to One\",  \"scale_boss_stats\": true}" randomization_only
+    # run randomizer.py devgenerate "{\"boss\": \"One to One\",  \"scale_boss_stats\": true}" randomization_only
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"data_bosses\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Seifer\"}"
