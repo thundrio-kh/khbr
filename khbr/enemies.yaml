@@ -2152,9 +2152,26 @@ Grim Reaper II:
   enmp_index: 0x7C
   hp: 100
   level: 99
-  blacklist:
+  blacklist_destination:
   - Dark Thorn # medals get lost on ground
   - Shadow Stalker # medals get lost on ground
+  whitelist_destination: # Just a conservative list just in case, eventually do a all check
+  - Armor Xemnas II
+  - Cerberus
+  - Demyx
+  - Final Xemnas
+  - Grim Reaper II
+  - Hades II
+  - Hostile Program
+  - Hydra
+  - Past Pete
+  - Pete Cups
+  - Roxas
+  - Saix
+  - Sephiroth
+  - Shan-Yu
+  - Terra
+  
   limiter: 0
   model: B_CA050
   obj_id: 1543
