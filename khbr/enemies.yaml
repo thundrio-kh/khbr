@@ -1763,6 +1763,7 @@ Demyx:
   type: boss
   blacklist_destination:
   - Storm Rider # Having demyx start in the sky locks him in a weird loop
+  - Cerberus # he might be starting in the sky causing it not to load the fight properly
   variations:
     Demyx:
       vars:
@@ -2156,7 +2157,6 @@ Grim Reaper II:
   - Dark Thorn # medals get lost on ground
   - Shadow Stalker # medals get lost on ground
   whitelist_destination: # Just a conservative list just in case, eventually do a all check
-  - Armor Xemnas II
   - Cerberus
   - Demyx
   - Final Xemnas
@@ -2164,14 +2164,13 @@ Grim Reaper II:
   - Hades II
   - Hostile Program
   - Hydra
-  - Past Pete
+  - Luxord
   - Pete Cups
   - Roxas
   - Saix
   - Sephiroth
   - Shan-Yu
   - Terra
-  
   limiter: 0
   model: B_CA050
   obj_id: 1543
@@ -4192,9 +4191,6 @@ The Experiment:
   level: 99
   limiter: 0
   model: B_NM110
-  blacklist_destination:
-  - Blizzard Lord
-  - Volcano Lord
   msn: NM07_MS204
   obj_id: 1488
   size: 1.82
@@ -4203,6 +4199,8 @@ The Experiment:
   blacklist_destination:
   - Shadow Stalker # memory
   - Dark Thorn # memory
+  - Blizzard Lord
+  - Volcano Lord
   type: boss
   # these might need to be adds or something different
   # I'm also not including them in the size calculation, which might be wrong

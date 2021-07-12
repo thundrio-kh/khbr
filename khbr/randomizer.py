@@ -826,7 +826,6 @@ class KingdomHearts2:
             with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
                 enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)
                 enmp_data_mod = yaml.load(yaml.dump(enmp_data_vanilla), Loader=yaml.SafeLoader)
-            print(scale_map)
             for new_enemy in scale_map:
                 original_enemy = scale_map[new_enemy]
                 new_enmp_index = self.enemy_records[new_enemy]["enmp_index"] # really its the id not the index anymore

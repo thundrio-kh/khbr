@@ -5652,7 +5652,6 @@
             "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -6580,7 +6579,6 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Experiment",
             "Tifa",
             "Vivi",
             "Volcano Lord",
@@ -6962,7 +6960,6 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
-            "Demyx",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -7969,7 +7966,8 @@
         "roommaxsize": 14.9,
         "blacklist_source": [],
         "blacklist_destination": [
-            "Storm Rider"
+            "Storm Rider",
+            "Cerberus"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -8431,7 +8429,8 @@
         "program": 55,
         "type": "boss",
         "blacklist_destination": [
-            "Storm Rider"
+            "Storm Rider",
+            "Cerberus"
         ],
         "variations": [
             "Demyx"
@@ -10144,7 +10143,6 @@
             "Shadow Stalker"
         ],
         "whitelist_destination": [
-            "Armor Xemnas II",
             "Cerberus",
             "Demyx",
             "Final Xemnas",
@@ -10152,7 +10150,7 @@
             "Hades II",
             "Hostile Program",
             "Hydra",
-            "Past Pete",
+            "Luxord",
             "Pete Cups",
             "Roxas",
             "Saix",
@@ -13919,6 +13917,7 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
+            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -14793,7 +14792,6 @@
             "Cerberus",
             "Cloud",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -19584,15 +19582,17 @@
         "level": 99,
         "limiter": 0,
         "model": "B_NM110",
-        "blacklist_destination": [
-            "Shadow Stalker",
-            "Dark Thorn"
-        ],
         "msn": "NM07_MS204",
         "obj_id": 1488,
         "size": 1.82,
         "room_size": 11.7,
         "program": 64,
+        "blacklist_destination": [
+            "Shadow Stalker",
+            "Dark Thorn",
+            "Blizzard Lord",
+            "Volcano Lord"
+        ],
         "type": "boss",
         "subtracts": [
             {
@@ -20501,7 +20501,6 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Experiment",
             "Tifa",
             "Vivi",
             "Volcano Lord",
