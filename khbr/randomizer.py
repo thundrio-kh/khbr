@@ -17,7 +17,6 @@ LIMITED_SIZE = 15.0 # Seems about right
 NUM_RANDOMIZATION_MAPPINGS = 9
 
 DEBUG_HEALTH = False
-
 DEBUG_PRINT = False
 
 def print_debug(msg, override=False):
@@ -1346,9 +1345,7 @@ class Randomizer:
         assets = game.generate_files(randomization=randomization, outzip=outZip)
         modobj["assets"] += assets
         spoilers = randomization
-        if game.spoilers["boss"] or game.spoilers["enemy"]:
-            return game.create_spoiler_text()
-        return randomization
+        return game.create_spoiler_text()
     
     def getSchemaForGame(self, g):
         if g not in supported_games:
