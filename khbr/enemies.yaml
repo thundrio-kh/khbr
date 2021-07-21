@@ -1123,7 +1123,7 @@ Banzai:
   limiter: 0
   model: B_LK100_10
   obj_id: 666
-  souce_replace_allowed: false
+  source_replace_allowed: false
   type: boss
   variations:
     Banzai:

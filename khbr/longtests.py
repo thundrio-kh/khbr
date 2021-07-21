@@ -15,6 +15,7 @@ class Tests(unittest.TestCase):
             randomization = testutils.generateSeed(options, str(_))
             randomizations.append(randomization)
         testutils.calculate_boss_percentages(randomizations, requireSourceReplace=True)
+        testutils.check_for_hyena_replacement(randomizations)
         # Storm rider for luxord is pretty common unfortunately
         testutils.calculate_luxord_replacement_variety(randomizations, 0.55)
 
@@ -28,6 +29,7 @@ class Tests(unittest.TestCase):
             randomizations.append(randomization)
         testutils.calculate_boss_percentages(randomizations, requireSourceReplace=False)
         testutils.calculate_luxord_replacement_variety(randomizations, 0.4)
+        testutils.check_for_hyena_replacement(randomizations)
 
 # Uncomment to run a single test through ipython
 ut = Tests()

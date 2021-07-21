@@ -32,6 +32,11 @@ def get_luxord_replacement(randomization):
     except KeyError:
         return "Luxord"
 
+def check_for_hyena_replacement(randomizations):
+    for randomization in randomizations:
+        if "Pride Land" in randomization["spawns"]:
+            assert "The Kings Den" not in randomization["spawns"]["Pride Land"]
+
 def validate_bosses_general(randomization):
     validate_consistent_bosses(randomization)
     return validate_boss_placements(randomization)
