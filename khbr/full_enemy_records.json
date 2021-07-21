@@ -5606,6 +5606,9 @@
         ],
         "name": "Armor Xemnas II",
         "enabled": true,
+        "blacklist_source": [
+            "Axel I"
+        ],
         "enmp_index": 160,
         "hp": 100,
         "level": 99,
@@ -5631,7 +5634,6 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -5644,7 +5646,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
@@ -6000,6 +6001,10 @@
         "room_size": 3.68,
         "size": 3.74,
         "obj_id": 81,
+        "blacklist_destination": [
+            "Scar",
+            "Groundshaker"
+        ],
         "type": "boss",
         "whitelist_source": [
             "Axel I",
@@ -6047,7 +6052,6 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
         "whitelist_destination": [],
         "adds": [],
         "subtracts": [],
@@ -6196,6 +6200,9 @@
         "enabled": true,
         "enmp_index": 99,
         "hp": 100,
+        "blacklist_destination": [
+            "Xigbar"
+        ],
         "level": 99,
         "limiter": 0,
         "model": "B_CA010",
@@ -6225,7 +6232,6 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "subtracts": [],
@@ -7843,7 +7849,10 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
+        "blacklist_destination": [
+            "Scar",
+            "Groundshaker"
+        ],
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -7918,7 +7927,6 @@
         "roommaxsize": 14.9,
         "blacklist_source": [],
         "blacklist_destination": [
-            "Storm Rider",
             "Cerberus"
         ],
         "whitelist_source": [],
@@ -8381,7 +8389,6 @@
         "program": 55,
         "type": "boss",
         "blacklist_destination": [
-            "Storm Rider",
             "Cerberus"
         ],
         "variations": [
@@ -10221,7 +10228,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -14615,22 +14621,9 @@
         "msn": "NM09_MS104",
         "obj_id": 126,
         "program": 55,
-        "size": 2.79,
+        "size": 4.79,
+        "unchanged_file_size": true,
         "room_size": 12.41,
-        "adds": [
-            {
-                "ObjectId": 969
-            },
-            {
-                "ObjectId": 1604
-            },
-            {
-                "ObjectId": 928
-            },
-            {
-                "ObjectId": 1003
-            }
-        ],
         "type": "boss",
         "variations": [
             "Oogie Boogie"
@@ -14656,10 +14649,10 @@
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
+        "adds": [],
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
-        "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
             "Armor Xemnas II",
@@ -14668,7 +14661,6 @@
             "Grim Reaper I",
             "Hayner",
             "Hercules",
-            "Hostile Program",
             "Leon",
             "Oogie Boogie",
             "Past Pete",
@@ -14679,8 +14671,6 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Vivi",
             "Volcano Lord",
@@ -17390,7 +17380,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -18311,7 +18300,6 @@
             "Seifer",
             "Setzer",
             "Shadow Stalker",
-            "Thresholder",
             "Tifa",
             "Vivi",
             "Volcano Lord",
@@ -19151,6 +19139,7 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
+            "Demyx",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -19629,7 +19618,8 @@
         "msn": "BB11_MS102",
         "blacklist_destination": [
             "Blizzard Lord",
-            "Volcano Lord"
+            "Volcano Lord",
+            "Shadow Stalker"
         ],
         "obj_id": 353,
         "size": 2.17,
@@ -20670,7 +20660,6 @@
         "aimod": true,
         "can_be_enemy": true,
         "enabled": true,
-        "enmp_index": 90,
         "hp": 100,
         "isnightmare": true,
         "level": 99,
@@ -20699,6 +20688,7 @@
         "msn_source_as": null,
         "sizeTag": null,
         "roommaxsize": null,
+        "enmp_index": null,
         "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
@@ -20837,7 +20827,6 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",

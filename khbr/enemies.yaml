@@ -952,6 +952,8 @@ Armor Xemnas I:
       - 0
 Armor Xemnas II:
   enabled: true
+  blacklist_source:
+  - Axel I
   enmp_index: 0xA0
   hp: 100
   level: 99
@@ -1085,6 +1087,9 @@ Axel II:
   room_size: 3.68
   size: 3.74
   obj_id: 81
+  blacklist_destination:
+  - Scar
+  - Groundshaker # Lion Sora can't do RC to be able to kill Data Axel
   type: boss
   whitelist_source:
   - Axel I
@@ -1149,6 +1154,8 @@ Barbossa:
   enabled: true
   enmp_index: 0x63
   hp: 100
+  blacklist_destination:
+  - Xigbar # Illuminator can spawn too far OoB
   level: 99
   limiter: 0
   model: B_CA010
@@ -1762,7 +1769,6 @@ Demyx:
   program: 55
   type: boss
   blacklist_destination:
-  - Storm Rider # Having demyx start in the sky locks him in a weird loop
   - Cerberus # he might be starting in the sky causing it not to load the fight properly
   variations:
     Demyx:
@@ -3191,13 +3197,14 @@ Oogie Boogie:
   msn: NM09_MS104
   obj_id: 126
   program: 55
-  size: 2.79
+  size: 4.79 # 2.79 when accounting for the adds
+  unchanged_file_size: true # Not 100% sure this will work
   room_size: 12.41
-  adds:
-  - ObjectId: 969 # ???
-  - ObjectId: 1604 # oogies punch
-  - ObjectId: 928 # ???
-  - ObjectId: 1003 # present box
+  # adds:
+  # - ObjectId: 969 # ???
+  # - ObjectId: 1604 # oogies punch
+  # - ObjectId: 928 # ???
+  # - ObjectId: 1003 # present box
   type: boss
   variations:
     Oogie Boogie:
@@ -4223,8 +4230,9 @@ Thresholder:
   model: B_BB100
   msn: BB11_MS102
   blacklist_destination:
-  - Blizzard Lord
+  - Blizzard Lord # These all spawn above ground causing issues
   - Volcano Lord
+  - Shadow Stalker
   obj_id: 353
   size: 2.17
   room_size: 12.13
@@ -4534,7 +4542,7 @@ Xemnas:
   aimod: true
   can_be_enemy: true
   enabled: true
-  enmp_index: 0x5A
+  #enmp_index: 0x5A  Final Xemnas has same ENMP index so it's problematic to scale Xemnas
   hp: 100
   isnightmare: true
   level: 99
