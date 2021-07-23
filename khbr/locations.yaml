@@ -11335,6 +11335,7 @@ Olympus Coliseum:
     size: 5000000
     spawnpoints:
       b_62:
+        ignored: true # This is invincible fight
         size: 0
         sp_ids:
           '38':

@@ -6003,7 +6003,8 @@
         "obj_id": 81,
         "blacklist_destination": [
             "Scar",
-            "Groundshaker"
+            "Groundshaker",
+            "Cerberus"
         ],
         "type": "boss",
         "whitelist_source": [
@@ -6488,7 +6489,9 @@
         "size": 2.58,
         "blacklist_source": [
             "Sephiroth",
-            "Terra"
+            "Terra",
+            "Armor Xemnas I",
+            "Armor Xemnas II"
         ],
         "tags": [
             "large"
@@ -6521,7 +6524,6 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas II",
             "Axel I",
             "Blizzard Lord",
             "Cloud",
@@ -6567,7 +6569,9 @@
         "size": 2.58,
         "blacklist_source": [
             "Sephiroth",
-            "Terra"
+            "Terra",
+            "Armor Xemnas I",
+            "Armor Xemnas II"
         ],
         "type": "boss",
         "variations": [
@@ -6912,7 +6916,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -7851,7 +7854,8 @@
         "blacklist_source": [],
         "blacklist_destination": [
             "Scar",
-            "Groundshaker"
+            "Groundshaker",
+            "Cerberus"
         ],
         "whitelist_source": [
             "Axel I",
@@ -12940,7 +12944,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "variations": [
             "Larxene",
@@ -13049,7 +13054,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "variations": [
             "Larxene",
@@ -14966,7 +14972,6 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vivi",
@@ -16920,8 +16925,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Roxas (Data)": {
@@ -19532,7 +19536,8 @@
             "Shadow Stalker",
             "Dark Thorn",
             "Blizzard Lord",
-            "Volcano Lord"
+            "Volcano Lord",
+            "Pete OC II"
         ],
         "type": "boss",
         "subtracts": [
@@ -20247,7 +20252,6 @@
             "Hades II",
             "Hayner",
             "Hercules",
-            "Larxene",
             "Leon",
             "Past Pete",
             "Pete Cups",
@@ -20394,7 +20398,9 @@
         "size": 2.23,
         "blacklist_source": [
             "Sephiroth",
-            "Terra"
+            "Terra",
+            "Armor Xemnas I",
+            "Armor Xemnas II"
         ],
         "tags": [
             "large"
@@ -20427,7 +20433,6 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas II",
             "Axel I",
             "Blizzard Lord",
             "Cloud",
@@ -20473,7 +20478,9 @@
         "size": 2.23,
         "blacklist_source": [
             "Sephiroth",
-            "Terra"
+            "Terra",
+            "Armor Xemnas I",
+            "Armor Xemnas II"
         ],
         "type": "boss",
         "variations": [
@@ -21153,6 +21160,7 @@
             "Demyx OC",
             "Axel II",
             "Armor Xemnas II",
+            "Roxas",
             "Scar",
             "Groundshaker"
         ],
@@ -21272,6 +21280,7 @@
             "Demyx OC",
             "Axel II",
             "Armor Xemnas II",
+            "Roxas",
             "Scar",
             "Groundshaker"
         ],

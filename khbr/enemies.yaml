@@ -1090,6 +1090,7 @@ Axel II:
   blacklist_destination:
   - Scar
   - Groundshaker # Lion Sora can't do RC to be able to kill Data Axel
+  - Cerberus # Axel Data can't do RC so unbeatable
   type: boss
   whitelist_source:
   - Axel I
@@ -1252,6 +1253,8 @@ Blizzard Lord:
   blacklist_source:
   - Sephiroth # Too hard in multi boss fights
   - Terra # Too hard in multi boss fights
+  - Armor Xemnas I
+  - Armor Xemnas II
   tags:
   - large
   type: boss
@@ -2784,6 +2787,7 @@ Larxene:
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
+  - Vexen # Teleports into weird spots
   variations:
     Larxene:
       vars:
@@ -4208,6 +4212,7 @@ The Experiment:
   - Dark Thorn # memory
   - Blizzard Lord
   - Volcano Lord
+  - Pete OC II
   type: boss
   # these might need to be adds or something different
   # I'm also not including them in the size calculation, which might be wrong
@@ -4476,6 +4481,8 @@ Volcano Lord:
   blacklist_source:
   - Sephiroth # Too hard in multi boss fights
   - Terra # Too hard in multi boss fights
+  - Armor Xemnas I
+  - Armor Xemnas II
   tags:
   - large
   type: boss
@@ -4689,6 +4696,7 @@ Zexion:
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
+  - Roxas # Room becomes no ground
   - Scar # LK can't do book RCs
   - Groundshaker # LK can't do book RCs
   variations:
