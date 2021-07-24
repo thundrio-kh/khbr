@@ -1,8 +1,0 @@
-enemy
-
-update getbosses
-   available should only be done for the parents (make sure to min the free space between all the rooms of the variations
-
-update the pick boss wild
-    pick from anong the list of parents
-    then pick a variation to return
