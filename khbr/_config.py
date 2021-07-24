@@ -1,0 +1,15 @@
+import os
+
+DEBUG_LOCATIONS = []
+
+DIAGNOSTICS = True
+GENERATE_IDENTICON = False
+
+KH2_DIR = os.environ["USE_KH2_GITPATH"]
+
+LIMITED_SIZE = 15.0 # Seems about right
+
+DEBUG_HEALTH = False
+DEBUG_PRINT = False
+
+HARDCAP = "-3.3895395E+38"
