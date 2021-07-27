@@ -945,6 +945,8 @@ class KingdomHearts2:
                                                     toremove.append(e)
                                         for e in sorted(list(set(toremove)))[::-1]:
                                             instance["Entities"].pop(e)
+                                            # look into why this caused crashes
+                                            #instance["Entities"][e]["ObjectId"] = 0 # Just changing them to 0 makes them not loaded but keeps the file size the same
                         spasset = self.writeSpawnpoint(ardname, spawnpoint, existing, outdir, _writeMethod)
                         roomasset["source"].append(spasset)
                         if spawnpoint in roommods:

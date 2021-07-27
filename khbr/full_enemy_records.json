@@ -6063,7 +6063,6 @@
         "available": [
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -6202,7 +6201,8 @@
         "enmp_index": 99,
         "hp": 100,
         "blacklist_destination": [
-            "Xigbar"
+            "Xigbar",
+            "Axel II"
         ],
         "level": 99,
         "limiter": 0,
@@ -10077,7 +10077,7 @@
     },
     "Grim Reaper II": {
         "enabled": true,
-        "isnightmare": true,
+        "isnightmare": false,
         "msn": "CA01_MS204",
         "program": 54,
         "size": 2.58,
@@ -12409,28 +12409,12 @@
         "level": 99,
         "limiter": 0,
         "model": "B_HE100",
+        "unchanged_file_size": true,
         "msn": "HE18_MS108",
         "obj_id": 352,
         "size": 5.7,
-        "room_size": 10.22,
+        "room_size": 12.22,
         "program": 171,
-        "adds": [
-            {
-                "ObjectId": 922,
-                "modPositionY": 1500
-            },
-            {
-                "ObjectId": 801,
-                "Argument1": 99
-            },
-            {
-                "ObjectId": 364,
-                "Argument1": 1
-            },
-            {
-                "ObjectId": 363
-            }
-        ],
         "type": "boss",
         "variations": [
             "Hydra"
@@ -12455,56 +12439,32 @@
         "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
+        "adds": [],
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
-        "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
-            "Axel II",
-            "Barbossa",
             "Blizzard Lord",
-            "Cerberus",
             "Cloud",
-            "Dark Thorn",
-            "Demyx",
             "Grim Reaper I",
-            "Grim Reaper II",
-            "Hades II",
             "Hayner",
             "Hercules",
-            "Hostile Program",
             "Hydra",
             "Leon",
-            "Lexaeus",
-            "Luxord",
-            "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Riku",
-            "Saix",
             "Sark",
             "Scar",
             "Seifer",
-            "Sephiroth",
             "Setzer",
-            "Shan-Yu",
-            "Storm Rider",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Vivi",
             "Volcano Lord",
-            "Xaldin",
-            "Xemnas",
-            "Xigbar",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Icy Cube": {

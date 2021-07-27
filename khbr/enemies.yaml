@@ -1157,6 +1157,7 @@ Barbossa:
   hp: 100
   blacklist_destination:
   - Xigbar # Illuminator can spawn too far OoB
+  - Axel II # can be OoB
   level: 99
   limiter: 0
   model: B_CA010
@@ -2187,7 +2188,7 @@ Grim Reaper II:
   variations:
     Grim Reaper II:
       enabled: true
-      isnightmare: true
+      isnightmare: false # just hack because he breaks when ai mod + vanilla spot
       msn: CA01_MS204
       program: 54
       size: 2.58
@@ -2602,19 +2603,20 @@ Hydra:
   level: 99
   limiter: 0
   model: B_HE100
+  unchanged_file_size: true
   msn: HE18_MS108
   obj_id: 352
   size: 5.7
-  room_size: 10.22
+  room_size: 12.22 # 10.22 with the adds
   program: 171
-  adds:
-  - ObjectId: 922 # hydra head
-    modPositionY: 1500
-  - ObjectId: 801 # yellow orb
-    Argument1: 99
-  - ObjectId: 364 # phil
-    Argument1: 1
-  - ObjectId: 363 # pegasus
+  # adds:
+  # - ObjectId: 922 # hydra head
+  #   modPositionY: 1500
+  # - ObjectId: 801 # yellow orb
+  #   Argument1: 99
+  # - ObjectId: 364 # phil
+  #   Argument1: 1
+  # - ObjectId: 363 # pegasus
   type: boss
   variations:
     Hydra:
