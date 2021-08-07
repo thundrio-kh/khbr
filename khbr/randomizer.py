@@ -13,7 +13,7 @@ KH2_DIR = os.environ["USE_KH2_GITPATH"]
 RANDOMIZATIONS_DIR = os.path.join(KH2_DIR,"randomizations") if os.path.exists(os.path.join(KH2_DIR,"randomizations")) else "randomizations"
 
 UNLIMITED_SIZE = 99_999_999_999_999
-LIMITED_SIZE = 15.0 # Seems about right
+LIMITED_SIZE = UNLIMITED_SIZE
 NUM_RANDOMIZATION_MAPPINGS = 9
 
 DEBUG_HEALTH = False
@@ -117,6 +117,9 @@ class AreaDataScript:
         if number not in self.programs:
             raise Exception("Program not found")
         return '\n'.join(self.programs[number])
+    def add_packet_spec(self, number):
+        program = [self.get_program(number).split("\n")[0]] + ["AllocPacket {}".format(int(0x100000 / 2))] + self.get_program(number).split("\n")[1:]
+        self.programs[number] = program
     def update_program(self, number, capacity=None):
         program = self.get_program(number).split("\n")
         topop = []
@@ -297,8 +300,8 @@ class KingdomHearts2:
                 variation["name"] = v
                 _inheritConfig(main, variation)
                 variation["category"] = '-'.join(sorted(variation["tags"]))
-                if variation["sizeTag"]:
-                    variation["category"] = "-".join([variation["category"], variation["sizeTag"]])
+                # if variation["sizeTag"]:
+                #     variation["category"] = "-".join([variation["category"], variation["sizeTag"]])
 
                 if len(variation["category"]) > 0 and variation["category"][0] == "-":
                     variation["category"] = variation["category"][1:]
@@ -364,13 +367,6 @@ class KingdomHearts2:
                     if not source_boss["msn_replace_allowed"]:
                         if dest_boss["msn_required"]:
                             continue
-                    #print_debug("{} > {}: {} + {} >= {}".format(source_boss["name"], dest_boss["name"], source_boss["size"], dest_boss["room_size"], maxsize))
-                    # THIS NEEDS TO CHANGE ONCE I CAN DO UNLIMITED STUFF
-                    roommaxsize = source_boss["roommaxsize"] or maxsize
-                    availablespace = (roommaxsize - source_boss["room_size"]) * source_boss["roomsizemultiplier"]
-                    #print_debug("{} - {} ({}) >= 0".format(availablespace, source_boss["size"], availablespace - source_boss["size"]))
-                    if availablespace - dest_boss["size"] < 0:
-                        continue
                     avail.append(dest_boss["name"])
                 source_boss["available"] = avail
         return bosses
@@ -966,8 +962,9 @@ class KingdomHearts2:
                             if mission == "\"MU02_MS103B\"":
                                 continue # Ambush has some serious issues related to cost
                             script.update_program(p, HARDCAP)
-                            programasset = self.writeAreaDataProgram(ardname, "btl", p, script.get_program(p), outdir, _writeMethod)
-                            roomasset["source"].append(programasset)
+                        script.add_packet_spec(p)
+                        programasset = self.writeAreaDataProgram(ardname, "btl", p, script.get_program(p), outdir, _writeMethod)
+                        roomasset["source"].append(programasset)
                     assets.append(roomasset)
             if final_fights_spoilers:
                 asset = self.writeMSG("eh", final_fights_spoilers, outdir, _writeMethod)
