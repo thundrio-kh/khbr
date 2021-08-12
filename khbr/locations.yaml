@@ -13530,6 +13530,7 @@ Olympus Coliseum:
             isboss: false
             name: Sorcerer
       b_k5:
+        ignored: true
         size: 0
         sp_ids:
           '2660':
