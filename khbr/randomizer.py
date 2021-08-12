@@ -23,7 +23,7 @@ def print_debug(msg, override=False):
     if override or DEBUG_PRINT:
         print(msg)
 
-HARDCAP = "-3.3895395E+38"
+HARDCAP = "65000"
 
 def final_fight_text(source_enemy, new_name):
     key = "{}-{}-{}".format(source_enemy["ObjectId"], source_enemy["Argument1"], source_enemy["Argument2"])
@@ -955,6 +955,12 @@ class KingdomHearts2:
                         spasset = self.writeSpawnpoint(ardname, sp, roommods[sp], outdir, _writeMethod)
                         roomasset["source"].append(spasset)
                     btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
+                    if ardname == "he09":
+                        assetpath = os.path.join(os.path.dirname(__file__), "data", "he09.btl.ps2.areadatascript")
+                        programasset = self.writeCopiedSubfile(ardname, "btl", "AreaDataScript", assetpath, outdir, _writeMethod)
+                        roomasset["source"].append(programasset)
+                        assets.append(roomasset)
+                        continue
                     with open(btlfn) as f:
                         script = AreaDataScript(f.read(), ispc=self.unlimited_memory)
                     for p in script.programs:
@@ -1040,6 +1046,21 @@ class KingdomHearts2:
             "source": [{"name": fn}],
             "type": "AreaDataScript"
         }
+
+    def writeCopiedSubfile(self, ardname, subfilename, filetype, assetpath, outdir, writeMethod):
+        filename = os.path.basename(assetpath)
+        outfn = os.path.join(outdir, "files", "ard", ardname, filename)
+        fn = os.path.join("files", "ard", ardname, filename)
+        filebytes = open(assetpath, "rb").read()
+        writeMethod(outfn, fn, filebytes)
+        return {
+            "method": "copy",
+            "name": subfilename,
+            "source": [{"name": fn}],
+            "type": filetype
+        }
+
+
 
     def getSpawnpoint(self, ardname, spawnpoint, altspawns={}):
         if spawnpoint in altspawns.keys():

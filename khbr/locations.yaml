@@ -11350,7 +11350,6 @@ Olympus Coliseum:
             isboss: true
             name: Hades II (1)
   The Underdrome 09:
-    ignored: true
     size: 5000000
     spawnpoints:
       b_60:
