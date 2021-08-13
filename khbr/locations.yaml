@@ -11350,7 +11350,6 @@ Olympus Coliseum:
             isboss: true
             name: Hades II (1)
   The Underdrome 09:
-    ignored: true
     size: 5000000
     spawnpoints:
       b_60:
@@ -13531,6 +13530,7 @@ Olympus Coliseum:
             isboss: false
             name: Sorcerer
       b_k5:
+        ignored: true
         size: 0
         sp_ids:
           '2660':
