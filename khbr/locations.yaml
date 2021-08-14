@@ -19261,9 +19261,6 @@ The Land of Dragons:
             isboss: false
             name: Nightwalker
   Ridge:
-    ignored: false
-    pc:
-      ignored: false
     size: 5000000
     spawnpoints:
       b_00:
@@ -19365,8 +19362,6 @@ The Land of Dragons:
             name: Dusk
   Summit:
     ignored: true
-    pc:
-      ignored: false
     size: 5000000
     spawnpoints:
       b_00:

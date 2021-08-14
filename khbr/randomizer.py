@@ -859,9 +859,10 @@ class KingdomHearts2:
                 world = randomization.get("spawns")[w]
                 for room in world:
                     ardname = self.locmap[room]
+                    # THIS NOW WORKS ONLY FOR PC
                     roomasset = {
                         "method": "binarc",
-                        "name": "ard/{}.ard".format(ardname),
+                        "name": "ard/us/{}.ard".format(ardname),
                         "source": []
                     }
                     basespawns = self.spawns[w][room]
