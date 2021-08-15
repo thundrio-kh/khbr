@@ -22,7 +22,8 @@ class LocationManager:
         self.locations = locations_f
 
     @staticmethod
-    def update_location(location, unlimited_memory):
+    def update_location(location, config: RandomConfig):
+        unlimited_memory = config.unlimited_memory
         if "pc" in location and unlimited_memory:
             for k in location["pc"]:
                 location[k] = location["pc"][k]

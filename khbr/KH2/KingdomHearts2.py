@@ -1,3 +1,4 @@
+from khbr.KH2.schemas.enemyseed import EnemySeed
 from khbr.textutils import final_fight_text 
 from khbr.utils import print_debug
 from khbr._config import diagnostics
@@ -62,230 +63,83 @@ class KingdomHearts2:
         if bossmode == "Selected Boss":
             config.bosses = [options["selected_boss"]]
 
-        rand_seed = {}
+        rand_seed = EnemySeed(config=config)
         if bossmode or enemymode:
-            rand_seed = self.create_seed(config)
+            self.create_seed(rand_seed)
 
         if config.utility_mods:
-            rand_seed["utility_mods"] = config.utility_mods
-        if not rand_seed:
+            rand_seed.utility_mods = config.utility_mods
+
+        rand_seed_json= rand_seed.toJson()
+        if not rand_seed_json:
             raise Exception("Didn't randomize anything!")
 
-    def create_seed(self, config: RandomConfig):
-            bossmapping = pickbossmapping(self.enemy_manager.enemy_records, config.bosses) if not config.duplicate_bosses else None
+        if seed:
+            rand_seed_json["seed"] = seed
+
+        if diagnostics:
+            end_time = time.time()
+            print_debug("Enemy Randomization Complete: {}s".format(end_time-start_time))
+
+        return rand_seed_json
+
+    def create_seed(self, config: RandomConfig, rand_seed: EnemySeed):
+            rand_seed.bossmapping = pickbossmapping(self.enemy_manager.enemy_records, config.bosses) if not config.duplicate_bosses else None
             if config.enemies and config.enemymode != "Selected Enemy":
                 categorized_enemies = self.enemy_manager.categorize_enemies(config.enemies)
-                enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemies"], nightmare=config.nightmare_enemies)
-            
-            
-            newspawns = {}
-            subtract_map = {}
-            spawn_limiters = {}
-            msn_mapping = {}
-            set_scaling = {}
-            object_map = {}
-            ai_mods = {}
-            data_replacements = {}
+                rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemies"], nightmare=config.nightmare_enemies)
             
             spawns = self.location_manager.get_locations()
             for w, world in spawns.items():
                 for r, room in world.items():
-                    self.location_manager.update_room(room, config.unlimited_memory)
+                    self.location_manager.update_location(room, config)
                     if room.get("ignored"):
                         continue
                     if config.enemymode == "One to One Per Room":
-                        enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemies"], nightmare=config.nightmare_enemies)
+                        rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemies"], nightmare=config.nightmare_enemies)
+                    
                     for sp, spawnpoint in room["spawnpoints"].items():
-                        changesmade=False
-                        self.location_manager.update_location(spawnpoint, config.unlimited_memory)
+                        self.location_manager.update_location(spawnpoint, config)
                         if spawnpoint.get("ignored"):
                             continue
                         for i, entities in spawnpoint["sp_ids"].items():
+                            # TODO might be able to make this just for entity in entities
                             for e in range(len(entities)):
-                                ent = entities[e]
+                                entity = entities[e]
 
-                                def _add_spawn(spawnsies, ent):
-                                    if w not in spawnsies:
-                                        spawnsies[w] = {}
-                                    if r not in spawnsies[w]:
-                                        spawnsies[w][r] = {"spawnpoints": {}}
-                                    if sp not in spawnsies[w][r]["spawnpoints"]:
-                                        spawnsies[w][r]["spawnpoints"][sp] = {"sp_ids": {}}
-                                    if i not in spawnsies[w][r]["spawnpoints"][sp]["sp_ids"]:
-                                        spawnsies[w][r]["spawnpoints"][sp]["sp_ids"][i] = []
-                                    spawnsies[w][r]["spawnpoints"][sp]["sp_ids"][i].append(ent)
-                                    return
+                                if config.bosses and entity["isboss"]:
+                                    old_boss_object = self.enemy_manager.enemy_records[entity["name"]]
+                                    old_boss_parent = self.enemy_manager.get_parent(entity["name"])
+                                    if not self.spawn_manager.should_replace_boss(old_boss_object, config, rand_seed):
+                                        continue
 
-                                def _add_to_subtract_map(submap, objid):
-                                    if w not in submap:
-                                        submap[w] = {}
-                                    if r not in submap[w]:c8pawnpoints"]:
-                                        submap[w][r]["spawnpoints"][sp] = []
-                                    submap[w][r]["spawnpoints"][sp].append(objid)
+                                    new_boss = self.spawn_manager.get_new_boss(old_boss_object, old_boss_parent, config, rand_seed)        
+                                    if not new_boss:
+                                        continue
+                                    self.spoilers["boss"][entity["name"]] = new_boss
+                                    # same replacement
+                                    if not new_boss or new_boss == old_boss_object["name"]:
+                                        continue
 
-                                def _get_new_ent(old_ent, new_object):
-                                    if old_ent == "new":
-                                        ent = dict(new_object)
-                                        ent["index"] = "new"
-                                        return ent
-                                    ent = dict(old_ent)
-                                    ent["name"] = new_object["name"]
-                                    return ent
-                                if ent["isboss"]:
-                                    if not bosses:
-                                        continue # Bosses aren't being randomized
-                                    old_boss_object = self.enemy_records[ent["name"]]
-                                    old_boss_parent = self.enemy_records[old_boss_object["parent"]]
-                                    if old_boss_object["name"] in ["Final Xemnas (Clone)", "Final Xemnas (Clone) (Data)"]:
-                                        continue # He gets removed later by subtracts, so don't replace
-                                    if not old_boss_object["source_replace_allowed"] and old_boss_object["name"] != "Seifer (2)":
-                                        continue
-                                    if bossmode == "Wild" and "onetooneonly" in old_boss_object["tags"]:
-                                        continue
-                                    # TODO SEIFER Can't be replaced here normally because it wants an enemy, so just put shadow roxas here
-                                    if  old_boss_object["name"] == "Seifer (2)":
-                                        new_boss = "Shadow Roxas"
-                                    elif selected_boss:
-                                        new_boss = selected_boss
-                                    else:
-                                        new_boss_parent = None
-                                        if bossmapping:
-                                            if old_boss_parent["name"] not in bossmapping:
-                                                # Boss is not being randomized
-                                                continue
-                                            new_boss_parent = bossmapping[old_boss_parent["name"]]
-                                        if new_boss_parent:
-                                            bosspicklist = [new_boss_parent]
-                                        elif old_boss_parent["name"] in data_replacements:
-                                            bosspicklist = [data_replacements[old_boss_parent["name"]]]
-                                        else:
-                                            bosspicklist = old_boss_parent["available"]
-                                        new_boss = self.pick_boss_to_replace(bosspicklist)
-                                        if "roxas" in old_boss_object["tags"]:
-                                            if new_boss == "Axel (Data)":
-                                                # This fight is probably not very winnable as roxas, so force to normal axel II
-                                                new_boss = "Axel II"
-                                        if "solo" in old_boss_object["tags"]:
-                                            if new_boss == "Demyx (Data)":
-                                                new_boss = "Demyx" # Actual fix would be to just mod the ai to increase the time for destroying clones
-                                    self.spoilers["boss"][ent["name"]] = new_boss
-                                    if new_boss == ent["name"]:
-                                        continue
-                                    new_boss_object = self.enemy_records[new_boss]
-                                    # Due to how they use the same MSN in a lot of cases, org replacements should be the same between nobody + data versions
-                                    if "organization" in old_boss_object["tags"]:
-                                        new_parent = new_boss_object["parent"]
-                                        data_replacements[old_boss_parent["name"]] = new_parent
+                                    new_boss_object = self.enemy_manager.get_new_boss_object(old_boss_object, new_boss, rand_seed)
 
-                                    if new_boss_object["replace_as"] and not selected_boss:
-                                        new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
-                                    changesmade = True
-                                    _add_spawn(newspawns, _get_new_ent(ent, new_boss_object))
-                                    if new_boss == "Shadow Roxas":
+                                    self.rand_seed.add_spawn(w, r, sp, i, entity, new_boss_object)
+                                    #TODO spoilers should move into rand_seed
+                                    self.rand_seed.update_seed(old_boss_object, new_boss_object)
+
+                                elif config.enemies and not entity["isboss"]:
+                                    old_enemy_object = self.get_enemy_object_from_entity(entity)
+
+                                    if not self.spawn_manager.should_replace_enemy(old_enemy_object):
                                         continue
-                                    for obj in new_boss_object["adds"]:
-                                        _add_spawn(newspawns, _get_new_ent("new", obj))
-                                    for obj in old_boss_object["subtracts"]+old_boss_object["adds"]:
-                                        if "dontSub" in obj and obj["dontSub"]:
-                                            continue
-                                        _add_to_subtract_map(subtract_map, obj)
-                                    if old_boss_object["msn_replace_allowed"] and new_boss_object["msn_replace_allowed"]:
-                                        # This is fine because the only bosses with msn_list don't need the msn to be swapped
-                                        if not old_boss_object["msn"]:
-                                            if old_boss_object["msn_list"]:
-                                                continue
-                                        if not new_boss_object["msn"]:
-                                            if new_boss_object["msn_list"]:
-                                                continue
-                                        # TEMP FIX THIS WONT ALWAYS WORK PROPER THING TO DO IS DUPLICATE MSNS TO MAKE _RE WORK TODO
-                                        # I don't think the .replace is needed because datas and normal fights are the same
-                                        # but in some cases the _RE does need to be replaced like Xaldin
-                                        # but for ones where the _RE doesn't exist, it's not doing any harm
-                                        # msn_mapping[old_boss_object["msn"].replace("_RE", "")] = new_boss_object["msn"].replace("_RE", "")
-                                        msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"]
-                                    elif old_boss_object["msn_source_as"]:
-                                        #msn_mapping[old_boss_object["msn"].replace("_RE", "")] = old_boss_object["msn_source_as"].replace("_RE", "")
-                                        msn_mapping[old_boss_object["msn"]] = old_boss_object["msn_source_as"]
-                                    if new_boss not in set_scaling:
-                                        if "sourcemaxhp" in old_boss_object["tags"]:
-                                            set_scaling[new_boss_object["name"]] = 5000 # I think this will be fine because it's all in stt but could theoretically overload the max hp display which crashes with scan
-                                    if scale_boss:
-                                        if new_boss not in set_scaling:
-                                            set_scaling[new_boss_object["name"]] = old_boss_object["name"] # So just the first instance of the boss will be used, which isn't great in every scenario TODO
-                                    if new_boss_object["obj_edits"]:
-                                        object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
-                                    if "aimod" in new_boss_object and new_boss_object["aimod"]:
-                                        # In some cases it might be useful to know who is being replaced,
-                                        ## IE the height Axel spawns the fire floor might be different on a per room basis
-                                        ai_mods[new_boss] = ent["name"]
-                                else:
-                                    if not enemies:
+
+                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object)
+                                    if not new_enemy or new_enemy == old_enemy_object["name"]:
                                         continue
-                                    old_name = ent["nameForReplace"] if "nameForReplace" in ent else ent["name"]
-                                    old_enemy_object = self.enemy_records[old_name]
-                                    if not old_enemy_object["source_replace_allowed"]:
-                                        continue
-                                    if selected_enemy:
-                                        new_enemy = selected_enemy
-                                    elif enemymapping:
-                                        if old_name not in enemymapping:
-                                            continue
-                                            # if it's not in mapping it's not enabled
-                                        new_enemy = enemymapping[old_name]
-                                    elif enemymode == "Wild":
-                                        new_enemy = self.pick_enemy_to_replace(old_enemy_object, enemies)
-                                    if new_enemy == ent["name"]:
-                                        continue
-                                    changesmade = True
-                                    new_enemy_object = self.enemy_records[new_enemy]
-                                    if new_enemy_object["replace_as"] and not selected_enemy:
-                                        new_enemy_object = self.enemy_records[new_enemy_object["replace_as"]]
-                                    _add_spawn(newspawns, _get_new_ent(ent, new_enemy_object))
-                                #     elif enemymapping:
-                                #         new_enemy = enemymapping[ent["name"]]
-                                #     else:
-                                #         #Remember tags
-                                #         new_enemy = self.pick_enemy_to_replace(ent["name"], enemies)
-                                #     oldlimiter = self.getEnemyAttribute(ent["name"], "limiter")
-                                #     if new_enemy not in spawn_limiters:
-                                #         spawn_limiters[new_enemy] = oldlimiter
-                                #     else:
-                                #         spawn_limiters[new_enemy] = min(oldlimiter, spawn_limiters[new_enemy])
-                                #     if scale_enemy:
-                                #         if new_enemy not in set_scaling:
-                                #             set_scaling[new_enemy] = []
-                                #         set_scaling[new_enemy].append(ent["name"])
-                        if changesmade:
-                            if "msn_replacement" in spawnpoint and spawnpoint["msn_replacement"]:
-                                oldmsn = spawnpoint["msn_replacement"]["original"]
-                                newmsn = spawnpoint["msn_replacement"]["new"]
-                                msn_mapping[oldmsn] = newmsn
-            if diagnostics:
-                end_time = time.time()
-                print_debug("Enemy Randomization Complete: {}s".format(end_time-start_time))
-            # DEBUG
-            #print_debug(self.create_spoiler_text(), override=True)
-            # 0/0
-            rand =  {"utility_mods": utility_mods,"spawns": newspawns, "msn_map": msn_mapping, "ai_mods": list(set(ai_mods)), "object_map": object_map, "scale_map": set_scaling, "limiter_map": spawn_limiters, "subtract_map": subtract_map}
-            if seed:
-                rand["seed"] = seed
-            return rand
+
+                                    new_enemy_object = self.enemy_manager.get_new_enemy_object(new_enemy, rand_seed)
+                                    self.rand_seed.add_spawn(w, r, sp, i, entity, new_enemy_object)
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     def generate_files(self, outdir='', randomization={}, outzip=[]):
         # Generates files in the zip folder and also returns the list of 
         if diagnostics:

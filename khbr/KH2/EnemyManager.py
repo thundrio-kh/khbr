@@ -72,6 +72,30 @@ class EnemyManager:
 
         return enemies
 
+    def get_parent(self, name):
+        child = self.enemy_records.get(name)
+        return self.enemy_records.get(child)
+
+    def get_enemy_object_from_entity(self, entity):
+        old_name = entity["nameForReplace"] if "nameForReplace" in entity else entity["name"]
+        return self.enemy_records[old_name]
+
+    def get_new_boss_object(self, old_boss_object, new_boss_name, rand_seed):
+        new_boss_object = self.enemy_records[new_boss_name]
+        # Due to how they use the same MSN in a lot of cases, org replacements should be the same between nobody + data versions
+        if "organization" in old_boss_object["tags"]:
+            new_parent = new_boss_object["parent"]
+            rand_seed.data_replacements[self.get_parent(old_boss_object["name"])] = new_parent
+        if new_boss_object["replace_as"] and not rand_seed.config.selected_boss:
+            new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
+        return new_boss_object
+
+    def get_new_enemy_object(self, new_enemy_name, rand_seed):
+        new_enemy_object = self.enemy_records[new_enemy_name]
+        if new_enemy_object["replace_as"] and not rand_seed.config.selected_enemy:
+            new_enemy_object = self.enemy_records[new_enemy_object["replace_as"]]
+        return new_enemy_object
+
     @staticmethod
     def inheritConfig(parent, variation, defaults):
         for k in parent:

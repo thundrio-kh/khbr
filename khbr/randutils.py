@@ -58,3 +58,12 @@ def pick_boss_to_replace(enemy_records, bossparentlist):
 def pick_enemy_to_replace(old_enemy, enabled_enemies):
     options = [e["name"] for e in enabled_enemies if e["category"] == old_enemy["category"]]
     return random.choice(options)
+
+def create_new_entity(old_entity, new_object):
+    if old_entity == "new":
+        entity = dict(new_object)
+        entity["index"] = "new"
+        return entity
+    entity = dict(old_entity)
+    entity["name"] = new_object["name"]
+    return entity

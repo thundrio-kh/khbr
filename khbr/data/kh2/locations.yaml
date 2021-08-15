@@ -18397,9 +18397,6 @@ The Land of Dragons:
             name: Nightwalker
       b_45:
         ignored: true # ambush auuuuuah
-        msn_replacement:
-          original: MU02_MS103B
-          new: MU02_MS103A
         sp_ids:
           '416':
           - index: 0
