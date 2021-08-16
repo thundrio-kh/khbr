@@ -72,6 +72,9 @@ class EnemyManager:
 
         return enemies
 
+    def lookup_object(self, name):
+        return self.enemy_records[name]
+
     def get_parent(self, name):
         child = self.enemy_records.get(name)
         return self.enemy_records.get(child)

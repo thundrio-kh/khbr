@@ -1,7 +1,10 @@
 
 
-from khbr.randutils import pick_boss_to_replace, pick_enemy_to_replace
+import os
 
+import yaml
+from khbr.randutils import pick_boss_to_replace, pick_enemy_to_replace
+from khbr._config import KH2_DIR
 
 class SpawnManager:
     def __init__(self):
@@ -61,6 +64,77 @@ class SpawnManager:
 
         boss = spawnpoint[0]["Entities"][3]
         boss["PositionY"] = 0
+
+    def apply_room_mods(self, basespawns, ardname):
+        roommods = {}
+        if "roommodedits" in basespawns:
+            for rm in basespawns["roommodedits"]:
+                existing_rm = self.getSpawnpoint(ardname, rm)
+                self.roommodedits[basespawns["roommodedits"][rm]](existing_rm)
+                roommods[rm] = existing_rm
+        return
+
+    @staticmethod
+    def subtract_spawns(original_spawns, entities_to_remove):
+        # TODO might need another pass
+        if entities_to_remove:
+            for sp_instance in original_spawns:
+                toremove = []
+                for e in range(len(sp_instance["Entities"])):
+                    ent = sp_instance["Entities"][e]
+                    for etr in entities_to_remove:
+                        if ent["ObjectId"] == etr["ObjectId"]:
+                            if "Argument1" in etr and etr["Argument1"] != ent["Argument1"]:
+                                continue
+                            if "Argument2" in etr and etr["Argument2"] != ent["Argument2"]:
+                                continue
+                            toremove.append(e)
+                for e in sorted(list(set(toremove)))[::-1]:
+                    sp_instance["Entities"].pop(e)
+
+    @staticmethod
+    def add_new_object(original_spawns, new_spawn_descriptor):
+        # adding new entity to list, defaulting all values to the first entity in the list
+        new_ent = dict(original_spawns["Entities"][0])
+        # TODO Make a unique serial for the spawnpoint?? Maybe 6xx
+        for attr in new_spawn_descriptor:
+            if attr.startswith("mod"):
+                baseattr = attr[3:]
+                new_ent[baseattr] = new_ent[baseattr] + new_spawn_descriptor[attr]
+            elif attr in new_ent:
+                new_ent[attr] = new_spawn_descriptor[attr]
+
+        # put the new entity in the existing sp_instance
+        original_spawns["Entities"].append(new_ent)
+
+        # set the ent index to the proper value
+        new_spawn_descriptor["index"] = len(original_spawns["Entities"])-1
+
+    @staticmethod
+    def set_object_by_id(old_spawn, new_spawn_descriptor):
+        for k in new_spawn_descriptor:
+            if k == "name":
+                old_spawn["ObjectId"] = new_spawn_descriptor[k]
+            elif k == "index":
+                pass
+            else:
+                old_spawn[k] = new_spawn_descriptor[k]
+
+    @staticmethod
+    def set_object_by_rec(old_spawn, obj):
+        oid = obj["obj_id"]
+        vrs = obj["vars"]
+
+        old_spawn["ObjectId"] = oid
+        old_spawn["Argument1"] = vrs[0]
+        old_spawn["Argument2"] = vrs[1]
+
+    @staticmethod
+    def getSpawnpoint(ardname, spawnpoint, altspawns={}):
+        if spawnpoint in altspawns.keys():
+            return altspawns[spawnpoint]
+        with open(os.path.join(KH2_DIR, "subfiles", "spawn", "ard", ardname, "{}.spawn".format(spawnpoint))) as f:
+            return yaml.load(f, Loader=yaml.SafeLoader)
 
     @staticmethod
     def should_replace_enemy(old_enemy_object):
@@ -122,3 +196,10 @@ class SpawnManager:
             #TODO pretty sure this is broken, but also not safe to run in the game anyway
             new_enemy = pick_enemy_to_replace(old_enemy_object, rand_seed.config.enemies)
         return new_enemy
+
+    @staticmethod
+    def getSpId(spawnpoint, idnum):
+        for spid in spawnpoint:
+            if spid["Id"] == idnum:
+                return spid
+        raise Exception("Spid not found!")
