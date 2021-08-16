@@ -1,25 +1,22 @@
 from khbr.KH2.AssetGenerator import AssetGenerator
 from khbr.KH2.ModWriter import ModWriter
 from khbr.KH2.schemas.enemyseed import EnemySeed
-from khbr.textutils import final_fight_text 
 from khbr.utils import print_debug
 from khbr._config import diagnostics
-from khbr.randutils import pickbossmapping, pickenemymapping, pick_boss_to_replace, pick_enemy_to_replace
+from khbr.randutils import pickbossmapping, pickenemymapping
 from EnemyManager import EnemyManager
 from LocationManager import LocationManager
 from MissionManager import MissionManager
 from SpawnManager import SpawnManager
 from schemas.random_config import RandomConfig
 import os, time
-
-#TODO data should be under kh2
 class KingdomHearts2:
     def __init__(self):
         self.schemaversion = "02"
         self.spoilers = {"enemy": {}, "boss": {}}
         self.name = "kh2"
         self.unlimited_memory = False
-        self.datalocation = os.path.join(os.path.dirname(__file__), "data", "kh2")
+        self.datalocation = os.path.join(os.path.dirname(__file__), "data")
         self.enemy_manager = EnemyManager(self.datalocation)
         self.location_manager = LocationManager(self.datalocation)
         self.spawn_manager = SpawnManager()
@@ -154,7 +151,7 @@ class KingdomHearts2:
         else:
             modwriter = ModWriter(outdir)
 
-        assetgenerator = AssetGenerator(assets, modwriter, spawn_manager=self.spawn_manager, location_manager=self.location_manager, enemy_manager=self.enemy_manager)
+        assetgenerator = AssetGenerator(modwriter, spawn_manager=self.spawn_manager, location_manager=self.location_manager, enemy_manager=self.enemy_manager)
 
         utility_mods = randomization.get("utility_mods", [])
 

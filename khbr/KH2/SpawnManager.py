@@ -143,7 +143,7 @@ class SpawnManager:
         return True
 
     @staticmethod
-    def should_replace_boss(old_boss, old_boss_parent, config, rand_sed):
+    def should_replace_boss(old_boss, old_boss_parent, config, rand_seed):
         if old_boss["name"] in ["Final Xemnas (Clone)", "Final Xemnas (Clone) (Data)"]:
             return False # He gets removed later by subtracts, so don't replace
         if not old_boss["source_replace_allowed"] and old_boss["name"] != "Seifer (2)":

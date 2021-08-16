@@ -1,4 +1,5 @@
 import json, os, yaml
+from khbr.KH2.schemas.random_config import RandomConfig
 from khbr._config import DEBUG_LOCATIONS
 class LocationManager:
     def __init__(self, basepath):
@@ -8,7 +9,7 @@ class LocationManager:
         with open(os.path.join(self.basepath, "location-ard-map.json")) as f:
             self.locmap = json.load(f)
     def set_locations(self):
-        with open(os.path.join(os.path.dirname(__file__), "locations.yaml")) as f:
+        with open(os.path.join(os.path.dirname(__file__), "data", "locations.yaml")) as f:
             locations_f = yaml.load(f, Loader=yaml.FullLoader)
         if DEBUG_LOCATIONS:
             newlocations = {}

@@ -20,7 +20,7 @@ class Tests(unittest.TestCase):
         assert not os.path.exists(fn)
     
     def test_read_all_zexion(self):
-        seedfn = os.path.join(os.path.dirname(__file__), "testdata", "zexion.json")
+        seedfn = os.path.join(os.path.dirname(__file__), "KH2", "data", "testdata", "zexion.json")
         if os.path.exists(os.path.join(testutils.get_tmp_path(), "test")):
             shutil.rmtree(os.path.join(testutils.get_tmp_path(), "test"))
         rando = Randomizer(tempdir=testutils.get_tmp_path(), tempfn="test")
@@ -183,7 +183,7 @@ class Tests(unittest.TestCase):
     def test_enmp(self):
         import yaml
         kh2 = KingdomHearts2()
-        with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
+        with open(os.path.join(os.path.dirname(__file__), "KH2", "data", "enmpVanilla.yml")) as f:
             enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)
         generated_enmp = kh2.dumpEnmpData(enmp_data_vanilla)
 

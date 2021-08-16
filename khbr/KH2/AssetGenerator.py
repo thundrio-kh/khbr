@@ -2,15 +2,15 @@ from khbr.textutils import final_fight_text
 from khbr.KH2.Mission import Mission
 from khbr.KH2.AiManager import AiManager
 from khbr.utils import print_debug
-from khbr._config import KH2_DIR, HARDCAP
+from khbr._config import KH2_DIR, HARDCAP, DEBUG_HEALTH
 from khbr.KH2.AreaDataScript import AreaDataScript
 import os, yaml
 
 
 # TODO future refactor could use jsonpath to make looking through the complex spawns dict easier
 class AssetGenerator:
-    def __init__(self, modwriter, spawn_manager = None location_manager=None, enemy_manager = None, ispc=False):
-        assets = []
+    def __init__(self, modwriter, spawn_manager = None, location_manager=None, enemy_manager = None, ispc=False):
+        self.assets = []
         self.modwriter = modwriter
         self.enemy_manager = enemy_manager
         self.location_manager = location_manager

@@ -9,7 +9,7 @@ def get_boss_list(requireSourceReplace=True):
     # For isWild thats just every boss that is enabled
     # for oneToOne thats just every boss that is enabled + source_replace_allowed: true
     boss_list = []
-    enemy_yaml = yaml.load(open(os.path.join(os.path.dirname(__file__), "enemies.yaml")))
+    enemy_yaml = yaml.load(open(os.path.join(os.path.dirname(__file__), "data", "KH2", "enemies.yaml")))
     for enemy in enemy_yaml.values():
         if enemy["type"] != "boss":
             continue
