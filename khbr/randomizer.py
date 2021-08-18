@@ -1,3 +1,5 @@
+from khbr.KH2.KingdomHearts2 import KingdomHearts2
+from khbr.utils import print_debug
 import time, json, random, os, shutil, yaml, base64, sys
 from zipfile import ZipFile
 import random
@@ -208,7 +210,7 @@ if __name__ == '__main__':
     import time
     t = time.time()
     mode = sys.argv[1]
-    # run randomizer.py devgenerate "{\"boss\": \"One to One\",  \"scale_boss_stats\": true}" randomization_only
+    # run randomizer.py devgenerate "{\"boss\": \"One to One\",  \"scale_boss_stats\": true, \"enemies\": true}" randomization_only
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"data_bosses\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Seifer\"}"
