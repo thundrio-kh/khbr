@@ -1,6 +1,6 @@
 import json, os, yaml
 from khbr._config import LIMITED_SIZE
-from schemas import enemy_records
+from khbr.KH2.schemas.enemy_records import enemy_records
 
 class EnemyManager:
     def __init__(self, basepath):

@@ -2,13 +2,13 @@ from khbr.KH2.AssetGenerator import AssetGenerator
 from khbr.KH2.ModWriter import ModWriter
 from khbr.KH2.schemas.enemyseed import EnemySeed
 from khbr.utils import print_debug
-from khbr._config import diagnostics
+from khbr._config import DIAGNOSTICS
 from khbr.randutils import pickbossmapping, pickenemymapping
-from EnemyManager import EnemyManager
-from LocationManager import LocationManager
-from MissionManager import MissionManager
-from SpawnManager import SpawnManager
-from schemas.random_config import RandomConfig
+from KH2.EnemyManager import EnemyManager
+from KH2.LocationManager import LocationManager
+from KH2.MissionManager import MissionManager
+from KH2.SpawnManager import SpawnManager
+from KH2.schemas.random_config import RandomConfig
 import os, time
 class KingdomHearts2:
     def __init__(self):
@@ -36,7 +36,7 @@ class KingdomHearts2:
 
     def perform_randomization(self, options, seed=None):
         print_debug("Enemy Seed: {}".format(seed), override=False)
-        if diagnostics:
+        if DIAGNOSTICS:
             start_time = time.time()
             print_debug("Starting Randomization: {}".format(options), override=True)
 
@@ -76,7 +76,7 @@ class KingdomHearts2:
         if seed:
             rand_seed_json["seed"] = seed
 
-        if diagnostics:
+        if DIAGNOSTICS:
             end_time = time.time()
             print_debug("Enemy Randomization Complete: {}s".format(end_time-start_time))
 
@@ -140,7 +140,7 @@ class KingdomHearts2:
                                     self.rand_seed.add_spawn(w, r, sp, i, entity, new_enemy_object)
         
     def generate_files(self, outdir='', randomization={}, outzip=None):
-        if diagnostics:
+        if DIAGNOSTICS:
             start_time = time.time()
             print_debug("Starting generation of files")
 
@@ -162,7 +162,7 @@ class KingdomHearts2:
         self.set_spawns()
         assetgenerator.generateSpawns(self.spawns, randomization.get("spawns", ""), randomization.get("subtract_map"))
         
-        if diagnostics:
+        if DIAGNOSTICS:
             end_time = time.time()
             print_debug("Files Generated: {}s".format(end_time-start_time))
         return assetgenerator.assets
