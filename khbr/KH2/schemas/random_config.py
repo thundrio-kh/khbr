@@ -13,3 +13,7 @@ class RandomConfig:
 
     enemies: dict
     bosses: dict
+
+    selected_enemy: str = ''
+    selected_boss: str = ''
+

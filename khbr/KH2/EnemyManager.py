@@ -1,11 +1,12 @@
 import json, os, yaml
 from khbr._config import LIMITED_SIZE
-from khbr.KH2.schemas.enemy_records import enemy_records
-
+from khbr.KH2.schemas.enemy_records import get_schema
 class EnemyManager:
     def __init__(self, basepath):
         self.basepath = basepath
         self.enemy_records = None
+        self.set_enemies()
+        
     def get_valid_enemies(self):
         return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "enemy"]
     def get_valid_bosses(self):
@@ -77,7 +78,7 @@ class EnemyManager:
 
     def get_parent(self, name):
         child = self.enemy_records.get(name)
-        return self.enemy_records.get(child)
+        return self.enemy_records.get(child.get("parent"))
 
     def get_enemy_object_from_entity(self, entity):
         old_name = entity["nameForReplace"] if "nameForReplace" in entity else entity["name"]
@@ -148,6 +149,8 @@ class EnemyManager:
         for k,v in self.enemy_records.items():
             if v["type"] != "boss":
                 continue
+            if not v["enabled"]:
+                continue
             if nightmare_bosses and not v["isnightmare"]:
                 continue
             if "cups_bosses" in options and options["cups_bosses"] and not "cups" in v["tags"]:
@@ -169,6 +172,7 @@ class EnemyManager:
                     child = self.enemy_records[child_name]
                     # This is involved in ommitting children that are excluded via tag
                     child["variations"] = [b for b in child["variations"] if b in bosses]
+
         return bosses
 
     @staticmethod
@@ -211,7 +215,7 @@ class EnemyManager:
             self.set_enemies()
         categories = {}
         for e in included_enemylist:
-            parent = enemy_records[e["parent"]]
+            parent = self.enemy_records[e["parent"]]
             # Might not be respecting childrens tags properly
             if parent["category"] not in categories:
                 categories[parent["category"]] = {}

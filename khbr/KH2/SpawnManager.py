@@ -16,9 +16,10 @@ class SpawnManager:
             "stormrider_61": self.stormrider_61
         }
 
-    def set_spawns(self):
-        if not self.spawns:
-            self.spawns = self.get_locations()
+    # I don't think this is needed
+    # def set_spawns(self):
+    #     if not self.spawns:
+    #         self.spawns = self.get_locations()
 
     def modify_spawn(self, editname, spawnpoint):
         if editname not in self.roommodedits:
@@ -143,19 +144,19 @@ class SpawnManager:
         return True
 
     @staticmethod
-    def should_replace_boss(old_boss, old_boss_parent, config, rand_seed):
+    def should_replace_boss(old_boss, old_boss_parent, rand_seed):
         if old_boss["name"] in ["Final Xemnas (Clone)", "Final Xemnas (Clone) (Data)"]:
             return False # He gets removed later by subtracts, so don't replace
         if not old_boss["source_replace_allowed"] and old_boss["name"] != "Seifer (2)":
             return False
-        if config.bossmode == "Wild" and "onetooneonly" in old_boss["tags"]:
+        if rand_seed.config.bossmode == "Wild" and "onetooneonly" in old_boss["tags"]:
             return False
         if old_boss_parent["name"] not in rand_seed.bossmapping:
             return False
         return True
 
     @staticmethod
-    def get_new_boss(old_boss_object, old_boss_parent, config, rand_seed):
+    def get_new_boss(old_boss_object, old_boss_parent, config, rand_seed, enemy_records):
         # TODO SEIFER Can't be replaced here normally because it wants an enemy, so just put shadow roxas here
         if  old_boss_object["name"] == "Seifer (2)":
             return "Shadow Roxas"
@@ -172,7 +173,7 @@ class SpawnManager:
                 bosspicklist = [rand_seed.data_replacements[old_boss_parent["name"]]]
             else:
                 bosspicklist = old_boss_parent["available"]
-            new_boss = pick_boss_to_replace(bosspicklist)
+            new_boss = pick_boss_to_replace(enemy_records, bosspicklist)
 
             if "roxas" in old_boss_object["tags"]:
                 if new_boss == "Axel (Data)":
@@ -186,8 +187,8 @@ class SpawnManager:
     
     @staticmethod
     def get_new_enemy(rand_seed, old_enemy_object):
-        if rand_seed.selected_enemy:
-            new_enemy = rand_seed.selected_enemy
+        if rand_seed.config.selected_enemy:
+            new_enemy = rand_seed.config.selected_enemy
         elif rand_seed.enemymapping:
             if old_enemy_object["name"] not in rand_seed.enemymapping:
                 return None # if it's not in mapping it's not enabled

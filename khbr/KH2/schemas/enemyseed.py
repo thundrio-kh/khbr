@@ -2,19 +2,18 @@ from dataclasses import dataclass
 from khbr.randutils import create_new_entity
 from khbr.KH2.schemas.random_config import RandomConfig
 
-@dataclass
 class EnemySeed:
-    spawns: dict
-    subtract_map: dict
-    spawn_limiters: dict
-    msn_mapping: dict
-    set_scaling: dict
-    object_map: dict
-    ai_mods: dict
-    utility_mods: dict
-
-    config: RandomConfig
-    data_replacements: dict
+    def __init__(self, config: RandomConfig):
+        self.spawns = {}
+        self.subtract_map = {}
+        self.spawn_limiters = {}
+        self.msn_mapping = {}
+        self.set_scaling = {}
+        self.object_map = {}
+        self.ai_mods = {}
+        self.utility_mods = {}
+        self.data_replacements = {}
+        self.config = config
             
     def toJson(self):
         return {
@@ -29,7 +28,8 @@ class EnemySeed:
             }
 
     def add_spawn(self, world, room, spawnpoint, spid, entity, new_boss_object):
-        new_entity = self.get_new_entity(entity, new_boss_object)
+        #'m pretty sure this is wrong because of update_extras
+        new_entity = create_new_entity(entity, new_boss_object)
         if world not in self.spawns:
             self.spawns[world] = {}
         if room not in self.spawns[world]:
@@ -50,22 +50,23 @@ class EnemySeed:
             self.subtract_map[world][room]["spawnpoints"][spawnpoint] = []
         self.subtract_map[world][room]["spawnpoints"][spawnpoint].append(objectid)
 
-    def update_seed(self, old_boss_object, new_boss_object):
+    def update_seed(self, old_boss_object, new_boss_object, world, room, spawnpoint):
         if new_boss_object["name"] == "Shadow Roxas":
-            return # Nthing to do in this case
-        self.update_extras(old_boss_object, new_boss_object)
+            return # Nothing to do in this case
+        self.update_extras(old_boss_object, new_boss_object, world, room, spawnpoint)
         self.update_msn_mapping(old_boss_object, new_boss_object)
         self.update_scaling(old_boss_object, new_boss_object)
         self.update_objentry(new_boss_object)
-        self.update_aimod(new_boss_object)
+        self.update_aimod(old_boss_object, new_boss_object)
 
-    def update_extras(self, old_boss_object, new_boss_object):
+    def update_extras(self, old_boss_object, new_boss_object, world, room, spawnpoint):
+        # uggg my head hurts
         for obj in new_boss_object["adds"]:
-            self.add_spawn(create_new_entity("new", obj))
+            self.add_spawn(world, room, spawnpoint, create_new_entity("new", obj))
         for obj in old_boss_object["subtracts"]+old_boss_object["adds"]:
             if "dontSub" in obj and obj["dontSub"]:
                 continue
-            self.rand_seed.add_to_subtract_map(obj)
+            self.add_to_subtract_map(world, room, spawnpoint, obj)
 
     def update_msn_mapping(self, old_boss_object, new_boss_object):
         if old_boss_object["msn_replace_allowed"] and new_boss_object["msn_replace_allowed"]:
