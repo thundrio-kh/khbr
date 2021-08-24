@@ -2360,7 +2360,7 @@ Hammer Frame WI:
       - 0
 Hayner:
   aimod: true
-  enabled: true
+  enabled: false
   tags:
   - roxas
   - sourcemaxhp
@@ -3283,6 +3283,7 @@ Pete OC II:
   limiter: 20
   model: N_EX760_BTL_HERCULES
   msn: HE08_MS107
+  replace_as: Pete Cups # Causes crash when Pete does a finger gun to the sky (directing nonexistent enemies?)
   msn_replace_allowed: false
   obj_id: 1724
   size: 1.57
@@ -3656,7 +3657,7 @@ Scar:
 Seifer:
   obj_edits:
     ObjectType: BOSS
-  enabled: true # Uses an objentry edit to be treated as an enemy
+  enabled: false # Uses an objentry edit to be treated as an enemy
   enmp_index: 0x87
   tags:
   - roxas
@@ -3770,7 +3771,7 @@ Sephiroth:
       - 0
 Setzer:
   aimod: true
-  enabled: true
+  enabled: false
   enmp_index: 0x9E
   tags:
   - roxas
@@ -4421,7 +4422,7 @@ Vexen:
       - 0
 Vivi:
   aimod: true
-  enabled: true
+  enabled: false
   enmp_index: 0x9D
   tags:
   - roxas
