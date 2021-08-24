@@ -465,7 +465,8 @@ class KingdomHearts2:
         # cups and superbosses are turned off by default
         # This feels too imperative to me, I want the randomizer to be as moduler/functional as possible
         exclude_tags = []
-        if not ("cups_bosses" in options and options["cups_bosses"]):
+        # On PC cups bosses are exhibiting crashy behavior, so just disable them always for now
+        if True or not ("cups_bosses" in options and options["cups_bosses"]):
             exclude_tags.append("cups")
         if not ("data_bosses" in options and options["data_bosses"]):
             exclude_tags.append("data")
