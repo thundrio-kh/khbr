@@ -13,7 +13,7 @@ KH2_DIR = os.environ["USE_KH2_GITPATH"]
 RANDOMIZATIONS_DIR = os.path.join(KH2_DIR,"randomizations") if os.path.exists(os.path.join(KH2_DIR,"randomizations")) else "randomizations"
 
 UNLIMITED_SIZE = 99_999_999_999_999
-LIMITED_SIZE = 15.0 # Seems about right
+LIMITED_SIZE = 15.0
 NUM_RANDOMIZATION_MAPPINGS = 9
 
 DEBUG_HEALTH = False
@@ -117,6 +117,9 @@ class AreaDataScript:
         if number not in self.programs:
             raise Exception("Program not found")
         return '\n'.join(self.programs[number])
+    def add_packet_spec(self, number):
+        program = [self.get_program(number).split("\n")[0]] + ["AllocPacket {}".format(int(0x100000 / 2))] + self.get_program(number).split("\n")[1:]
+        self.programs[number] = program
     def update_program(self, number, capacity=None):
         program = self.get_program(number).split("\n")
         topop = []
@@ -164,7 +167,9 @@ class KingdomHearts2:
             self.locmap = json.load(f)
         with open(os.path.join(os.path.dirname(__file__), "msns.json")) as f:
             self.msninfo = json.load(f)
-        with open(os.path.join(os.path.dirname(__file__), "full_enemy_records.json")) as f:
+        self.set_enemy_records("full_enemy_records.json")
+    def set_enemy_records(self, fn):
+        with open(os.path.join(os.path.dirname(__file__), fn)) as f:
             self.enemy_records = json.load(f)        
     def set_spawns(self):
         if not self.spawns:
@@ -232,7 +237,7 @@ class KingdomHearts2:
         enemies = self.get_valid_enemies()
         enabled_enemies = [self.enemy_records[e] for e in enemies if self.enemy_records[e]["enabled"]]
         return enabled_enemies
-    def get_bosses(self, nightmare_mode=False, maxsize=LIMITED_SIZE, usefilters=["boss", "enabled", "nightmare"], getavail=True):
+    def get_bosses(self, nightmare_mode=False, isPC=False, usefilters=["boss", "enabled", "nightmare"], getavail=True):
         defaults = {
             "replace_as": None,
             "source_replace_allowed": True,
@@ -277,6 +282,9 @@ class KingdomHearts2:
         kidlist = {}
         def _inheritConfig(parent, variation):
             for k in parent:
+                if isPC and k == "pc":
+                    for k_pc in parent["pc"]:
+                        parent[k_pc] = parent["pc"][k_pc]
                 if k == "variations":
                     if k not in variation:
                         variation[k] = list(parent[k].keys())
@@ -297,7 +305,8 @@ class KingdomHearts2:
                 variation["name"] = v
                 _inheritConfig(main, variation)
                 variation["category"] = '-'.join(sorted(variation["tags"]))
-                if variation["sizeTag"]:
+                if not isPC:
+                  if variation["sizeTag"]:
                     variation["category"] = "-".join([variation["category"], variation["sizeTag"]])
 
                 if len(variation["category"]) > 0 and variation["category"][0] == "-":
@@ -364,13 +373,11 @@ class KingdomHearts2:
                     if not source_boss["msn_replace_allowed"]:
                         if dest_boss["msn_required"]:
                             continue
-                    #print_debug("{} > {}: {} + {} >= {}".format(source_boss["name"], dest_boss["name"], source_boss["size"], dest_boss["room_size"], maxsize))
-                    # THIS NEEDS TO CHANGE ONCE I CAN DO UNLIMITED STUFF
-                    roommaxsize = source_boss["roommaxsize"] or maxsize
-                    availablespace = (roommaxsize - source_boss["room_size"]) * source_boss["roomsizemultiplier"]
-                    #print_debug("{} - {} ({}) >= 0".format(availablespace, source_boss["size"], availablespace - source_boss["size"]))
-                    if availablespace - dest_boss["size"] < 0:
-                        continue
+                    if not isPC: # PC is assumed to have infinite memory
+                        roommaxsize = source_boss["roommaxsize"] or LIMITED_SIZE
+                        availablespace = (roommaxsize - source_boss["room_size"]) * source_boss["roomsizemultiplier"]
+                        if availablespace - dest_boss["size"] < 0:
+                            continue
                     avail.append(dest_boss["name"])
                 source_boss["available"] = avail
         return bosses
@@ -462,14 +469,15 @@ class KingdomHearts2:
         options = [e["name"] for e in enabledenemies if e["category"] == oldenemy["category"]]
         return random.choice(options)
     def get_boss_list(self, options):
+        isPC = self.unlimited_memory
         nightmare_bosses = "nightmare_bosses" in options and options["nightmare_bosses"]
-        maxsize = LIMITED_SIZE
-        bosses = self.get_bosses(nightmare_mode=nightmare_bosses, maxsize=maxsize)
+        bosses = self.get_bosses(nightmare_mode=nightmare_bosses, isPC=isPC)
 
         # cups and superbosses are turned off by default
         # This feels too imperative to me, I want the randomizer to be as moduler/functional as possible
         exclude_tags = []
-        if not ("cups_bosses" in options and options["cups_bosses"]):
+        # On PC cups bosses are exhibiting crashy behavior, so just disable them always for now on PC
+        if isPC or not ("cups_bosses" in options and options["cups_bosses"]):
             exclude_tags.append("cups")
         if not ("data_bosses" in options and options["data_bosses"]):
             exclude_tags.append("data")
@@ -504,6 +512,8 @@ class KingdomHearts2:
             start_time = time.time()
             print_debug("Starting Randomization: {}".format(options), override=True)
         self.unlimited_memory = options["memory_expansion"] if "memory_expansion" in options else False
+        if self.unlimited_memory:
+            self.set_enemy_records("full_enemy_records_pc.json")
         scale_enemy = False
         scale_boss = False
         if "scale_boss_stats" in options:
@@ -791,6 +801,7 @@ class KingdomHearts2:
 
     def generate_files(self, outdir='', randomization={}, outzip=[]):
         # Generates files in the zip folder and also returns the list of 
+        isPC = self.unlimited_memory
         if diagnostics:
             start_time = time.time()
             print_debug("Starting generation of files")
@@ -863,9 +874,10 @@ class KingdomHearts2:
                 world = randomization.get("spawns")[w]
                 for room in world:
                     ardname = self.locmap[room]
+                    region = '' if not isPC else 'us/'
                     roomasset = {
                         "method": "binarc",
-                        "name": "ard/{}.ard".format(ardname),
+                        "name": "ard/{}{}.ard".format(region, ardname),
                         "source": []
                     }
                     basespawns = self.spawns[w][room]
@@ -972,8 +984,10 @@ class KingdomHearts2:
                             if mission == "\"MU02_MS103B\"":
                                 continue # Ambush has some serious issues related to cost
                             script.update_program(p, HARDCAP)
-                            programasset = self.writeAreaDataProgram(ardname, "btl", p, script.get_program(p), outdir, _writeMethod)
-                            roomasset["source"].append(programasset)
+                        if isPC:
+                            script.add_packet_spec(p)
+                        programasset = self.writeAreaDataProgram(ardname, "btl", p, script.get_program(p), outdir, _writeMethod)
+                        roomasset["source"].append(programasset)
                     assets.append(roomasset)
             if final_fights_spoilers:
                 asset = self.writeMSG("eh", final_fights_spoilers, outdir, _writeMethod)

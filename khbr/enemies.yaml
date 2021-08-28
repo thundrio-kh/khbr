@@ -2360,6 +2360,8 @@ Hammer Frame WI:
       - 0
 Hayner:
   aimod: true
+  pc:
+    enabled: false
   enabled: true
   tags:
   - roxas
@@ -2604,19 +2606,21 @@ Hydra:
   limiter: 0
   model: B_HE100
   unchanged_file_size: true
+  pc:
+    unchanged_file_size: false
   msn: HE18_MS108
   obj_id: 352
   size: 5.7
   room_size: 12.22 # 10.22 with the adds
   program: 171
-  # adds:
-  # - ObjectId: 922 # hydra head
-  #   modPositionY: 1500
-  # - ObjectId: 801 # yellow orb
-  #   Argument1: 99
-  # - ObjectId: 364 # phil
-  #   Argument1: 1
-  # - ObjectId: 363 # pegasus
+  adds:
+  - ObjectId: 922 # hydra head
+    modPositionY: 1500
+  - ObjectId: 801 # yellow orb
+    Argument1: 99
+  - ObjectId: 364 # phil
+    Argument1: 1
+  - ObjectId: 363 # pegasus
   type: boss
   variations:
     Hydra:
@@ -2772,6 +2776,8 @@ Larxene:
   room_size: 8.3
   type: boss
   unchanged_file_size: true
+  pc:
+    unchanged_file_size: false
   blacklist_destination:
   - Xemnas # TELEPORTER
   - Past Pete # TELEPORTER
@@ -2869,6 +2875,8 @@ Lexaeus:
   size: 3.9
   type: boss
   unchanged_file_size: true
+  pc:
+    unchanged_file_size: false
   blacklist_destination:
   - Vexen # player can get thrown oob
   - Groundshaker # player can get thrown oob
@@ -3068,6 +3076,8 @@ Marluxia:
   program: 145
   type: boss
   unchanged_file_size: true
+  pc:
+    unchanged_file_size: false
   blacklist_destination:
   - Vexen # restore count puts you OOB
   variations:
@@ -3205,6 +3215,8 @@ Oogie Boogie:
   program: 55
   size: 4.79 # 2.79 when accounting for the adds
   unchanged_file_size: true # Not 100% sure this will work
+  pc:
+    unchanged_file_size: false
   room_size: 12.41
   # adds:
   # - ObjectId: 969 # ???
@@ -3283,6 +3295,7 @@ Pete OC II:
   limiter: 20
   model: N_EX760_BTL_HERCULES
   msn: HE08_MS107
+  replace_as: Pete Cups # Causes crash when Pete does a finger gun to the sky (directing nonexistent enemies?)
   msn_replace_allowed: false
   obj_id: 1724
   size: 1.57
@@ -3656,7 +3669,9 @@ Scar:
 Seifer:
   obj_edits:
     ObjectType: BOSS
-  enabled: true # Uses an objentry edit to be treated as an enemy
+  pc:
+    enabled: false # Uses an objentry edit to be treated as an enemy
+  enabled: true
   enmp_index: 0x87
   tags:
   - roxas
@@ -3770,6 +3785,8 @@ Sephiroth:
       - 0
 Setzer:
   aimod: true
+  pc: 
+    enabled: false
   enabled: true
   enmp_index: 0x9E
   tags:
@@ -3895,6 +3912,9 @@ Shan-Yu:
   limiter: 34
   model: B_MU100
   msn: MU09_MS108
+  unchanged_file_size: true
+  pc:
+    unchanged_file_size: false
   obj_id: 21
   size: 4.64
   room_size: 10.15
@@ -4402,6 +4422,8 @@ Vexen:
   room_size: 8.97
   type: boss
   unchanged_file_size: true
+  pc:
+    unchanged_file_size: false
   variations:
     Vexen (Data):
       tags:
@@ -4421,6 +4443,8 @@ Vexen:
       - 0
 Vivi:
   aimod: true
+  pc:
+    enabled: false
   enabled: true
   enmp_index: 0x9D
   tags:

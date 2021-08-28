@@ -37,16 +37,18 @@ def check_for_hyena_replacement(randomizations):
         if "Pride Land" in randomization["spawns"]:
             assert "The Kings Den" not in randomization["spawns"]["Pride Land"]
 
-def validate_bosses_general(randomization):
-    validate_consistent_bosses(randomization)
-    return validate_boss_placements(randomization)
+def validate_bosses_general(randomization, pc=False):
+    validate_consistent_bosses(randomization, pc=pc)
+    return validate_boss_placements(randomization, pc=pc)
 
-def validate_bosses_onetoone(randomization):
-    validate_bosses_show_up_once(randomization)
+def validate_bosses_onetoone(randomization, pc=False):
+    validate_bosses_show_up_once(randomization, pc=pc)
 
-def validate_boss_placements(randomization):
+def validate_boss_placements(randomization, pc=False):
     import yaml
     kh2 = KingdomHearts2()
+    if pc:
+        kh2.set_enemy_records("full_enemy_records_pc.json")
     vanilla = yaml.load(open("locations.yaml"))
     used_bosses = []
     for world_name in randomization["spawns"]:
@@ -166,11 +168,13 @@ def get_found(randomization, name=None, tags=[]):
                     for enemy in spawnpoint["sp_ids"][spid]:
                         if name:
                             if enemy["name"] == name:
+                                print(enemy["name"])
                                 return True
                         for tag in tags:
                             if "name" in enemy and tag in kh2.enemy_records[enemy["name"]]["tags"]:
                                 # TODO THIS IS A HACK BECAUSE HADES CUPS IS A REPLACEAS TARGET BUT HAS THE CUPS TAG
-                                if enemy["name"] != "Hades Cups":
+                                if enemy["name"] not in ["Hades Cups", "Pete Cups"]:
+                                    print(enemy["name"])
                                     return True
     return False
 
@@ -205,12 +209,14 @@ def validate_selected(randomization, name, isboss):
             for spn, spawnpoint in room["spawnpoints"].items():
                 for spid, spawns in spawnpoint["sp_ids"].items():
                     for ent in spawns:
-                        if ent["isboss"] == isboss:
+                        if ent.get("isboss", False) == isboss:
                             if name != ent["name"]:
                                 return False
 
-def validate_consistent_bosses(randomization):
+def validate_consistent_bosses(randomization, pc=False):
     kh2 = KingdomHearts2()
+    if pc:
+        kh2.set_enemy_records("full_enemy_records_pc.json")
     # Check that Cerberus and Cerberus in cups are the same parent
     # normal_cerberus = get_enemies_in("Olympus Coliseum", "Cave of the Dead: Entrance", "b_40")
     # cups_cerberus = get_enemies_in("Olympus Coliseum", "The Underdrome 09", "b_b0")
@@ -219,7 +225,7 @@ def validate_consistent_bosses(randomization):
     data_demyx = get_enemies_in(randomization, "Hollow Bastion", "Castle Gate", "b_80")[0]["name"]
     assert kh2.enemy_records[normal_demyx]["parent"] == kh2.enemy_records[data_demyx]["parent"]
 
-def validate_bosses_show_up_once(randomization):
+def validate_bosses_show_up_once(randomization, pc=False):
     assert True
     # Commenting out for now it seems too hard
     # You have to account for the bosses that show up more than once but are the same
