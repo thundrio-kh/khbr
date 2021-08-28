@@ -1380,8 +1380,17 @@ class Randomizer:
 
         randomization = game.perform_randomization(options)
         assets = game.generate_files(randomization=randomization, outzip=outZip)
-        modobj["assets"] += assets
-        spoilers = randomization
+        # Some assets may need to be merged if the main randomizer is using them
+        for asset in assets:
+            found = False
+            for modobj_asset in modobj["assets"]:
+                if modobj_asset["name"] == asset["name"]:
+                    found = True
+                    for source in asset["source"]:
+                        modobj_asset["source"].append(source)
+            if not found:
+                modobj["assets"].append(asset)
+
         return game.create_spoiler_text()
     
     def getSchemaForGame(self, g):
