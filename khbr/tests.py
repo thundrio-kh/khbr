@@ -233,7 +233,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_seedgen_boss_one_to_one_pc()
+#ut.test_seedgen_boss_one_to_one_pc()
 
 # Uncomment to run the actual tests
-#unittest.main()
+unittest.main()
