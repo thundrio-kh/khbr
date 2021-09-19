@@ -5646,7 +5646,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -5957,8 +5956,6 @@
         "obj_edits": {},
         "available": [
             "Axel I",
-            "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -6004,7 +6001,25 @@
         "blacklist_destination": [
             "Scar",
             "Groundshaker",
-            "Cerberus"
+            "Cerberus",
+            "Past Pete",
+            "Xemnas",
+            "Past Pete",
+            "Prison Keeper",
+            "Oogie Boogie",
+            "Groundshaker",
+            "Grim Reaper II",
+            "Grim Reaper",
+            "Twilight Thorn",
+            "Axel I",
+            "Vivi",
+            "Hayner",
+            "Seifer",
+            "Setzer",
+            "Demyx OC",
+            "Axel II",
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "type": "boss",
         "whitelist_source": [
@@ -6202,7 +6217,8 @@
         "hp": 100,
         "blacklist_destination": [
             "Xigbar",
-            "Axel II"
+            "Axel II",
+            "Axel I"
         ],
         "level": 99,
         "limiter": 0,
@@ -7036,6 +7052,9 @@
         "level": 99,
         "limiter": 0,
         "model": "N_HB550_BTL2",
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -7131,6 +7150,9 @@
         "level": 99,
         "limiter": 0,
         "model": "N_HB550_BTL2",
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -7183,6 +7205,9 @@
         "level": 99,
         "limiter": 0,
         "model": "N_HB550_BTL2",
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -7855,7 +7880,25 @@
         "blacklist_destination": [
             "Scar",
             "Groundshaker",
-            "Cerberus"
+            "Cerberus",
+            "Past Pete",
+            "Xemnas",
+            "Past Pete",
+            "Prison Keeper",
+            "Oogie Boogie",
+            "Groundshaker",
+            "Grim Reaper II",
+            "Grim Reaper",
+            "Twilight Thorn",
+            "Axel I",
+            "Vivi",
+            "Hayner",
+            "Seifer",
+            "Setzer",
+            "Demyx OC",
+            "Axel II",
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "whitelist_source": [
             "Axel I",
@@ -8110,7 +8153,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "variations": [
             "Luxord (Data)"
@@ -8180,7 +8224,9 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
+        "blacklist_source": [
+            "Armor Xemnas"
+        ],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -8358,7 +8404,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -10469,6 +10516,10 @@
         "level": 99,
         "limiter": 0,
         "model": "B_HE030",
+        "blacklist_source": [
+            "Axel II",
+            "Demyx"
+        ],
         "roommaxsize": 13,
         "obj_id": 350,
         "replace_as": "Hades Cups",
@@ -10494,7 +10545,6 @@
         "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -10508,7 +10558,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -10566,6 +10615,10 @@
         "level": 99,
         "limiter": 0,
         "model": "B_HE030",
+        "blacklist_source": [
+            "Axel II",
+            "Demyx"
+        ],
         "roommaxsize": 13,
         "obj_id": 350,
         "replace_as": "Hades Cups",
@@ -10589,7 +10642,6 @@
         "msn": null,
         "sizeTag": null,
         "room_size": 0,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -10741,7 +10793,6 @@
         "unchanged_file_size": false,
         "available": [
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cloud",
@@ -12404,7 +12455,6 @@
             "Dark Thorn",
             "Shadow Stalker",
             "Storm Rider",
-            "Cerberus",
             "Terra"
         ],
         "enmp_index": 20,
@@ -12414,6 +12464,7 @@
         "model": "B_HE100",
         "unchanged_file_size": true,
         "pc": {
+            "enabled": false,
             "unchanged_file_size": false
         },
         "msn": "HE18_MS108",
@@ -13085,6 +13136,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "pc": {
+            "enabled": false
+        },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2296,
@@ -13181,6 +13235,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "pc": {
+            "enabled": false
+        },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2296,
@@ -13234,6 +13291,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "pc": {
+            "enabled": false
+        },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2296,
@@ -13287,6 +13347,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "pc": {
+            "enabled": false
+        },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2296,
@@ -13828,7 +13891,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "adds": [
             {
@@ -14738,7 +14802,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -15109,7 +15172,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -16854,7 +16916,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "variations": [
             "Roxas",
@@ -16971,7 +17034,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "variations": [
             "Roxas",
@@ -17059,6 +17123,9 @@
             "organization"
         ],
         "can_be_enemy": true,
+        "blacklist_source": [
+            "Armor Xemnas"
+        ],
         "enabled": true,
         "enmp_index": 134,
         "hp": 100,
@@ -17090,7 +17157,6 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -17515,7 +17581,6 @@
         "unchanged_file_size": false,
         "available": [
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cloud",
@@ -18074,7 +18139,6 @@
         "unchanged_file_size": false,
         "available": [
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cloud",
@@ -18260,6 +18324,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "blacklist_source": [
+            "Demyx"
+        ],
         "model": "B_BB120",
         "msn": "BB05_MS104A",
         "obj_id": 355,
@@ -18298,7 +18365,6 @@
         "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -19642,6 +19708,10 @@
             "Volcano Lord",
             "Shadow Stalker"
         ],
+        "blacklist_source": [
+            "Xigbar",
+            "Barbossa"
+        ],
         "obj_id": 353,
         "size": 2.17,
         "room_size": 12.13,
@@ -19672,7 +19742,6 @@
         "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
-        "blacklist_source": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "subtracts": [],
@@ -19724,6 +19793,9 @@
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2298,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -19818,6 +19890,9 @@
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2298,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -19870,6 +19945,9 @@
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2298,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -20131,7 +20209,6 @@
         "obj_edits": {},
         "available": [
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cloud",
@@ -20265,7 +20342,6 @@
         "available": [
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -20279,7 +20355,6 @@
             "Pete Cups",
             "Pete OC II",
             "Riku",
-            "Roxas",
             "Saix",
             "Sark",
             "Scar",
@@ -20294,9 +20369,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Vivi": {
@@ -20735,7 +20808,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -20808,7 +20880,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "enabled": true,
         "tags": [
@@ -20911,6 +20984,9 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -21007,6 +21083,9 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -21059,6 +21138,9 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -21112,6 +21194,9 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -21185,6 +21270,7 @@
             "Demyx OC",
             "Axel II",
             "Armor Xemnas II",
+            "Vexen",
             "Roxas",
             "Scar",
             "Groundshaker"
@@ -21305,6 +21391,7 @@
             "Demyx OC",
             "Axel II",
             "Armor Xemnas II",
+            "Vexen",
             "Roxas",
             "Scar",
             "Groundshaker"

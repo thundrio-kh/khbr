@@ -1091,6 +1091,24 @@ Axel II:
   - Scar
   - Groundshaker # Lion Sora can't do RC to be able to kill Data Axel
   - Cerberus # Axel Data can't do RC so unbeatable
+  - Past Pete # TELEPORTER
+  - Xemnas # TELEPORTER
+  - Past Pete # TELEPORTER
+  - Prison Keeper # TELEPORTER
+  - Oogie Boogie # TELEPORTER
+  - Groundshaker # TELEPORTER
+  - Grim Reaper II # TELEPORTER
+  - Grim Reaper # TELEPORTER
+  - Twilight Thorn # TELEPORTER
+  - Axel I # TELEPORTER
+  - Vivi # TELEPORTER
+  - Hayner # TELEPORTER
+  - Seifer # TELEPORTER
+  - Setzer # TELEPORTER
+  - Demyx OC # TELEPORTER
+  - Axel II # TELEPORTER
+  - Armor Xemnas II # TELEPORTER
+  - Vexen # Teleports into weird spots
   type: boss
   whitelist_source:
   - Axel I
@@ -1158,6 +1176,7 @@ Barbossa:
   blacklist_destination:
   - Xigbar # Illuminator can spawn too far OoB
   - Axel II # can be OoB
+  - Axel I # can be OoB
   level: 99
   limiter: 0
   model: B_CA010
@@ -1386,6 +1405,8 @@ Cloud:
   level: 99
   limiter: 0
   model: N_HB550_BTL2
+  pc:
+    enabled: false # PC will cause crash on end of fight
   tags:
   - cups
   msn_replace_allowed: false
@@ -1657,6 +1678,7 @@ Luxord (Data):
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
+  - Vexen # TELEPORTER
   variations:
     Luxord (Data):
       vars:
@@ -2313,6 +2335,9 @@ Hades II:
   level: 99
   limiter: 0
   model: B_HE030
+  blacklist_source:
+    - Axel II # Hercules makes the RC hard to do
+    - Demyx # Fight doesn't start properly
   roommaxsize: 13 # just a random guess
   obj_id: 350
   replace_as: Hades Cups
@@ -2598,7 +2623,6 @@ Hydra:
   - Dark Thorn
   - Shadow Stalker
   - Storm Rider
-  - Cerberus
   - Terra
   enmp_index: 20
   hp: 100
@@ -2607,6 +2631,7 @@ Hydra:
   model: B_HE100
   unchanged_file_size: true
   pc:
+    enabled: false # ctd on killing 3rd mini head
     unchanged_file_size: false
   msn: HE18_MS108
   obj_id: 352
@@ -2817,6 +2842,8 @@ Leon:
   hp: 100
   level: 99
   limiter: 0
+  pc:
+    enabled: false # PC will cause crash on end of fight
   model: N_HB530_BTL2
   msn_replace_allowed: false
   obj_id: 2296
@@ -2999,6 +3026,7 @@ Luxord:
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
+  - Vexen # TELEPORTER
   adds:
   - ObjectId: 2224 # ???
   type: boss
@@ -3549,6 +3577,7 @@ Roxas:
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
+  - Vexen # TELEPORTER
   variations:
     Roxas:
       msn: EH21_MS101
@@ -3589,6 +3618,8 @@ Saix:
   tags:
   - organization
   can_be_enemy: true
+  blacklist_source:
+  - Armor Xemnas # Can cause ctd when doing chakram attack
   enabled: true
   enmp_index: 0x86
   hp: 100
@@ -3868,6 +3899,8 @@ Shadow Stalker:
   hp: 100
   level: 99
   limiter: 0
+  blacklist_source:
+  - Demyx # Battle doesn't start properly
   model: B_BB120
   msn: BB05_MS104A
   obj_id: 355
@@ -4260,6 +4293,9 @@ Thresholder:
   - Blizzard Lord # These all spawn above ground causing issues
   - Volcano Lord
   - Shadow Stalker
+  blacklist_source:
+  - Xigbar # Room transition sometimes sends you OOB
+  - Barbossa # illuminator can spawn OOB
   obj_id: 353
   size: 2.17
   room_size: 12.13
@@ -4282,6 +4318,8 @@ Tifa:
   model: N_HB570_BTL2
   msn_replace_allowed: false
   obj_id: 2298
+  pc: 
+    enabled: false # pc crashes when killing cups bosses
   tags:
   - cups
   size: 1.32
@@ -4621,6 +4659,7 @@ Xigbar:
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
+  - Vexen # TELEPORTER
   enabled: true
   tags:
   - organization
@@ -4652,6 +4691,8 @@ Yuffie:
   model: N_HB580_BTL2
   msn_replace_allowed: false
   obj_id: 2299
+  pc:
+    enabled: false # PC will cause crash on end of fight
   tags:
   - cups
   size: 0.95
@@ -4722,6 +4763,7 @@ Zexion:
   - Demyx OC # TELEPORTER
   - Axel II # TELEPORTER
   - Armor Xemnas II # TELEPORTER
+  - Vexen # TELEPORTER
   - Roxas # Room becomes no ground
   - Scar # LK can't do book RCs
   - Groundshaker # LK can't do book RCs

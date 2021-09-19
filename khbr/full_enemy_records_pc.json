@@ -5582,13 +5582,11 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -5602,12 +5600,10 @@
             "Shan-Yu",
             "Terra",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Armor Xemnas II": {
@@ -5663,17 +5659,13 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
-            "Hydra",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -5687,12 +5679,10 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Armored Knight": {
@@ -5970,23 +5960,17 @@
         "obj_edits": {},
         "available": [
             "Axel I",
-            "Axel II",
-            "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
-            "Tifa",
             "Twilight Thorn",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Axel II": {
@@ -6013,7 +5997,25 @@
         "blacklist_destination": [
             "Scar",
             "Groundshaker",
-            "Cerberus"
+            "Cerberus",
+            "Past Pete",
+            "Xemnas",
+            "Past Pete",
+            "Prison Keeper",
+            "Oogie Boogie",
+            "Groundshaker",
+            "Grim Reaper II",
+            "Grim Reaper",
+            "Twilight Thorn",
+            "Axel I",
+            "Vivi",
+            "Hayner",
+            "Seifer",
+            "Setzer",
+            "Demyx OC",
+            "Axel II",
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "type": "boss",
         "whitelist_source": [
@@ -6073,20 +6075,16 @@
             "Axel I",
             "Axel II",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
-            "Tifa",
             "Twilight Thorn",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Banzai": {
@@ -6207,7 +6205,8 @@
         "hp": 100,
         "blacklist_destination": [
             "Xigbar",
-            "Axel II"
+            "Axel II",
+            "Axel I"
         ],
         "level": 99,
         "limiter": 0,
@@ -6253,7 +6252,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -6261,7 +6259,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -6279,14 +6276,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -6551,13 +6546,11 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -6568,13 +6561,11 @@
             "Sark",
             "Scar",
             "Shan-Yu",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Xigbar"
         ]
     },
     "Blizzard Lord (Cups)": {
@@ -6951,16 +6942,13 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Hydra",
             "Larxene",
-            "Leon",
             "Luxord",
             "Marluxia",
             "Past Pete",
@@ -6978,14 +6966,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -7068,12 +7054,15 @@
             0
         ],
         "name": "Cloud",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 189,
         "hp": 100,
         "level": 99,
         "limiter": 0,
         "model": "N_HB550_BTL2",
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -7125,7 +7114,6 @@
             "Hades II",
             "Hercules",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -7140,13 +7128,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Xigbar"
         ]
     },
     "Cloud (1)": {
@@ -7159,12 +7145,15 @@
             0
         ],
         "name": "Cloud (1)",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 189,
         "hp": 100,
         "level": 99,
         "limiter": 0,
         "model": "N_HB550_BTL2",
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -7211,12 +7200,15 @@
             0
         ],
         "name": "Cloud (2)",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 189,
         "hp": 100,
         "level": 99,
         "limiter": 0,
         "model": "N_HB550_BTL2",
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -7828,16 +7820,13 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Hydra",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -7854,14 +7843,12 @@
             "Shan-Yu",
             "Terra",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -7908,7 +7895,25 @@
         "blacklist_destination": [
             "Scar",
             "Groundshaker",
-            "Cerberus"
+            "Cerberus",
+            "Past Pete",
+            "Xemnas",
+            "Past Pete",
+            "Prison Keeper",
+            "Oogie Boogie",
+            "Groundshaker",
+            "Grim Reaper II",
+            "Grim Reaper",
+            "Twilight Thorn",
+            "Axel I",
+            "Vivi",
+            "Hayner",
+            "Seifer",
+            "Setzer",
+            "Demyx OC",
+            "Axel II",
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "whitelist_source": [
             "Axel I",
@@ -8163,7 +8168,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "variations": [
             "Luxord (Data)"
@@ -8233,7 +8239,9 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
+        "blacklist_source": [
+            "Armor Xemnas"
+        ],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -8411,7 +8419,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -8483,7 +8492,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -8492,7 +8500,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -8510,14 +8517,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -9555,16 +9560,13 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
             "Hercules",
-            "Hydra",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -9580,13 +9582,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Xigbar"
         ]
     },
     "Final Xemnas (Copy)": {
@@ -10115,7 +10115,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -10123,7 +10122,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -10141,14 +10139,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -10231,11 +10227,9 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -10243,7 +10237,6 @@
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Leon",
             "Lexaeus",
             "Marluxia",
             "Past Pete",
@@ -10259,13 +10252,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Groundshaker": {
@@ -10327,7 +10318,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -10335,8 +10325,6 @@
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Hydra",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -10352,13 +10340,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Hades Cups": {
@@ -10557,6 +10543,10 @@
         "level": 99,
         "limiter": 0,
         "model": "B_HE030",
+        "blacklist_source": [
+            "Axel II",
+            "Demyx"
+        ],
         "roommaxsize": 13,
         "obj_id": 350,
         "replace_as": "Hades Cups",
@@ -10582,7 +10572,6 @@
         "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -10596,20 +10585,16 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
-            "Demyx",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -10627,14 +10612,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -10666,6 +10649,10 @@
         "level": 99,
         "limiter": 0,
         "model": "B_HE030",
+        "blacklist_source": [
+            "Axel II",
+            "Demyx"
+        ],
         "roommaxsize": 13,
         "obj_id": 350,
         "replace_as": "Hades Cups",
@@ -10689,7 +10676,6 @@
         "msn": null,
         "sizeTag": null,
         "room_size": 0,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -10841,24 +10827,19 @@
         "unchanged_file_size": false,
         "available": [
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
-            "Tifa",
             "Twilight Thorn",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Hercules": {
@@ -10930,13 +10911,11 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -10951,13 +10930,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Xigbar"
         ]
     },
     "Hook Bat (20 0)": {
@@ -12395,7 +12372,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -12404,7 +12380,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -12421,14 +12396,12 @@
             "Shan-Yu",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -12487,7 +12460,7 @@
             0
         ],
         "name": "Hydra",
-        "enabled": true,
+        "enabled": false,
         "whitelist_destination": [
             "Armor Xemnas II",
             "Groundshaker",
@@ -12495,7 +12468,6 @@
             "Dark Thorn",
             "Shadow Stalker",
             "Storm Rider",
-            "Cerberus",
             "Terra"
         ],
         "enmp_index": 20,
@@ -12505,6 +12477,7 @@
         "model": "B_HE100",
         "unchanged_file_size": false,
         "pc": {
+            "enabled": false,
             "unchanged_file_size": false
         },
         "msn": "HE18_MS108",
@@ -12565,7 +12538,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -12575,7 +12547,6 @@
             "Hostile Program",
             "Hydra",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -12594,14 +12565,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -13082,7 +13051,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -13090,7 +13058,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -13108,14 +13075,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -13201,11 +13166,14 @@
             0
         ],
         "name": "Leon",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 180,
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "pc": {
+            "enabled": false
+        },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2296,
@@ -13253,7 +13221,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -13274,13 +13241,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Xigbar"
         ]
     },
     "Leon (1)": {
@@ -13293,11 +13258,14 @@
             0
         ],
         "name": "Leon (1)",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 180,
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "pc": {
+            "enabled": false
+        },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2296,
@@ -13346,11 +13314,14 @@
             0
         ],
         "name": "Leon (2)",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 180,
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "pc": {
+            "enabled": false
+        },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2296,
@@ -13399,11 +13370,14 @@
             0
         ],
         "name": "Leon (3)",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 180,
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "pc": {
+            "enabled": false
+        },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2296,
@@ -13510,7 +13484,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -13518,7 +13491,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -13536,14 +13508,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -13950,7 +13920,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "adds": [
             {
@@ -13993,7 +13964,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -14002,7 +13972,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -14021,14 +13990,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -14245,7 +14212,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -14253,7 +14219,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -14271,14 +14236,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -14790,17 +14753,14 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Leon",
             "Lexaeus",
             "Marluxia",
             "Oogie Boogie",
@@ -14817,13 +14777,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Past Pete": {
@@ -14878,18 +14836,15 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Leon",
             "Lexaeus",
             "Marluxia",
             "Past Pete",
@@ -14905,13 +14860,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Pete Cups": {
@@ -14972,14 +14925,12 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
             "Hercules",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -14994,13 +14945,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Xigbar"
         ]
     },
     "Pete OC I": {
@@ -15111,13 +15060,11 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -15131,12 +15078,10 @@
             "Shan-Yu",
             "Terra",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Pete TR": {
@@ -15266,18 +15211,15 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -15292,13 +15234,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Rapid Thruster (Zipliner)": {
@@ -17008,7 +16948,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "variations": [
             "Roxas",
@@ -17045,7 +16986,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -17054,7 +16994,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -17072,13 +17011,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Roxas (Data)": {
@@ -17121,7 +17058,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "variations": [
             "Roxas",
@@ -17209,6 +17147,9 @@
             "organization"
         ],
         "can_be_enemy": true,
+        "blacklist_source": [
+            "Armor Xemnas"
+        ],
         "enabled": true,
         "enmp_index": 134,
         "hp": 100,
@@ -17240,7 +17181,6 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -17258,7 +17198,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -17267,7 +17206,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -17285,14 +17223,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -17450,7 +17386,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -17458,7 +17393,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -17476,13 +17410,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -17541,7 +17473,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -17549,7 +17480,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -17567,13 +17497,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Seifer": {
@@ -17662,24 +17590,19 @@
         "unchanged_file_size": false,
         "available": [
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
             "Seifer",
-            "Tifa",
             "Twilight Thorn",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Seifer (1)": {
@@ -18082,7 +18005,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -18091,7 +18013,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -18109,14 +18030,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -18214,24 +18133,19 @@
         "unchanged_file_size": false,
         "available": [
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
             "Setzer",
-            "Tifa",
             "Twilight Thorn",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Shadow": {
@@ -18397,6 +18311,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "blacklist_source": [
+            "Demyx"
+        ],
         "model": "B_BB120",
         "msn": "BB05_MS104A",
         "obj_id": 355,
@@ -18435,7 +18352,6 @@
         "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -18452,16 +18368,12 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
-            "Demyx",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Hydra",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -18479,14 +18391,12 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -18607,7 +18517,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -18616,7 +18525,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -18634,14 +18542,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -19329,16 +19235,13 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Hydra",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -19357,14 +19260,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -19576,7 +19477,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -19584,9 +19484,7 @@
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Hydra",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -19605,14 +19503,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -19678,13 +19574,11 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -19700,13 +19594,11 @@
             "The Beast",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Xigbar"
         ]
     },
     "The Experiment": {
@@ -19781,7 +19673,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -19789,7 +19680,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -19807,14 +19697,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -19835,6 +19723,10 @@
             "Blizzard Lord",
             "Volcano Lord",
             "Shadow Stalker"
+        ],
+        "blacklist_source": [
+            "Xigbar",
+            "Barbossa"
         ],
         "obj_id": 353,
         "size": 2.17,
@@ -19866,7 +19758,6 @@
         "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
-        "blacklist_source": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "subtracts": [],
@@ -19879,10 +19770,8 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -19890,7 +19779,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -19908,14 +19796,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -19930,7 +19815,7 @@
             0
         ],
         "name": "Tifa",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 182,
         "hp": 100,
         "level": 99,
@@ -19938,6 +19823,9 @@
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2298,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -19980,13 +19868,11 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -20006,8 +19892,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Xigbar"
         ]
     },
     "Tifa (1)": {
@@ -20020,7 +19905,7 @@
             0
         ],
         "name": "Tifa (1)",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 182,
         "hp": 100,
         "level": 99,
@@ -20028,6 +19913,9 @@
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2298,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -20072,7 +19960,7 @@
             0
         ],
         "name": "Tifa (2)",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 182,
         "hp": 100,
         "level": 99,
@@ -20080,6 +19968,9 @@
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2298,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -20341,23 +20232,18 @@
         "obj_edits": {},
         "available": [
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
-            "Tifa",
             "Twilight Thorn",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Vexen (Data)": {
@@ -20472,25 +20358,20 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Leon",
-            "Luxord",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Saix",
             "Sark",
             "Scar",
@@ -20499,15 +20380,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Xigbar",
-            "Yuffie",
-            "Zexion"
+            "Xemnas"
         ]
     },
     "Vivi": {
@@ -20593,24 +20470,19 @@
         "unchanged_file_size": false,
         "available": [
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
-            "Tifa",
             "Twilight Thorn",
             "Vivi",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Volcano Lord": {
@@ -20675,13 +20547,11 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -20692,13 +20562,11 @@
             "Sark",
             "Scar",
             "Shan-Yu",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Xigbar"
         ]
     },
     "Volcano Lord (Cups)": {
@@ -20862,7 +20730,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -20870,7 +20737,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -20888,14 +20754,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -20955,18 +20819,15 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Leon",
             "Lexaeus",
             "Marluxia",
             "Past Pete",
@@ -20982,13 +20843,11 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Yuffie"
+            "Xemnas"
         ]
     },
     "Xigbar": {
@@ -21024,7 +20883,8 @@
             "Setzer",
             "Demyx OC",
             "Axel II",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Vexen"
         ],
         "enabled": true,
         "tags": [
@@ -21077,7 +20937,6 @@
             "Axel II",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -21085,7 +20944,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -21103,14 +20961,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -21125,7 +20981,7 @@
             0
         ],
         "name": "Yuffie",
-        "enabled": true,
+        "enabled": false,
         "isnightmare": true,
         "enmp_index": 183,
         "hp": 100,
@@ -21134,6 +20990,9 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -21176,13 +21035,11 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -21197,7 +21054,6 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
@@ -21217,7 +21073,7 @@
             0
         ],
         "name": "Yuffie (1)",
-        "enabled": true,
+        "enabled": false,
         "isnightmare": true,
         "enmp_index": 183,
         "hp": 100,
@@ -21226,6 +21082,9 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -21269,7 +21128,7 @@
             0
         ],
         "name": "Yuffie (2)",
-        "enabled": true,
+        "enabled": false,
         "isnightmare": true,
         "enmp_index": 183,
         "hp": 100,
@@ -21278,6 +21137,9 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -21322,7 +21184,7 @@
             0
         ],
         "name": "Yuffie (3)",
-        "enabled": true,
+        "enabled": false,
         "isnightmare": true,
         "enmp_index": 183,
         "hp": 100,
@@ -21331,6 +21193,9 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -21404,6 +21269,7 @@
             "Demyx OC",
             "Axel II",
             "Armor Xemnas II",
+            "Vexen",
             "Roxas",
             "Scar",
             "Groundshaker"
@@ -21444,7 +21310,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
@@ -21452,7 +21317,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Leon",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -21470,14 +21334,12 @@
             "Terra",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
             "Zexion"
         ]
     },
@@ -21521,6 +21383,7 @@
             "Demyx OC",
             "Axel II",
             "Armor Xemnas II",
+            "Vexen",
             "Roxas",
             "Scar",
             "Groundshaker"
