@@ -1,5 +1,5 @@
 import unittest, os, functools, sys, traceback, pdb
-from randomizer import Randomizer, KingdomHearts2
+from khbr.randomizer import Randomizer, KingdomHearts2
 import testutils
 import shutil
 # Not really formal unit tests, more like just some basic integration tests to make sure different combinations of options work
@@ -215,8 +215,8 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_seedgen_error2()
+ut.test_seedgen_boss_wild()
 
 # Uncomment to run the actual tests
-unittest.main()
+#unittest.main()
 

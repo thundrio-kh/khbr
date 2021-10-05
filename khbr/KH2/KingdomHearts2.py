@@ -163,7 +163,7 @@ class KingdomHearts2:
 
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_boss_object)
                                     #TODO spoilers should move into rand_seed
-                                    rand_seed.update_seed(old_boss_object, new_boss_object, w, r, sp)
+                                    rand_seed.update_seed(old_boss_object, new_boss_object, w, r, sp, i)
 
                                 elif rand_seed.config.enemies and not entity["isboss"]:
                                     old_enemy_object = self.enemy_manager.get_enemy_object_from_entity(entity)

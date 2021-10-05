@@ -44,25 +44,26 @@ class EnemySeed:
     def add_to_subtract_map(self, world, room, spawnpoint, objectid):
         if world not in self.subtract_map:
             self.subtract_map[world] = {}
-        if room not in self.subtract_map[w]:
+        if room not in self.subtract_map[world]:
             self.subtract_map[world][room] = {"spawnpoints": {}}
         if spawnpoint not in self.subtract_map[world][room]["spawnpoints"]:
             self.subtract_map[world][room]["spawnpoints"][spawnpoint] = []
         self.subtract_map[world][room]["spawnpoints"][spawnpoint].append(objectid)
 
-    def update_seed(self, old_boss_object, new_boss_object, world, room, spawnpoint):
+    def update_seed(self, old_boss_object, new_boss_object, world, room, spawnpoint, spidedddd):
         if new_boss_object["name"] == "Shadow Roxas":
             return # Nothing to do in this case
-        self.update_extras(old_boss_object, new_boss_object, world, room, spawnpoint)
+        self.update_extras(old_boss_object, new_boss_object, world, room, spawnpoint, spid)
         self.update_msn_mapping(old_boss_object, new_boss_object)
         self.update_scaling(old_boss_object, new_boss_object)
         self.update_objentry(new_boss_object)
         self.update_aimod(old_boss_object, new_boss_object)
 
-    def update_extras(self, old_boss_object, new_boss_object, world, room, spawnpoint):
+    def update_extras(self, old_boss_object, new_boss_object, world, room, spawnpoint, spid):
+        # self, world, room, spawnpoint, spid, entity, new_boss_object
         # uggg my head hurts
         for obj in new_boss_object["adds"]:
-            self.add_spawn(world, room, spawnpoint, create_new_entity("new", obj))
+            self.add_spawn(world, room, spawnpoint, spid, "new", obj)
         for obj in old_boss_object["subtracts"]+old_boss_object["adds"]:
             if "dontSub" in obj and obj["dontSub"]:
                 continue

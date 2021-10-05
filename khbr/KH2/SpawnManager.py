@@ -151,7 +151,7 @@ class SpawnManager:
             return False
         if rand_seed.config.bossmode == "Wild" and "onetooneonly" in old_boss["tags"]:
             return False
-        if old_boss_parent["name"] not in rand_seed.bossmapping:
+        if rand_seed.bossmapping and old_boss_parent["name"] not in rand_seed.bossmapping:
             return False
         return True
 

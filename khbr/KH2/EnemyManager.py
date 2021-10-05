@@ -89,7 +89,8 @@ class EnemyManager:
         # Due to how they use the same MSN in a lot of cases, org replacements should be the same between nobody + data versions
         if "organization" in old_boss_object["tags"]:
             new_parent = new_boss_object["parent"]
-            rand_seed.data_replacements[self.get_parent(old_boss_object["name"])] = new_parent
+            old_parent = self.get_parent(old_boss_object["name"])
+            rand_seed.data_replacements[old_parent["name"]] = new_parent
         if new_boss_object["replace_as"] and not rand_seed.config.selected_boss:
             new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
         return new_boss_object
