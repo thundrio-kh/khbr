@@ -9,7 +9,7 @@ supported_games = ["kh2"]
 diagnostics = True
 GENERATE_IDENTICON = False
 
-KH2_DIR = os.environ["USE_KH2_GITPATH"]
+KH2_DIR = os.environ["USE_KH2_GITPATH"] if "USE_KH2_GITPATH" in os.environ else "extracted_data"
 RANDOMIZATIONS_DIR = os.path.join(KH2_DIR,"randomizations") if os.path.exists(os.path.join(KH2_DIR,"randomizations")) else "randomizations"
 
 UNLIMITED_SIZE = 99_999_999_999_999

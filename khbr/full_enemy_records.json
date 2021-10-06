@@ -10234,6 +10234,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "blacklist_source": [
+            "Shan-Yu"
+        ],
         "model": "B_LK120",
         "msn": "LK15_MS202",
         "obj_id": 1113,
@@ -10266,7 +10269,6 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -10305,7 +10307,6 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
-            "Shan-Yu",
             "Storm Rider",
             "Terra",
             "The Experiment",
@@ -17411,6 +17412,9 @@
         "isnightmare": true,
         "enabled": true,
         "enmp_index": 94,
+        "blacklist_source": [
+            "Shan-Yu"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -17439,7 +17443,6 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -17481,7 +17484,6 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
-            "Shan-Yu",
             "Terra",
             "The Experiment",
             "Thresholder",
@@ -19161,6 +19163,9 @@
         "limiter": 0,
         "model": "B_MU120",
         "msn": "MU08_MS204",
+        "pc": {
+            "enabled": false
+        },
         "obj_id": 357,
         "size": 3.03,
         "program": 79,

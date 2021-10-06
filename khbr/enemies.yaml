@@ -2229,6 +2229,8 @@ Groundshaker:
   hp: 100
   level: 99
   limiter: 0
+  blacklist_source:
+  - Shan-Yu # Reports of tpose from RC causing softlock
   model: B_LK120
   msn: LK15_MS202
   obj_id: 1113
@@ -3682,6 +3684,8 @@ Scar:
   isnightmare: true
   enabled: true
   enmp_index: 0x5E
+  blacklist_source:
+  - Shan-Yu # Reports of tpose from RC causing softlock
   hp: 100
   level: 99
   limiter: 0
@@ -4138,6 +4142,8 @@ Storm Rider:
   limiter: 0
   model: B_MU120
   msn: MU08_MS204
+  pc:
+    enabled: false # many reports of crashes
   obj_id: 357
   size: 3.03
   program: 79
