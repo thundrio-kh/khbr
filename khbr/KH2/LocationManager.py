@@ -4,6 +4,10 @@ from khbr._config import DEBUG_LOCATIONS
 class LocationManager:
     def __init__(self, basepath):
         self.basepath = basepath
+        # TODO I think this means I don't need to do this anywhere else
+        # TODO but also maybe will make things load really slow initially
+        self.set_locmap()
+        self.set_locations()
 
     def set_locmap(self):
         with open(os.path.join(self.basepath, "location-ard-map.json")) as f:

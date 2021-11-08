@@ -16,6 +16,7 @@ class SpawnManager:
             "stormrider_61": self.stormrider_61
         }
 
+    # TODO 
     # I don't think this is needed
     # def set_spawns(self):
     #     if not self.spawns:
@@ -73,13 +74,13 @@ class SpawnManager:
                 existing_rm = self.getSpawnpoint(ardname, rm)
                 self.roommodedits[basespawns["roommodedits"][rm]](existing_rm)
                 roommods[rm] = existing_rm
-        return
+        return roommods
 
     @staticmethod
-    def subtract_spawns(original_spawns, entities_to_remove):
+    def subtract_spawns(original_yaml, entities_to_remove):
         # TODO might need another pass
         if entities_to_remove:
-            for sp_instance in original_spawns:
+            for sp_instance in original_yaml:
                 toremove = []
                 for e in range(len(sp_instance["Entities"])):
                     ent = sp_instance["Entities"][e]

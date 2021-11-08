@@ -34,7 +34,7 @@ class EnemyManager:
         return enemylist
 
     def create_enemy_records(self, maxsize=None, getavail=True):
-        defaults = enemy_records.generate_schema()
+        defaults = get_schema()
         with open(os.path.join(self.basepath, "enemies.yaml")) as f:
             enemies_f = yaml.load(f, Loader=yaml.FullLoader)
         enemies = {}
@@ -68,7 +68,7 @@ class EnemyManager:
         if getavail:
             # avail should only be filled in for parent bosses
             # I think this will work because of pass by reference
-            bosses = [enemies[e] for e in enemies if enemies[e]["type"] == "boss" and enemies[e]["parent"] == enemies[e]["name"]]
+            bosses = {e: enemies[e] for e in enemies if enemies[e]["type"] == "boss" and enemies[e]["parent"] == enemies[e]["name"]}
             self.assign_availability(bosses, maxsize)
 
         return enemies
@@ -122,24 +122,25 @@ class EnemyManager:
     def getCategory(enemy):
         category = '-'.join(sorted(enemy["tags"]))
         if enemy["sizeTag"]:
-            enemy["category"] = "-".join([enemy["category"], enemy["sizeTag"]])
-        if len(enemy["category"]) > 0 and enemy["category"][0] == "-":
-            enemy["category"] = enemy["category"][1:]
+            category = "-".join([category, enemy["sizeTag"]])
+        if len(category) > 0 and category[0] == "-":
+            category = category[1:]
         return category
 
     def assign_availability(self, bosses, maxsize):
-        for source_boss in bosses:
+        for source_boss_name in bosses:
+            source_boss = bosses[source_boss_name]
             avail = [] # These are bosses that are allowed to be here
-            for dest_boss in bosses:
-                if dest_boss["name"] == source_boss["name"]:
+            for dest_boss_name in bosses:
+                dest_boss = bosses[dest_boss_name]
+                if dest_boss_name == source_boss_name:
                     # Boss should always be allowed to be in it's own location
-                    avail.append(dest_boss["name"])
+                    avail.append(dest_boss_name)
                     continue
-                dest_boss = bosses[dest_boss["name"]]
                 if self.isReplacementBlocked(source_boss, dest_boss):
                     continue
                 if self.source_room_has_space(source_boss, dest_boss, maxsize):
-                    avail.append(dest_boss["name"])
+                    avail.append(dest_boss_name)
             source_boss["available"] = avail
 
     def get_boss_list(self, options):
@@ -154,9 +155,9 @@ class EnemyManager:
                 continue
             if nightmare_bosses and not v["isnightmare"]:
                 continue
-            if "cups_bosses" in options and options["cups_bosses"] and not "cups" in v["tags"]:
+            if not ("cups_bosses" in options and options["cups_bosses"]) and "cups" in v["tags"]:
                 continue
-            if "data_bosses" in options and options["data_bosses"] and not "data" in v["tags"]:
+            if not ("data_bosses" in options and options["data_bosses"]) and "data" in v["tags"]:
                 continue
             bosses[k] = v
 

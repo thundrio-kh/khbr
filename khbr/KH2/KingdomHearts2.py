@@ -1,6 +1,7 @@
 from khbr.KH2.AssetGenerator import AssetGenerator
 from khbr.KH2.ModWriter import ModWriter
 from khbr.KH2.schemas.enemyseed import EnemySeed
+from khbr.textutils import create_spoiler_text
 from khbr.utils import print_debug
 from khbr._config import DIAGNOSTICS
 from khbr.randutils import pickbossmapping, pickenemymapping
@@ -134,7 +135,7 @@ class KingdomHearts2:
                     if room.get("ignored"):
                         continue
                     if rand_seed.config.enemymode == "One to One Per Room":
-                        rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemies"], nightmare=config.nightmare_enemies)
+                        rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemy"], nightmare=rand_seed.config.nightmare_enemies)
                     
                     for sp, spawnpoint in room["spawnpoints"].items():
                         self.location_manager.update_location(spawnpoint, rand_seed.config)
@@ -197,9 +198,10 @@ class KingdomHearts2:
         assetgenerator.generateObjEntry(randomization.get("object_map", {}))
         assetgenerator.generateEnmp(randomization.get("scale_map",{}), remove_damage_cap="remove_damage_cap" in utility_mods)
         assetgenerator.generateAiMods(randomization.get("ai_mods"))
-        assetgenerator.generateMsns(randomization.get("msn_map", {}, self.mission_manager.msninfo))
-        self.set_spawns()
-        assetgenerator.generateSpawns(self.spawns, randomization.get("spawns", ""), randomization.get("subtract_map"))
+        assetgenerator.generateMsns(randomization.get("msn_map", {}), self.mission_manager.msninfo)
+        # self.set_spawns() # TODO is this needed?
+        self.location_manager.set_locations() # TODO this might be unneeded time waste????
+        assetgenerator.generateSpawns(randomization.get("spawns", ""), randomization.get("subtract_map"))
         
         if DIAGNOSTICS:
             end_time = time.time()

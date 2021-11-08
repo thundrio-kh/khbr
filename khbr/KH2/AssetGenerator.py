@@ -55,7 +55,7 @@ class AssetGenerator:
             if type(original_enemy) == int: #ie 2000
                 new_enmp_data["health"][0] = original_enemy
             else:
-                original_enmp_index = self.enemy_records[original_enemy]["enmp_index"]
+                original_enmp_index = self.enemy_manager.enemy_records[original_enemy]["enmp_index"]
             
                 if not original_enmp_index:
                     print_debug("WARNING: Can't scale {}, no ENMP index found".format(original_enemy))
@@ -68,7 +68,7 @@ class AssetGenerator:
         if remove_damage_cap:
             for en in enmp_data_modified:
                 en["maxDamage"] = 0xFFFF
-        asset = self.writeEnmp(enmp_data_modified)
+        asset = self.modwriter.writeEnmp(enmp_data_modified)
         self.assets.append(asset)
 
     def generateAiMods(self, ai_mods):
@@ -79,7 +79,7 @@ class AssetGenerator:
                 edits_string = f.read().split("\n")
             ai_manager = AiManager(edits_string)
 
-            with open(os.path.join(KH2_DIR, "subfiles", "bdx", "obj",  ai_manager.aifn), "rb") as f:
+            with open(os.path.join(KH2_DIR, "subfiles", "bdx", "obj",  ai_manager.fn), "rb") as f:
                 data = bytearray(f.read())
 
             ai_manager.modify_data(data)
@@ -89,25 +89,27 @@ class AssetGenerator:
             enemy = self.enemy_manager.enemy_records[ai]
             modelname = enemy["model"]
 
-            asset = self.modwriter.writeAi(self.ai_manager.fn, modelname, data)
+            asset = self.modwriter.writeAi(ai_manager.fn, modelname, data)
             self.assets.append(asset)
 
     def generateMsns(self, msn_map, msninfo):
         #TODO need way for adjusting the final fight MSNs to make retrying retry directly, but the value is a bitflag array, so treat carefully
         for oldmsn in msn_map:
-            # Load in the entire msn to memory
+            
             new_msn_name = msn_map.get(oldmsn)
-            info = msninfo[info]
+            info = msninfo[new_msn_name]
             mission = Mission(new_msn_name, info)
             
-            bonus_byte = self.msninfo[oldmsn]["bonus"]
-            mission.edit_bonus_byte(bonus_byte)
+            bonus_byte = msninfo[oldmsn]["bonus"]
+            mission.set_bonus_byte(bonus_byte)
             
             asset = self.modwriter.writeMsn(oldmsn, mission.data)
 
             self.assets.append(asset)
 
-    def generateSpawns(self, original_spawns, replacement_spawns, subtract_map):
+    def generateSpawns(self, replacement_spawns, subtract_map):
+        original_spawns = self.location_manager.locations
+
         if not replacement_spawns:
             return
 
@@ -131,16 +133,18 @@ class AssetGenerator:
                     existing_spawnpoint = self.spawn_manager.getSpawnpoint(ardname, spn, roommods)
                     for i, spid in spawnpoint["sp_ids"].items():
                         for new_entity in spid:
-                            old_spid = self.spawn_manager.getSpId(existing_spawnpoint, int(spid))
+                            old_spid = self.spawn_manager.getSpId(existing_spawnpoint, int(i))
                             # Get to the right spawnpointid sp_instance
-                            old_spawn = new_entity["index"]
+                            old_spawn_index = new_entity["index"]
+                            
 
                             if new_entity["index"] == "new":
                                 self.spawn_manager.add_new_object(old_spid, new_entity)
                             elif type(new_entity["name"]) == int:
-                                self.spawn_manager.set_object_by_id(old_spid["Entities"][old_spawn], new_entity)
+                                self.spawn_manager.set_object_by_id(old_spid["Entities"][old_spawn_index], new_entity)
                             else:
-                                obj = self.enemy_manager.lookupObject(new_entity["name"])
+                                obj = self.enemy_manager.lookup_object(new_entity["name"])
+                                old_spawn = old_spid["Entities"][old_spawn_index]
 
                                 final_txt = final_fight_text(old_spawn, new_entity["name"])
                                 if final_txt:
@@ -151,12 +155,12 @@ class AssetGenerator:
                         if subtract_map:
                             entities_to_remove = subtract_map.get(w, {}).get(r, {}).get("spawnpoints", {}).get(spn, []) 
                             if entities_to_remove:
-                                self.spawn_manager.subtract_spawns()
+                                self.spawn_manager.subtract_spawns(existing_spawnpoint, entities_to_remove)
                         
-                    spasset = self.modwriter.writeSpawnpoint(ardname, spawnpoint, existing_spawnpoint)
+                    spasset = self.modwriter.writeSpawnpoint(ardname, spn, existing_spawnpoint)
                     roomasset["source"].append(spasset)
-                    if spawnpoint in roommods:
-                        del roommods[spawnpoint]
+                    if spn in roommods:
+                        del roommods[spn]
                 for sp in roommods:
                     spasset = self.modwriter.writeSpawnpoint(ardname, sp, roommods[sp])
                     roomasset["source"].append(spasset)

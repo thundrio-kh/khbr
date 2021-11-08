@@ -1,7 +1,9 @@
-import json
+import json, os
 class MissionManager:
     def __init__(self, basepath):
         self.basepath = basepath
-    def set_msninfo(self):
-        with open(self.basepath) as f:
-            self.msninfo = json.load(f)
+        self.msninfo = self.get_msninfo()
+
+    def get_msninfo(self):
+        with open(os.path.join(self.basepath, "msns.json")) as f:
+            return json.load(f)

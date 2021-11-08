@@ -35,12 +35,14 @@ def pickenemymapping(enemy_records, categorized_enemies, spoilers=None, nightmar
                 for old_variation_name in old_child["variations"]:
                     new_variation_name = random.choice(list(new_child["variations"]))
                     mapping[old_variation_name] = new_variation_name
-                    if spoilers:
+                    if spoilers is not None:
                         spoilers[old_variation_name] = new_variation_name
+
     return mapping
     #TODO unit test that len(enemylist) == len(list(mapping.keys()))
     
 def pick_boss_to_replace(enemy_records, bossparentlist):
+    0/0
     enabled_parents = [b for b in bossparentlist if enemy_records[b]["enabled"]]
     if len(enabled_parents) == 0:
         raise Exception("No available parent bosses!")

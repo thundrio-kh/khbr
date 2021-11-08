@@ -47,7 +47,7 @@ def validate_bosses_onetoone(randomization):
 def validate_boss_placements(randomization):
     import yaml
     kh2 = KingdomHearts2()
-    vanilla = yaml.load(open("locations.yaml"))
+    vanilla = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")))
     used_bosses = []
     for world_name in randomization["spawns"]:
         world = randomization["spawns"][world_name]
@@ -70,12 +70,12 @@ def validate_boss_placements(randomization):
                         if new_name in ["Armor Xemnas I", "Armor Xemnas II", "Grim Reaper I", "Grim Reaper II", "Shadow Roxas"]:
                             continue
                         new_index = spid[e]["index"]
-                        new_enemy_record = kh2.enemy_records[new_name]
-                        new_parent = kh2.enemy_records[new_enemy_record["parent"]]
+                        new_enemy_record = kh2.enemy_manager.enemy_records[new_name]
+                        new_parent = kh2.enemy_manager.enemy_records[new_enemy_record["parent"]]
                         for old_ent in old_spid:
                             if new_index == old_ent["index"]:
-                                old_enemy = kh2.enemy_records[old_ent["name"]]
-                                avail_list = kh2.enemy_records[old_enemy["parent"]]["available"]
+                                old_enemy = kh2.enemy_manager.enemy_records[old_ent["name"]]
+                                avail_list = kh2.enemy_manager.enemy_records[old_enemy["parent"]]["available"]
                                 # prob need to do something about the parent
                                 assert new_parent["name"] in avail_list, "{} is not in {}'s available list".format(new_name, old_enemy["name"])
     return used_bosses
@@ -84,7 +84,7 @@ def get_tmp_path():
     return os.path.join(os.getcwd(), "tmp")
 
 def get_enemies_in(randomization, world, room, spn, spid=None):
-    original = yaml.load(open("locations.yaml"))
+    original = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")))
     og_spawnpoint = original[world][room]["spawnpoints"][spn]
     try:
         spawnpoint = randomization["spawns"][world][room]["spawnpoints"][spn]
@@ -133,7 +133,7 @@ def validate_shadows(randomization):
     assert len(second_enemies) == 1
     second = list(second_enemies)[0]
     kh2 = KingdomHearts2()
-    assert kh2.enemy_records[first]["parent"] == kh2.enemy_records[second]["parent"]
+    assert kh2.enemy_manager.enemy_records[first]["parent"] == kh2.enemy_manager.enemy_records[second]["parent"]
 
 def validate_shadows_perroom(randomization):
     # validate all shadows in the same room are the same
@@ -143,17 +143,17 @@ def validate_shadows_perroom(randomization):
     first_enemies = set([e["name"] for e in first_location])
     assert len(first_enemies) == 1
     first = list(first_enemies)[0]
-    first_parent = kh2.enemy_records[first]["parent"]
+    first_parent = kh2.enemy_manager.enemy_records[first]["parent"]
     second_location = get_enemies_in(randomization, "Timeless River", "Scene of the Fire", "b_40", "42")
     second_enemies = set([e["name"] for e in second_location])
     assert len(second_enemies) == 1
     second = list(second_enemies)[0]
-    second_parent = kh2.enemy_records[second]["parent"]
+    second_parent = kh2.enemy_manager.enemy_records[second]["parent"]
     third_location = get_enemies_in(randomization, "The World That Never Was", "Fragment Crossing", "b_10")
     third_enemies = set([e["name"] for e in third_location])
     assert len(third_enemies) == 1
     third = list(third_enemies)[0]
-    third_parent = kh2.enemy_records[third]["parent"]
+    third_parent = kh2.enemy_manager.enemy_records[third]["parent"]
     enemy_variety = set([first_parent, second_parent, third_parent])
     assert len(enemy_variety) > 1
 
@@ -168,14 +168,14 @@ def get_found(randomization, name=None, tags=[]):
                             if enemy["name"] == name:
                                 return True
                         for tag in tags:
-                            if "name" in enemy and tag in kh2.enemy_records[enemy["name"]]["tags"]:
+                            if "name" in enemy and tag in kh2.enemy_manager.enemy_records[enemy["name"]]["tags"]:
                                 # TODO THIS IS A HACK BECAUSE HADES CUPS IS A REPLACEAS TARGET BUT HAS THE CUPS TAG
                                 if enemy["name"] != "Hades Cups":
                                     return True
     return False
 
 def get_randomized(randomization, source_name):
-    original = yaml.load(open("locations.yaml"))
+    original = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")))
     for w, world in original.items():
         for r, room in world.items():
             for spn, spawnpoint in room["spawnpoints"].items():
@@ -217,7 +217,7 @@ def validate_consistent_bosses(randomization):
     # Check Demyx and Data Demyx are the same parent
     normal_demyx = get_enemies_in(randomization, "Hollow Bastion", "Castle Gate", "b_40")[0]["name"]
     data_demyx = get_enemies_in(randomization, "Hollow Bastion", "Castle Gate", "b_80")[0]["name"]
-    assert kh2.enemy_records[normal_demyx]["parent"] == kh2.enemy_records[data_demyx]["parent"]
+    assert kh2.enemy_manager.enemy_records[normal_demyx]["parent"] == kh2.enemy_manager.enemy_records[data_demyx]["parent"]
 
 def validate_bosses_show_up_once(randomization):
     assert True
@@ -245,7 +245,7 @@ def _find_index(spid, index):
 
 def validate_scale_map(randomization):
     kh2 = KingdomHearts2()
-    original = yaml.load(open("locations.yaml"))
+    original = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")))
     for w, world in original.items():
         for r, room in world.items():
             for spn, spawnpoint in room["spawnpoints"].items():
@@ -262,12 +262,12 @@ def validate_scale_map(randomization):
                                 scaled_og = randomization["scale_map"][new_boss["name"]]
                                 if type(scaled_og) == int:
                                     continue 
-                                scaled_og_parent = kh2.enemy_records[scaled_og]["parent"]
-                                og_parent = kh2.enemy_records[og_boss]["parent"]
+                                scaled_og_parent = kh2.enemy_manager.enemy_records[scaled_og]["parent"]
+                                og_parent = kh2.enemy_manager.enemy_records[og_boss]["parent"]
                                 assert scaled_og_parent == og_parent
 
 def validate_enemy_records(enemy_records):
-    enemies_yaml = yaml.load(open("enemies.yaml"))
+    enemies_yaml = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","enemies.yaml")))
     storm_original = enemies_yaml["Storm Rider"]
     storm_built = enemy_records["Storm Rider"]
     for name, enemy in enemy_records.items():

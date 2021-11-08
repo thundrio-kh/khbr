@@ -22,7 +22,7 @@ going to be a tough fight, but we can do it!"""}
     text["en"] = text["en"].format(new_name)
     return text
 
-def create_spoiler_text(self, spoilers):
+def create_spoiler_text(spoilers):
     text = ''
     if spoilers["boss"]:
         text += 'BOSSES\n'

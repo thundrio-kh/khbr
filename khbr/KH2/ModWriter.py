@@ -1,7 +1,10 @@
 import os, yaml
+
+from khbr.KH2.EnmpManager import EnmpManager
 class ModWriter:
     def __init__(self, outdir, writeMethod=None):
         self.write_method = writeMethod or self.default_write_method
+        self.enmp_manager = EnmpManager()
         self.outdir = outdir
 
     @staticmethod
@@ -16,7 +19,7 @@ class ModWriter:
     def writeSpawnpoint(self, ardname, spawnpoint, obj):
         outfn = os.path.join(self.outdir, "files", "ard", ardname, spawnpoint+".yml")
         fn = os.path.join("files", "ard", ardname, spawnpoint+".yml")
-        self.writeMethod(outfn, fn, yaml.dump(obj))
+        self.write_method(outfn, fn, yaml.dump(obj))
         return {
             "method": "spawnpoint",
             "name": spawnpoint,
@@ -27,7 +30,7 @@ class ModWriter:
     def writeObj(self, obj):
         outfn = os.path.join(self.outdir, "files", "root", "00objentry.bin")
         fn = os.path.join("files", "root", "00objentry.bin")
-        self.writeMethod(outfn, fn, yaml.dump(obj))
+        self.write_method(outfn, fn, yaml.dump(obj))
         return {
             "name": "00objentry.bin",
             "method": "listpatch",
@@ -42,8 +45,8 @@ class ModWriter:
     def writeEnmp(self, enmp):
         outfn = os.path.join(self.outdir, "files", "root", "enmp.list")
         fn = os.path.join("files", "root", "enmp.list")
-        data = self.dumpEnmpData(enmp)
-        self.writeMethod(outfn, fn, data)
+        data = self.enmp_manager.dumpEnmpData(enmp)
+        self.write_method(outfn, fn, data)
         return {
             "name": "00battle.bin",
             "method": "binarc",
@@ -64,7 +67,7 @@ class ModWriter:
     def writeMSG(self, name, obj):
         outfn = os.path.join(self.outdir, "files", "msg", name+".yml")
         fn = os.path.join("files", "msg", name+".yml")
-        self.writeMethod(outfn, fn, yaml.dump(obj))
+        self.write_method(outfn, fn, yaml.dump(obj))
         # Whole binarc at once is maybe weird to return
         return {
             "name": "msg/jp/{}.bar".format(name),
@@ -92,7 +95,7 @@ class ModWriter:
         filename = scripttype+"_"+str(programnumber)+".areadataprogram"
         outfn = os.path.join(self.outdir, "files", "ard", ardname, filename)
         fn = os.path.join("files", "ard", ardname, filename)
-        self.writeMethod(outfn, fn, program)
+        self.write_method(outfn, fn, program)
         return {
             "method": "areadatascript",
             "name": scripttype,
@@ -104,7 +107,7 @@ class ModWriter:
         relfn = os.path.join("files", "ai", aifn)
         outfn = os.path.join(self.outdir, relfn)
         
-        self.writeMethod(outfn, relfn, data)
+        self.write_method(outfn, relfn, data)
         return {
             "method": "binarc",
             "name": "obj/{}.mdlx".format(modelname),
@@ -121,7 +124,7 @@ class ModWriter:
     def writeMsn(self, msnname, data):
         relfn = os.path.join("files", "msns", msnname)
         outfn = os.path.join(self.outdir, relfn)
-        self.writeMethod(outfn, relfn, data)
+        self.write_method(outfn, relfn, data)
         # create the asset
         asset = {
             "method": "copy",

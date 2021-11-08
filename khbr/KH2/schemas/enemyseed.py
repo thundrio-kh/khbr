@@ -50,7 +50,7 @@ class EnemySeed:
             self.subtract_map[world][room]["spawnpoints"][spawnpoint] = []
         self.subtract_map[world][room]["spawnpoints"][spawnpoint].append(objectid)
 
-    def update_seed(self, old_boss_object, new_boss_object, world, room, spawnpoint, spidedddd):
+    def update_seed(self, old_boss_object, new_boss_object, world, room, spawnpoint, spid):
         if new_boss_object["name"] == "Shadow Roxas":
             return # Nothing to do in this case
         self.update_extras(old_boss_object, new_boss_object, world, room, spawnpoint, spid)

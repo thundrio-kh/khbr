@@ -1,4 +1,5 @@
 from khbr.KH2.KingdomHearts2 import KingdomHearts2
+from khbr.textutils import create_spoiler_text
 from khbr.utils import print_debug
 import time, json, random, os, shutil, yaml, base64, sys
 from zipfile import ZipFile
@@ -124,7 +125,7 @@ class Randomizer:
         if dumpspoilers:
             if game.spoilers["boss"] or game.spoilers["enemy"]:
                 with open(os.path.join(moddir, "spoilers.txt"), "w") as f:
-                    f.write(game.create_spoiler_text())
+                    f.write(create_spoiler_text(game.spoilers))
             else:
                 with open(os.path.join(moddir, "spoilers.json"), "w") as f:
                     json.dump(randomization, f, indent=4)
@@ -197,8 +198,7 @@ class Randomizer:
         randomization = game.perform_randomization(options)
         assets = game.generate_files(randomization=randomization, outzip=outZip)
         modobj["assets"] += assets
-        spoilers = randomization
-        return game.create_spoiler_text()
+        return create_spoiler_text(game.spoilers)
     
     def getSchemaForGame(self, g):
         if g not in supported_games:
