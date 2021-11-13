@@ -173,7 +173,9 @@ class KingdomHearts2:
                                         continue
 
                                     new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object)
-                                    if not new_enemy or new_enemy == old_enemy_object["name"]:
+                                    if not new_enemy:
+                                        continue
+                                    if new_enemy == old_enemy_object["name"] and not entity.get("nameForReplace", "") == new_enemy:
                                         continue
 
                                     new_enemy_object = self.enemy_manager.get_new_enemy_object(new_enemy, rand_seed)

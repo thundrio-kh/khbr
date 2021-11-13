@@ -215,10 +215,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 #ut = Tests()
-
-#test_seedgen_error2
 #ut.test_seedgen_enemy_one_to_one_room_nightmare()
-#ut.test_seedgen_boss_wild_nightmare()
 
 # Uncomment to run the actual tests
 unittest.main()

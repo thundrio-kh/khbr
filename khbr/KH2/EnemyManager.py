@@ -148,6 +148,11 @@ class EnemyManager:
         self.set_enemies()
         
         bosses = {}
+
+        # Nightmare mode should override settings and always use datas and cups (until nightmare is a preset)
+        use_cups_bosses = nightmare_bosses or options.get("cups_bosses")
+        use_data_bosses = nightmare_bosses or options.get("data_bosses")
+
         for k,v in self.enemy_records.items():
             if v["type"] != "boss":
                 continue
@@ -155,10 +160,10 @@ class EnemyManager:
                 continue
             if nightmare_bosses and not v["isnightmare"]:
                 continue
-            if not ("cups_bosses" in options and options["cups_bosses"]) and "cups" in v["tags"]:
-                continue
-            if not ("data_bosses" in options and options["data_bosses"]) and "data" in v["tags"]:
-                continue
+            if not use_cups_bosses and "cups" in v["tags"]:
+                    continue
+            if not use_data_bosses and "data" in v["tags"]:
+                    continue
             bosses[k] = v
 
         # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
