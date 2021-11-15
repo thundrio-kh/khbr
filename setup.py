@@ -8,7 +8,7 @@ setup(
 	name = 'khbr',
 	packages = find_packages(),
 	package_data={'': ['data/kh2/**']},
-	version = '1.1.6',
+	version = '1.3.2',
 	long_description = long_description,
 	long_description_content_type='text/markdown',
 	license = 'MIT',

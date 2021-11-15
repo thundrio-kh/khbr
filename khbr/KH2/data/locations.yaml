@@ -4381,7 +4381,7 @@ Disney Castle:
   Audience Chamber:
     ignored: true
     pc:
-      ignored: false
+      ignored: true # Enemies with particle effects I think are the main concern here, like living bone shamans and berserkers
     size: 5000000
     spawnpoints:
       b_00:
@@ -11350,7 +11350,6 @@ Olympus Coliseum:
             isboss: true
             name: Hades II (1)
   The Underdrome 09:
-    ignored: true
     size: 5000000
     spawnpoints:
       b_60:
@@ -13531,6 +13530,7 @@ Olympus Coliseum:
             isboss: false
             name: Sorcerer
       b_k5:
+        ignored: true
         size: 0
         sp_ids:
           '2660':
@@ -18397,6 +18397,9 @@ The Land of Dragons:
             name: Nightwalker
       b_45:
         ignored: true # ambush auuuuuah
+        msn_replacement:
+          original: MU02_MS103B
+          new: MU02_MS103A
         sp_ids:
           '416':
           - index: 0
@@ -19258,9 +19261,6 @@ The Land of Dragons:
             isboss: false
             name: Nightwalker
   Ridge:
-    ignored: false
-    pc:
-      ignored: false
     size: 5000000
     spawnpoints:
       b_00:
@@ -19362,8 +19362,6 @@ The Land of Dragons:
             name: Dusk
   Summit:
     ignored: true
-    pc:
-      ignored: false
     size: 5000000
     spawnpoints:
       b_00:
@@ -22748,6 +22746,8 @@ Twilight Town:
             isboss: false
             name: Dusk
       b_41:
+        pc:
+          ignored: true
         size: 0
         sp_ids:
           '858':
@@ -23411,6 +23411,8 @@ Twilight Town:
     size: 5000000
     spawnpoints:
       b_40:
+        pc:
+          ignored: true
         size: 0
         sp_ids:
           '78':
@@ -23418,6 +23420,8 @@ Twilight Town:
             isboss: true
             name: Hayner
       b_41:
+        pc:
+          ignored: true
         size: 0
         sp_ids:
           '100':
@@ -23445,6 +23449,8 @@ Twilight Town:
             isboss: true
             name: Axel I
       b_44:
+        pc:
+          ignored: true
         size: 0
         sp_ids:
           '166':
@@ -23481,6 +23487,8 @@ Twilight Town:
             isboss: false
             name: Dusk
       b_41:
+        pc:
+          ignored: true
         size: 0
         sp_ids:
           '71':
@@ -23488,6 +23496,8 @@ Twilight Town:
             isboss: true
             name: Seifer (1)
       b_42:
+        pc:
+          ignored: true
         size: 0
         sp_ids:
           '93':
@@ -23540,6 +23550,8 @@ Twilight Town:
             isboss: false
             name: Berserker
       b_45:
+        pc:
+          ignored: true
         size: 0
         sp_ids:
           '2215':
@@ -23547,6 +23559,8 @@ Twilight Town:
             isboss: true
             name: Seifer (3)
       b_50:
+        pc:
+          ignored: true
         size: 0
         sp_ids:
           '2343':
@@ -23554,6 +23568,8 @@ Twilight Town:
             isboss: true
             name: Hayner
       b_51:
+        pc:
+          ignored: true
         size: 0
         sp_ids:
           '2375':
@@ -23561,6 +23577,8 @@ Twilight Town:
             isboss: true
             name: Seifer (4)
       b_52:
+        pc:
+          ignored: true
         size: 0
         sp_ids:
           '2407':

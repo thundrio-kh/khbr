@@ -22,6 +22,9 @@ class AreaDataScript:
         if number not in self.programs:
             raise Exception("Program not found")
         return '\n'.join(self.programs[number])
+    def add_packet_spec(self, number):
+        program = [self.get_program(number).split("\n")[0]] + ["AllocPacket {}".format(int(0x100000 / 2))] + self.get_program(number).split("\n")[1:]
+        self.programs[number] = program
     def update_program(self, number, capacity=None):
         program = self.get_program(number).split("\n")
         topop = []

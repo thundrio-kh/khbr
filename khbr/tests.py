@@ -62,6 +62,15 @@ class Tests(unittest.TestCase):
         randomization = testutils.generateSeed(options)
         testutils.validate_enemies_general(randomization)
 
+    def test_seedgen_enemy_one_to_one_pc(self):
+        options = {"enemy": "One to One"}
+        randomization = testutils.generateSeed(options)
+        options["memory_expansion"] = True
+        randomization_pc = testutils.generateSeed(options)
+        testutils.validate_enemies_general(randomization_pc)
+        assert randomization != randomization_pc 
+
+
     def test_seedgen_enemy_one_to_one_nightmare(self):
         options = {"enemy": "One to One", "nightmare_enemies": True}
         randomization = testutils.generateSeed(options)
@@ -88,7 +97,7 @@ class Tests(unittest.TestCase):
         options = {"boss": "Selected Boss", "selected_boss": "Xemnas"}
         randomization = testutils.generateSeed(options)
         print("Selected Boss")
-        testutils.validate_selected(randomization, "Xemnas", isboss=False)
+        testutils.validate_selected(randomization, "Xemnas", isboss=True)
 
     def test_seedgen_boss_one_to_one(self):
         options = {"boss": "One to One"}
@@ -96,6 +105,17 @@ class Tests(unittest.TestCase):
         testutils.validate_bosses_general(randomization)
         testutils.validate_bosses_onetoone(randomization)
         assert False == testutils.get_found(randomization, tags=["data", "cups"])
+
+    def test_seedgen_boss_one_to_one_pc(self):
+        options = {"boss": "One to One"}
+        randomization = testutils.generateSeed(options)
+        options["memory_expansion"] = True
+        randomization_pc = testutils.generateSeed(options)
+        testutils.validate_bosses_general(randomization_pc, pc=True)
+        testutils.validate_bosses_onetoone(randomization_pc, pc=True)
+        assert False == testutils.get_found(randomization_pc, tags=["data", "cups"])
+        assert randomization_pc != randomization
+
 
     def test_seedgen_boss_one_to_one_scaled(self):
         options = {"boss": "One to One", "scale_boss_stats": True}

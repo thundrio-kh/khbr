@@ -5,11 +5,11 @@ DEBUG_LOCATIONS = []
 DIAGNOSTICS = True
 GENERATE_IDENTICON = False
 
-KH2_DIR = os.environ["USE_KH2_GITPATH"]
+KH2_DIR = os.environ["USE_KH2_GITPATH"] if "USE_KH2_GITPATH" in os.environ else "extracted_data"
 
-LIMITED_SIZE = 15.0 # Seems about right
+LIMITED_SIZE = 15.0
 
 DEBUG_HEALTH = False
 DEBUG_PRINT = False
 
-HARDCAP = "-3.3895395E+38"
+HARDCAP = "65000"
