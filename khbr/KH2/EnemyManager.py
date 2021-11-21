@@ -5,17 +5,20 @@ class EnemyManager:
     def __init__(self, basepath):
         self.basepath = basepath
         self.enemy_records = None
+        # TODO I think I'm loading json files a lot more than needed
         self.set_enemies()
         
     def get_valid_enemies(self):
         return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "enemy"]
     def get_valid_bosses(self):
         return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "boss"]
-    def set_enemies(self):
-        if not self.enemy_records:
-            with open(os.path.join(self.basepath, "full_enemy_records.json")) as f:
-                self.enemy_records = json.load(f)
-
+    def set_enemies(self, ispc=False):
+        fn="full_enemy_records.json"
+        if ispc:
+            fn = "full_enemy_records_pc.json"
+        with open(os.path.join(self.basepath, fn)) as f:
+            self.enemy_records = json.load(f)
+            
     def get_enemies(self):
         enemies = self.get_valid_enemies()
         enabled_enemies = [self.enemy_records[e] for e in enemies if self.enemy_records[e]["enabled"]]
@@ -33,7 +36,7 @@ class EnemyManager:
             enemy["tags"] = list(filter(lambda k: k != tag), enemylist)
         return enemylist
 
-    def create_enemy_records(self, maxsize=None, getavail=True):
+    def create_enemy_records(self, ispc=False, getavail=True):
         defaults = get_schema()
         with open(os.path.join(self.basepath, "enemies.yaml")) as f:
             enemies_f = yaml.load(f, Loader=yaml.FullLoader)
@@ -45,8 +48,8 @@ class EnemyManager:
             for v in main["variations"]:
                 variation = dict(main["variations"][v])
                 variation["name"] = v
-                self.inheritConfig(main, variation, defaults)
-                variation["category"] = self.getCategory(variation)
+                self.inheritConfig(main, variation, defaults, ispc=ispc)
+                variation["category"] = self.getCategory(variation, ispc=ispc)
 
                 # TODO I'd like to make this better but I don't know how
                 parent = variation["variationof"] or name
@@ -63,13 +66,13 @@ class EnemyManager:
         for parent in parent_children_mapping:
             enemies[parent]["children"] = sorted(list(set(parent_children_mapping[parent])))
             for child in enemies[parent]["children"]:
-                self.inheritConfig(enemies[parent], enemies[child], defaults)
+                self.inheritConfig(enemies[parent], enemies[child], defaults, ispc=ispc)
 
         if getavail:
             # avail should only be filled in for parent bosses
             # I think this will work because of pass by reference
             bosses = {e: enemies[e] for e in enemies if enemies[e]["type"] == "boss" and enemies[e]["parent"] == enemies[e]["name"]}
-            self.assign_availability(bosses, maxsize)
+            self.assign_availability(bosses, ispc)
 
         return enemies
 
@@ -102,8 +105,11 @@ class EnemyManager:
         return new_enemy_object
 
     @staticmethod
-    def inheritConfig(parent, variation, defaults):
+    def inheritConfig(parent, variation, defaults, ispc=False):
         for k in parent:
+            if ispc and k == "pc":
+                for k_pc in parent["pc"]:
+                    parent[k_pc] = parent["pc"][k_pc]
             if k == "variations":
                 if k not in variation:
                     variation[k] = list(parent[k].keys())
@@ -119,10 +125,11 @@ class EnemyManager:
                         variation[d] = parent[d]
 
     @staticmethod
-    def getCategory(enemy):
+    def getCategory(enemy, ispc=False):
         category = '-'.join(sorted(enemy["tags"]))
-        if enemy["sizeTag"]:
-            category = "-".join([category, enemy["sizeTag"]])
+        if not ispc:
+            if enemy["sizeTag"]:
+                category = "-".join([category, enemy["sizeTag"]])
         if len(category) > 0 and category[0] == "-":
             category = category[1:]
         return category
@@ -144,13 +151,15 @@ class EnemyManager:
             source_boss["available"] = avail
 
     def get_boss_list(self, options):
-        nightmare_bosses = "nightmare_bosses" in options and options["nightmare_bosses"]
-        self.set_enemies()
+        nightmare_bosses = options.get("nightmare_bosses", False)
+        ispc = options.get("memory_expansion", False)
+        self.set_enemies(ispc)
         
         bosses = {}
 
         # Nightmare mode should override settings and always use datas and cups (until nightmare is a preset)
-        use_cups_bosses = nightmare_bosses or options.get("cups_bosses")
+        # TODO On PC cups bosses are exhibiting crashy behavior, so just disable them always for now on PC
+        use_cups_bosses = (not ispc) and (nightmare_bosses or options.get("cups_bosses"))
         use_data_bosses = nightmare_bosses or options.get("data_bosses")
 
         for k,v in self.enemy_records.items():
@@ -183,9 +192,11 @@ class EnemyManager:
         return bosses
 
     @staticmethod
-    def source_room_has_space(source_boss, dest_boss, maxsize=None):
+    def source_room_has_space(source_boss, dest_boss, ispc=False):
+        if ispc:
+            return True
         #print_debug("{} > {}: {} + {} >= {}".format(source_boss["name"], dest_boss["name"], source_boss["size"], dest_boss["room_size"], maxsize))
-        roommaxsize = 999999999 if not maxsize else source_boss["roommaxsize"] or maxsize
+        roommaxsize = source_boss["roommaxsize"] or LIMITED_SIZE
         availablespace = (roommaxsize - source_boss["room_size"]) * source_boss["roomsizemultiplier"]
         if availablespace - dest_boss["size"] < 0:
             return False

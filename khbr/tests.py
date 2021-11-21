@@ -234,8 +234,9 @@ class Tests(unittest.TestCase):
         assert False == testutils.get_room_randomized(randomization_ps2, "Agrabah", "The Cave of Wonders: Treasure Room", "b_40")
 
 # Uncomment to run a single test through ipython
-#ut = Tests()
-#ut.test_seedgen_enemy_one_to_one_room_nightmare()
+ut = Tests()
+#ut.test_seedgen_boss_one_to_one_pc()
+
 
 # Uncomment to run the actual tests
 unittest.main()

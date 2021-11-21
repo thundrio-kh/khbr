@@ -193,7 +193,7 @@ class KingdomHearts2:
         else:
             modwriter = ModWriter(outdir)
 
-        assetgenerator = AssetGenerator(modwriter, spawn_manager=self.spawn_manager, location_manager=self.location_manager, enemy_manager=self.enemy_manager)
+        assetgenerator = AssetGenerator(modwriter, spawn_manager=self.spawn_manager, location_manager=self.location_manager, enemy_manager=self.enemy_manager, ispc=randomization.get("memory_expansion", False))
 
         utility_mods = randomization.get("utility_mods", [])
 

@@ -120,9 +120,10 @@ class AssetGenerator:
         for w, world in replacement_spawns.items():
             for r, room in world.items():
                 ardname = self.location_manager.locmap[r]
+                region = '' if not self.ispc else 'us/'
                 roomasset = {
                     "method": "binarc",
-                    "name": "ard/{}.ard".format(ardname),
+                    "name": "ard/{}{}.ard".format(region, ardname),
                     "source": []
                 }
 
@@ -165,7 +166,17 @@ class AssetGenerator:
                     spasset = self.modwriter.writeSpawnpoint(ardname, sp, roommods[sp])
                     roomasset["source"].append(spasset)
 
-                self.update_area_data_programs(ardname, roomasset["source"])
+                # Generalize if you need more files like this
+                # For now it's only needed for OC Cups
+                if ardname == "he09":
+                    basename = "he09.btl.ps2.areadatascript"
+                    if self.ispc:
+                        basename = basename.replace("ps2","pc")
+                    assetpath = os.path.join(os.path.dirname(__file__), "data", basename)
+                    programasset = self.modwriter.writeCopiedSubfile(ardname, "btl", "AreaDataScript", assetpath)
+                    roomasset["source"].append(programasset)
+                else:
+                    self.update_area_data_programs(ardname, roomasset["source"])
             
                 self.assets.append(roomasset)
         if text_spoilers["final_fights"]:
@@ -185,5 +196,7 @@ class AssetGenerator:
                 if mission == "\"MU02_MS103B\"":
                     continue # Ambush has some serious issues related to cost
                 script.update_program(p, HARDCAP)
-                programasset = self.modwriter.writeAreaDataProgram(ardname, "btl", p, script.get_program(p))
-                roomsource.append(programasset)
+            if self.ispc:
+                script.add_packet_spec(p)
+            programasset = self.modwriter.writeAreaDataProgram(ardname, "btl", p, script.get_program(p))
+            roomsource.append(programasset)

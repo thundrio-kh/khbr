@@ -131,3 +131,17 @@ class ModWriter:
             "name": "msn/jp/{}.bar".format(msnname),
             "source": [{"name": relfn}]
         }
+        return asset
+
+    def writeCopiedSubfile(self, ardname, subfilename, filetype, assetpath):
+        filename = os.path.basename(assetpath)
+        outfn = os.path.join(self.outdir, "files", "ard", ardname, filename)
+        fn = os.path.join("files", "ard", ardname, filename)
+        filebytes = open(assetpath, "rb").read()
+        self.write_method(outfn, fn, filebytes)
+        return {
+            "method": "copy",
+            "name": subfilename,
+            "source": [{"name": fn}],
+            "type": filetype
+        }

@@ -5,11 +5,12 @@ import testutils
 import shutil, yaml
 
 def get_boss_list(requireSourceReplace=True):
+    #TODO Something about this feels wrong, need to deal with PC?
     # Get a list of bosses that the enemies.yaml says is available
     # For isWild thats just every boss that is enabled
     # for oneToOne thats just every boss that is enabled + source_replace_allowed: true
     boss_list = []
-    enemy_yaml = yaml.load(open(os.path.join(os.path.dirname(__file__), "data", "KH2", "enemies.yaml")))
+    enemy_yaml = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", "enemies.yaml")))
     for enemy in enemy_yaml.values():
         if enemy["type"] != "boss":
             continue
@@ -48,7 +49,7 @@ def validate_boss_placements(randomization, pc=False):
     import yaml
     kh2 = KingdomHearts2()
     if pc:
-        kh2.set_enemy_records("full_enemy_records_pc.json")
+        kh2.enemy_manager.set_enemies("full_enemy_records_pc.json")
     vanilla = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")))
     used_bosses = []
     for world_name in randomization["spawns"]:
@@ -214,7 +215,7 @@ def validate_selected(randomization, name, isboss):
 def validate_consistent_bosses(randomization, pc=False):
     kh2 = KingdomHearts2()
     if pc:
-        kh2.set_enemy_records("full_enemy_records_pc.json")
+        kh2.enemy_manager.set_enemies("full_enemy_records_pc.json")
     # Check that Cerberus and Cerberus in cups are the same parent
     # normal_cerberus = get_enemies_in("Olympus Coliseum", "Cave of the Dead: Entrance", "b_40")
     # cups_cerberus = get_enemies_in("Olympus Coliseum", "The Underdrome 09", "b_b0")
@@ -281,10 +282,10 @@ def validate_enemy_records(enemy_records):
                 assert enemy["name"] in storm_original["whitelist_destination"]
     pass
 
-def calculate_boss_percentages(randomizations, requireSourceReplace):
+def calculate_boss_percentages(randomizations, requireSourceReplace, pc=False):
     boss_ledger = {b: 0 for b in get_boss_list(requireSourceReplace=requireSourceReplace)}
     for randomization in randomizations:
-        used = validate_bosses_general(randomization)
+        used = validate_bosses_general(randomization, pc=pc)
         for boss in boss_ledger:
             if boss in used:
                 boss_ledger[boss] += 1
@@ -297,12 +298,12 @@ def calculate_boss_percentages(randomizations, requireSourceReplace):
     if failed:
         assert False, "{} bosses didn't get placed".format(failed)
 
-def calculate_luxord_replacement_variety(randomizations, max_percent):
+def calculate_luxord_replacement_variety(randomizations, max_percent, pc=False):
     storm_rider_count = 0
     N = len(randomizations)
     results = []
     for randomization in randomizations:
-        validate_bosses_general(randomization)
+        validate_bosses_general(randomization, pc=pc)
         rep = get_luxord_replacement(randomization)
         if rep == "Storm Rider":
             storm_rider_count += 1
