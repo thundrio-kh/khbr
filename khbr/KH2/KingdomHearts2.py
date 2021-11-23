@@ -5,11 +5,11 @@ from khbr.textutils import create_spoiler_text
 from khbr.utils import print_debug
 from khbr._config import DIAGNOSTICS
 from khbr.randutils import pickbossmapping, pickenemymapping
-from KH2.EnemyManager import EnemyManager
-from KH2.LocationManager import LocationManager
-from KH2.MissionManager import MissionManager
-from KH2.SpawnManager import SpawnManager
-from KH2.schemas.random_config import RandomConfig
+from khbr.KH2.EnemyManager import EnemyManager
+from khbr.KH2.LocationManager import LocationManager
+from khbr.KH2.MissionManager import MissionManager
+from khbr.KH2.SpawnManager import SpawnManager
+from khbr.KH2.schemas.random_config import RandomConfig
 import os, time
 class KingdomHearts2:
     def __init__(self):

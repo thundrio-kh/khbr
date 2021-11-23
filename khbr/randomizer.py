@@ -4,7 +4,7 @@ from khbr.utils import print_debug
 import time, json, random, os, shutil, yaml, base64, sys
 from zipfile import ZipFile
 import random
-from _config import *
+from khbr._config import *
 
 supported_games = ["kh2"]
 
