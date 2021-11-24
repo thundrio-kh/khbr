@@ -1,5 +1,7 @@
 import unittest, os, functools, sys, traceback, pdb
-from randomizer import Randomizer, KingdomHearts2
+from khbr.randomizer import Randomizer, KingdomHearts2
+from khbr.KH2.ModWriter import ModWriter
+from khbr.randutils import pickbossmapping
 import testutils
 import shutil
 # Not really formal unit tests, more like just some basic integration tests to make sure different combinations of options work
@@ -20,7 +22,7 @@ class Tests(unittest.TestCase):
         assert not os.path.exists(fn)
     
     def test_read_all_zexion(self):
-        seedfn = os.path.join(os.path.dirname(__file__), "testdata", "zexion.json")
+        seedfn = os.path.join(os.path.dirname(__file__), "KH2", "data", "testdata", "zexion.json")
         if os.path.exists(os.path.join(testutils.get_tmp_path(), "test")):
             shutil.rmtree(os.path.join(testutils.get_tmp_path(), "test"))
         rando = Randomizer(tempdir=testutils.get_tmp_path(), tempfn="test")
@@ -191,24 +193,22 @@ class Tests(unittest.TestCase):
         # Make sure it's valid base64
         base64.decodebytes(b64)
 
-
-
     def test_getbosses(self):
         kh2 = KingdomHearts2()
-        kh2.get_bosses(usefilters=False, getavail=True)
-        testutils.validate_enemy_records(kh2.enemy_records)
+        kh2.enemy_manager.create_enemy_records(getavail=True)
+        testutils.validate_enemy_records(kh2.enemy_manager.enemy_records)
 
     def test_enmp(self):
         import yaml
         kh2 = KingdomHearts2()
-        with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
+        with open(os.path.join(os.path.dirname(__file__), "KH2", "data", "enmpVanilla.yml")) as f:
             enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)
-        generated_enmp = kh2.dumpEnmpData(enmp_data_vanilla)
+        generated_enmp = ModWriter('.').enmp_manager.dumpEnmpData(enmp_data_vanilla)
 
     def test_pickbossmapping(self):
         kh2 = KingdomHearts2()
-        bosses = kh2.get_boss_list({})
-        mapping = kh2.pickbossmapping(bosses)
+        bosses = kh2.enemy_manager.get_boss_list({})
+        mapping = pickbossmapping(kh2.enemy_manager.enemy_records, bosses)
         def getcounts(mapping):
             counts = {}
             maxcounts = 0
