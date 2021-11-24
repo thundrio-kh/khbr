@@ -106,12 +106,15 @@ class EnemyManager:
 
     @staticmethod
     def inheritConfig(parent, variation, defaults, ispc=False):
+        if ispc and "pc" in variation:
+            for k in variation["pc"]:
+                variation[k] = variation["pc"][k]
         for k in parent:
             if ispc and k == "pc":
                 for k_pc in parent["pc"]:
                     parent[k_pc] = parent["pc"][k_pc]
             if k == "variations":
-                if k not in variation:
+                if k not in variation: # confused, what is this for
                     variation[k] = list(parent[k].keys())
                 continue
             if k not in variation:

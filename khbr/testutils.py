@@ -2,29 +2,28 @@
 import unittest, os, functools, sys, traceback, pdb
 from randomizer import Randomizer, KingdomHearts2
 import testutils
-import shutil, yaml
+import shutil, yaml, json
 
-def get_boss_list(requireSourceReplace=True):
-    #TODO Something about this feels wrong, need to deal with PC?
+def get_boss_list(requireSourceReplace=True, pc=False):
     # Get a list of bosses that the enemies.yaml says is available
     # For isWild thats just every boss that is enabled
     # for oneToOne thats just every boss that is enabled + source_replace_allowed: true
     boss_list = []
-    enemy_yaml = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", "enemies.yaml")))
-    for enemy in enemy_yaml.values():
-        if enemy["type"] != "boss":
-            continue
-        for variation in enemy["variations"]:
-            var_obj = enemy["variations"][variation]
-            enabled = enemy.get("enabled", False) or var_obj.get("enabled", False)
-            replace_as = enemy.get("replace_as", False) or var_obj.get("replace_as", False)
-            source_enabled = enemy.get("source_replace_allowed", True) or var_obj.get("source_replace_allowed", False)
-            if enabled and not replace_as:
-                if requireSourceReplace:
-                    if source_enabled:
-                        boss_list.append(variation)
-                    continue
-                boss_list.append(variation)
+    filename = "full_enemy_records"
+    if pc:
+        filename += "_pc"
+    filename += ".json"
+    enemy_json = json.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", filename)))
+    for enemy in enemy_json:
+        enemy_obj = enemy_json[enemy]
+        if enemy_obj["type"] == "boss" and enemy_obj["enabled"]:
+            source_enabled = enemy_obj.get("source_replace_allowed", True) 
+            replace_as = enemy_obj.get("replace_as", False)
+            if requireSourceReplace and not source_enabled:
+                continue
+            if replace_as:
+                continue
+            boss_list.append(enemy)
     return boss_list
 
 def get_luxord_replacement(randomization):
@@ -283,7 +282,7 @@ def validate_enemy_records(enemy_records):
     pass
 
 def calculate_boss_percentages(randomizations, requireSourceReplace, pc=False):
-    boss_ledger = {b: 0 for b in get_boss_list(requireSourceReplace=requireSourceReplace)}
+    boss_ledger = {b: 0 for b in get_boss_list(requireSourceReplace=requireSourceReplace, pc=pc)}
     for randomization in randomizations:
         used = validate_bosses_general(randomization, pc=pc)
         for boss in boss_ledger:

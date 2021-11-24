@@ -1288,6 +1288,8 @@ Blizzard Lord:
       - 0
       - 0
     Blizzard Lord (Cups):
+      pc: 
+        enabled: false
       tags:
       - cups
       msn: HE_COL_8TI_BOSS
@@ -1383,6 +1385,8 @@ Cerberus:
     Cerberus (Cups):
       tags:
       - cups
+      pc: 
+        enabled: false
       enabled: true
       msn_list:
       - program: 194
@@ -2444,12 +2448,14 @@ Hayner:
 Hercules:
   can_be_enemy: true
   enabled: true
+  pc: 
+    enabled: false
   enmp_index: 0xB2
   hp: 100
   level: 99
   limiter: 17
   model: N_HE010_BTL_CLSM
-  msn_replace_allowed: false
+  msn_replace_allowed: falseS
   obj_id: 2320
   size: 2.48
   type: boss
@@ -4566,6 +4572,8 @@ Volcano Lord:
       - 0
       - 0
     Volcano Lord (Cups):
+      pc:
+        enabled: false
       tags:
       - cups
       msn: HE_COL_8_5
