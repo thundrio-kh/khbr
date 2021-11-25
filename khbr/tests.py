@@ -231,9 +231,20 @@ class Tests(unittest.TestCase):
         assert True == testutils.get_room_randomized(randomization_pc, "Agrabah", "The Cave of Wonders: Treasure Room", "b_40")
         assert False == testutils.get_room_randomized(randomization_ps2, "Agrabah", "The Cave of Wonders: Treasure Room", "b_40")
 
+    def test_is_replacement_blocked(self):
+        kh2 = KingdomHearts2()
+        from khbr.KH2.schemas.enemy_records import get_schema
+        source = get_schema()
+        source["tags"] = ["rc_blocked"]
+        dest = get_schema()
+        assert not kh2.enemy_manager.isReplacementBlocked(source, dest)
+        dest["tags"] = ["needs_rc"]
+        assert kh2.enemy_manager.isReplacementBlocked(source, dest)
+
+
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_seedgen_boss_one_to_one_pc()
+ut.test_is_replacement_blocked()
 
 # Uncomment to run the actual tests
-unittest.main()
+#unittest.main()

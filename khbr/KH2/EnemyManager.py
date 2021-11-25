@@ -229,6 +229,16 @@ class EnemyManager:
         if not source_boss["msn_replace_allowed"]:
             if dest_boss["msn_required"]:
                 return True
+        # Adding needsRC, RCblocked, needsTeleport, TeleportBlocked tags
+        # if the dest boss has a behavior mod
+        behavior_mods = {
+            "needs_rc": "rc_blocked",
+            "needs_teleport": "teleport_blocked"
+        }
+        dest_boss_behavior_mods = set(behavior_mods).intersection(dest_boss["tags"])
+        for k in dest_boss_behavior_mods:
+            if behavior_mods[k] in source_boss["tags"]:
+                return True
         return False
 
     def categorize_enemies(self, included_enemylist):

@@ -955,6 +955,8 @@ Armor Xemnas II:
   blacklist_source:
   - Axel I
   enmp_index: 0xA0
+  tags:
+  - teleport_blocked
   hp: 100
   level: 99
   limiter: 0
@@ -1035,6 +1037,7 @@ Axel I:
   limiter: 0
   tags:
   - roxas
+  - teleport_blocked
   model: B_EX110_SKIRMISH
   msn: TT05_MS404
   enmp_index: 0x94
@@ -1076,6 +1079,9 @@ Axel II:
   tags:
   - organization
   - roxas
+  - teleport_blocked
+  - needs_teleport
+  - needs_rc
   enabled: true
   enmp_index: 0x4E
   hp: 100
@@ -1089,26 +1095,7 @@ Axel II:
   obj_id: 81
   blacklist_destination:
   - Scar
-  - Groundshaker # Lion Sora can't do RC to be able to kill Data Axel
   - Cerberus # Axel Data can't do RC so unbeatable
-  - Past Pete # TELEPORTER
-  - Xemnas # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
-  - Vexen # Teleports into weird spots
   type: boss
   whitelist_source:
   - Axel I
@@ -1144,6 +1131,8 @@ Banzai:
   enmp_index: 0x5B
   hp: 100
   level: 99
+  tags: 
+  - rc_blocked
   limiter: 0
   model: B_LK100_10
   obj_id: 666
@@ -1651,6 +1640,7 @@ Luxord (Data):
   tags:
   - data
   - organization
+  - needs_teleport
   variationof: Luxord
   enabled: true
   enmp_index: 0xF3
@@ -1665,24 +1655,6 @@ Luxord (Data):
   msn_required: true
   obj_id: 2504
   type: boss
-  blacklist_destination:
-  - Xemnas # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
-  - Vexen # TELEPORTER
   variations:
     Luxord (Data):
       vars:
@@ -1811,6 +1783,8 @@ Demyx OC:
   level: 99
   limiter: 0
   model: B_EX120
+  tags:
+  - teleport_blocked
   msn: HE17_MS105
   source_replace_allowed: false
   obj_id: 795
@@ -1937,6 +1911,8 @@ Ed:
   enabled: false
   enmp_index: 0x5B
   hp: 100
+  tags:
+  - rc_blocked
   level: 99
   limiter: 0
   model: B_LK100_20
@@ -2163,6 +2139,8 @@ Graveyard NM:
       - 0
       - 0
 Grim Reaper I:
+  tags:
+  - teleport_blocked
   enabled: true
   enmp_index: 0x9A
   hp: 100
@@ -2233,6 +2211,9 @@ Groundshaker:
   hp: 100
   level: 99
   limiter: 0
+  tags:
+  - rc_blocked
+  - teleport_blocked
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   model: B_LK120
@@ -2253,6 +2234,8 @@ Hades Cups:
   can_be_enemy: true
   tags:
   - cups
+  - rc_blocked # Technically just Hades II but idk
+  - needs_teleport
   enabled: true
   enmp_index: 0xB1
   hp: 100
@@ -2266,23 +2249,6 @@ Hades Cups:
   obj_id: 2318
   size: 3.14
   type: boss
-  blacklist_source:
-  - Xemnas # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
   variations:
     Hades Cups:
       enabled: true
@@ -2341,9 +2307,10 @@ Hades II:
   level: 99
   limiter: 0
   model: B_HE030
+  tags:
+  - rc_blocked
   blacklist_source:
     - Axel II # Hercules makes the RC hard to do
-    - Demyx # Fight doesn't start properly
   roommaxsize: 13 # just a random guess
   obj_id: 350
   replace_as: Hades Cups
@@ -2398,6 +2365,7 @@ Hayner:
   - roxas
   - sourcemaxhp
   - onetooneonly
+  - teleport_blocked
   enmp_index: 0x96
   hp: 100
   level: 99
@@ -2455,7 +2423,7 @@ Hercules:
   level: 99
   limiter: 17
   model: N_HE010_BTL_CLSM
-  msn_replace_allowed: falseS
+  msn_replace_allowed: false
   obj_id: 2320
   size: 2.48
   type: boss
@@ -2794,6 +2762,7 @@ Large Body:
 Larxene:
   tags:
   - organization
+  - needs_teleport
   can_be_enemy: true
   enabled: true
   enmp_index: 0xD8
@@ -2811,24 +2780,6 @@ Larxene:
   unchanged_file_size: true
   pc:
     unchanged_file_size: false
-  blacklist_destination:
-  - Xemnas # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
-  - Vexen # Teleports into weird spots
   variations:
     Larxene:
       vars:
@@ -3005,6 +2956,7 @@ Luxord:
   tags:
   - organization
   - solo
+  - needs_teleport
   enabled: true
   enmp_index: 0x59
   hp: 100
@@ -3017,24 +2969,6 @@ Luxord:
   size: 4.67
   room_size: 7.25
   program: 58
-  blacklist_destination:
-  - Xemnas # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
-  - Vexen # TELEPORTER
   adds:
   - ObjectId: 2224 # ???
   type: boss
@@ -3242,6 +3176,8 @@ Bomb Bell A:
 Oogie Boogie:
   enabled: false
   enmp_index: 0x4B
+  tags:
+  - teleport_blocked
   hp: 100
   level: 99
   limiter: 0
@@ -3269,6 +3205,8 @@ Past Pete:
   can_be_enemy: true
   enabled: true
   enmp_index: 0x71
+  tags:
+  - needs_teleport
   hp: 100
   level: 99
   limiter: 0
@@ -3371,6 +3309,8 @@ Pete TR:
       - 0
 Prison Keeper:
   enabled: true
+  tags:
+  - teleport_blocked
   enmp_index: 0x77
   hp: 100
   level: 99
@@ -3554,6 +3494,7 @@ Roxas:
   tags:
   - organization
   - solo
+  - needs_teleport
   can_be_enemy: true
   enabled: true
   enmp_index: 0xD5
@@ -3568,24 +3509,6 @@ Roxas:
   size: 5.85
   room_size: 5.83
   type: boss
-  blacklist_destination:
-  - Xemnas # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
-  - Vexen # TELEPORTER
   variations:
     Roxas:
       msn: EH21_MS101
@@ -3626,8 +3549,6 @@ Saix:
   tags:
   - organization
   can_be_enemy: true
-  blacklist_source:
-  - Armor Xemnas # Can cause ctd when doing chakram attack
   enabled: true
   enmp_index: 0x86
   hp: 100
@@ -3690,6 +3611,8 @@ Scar:
   isnightmare: true
   enabled: true
   enmp_index: 0x5E
+  tags:
+  - rc_blocked
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   hp: 100
@@ -3717,6 +3640,7 @@ Seifer:
   tags:
   - roxas
   - sourcemaxhp
+  - teleport_blocked
   hp: 100
   level: 99
   limiter: 0
@@ -3834,6 +3758,7 @@ Setzer:
   - roxas
   - sourcemaxhp
   - onetooneonly
+  - teleport_blocked
   hp: 100
   level: 99
   limiter: 0
@@ -3977,6 +3902,8 @@ Shan-Yu:
 Shenzie:
   enabled: false
   enmp_index: 0x5B
+  tags:
+  - rc_blocked
   hp: 100
   level: 99
   limiter: 0
@@ -4237,8 +4164,8 @@ Terra:
       - 0
       - 0
 The Beast:
-  aimod: false
-  enabled: false
+  aimod: true
+  enabled: true
   enmp_index: 0x49
   blacklist_source:
   - Grim Reaper II
@@ -4301,6 +4228,8 @@ Thresholder:
   limiter: 25
   model: B_BB100
   msn: BB11_MS102
+  tags:
+  - needs_rc
   blacklist_destination:
   - Blizzard Lord # These all spawn above ground causing issues
   - Volcano Lord
@@ -4418,6 +4347,7 @@ Twilight Thorn:
   enmp_index: 0x56
   tags:
   - roxas
+  - teleport_blocked
   hp: 100
   level: 99
   limiter: 0
@@ -4460,6 +4390,7 @@ Twilight Thorn:
 Vexen:
   tags:
   - organization
+  - teleport_blocked
   enabled: true
   enmp_index: 0xC8
   hp: 100
@@ -4501,6 +4432,7 @@ Vivi:
   - roxas
   - sourcemaxhp
   - onetooneonly
+  - teleport_blocked
   hp: 100
   level: 99
   limiter: 1
@@ -4624,6 +4556,7 @@ Xemnas:
   tags:
   - organization
   - solo
+  - teleport_blocked
   aimod: true
   can_be_enemy: true
   enabled: true
@@ -4656,27 +4589,10 @@ Xigbar:
   - Roxas
   - Roxas (Data)
   - Prison Keeper
-  - Xemnas # TELEPORTER
-  - Xemnas (Data) # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
-  - Vexen # TELEPORTER
   enabled: true
   tags:
   - organization
+  - needs_teleport
   enmp_index: 0x85
   hp: 100
   level: 99
@@ -4749,6 +4665,8 @@ Yuffie:
 Zexion:
   tags:
   - organization
+  - needs_teleport
+  - needs_rc
   aimod: false # TODO current ai mod is a bit crashy I think, so just ban from weird rooms
   enabled: true
   hp: 100
@@ -4761,26 +4679,7 @@ Zexion:
   room_size: 9.14
   type: boss
   blacklist_destination:
-  - Xemnas # TELEPORTER
-  - Past Pete # TELEPORTER
-  - Prison Keeper # TELEPORTER
-  - Oogie Boogie # TELEPORTER
-  - Groundshaker # TELEPORTER
-  - Grim Reaper II # TELEPORTER
-  - Grim Reaper # TELEPORTER
-  - Twilight Thorn # TELEPORTER
-  - Axel I # TELEPORTER
-  - Vivi # TELEPORTER
-  - Hayner # TELEPORTER
-  - Seifer # TELEPORTER
-  - Setzer # TELEPORTER
-  - Demyx OC # TELEPORTER
-  - Axel II # TELEPORTER
-  - Armor Xemnas II # TELEPORTER
-  - Vexen # TELEPORTER
   - Roxas # Room becomes no ground
-  - Scar # LK can't do book RCs
-  - Groundshaker # LK can't do book RCs
   variations:
     Zexion:
       program: 151

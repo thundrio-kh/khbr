@@ -5610,6 +5610,9 @@
             "Axel I"
         ],
         "enmp_index": 160,
+        "tags": [
+            "teleport_blocked"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -5620,8 +5623,7 @@
             "Armor Xemnas II"
         ],
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "teleport_blocked",
         "isnightmare": false,
         "parent": "Armor Xemnas II",
         "variationof": null,
@@ -5658,7 +5660,6 @@
             "Hydra",
             "Leon",
             "Marluxia",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Prison Keeper",
@@ -5670,6 +5671,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -5891,7 +5893,8 @@
         "level": 99,
         "limiter": 0,
         "tags": [
-            "roxas"
+            "roxas",
+            "teleport_blocked"
         ],
         "model": "B_EX110_SKIRMISH",
         "msn": "TT05_MS404",
@@ -5932,7 +5935,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "roxas",
+        "category": "roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Axel I",
         "variationof": null,
@@ -5964,7 +5967,6 @@
             "Hayner",
             "Hercules",
             "Leon",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
@@ -5985,7 +5987,10 @@
         "name": "Axel II",
         "tags": [
             "organization",
-            "roxas"
+            "roxas",
+            "teleport_blocked",
+            "needs_teleport",
+            "needs_rc"
         ],
         "enabled": true,
         "enmp_index": 78,
@@ -6000,26 +6005,7 @@
         "obj_id": 81,
         "blacklist_destination": [
             "Scar",
-            "Groundshaker",
-            "Cerberus",
-            "Past Pete",
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen"
+            "Cerberus"
         ],
         "type": "boss",
         "whitelist_source": [
@@ -6053,7 +6039,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization-roxas",
+        "category": "needs_rc-needs_teleport-organization-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Axel II",
         "variationof": null,
@@ -6086,7 +6072,6 @@
             "Hayner",
             "Hercules",
             "Leon",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
@@ -6113,6 +6098,9 @@
         "enmp_index": 91,
         "hp": 100,
         "level": 99,
+        "tags": [
+            "rc_blocked"
+        ],
         "limiter": 0,
         "model": "B_LK100_10",
         "obj_id": 666,
@@ -6124,8 +6112,7 @@
         ],
         "replace_as": null,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "rc_blocked",
         "isnightmare": false,
         "parent": "Banzai",
         "variationof": null,
@@ -6166,6 +6153,9 @@
         "enmp_index": 91,
         "hp": 100,
         "level": 99,
+        "tags": [
+            "rc_blocked"
+        ],
         "limiter": 0,
         "model": "B_LK100_10",
         "obj_id": 666,
@@ -6177,8 +6167,7 @@
         ],
         "replace_as": null,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "rc_blocked",
         "isnightmare": false,
         "parent": "Banzai",
         "variationof": null,
@@ -6276,6 +6265,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -6555,6 +6545,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "Tifa",
             "Vivi",
             "Volcano Lord",
@@ -6562,6 +6553,9 @@
         ]
     },
     "Blizzard Lord (Cups)": {
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -6955,6 +6949,7 @@
             "Sephiroth",
             "Setzer",
             "Storm Rider",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -6971,6 +6966,9 @@
         "tags": [
             "cups"
         ],
+        "pc": {
+            "enabled": false
+        },
         "enabled": true,
         "msn_list": [
             {
@@ -7122,6 +7120,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -7830,6 +7829,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "Thresholder",
             "Tifa",
             "Vivi",
@@ -7879,26 +7879,7 @@
         "blacklist_source": [],
         "blacklist_destination": [
             "Scar",
-            "Groundshaker",
-            "Cerberus",
-            "Past Pete",
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen"
+            "Cerberus"
         ],
         "whitelist_source": [
             "Axel I",
@@ -8121,7 +8102,8 @@
         "name": "Luxord (Data)",
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "needs_teleport"
         ],
         "variationof": "Luxord",
         "enabled": true,
@@ -8137,32 +8119,13 @@
         "msn_required": true,
         "obj_id": 2504,
         "type": "boss",
-        "blacklist_destination": [
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen"
-        ],
         "variations": [
             "Luxord (Data)"
         ],
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-organization",
+        "category": "data-needs_teleport-organization",
         "isnightmare": false,
         "parent": "Luxord",
         "children": [],
@@ -8172,6 +8135,7 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
+        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [
@@ -8224,9 +8188,7 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [
-            "Armor Xemnas"
-        ],
+        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -8387,25 +8349,7 @@
             "Sark",
             "Roxas",
             "Roxas (Data)",
-            "Prison Keeper",
-            "Xemnas",
-            "Xemnas (Data)",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen"
+            "Prison Keeper"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -8498,6 +8442,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -8520,6 +8465,9 @@
         "level": 99,
         "limiter": 0,
         "model": "B_EX120",
+        "tags": [
+            "teleport_blocked"
+        ],
         "msn": "HE17_MS105",
         "source_replace_allowed": false,
         "obj_id": 795,
@@ -8532,8 +8480,7 @@
         ],
         "replace_as": null,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "teleport_blocked",
         "isnightmare": false,
         "parent": "Demyx OC",
         "variationof": null,
@@ -9080,6 +9027,9 @@
         "enabled": false,
         "enmp_index": 91,
         "hp": 100,
+        "tags": [
+            "rc_blocked"
+        ],
         "level": 99,
         "limiter": 0,
         "model": "B_LK100_20",
@@ -9092,8 +9042,7 @@
         ],
         "replace_as": null,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "rc_blocked",
         "isnightmare": false,
         "parent": "Ed",
         "variationof": null,
@@ -9134,6 +9083,9 @@
         "enabled": false,
         "enmp_index": 91,
         "hp": 100,
+        "tags": [
+            "rc_blocked"
+        ],
         "level": 99,
         "limiter": 0,
         "model": "B_LK100_20",
@@ -9146,8 +9098,7 @@
         ],
         "replace_as": null,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "rc_blocked",
         "isnightmare": false,
         "parent": "Ed",
         "variationof": null,
@@ -9569,6 +9520,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -10215,6 +10167,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -10234,6 +10187,10 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
+        "tags": [
+            "rc_blocked",
+            "teleport_blocked"
+        ],
         "blacklist_source": [
             "Shan-Yu"
         ],
@@ -10255,8 +10212,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "rc_blocked-teleport_blocked",
         "isnightmare": false,
         "parent": "Groundshaker",
         "variationof": null,
@@ -10296,7 +10252,6 @@
             "Hydra",
             "Leon",
             "Marluxia",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Prison Keeper",
@@ -10309,8 +10264,8 @@
             "Setzer",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vexen",
@@ -10342,7 +10297,9 @@
         "name": "Hades Cups",
         "can_be_enemy": true,
         "tags": [
-            "cups"
+            "cups",
+            "rc_blocked",
+            "needs_teleport"
         ],
         "enmp_index": 177,
         "hp": 100,
@@ -10355,30 +10312,12 @@
         "obj_id": 2318,
         "size": 3.14,
         "type": "boss",
-        "blacklist_source": [
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II"
-        ],
         "variations": [
             "Hades Cups"
         ],
         "replace_as": "Hades Cups",
         "source_replace_allowed": true,
-        "category": "cups",
+        "category": "cups-needs_teleport-rc_blocked",
         "isnightmare": false,
         "parent": "Hades II",
         "children": [],
@@ -10388,6 +10327,9 @@
         "sizeTag": null,
         "room_size": 9.14,
         "roommaxsize": 13,
+        "blacklist_source": [
+            "Axel II"
+        ],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -10517,9 +10459,11 @@
         "level": 99,
         "limiter": 0,
         "model": "B_HE030",
+        "tags": [
+            "rc_blocked"
+        ],
         "blacklist_source": [
-            "Axel II",
-            "Demyx"
+            "Axel II"
         ],
         "roommaxsize": 13,
         "obj_id": 350,
@@ -10532,8 +10476,7 @@
         ],
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "rc_blocked",
         "isnightmare": false,
         "parent": "Hades II",
         "variationof": null,
@@ -10577,8 +10520,8 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
-            "Thresholder",
             "Tifa",
             "Vivi",
             "Volcano Lord",
@@ -10616,9 +10559,11 @@
         "level": 99,
         "limiter": 0,
         "model": "B_HE030",
+        "tags": [
+            "rc_blocked"
+        ],
         "blacklist_source": [
-            "Axel II",
-            "Demyx"
+            "Axel II"
         ],
         "roommaxsize": 13,
         "obj_id": 350,
@@ -10630,8 +10575,7 @@
             "Hades II (1)"
         ],
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "rc_blocked",
         "isnightmare": false,
         "parent": "Hades II",
         "variationof": null,
@@ -10726,7 +10670,8 @@
         "tags": [
             "roxas",
             "sourcemaxhp",
-            "onetooneonly"
+            "onetooneonly",
+            "teleport_blocked"
         ],
         "enmp_index": 150,
         "hp": 100,
@@ -10770,7 +10715,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "onetooneonly-roxas-sourcemaxhp",
+        "category": "onetooneonly-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Hayner",
         "variationof": null,
@@ -10803,7 +10748,6 @@
             "Hayner",
             "Hercules",
             "Leon",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
@@ -10836,6 +10780,9 @@
         ],
         "name": "Hercules",
         "can_be_enemy": true,
+        "pc": {
+            "enabled": false
+        },
         "enmp_index": 178,
         "hp": 100,
         "level": 99,
@@ -10907,6 +10854,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -12380,6 +12328,7 @@
             "Sephiroth",
             "Setzer",
             "Shan-Yu",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -12945,7 +12894,8 @@
         ],
         "name": "Larxene",
         "tags": [
-            "organization"
+            "organization",
+            "needs_teleport"
         ],
         "can_be_enemy": true,
         "enabled": true,
@@ -12965,25 +12915,6 @@
         "pc": {
             "unchanged_file_size": false
         },
-        "blacklist_destination": [
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen"
-        ],
         "variations": [
             "Larxene",
             "Larxene (Data)"
@@ -12991,7 +12922,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization",
+        "category": "needs_teleport-organization",
         "parent": "Larxene",
         "variationof": null,
         "children": [
@@ -13003,6 +12934,7 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
+        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [],
@@ -13078,25 +13010,6 @@
         "pc": {
             "unchanged_file_size": false
         },
-        "blacklist_destination": [
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen"
-        ],
         "variations": [
             "Larxene",
             "Larxene (Data)"
@@ -13114,6 +13027,7 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
+        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [],
@@ -13209,6 +13123,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -13862,7 +13777,8 @@
         "name": "Luxord",
         "tags": [
             "organization",
-            "solo"
+            "solo",
+            "needs_teleport"
         ],
         "enabled": true,
         "enmp_index": 89,
@@ -13876,25 +13792,6 @@
         "size": 4.67,
         "room_size": 7.25,
         "program": 58,
-        "blacklist_destination": [
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen"
-        ],
         "adds": [
             {
                 "ObjectId": 2224
@@ -13907,7 +13804,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization-solo",
+        "category": "needs_teleport-organization-solo",
         "isnightmare": false,
         "parent": "Luxord",
         "variationof": null,
@@ -13921,6 +13818,7 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
+        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "subtracts": [],
@@ -13965,6 +13863,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -14685,6 +14584,9 @@
         "name": "Oogie Boogie",
         "enabled": false,
         "enmp_index": 75,
+        "tags": [
+            "teleport_blocked"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -14705,8 +14607,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "teleport_blocked",
         "isnightmare": false,
         "parent": "Oogie Boogie",
         "variationof": null,
@@ -14737,7 +14638,6 @@
             "Hercules",
             "Leon",
             "Oogie Boogie",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Riku",
@@ -14760,6 +14660,9 @@
         "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 113,
+        "tags": [
+            "needs_teleport"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -14776,8 +14679,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "needs_teleport",
         "isnightmare": false,
         "parent": "Past Pete",
         "variationof": null,
@@ -14803,6 +14705,7 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
+            "Axel II",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -14820,6 +14723,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -14911,6 +14815,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -15039,6 +14944,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "Thresholder",
             "Tifa",
             "Vivi",
@@ -15118,6 +15024,9 @@
         ],
         "name": "Prison Keeper",
         "enabled": true,
+        "tags": [
+            "teleport_blocked"
+        ],
         "enmp_index": 119,
         "hp": 100,
         "level": 99,
@@ -15146,8 +15055,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "teleport_blocked",
         "isnightmare": false,
         "parent": "Prison Keeper",
         "variationof": null,
@@ -15186,7 +15094,6 @@
             "Hostile Program",
             "Leon",
             "Marluxia",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Prison Keeper",
@@ -15199,6 +15106,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -16886,7 +16794,8 @@
         "name": "Roxas",
         "tags": [
             "organization",
-            "solo"
+            "solo",
+            "needs_teleport"
         ],
         "can_be_enemy": true,
         "enabled": true,
@@ -16901,25 +16810,6 @@
         "size": 5.85,
         "room_size": 5.83,
         "type": "boss",
-        "blacklist_destination": [
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen"
-        ],
         "variations": [
             "Roxas",
             "Roxas (Data)"
@@ -16927,7 +16817,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization-solo",
+        "category": "needs_teleport-organization-solo",
         "parent": "Roxas",
         "variationof": null,
         "children": [
@@ -16939,6 +16829,7 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
+        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [],
@@ -16983,6 +16874,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -17019,25 +16911,6 @@
         "size": 5.85,
         "room_size": 5.83,
         "type": "boss",
-        "blacklist_destination": [
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen"
-        ],
         "variations": [
             "Roxas",
             "Roxas (Data)"
@@ -17055,6 +16928,7 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
+        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [],
@@ -17124,9 +16998,6 @@
             "organization"
         ],
         "can_be_enemy": true,
-        "blacklist_source": [
-            "Armor Xemnas"
-        ],
         "enabled": true,
         "enmp_index": 134,
         "hp": 100,
@@ -17158,6 +17029,7 @@
         "aimod": null,
         "sizeTag": null,
         "roommaxsize": null,
+        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -17200,6 +17072,7 @@
             "Sephiroth",
             "Setzer",
             "Shan-Yu",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -17390,6 +17263,7 @@
             "Sephiroth",
             "Setzer",
             "Shan-Yu",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -17412,6 +17286,9 @@
         "isnightmare": true,
         "enabled": true,
         "enmp_index": 94,
+        "tags": [
+            "rc_blocked"
+        ],
         "blacklist_source": [
             "Shan-Yu"
         ],
@@ -17431,8 +17308,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "rc_blocked",
         "parent": "Scar",
         "variationof": null,
         "children": [
@@ -17485,8 +17361,8 @@
             "Sephiroth",
             "Setzer",
             "Terra",
+            "The Beast",
             "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vexen",
@@ -17516,7 +17392,8 @@
         "enmp_index": 135,
         "tags": [
             "roxas",
-            "sourcemaxhp"
+            "sourcemaxhp",
+            "teleport_blocked"
         ],
         "hp": 100,
         "level": 99,
@@ -17560,7 +17437,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "roxas-sourcemaxhp",
+        "category": "roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17592,7 +17469,6 @@
             "Hayner",
             "Hercules",
             "Leon",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
@@ -17626,7 +17502,8 @@
         "enmp_index": 135,
         "tags": [
             "roxas",
-            "sourcemaxhp"
+            "sourcemaxhp",
+            "teleport_blocked"
         ],
         "hp": 100,
         "level": 99,
@@ -17668,7 +17545,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "roxas-sourcemaxhp",
+        "category": "roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17710,7 +17587,8 @@
         "enmp_index": 135,
         "tags": [
             "roxas",
-            "sourcemaxhp"
+            "sourcemaxhp",
+            "teleport_blocked"
         ],
         "hp": 100,
         "level": 99,
@@ -17751,7 +17629,7 @@
             "Seifer (3)",
             "Seifer (4)"
         ],
-        "category": "roxas-sourcemaxhp",
+        "category": "roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17791,7 +17669,8 @@
         "enmp_index": 135,
         "tags": [
             "roxas",
-            "sourcemaxhp"
+            "sourcemaxhp",
+            "teleport_blocked"
         ],
         "hp": 100,
         "level": 99,
@@ -17834,7 +17713,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "roxas-sourcemaxhp",
+        "category": "roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -17874,7 +17753,8 @@
         "enmp_index": 135,
         "tags": [
             "roxas",
-            "sourcemaxhp"
+            "sourcemaxhp",
+            "teleport_blocked"
         ],
         "hp": 100,
         "level": 99,
@@ -17917,7 +17797,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "roxas-sourcemaxhp",
+        "category": "roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -18033,6 +17913,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -18074,7 +17955,8 @@
         "tags": [
             "roxas",
             "sourcemaxhp",
-            "onetooneonly"
+            "onetooneonly",
+            "teleport_blocked"
         ],
         "hp": 100,
         "level": 99,
@@ -18117,7 +17999,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "onetooneonly-roxas-sourcemaxhp",
+        "category": "onetooneonly-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Setzer",
         "variationof": null,
@@ -18150,7 +18032,6 @@
             "Hayner",
             "Hercules",
             "Leon",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
@@ -18393,6 +18274,7 @@
             "Seifer",
             "Setzer",
             "Shadow Stalker",
+            "The Beast",
             "Tifa",
             "Vivi",
             "Volcano Lord",
@@ -18554,6 +18436,9 @@
         "name": "Shenzie",
         "enabled": false,
         "enmp_index": 91,
+        "tags": [
+            "rc_blocked"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -18567,8 +18452,7 @@
         ],
         "replace_as": null,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "rc_blocked",
         "isnightmare": false,
         "parent": "Shenzie",
         "variationof": null,
@@ -18608,6 +18492,9 @@
         "name": "Shenzie (1)",
         "enabled": false,
         "enmp_index": 91,
+        "tags": [
+            "rc_blocked"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -18621,8 +18508,7 @@
         ],
         "replace_as": null,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "rc_blocked",
         "isnightmare": false,
         "parent": "Shenzie",
         "variationof": null,
@@ -19256,6 +19142,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19507,6 +19394,7 @@
             "Shan-Yu",
             "Storm Rider",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19527,8 +19415,8 @@
             0
         ],
         "name": "The Beast",
-        "aimod": false,
-        "enabled": false,
+        "aimod": true,
+        "enabled": true,
         "enmp_index": 73,
         "blacklist_source": [
             "Grim Reaper II"
@@ -19686,6 +19574,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19708,6 +19597,9 @@
         "limiter": 25,
         "model": "B_BB100",
         "msn": "BB11_MS102",
+        "tags": [
+            "needs_rc"
+        ],
         "blacklist_destination": [
             "Blizzard Lord",
             "Volcano Lord",
@@ -19734,8 +19626,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "needs_rc",
         "isnightmare": false,
         "parent": "Thresholder",
         "variationof": null,
@@ -19771,6 +19662,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -19865,6 +19757,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -20148,7 +20041,8 @@
         "enabled": true,
         "enmp_index": 86,
         "tags": [
-            "roxas"
+            "roxas",
+            "teleport_blocked"
         ],
         "hp": 100,
         "level": 99,
@@ -20191,7 +20085,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "roxas",
+        "category": "roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Twilight Thorn",
         "variationof": null,
@@ -20223,7 +20117,6 @@
             "Hayner",
             "Hercules",
             "Leon",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
@@ -20299,7 +20192,8 @@
         ],
         "name": "Vexen",
         "tags": [
-            "organization"
+            "organization",
+            "teleport_blocked"
         ],
         "enabled": true,
         "enmp_index": 200,
@@ -20323,7 +20217,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization",
+        "category": "organization-teleport_blocked",
         "isnightmare": false,
         "parent": "Vexen",
         "variationof": null,
@@ -20356,7 +20250,6 @@
             "Hayner",
             "Hercules",
             "Leon",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Riku",
@@ -20392,7 +20285,8 @@
         "tags": [
             "roxas",
             "sourcemaxhp",
-            "onetooneonly"
+            "onetooneonly",
+            "teleport_blocked"
         ],
         "hp": 100,
         "level": 99,
@@ -20438,7 +20332,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "onetooneonly-roxas-sourcemaxhp",
+        "category": "onetooneonly-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Vivi",
         "variationof": null,
@@ -20467,7 +20361,6 @@
             "Hayner",
             "Hercules",
             "Leon",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Sark",
@@ -20551,6 +20444,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "The Beast",
             "Tifa",
             "Vivi",
             "Volcano Lord",
@@ -20558,6 +20452,9 @@
         ]
     },
     "Volcano Lord (Cups)": {
+        "pc": {
+            "enabled": false
+        },
         "tags": [
             "cups"
         ],
@@ -20744,6 +20641,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -20765,7 +20663,8 @@
         "name": "Xemnas",
         "tags": [
             "organization",
-            "solo"
+            "solo",
+            "teleport_blocked"
         ],
         "aimod": true,
         "can_be_enemy": true,
@@ -20787,7 +20686,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization-solo",
+        "category": "organization-solo-teleport_blocked",
         "parent": "Xemnas",
         "variationof": null,
         "children": [
@@ -20827,7 +20726,6 @@
             "Leon",
             "Lexaeus",
             "Marluxia",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Prison Keeper",
@@ -20840,6 +20738,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -20868,29 +20767,12 @@
             "Sark",
             "Roxas",
             "Roxas (Data)",
-            "Prison Keeper",
-            "Xemnas",
-            "Xemnas (Data)",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen"
+            "Prison Keeper"
         ],
         "enabled": true,
         "tags": [
-            "organization"
+            "organization",
+            "needs_teleport"
         ],
         "enmp_index": 133,
         "hp": 100,
@@ -20911,7 +20793,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization",
+        "category": "needs_teleport-organization",
         "parent": "Xigbar",
         "variationof": null,
         "children": [
@@ -20958,6 +20840,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -21056,6 +20939,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -21245,7 +21129,9 @@
         ],
         "name": "Zexion",
         "tags": [
-            "organization"
+            "organization",
+            "needs_teleport",
+            "needs_rc"
         ],
         "aimod": false,
         "enabled": true,
@@ -21259,26 +21145,7 @@
         "room_size": 9.14,
         "type": "boss",
         "blacklist_destination": [
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen",
-            "Roxas",
-            "Scar",
-            "Groundshaker"
+            "Roxas"
         ],
         "variations": [
             "Zexion",
@@ -21287,7 +21154,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization",
+        "category": "needs_rc-needs_teleport-organization",
         "isnightmare": false,
         "parent": "Zexion",
         "variationof": null,
@@ -21343,6 +21210,7 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
+            "The Beast",
             "The Experiment",
             "Thresholder",
             "Tifa",
@@ -21380,26 +21248,7 @@
         "room_size": 9.14,
         "type": "boss",
         "blacklist_destination": [
-            "Xemnas",
-            "Past Pete",
-            "Prison Keeper",
-            "Oogie Boogie",
-            "Groundshaker",
-            "Grim Reaper II",
-            "Grim Reaper",
-            "Twilight Thorn",
-            "Axel I",
-            "Vivi",
-            "Hayner",
-            "Seifer",
-            "Setzer",
-            "Demyx OC",
-            "Axel II",
-            "Armor Xemnas II",
-            "Vexen",
-            "Roxas",
-            "Scar",
-            "Groundshaker"
+            "Roxas"
         ],
         "variations": [
             "Zexion",
