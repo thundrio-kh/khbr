@@ -7953,7 +7953,9 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": 14.9,
-        "blacklist_source": [],
+        "blacklist_source": [
+            "Xigbar"
+        ],
         "blacklist_destination": [
             "Cerberus"
         ],
@@ -8238,7 +8240,9 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
+        "blacklist_source": [
+            "xigbar"
+        ],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -8369,6 +8373,9 @@
         "tags": [
             "organization"
         ],
+        "blacklist_source": [
+            "Xigbar"
+        ],
         "enabled": true,
         "enmp_index": 88,
         "hp": 100,
@@ -8404,7 +8411,6 @@
         "aimod": null,
         "can_be_enemy": false,
         "sizeTag": null,
-        "blacklist_source": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [],
@@ -8450,7 +8456,6 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
             "Yuffie"
         ]
     },
@@ -10256,7 +10261,6 @@
             "Pete OC II",
             "Prison Keeper",
             "Riku",
-            "Saix",
             "Sark",
             "Scar",
             "Seifer",
@@ -13334,6 +13338,7 @@
         "blacklist_destination": [
             "Vexen",
             "Groundshaker",
+            "Past Pete",
             "Prison Keeper",
             "Axel II",
             "Cerberus"
@@ -13435,6 +13440,7 @@
         "blacklist_destination": [
             "Vexen",
             "Groundshaker",
+            "Past Pete",
             "Prison Keeper",
             "Axel II",
             "Cerberus"
@@ -14054,7 +14060,8 @@
             "unchanged_file_size": false
         },
         "blacklist_destination": [
-            "Vexen"
+            "Vexen",
+            "Past Pete"
         ],
         "variations": [
             "Marluxia",
@@ -14151,7 +14158,8 @@
             "unchanged_file_size": false
         },
         "blacklist_destination": [
-            "Vexen"
+            "Vexen",
+            "Past Pete"
         ],
         "variations": [
             "Marluxia",
@@ -16995,7 +17003,8 @@
         ],
         "name": "Saix",
         "tags": [
-            "organization"
+            "organization",
+            "needs_rc"
         ],
         "can_be_enemy": true,
         "enabled": true,
@@ -17017,7 +17026,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization",
+        "category": "needs_rc-organization",
         "isnightmare": false,
         "parent": "Saix",
         "variationof": null,
@@ -17190,6 +17199,9 @@
         ],
         "name": "Sark",
         "enabled": true,
+        "tags": [
+            "teleport_blocked"
+        ],
         "isnightmare": true,
         "enmp_index": 100,
         "hp": 100,
@@ -17208,8 +17220,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "teleport_blocked",
         "parent": "Sark",
         "variationof": null,
         "children": [
@@ -17235,7 +17246,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -17249,9 +17259,7 @@
             "Hostile Program",
             "Leon",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
-            "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Prison Keeper",
@@ -17272,8 +17280,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Scar": {
@@ -17354,7 +17361,6 @@
             "Prison Keeper",
             "Riku",
             "Roxas",
-            "Saix",
             "Sark",
             "Scar",
             "Seifer",
@@ -20566,6 +20572,9 @@
             "organization"
         ],
         "enabled": true,
+        "blacklist_source": [
+            "xigbar"
+        ],
         "enmp_index": 87,
         "hp": 100,
         "level": 99,
@@ -20597,7 +20606,6 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],

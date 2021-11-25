@@ -1756,6 +1756,8 @@ Xigbar (Data):
 Demyx:
   tags:
   - organization
+  blacklist_source:
+  - Xigbar
   enabled: true
   enmp_index: 0x58
   hp: 100
@@ -2866,6 +2868,7 @@ Lexaeus:
   blacklist_destination:
   - Vexen # player can get thrown oob
   - Groundshaker # player can get thrown oob
+  - Past Pete # Can get thrown OOB
   - Prison Keeper
   - Axel II
   - Cerberus # Phase 3 can result in pcsx2 crashes
@@ -3050,6 +3053,7 @@ Marluxia:
     unchanged_file_size: false
   blacklist_destination:
   - Vexen # restore count puts you OOB
+  - Past Pete # restore count can put OOB
   variations:
     Marluxia:
       vars:
@@ -3548,6 +3552,7 @@ Runemaster:
 Saix:
   tags:
   - organization
+  - needs_rc
   can_be_enemy: true
   enabled: true
   enmp_index: 0x86
@@ -3589,6 +3594,8 @@ Samurai:
       - 0
 Sark:
   enabled: true
+  tags:
+  - teleport_blocked
   isnightmare: true
   enmp_index: 0x64
   hp: 100
@@ -4535,6 +4542,8 @@ Xaldin:
   tags:
   - organization
   enabled: true
+  blacklist_source:
+  - xigbar
   enmp_index: 0x57
   hp: 100
   level: 99
