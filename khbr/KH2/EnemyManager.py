@@ -241,14 +241,27 @@ class EnemyManager:
                 return True
         return False
 
-    def categorize_enemies(self, included_enemylist):
+    @staticmethod
+    def _remove_category(category_string, category_to_remove):
+        categories = category_string.split("-")
+        if category_to_remove in categories:
+            categories.remove(category_to_remove)
+        return '-'.join(categories)
+
+
+    def categorize_enemies(self, included_enemylist, combine_sizes=False, combine_ranged=False):
         if not self.enemy_records:
             self.set_enemies()
         categories = {}
         for e in included_enemylist:
             parent = self.enemy_records[e["parent"]]
             # Might not be respecting childrens tags properly
-            if parent["category"] not in categories:
-                categories[parent["category"]] = {}
-            categories[parent["category"]][parent["name"]] = parent
+            category_name = parent["category"]
+            if combine_sizes:
+                category_name = self._remove_category(category_name, "large")
+            if combine_ranged:
+                category_name = self._remove_category(category_name, "ranged")
+            if category_name not in categories:
+                categories[category_name] = {}
+            categories[category_name][parent["name"]] = parent
         return categories

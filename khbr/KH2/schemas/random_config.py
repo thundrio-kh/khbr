@@ -12,6 +12,8 @@ class RandomConfig:
     duplicate_bosses: bool
 
     enemies: dict
+    combine_enemy_sizes: bool
+    combine_melee_ranged: bool
     bosses: dict
 
     selected_enemy: str = ''

@@ -34,8 +34,10 @@ class KingdomHearts2:
             #                     "possible_values": [False, True], "hidden_values": []},
             "nightmare_enemies": {"display_name": "Nightmare Enemies", "description": "Replaces enemies using only the most difficult enemies in the game.",
                                 "possible_values": [False, True], "hidden_values": []},
-            # "separate_small_big_enemies": {"display_name": "Separate Small and Big Enemies", "description": "Randomizes big enemies among themselves and small enemies among themselves. Useful to prevent crashing"},
-            #                     "possible_values": [True, False], "hidden_values": []},
+            "combine_enemy_sizes": {"display_name": "Combine Enemy Sizes", "description": "Normally small enemies are randomized separately from big enemies to prevent crashing. On PC it is less likely to crash, so this option is to combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
+                                 "possible_values": [False, True], "hidden_values": []},
+            "combine_melee_ranged": {"display_name": "Combine Melee and Ranged enemies", "description": "Normally ranged and melee enemies are randomized separate from each other, both for difficulty and to reduce crashing. On PC it is less likely to crash, so this option will combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
+                                 "possible_values": [False, True], "hidden_values": []},
 
             "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game has more limited enemy randomization capabilities. Turn this option on if playing on PC to remove these constraints.",
                                 "possible_values": [False, True], "hidden_values": []},
@@ -89,6 +91,8 @@ class KingdomHearts2:
 
             enemymode = enemymode,
             enemies = self.enemy_manager.get_enemies() if enemymode != 'Disabled' else {},
+            combine_enemy_sizes = options.get("combine_enemy_sizes"),
+            combine_melee_ranged options.get("combine_melee_ranged")
             nightmare_enemies = options.get("nightmare_enemies"),
 
             bossmode = bossmode,
@@ -124,7 +128,7 @@ class KingdomHearts2:
     def create_seed(self, rand_seed: EnemySeed):
             rand_seed.bossmapping = pickbossmapping(self.enemy_manager.enemy_records, rand_seed.config.bosses) if not rand_seed.config.duplicate_bosses else None
             if rand_seed.config.enemies and rand_seed.config.enemymode != "Selected Enemy":
-                categorized_enemies = self.enemy_manager.categorize_enemies(rand_seed.config.enemies)
+                categorized_enemies = self.enemy_manager.categorize_enemies(rand_seed.config.enemies, combine_sizes=rand_seed.config.combine_enemy_sizes, combine_ranged=rand_seed.config.combine_melee_ranged)
                 rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemy"], nightmare=rand_seed.config.nightmare_enemies)
             
             self.location_manager.set_locations()
