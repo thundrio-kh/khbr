@@ -206,7 +206,7 @@ class Randomizer:
                         modobj_asset["source"].append(source)
             if not found:
                 modobj["assets"].append(asset)
-        return game.create_spoiler_text()
+        return create_spoiler_text(game.spoilers)
     
     def getSchemaForGame(self, g):
         if g not in supported_games:
