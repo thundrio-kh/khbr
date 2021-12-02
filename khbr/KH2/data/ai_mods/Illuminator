@@ -1,0 +1,5 @@
+# B_CA000/b_ca.bdx
+
+# Make illuminator not move
+00000738 fd060089
+00000d18 00890089

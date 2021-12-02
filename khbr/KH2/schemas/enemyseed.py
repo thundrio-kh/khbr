@@ -97,5 +97,8 @@ class EnemySeed:
             self.object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
 
     def update_aimod(self, old_boss_object, new_boss_object):
-        if "aimod" in new_boss_object and new_boss_object["aimod"]:
+        if new_boss_object.get("aimod"):
             self.ai_mods[new_boss_object["name"]] = old_boss_object["name"]
+        for add in new_boss_object["adds"]:
+            if add.get("aimod"):
+                self.ai_mods[add["name"]] = old_boss_object["name"]

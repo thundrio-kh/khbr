@@ -1159,13 +1159,11 @@ Barbossa:
   aimod: true
   adds:
   - ObjectId: 358 #Illuminator
+    name: Illuminator
+    aimod: true
   enabled: true
   enmp_index: 0x63
   hp: 100
-  blacklist_destination:
-  - Xigbar # Illuminator can spawn too far OoB
-  - Axel II # can be OoB
-  - Axel I # can be OoB
   level: 99
   limiter: 0
   model: B_CA010
@@ -2663,6 +2661,7 @@ Icy Cube Treasure Room:
       - 0
 Illuminator:
   enabled: false
+  aimod: true
   enmp_index: 0x62
   hp: 100
   level: 99
@@ -4243,7 +4242,6 @@ Thresholder:
   - Shadow Stalker
   blacklist_source:
   - Xigbar # Room transition sometimes sends you OOB
-  - Barbossa # illuminator can spawn OOB
   obj_id: 353
   size: 2.17
   room_size: 12.13

@@ -5959,6 +5959,7 @@
         "obj_edits": {},
         "available": [
             "Axel I",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -6064,6 +6065,7 @@
         "available": [
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -6198,17 +6200,14 @@
         "aimod": true,
         "adds": [
             {
-                "ObjectId": 358
+                "ObjectId": 358,
+                "name": "Illuminator",
+                "aimod": true
             }
         ],
         "enabled": true,
         "enmp_index": 99,
         "hp": 100,
-        "blacklist_destination": [
-            "Xigbar",
-            "Axel II",
-            "Axel I"
-        ],
         "level": 99,
         "limiter": 0,
         "model": "B_CA010",
@@ -6238,6 +6237,7 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
+        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "subtracts": [],
@@ -12598,6 +12598,7 @@
         ],
         "name": "Illuminator",
         "enabled": false,
+        "aimod": true,
         "enmp_index": 98,
         "hp": 100,
         "level": 99,
@@ -12621,7 +12622,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimod": null,
         "can_be_enemy": false,
         "msn": null,
         "size": 0,
@@ -19612,8 +19612,7 @@
             "Shadow Stalker"
         ],
         "blacklist_source": [
-            "Xigbar",
-            "Barbossa"
+            "Xigbar"
         ],
         "obj_id": 353,
         "size": 2.17,
@@ -20827,6 +20826,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",

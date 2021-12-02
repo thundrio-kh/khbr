@@ -1,3 +1,6 @@
 2.0
 * Full redesign of backend, to make future updates easier
 * PC should now be able to load cups 
+* Options to not randomize big and small enemies separately. Warning should only be used on PC and it is experimental and may cause crashes
+* Options to not randomize melee and ranged enemies separately. Warning should only be used on PC and it is experimental and may cause crashes
+* When barbossa is placed, the illuminator will stay in the center of the room to remove situations where it is located OOB and untargetable
