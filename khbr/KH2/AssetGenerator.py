@@ -137,7 +137,7 @@ class AssetGenerator:
                             old_spid = self.spawn_manager.getSpId(existing_spawnpoint, int(i))
                             # Get to the right spawnpointid sp_instance
                             old_spawn_index = new_entity["index"]
-                            
+
 
                             if new_entity["index"] == "new":
                                 self.spawn_manager.add_new_object(old_spid, new_entity)
@@ -151,7 +151,7 @@ class AssetGenerator:
                                 if final_txt:
                                     text_spoilers["final_fights"].append(final_txt)
 
-                                self.spawn_manager.set_object_by_rec(old_spid, obj)
+                                self.spawn_manager.set_object_by_rec(old_spawn, obj)
 
                         if subtract_map:
                             entities_to_remove = subtract_map.get(w, {}).get(r, {}).get("spawnpoints", {}).get(spn, []) 
