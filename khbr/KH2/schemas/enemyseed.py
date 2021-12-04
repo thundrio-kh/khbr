@@ -24,7 +24,8 @@ class EnemySeed:
             "object_map": self.object_map, 
             "scale_map": self.set_scaling, 
             "limiter_map": self.spawn_limiters, 
-            "subtract_map": self.subtract_map
+            "subtract_map": self.subtract_map,
+            "memory_expansion": self.config.memory_expansion
             }
 
     def add_spawn(self, world, room, spawnpoint, spid, entity, new_boss_object):

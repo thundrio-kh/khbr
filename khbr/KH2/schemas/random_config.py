@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 @dataclass
 class RandomConfig:
-    unlimited_memory: bool
+    memory_expansion: bool
     utility_mods: list
     scale_boss: bool
     enemymode: str

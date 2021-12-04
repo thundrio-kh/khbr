@@ -16,7 +16,7 @@ class KingdomHearts2:
         self.schemaversion = "02"
         self.spoilers = {"enemy": {}, "boss": {}}
         self.name = "kh2"
-        self.unlimited_memory = False
+        self.memory_expansion = False
         self.datalocation = os.path.join(os.path.dirname(__file__), "data")
         self.enemy_manager = EnemyManager(self.datalocation)
         self.location_manager = LocationManager(self.datalocation)
@@ -85,7 +85,7 @@ class KingdomHearts2:
         bossmode = options.get("boss", "Disabled")
         nightmare_bosses = options.get("nightmare_bosses")
         config = RandomConfig(
-            unlimited_memory = options.get("memory_expansion"),
+            memory_expansion = options.get("memory_expansion"),
             utility_mods = self.get_utility_mods(options),
             scale_boss = options.get("scale_boss_stats"),
 
