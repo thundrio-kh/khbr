@@ -5,9 +5,10 @@ import os
 import yaml
 from khbr.randutils import pick_boss_to_replace, pick_enemy_to_replace
 from khbr._config import KH2_DIR
-
+import random
 class SpawnManager:
     def __init__(self):
+        self.boss_enemies = [] # Gets filled as a cache
         self.spawns = None
         self.roommodedits = {
             "ax2_99": self.ax2_99,
@@ -197,6 +198,15 @@ class SpawnManager:
         elif rand_seed.config.enemymode == "Wild":
             #TODO pretty sure this is broken, but also not safe to run in the game anyway
             new_enemy = pick_enemy_to_replace(old_enemy_object, rand_seed.config.enemies)
+        if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses:
+            chance = 0.005
+            if random.random() < chance:
+                if not rand_seed.config.boss_enemies:
+                    for boss_name in rand_seed.config.bosses:
+                        boss = rand_seed.config.bosses[boss_name]
+                        if boss["enabled"] and boss["can_be_enemy"]:
+                            rand_seed.config.boss_enemies.append(boss_name)
+                new_enemy = random.choice(rand_seed.config.boss_enemies)
         return new_enemy
 
     @staticmethod

@@ -26,12 +26,10 @@ class KingdomHearts2:
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
-            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized",
-                                    "type": "enemy", "possible_values": ["Disabled", "One to One", "One to One Per Room", "Selected Enemy"], "hidden_values": ["Wild"]},
+            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized (this may be unstable and is only available for PC)",
+                                    "type": "enemy", "possible_values": ["Disabled", "One to One", "One to One Per Room", "Selected Enemy", "Wild"], "hidden_values": []},
             "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
                                 "type": "enemy", "possible_values": [None] + sorted(self.get_valid_enemies()), "hidden_values": []},
-            # "bosses_can_replace_enemies": {"display_name": "Bosses Can Replace Enemies", "description": "Replaces a small percentage of enemies in the game with a random boss. This option is intended for PC use only.",
-            #                     "possible_values": [False, True], "hidden_values": []},
             "nightmare_enemies": {"display_name": "Nightmare Enemies", "description": "Replaces enemies using only the most difficult enemies in the game.",
                                 "type": "enemy", "possible_values": [False, True], "hidden_values": []},
             "combine_enemy_sizes": {"display_name": "Combine Enemy Sizes (Experimental)", "description": "Normally small enemies are randomized separately from big enemies to prevent crashing. On PC it is less likely to crash, so this option is to combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
@@ -48,6 +46,8 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [None] + sorted(self.get_valid_bosses()), "hidden_values": []},
             "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game. Forces Boss Randomization Mode to be 'Wild'",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
+            "bosses_replace_enemies": {"display_name": "Bosses Can Replace Enemies (Experimental)", "description": "Replaces 0.5 percent of enemies in the game with a random boss. This option is intended for PC use only.",
+                    "type": "boss", "possible_values": [False, True], "hidden_values": [], "experimental": True},
             "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts force bosses level/HP to the scale of the boss it is replacing. When turned off uses the games scaling which is partially based on the battle level of the world except for Datas/Terra which are always level 99.",
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One'.",
@@ -98,7 +98,8 @@ class KingdomHearts2:
             bossmode = bossmode,
             nightmare_bosses = nightmare_bosses,
             duplicate_bosses = nightmare_bosses or bossmode in ["Wild", "Selected Boss"],
-            bosses = self.enemy_manager.get_boss_list(options) if bossmode != 'Disabled' else {}
+            bosses = self.enemy_manager.get_boss_list(options) if bossmode != 'Disabled' else {},
+            bosses_replace_enemies = options.get("bosses_replace_enemies")
         )
         if enemymode == "Selected Enemy":
             config.selected_enemy = options["selected_enemy"]

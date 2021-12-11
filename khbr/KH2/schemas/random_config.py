@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 @dataclass
 class RandomConfig:
@@ -15,6 +15,8 @@ class RandomConfig:
     combine_enemy_sizes: bool
     combine_melee_ranged: bool
     bosses: dict
+    bosses_replace_enemies: bool
+    boss_enemies: list=field(default_factory=list)
 
     selected_enemy: str = ''
     selected_boss: str = ''

@@ -1662,7 +1662,7 @@ Saix (Data):
   tags:
   - data
   - organization
-  can_be_enemy: true
+  can_be_enemy: false
   variationof: Saix
   enabled: true
   enmp_index: 0xFD
@@ -1709,7 +1709,7 @@ Xemnas (Data):
   - data
   - organization
   aimod: true
-  can_be_enemy: true
+  can_be_enemy: false
   enabled: true
   variationof: Xemnas
   enmp_index: 0xEF
@@ -2764,7 +2764,7 @@ Larxene:
   tags:
   - organization
   - needs_teleport
-  can_be_enemy: true
+  can_be_enemy: false
   enabled: true
   enmp_index: 0xD8
   hp: 100
@@ -3498,7 +3498,7 @@ Roxas:
   - organization
   - solo
   - needs_teleport
-  can_be_enemy: true
+  can_be_enemy: false
   enabled: true
   enmp_index: 0xD5
   hp: 100
@@ -3552,7 +3552,7 @@ Saix:
   tags:
   - organization
   - needs_rc
-  can_be_enemy: true
+  can_be_enemy: false
   enabled: true
   enmp_index: 0x86
   hp: 100
@@ -3613,7 +3613,7 @@ Sark:
       - 0
       - 0
 Scar:
-  can_be_enemy: true
+  can_be_enemy: false
   isnightmare: true
   enabled: true
   enmp_index: 0x5E

@@ -8166,7 +8166,7 @@
             "data",
             "organization"
         ],
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "variationof": "Saix",
         "enabled": true,
         "enmp_index": 253,
@@ -12920,7 +12920,7 @@
             "organization",
             "needs_teleport"
         ],
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "enabled": true,
         "enmp_index": 216,
         "hp": 100,
@@ -13019,7 +13019,7 @@
             1
         ],
         "name": "Larxene (Data)",
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "enmp_index": 216,
         "hp": 100,
         "level": 99,
@@ -16817,7 +16817,7 @@
             "solo",
             "needs_teleport"
         ],
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "enabled": true,
         "enmp_index": 213,
         "hp": 100,
@@ -16911,7 +16911,7 @@
             1
         ],
         "name": "Roxas (Data)",
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "enmp_index": 213,
         "hp": 100,
         "level": 99,
@@ -17009,7 +17009,7 @@
             "organization",
             "needs_rc"
         ],
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "enabled": true,
         "enmp_index": 134,
         "hp": 100,
@@ -17281,7 +17281,7 @@
             0
         ],
         "name": "Scar",
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "isnightmare": true,
         "enabled": true,
         "enmp_index": 94,
