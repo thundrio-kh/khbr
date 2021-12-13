@@ -79,9 +79,9 @@ class EnemySeed:
             if not new_boss_object["msn"]:
                 if new_boss_object["msn_list"]:
                     return
-            self.msn_mapping[old_boss_object["msn"]] = new_boss_object["msn"]
+            self.msn_mapping[old_boss_object["msn"]] = {"name": new_boss_object["msn"]}
         elif old_boss_object["msn_source_as"]:
-            self.msn_mapping[old_boss_object["msn"]] = old_boss_object["msn_source_as"]
+            self.msn_mapping[old_boss_object["msn"]] = {"name": old_boss_object["msn_source_as"]}
 
     def update_scaling(self, old_boss_object, new_boss_object):
         if new_boss_object["name"] not in self.set_scaling:

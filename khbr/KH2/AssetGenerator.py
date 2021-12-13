@@ -96,12 +96,23 @@ class AssetGenerator:
         #TODO need way for adjusting the final fight MSNs to make retrying retry directly, but the value is a bitflag array, so treat carefully
         for oldmsn in msn_map:
             
-            new_msn_name = msn_map.get(oldmsn)
+            new_msn_mapping = msn_map.get(oldmsn)
+            if type(new_msn_mapping) == str:
+                new_msn_mapping = {"name": new_msn_mapping}
+            new_msn_name = new_msn_mapping["name"]
             info = msninfo[new_msn_name]
             mission = Mission(new_msn_name, info)
             
             bonus_byte = msninfo[oldmsn]["bonus"]
             mission.set_bonus_byte(bonus_byte)
+
+
+            if "setmickey" in new_msn_mapping:
+                mission.set_mickey_bit(new_msn_mapping["setmickey"])
+            if "setxp" in new_msn_mapping:
+                mission.set_xp_bit(new_msn_mapping["setxp"])
+            if "setretry" in new_msn_mapping:
+                mission.set_retry_bit(new_msn_mapping["setretry"])
             
             asset = self.modwriter.writeMsn(oldmsn, mission.data)
 

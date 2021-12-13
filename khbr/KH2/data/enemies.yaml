@@ -3209,7 +3209,7 @@ Past Pete:
   enabled: true
   enmp_index: 0x71
   tags:
-  - needs_teleport
+  - teleport_blocked
   hp: 100
   level: 99
   limiter: 0
