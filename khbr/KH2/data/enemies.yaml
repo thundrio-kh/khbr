@@ -936,6 +936,7 @@ Armor Xemnas I:
   variations:
     Armor Xemnas I:
       msn: EH24_MS110
+      mickey_source: true
       msn_replace_allowed: false
       program: 71
       size: 3.82
@@ -1268,6 +1269,7 @@ Blizzard Lord:
   variations:
     Blizzard Lord:
       msn: AL03_MS103
+      mickey_source: true
       program: 59
       room_size: 10.32
       roommaxsize: 13.36 # instead of roomsizemultiplier
@@ -1364,6 +1366,7 @@ Cerberus:
   variations:
     Cerberus:
       msn: HE07_MS103
+      mickey_source: true
       program: 114
       room_size: 10.54
       vars:
@@ -1554,6 +1557,7 @@ Dark Thorn:
   type: boss
   variations:
     Dark Thorn:
+      mickey_source: true
       vars:
       - 0
       - 0
@@ -2151,6 +2155,7 @@ Grim Reaper I:
   type: boss
   variations:
     Grim Reaper I:
+      mickey_source: true
       can_be_enemy: true
       msn: CA18_MS202
       program: 85
@@ -2625,6 +2630,7 @@ Hydra:
   type: boss
   variations:
     Hydra:
+      mickey_source: true
       vars:
       - 0
       - 0
@@ -3858,6 +3864,7 @@ Shadow Stalker:
   type: boss
   variations:
     Shadow Stalker:
+      mickey_source: true
       vars:
       - 0
       - 0
@@ -3902,6 +3909,7 @@ Shan-Yu:
   type: boss
   variations:
     Shan-Yu:
+      mickey_source: true
       vars:
       - 0
       - 0
@@ -4094,6 +4102,7 @@ Storm Rider:
   type: boss
   variations:
     Storm Rider:
+      mickey_source: true
       vars:
       - 0
       - 0
@@ -4252,6 +4261,7 @@ Thresholder:
   type: boss
   variations:
     Thresholder:
+      mickey_source: true
       vars:
       - 0
       - 0
@@ -4502,6 +4512,7 @@ Volcano Lord:
   variations:
     Volcano Lord:
       msn: AL03_MS103
+      mickey_source: true
       program: 59
       room_size: 10.32
       roommaxsize: 13.36 # instead of roomsize multiplier I went and manually figured it out
@@ -4539,6 +4550,7 @@ Wight Knight NM:
 Xaldin:
   tags:
   - organization
+  - mickey_source
   enabled: true
   blacklist_source:
   - xigbar
@@ -4556,6 +4568,7 @@ Xaldin:
   type: boss
   variations:
     Xaldin:
+      mickey_source: true
       vars:
       - 0
       - 0

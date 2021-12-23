@@ -19361,7 +19361,6 @@ The Land of Dragons:
             isboss: false
             name: Dusk
   Summit:
-    ignored: true
     size: 5000000
     spawnpoints:
       b_00:

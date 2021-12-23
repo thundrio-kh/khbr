@@ -200,6 +200,9 @@ class AssetGenerator:
             script = AreaDataScript(f.read(), ispc=self.ispc)
         for p in script.programs:
             if script.has_capacity(p):
+                if ardname == "mu07":
+                    # Summit will crash when capacity is infinite
+                    continue
                 mission = script.get_mission(p)
                 if (not script.ispc) and (not mission):
                     # It's not a big deal if enemies fail to spawn properly in areas where you don't have a mission going on

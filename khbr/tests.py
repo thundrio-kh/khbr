@@ -98,6 +98,32 @@ class Tests(unittest.TestCase):
         print("Selected Boss")
         testutils.validate_selected(randomization, "Xemnas", isboss=True)
 
+    def test_seedgen_boss_mickey_rule(self):
+        options = {"boss": "One to One", "mickey_rule": "all"}
+        randomization = testutils.generateSeed(options)
+        for key, value in randomization["msn_map"].items():
+            assert value["setmickey"] == True
+        options = {"boss": "One to One", "mickey_rule": "none"}
+        randomization = testutils.generateSeed(options)
+        for key, value in randomization["msn_map"].items():
+            assert value["setmickey"] == False
+        options = {"boss": "One to One", "mickey_rule": "stay"}
+        randomization = testutils.generateSeed(options)
+        assert randomization["msn_map"]["BB05_MS104B"]["setmickey"] == True # Dark Thorn
+        assert randomization["msn_map"]["CA01_MS204"]["setmickey"] == False # GR 2
+        assert randomization["msn_map"]["CA18_MS202"]["setmickey"] == True # GR 1
+        options = {"boss": "One to One", "mickey_rule": "follow"}
+        randomization = testutils.generateSeed(options)
+        # Technically should still test if the old locations get mickey disabled properly
+        # But it requires knowing if the boss thats there would have mickey or not
+        for old, new_object in randomization["msn_map"].items():
+            if new_object["name"] == "BB05_MS104B":
+                assert new_object["setmickey"] == True     
+            if new_object["name"] == "CA01_MS204":
+                assert new_object["setmickey"] == False
+            if new_object["name"] == "CA18_MS202":
+                assert new_object["setmickey"] == True   
+
     def test_seedgen_boss_one_to_one(self):
         options = {"boss": "One to One"}
         randomization = testutils.generateSeed(options)
@@ -244,7 +270,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_is_replacement_blocked()
+ut.test_seedgen_boss_mickey_rule()
 
 # Uncomment to run the actual tests
 #unittest.main()

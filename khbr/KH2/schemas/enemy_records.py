@@ -17,6 +17,7 @@ def get_schema():
         "msn_required": False,
         "msn_source_as": None,
         "aimod": None,
+        "mickey_source": False,
         "can_be_enemy": False,
         "msn": None,
         "size": 0,

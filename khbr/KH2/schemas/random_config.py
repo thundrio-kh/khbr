@@ -18,6 +18,8 @@ class RandomConfig:
     bosses_replace_enemies: bool
     boss_enemies: list=field(default_factory=list)
 
+    mickey_rule: str='follow'
+
     selected_enemy: str = ''
     selected_boss: str = ''
 

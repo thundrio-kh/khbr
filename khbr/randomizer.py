@@ -222,7 +222,9 @@ if __name__ == '__main__':
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"data_bosses\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Selected Boss\", \"selected_boss\": \"Barbossa\"}"
+    # run randomizer.py devgenerate "{\"boss\": \"Selected Enemy\", \"selected_enemy\": \"Living Bone (Necromancer)\"}"
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\", \"combine_enemy_sizes\": true}"
+    # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"mickey_rule\": \"all\"}" randomization_only
     options = sys.argv[2]
     if len(sys.argv) > 3:
         seed = sys.argv[3]

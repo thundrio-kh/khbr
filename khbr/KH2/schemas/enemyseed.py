@@ -73,15 +73,38 @@ class EnemySeed:
     def update_msn_mapping(self, old_boss_object, new_boss_object):
         if old_boss_object["msn_replace_allowed"] and new_boss_object["msn_replace_allowed"]:
             # This is fine because the only bosses with msn_list don't need the msn to be swapped
+            # TODO maybe this is the issue behind hades? It messes with mickey rule in some spotstoo
             if not old_boss_object["msn"]:
                 if old_boss_object["msn_list"]:
                     return
             if not new_boss_object["msn"]:
                 if new_boss_object["msn_list"]:
                     return
-            self.msn_mapping[old_boss_object["msn"]] = {"name": new_boss_object["msn"]}
+            msn_object = {"name": new_boss_object["msn"]}
         elif old_boss_object["msn_source_as"]:
-            self.msn_mapping[old_boss_object["msn"]] = {"name": old_boss_object["msn_source_as"]}
+            msn_object = {"name": old_boss_object["msn_source_as"]}
+        else:
+            # keeping old msn, but this picking the first item in the msn list might not work
+            msn_object = {"name": self._get_msn_name(old_boss_object)}
+        msn_object["setmickey"] = self._should_place_mickey(old_boss_object, new_boss_object)
+        self.msn_mapping[self._get_msn_name(old_boss_object)] = msn_object
+
+    @staticmethod
+    def _get_msn_name(boss_object):
+        if boss_object["msn"]:
+            return boss_object["msn"]
+        return boss_object["msn_list"][0]["msn"]
+
+    def _should_place_mickey(self, old_boss_object, new_boss_object):
+        mickey_rule = self.config.mickey_rule
+        if mickey_rule == 'all':
+            return True
+        if mickey_rule == 'none':
+            return False
+        if mickey_rule == 'follow':
+            return new_boss_object["mickey_source"]
+        if mickey_rule == 'stay':
+            return old_boss_object["mickey_source"]
 
     def update_scaling(self, old_boss_object, new_boss_object):
         if new_boss_object["name"] not in self.set_scaling:
