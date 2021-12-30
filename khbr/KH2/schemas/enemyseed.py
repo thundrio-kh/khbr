@@ -87,6 +87,10 @@ class EnemySeed:
             # keeping old msn, but this picking the first item in the msn list might not work
             msn_object = {"name": self._get_msn_name(old_boss_object)}
         msn_object["setmickey"] = self._should_place_mickey(old_boss_object, new_boss_object)
+        if old_boss_object["final_fight"]:
+            msn_object["setretry"] = True
+        elif new_boss_object["final_fight"]:
+            msn_object["setretry"] = False
         self.msn_mapping[self._get_msn_name(old_boss_object)] = msn_object
 
     @staticmethod

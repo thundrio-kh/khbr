@@ -937,7 +937,7 @@ Armor Xemnas I:
     Armor Xemnas I:
       msn: EH24_MS110
       mickey_source: true
-      msn_replace_allowed: false
+      final_fight: true
       program: 71
       size: 3.82
       room_size: 12.98
@@ -969,7 +969,7 @@ Armor Xemnas II:
       msn: EH23_MS112
       program: 73
       replace_as: Armor Xemnas I
-      msn_replace_allowed: false
+      final_fight: true
       size: 1.7
       room_size: 9.23
       # subtracts: The subtracts get handled by the roommodedits
@@ -1161,7 +1161,9 @@ Barbossa:
   adds:
   - ObjectId: 358 #Illuminator
     name: Illuminator
-    aimod: true
+    aimod: false
+  tags:
+  - needs_teleport
   enabled: true
   enmp_index: 0x63
   hp: 100
@@ -1635,6 +1637,7 @@ Final Xemnas (Data):
       - 0
       - 0
     Final Xemnas (Data):
+      final_fight: false
       vars:
       - 1
       - 0
@@ -2038,6 +2041,7 @@ Final Xemnas:
   variations:
     Final Xemnas:
       enabled: false
+      final_fight: true
       vars:
       - 1
       - 0
@@ -2667,7 +2671,7 @@ Icy Cube Treasure Room:
       - 0
 Illuminator:
   enabled: false
-  aimod: true
+  aimod: false
   enmp_index: 0x62
   hp: 100
   level: 99
@@ -4180,7 +4184,7 @@ Terra:
       - 0
 The Beast:
   aimod: true
-  enabled: true
+  enabled: false
   enmp_index: 0x49
   blacklist_source:
   - Grim Reaper II

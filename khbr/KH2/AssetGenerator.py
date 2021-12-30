@@ -93,7 +93,6 @@ class AssetGenerator:
             self.assets.append(asset)
 
     def generateMsns(self, msn_map, msninfo):
-        #TODO need way for adjusting the final fight MSNs to make retrying retry directly, but the value is a bitflag array, so treat carefully
         for oldmsn in msn_map:
             
             new_msn_mapping = msn_map.get(oldmsn)
@@ -102,8 +101,8 @@ class AssetGenerator:
             new_msn_name = new_msn_mapping["name"]
             info = msninfo[new_msn_name]
             mission = Mission(new_msn_name, info)
-            
-            bonus_byte = msninfo[oldmsn]["bonus"]
+
+            bonus_byte = new_msn_mapping.get("setbonus", msninfo[oldmsn]["bonus"])
             mission.set_bonus_byte(bonus_byte)
 
 

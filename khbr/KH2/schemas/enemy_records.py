@@ -18,6 +18,7 @@ def get_schema():
         "msn_source_as": None,
         "aimod": None,
         "mickey_source": False,
+        "final_fight": False,
         "can_be_enemy": False,
         "msn": None,
         "size": 0,

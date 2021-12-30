@@ -168,7 +168,7 @@ class KingdomHearts2:
                                         continue
                                     self.spoilers["boss"][entity["name"]] = new_boss
                                     # same replacement
-                                    if not new_boss == old_boss_object["name"]:
+                                    if new_boss == old_boss_object["name"]:
                                         # still need to update msn mapping for mickey rules
                                         rand_seed.update_msn_mapping(old_boss_object, old_boss_object)
                                         continue
