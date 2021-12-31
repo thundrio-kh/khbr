@@ -9780,7 +9780,8 @@
         "name": "Final Xemnas",
         "can_be_enemy": true,
         "tags": [
-            "solo"
+            "solo",
+            "organization"
         ],
         "hp": 100,
         "isnightmare": true,
@@ -9812,7 +9813,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "solo",
+        "category": "organization-solo",
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
@@ -9889,7 +9890,8 @@
         "name": "Final Xemnas (Copy)",
         "can_be_enemy": true,
         "tags": [
-            "solo"
+            "solo",
+            "organization"
         ],
         "enabled": false,
         "hp": 100,
@@ -9921,7 +9923,7 @@
             "Final Xemnas (Copy)"
         ],
         "replace_as": null,
-        "category": "solo",
+        "category": "organization-solo",
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [],
@@ -10908,22 +10910,8 @@
     },
     "Hades II (1)": {
         "enabled": true,
-        "msn_replace_allowed": false,
-        "msn_list": [
-            {
-                "program": 201,
-                "msn": "HE19_MS204",
-                "room_size": 8.23,
-                "enabled": false,
-                "msn_replace_allowed": false,
-                "source_replace_allowed": false
-            },
-            {
-                "program": 202,
-                "msn": "HE19_MS205",
-                "room_size": 10.73
-            }
-        ],
+        "msn_replace_allowed": true,
+        "msn": "HE19_MS205",
         "vars": [
             0,
             0
@@ -10961,7 +10949,6 @@
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,
-        "msn": null,
         "sizeTag": null,
         "room_size": 0,
         "blacklist_destination": [],
@@ -10969,6 +10956,7 @@
         "whitelist_destination": [],
         "adds": [],
         "subtracts": [],
+        "msn_list": [],
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
@@ -14252,7 +14240,8 @@
         "tags": [
             "organization",
             "solo",
-            "needs_teleport"
+            "needs_teleport",
+            "needs_rc"
         ],
         "enabled": true,
         "enmp_index": 89,
@@ -14278,7 +14267,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "needs_teleport-organization-solo",
+        "category": "needs_rc-needs_teleport-organization-solo",
         "isnightmare": false,
         "parent": "Luxord",
         "variationof": null,
@@ -17923,7 +17912,6 @@
             "Larxene",
             "Leon",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",

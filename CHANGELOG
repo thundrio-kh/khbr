@@ -4,6 +4,7 @@
 * Options to not randomize big and small enemies separately. Warning should only be used on PC and it is experimental and may cause crashes
 * Options to not randomize melee and ranged enemies separately. Warning should only be used on PC and it is experimental and may cause crashes
 * Option to randomize enemies independently of each other. Warning should only be used on PC and it is experimental and will probably cause crashes
+* Beast is added into the randomization pool, when he appears cogsworth will also appear.
 * More bosses can now replace the final 3 bosses of the game (previously bosses like luxord could not appear due to his msn requirement)
 * LOD Summit now has some enemies randomized, but in the timed fight it is possible some of the enemies won't spawn
 * Can now choose where mickey can appear (follow the bosses he normally appears for, stay where he normally is, all bosses, no bosses)
@@ -12,3 +13,4 @@
 * Removed the "Selected Boss" and "Selected Enemy" options from the enemy/boss dropdowns, and now if a selected boss/enemy is chosen, it assumes that is what you want
 * Removed the ability to choose whether or not to scale bosses because the effect can be confusing/not what is expected. Bosses are now always scaled when possible.
 * Ambush appears to be working fine, so it is added back into the randomization pool. Please report if the game softlocks here, and with what combination of enemies
+* Misc. small fixes and improvements in a number of spots

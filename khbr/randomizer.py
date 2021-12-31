@@ -129,6 +129,7 @@ class Randomizer:
             else:
                 with open(os.path.join(moddir, "spoilers.json"), "w") as f:
                     json.dump(randomization, f, indent=4)
+        #print(create_spoiler_text(game.spoilers))
         mod_yaml["assets"] = assets
         self._create_yaml(os.path.join(moddir, "mod.yml"), mod_yaml)
         
@@ -185,6 +186,7 @@ class Randomizer:
         # for both enemies and bosses
         # replacements are either decided beforehand, or at the time of replacement
         random.seed(seed)
+        print("Using seed: {}".format(seed))
         randomization = game.perform_randomization(options, seed=seed)
         
         return randomization

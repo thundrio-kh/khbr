@@ -2019,6 +2019,7 @@ Final Xemnas:
   can_be_enemy: true
   tags:
   - solo
+  - organization
   enabled: false
   hp: 100
   isnightmare: true
@@ -2335,17 +2336,18 @@ Hades II:
       - 0
     Hades II (1):
       enabled: true
-      msn_replace_allowed: false
-      msn_list:
-      - program: 201
-        msn: HE19_MS204
-        room_size: 8.23
-        enabled: false
-        msn_replace_allowed: false
-        source_replace_allowed: false
-      - program: 202
-        msn: HE19_MS205
-        room_size: 10.73
+      msn_replace_allowed: true
+      msn: HE19_MS205
+      # msn_list:
+      # - program: 201
+      #   msn: HE19_MS204
+      #   room_size: 8.23
+      #   enabled: false
+      #   msn_replace_allowed: true
+      #   source_replace_allowed: false
+      # - program: 202
+      #   msn: HE19_MS205
+      #   room_size: 10.73
       vars:
       - 0
       - 0
@@ -2969,6 +2971,7 @@ Luxord:
   - organization
   - solo
   - needs_teleport
+  - needs_rc
   enabled: true
   enmp_index: 0x59
   hp: 100

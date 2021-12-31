@@ -128,6 +128,7 @@ class KingdomHearts2:
                 config.utility_mods.remove("cups_give_xp")
             rand_seed.utility_mods = config.utility_mods
 
+        print(rand_seed.msn_mapping)
 
         retry_dfx = "retry_data_final_xemnas" in config.utility_mods
         rand_seed.set_data_final_xemnas_retry(retry_dfx)

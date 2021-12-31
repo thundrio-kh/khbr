@@ -155,6 +155,8 @@ class AssetGenerator:
                                 self.spawn_manager.set_object_by_id(old_spid["Entities"][old_spawn_index], new_entity)
                             else:
                                 obj = self.enemy_manager.lookup_object(new_entity["name"])
+                                if old_spawn_index >= len(old_spid["Entities"]):
+                                    continue # Case like AX1 room where AX1 was replaced subtracting the spawns that got replaced by the icy cube... Smelly way to fix this
                                 old_spawn = old_spid["Entities"][old_spawn_index]
 
                                 final_txt = final_fight_text(old_spawn, new_entity["name"])
