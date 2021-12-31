@@ -9,3 +9,5 @@
 * Can now choose where mickey can appear (follow the bosses he normally appears for, stay where he normally is, all bosses, no bosses)
 * Added option to make OC cups give you XP and form XP
 * Added quality of life option to make it possible to retry data final xemnas without going through data xemnas I again
+* Removed the "Selected Boss" and "Selected Enemy" options from the enemy/boss dropdowns, and now if a selected boss/enemy is chosen, it assumes that is what you want
+* Removed the ability to choose whether or not to scale bosses because the effect can be confusing/not what is expected. Bosses are now always scaled when possible.

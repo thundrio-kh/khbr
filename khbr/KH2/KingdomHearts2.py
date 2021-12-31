@@ -46,8 +46,6 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "bosses_replace_enemies": {"display_name": "Bosses Can Replace Enemies (Experimental)", "description": "Replaces 0.5 percent of enemies in the game with a random boss. This option is intended for PC use only.",
                     "type": "boss", "possible_values": [False, True], "hidden_values": [], "experimental": True},
-            "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts force bosses level/HP to the scale of the boss it is replacing. When turned off uses the games scaling which is partially based on the battle level of the world except for Datas/Terra which are always level 99.",
-                                "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One'.",
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra and Sephiroth",
@@ -60,6 +58,8 @@ class KingdomHearts2:
         return {
             "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game has more limited enemy randomization capabilities. Turn this option on if playing on PC to remove these constraints.",
                                 "possible_values": [False, True], "hidden_values": []},
+            "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts force bosses level/HP to the scale of the boss it is replacing. When turned off uses the games scaling which is partially based on the battle level of the world except for Datas/Terra which are always level 99.",
+                                "type": "boss", "possible_values": [True, False], "hidden_values": []},
             # utility mod options
             "remove_damage_cap": {"display_name": "Remove Damage Cap", "description": "Removes the damage cap for all enemies in the game.",
                                 "possible_values": [], "hidden_values": [False, True]},
