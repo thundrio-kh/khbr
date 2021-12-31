@@ -3,6 +3,9 @@
 * PC should now be able to load cups 
 * Options to not randomize big and small enemies separately. Warning should only be used on PC and it is experimental and may cause crashes
 * Options to not randomize melee and ranged enemies separately. Warning should only be used on PC and it is experimental and may cause crashes
-* When barbossa is placed, the illuminator will stay in the center of the room to remove situations where it is located OOB and untargetable
+* Option to randomize enemies independently of each other. Warning should only be used on PC and it is experimental and will probably cause crashes
+* More bosses can now replace the final 3 bosses of the game (previously bosses like luxord could not appear due to his msn requirement)
 * LOD Summit now has some enemies randomized, but in the timed fight it is possible some of the enemies won't spawn
 * Can now choose where mickey can appear (follow the bosses he normally appears for, stay where he normally is, all bosses, no bosses)
+* Added option to make OC cups give you XP and form XP
+* Added quality of life option to make it possible to retry data final xemnas without going through data xemnas I again

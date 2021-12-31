@@ -26,7 +26,7 @@ class KingdomHearts2:
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
-            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized (this may be unstable and is only available for PC)",
+            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized (this is probably unstable and is only available for PC)",
                                     "type": "enemy", "possible_values": ["Disabled", "One to One", "One to One Per Room", "Selected Enemy", "Wild"], "hidden_values": []},
             "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
                                 "type": "enemy", "possible_values": [None] + sorted(self.get_valid_enemies()), "hidden_values": []},
@@ -65,7 +65,7 @@ class KingdomHearts2:
                                 "possible_values": [], "hidden_values": [False, True]},
             "cups_give_xp": {"display_name": "Cups give XP", "description": "You will now gain XP and Form XP for killing enemies in the Olympus cups",
                                 "possible_values": [], "hidden_values": [False, True]},
-            "retry_data_final_xemnas": {"display_name": "Retry Data Final Xemnas", "description": "If you die to Data Final Xemnas, continue will put you right back into the fight, instead of having to fight Data Xemnas I again (warning will lead to a softlock if you are unable to beat Final Xemnas)",
+            "retry_data_final_xemnas": {"display_name": "Retry Data Final Xemnas", "description": "If you die to Data Final Xemnas, continue will put you right back into the fight, instead of having to fight Data Xemnas I again (warning will be a softlock if you are unable to beat Final Xemnas)",
                                 "possible_values": [], "hidden_values": [False, True]}
         }
 
