@@ -32,7 +32,7 @@ class Tests(unittest.TestCase):
         base64.decodebytes(b64)
 
     def test_generate_all_xemnas(self):
-        options = {"selected_boss": "Xemnas", "boss": "Selected Boss"}
+        options = {"selected_boss": "Xemnas"}
         rando = Randomizer(tempdir=testutils.get_tmp_path())
         b64 = rando.generate_seed("kh2", options=options)
         import base64
@@ -93,7 +93,7 @@ class Tests(unittest.TestCase):
         testutils.validate_selected(randomization, "Shadow WI", isboss=False)
 
     def test_seedgen_boss_selected(self):
-        options = {"boss": "Selected Boss", "selected_boss": "Xemnas"}
+        options = {"selected_boss": "Xemnas"}
         randomization = testutils.generateSeed(options)
         print("Selected Boss")
         testutils.validate_selected(randomization, "Xemnas", isboss=True)
@@ -270,7 +270,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_seedgen_boss_mickey_rule()
+ut.test_generate_all_xemnas()
 
 # Uncomment to run the actual tests
 #unittest.main()

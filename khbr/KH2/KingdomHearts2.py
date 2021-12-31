@@ -26,8 +26,8 @@ class KingdomHearts2:
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
-            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized (this is probably unstable and is only available for PC)",
-                                    "type": "enemy", "possible_values": ["Disabled", "One to One", "One to One Per Room", "Selected Enemy", "Wild"], "hidden_values": []},
+            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized (this is probably unstable and is only available for PC). If a selected enemy is filled in this setting is ignored and every enemy (almost) will become that enemy.",
+                                    "type": "enemy", "possible_values": ["Disabled", "One to One", "One to One Per Room", "Wild"], "hidden_values": []},
             "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
                                 "type": "enemy", "possible_values": [None] + sorted(self.get_valid_enemies()), "hidden_values": []},
             "nightmare_enemies": {"display_name": "Nightmare Enemies", "description": "Replaces enemies using only the most difficult enemies in the game.",
@@ -37,11 +37,9 @@ class KingdomHearts2:
             "combine_melee_ranged": {"display_name": "Combine Melee and Ranged enemies (Experimental)", "description": "Normally ranged and melee enemies are randomized separate from each other, both for difficulty and to reduce crashing. On PC it is less likely to crash, so this option will combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": [], "experimental": True},
 
-            "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game has more limited enemy randomization capabilities. Turn this option on if playing on PC to remove these constraints.",
-                                "possible_values": [False, True], "hidden_values": []},
 
-            "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. Selected Boss will replace every boss with a single selected boss.",
-                                "type": "boss", "possible_values": ["Disabled", "One to One", "Wild", "Selected Boss"], "hidden_values": []},
+            "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. If a selected boss is filled in this setting is ignored and every boss (almost) will become that boss.",
+                                "type": "boss", "possible_values": ["Disabled", "One to One", "Wild"], "hidden_values": []},
             "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
                                 "type": "boss", "possible_values": [None] + sorted(self.get_valid_bosses()), "hidden_values": []},
             "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game. Forces Boss Randomization Mode to be 'Wild'",
@@ -60,6 +58,8 @@ class KingdomHearts2:
     def get_hidden_options(self):
         # Options that are options but should not show up in the autogenerated UI in the generator
         return {
+            "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game has more limited enemy randomization capabilities. Turn this option on if playing on PC to remove these constraints.",
+                                "possible_values": [False, True], "hidden_values": []},
             # utility mod options
             "remove_damage_cap": {"display_name": "Remove Damage Cap", "description": "Removes the damage cap for all enemies in the game.",
                                 "possible_values": [], "hidden_values": [False, True]},
@@ -113,9 +113,9 @@ class KingdomHearts2:
 
             mickey_rule = options.get("mickey_rule")
         )
-        if enemymode == "Selected Enemy":
+        if options.get("selected_enemy"):
             config.selected_enemy = options["selected_enemy"]
-        if bossmode == "Selected Boss":
+        if options.get("selected_boss"):
             config.selected_boss = options["selected_boss"]
 
         rand_seed = EnemySeed(config=config)
