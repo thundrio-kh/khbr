@@ -109,7 +109,7 @@ class AssetGenerator:
             if "setmickey" in new_msn_mapping:
                 mission.set_mickey_bit(new_msn_mapping["setmickey"])
             if "setxp" in new_msn_mapping:
-                mission.set_xp_bit(new_msn_mapping["setxp"])
+                mission.set_noxp_bit(not new_msn_mapping["setxp"])
             if "setretry" in new_msn_mapping:
                 mission.set_retry_bit(new_msn_mapping["setretry"])
             

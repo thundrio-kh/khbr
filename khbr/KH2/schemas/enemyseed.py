@@ -130,3 +130,52 @@ class EnemySeed:
         for add in new_boss_object["adds"]:
             if add.get("aimod"):
                 self.ai_mods[add["name"]] = old_boss_object["name"]
+
+    def add_xp_for_cups(self):
+        cups_msns = [
+            "HE_COL_1_8",
+            "HE_COL_1_10",
+            "HE_COL_2_10",
+            "HE_COL_4_1",
+            "HE_COL_4_2",
+            "HE_COL_4_3",
+            "HE_COL_4_4",
+            "HE_COL_4_5",
+            "HE_COL_4_6",
+            "HE_COL_4_7",
+            "HE_COL_4_8",
+            "HE_COL_4_9",
+            "HE_COL_4_10",
+            "HE_COL_5",
+            "HE_COL_5_8",
+            "HE_COL_5_10",
+            "HE_COL_6_10",
+            "HE_COL_8_5",
+            "HE_COL_8_6",
+            "HE_COL_8_10",
+            "HE_COL_8_25",
+            "HE_COL_8_30",
+            "HE_COL_8_31",
+            "HE_COL_8_35",
+            "HE_COL_8_40",
+            "HE_COL_8_45",
+            "HE_COL_8_49",
+            "HE_COL_8_50",
+            "HE_COL_8PP_BOSS",
+            "HE_COL_8TI_BOSS",
+            "HE_COLOSSEUM",
+            "HE_COLOSSEUM_2_FOG",
+            "HE_COLOSSEUM_3",
+            "HE_COLOSSEUM_6",
+            "HE_COLOSSEUM_6_FOG",
+            "HE_COLOSSEUM_7",
+            "HE_COLOSSEUM_8",
+            "HE_COLOSSEUM_8_CEL",
+            "HE_COLOSSEUM_8_ONLY",
+            "HE_COLOSSEUM_8_PP",
+            "HE_COLOSSEUM_8_TIT"
+        ]
+        for cup in cups_msns:
+            if cup in self.msn_mapping:
+                continue # Used by a boss so no xp anyway, ignore
+            self.msn_mapping[cup] = {"name": cup, "setxp": True}

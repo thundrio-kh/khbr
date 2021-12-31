@@ -63,7 +63,7 @@ class KingdomHearts2:
             # utility mod options
             "remove_damage_cap": {"display_name": "Remove Damage Cap", "description": "Removes the damage cap for all enemies in the game.",
                                 "possible_values": [], "hidden_values": [False, True]},
-            "cups_have_xp": {"display_name": "Cups give XP", "description": "You will now gain XP and Form XP for killing enemies in the Olympus cups",
+            "cups_give_xp": {"display_name": "Cups give XP", "description": "You will now gain XP and Form XP for killing enemies in the Olympus cups",
                                 "possible_values": [], "hidden_values": [False, True]}
         }
 
@@ -77,6 +77,8 @@ class KingdomHearts2:
         utility_mods = []
         if options.get("remove_damage_cap"):
             utility_mods.append("remove_damage_cap")
+        if options.get("cups_give_xp"):
+            utility_mods.append("cups_give_xp")
         return utility_mods
 
     def perform_randomization(self, options, seed=None):
@@ -117,6 +119,9 @@ class KingdomHearts2:
             self.create_seed(rand_seed)
 
         if config.utility_mods:
+            if "cups_give_xp" in config.utility_mods:
+                rand_seed.add_xp_for_cups()
+                config.utility_mods.remove("cups_give_xp")
             rand_seed.utility_mods = config.utility_mods
 
         rand_seed_json= rand_seed.toJson()

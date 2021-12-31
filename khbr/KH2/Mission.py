@@ -24,7 +24,7 @@ class Mission:
     def set_retry_bit(self, boolean=False):
         self.set_flag_bit(11, boolean)
 
-    def set_xp_bit(self, boolean=False):
+    def set_noxp_bit(self, boolean=False):
         self.set_flag_bit(13, boolean)
 
     def get_list_byte(self, offset):
