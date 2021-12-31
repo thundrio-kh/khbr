@@ -64,6 +64,8 @@ class KingdomHearts2:
             "remove_damage_cap": {"display_name": "Remove Damage Cap", "description": "Removes the damage cap for all enemies in the game.",
                                 "possible_values": [], "hidden_values": [False, True]},
             "cups_give_xp": {"display_name": "Cups give XP", "description": "You will now gain XP and Form XP for killing enemies in the Olympus cups",
+                                "possible_values": [], "hidden_values": [False, True]},
+            "retry_data_final_xemnas": {"display_name": "Retry Data Final Xemnas", "description": "If you die to Data Final Xemnas, continue will put you right back into the fight, instead of having to fight Data Xemnas I again (warning will lead to a softlock if you are unable to beat Final Xemnas)",
                                 "possible_values": [], "hidden_values": [False, True]}
         }
 
@@ -79,6 +81,8 @@ class KingdomHearts2:
             utility_mods.append("remove_damage_cap")
         if options.get("cups_give_xp"):
             utility_mods.append("cups_give_xp")
+        if options.get("retry_data_final_xemnas"):
+            utility_mods.append("retry_data_final_xemnas")
         return utility_mods
 
     def perform_randomization(self, options, seed=None):
@@ -123,6 +127,12 @@ class KingdomHearts2:
                 rand_seed.add_xp_for_cups()
                 config.utility_mods.remove("cups_give_xp")
             rand_seed.utility_mods = config.utility_mods
+
+
+        retry_dfx = "retry_data_final_xemnas" in config.utility_mods
+        rand_seed.set_data_final_xemnas_retry(retry_dfx)
+        if retry_dfx:
+            config.utility_mods.remove("retry_data_final_xemnas")
 
         rand_seed_json= rand_seed.toJson()
         if not rand_seed_json:
