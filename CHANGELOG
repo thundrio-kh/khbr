@@ -14,3 +14,4 @@
 * Removed the ability to choose whether or not to scale bosses because the effect can be confusing/not what is expected. Bosses are now always scaled when possible.
 * Ambush appears to be working fine, so it is added back into the randomization pool. Please report if the game softlocks here, and with what combination of enemies
 * Misc. small fixes and improvements in a number of spots
+* Minute Bombs and Assassins have been removed possible random enemies due to an issue with softlocks resulting from explosions in forced fights. If the randomizer would replace an enemy with Minute Bombs or Assassins, there will be Cannon Guns instead.

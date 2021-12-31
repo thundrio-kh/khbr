@@ -1007,6 +1007,7 @@ Assassin:
   obj_id: 309
   sizeTag: memoryLarge
   type: enemy
+  replace_as: Cannon Gun # FIXME I'm being lazy need a better fix for the explosion softlock issue
   variations:
     Assassin:
       vars:
@@ -3090,6 +3091,7 @@ Minute Bomb:
   model: M_EX550
   obj_id: 7
   sizeTag: memorySmall
+  replace_as: Cannon Gun # FIXME I'm being lazy need a real solution to explosion bug
   type: enemy
   variations:
     Minute Bomb:
@@ -3103,6 +3105,7 @@ Minute Bomb:
 Minute Bomb WI:
   enabled: true
   variationof: Minute Bomb
+  replace_as: Cannon Gun # FIXME I'm being lazy need a real solution to explosion bug
   enmp_index: 57
   hp: 100
   level: 99

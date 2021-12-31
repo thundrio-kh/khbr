@@ -6016,10 +6016,10 @@
         "obj_id": 309,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "replace_as": "Cannon Gun",
         "variations": [
             "Assassin"
         ],
-        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -14669,12 +14669,12 @@
         "model": "M_EX550",
         "obj_id": 7,
         "sizeTag": "memorySmall",
+        "replace_as": "Cannon Gun",
         "type": "enemy",
         "variations": [
             "Minute Bomb",
             "Minute Bomb (99 0)"
         ],
-        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -14722,12 +14722,12 @@
         "model": "M_EX550",
         "obj_id": 7,
         "sizeTag": "memorySmall",
+        "replace_as": "Cannon Gun",
         "type": "enemy",
         "variations": [
             "Minute Bomb",
             "Minute Bomb (99 0)"
         ],
-        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],
@@ -14766,6 +14766,7 @@
         "name": "Minute Bomb WI",
         "enabled": true,
         "variationof": "Minute Bomb",
+        "replace_as": "Cannon Gun",
         "enmp_index": 57,
         "hp": 100,
         "level": 99,
@@ -14777,7 +14778,6 @@
         "variations": [
             "Minute Bomb WI"
         ],
-        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "tags": [],

@@ -201,8 +201,8 @@ class AssetGenerator:
             script = AreaDataScript(f.read(), ispc=self.ispc)
         for p in script.programs:
             if script.has_capacity(p):
-                if ardname == "mu07":
-                    # Summit will crash when capacity is infinite
+                if ardname in ["mu07", "mu09"]:
+                    # Summit will crash when capacity is infinite, and shan yu's summons can sometimes crash the game
                     continue
                 mission = script.get_mission(p)
                 if (not script.ispc) and (not mission):
