@@ -91,8 +91,8 @@ class KingdomHearts2:
             start_time = time.time()
             print_debug("Starting Randomization: {}".format(options), override=True)
 
-        enemymode = options.get("enemy", 'Disabled')
-        bossmode = options.get("boss", "Disabled")
+        enemymode = options.get("enemy", 'Disabled') if not options.get("selected_enemy") else options.get("selected_enemy")
+        bossmode = options.get("boss", "Disabled") if not options.get("selected_boss") else options.get("selected_boss")
         nightmare_bosses = options.get("nightmare_bosses")
         config = RandomConfig(
             memory_expansion = options.get("memory_expansion"),

@@ -88,7 +88,7 @@ class Tests(unittest.TestCase):
         assert False == testutils.get_found(randomization, "Shadow")
 
     def test_seedgen_enemy_selected(self):
-        options = {"enemy": "Selected Enemy", "selected_enemy": "Shadow WI"}
+        options = {"selected_enemy": "Shadow WI"}
         randomization = testutils.generateSeed(options)
         testutils.validate_selected(randomization, "Shadow WI", isboss=False)
 

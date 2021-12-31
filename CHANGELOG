@@ -1,6 +1,6 @@
 2.0
-* Full redesign of backend, to make future updates easier
-* PC should now be able to load cups 
+* Full redesign of the backend, to make future updates easier
+* PC is now be able to load cups when enemies are randomized
 * Options to not randomize big and small enemies separately. Warning should only be used on PC and it is experimental and may cause crashes
 * Options to not randomize melee and ranged enemies separately. Warning should only be used on PC and it is experimental and may cause crashes
 * Option to randomize enemies independently of each other. Warning should only be used on PC and it is experimental and will probably cause crashes
@@ -11,3 +11,4 @@
 * Added quality of life option to make it possible to retry data final xemnas without going through data xemnas I again
 * Removed the "Selected Boss" and "Selected Enemy" options from the enemy/boss dropdowns, and now if a selected boss/enemy is chosen, it assumes that is what you want
 * Removed the ability to choose whether or not to scale bosses because the effect can be confusing/not what is expected. Bosses are now always scaled when possible.
+* Ambush appears to be working fine, so it is added back into the randomization pool. Please report if the game softlocks here, and with what combination of enemies
