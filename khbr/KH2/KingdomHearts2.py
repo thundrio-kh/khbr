@@ -97,7 +97,7 @@ class KingdomHearts2:
         config = RandomConfig(
             memory_expansion = options.get("memory_expansion"),
             utility_mods = self.get_utility_mods(options),
-            scale_boss = options.get("scale_boss_stats"),
+            scale_boss = options.get("scale_boss_stats", True),
 
             enemymode = enemymode,
             enemies = self.enemy_manager.get_enemies() if enemymode != 'Disabled' else {},

@@ -270,7 +270,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_generate_all_xemnas()
+ut.test_seedgen_boss_one_to_one_scaled()
 
 # Uncomment to run the actual tests
 #unittest.main()
