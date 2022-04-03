@@ -10497,8 +10497,7 @@
         },
         "blacklist_destination": [
             "Dark Thorn",
-            "Shadow Stalker",
-            "DonkeyDicks"
+            "Shadow Stalker"
         ],
         "whitelist_destination": [
             "Cerberus",
