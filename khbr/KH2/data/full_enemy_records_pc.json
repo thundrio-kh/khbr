@@ -6808,7 +6808,8 @@
             "enabled": false
         },
         "tags": [
-            "cups"
+            "cups",
+            "large"
         ],
         "msn": "HE_COL_8TI_BOSS",
         "program": 196,
@@ -6841,7 +6842,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups",
+        "category": "cups-large",
         "isnightmare": false,
         "parent": "Blizzard Lord",
         "variationof": null,
@@ -7226,9 +7227,6 @@
         ]
     },
     "Cerberus (Cups)": {
-        "tags": [
-            "cups"
-        ],
         "pc": {
             "enabled": false
         },
@@ -7258,6 +7256,9 @@
         "name": "Cerberus (Cups)",
         "enmp_index": 19,
         "hp": 100,
+        "tags": [
+            "solo"
+        ],
         "level": 99,
         "limiter": 0,
         "model": "B_HE020",
@@ -7274,7 +7275,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups",
+        "category": "solo",
         "isnightmare": false,
         "parent": "Cerberus",
         "variationof": null,
@@ -10377,14 +10378,15 @@
         "program": 85,
         "size": 2.35,
         "room_size": 12.61,
-        "tags": [
-            "large"
-        ],
         "vars": [
             1,
             0
         ],
         "name": "Grim Reaper I",
+        "tags": [
+            "teleport_blocked",
+            "large"
+        ],
         "enabled": true,
         "enmp_index": 154,
         "hp": 100,
@@ -10399,7 +10401,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "large",
+        "category": "large-teleport_blocked",
         "isnightmare": false,
         "parent": "Grim Reaper I",
         "variationof": null,
@@ -10426,8 +10428,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -10435,16 +10435,13 @@
             "Grim Reaper I",
             "Hades II",
             "Hostile Program",
-            "Larxene",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Saix",
             "Sark",
             "Scar",
@@ -10457,9 +10454,7 @@
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Xigbar",
-            "Zexion"
+            "Xemnas"
         ]
     },
     "Grim Reaper II": {
@@ -13443,7 +13438,8 @@
     "Larxene (Data)": {
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "needs_teleport"
         ],
         "enabled": true,
         "msn": "HB33_FM_LAR",
@@ -13475,7 +13471,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-organization",
+        "category": "data-needs_teleport-organization",
         "parent": "Larxene",
         "variationof": null,
         "children": [],
@@ -13986,7 +13982,8 @@
     },
     "Living Bone (Headless with Necromancer)": {
         "tags": [
-            "ranged"
+            "ranged",
+            "large"
         ],
         "vars": [
             1,
@@ -14011,7 +14008,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "ranged",
+        "category": "large-ranged",
         "parent": "Living Bone",
         "variationof": null,
         "children": [],
@@ -14039,7 +14036,8 @@
     },
     "Living Bone (Necromancer)": {
         "tags": [
-            "ranged"
+            "ranged",
+            "large"
         ],
         "vars": [
             2,
@@ -14064,7 +14062,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "ranged",
+        "category": "large-ranged",
         "parent": "Living Bone",
         "variationof": null,
         "children": [],
@@ -17442,7 +17440,9 @@
     "Roxas (Data)": {
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "solo",
+            "needs_teleport"
         ],
         "enabled": true,
         "msn": "EH21_MS101",
@@ -17470,7 +17470,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-organization",
+        "category": "data-needs_teleport-organization-solo",
         "parent": "Roxas",
         "variationof": null,
         "children": [],
@@ -20737,7 +20737,8 @@
     "Vexen (Data)": {
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "teleport_blocked"
         ],
         "enabled": true,
         "program": 146,
@@ -20768,7 +20769,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-organization",
+        "category": "data-organization-teleport_blocked",
         "isnightmare": false,
         "parent": "Vexen",
         "variationof": null,
@@ -21067,7 +21068,8 @@
             "enabled": false
         },
         "tags": [
-            "cups"
+            "cups",
+            "large"
         ],
         "msn": "HE_COL_8_5",
         "program": 196,
@@ -21100,7 +21102,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups",
+        "category": "cups-large",
         "isnightmare": false,
         "parent": "Volcano Lord",
         "variationof": null,
@@ -21827,7 +21829,9 @@
     "Zexion (Data)": {
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "needs_teleport",
+            "needs_rc"
         ],
         "enabled": true,
         "program": 152,
@@ -21857,7 +21861,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-organization",
+        "category": "data-needs_rc-needs_teleport-organization",
         "isnightmare": false,
         "parent": "Zexion",
         "variationof": null,

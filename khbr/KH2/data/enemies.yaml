@@ -1040,6 +1040,7 @@ Axel I:
   tags:
   - roxas
   - teleport_blocked
+  - needs_teleport
   model: B_EX110_SKIRMISH
   msn: TT05_MS404
   enmp_index: 0x94
@@ -1284,6 +1285,7 @@ Blizzard Lord:
         enabled: false
       tags:
       - cups
+      - large
       msn: HE_COL_8TI_BOSS
       program: 196
       room_size: 9.14
@@ -1376,8 +1378,8 @@ Cerberus:
       - 0
       - 0
     Cerberus (Cups):
-      tags:
-      - cups
+      # tags:
+      # - cups
       pc: 
         enabled: false
       enabled: true
@@ -2151,6 +2153,7 @@ Graveyard NM:
 Grim Reaper I:
   tags:
   - teleport_blocked
+  - large
   enabled: true
   enmp_index: 0x9A
   hp: 100
@@ -2167,8 +2170,6 @@ Grim Reaper I:
       program: 85
       size: 2.35
       room_size: 12.61
-      tags:
-      - large
       vars:
       - 1
       - 0
@@ -2803,6 +2804,7 @@ Larxene:
       tags:
       - data
       - organization
+      - needs_teleport
       enabled: true
       msn: HB33_FM_LAR
       program: 148
@@ -2920,12 +2922,14 @@ Living Bone:
     Living Bone (Headless with Necromancer):
       tags:
       - ranged
+      - large
       vars:
       - 1
       - 0
     Living Bone (Necromancer):
       tags:
       - ranged
+      - large
       vars:
       - 2
       - 0
@@ -3538,6 +3542,8 @@ Roxas:
       tags:
       - data
       - organization
+      - solo
+      - needs_teleport
       enabled: true
       msn: EH21_MS101
       program: 99
@@ -4435,6 +4441,7 @@ Vexen:
       tags:
       - data
       - organization
+      - teleport_blocked
       enabled: true
       program: 146
       msn: HB32_FM_VEX
@@ -4534,6 +4541,7 @@ Volcano Lord:
         enabled: false
       tags:
       - cups
+      - large
       msn: HE_COL_8_5
       program: 196
       room_size: 9.14
@@ -4721,6 +4729,8 @@ Zexion:
       tags:
       - data
       - organization
+      - needs_teleport
+      - needs_rc
       enabled: true
       program: 152
       msn: HB34_FM_ZEX

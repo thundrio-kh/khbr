@@ -112,6 +112,14 @@ class EnemyManager:
         for k in parent:
             if ispc and k == "pc":
                 for k_pc in parent["pc"]:
+                    value = parent["pc"][k_pc]
+                    # Allow different blacklist/whitelists for pc vs ps2
+                    if type(value) == list:
+                        if k_pc not in parent:
+                            parent[k_pc] = []
+                        for v in value:
+                            if v not in parent[k_pc]:
+                                parent[k_pc].append(v)
                     parent[k_pc] = parent["pc"][k_pc]
             if k == "variations":
                 if k not in variation: # confused, what is this for
