@@ -6117,7 +6117,8 @@
         "limiter": 0,
         "tags": [
             "roxas",
-            "teleport_blocked"
+            "teleport_blocked",
+            "needs_teleport"
         ],
         "model": "B_EX110_SKIRMISH",
         "msn": "TT05_MS404",
@@ -6158,7 +6159,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "roxas-teleport_blocked",
+        "category": "needs_teleport-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Axel I",
         "variationof": null,
@@ -6290,7 +6291,6 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Axel I",
             "Axel II",
             "Blizzard Lord",
             "Cloud",
@@ -10471,6 +10471,11 @@
         "enmp_index": 124,
         "hp": 100,
         "level": 99,
+        "pc": {
+            "blacklist_source": [
+                "Pete OC II"
+            ]
+        },
         "blacklist_destination": [
             "Dark Thorn",
             "Shadow Stalker"
@@ -10610,7 +10615,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -11109,7 +11113,6 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "available": [
-            "Axel I",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -15206,7 +15209,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -15588,7 +15590,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -17810,7 +17811,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -18031,7 +18031,6 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "available": [
-            "Axel I",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -18605,7 +18604,6 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "available": [
-            "Axel I",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -20749,7 +20747,6 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Axel I",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -20887,7 +20884,6 @@
         "obj_edits": {},
         "available": [
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -21003,7 +20999,6 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "available": [
-            "Axel I",
             "Blizzard Lord",
             "Cloud",
             "Grim Reaper I",
@@ -21374,7 +21369,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
