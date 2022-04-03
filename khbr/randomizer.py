@@ -158,7 +158,7 @@ class Randomizer:
                 if seedfn.endswith("json"):
                     randomization = json.load(f)
                 elif seedfn.endswith("yaml"):
-                    randomization = yaml.load(f)
+                    randomization = yaml.load(f, Loader=yaml.SafeLoader)
                 else:
                     raise Exception("Unsupported Seed Format! Need json or yaml")
         return self.generate_mod(game, outfn, randomization, newname=os.path.basename(outfn))
