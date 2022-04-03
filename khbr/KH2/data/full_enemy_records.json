@@ -17772,6 +17772,9 @@
         ],
         "name": "Sark",
         "enabled": true,
+        "blacklist_source": [
+            "Cloud"
+        ],
         "tags": [
             "teleport_blocked"
         ],
@@ -17807,7 +17810,6 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -17822,7 +17824,6 @@
             "Armor Xemnas II",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",

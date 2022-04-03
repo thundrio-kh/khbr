@@ -3627,6 +3627,8 @@ Samurai:
       - 0
 Sark:
   enabled: true
+  blacklist_source:
+  - Cloud # report of crash when cloud takes damage
   tags:
   - teleport_blocked
   isnightmare: true
