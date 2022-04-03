@@ -1,5 +1,6 @@
 from khbr.randomizer import KingdomHearts2
-
+import random
+random.seed(5)
 import time, sys
 starttime = time.time()
 

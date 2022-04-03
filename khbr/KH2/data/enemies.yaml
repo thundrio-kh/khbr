@@ -2179,6 +2179,11 @@ Grim Reaper II:
   enmp_index: 0x7C
   hp: 100
   level: 99
+  pc:
+    blacklist_source:
+    - Pete OC II # crashes on fight start
+    blacklist_destination:
+    - DonkeyDicks
   blacklist_destination:
   - Dark Thorn # medals get lost on ground
   - Shadow Stalker # medals get lost on ground
