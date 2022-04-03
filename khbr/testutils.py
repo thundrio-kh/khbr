@@ -49,7 +49,7 @@ def validate_boss_placements(randomization, pc=False):
     kh2 = KingdomHearts2()
     if pc:
         kh2.enemy_manager.set_enemies("full_enemy_records_pc.json")
-    vanilla = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")), loader=yaml.SafeLoader)
+    vanilla = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")), Loader=yaml.SafeLoader)
     used_bosses = []
     for world_name in randomization["spawns"]:
         world = randomization["spawns"][world_name]
