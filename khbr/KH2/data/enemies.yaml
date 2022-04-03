@@ -1160,6 +1160,10 @@ Banzai:
       - 0
 Barbossa:
   aimod: true
+  pc:
+    blacklist_destination:
+    - Luxord # report of crash after cutscene
+    - Terra # report of crash at cutscene
   adds:
   - ObjectId: 358 #Illuminator
     name: Illuminator
@@ -2182,6 +2186,8 @@ Grim Reaper II:
   pc:
     blacklist_source:
     - Pete OC II # crashes on fight start
+    - Hades II
+    - Past Pete
   blacklist_destination:
   - Dark Thorn # medals get lost on ground
   - Shadow Stalker # medals get lost on ground
@@ -2568,6 +2574,9 @@ Hook Bat AL:
       - 20
 Hostile Program:
   enabled: true
+  blacklist_source:
+  - Axel II # Report of Fire pillar killing during intro cutscene
+  - Axel I
   enmp_index: 0x6A
   hp: 100
   level: 99

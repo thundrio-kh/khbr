@@ -6420,6 +6420,12 @@
         ],
         "name": "Barbossa",
         "aimod": true,
+        "pc": {
+            "blacklist_destination": [
+                "Luxord",
+                "Terra"
+            ]
+        },
         "adds": [
             {
                 "ObjectId": 358,
@@ -10484,7 +10490,9 @@
         "level": 99,
         "pc": {
             "blacklist_source": [
-                "Pete OC II"
+                "Pete OC II",
+                "Hades II",
+                "Past Pete"
             ]
         },
         "blacklist_destination": [
@@ -12668,6 +12676,10 @@
         ],
         "name": "Hostile Program",
         "enabled": true,
+        "blacklist_source": [
+            "Axel II",
+            "Axel I"
+        ],
         "enmp_index": 106,
         "hp": 100,
         "level": 99,
@@ -12707,7 +12719,6 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -12719,8 +12730,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
