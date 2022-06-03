@@ -106,19 +106,33 @@ class EnemyManager:
 
     @staticmethod
     def inheritConfig(parent, variation, defaults, ispc=False):
+        # I don't know why this is sometimes called with parent == variation
+        if parent == variation:
+            return
         if ispc and "pc" in variation:
             for k in variation["pc"]:
                 variation[k] = variation["pc"][k]
+        keys_to_add = {} # keys in pc specific config not in overall
         for k in parent:
             if ispc and k == "pc":
                 for k_pc in parent["pc"]:
-                    parent[k_pc] = parent["pc"][k_pc]
+                    value = parent["pc"][k_pc]
+                    if k_pc not in parent:
+                        keys_to_add[k_pc] = value
+                    # Allow different blacklist/whitelists for pc vs ps2
+                    elif type(value) == list:
+                        for v in value:
+                            if v not in parent[k_pc]:
+                                parent[k_pc].append(v)
+                    else:
+                        parent[k_pc] = parent["pc"][k_pc]
             if k == "variations":
                 if k not in variation: # confused, what is this for
                     variation[k] = list(parent[k].keys())
                 continue
             if k not in variation:
                 variation[k] = parent[k]
+        parent.update(keys_to_add)
         for d in defaults:
             if d not in variation:
                 variation[d] = defaults[d]

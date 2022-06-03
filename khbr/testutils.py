@@ -49,7 +49,7 @@ def validate_boss_placements(randomization, pc=False):
     kh2 = KingdomHearts2()
     if pc:
         kh2.enemy_manager.set_enemies("full_enemy_records_pc.json")
-    vanilla = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")))
+    vanilla = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")), Loader=yaml.SafeLoader)
     used_bosses = []
     for world_name in randomization["spawns"]:
         world = randomization["spawns"][world_name]
@@ -86,7 +86,7 @@ def get_tmp_path():
     return os.path.join(os.getcwd(), "tmp")
 
 def get_enemies_in(randomization, world, room, spn, spid=None):
-    original = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")))
+    original = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")), Loader=yaml.SafeLoader)
     og_spawnpoint = original[world][room]["spawnpoints"][spn]
     try:
         spawnpoint = randomization["spawns"][world][room]["spawnpoints"][spn]
@@ -178,7 +178,7 @@ def get_found(randomization, name=None, tags=[]):
     return False
 
 def get_randomized(randomization, source_name):
-    original = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")))
+    original = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")), Loader=yaml.SafeLoader)
     for w, world in original.items():
         for r, room in world.items():
             for spn, spawnpoint in room["spawnpoints"].items():
@@ -250,7 +250,7 @@ def _find_index(spid, index):
 
 def validate_scale_map(randomization):
     kh2 = KingdomHearts2()
-    original = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")))
+    original = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")), Loader=yaml.SafeLoader)
     for w, world in original.items():
         for r, room in world.items():
             for spn, spawnpoint in room["spawnpoints"].items():
@@ -272,7 +272,7 @@ def validate_scale_map(randomization):
                                 assert scaled_og_parent == og_parent
 
 def validate_enemy_records(enemy_records):
-    enemies_yaml = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","enemies.yaml")))
+    enemies_yaml = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","enemies.yaml")), Loader=yaml.SafeLoader)
     storm_original = enemies_yaml["Storm Rider"]
     storm_built = enemy_records["Storm Rider"]
     for name, enemy in enemy_records.items():

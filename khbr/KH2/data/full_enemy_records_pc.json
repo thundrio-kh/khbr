@@ -6126,7 +6126,8 @@
         "limiter": 0,
         "tags": [
             "roxas",
-            "teleport_blocked"
+            "teleport_blocked",
+            "needs_teleport"
         ],
         "model": "B_EX110_SKIRMISH",
         "msn": "TT05_MS404",
@@ -6167,7 +6168,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "roxas-teleport_blocked",
+        "category": "needs_teleport-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Axel I",
         "variationof": null,
@@ -6290,7 +6291,6 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Axel I",
             "Axel II",
             "Blizzard Lord",
             "Dark Thorn",
@@ -6420,6 +6420,12 @@
         ],
         "name": "Barbossa",
         "aimod": true,
+        "pc": {
+            "blacklist_destination": [
+                "Luxord",
+                "Terra"
+            ]
+        },
         "adds": [
             {
                 "ObjectId": 358,
@@ -6808,7 +6814,8 @@
             "enabled": false
         },
         "tags": [
-            "cups"
+            "cups",
+            "large"
         ],
         "msn": "HE_COL_8TI_BOSS",
         "program": 196,
@@ -6841,7 +6848,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups",
+        "category": "cups-large",
         "isnightmare": false,
         "parent": "Blizzard Lord",
         "variationof": null,
@@ -7226,9 +7233,6 @@
         ]
     },
     "Cerberus (Cups)": {
-        "tags": [
-            "cups"
-        ],
         "pc": {
             "enabled": false
         },
@@ -7258,6 +7262,9 @@
         "name": "Cerberus (Cups)",
         "enmp_index": 19,
         "hp": 100,
+        "tags": [
+            "solo"
+        ],
         "level": 99,
         "limiter": 0,
         "model": "B_HE020",
@@ -7274,7 +7281,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups",
+        "category": "solo",
         "isnightmare": false,
         "parent": "Cerberus",
         "variationof": null,
@@ -10377,14 +10384,15 @@
         "program": 85,
         "size": 2.35,
         "room_size": 12.61,
-        "tags": [
-            "large"
-        ],
         "vars": [
             1,
             0
         ],
         "name": "Grim Reaper I",
+        "tags": [
+            "teleport_blocked",
+            "large"
+        ],
         "enabled": true,
         "enmp_index": 154,
         "hp": 100,
@@ -10399,7 +10407,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "large",
+        "category": "large-teleport_blocked",
         "isnightmare": false,
         "parent": "Grim Reaper I",
         "variationof": null,
@@ -10425,9 +10433,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
-            "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -10435,16 +10440,13 @@
             "Grim Reaper I",
             "Hades II",
             "Hostile Program",
-            "Larxene",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Saix",
             "Sark",
             "Scar",
@@ -10457,9 +10459,7 @@
             "Vexen",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Xigbar",
-            "Zexion"
+            "Xemnas"
         ]
     },
     "Grim Reaper II": {
@@ -10488,6 +10488,13 @@
         "enmp_index": 124,
         "hp": 100,
         "level": 99,
+        "pc": {
+            "blacklist_source": [
+                "Pete OC II",
+                "Hades II",
+                "Past Pete"
+            ]
+        },
         "blacklist_destination": [
             "Dark Thorn",
             "Shadow Stalker"
@@ -10642,7 +10649,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -11134,7 +11140,6 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "available": [
-            "Axel I",
             "Blizzard Lord",
             "Dark Thorn",
             "Grim Reaper I",
@@ -12671,6 +12676,10 @@
         ],
         "name": "Hostile Program",
         "enabled": true,
+        "blacklist_source": [
+            "Axel II",
+            "Axel I"
+        ],
         "enmp_index": 106,
         "hp": 100,
         "level": 99,
@@ -12710,7 +12719,6 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -12722,8 +12730,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -12832,7 +12838,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_HE100",
-        "unchanged_file_size": false,
+        "unchanged_file_size": true,
         "pc": {
             "enabled": false,
             "unchanged_file_size": false
@@ -12889,38 +12895,28 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
-            "Hostile Program",
             "Hydra",
             "Larxene",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Riku",
             "Roxas",
             "Saix",
             "Sark",
             "Scar",
             "Sephiroth",
-            "Shan-Yu",
             "Terra",
-            "The Experiment",
-            "Thresholder",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
@@ -13367,7 +13363,7 @@
         "size": 5.35,
         "room_size": 8.3,
         "type": "boss",
-        "unchanged_file_size": false,
+        "unchanged_file_size": true,
         "pc": {
             "unchanged_file_size": false
         },
@@ -13401,36 +13397,27 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
-            "Hostile Program",
             "Larxene",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Riku",
             "Roxas",
             "Saix",
             "Sark",
             "Scar",
             "Sephiroth",
-            "Shan-Yu",
             "Terra",
-            "The Experiment",
-            "Thresholder",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
@@ -13443,7 +13430,8 @@
     "Larxene (Data)": {
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "needs_teleport"
         ],
         "enabled": true,
         "msn": "HB33_FM_LAR",
@@ -13475,7 +13463,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-organization",
+        "category": "data-needs_teleport-organization",
         "parent": "Larxene",
         "variationof": null,
         "children": [],
@@ -13786,7 +13774,7 @@
         "obj_id": 2357,
         "size": 3.9,
         "type": "boss",
-        "unchanged_file_size": false,
+        "unchanged_file_size": true,
         "pc": {
             "unchanged_file_size": false
         },
@@ -13827,36 +13815,27 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
-            "Hostile Program",
             "Larxene",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Riku",
             "Roxas",
             "Saix",
             "Sark",
             "Scar",
             "Sephiroth",
-            "Shan-Yu",
             "Terra",
-            "The Experiment",
-            "Thresholder",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
@@ -13986,7 +13965,8 @@
     },
     "Living Bone (Headless with Necromancer)": {
         "tags": [
-            "ranged"
+            "ranged",
+            "large"
         ],
         "vars": [
             1,
@@ -14011,7 +13991,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "ranged",
+        "category": "large-ranged",
         "parent": "Living Bone",
         "variationof": null,
         "children": [],
@@ -14039,7 +14019,8 @@
     },
     "Living Bone (Necromancer)": {
         "tags": [
-            "ranged"
+            "ranged",
+            "large"
         ],
         "vars": [
             2,
@@ -14064,7 +14045,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "ranged",
+        "category": "large-ranged",
         "parent": "Living Bone",
         "variationof": null,
         "children": [],
@@ -14524,7 +14505,7 @@
         "room_size": 7.96,
         "program": 145,
         "type": "boss",
-        "unchanged_file_size": false,
+        "unchanged_file_size": true,
         "pc": {
             "unchanged_file_size": false
         },
@@ -14562,36 +14543,27 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
-            "Hostile Program",
             "Larxene",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Riku",
             "Roxas",
             "Saix",
             "Sark",
             "Scar",
             "Sephiroth",
-            "Shan-Yu",
             "Terra",
-            "The Experiment",
-            "Thresholder",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
@@ -15092,7 +15064,7 @@
         "obj_id": 126,
         "program": 55,
         "size": 4.79,
-        "unchanged_file_size": false,
+        "unchanged_file_size": true,
         "pc": {
             "unchanged_file_size": false
         },
@@ -15129,31 +15101,23 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
-            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
-            "Hostile Program",
             "Lexaeus",
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Riku",
             "Saix",
             "Sark",
             "Scar",
             "Sephiroth",
-            "Shan-Yu",
             "Terra",
-            "The Experiment",
-            "Thresholder",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
@@ -15216,7 +15180,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -15597,7 +15560,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -17442,7 +17404,9 @@
     "Roxas (Data)": {
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "solo",
+            "needs_teleport"
         ],
         "enabled": true,
         "msn": "EH21_MS101",
@@ -17470,7 +17434,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-organization",
+        "category": "data-needs_teleport-organization-solo",
         "parent": "Roxas",
         "variationof": null,
         "children": [],
@@ -17796,7 +17760,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -18001,7 +17964,6 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "available": [
-            "Axel I",
             "Blizzard Lord",
             "Dark Thorn",
             "Grim Reaper I",
@@ -18558,7 +18520,6 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "available": [
-            "Axel I",
             "Blizzard Lord",
             "Dark Thorn",
             "Grim Reaper I",
@@ -18894,7 +18855,7 @@
         "limiter": 34,
         "model": "B_MU100",
         "msn": "MU09_MS108",
-        "unchanged_file_size": false,
+        "unchanged_file_size": true,
         "pc": {
             "unchanged_file_size": false
         },
@@ -18944,27 +18905,20 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "available": [
-            "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
-            "Hostile Program",
             "Larxene",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
-            "Prison Keeper",
             "Riku",
             "Roxas",
             "Saix",
@@ -18973,8 +18927,6 @@
             "Sephiroth",
             "Shan-Yu",
             "Terra",
-            "The Experiment",
-            "Thresholder",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
@@ -20721,7 +20673,6 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "available": [
-            "Axel I",
             "Blizzard Lord",
             "Dark Thorn",
             "Grim Reaper I",
@@ -20737,7 +20688,8 @@
     "Vexen (Data)": {
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "teleport_blocked"
         ],
         "enabled": true,
         "program": 146,
@@ -20768,7 +20720,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-organization",
+        "category": "data-organization-teleport_blocked",
         "isnightmare": false,
         "parent": "Vexen",
         "variationof": null,
@@ -20850,7 +20802,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -20963,7 +20914,6 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "available": [
-            "Axel I",
             "Blizzard Lord",
             "Dark Thorn",
             "Grim Reaper I",
@@ -21067,7 +21017,8 @@
             "enabled": false
         },
         "tags": [
-            "cups"
+            "cups",
+            "large"
         ],
         "msn": "HE_COL_8_5",
         "program": 196,
@@ -21100,7 +21051,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups",
+        "category": "cups-large",
         "isnightmare": false,
         "parent": "Volcano Lord",
         "variationof": null,
@@ -21325,7 +21276,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -21827,7 +21777,9 @@
     "Zexion (Data)": {
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "needs_teleport",
+            "needs_rc"
         ],
         "enabled": true,
         "program": 152,
@@ -21857,7 +21809,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-organization",
+        "category": "data-needs_rc-needs_teleport-organization",
         "isnightmare": false,
         "parent": "Zexion",
         "variationof": null,
