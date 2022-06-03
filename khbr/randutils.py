@@ -56,9 +56,19 @@ def pick_boss_to_replace(enemy_records, bossparentlist):
     chosen_boss = random.choice(enabled_variations)
     return chosen_boss
 
-def pick_enemy_to_replace(old_enemy, enabled_enemies):
-    options = [e["name"] for e in enabled_enemies if e["category"] == old_enemy["category"]]
-    return random.choice(options)
+def pick_enemy_to_replace(old_enemy, enabled_enemies, enemy_set={}, max_enemies=0):
+    new_options = [e["name"] for e in enabled_enemies if e["category"] == old_enemy["category"]]
+    pick = random.choice(new_options)
+    if max_enemies > 0:
+        if len(enemy_set) < max_enemies:
+            enemy_set.add(pick)
+        else:
+            max_options = list(enemy_set.intersection(set(new_options)))
+            if len(max_options) == 0:
+                pick = old_enemy["name"] # fallback hopefully doesn't happen too often
+            else:
+                pick = random.choice(list(max_options))
+    return pick
 
 def create_new_entity(old_entity, new_object):
     if old_entity == "new":

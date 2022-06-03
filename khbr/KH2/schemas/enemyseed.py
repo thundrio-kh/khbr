@@ -14,6 +14,9 @@ class EnemySeed:
         self.utility_mods = {}
         self.data_replacements = {}
         self.config = config
+
+        # Temporary option needed during generating wild enemies to track enemies already used per room
+        self.wild_enemy_set = set()
             
     def toJson(self):
         return {

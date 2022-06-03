@@ -219,6 +219,14 @@ class Tests(unittest.TestCase):
         # Make sure it's valid base64
         base64.decodebytes(b64)
 
+    def test_seedgen_error3(self):
+        options =  {'remove_damage_cap': False, 'cups_give_xp': True, 'retry_data_final_xemnas': True, 'boss': 'One to One', 'selected_boss': 'Final Xemnas', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': False, 'data_bosses': False, 'mickey_rule': 'follow', 'enemy': 'Wild', 'nightmare_enemies': False, 'combine_enemy_sizes': True, 'combine_melee_ranged': False, 'memory_expansion': True}
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        # Make sure it's valid base64
+        base64.decodebytes(b64)
+
     def test_getbosses(self):
         kh2 = KingdomHearts2()
         kh2.enemy_manager.create_enemy_records(getavail=True)
@@ -270,7 +278,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_seedgen_boss_one_to_one_scaled()
+ut.test_seedgen_error3()
 
 # Uncomment to run the actual tests
 #unittest.main()

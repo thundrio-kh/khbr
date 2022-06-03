@@ -220,10 +220,10 @@ if __name__ == '__main__':
     import time
     t = time.time()
     mode = sys.argv[1]
-    # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"enemy\": \"One to One\"}" randomization_only
+    # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"enemy\": \"Wild\", \"combine_enemy_sizes\": true}" randomization_only
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"data_bosses\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
-    # run randomizer.py devgenerate "{\"selected_boss\": \"Barbossa\"}"
+    # run randomizer.py devgenerate "{\"selected_boss\": \"Final Xemnas\", \"enemy\": \"Wild\"}" randomization_only
     # run randomizer.py devgenerate "{\"selected_enemy\": \"Dancer\"}"
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\", \"combine_enemy_sizes\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"mickey_rule\": \"all\"}" randomization_only

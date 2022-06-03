@@ -942,12 +942,12 @@ Armor Xemnas I:
       size: 3.82
       room_size: 12.98
       adds:
-      - ObjectId: 2116 # ???
-      - ObjectId: 2115 # Xig
-      - ObjectId: 2117 # xaldin
-      - ObjectId: 2118 # Axel
+      - ObjectId: 2116 # ??? B_EX300
+      - ObjectId: 2115 # Xig B_EX290
+      - ObjectId: 2117 # xaldin B_EX310
+      - ObjectId: 2118 # Axel B_EX320
         Argument1: 1
-      - ObjectId: 2294 # dancers
+      - ObjectId: 2294 # dancers M_EX880_DANCER_EH
       vars:
       - 1
       - 0
@@ -2428,8 +2428,6 @@ Hayner:
 Hercules:
   can_be_enemy: true
   enabled: true
-  pc: 
-    enabled: false
   enmp_index: 0xB2
   hp: 100
   level: 99

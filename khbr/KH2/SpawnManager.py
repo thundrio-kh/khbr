@@ -192,14 +192,13 @@ class SpawnManager:
         if rand_seed.config.selected_enemy:
             new_enemy = rand_seed.config.selected_enemy
         elif rand_seed.config.enemymode == "Wild":
-            #TODO pretty sure this is broken, but also not safe to run in the game anyway
-            new_enemy = pick_enemy_to_replace(old_enemy_object, rand_seed.config.enemies)
+            new_enemy = pick_enemy_to_replace(old_enemy_object, rand_seed.config.enemies, rand_seed.wild_enemy_set, max_enemies=7)
         elif rand_seed.enemymapping:
             if old_enemy_object["name"] not in rand_seed.enemymapping:
                 return None # if it's not in mapping it's not enabled
             new_enemy = rand_seed.enemymapping[old_enemy_object["name"]]
         if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses:
-            chance = 0.005
+            chance = 0.0075
             if random.random() < chance:
                 if not rand_seed.config.boss_enemies:
                     for boss_name in rand_seed.config.bosses:

@@ -26,7 +26,7 @@ class KingdomHearts2:
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
-            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized (this is probably unstable and is only available for PC). If a selected enemy is filled in this setting is ignored and every enemy (almost) will become that enemy.",
+            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized, but due to memory constraints no room can have more than 13 unique enemy types. If a selected enemy is filled in this setting is ignored and every enemy (almost) will become that enemy.",
                                     "type": "enemy", "possible_values": ["Disabled", "One to One", "One to One Per Room", "Wild"], "hidden_values": []},
             "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
                                 "type": "enemy", "possible_values": [None] + sorted(self.get_valid_enemies()), "hidden_values": []},
@@ -94,8 +94,11 @@ class KingdomHearts2:
         enemymode = options.get("enemy", 'Disabled') if not options.get("selected_enemy") else options.get("selected_enemy")
         bossmode = options.get("boss", "Disabled") if not options.get("selected_boss") else options.get("selected_boss")
         nightmare_bosses = options.get("nightmare_bosses")
+        memory_expansion = options.get("memory_expansion")
+        if enemymode == "Wild" and not memory_expansion:
+            raise Exception("Wild enemy mode only works on PC due to memory constraints on the PS2 version.")
         config = RandomConfig(
-            memory_expansion = options.get("memory_expansion"),
+            memory_expansion = memory_expansion,
             utility_mods = self.get_utility_mods(options),
             scale_boss = options.get("scale_boss_stats", True),
 
@@ -128,8 +131,6 @@ class KingdomHearts2:
                 config.utility_mods.remove("cups_give_xp")
             rand_seed.utility_mods = config.utility_mods
 
-        print(rand_seed.msn_mapping)
-
         retry_dfx = "retry_data_final_xemnas" in config.utility_mods
         rand_seed.set_data_final_xemnas_retry(retry_dfx)
         if retry_dfx:
@@ -151,7 +152,7 @@ class KingdomHearts2:
     def create_seed(self, rand_seed: EnemySeed):
             rand_seed.bossmapping = pickbossmapping(self.enemy_manager.enemy_records, rand_seed.config.bosses) if not rand_seed.config.duplicate_bosses else None
             if rand_seed.config.enemies and rand_seed.config.enemymode != "Selected Enemy":
-                categorized_enemies = self.enemy_manager.categorize_enemies(rand_seed.config.enemies, combine_sizes=rand_seed.config.combine_enemy_sizes, combine_ranged=rand_seed.config.combine_melee_ranged)
+                categorized_enemies = self.enemy_manager.categorize_enemies(rand_seed.config.enemies, combine_sizes=rand_seed.config.combine_enemy_sizes, combine_ranged=rand_seed.config.combine_melee_ranged, ispc=rand_seed.config.memory_expansion)
                 rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemy"], nightmare=rand_seed.config.nightmare_enemies)
             
             self.location_manager.set_locations()
@@ -159,6 +160,7 @@ class KingdomHearts2:
             for w, world in spawns.items():
                 for r, room in world.items():
                     self.location_manager.update_location(room, rand_seed.config)
+                    rand_seed.wild_enemy_set = set()
                     if room.get("ignored"):
                         continue
                     if rand_seed.config.enemymode == "One to One Per Room":

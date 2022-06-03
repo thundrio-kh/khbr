@@ -1,3 +1,6 @@
+2.1
+* Redesigned "Wild" enemies to now only put up to 7 different kinds of enemies in any one room (between all spawns in that room), which should make it playable. This number will be reduced if necessary, and Wild is still only possible for PC. Due to the way the randomization is currently implemented, some enemies will be very likely to be vanilla (for example, the Bolt Towers in the first part of the Minnie Escort fight)
+
 2.0
 * Full redesign of the backend, to make future updates easier
 * PC is now be able to load cups when enemies are randomized

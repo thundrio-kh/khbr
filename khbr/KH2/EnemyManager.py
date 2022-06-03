@@ -6,7 +6,7 @@ class EnemyManager:
         self.basepath = basepath
         self.enemy_records = None
         # TODO I think I'm loading json files a lot more than needed
-        self.set_enemies()
+        self.set_enemies(True)
         
     def get_valid_enemies(self):
         return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "enemy"]
@@ -249,9 +249,9 @@ class EnemyManager:
         return '-'.join(categories)
 
 
-    def categorize_enemies(self, included_enemylist, combine_sizes=False, combine_ranged=False):
+    def categorize_enemies(self, included_enemylist, combine_sizes=False, combine_ranged=False, ispc=False):
         if not self.enemy_records:
-            self.set_enemies()
+            self.set_enemies(ispc)
         categories = {}
         for e in included_enemylist:
             parent = self.enemy_records[e["parent"]]
