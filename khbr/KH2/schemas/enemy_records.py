@@ -20,6 +20,7 @@ def get_schema():
         "mickey_source": False,
         "final_fight": False,
         "can_be_enemy": False,
+        "can_be_enemy_override": False, # These bosses are always available even if not available as normal boss replacements (IE banzai/lock)
         "msn": None,
         "size": 0,
         "sizeTag": None, #sizeSmall sizeMedium sizeLarge 

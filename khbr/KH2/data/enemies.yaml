@@ -527,12 +527,13 @@ Reckless:
       - 0
       - 0
 Scar Ghost:
+  can_be_enemy_override: true
   enabled: false # Gives no XP so should not be in pool
   enmp_index: 999
   model: B_LK110_PHANTOM
   obj_id: 2099
   size: 0
-  type: enemy
+  type: boss
   variations:
     Scar Ghost:
       vars:
@@ -1033,6 +1034,7 @@ Assault Rider:
       - 0
 Axel I:
   # Apparantly Axel I can sometimes act like axel 2 thats weird
+  can_be_enemy: true
   enabled: true
   hp: 100
   level: 99
@@ -1131,6 +1133,7 @@ Axel II:
       - 0
 Banzai:
   enabled: false
+  can_be_enemy_override: true
   enmp_index: 0x5B
   hp: 100
   level: 99
@@ -1418,6 +1421,7 @@ Cloud:
   type: boss
   variations:
     Cloud:
+      can_be_enemy_override: true
       program: 196
       msn: HE_COL_8_25
       room_size: 9.14
@@ -2235,6 +2239,7 @@ Groundshaker:
   tags:
   - rc_blocked
   - teleport_blocked
+  - solo # Not really but this mostly only is for data demyx so it works
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   model: B_LK120
@@ -2788,7 +2793,7 @@ Larxene:
   tags:
   - organization
   - needs_teleport
-  can_be_enemy: false
+  can_be_enemy: true
   enabled: true
   enmp_index: 0xD8
   hp: 100
@@ -2838,6 +2843,7 @@ Leon:
   - cups
   variations:
     Leon:
+      can_be_enemy: true
       program: 189
       msn: HE_COL_1_10
       room_size: 9.14
@@ -2944,6 +2950,7 @@ Living Bone:
       - 2
       - 0
 Lock:
+  can_be_enemy_override: true
   enabled: false
   enmp_index: 0x0F
   hp: 100
@@ -3256,6 +3263,7 @@ Past Pete:
       - 1
       - 0
 Pete Cups:
+  can_be_enemy_override: true
   enabled: true
   tags:
   - cups
@@ -3341,6 +3349,7 @@ Pete TR:
       - 4
       - 0
 Prison Keeper:
+  can_be_enemy: true
   enabled: true
   tags:
   - teleport_blocked
@@ -3501,6 +3510,7 @@ Rapid Thruster WI:
       - 0
       - 0
 Riku:
+  can_be_enemy: false
   aimod: true
   enabled: true
   enmp_index: 0x82
@@ -3528,7 +3538,7 @@ Roxas:
   - organization
   - solo
   - needs_teleport
-  can_be_enemy: false
+  can_be_enemy: true
   enabled: true
   enmp_index: 0xD5
   hp: 100
@@ -3624,6 +3634,7 @@ Samurai:
       - 99
       - 0
 Sark:
+  can_be_enemy: true
   enabled: true
   blacklist_source:
   - Cloud # report of crash when cloud takes damage
@@ -3647,12 +3658,13 @@ Sark:
       - 0
       - 0
 Scar:
-  can_be_enemy: false
+  can_be_enemy: true
   isnightmare: true
   enabled: true
   enmp_index: 0x5E
   tags:
   - rc_blocked
+  - solo # Not really but this mostly only is for data demyx so it works
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   hp: 100
@@ -4207,8 +4219,8 @@ Terra:
       - 0
       - 0
 The Beast:
-  aimod: true
-  enabled: false
+  aimod: false
+  enabled: true
   enmp_index: 0x49
   blacklist_source:
   - Grim Reaper II
@@ -4314,7 +4326,7 @@ Tifa:
       msn: HE_COL_8_10
       room_size: 9.14
       room_sizemultiplier: 0.5
-      can_be_enemy: true
+      can_be_enemy_override: true
       vars:
       - 1
       - 0
@@ -4608,7 +4620,7 @@ Xemnas:
   - solo
   - teleport_blocked
   aimod: true
-  can_be_enemy: true
+  can_be_enemy: false
   enabled: true
   #enmp_index: 0x5A  Final Xemnas has same ENMP index so it's problematic to scale Xemnas
   hp: 100
@@ -4679,7 +4691,7 @@ Yuffie:
   type: boss
   variations:
     Yuffie:
-      can_be_enemy: true
+      can_be_enemy_override: true
       program: 189
       msn: HE_COL_1_10
       room_size: 9.14
@@ -4730,6 +4742,7 @@ Zexion:
   type: boss
   blacklist_destination:
   - Roxas # Room becomes no ground
+  - Xigbar # Transition to small square is a softlock
   variations:
     Zexion:
       program: 151

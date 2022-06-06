@@ -198,13 +198,15 @@ class SpawnManager:
                 return None # if it's not in mapping it's not enabled
             new_enemy = rand_seed.enemymapping[old_enemy_object["name"]]
         if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses:
-            chance = 0.0075
+            chance = 0.012
             if random.random() < chance:
                 if not rand_seed.config.boss_enemies:
                     for boss_name in rand_seed.config.bosses:
                         boss = rand_seed.config.bosses[boss_name]
-                        if boss["enabled"] and boss["can_be_enemy"]:
+                        # can_be_enemy_override currently does not work likely because they get filtered out earlier
+                        if (boss["enabled"] and boss["can_be_enemy"]) or (boss["can_be_enemy_override"]):
                             rand_seed.config.boss_enemies.append(boss_name)
+                print(rand_seed.config.boss_enemies)
                 new_enemy = random.choice(rand_seed.config.boss_enemies)
         return new_enemy
 
