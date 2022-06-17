@@ -5876,6 +5876,9 @@
                 "ObjectId": 2115
             },
             {
+                "ObjectId": 2114
+            },
+            {
                 "ObjectId": 2117
             },
             {
@@ -6052,7 +6055,6 @@
             "The Beast",
             "The Experiment",
             "Thresholder",
-            "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
@@ -6360,7 +6362,6 @@
             "Pete Cups",
             "Pete OC II",
             "Sark",
-            "Twilight Thorn",
             "Volcano Lord"
         ]
     },
@@ -6460,7 +6461,6 @@
             "Pete Cups",
             "Pete OC II",
             "Sark",
-            "Twilight Thorn",
             "Volcano Lord"
         ]
     },
@@ -10701,7 +10701,6 @@
             "The Beast",
             "The Experiment",
             "Thresholder",
-            "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
@@ -10921,7 +10920,6 @@
             "Terra",
             "The Beast",
             "The Experiment",
-            "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
@@ -11412,7 +11410,6 @@
             "Pete Cups",
             "Pete OC II",
             "Sark",
-            "Twilight Thorn",
             "Volcano Lord"
         ]
     },
@@ -15452,7 +15449,6 @@
             "Scar",
             "Sephiroth",
             "Terra",
-            "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
@@ -15537,7 +15533,6 @@
             "The Beast",
             "The Experiment",
             "Thresholder",
-            "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
@@ -15929,7 +15924,6 @@
             "The Beast",
             "The Experiment",
             "Thresholder",
-            "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
@@ -18171,7 +18165,6 @@
             "The Beast",
             "The Experiment",
             "Thresholder",
-            "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
@@ -18368,7 +18361,6 @@
             "Pete OC II",
             "Sark",
             "Seifer",
-            "Twilight Thorn",
             "Volcano Lord"
         ]
     },
@@ -18933,7 +18925,6 @@
             "Pete OC II",
             "Sark",
             "Setzer",
-            "Twilight Thorn",
             "Volcano Lord"
         ]
     },
@@ -21051,12 +21042,13 @@
             0
         ],
         "name": "Twilight Thorn",
-        "aimod": true,
+        "aimod": false,
         "enabled": true,
         "enmp_index": 86,
         "tags": [
             "roxas",
-            "teleport_blocked"
+            "teleport_blocked",
+            "needs_teleport"
         ],
         "hp": 100,
         "level": 99,
@@ -21099,7 +21091,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "roxas-teleport_blocked",
+        "category": "needs_teleport-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Twilight Thorn",
         "variationof": null,
@@ -21278,7 +21270,6 @@
             "The Beast",
             "The Experiment",
             "Thresholder",
-            "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",
@@ -21380,7 +21371,6 @@
             "Pete Cups",
             "Pete OC II",
             "Sark",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord"
         ]
@@ -21767,7 +21757,6 @@
             "The Beast",
             "The Experiment",
             "Thresholder",
-            "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
             "Xaldin",

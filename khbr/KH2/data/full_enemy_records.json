@@ -5884,6 +5884,9 @@
                 "ObjectId": 2115
             },
             {
+                "ObjectId": 2114
+            },
+            {
                 "ObjectId": 2117
             },
             {
@@ -6047,7 +6050,6 @@
             "The Experiment",
             "Thresholder",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Xaldin",
@@ -6362,7 +6364,6 @@
             "Seifer",
             "Setzer",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Yuffie"
@@ -6470,7 +6471,6 @@
             "Seifer",
             "Setzer",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Yuffie"
@@ -10896,7 +10896,6 @@
             "The Beast",
             "The Experiment",
             "Tifa",
-            "Twilight Thorn",
             "Vexen",
             "Vivi",
             "Volcano Lord",
@@ -11389,7 +11388,6 @@
             "Seifer",
             "Setzer",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Yuffie"
@@ -15953,7 +15951,6 @@
             "The Experiment",
             "Thresholder",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Xaldin",
@@ -18211,7 +18208,6 @@
             "The Experiment",
             "Thresholder",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Xaldin",
@@ -18422,7 +18418,6 @@
             "Seifer",
             "Setzer",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Yuffie"
@@ -19002,7 +18997,6 @@
             "Seifer",
             "Setzer",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Yuffie"
@@ -21096,12 +21090,13 @@
             0
         ],
         "name": "Twilight Thorn",
-        "aimod": true,
+        "aimod": false,
         "enabled": true,
         "enmp_index": 86,
         "tags": [
             "roxas",
-            "teleport_blocked"
+            "teleport_blocked",
+            "needs_teleport"
         ],
         "hp": 100,
         "level": 99,
@@ -21144,7 +21139,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "roxas-teleport_blocked",
+        "category": "needs_teleport-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Twilight Thorn",
         "variationof": null,
@@ -21329,7 +21324,6 @@
             "Setzer",
             "Terra",
             "Tifa",
-            "Twilight Thorn",
             "Vexen",
             "Vivi",
             "Volcano Lord",
@@ -21831,7 +21825,6 @@
             "The Experiment",
             "Thresholder",
             "Tifa",
-            "Twilight Thorn",
             "Vexen",
             "Vivi",
             "Volcano Lord",

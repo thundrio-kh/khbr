@@ -944,11 +944,12 @@ Armor Xemnas I:
       room_size: 12.98
       adds:
       - ObjectId: 2116 # ??? B_EX300
-      - ObjectId: 2115 # Xig B_EX290
+      - ObjectId: 2115 # Xig B_EX290 (x2)
+      - ObjectId: 2114 # Saix Claymore (x2)
       - ObjectId: 2117 # xaldin B_EX310
-      - ObjectId: 2118 # Axel B_EX320
+      - ObjectId: 2118 # Axel B_EX320 (x2)
         Argument1: 1
-      - ObjectId: 2294 # dancers M_EX880_DANCER_EH
+      - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
       vars:
       - 1
       - 0
@@ -4397,12 +4398,13 @@ Trick Ghost:
       - 0
       - 0
 Twilight Thorn:
-  aimod: true
+  aimod: false
   enabled: true
   enmp_index: 0x56
   tags:
   - roxas
   - teleport_blocked
+  - needs_teleport
   hp: 100
   level: 99
   limiter: 0
