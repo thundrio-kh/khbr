@@ -5902,6 +5902,7 @@
             0
         ],
         "name": "Armor Xemnas I",
+        "aimod": true,
         "enabled": true,
         "enmp_index": 160,
         "hp": 100,
@@ -5929,7 +5930,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimod": null,
         "can_be_enemy": false,
         "can_be_enemy_override": false,
         "sizeTag": null,
@@ -8574,7 +8574,7 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimod": null,
+        "aimod": true,
         "mickey_source": false,
         "can_be_enemy": true,
         "can_be_enemy_override": false,
@@ -10013,6 +10013,7 @@
             0
         ],
         "name": "Final Xemnas",
+        "aimod": true,
         "can_be_enemy": true,
         "tags": [
             "solo",
@@ -10057,7 +10058,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimod": null,
         "mickey_source": false,
         "can_be_enemy_override": false,
         "sizeTag": null,
@@ -10125,6 +10125,7 @@
             0
         ],
         "name": "Final Xemnas (Copy)",
+        "aimod": true,
         "can_be_enemy": true,
         "tags": [
             "solo",
@@ -10166,7 +10167,6 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimod": null,
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy_override": false,

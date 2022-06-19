@@ -206,7 +206,6 @@ class SpawnManager:
                         # can_be_enemy_override currently does not work likely because they get filtered out earlier
                         if (boss["enabled"] and boss["can_be_enemy"]) or (boss["can_be_enemy_override"]):
                             rand_seed.config.boss_enemies.append(boss_name)
-                print(rand_seed.config.boss_enemies)
                 new_enemy = random.choice(rand_seed.config.boss_enemies)
         return new_enemy
 

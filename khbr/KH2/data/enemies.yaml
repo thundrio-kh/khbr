@@ -924,6 +924,7 @@ Air Pirate:
       - 1
       - 0
 Armor Xemnas I:
+  aimod: true
   enabled: true
   enmp_index: 0xA0
   hp: 100
@@ -2028,6 +2029,7 @@ Fiery Globe Treasure Room:
       - 0
       - 0
 Final Xemnas:
+  aimod: true
   can_be_enemy: true
   tags:
   - solo
