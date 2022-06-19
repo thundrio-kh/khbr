@@ -141,6 +141,13 @@ class EnemySeed:
         elif shouldretry: # If not shouldretry, don't need to do anything
             self.msn_mapping[msn_name] = {"name": msn_name, "setretry": True}
 
+    def set_dark_thorn_retry(self, shouldretry):
+        msn_name = "BB05_MS104B"
+        if msn_name in self.msn_mapping:
+            self.msn_mapping[msn_name]["setretry"] = shouldretry
+        elif shouldretry: # If not shouldretry, don't need to do anything
+            self.msn_mapping[msn_name] = {"name": msn_name, "setretry": True}
+
     def add_xp_for_cups(self):
         cups_msns = [
             "HE_COL_1_8",
