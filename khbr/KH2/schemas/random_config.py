@@ -16,6 +16,7 @@ class RandomConfig:
     combine_melee_ranged: bool
     bosses: dict
     bosses_replace_enemies: bool
+    boss_as_enemy_overrides: list
     boss_enemies: list=field(default_factory=list)
 
     mickey_rule: str='follow'

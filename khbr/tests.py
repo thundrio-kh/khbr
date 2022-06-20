@@ -285,7 +285,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_seedgen_error4()
+#ut.test_seedgen_boss_and_enemy_one_to_one()
 
 # Uncomment to run the actual tests
-#unittest.main()
+unittest.main()

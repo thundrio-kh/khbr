@@ -115,8 +115,11 @@ class KingdomHearts2:
             bossmode = bossmode,
             nightmare_bosses = nightmare_bosses,
             duplicate_bosses = nightmare_bosses or bossmode in ["Wild", "Selected Boss"],
+            
+            boss_as_enemy_overrides = self.enemy_manager.get_boss_as_enemy_list() if options.get("bosses_replace_enemies") else [],
             bosses = self.enemy_manager.get_boss_list(options) if bossmode != 'Disabled' else {},
             bosses_replace_enemies = options.get("bosses_replace_enemies"),
+
 
             mickey_rule = options.get("mickey_rule")
         )

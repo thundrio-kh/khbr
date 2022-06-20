@@ -192,7 +192,7 @@ class SpawnManager:
         if rand_seed.config.selected_enemy:
             new_enemy = rand_seed.config.selected_enemy
         elif rand_seed.config.enemymode == "Wild":
-            new_enemy = pick_enemy_to_replace(old_enemy_object, rand_seed.config.enemies, rand_seed.wild_enemy_set, max_enemies=7)
+            new_enemy = pick_enemy_to_replace(old_enemy_object, rand_seed.config.enemies, rand_seed.wild_enemy_set, max_enemies=5)
         elif rand_seed.enemymapping:
             if old_enemy_object["name"] not in rand_seed.enemymapping:
                 return None # if it's not in mapping it's not enabled
@@ -200,12 +200,14 @@ class SpawnManager:
         if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses:
             chance = 0.012
             if random.random() < chance:
+                # TODO this list doesn't need to be generated every time
                 if not rand_seed.config.boss_enemies:
                     for boss_name in rand_seed.config.bosses:
                         boss = rand_seed.config.bosses[boss_name]
-                        # can_be_enemy_override currently does not work likely because they get filtered out earlier
-                        if (boss["enabled"] and boss["can_be_enemy"]) or (boss["can_be_enemy_override"]):
+                        if boss["enabled"] and boss["can_be_enemy"]:
                             rand_seed.config.boss_enemies.append(boss_name)
+                    for boss_name in rand_seed.config.boss_as_enemy_overrides:
+                        rand_seed.config.boss_enemies.append(boss_name)
                 new_enemy = random.choice(rand_seed.config.boss_enemies)
         return new_enemy
 

@@ -167,6 +167,13 @@ class EnemyManager:
                     avail.append(dest_boss_name)
             source_boss["available"] = avail
 
+    def get_boss_as_enemy_list(self):
+        l = []
+        for _, v in self.enemy_records.items():
+            if v["can_be_enemy_override"]:
+                l.append(v["name"])
+        return l
+
     def get_boss_list(self, options):
         nightmare_bosses = options.get("nightmare_bosses", False)
         ispc = options.get("memory_expansion", False)
@@ -180,18 +187,18 @@ class EnemyManager:
         use_data_bosses = nightmare_bosses or options.get("data_bosses")
 
         for k,v in self.enemy_records.items():
-            if not v["can_be_enemy_override"]:
-                if v["type"] != "boss":
+            if v["type"] != "boss":
+                continue
+            if not v["enabled"]:
+                continue
+            if nightmare_bosses and not v["isnightmare"]:
+                continue
+            if not use_cups_bosses and "cups" in v["tags"]:
                     continue
-                if not v["enabled"]:
+            if not use_data_bosses and "data" in v["tags"]:
                     continue
-                if nightmare_bosses and not v["isnightmare"]:
-                    continue
-                if not use_cups_bosses and "cups" in v["tags"]:
-                        continue
-                if not use_data_bosses and "data" in v["tags"]:
-                        continue
             bosses[k] = v
+
         # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
         # have to look at every source boss too so adjusting those sources, not just the ones that are available
         for boss_name in self.enemy_records:
