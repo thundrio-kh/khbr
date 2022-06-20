@@ -21090,7 +21090,7 @@
             0
         ],
         "name": "Twilight Thorn",
-        "aimod": false,
+        "aimod": true,
         "enabled": true,
         "enmp_index": 86,
         "tags": [

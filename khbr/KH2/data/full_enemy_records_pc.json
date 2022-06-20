@@ -8588,7 +8588,7 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimod": false,
+        "aimod": true,
         "mickey_source": false,
         "can_be_enemy": true,
         "can_be_enemy_override": false,
@@ -21042,7 +21042,7 @@
             0
         ],
         "name": "Twilight Thorn",
-        "aimod": false,
+        "aimod": true,
         "enabled": true,
         "enmp_index": 86,
         "tags": [

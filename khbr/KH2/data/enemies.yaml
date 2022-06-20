@@ -4400,7 +4400,7 @@ Trick Ghost:
       - 0
       - 0
 Twilight Thorn:
-  aimod: false
+  aimod: true
   enabled: true
   enmp_index: 0x56
   tags:
