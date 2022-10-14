@@ -50,6 +50,8 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra and Sephiroth",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
+            "lua_bosses": {"display_name": "Randomize Final Xemnas (Must setup LuaBackend properly)", "description": "Include Final Xemnas in the randomization pool (and his data, if Superbosses are enabled). Generates a lua script that must be loaded via ModManager.",
+                                "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "mickey_rule": {"display_name": "Mickey Appearance Settings", "description": "Choose when Mickey appears. Options are 'follow', where mickey appears for the same bosses as in the vanilla game, regardless of their location. 'stay', where mickey appears in the same locations as in the vanilla game, regardless of the location. 'all', mickey will appear for every boss in the game, regardless of if mickey normally apepars there. 'none', mickey will never appear. Might make PS2 boss fights less stable",
                                 "type": "boss", "possible_values": ["follow", "stay", "all", 'none'], "hidden_values": []}
         }
@@ -243,6 +245,7 @@ class KingdomHearts2:
         assetgenerator.generateObjEntry(randomization.get("object_map", {}))
         assetgenerator.generateEnmp(randomization.get("scale_map",{}), remove_damage_cap="remove_damage_cap" in utility_mods)
         assetgenerator.generateAiMods(randomization.get("ai_mods"))
+        assetgenerator.generateLuaMods(randomization.get("lua_mods"))
         assetgenerator.generateMsns(randomization.get("msn_map", {}), self.mission_manager.msninfo)
         # self.set_spawns() # TODO is this needed?
         self.location_manager.set_locations() # TODO this might be unneeded time waste????

@@ -185,6 +185,7 @@ class EnemyManager:
         # TODO On PC cups bosses are exhibiting crashy behavior, so just disable them always for now on PC
         use_cups_bosses = (not ispc) and (nightmare_bosses or options.get("cups_bosses"))
         use_data_bosses = nightmare_bosses or options.get("data_bosses")
+        use_lua_bosses = options.get("lua_bosses")
 
         for k,v in self.enemy_records.items():
             if v["type"] != "boss":
@@ -193,10 +194,12 @@ class EnemyManager:
                 continue
             if nightmare_bosses and not v["isnightmare"]:
                 continue
-            if not use_cups_bosses and "cups" in v["tags"]:
-                    continue
-            if not use_data_bosses and "data" in v["tags"]:
-                    continue
+            if "cups" in v["tags"] and not use_cups_bosses:
+                continue
+            if "data" in v["tags"] and not use_data_bosses:
+                continue
+            if v.get("luamod") and not use_lua_bosses:
+                continue
             bosses[k] = v
 
         # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded

@@ -1625,7 +1625,8 @@ Final Xemnas (Data):
   - data
   - organization
   - solo
-  enabled: false
+  enabled: true
+  luamod: "final_xemnas"
   variationof: Final Xemnas
   msn_replace_allowed: false # this might break things
   hp: 100
@@ -2030,11 +2031,12 @@ Fiery Globe Treasure Room:
       - 0
 Final Xemnas:
   aimod: true
-  can_be_enemy: true
+  luamod: "final_xemnas"
+  can_be_enemy: false
   tags:
   - solo
   - organization
-  enabled: false
+  enabled: true
   hp: 100
   isnightmare: true
   level: 99
@@ -2055,7 +2057,6 @@ Final Xemnas:
   type: boss
   variations:
     Final Xemnas:
-      enabled: false
       final_fight: true
       vars:
       - 1

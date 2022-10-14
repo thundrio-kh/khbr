@@ -49,7 +49,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bees TT PO": {
         "vars": [
@@ -101,7 +102,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Aerial Knocker": {
         "vars": [
@@ -155,7 +157,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Aerial Knocker (1 0)": {
         "vars": [
@@ -206,7 +209,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Aeriel Champ": {
         "vars": [
@@ -256,7 +260,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Aeroplane": {
         "vars": [
@@ -311,7 +316,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Armored Knight (NM)": {
         "vars": [
@@ -361,7 +367,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Armored Knight (1K Battle, Disappears)": {
         "vars": [
@@ -413,7 +420,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bolt Tower (MU)": {
         "vars": [
@@ -465,7 +473,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bolt Tower (RAW)": {
         "vars": [
@@ -517,7 +526,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bookmaster": {
         "vars": [
@@ -574,7 +584,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bookmaster (TR)": {
         "vars": [
@@ -627,7 +638,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bulky Vendor (Disappears)": {
         "vars": [
@@ -678,7 +690,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bulky Vendor": {
         "vars": [
@@ -731,7 +744,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bulky Vendor (NM) (Disappears)": {
         "vars": [
@@ -782,7 +796,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bulky Vendor (NM)": {
         "vars": [
@@ -835,7 +850,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Camo Cannon": {
         "vars": [
@@ -887,7 +903,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Cannon Gun WI": {
         "vars": [
@@ -939,7 +956,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Creeper Plant": {
         "vars": [
@@ -994,7 +1012,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Creeper Plant (NM)": {
         "vars": [
@@ -1046,7 +1065,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Demyx's water form (EH)": {
         "vars": [
@@ -1098,7 +1118,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Emerald Blues": {
         "vars": [
@@ -1155,7 +1176,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Emerald Blues (TR)": {
         "vars": [
@@ -1207,7 +1229,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller (AL)": {
         "vars": [
@@ -1270,7 +1293,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller (AL) (14 20)": {
         "vars": [
@@ -1331,7 +1355,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller (AL) (13 0)": {
         "vars": [
@@ -1392,7 +1417,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller (AL) (10 32)": {
         "vars": [
@@ -1453,7 +1479,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller (AL) (13 32)": {
         "vars": [
@@ -1514,7 +1541,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller (AL) (1 30)": {
         "vars": [
@@ -1575,7 +1603,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller (AL) (6 30)": {
         "vars": [
@@ -1636,7 +1665,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller (AL) (7 0)": {
         "vars": [
@@ -1697,7 +1727,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller (AL) (10 0)": {
         "vars": [
@@ -1758,7 +1789,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gargoyle Knight (30 0)": {
         "vars": [
@@ -1812,7 +1844,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gargoyle Knight (32 0)": {
         "vars": [
@@ -1866,7 +1899,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gargoyle Knight (34 0)": {
         "vars": [
@@ -1920,7 +1954,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gargoyle Knight (36 0)": {
         "vars": [
@@ -1974,7 +2009,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gargoyle Knight": {
         "vars": [
@@ -2030,7 +2066,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gargoyle Warrior (40 0)": {
         "vars": [
@@ -2084,7 +2121,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gargoyle Warrior (42 0)": {
         "vars": [
@@ -2138,7 +2176,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gargoyle Warrior (44 0)": {
         "vars": [
@@ -2192,7 +2231,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gargoyle Warrior (46 0)": {
         "vars": [
@@ -2246,7 +2286,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gargoyle Warrior": {
         "vars": [
@@ -2302,7 +2343,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hammer Frame": {
         "vars": [
@@ -2357,7 +2399,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hammer Frame (99 0)": {
         "vars": [
@@ -2408,7 +2451,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hot Rod": {
         "vars": [
@@ -2464,7 +2508,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Large Body WI": {
         "vars": [
@@ -2516,7 +2561,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Neoshadow": {
         "vars": [
@@ -2572,7 +2618,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Neoshadow (1 0)": {
         "vars": [
@@ -2625,7 +2672,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Neoshadow (44 0)": {
         "vars": [
@@ -2678,7 +2726,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Neoshadow (99 0)": {
         "vars": [
@@ -2731,7 +2780,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Neoshadow (NM)": {
         "vars": [
@@ -2781,7 +2831,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rabid Dog": {
         "vars": [
@@ -2833,7 +2884,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster (RAW)": {
         "vars": [
@@ -2884,7 +2936,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster (RAW) (1 0)": {
         "vars": [
@@ -2935,7 +2988,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Reckless": {
         "vars": [
@@ -2988,7 +3042,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Scar Ghost": {
         "vars": [
@@ -3041,6 +3096,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Scar Ghost",
             "Armor Xemnas I",
@@ -3052,6 +3108,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -3132,7 +3189,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Shadow (RAW)": {
         "vars": [
@@ -3183,7 +3241,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Shadow (RAW) (99 0)": {
         "vars": [
@@ -3234,7 +3293,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Shaman": {
         "vars": [
@@ -3290,7 +3350,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Shaman (1 0)": {
         "vars": [
@@ -3343,7 +3404,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Soldier (TR)": {
         "vars": [
@@ -3393,7 +3455,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Soldier (WI)": {
         "vars": [
@@ -3443,7 +3506,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Strafer": {
         "vars": [
@@ -3496,7 +3560,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Surveillance Robot (1K Battle) (Disappears)": {
         "vars": [
@@ -3550,7 +3615,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Surveillance Robot (TR)": {
         "vars": [
@@ -3603,7 +3669,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Surveillance Robot (TR) (2 0)": {
         "vars": [
@@ -3656,7 +3723,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Toy Soldier": {
         "vars": [
@@ -3713,7 +3781,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Toy Soldier (2 0)": {
         "vars": [
@@ -3767,7 +3836,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Trick Ghost (NM)": {
         "vars": [
@@ -3819,7 +3889,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate A": {
         "vars": [
@@ -3881,7 +3952,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate A (Jumps up)": {
         "vars": [
@@ -3941,7 +4013,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate A (Jumps Forward)": {
         "vars": [
@@ -4001,7 +4074,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate A (90 0)": {
         "vars": [
@@ -4061,7 +4135,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate A (93 0)": {
         "vars": [
@@ -4121,7 +4196,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate A (22 0)": {
         "vars": [
@@ -4181,7 +4257,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate A (24 0)": {
         "vars": [
@@ -4241,7 +4318,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate A (20 0)": {
         "vars": [
@@ -4301,7 +4379,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate A (91 0)": {
         "vars": [
@@ -4361,7 +4440,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate B": {
         "vars": [
@@ -4418,7 +4498,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate B (90 0)": {
         "vars": [
@@ -4473,7 +4554,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate B (93 0)": {
         "vars": [
@@ -4528,7 +4610,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate B (92 0)": {
         "vars": [
@@ -4583,7 +4666,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C": {
         "vars": [
@@ -4650,7 +4734,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (Jumps Down)": {
         "vars": [
@@ -4715,7 +4800,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (28 0)": {
         "vars": [
@@ -4780,7 +4866,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (91 0)": {
         "vars": [
@@ -4845,7 +4932,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (Jumps Up)": {
         "vars": [
@@ -4910,7 +4998,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (90 0)": {
         "vars": [
@@ -4975,7 +5064,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (13 0)": {
         "vars": [
@@ -5040,7 +5130,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (92 0)": {
         "vars": [
@@ -5105,7 +5196,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (93 0)": {
         "vars": [
@@ -5170,7 +5262,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (12 0)": {
         "vars": [
@@ -5235,7 +5328,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (6 0)": {
         "vars": [
@@ -5300,7 +5394,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (2 0)": {
         "vars": [
@@ -5365,7 +5460,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (8 0)": {
         "vars": [
@@ -5430,7 +5526,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Undead Pirate C (26 0)": {
         "vars": [
@@ -5495,7 +5592,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Wight Knight": {
         "vars": [
@@ -5548,7 +5646,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Vivi (clones)": {
         "vars": [
@@ -5600,7 +5699,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Shadow Roxas": {
         "vars": [
@@ -5652,7 +5752,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Aerial Viking": {
         "vars": [
@@ -5705,7 +5806,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Aeroplane WI": {
         "vars": [
@@ -5757,7 +5859,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Air Pirate": {
         "vars": [
@@ -5808,7 +5911,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Air Pirate (1 0)": {
         "vars": [
@@ -5859,7 +5963,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Armor Xemnas I": {
         "msn": "EH24_MS110",
@@ -5934,6 +6039,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -5944,6 +6050,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -6029,6 +6136,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -6036,6 +6144,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -6113,7 +6222,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Armored Knight (90 0)": {
         "vars": [
@@ -6164,7 +6274,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Assassin": {
         "vars": [
@@ -6216,7 +6327,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Assault Rider": {
         "vars": [
@@ -6270,7 +6382,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Axel I": {
         "vars": [
@@ -6351,6 +6464,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Axel I",
             "Blizzard Lord",
@@ -6450,6 +6564,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Axel II",
             "Blizzard Lord",
@@ -6518,6 +6633,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Banzai"
         ]
@@ -6573,7 +6689,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Barbossa": {
         "vars": [
@@ -6640,6 +6757,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -6650,6 +6768,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -6733,6 +6852,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Barrel"
         ]
@@ -6787,7 +6907,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Beffudler": {
         "vars": [
@@ -6837,7 +6958,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Berserker": {
         "vars": [
@@ -6891,7 +7013,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Blizzard Lord": {
         "msn": "AL03_MS103",
@@ -6952,6 +7075,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Axel I",
             "Axel II",
@@ -6959,6 +7083,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -7041,7 +7166,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bolt Tower": {
         "vars": [
@@ -7099,7 +7225,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bolt Tower (1)": {
         "vars": [
@@ -7152,7 +7279,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bolt Tower DC": {
         "vars": [
@@ -7204,7 +7332,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Cannon Gun": {
         "vars": [
@@ -7261,7 +7390,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Cannon Gun (1)": {
         "vars": [
@@ -7314,7 +7444,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Cerberus": {
         "msn": "HE07_MS103",
@@ -7373,6 +7504,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -7381,6 +7513,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -7486,7 +7619,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Cloud": {
         "can_be_enemy_override": true,
@@ -7547,6 +7681,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -7557,6 +7692,7 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -7639,7 +7775,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Cloud (2)": {
         "program": 196,
@@ -7697,7 +7834,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Creeper": {
         "vars": [
@@ -7749,7 +7887,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Crescendo": {
         "vars": [
@@ -7801,7 +7940,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Crimson Jazz": {
         "vars": [
@@ -7858,7 +7998,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Crimson Jazz (1 0)": {
         "vars": [
@@ -7913,7 +8054,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Crimson Jazz (Zipliner)": {
         "vars": [
@@ -7968,7 +8110,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Crimson Jazz AL (8 1)": {
         "vars": [
@@ -8023,7 +8166,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Crimson Jazz AL (12 0)": {
         "vars": [
@@ -8078,7 +8222,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Crimson Jazz AL": {
         "vars": [
@@ -8135,7 +8280,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Dancer": {
         "vars": [
@@ -8188,7 +8334,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Dancer (99 0)": {
         "vars": [
@@ -8239,7 +8386,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Dark Thorn": {
         "mickey_source": true,
@@ -8299,6 +8447,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -8309,6 +8458,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -8418,7 +8568,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Demyx (Data)": {
         "vars": [
@@ -8475,7 +8626,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Final Xemnas (Clone) (Data)": {
         "source_replace_allowed": false,
@@ -8489,7 +8641,8 @@
             "organization",
             "solo"
         ],
-        "enabled": false,
+        "enabled": true,
+        "luamod": "final_xemnas",
         "variationof": "Final Xemnas",
         "msn_replace_allowed": false,
         "hp": 100,
@@ -8553,7 +8706,8 @@
             "organization",
             "solo"
         ],
-        "enabled": false,
+        "enabled": true,
+        "luamod": "final_xemnas",
         "variationof": "Final Xemnas",
         "msn_replace_allowed": false,
         "hp": 100,
@@ -8590,7 +8744,7 @@
         "msn_source_as": null,
         "aimod": true,
         "mickey_source": false,
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
@@ -8667,7 +8821,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Saix (Data)": {
         "vars": [
@@ -8720,7 +8875,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Xaldin (Data)": {
         "vars": [
@@ -8775,7 +8931,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Xemnas (Data)": {
         "vars": [
@@ -8828,7 +8985,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Xigbar (Data)": {
         "vars": [
@@ -8892,7 +9050,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Demyx": {
         "vars": [
@@ -8952,6 +9111,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -8962,6 +9122,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -9047,6 +9208,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Demyx OC"
         ]
@@ -9101,7 +9263,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Devastator": {
         "vars": [
@@ -9159,7 +9322,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Devastator (Ranged Start)": {
         "vars": [
@@ -9214,7 +9378,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Devastator (Ranged)": {
         "vars": [
@@ -9269,7 +9434,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Dragoon": {
         "vars": [
@@ -9324,7 +9490,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Dragoon (99 0)": {
         "vars": [
@@ -9377,7 +9544,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Driller Mole": {
         "vars": [
@@ -9430,7 +9598,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Driller Mole NM": {
         "vars": [
@@ -9480,7 +9649,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Dusk": {
         "vars": [
@@ -9533,7 +9703,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Dusk (99 0)": {
         "vars": [
@@ -9584,7 +9755,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Ed": {
         "program": 51,
@@ -9641,6 +9813,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Ed"
         ]
@@ -9697,7 +9870,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Emerald Blues NM": {
         "vars": [
@@ -9749,7 +9923,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fat Bandit": {
         "vars": [
@@ -9806,7 +9981,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fat Bandit (1 0)": {
         "vars": [
@@ -9861,7 +10037,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fat Bandit (Passive)": {
         "vars": [
@@ -9916,7 +10093,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fiery Globe": {
         "vars": [
@@ -9969,7 +10147,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fiery Globe Treasure Room": {
         "vars": [
@@ -10019,10 +10198,10 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Final Xemnas": {
-        "enabled": false,
         "final_fight": true,
         "vars": [
             1,
@@ -10030,11 +10209,13 @@
         ],
         "name": "Final Xemnas",
         "aimod": true,
-        "can_be_enemy": true,
+        "luamod": "final_xemnas",
+        "can_be_enemy": false,
         "tags": [
             "solo",
             "organization"
         ],
+        "enabled": true,
         "hp": 100,
         "isnightmare": true,
         "level": 99,
@@ -10132,12 +10313,13 @@
         ],
         "name": "Final Xemnas (Copy)",
         "aimod": true,
-        "can_be_enemy": true,
+        "luamod": "final_xemnas",
+        "can_be_enemy": false,
         "tags": [
             "solo",
             "organization"
         ],
-        "enabled": false,
+        "enabled": true,
         "hp": 100,
         "isnightmare": true,
         "level": 99,
@@ -10241,7 +10423,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller (Zipliner)": {
         "vars": [
@@ -10294,7 +10477,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gambler": {
         "vars": [
@@ -10349,7 +10533,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gambler (5 0)": {
         "vars": [
@@ -10402,7 +10587,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gambler (90 0)": {
         "vars": [
@@ -10455,7 +10641,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Gambler (99 0)": {
         "vars": [
@@ -10508,7 +10695,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Giant Sark": {
         "vars": [
@@ -10561,6 +10749,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Giant Sark"
         ]
@@ -10618,7 +10807,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Grim Reaper I": {
         "mickey_source": true,
@@ -10674,6 +10864,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -10681,6 +10872,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -10792,6 +10984,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -10802,6 +10995,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -10896,6 +11090,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -10903,6 +11098,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Groundshaker",
             "Hades II",
@@ -10991,7 +11187,8 @@
         "program": 196,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hades Escape": {
         "vars": [
@@ -11044,6 +11241,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Hades Escape"
         ]
@@ -11099,6 +11297,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Hades I"
         ]
@@ -11160,6 +11359,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -11169,6 +11369,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -11251,7 +11452,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hammer Frame WI": {
         "vars": [
@@ -11301,7 +11503,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hayner": {
         "msn_list": [
@@ -11399,6 +11602,7 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
+        "luamod": null,
         "available": [
             "Blizzard Lord",
             "Dark Thorn",
@@ -11477,6 +11681,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -11486,6 +11691,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -11561,7 +11767,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat": {
         "vars": [
@@ -11615,7 +11822,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (3 0)": {
         "vars": [
@@ -11685,7 +11893,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (9 0)": {
         "vars": [
@@ -11755,7 +11964,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL": {
         "vars": [
@@ -11827,7 +12037,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (15 30)": {
         "vars": [
@@ -11897,7 +12108,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (1 31)": {
         "vars": [
@@ -11967,7 +12179,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (3 30)": {
         "vars": [
@@ -12037,7 +12250,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (8 32)": {
         "vars": [
@@ -12107,7 +12321,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (13 31)": {
         "vars": [
@@ -12177,7 +12392,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (2 0)": {
         "vars": [
@@ -12247,7 +12463,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (5 0)": {
         "vars": [
@@ -12317,7 +12534,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (6 0)": {
         "vars": [
@@ -12387,7 +12605,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (11 0)": {
         "vars": [
@@ -12457,7 +12676,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (1 0)": {
         "vars": [
@@ -12527,7 +12747,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (10 0)": {
         "vars": [
@@ -12597,7 +12818,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (14 0)": {
         "vars": [
@@ -12667,7 +12889,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (12 0)": {
         "vars": [
@@ -12737,7 +12960,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (13 0)": {
         "vars": [
@@ -12807,7 +13031,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (7 0)": {
         "vars": [
@@ -12877,7 +13102,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hook Bat AL (3 20)": {
         "vars": [
@@ -12947,7 +13173,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hostile Program": {
         "vars": [
@@ -13008,6 +13235,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -13016,6 +13244,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -13098,7 +13327,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Hydra": {
         "mickey_source": true,
@@ -13179,6 +13409,7 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas II",
             "Axel I",
@@ -13263,7 +13494,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Icy Cube Treasure Room": {
         "vars": [
@@ -13313,7 +13545,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Illuminator": {
         "vars": [
@@ -13366,6 +13599,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Illuminator"
         ]
@@ -13418,7 +13652,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Jafar": {
         "vars": [
@@ -13471,6 +13706,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Jafar"
         ]
@@ -13526,7 +13762,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Lance Warrior": {
         "vars": [
@@ -13576,7 +13813,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Large Body": {
         "vars": [
@@ -13631,7 +13869,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Larxene": {
         "vars": [
@@ -13691,6 +13930,7 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas II",
             "Axel I",
@@ -13779,7 +14019,8 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Leon": {
         "can_be_enemy": true,
@@ -13841,6 +14082,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -13850,6 +14092,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -13934,7 +14177,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Leon (2)": {
         "program": 196,
@@ -13993,7 +14237,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Leon (3)": {
         "program": 193,
@@ -14052,7 +14297,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Lexaeus": {
         "vars": [
@@ -14118,6 +14364,7 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas II",
             "Axel I",
@@ -14212,7 +14459,8 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Living Bone": {
         "vars": [
@@ -14268,7 +14516,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Living Bone (Headless with Necromancer)": {
         "tags": [
@@ -14323,7 +14572,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Living Bone (Necromancer)": {
         "tags": [
@@ -14378,7 +14628,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Lock": {
         "vars": [
@@ -14431,6 +14682,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Lock"
         ]
@@ -14486,7 +14738,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Luna Bandit (1 0)": {
         "vars": [
@@ -14537,7 +14790,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Luxord": {
         "vars": [
@@ -14600,6 +14854,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -14610,6 +14865,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -14693,7 +14949,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Magic Phantom": {
         "vars": [
@@ -14747,7 +15004,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Magnum Loader": {
         "vars": [
@@ -14799,7 +15057,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Marluxia": {
         "vars": [
@@ -14861,6 +15120,7 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas II",
             "Axel I",
@@ -14951,7 +15211,8 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Minute Bomb": {
         "vars": [
@@ -15005,7 +15266,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Minute Bomb (99 0)": {
         "vars": [
@@ -15056,7 +15318,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Minute Bomb WI": {
         "vars": [
@@ -15106,7 +15369,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Morning Star": {
         "vars": [
@@ -15161,7 +15425,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Morning Star (99 0)": {
         "vars": [
@@ -15214,7 +15479,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Necromancer": {
         "vars": [
@@ -15266,7 +15532,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Nightwalker": {
         "vars": [
@@ -15318,7 +15585,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Bomb Bell A": {
         "vars": [
@@ -15372,7 +15640,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Oogie Boogie": {
         "vars": [
@@ -15430,6 +15699,7 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas II",
             "Blizzard Lord",
@@ -15508,6 +15778,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -15515,6 +15786,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -15592,6 +15864,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -15601,6 +15874,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -15679,6 +15953,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Pete OC I"
         ]
@@ -15734,6 +16009,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -15743,6 +16019,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -15831,6 +16108,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Pete TR"
         ]
@@ -15898,6 +16176,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -15905,6 +16184,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -15981,7 +16261,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster": {
         "vars": [
@@ -16038,7 +16319,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster (90 0)": {
         "vars": [
@@ -16091,7 +16373,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster (1 0)": {
         "vars": [
@@ -16144,7 +16427,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (12 0)": {
         "vars": [
@@ -16215,7 +16499,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (13 0)": {
         "vars": [
@@ -16286,7 +16571,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL": {
         "vars": [
@@ -16359,7 +16645,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (9 0)": {
         "vars": [
@@ -16430,7 +16717,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (14 30)": {
         "vars": [
@@ -16501,7 +16789,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (8 30)": {
         "vars": [
@@ -16572,7 +16861,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (4 30)": {
         "vars": [
@@ -16643,7 +16933,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (12 32)": {
         "vars": [
@@ -16714,7 +17005,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (6 31)": {
         "vars": [
@@ -16785,7 +17077,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (10 31)": {
         "vars": [
@@ -16856,7 +17149,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (2 32)": {
         "vars": [
@@ -16927,7 +17221,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (2 0)": {
         "vars": [
@@ -16998,7 +17293,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (7 0)": {
         "vars": [
@@ -17069,7 +17365,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (14 0)": {
         "vars": [
@@ -17140,7 +17437,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (11 0)": {
         "vars": [
@@ -17211,7 +17509,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (5 0)": {
         "vars": [
@@ -17282,7 +17581,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (6 0)": {
         "vars": [
@@ -17353,7 +17653,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (12 17)": {
         "vars": [
@@ -17424,7 +17725,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (1 0)": {
         "vars": [
@@ -17495,7 +17797,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster AL (3 0)": {
         "vars": [
@@ -17566,7 +17869,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Rapid Thruster WI": {
         "vars": [
@@ -17616,7 +17920,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Riku": {
         "vars": [
@@ -17671,6 +17976,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Riku"
         ]
@@ -17731,6 +18037,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -17741,6 +18048,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -17826,7 +18134,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Runemaster": {
         "vars": [
@@ -17879,7 +18188,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Saix": {
         "vars": [
@@ -17936,6 +18246,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -17946,6 +18257,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -18030,7 +18342,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Samurai (99 0)": {
         "vars": [
@@ -18081,7 +18394,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Sark": {
         "vars": [
@@ -18138,6 +18452,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -18145,6 +18460,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -18227,6 +18543,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -18236,6 +18553,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -18350,6 +18668,7 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
+        "luamod": null,
         "available": [
             "Blizzard Lord",
             "Dark Thorn",
@@ -18449,7 +18768,8 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
-        "unchanged_file_size": false
+        "unchanged_file_size": false,
+        "luamod": null
     },
     "Seifer (2)": {
         "msn": "TT04_MS108",
@@ -18536,7 +18856,8 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
-        "unchanged_file_size": false
+        "unchanged_file_size": false,
+        "luamod": null
     },
     "Seifer (3)": {
         "replace_as": "Seifer",
@@ -18623,7 +18944,8 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
-        "unchanged_file_size": false
+        "unchanged_file_size": false,
+        "luamod": null
     },
     "Seifer (4)": {
         "replace_as": "Seifer",
@@ -18710,7 +19032,8 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
-        "unchanged_file_size": false
+        "unchanged_file_size": false,
+        "luamod": null
     },
     "Sephiroth": {
         "vars": [
@@ -18775,6 +19098,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -18785,6 +19109,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -18914,6 +19239,7 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
+        "luamod": null,
         "available": [
             "Blizzard Lord",
             "Dark Thorn",
@@ -18983,7 +19309,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Shadow (1 0)": {
         "vars": [
@@ -19035,7 +19362,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Shadow (Aggressive)": {
         "vars": [
@@ -19087,7 +19415,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Shadow Stalker": {
         "mickey_source": true,
@@ -19152,6 +19481,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -19161,6 +19491,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -19240,7 +19571,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Shan-Yu": {
         "mickey_source": true,
@@ -19307,6 +19639,7 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas II",
             "Axel I",
@@ -19395,6 +19728,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Shenzie"
         ]
@@ -19451,7 +19785,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Shock": {
         "vars": [
@@ -19504,6 +19839,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Shock"
         ]
@@ -19561,7 +19897,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Silver Rock (1 0)": {
         "vars": [
@@ -19614,7 +19951,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Sniper": {
         "vars": [
@@ -19669,7 +20007,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Soldier": {
         "vars": [
@@ -19726,7 +20065,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Soldier (1 0)": {
         "vars": [
@@ -19778,7 +20118,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Soldier (99 0)": {
         "vars": [
@@ -19830,7 +20171,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Soldier NM": {
         "vars": [
@@ -19880,7 +20222,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Sorcerer": {
         "vars": [
@@ -19935,7 +20278,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Spring Metal": {
         "vars": [
@@ -19987,7 +20331,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Storm Rider": {
         "mickey_source": true,
@@ -20062,6 +20407,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -20072,6 +20418,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -20154,7 +20501,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Strafer RAW": {
         "vars": [
@@ -20205,7 +20553,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Surveillance Robot": {
         "vars": [
@@ -20260,7 +20609,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Terra": {
         "vars": [
@@ -20317,6 +20667,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -20327,6 +20678,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -20418,6 +20770,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -20426,6 +20779,7 @@
             "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -20519,6 +20873,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -20529,6 +20884,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -20624,6 +20980,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -20634,6 +20991,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -20724,6 +21082,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -20733,6 +21092,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -20816,7 +21176,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Tifa (2)": {
         "program": 196,
@@ -20874,7 +21235,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Tornado Step": {
         "vars": [
@@ -20926,7 +21288,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Toy Soldier NM": {
         "vars": [
@@ -20979,7 +21342,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Trick Ghost": {
         "vars": [
@@ -21034,7 +21398,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Twilight Thorn": {
         "vars": [
@@ -21115,6 +21480,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Blizzard Lord",
             "Dark Thorn",
@@ -21185,7 +21551,8 @@
         "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Vexen": {
         "program": 115,
@@ -21245,6 +21612,7 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -21252,6 +21620,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -21361,6 +21730,7 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
+        "luamod": null,
         "available": [
             "Blizzard Lord",
             "Dark Thorn",
@@ -21434,6 +21804,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Axel I",
             "Axel II",
@@ -21441,6 +21812,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -21523,7 +21895,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Wight Knight NM": {
         "vars": [
@@ -21573,7 +21946,8 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Xaldin": {
         "mickey_source": true,
@@ -21632,6 +22006,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -21642,6 +22017,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -21730,6 +22106,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -21737,6 +22114,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -21829,6 +22207,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -21839,6 +22218,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -21930,6 +22310,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -21939,6 +22320,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -22023,7 +22405,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Yuffie (2)": {
         "program": 196,
@@ -22082,7 +22465,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Yuffie (3)": {
         "program": 193,
@@ -22141,7 +22525,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Zexion": {
         "program": 151,
@@ -22202,6 +22587,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -22212,6 +22598,7 @@
             "Cerberus",
             "Dark Thorn",
             "Demyx",
+            "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
@@ -22301,6 +22688,7 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     }
 }

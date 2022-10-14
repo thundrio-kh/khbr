@@ -1,3 +1,6 @@
+2.1.5
+* Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)
+
 2.1
 * Redesigned "Wild" enemies to now only put up to 5 different kinds of enemies in any one room (between all spawns in that room), which should make it mostly playable. This number will be reduced if necessary, and Wild is still only possible for PC. Due to the way the randomization is currently implemented, some enemies will be very likely to be vanilla (for example, the Bolt Towers in the first part of the Minnie Escort fight)
 * Increased the number of bosses available when Bosses are allowed to replace normal enemies, and increased the odds of a boss replacement occuring to about 1 in 80 enemies

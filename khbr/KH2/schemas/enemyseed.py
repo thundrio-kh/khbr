@@ -11,6 +11,7 @@ class EnemySeed:
         self.set_scaling = {}
         self.object_map = {}
         self.ai_mods = {}
+        self.lua_mods = []
         self.utility_mods = {}
         self.data_replacements = {}
         self.config = config
@@ -24,6 +25,7 @@ class EnemySeed:
             "spawns": self.spawns, 
             "msn_map": self.msn_mapping, 
             "ai_mods": list(set(self.ai_mods)), 
+            "lua_mods": list(set(self.lua_mods)),
             "object_map": self.object_map, 
             "scale_map": self.set_scaling, 
             "limiter_map": self.spawn_limiters, 
@@ -62,6 +64,7 @@ class EnemySeed:
         self.update_scaling(old_boss_object, new_boss_object)
         self.update_objentry(new_boss_object)
         self.update_aimod(old_boss_object, new_boss_object)
+        self.update_luamod(new_boss_object)
 
     def update_extras(self, old_boss_object, new_boss_object, world, room, spawnpoint, spid):
         # self, world, room, spawnpoint, spid, entity, new_boss_object
@@ -134,6 +137,10 @@ class EnemySeed:
             if add.get("aimod"):
                 self.ai_mods[add["name"]] = old_boss_object["name"]
 
+    def update_luamod(self, new_boss_object):
+        if new_boss_object.get("luamod"):
+            self.lua_mods.append(new_boss_object["luamod"])
+            
     def set_data_final_xemnas_retry(self, shouldretry):
         msn_name = "EH20_MS113_RE"
         if msn_name in self.msn_mapping:

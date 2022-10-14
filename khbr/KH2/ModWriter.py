@@ -121,6 +121,17 @@ class ModWriter:
             ]
         }
 
+    def writeLua(self, luafn, data):
+        relfn = os.path.join("files", "lua", luafn)
+        outfn = os.path.join(self.outdir, relfn)
+
+        self.write_method(outfn, relfn, data)
+        return {
+            "method": "copy",
+            "name": "scripts/{}".format(luafn),
+            "source": [{"name": relfn}]
+        }
+
     def writeMsn(self, msnname, data):
         relfn = os.path.join("files", "msns", msnname)
         outfn = os.path.join(self.outdir, relfn)

@@ -221,7 +221,7 @@ if __name__ == '__main__':
     t = time.time()
     mode = sys.argv[1]
     # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"enemy\": \"Wild\", \"combine_enemy_sizes\": true}" randomization_only
-    # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"data_bosses\": true}"
+    # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"data_bosses\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
     # run randomizer.py devgenerate "{\"selected_boss\": \"Final Xemnas\", \"enemy\": \"Wild\"}" randomization_only
     # run randomizer.py devgenerate "{\"selected_enemy\": \"Dancer\"}"

@@ -1,6 +1,7 @@
 from khbr.textutils import final_fight_text
 from khbr.KH2.Mission import Mission
 from khbr.KH2.AiManager import AiManager
+from khbr.KH2.LuaManager import LuaManager
 from khbr.utils import print_debug
 from khbr._config import KH2_DIR, HARDCAP, DEBUG_HEALTH
 from khbr.KH2.AreaDataScript import AreaDataScript
@@ -84,12 +85,21 @@ class AssetGenerator:
 
             ai_manager.modify_data(data)
             
-            self.modwriter.writeAi
 
             enemy = self.enemy_manager.enemy_records[ai]
             modelname = enemy["model"]
 
             asset = self.modwriter.writeAi(ai_manager.fn, modelname, data)
+            self.assets.append(asset)
+
+    def generateLuaMods(self, lua_mods):
+        if not lua_mods:
+            return
+        for lua_name in lua_mods:
+            lua = LuaManager(lua_name)
+            lua.create_file()
+
+            asset = self.modwriter.writeLua(lua.fn, lua.data)
             self.assets.append(asset)
 
     def generateMsns(self, msn_map, msninfo):
