@@ -49,6 +49,7 @@ class EnemyManager:
                 variation = dict(main["variations"][v])
                 variation["name"] = v
                 self.inheritConfig(main, variation, defaults, ispc=ispc)
+
                 variation["category"] = self.getCategory(variation, ispc=ispc)
 
                 # TODO I'd like to make this better but I don't know how
@@ -58,7 +59,6 @@ class EnemyManager:
                 if parent not in parent_children_mapping:
                     parent_children_mapping[parent] = []
                 parent_children_mapping[parent].append(name)
-                
                 enemies[v] = variation
         
         # This is making sure that children who aren't just variations also get inherited config
@@ -117,6 +117,7 @@ class EnemyManager:
             if ispc and k == "pc":
                 for k_pc in parent["pc"]:
                     value = parent["pc"][k_pc]
+                    
                     if k_pc not in parent:
                         keys_to_add[k_pc] = value
                     # Allow different blacklist/whitelists for pc vs ps2
@@ -126,13 +127,17 @@ class EnemyManager:
                                 parent[k_pc].append(v)
                     else:
                         parent[k_pc] = parent["pc"][k_pc]
+        
+        parent.update(keys_to_add)
+        for k in parent:
             if k == "variations":
                 if k not in variation: # confused, what is this for
                     variation[k] = list(parent[k].keys())
                 continue
             if k not in variation:
                 variation[k] = parent[k]
-        parent.update(keys_to_add)
+        
+        # This must be adding the keys to a temporary version of the object, its not what gets written
         for d in defaults:
             if d not in variation:
                 variation[d] = defaults[d]

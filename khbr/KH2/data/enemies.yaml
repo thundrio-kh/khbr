@@ -2196,6 +2196,10 @@ Grim Reaper II:
     - Pete OC II # crashes on fight start
     - Hades II
     - Past Pete
+    - Blizzard Lord
+    - Volcano Lord
+    - Hades Cups
+    - The Beast
   blacklist_destination:
   - Dark Thorn # medals get lost on ground
   - Shadow Stalker # medals get lost on ground
@@ -4224,6 +4228,8 @@ Terra:
       - 0
 The Beast:
   aimod: false
+  tags: 
+  - needs_rc
   enabled: true
   enmp_index: 0x49
   blacklist_source:
