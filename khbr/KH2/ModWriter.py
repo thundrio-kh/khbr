@@ -133,7 +133,7 @@ class ModWriter:
         }
 
     def writeMsn(self, msnname, data):
-        relfn = os.path.join("files", "msns", msnname)
+        relfn = os.path.join("files", "msns", msnname + ".bar")
         outfn = os.path.join(self.outdir, relfn)
         self.write_method(outfn, relfn, data)
         # create the asset
