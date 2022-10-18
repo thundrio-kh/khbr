@@ -16940,6 +16940,8 @@ Pride Land:
             isboss: true
             name: Shenzie
   The Savannah:
+    roommodedits:
+      b_60: groundshaker # groundshaker in front of sora
     size: 5000000
     spawnpoints:
       b_60:

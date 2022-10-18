@@ -32,11 +32,12 @@ class KingdomHearts2:
                                 "type": "enemy", "possible_values": [None] + sorted(self.get_valid_enemies()), "hidden_values": []},
             "nightmare_enemies": {"display_name": "Nightmare Enemies", "description": "Replaces enemies using only the most difficult enemies in the game.",
                                 "type": "enemy", "possible_values": [False, True], "hidden_values": []},
+            "separate_nobodys": {"display_name": "Randomize Nobodys separately", "description": "Treats nobodys as a separate type of enemy, so they are only randomized among themselves.", 
+                                 "type": "enemy", "possible_values": [False, True], "hidden_values": []},
             "combine_enemy_sizes": {"display_name": "Combine Enemy Sizes (Experimental)", "description": "Normally small enemies are randomized separately from big enemies to prevent crashing. On PC it is less likely to crash, so this option is to combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": [], "experimental": True},
             "combine_melee_ranged": {"display_name": "Combine Melee and Ranged enemies (Experimental)", "description": "Normally ranged and melee enemies are randomized separate from each other, both for difficulty and to reduce crashing. On PC it is less likely to crash, so this option will combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": [], "experimental": True},
-
 
             "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. If a selected boss is filled in this setting is ignored and every boss (almost) will become that boss.",
                                 "type": "boss", "possible_values": ["Disabled", "One to One", "Wild"], "hidden_values": []},
@@ -112,6 +113,7 @@ class KingdomHearts2:
             enemies = self.enemy_manager.get_enemies() if enemymode != 'Disabled' else {},
             combine_enemy_sizes = options.get("combine_enemy_sizes"),
             combine_melee_ranged = options.get("combine_melee_ranged"),
+            separate_nobodys = options.get("separate_nobodys"),
             nightmare_enemies = options.get("nightmare_enemies"),
 
             bossmode = bossmode,
@@ -166,7 +168,7 @@ class KingdomHearts2:
     def create_seed(self, rand_seed: EnemySeed):
             rand_seed.bossmapping = pickbossmapping(self.enemy_manager.enemy_records, rand_seed.config.bosses) if not rand_seed.config.duplicate_bosses else None
             if rand_seed.config.enemies and rand_seed.config.enemymode != "Selected Enemy":
-                categorized_enemies = self.enemy_manager.categorize_enemies(rand_seed.config.enemies, combine_sizes=rand_seed.config.combine_enemy_sizes, combine_ranged=rand_seed.config.combine_melee_ranged, ispc=rand_seed.config.memory_expansion)
+                categorized_enemies = self.enemy_manager.categorize_enemies(rand_seed.config.enemies, combine_sizes=rand_seed.config.combine_enemy_sizes, combine_ranged=rand_seed.config.combine_melee_ranged, separate_nobodys=rand_seed.config.separate_nobodys, ispc=rand_seed.config.memory_expansion)
                 rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemy"], nightmare=rand_seed.config.nightmare_enemies)
             
             self.location_manager.set_locations()

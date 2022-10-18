@@ -278,7 +278,7 @@ class EnemyManager:
         return '-'.join(categories)
 
 
-    def categorize_enemies(self, included_enemylist, combine_sizes=False, combine_ranged=False, ispc=False):
+    def categorize_enemies(self, included_enemylist, combine_sizes=False, combine_ranged=False, separate_nobodys=True, ispc=False):
         if not self.enemy_records:
             self.set_enemies(ispc)
         categories = {}
@@ -286,6 +286,8 @@ class EnemyManager:
             parent = self.enemy_records[e["parent"]]
             # Might not be respecting childrens tags properly
             category_name = parent["category"]
+            if not separate_nobodys:
+                category_name = self._remove_category(category_name, "nobody")
             if combine_sizes:
                 category_name = self._remove_category(category_name, "large")
             if combine_ranged:

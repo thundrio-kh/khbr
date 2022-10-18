@@ -1080,14 +1080,16 @@
         "obj_id": 2294,
         "size": 0,
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Demyx's water form (EH)"
         ],
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "level": 0,
         "isnightmare": false,
         "parent": "Demyx's water form (EH)",
@@ -6099,7 +6101,8 @@
         ],
         "enmp_index": 160,
         "tags": [
-            "teleport_blocked"
+            "teleport_blocked",
+            "solo"
         ],
         "hp": 100,
         "level": 99,
@@ -6112,7 +6115,7 @@
         ],
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "teleport_blocked",
+        "category": "solo-teleport_blocked",
         "isnightmare": false,
         "parent": "Armor Xemnas II",
         "variationof": null,
@@ -6292,14 +6295,16 @@
         "obj_id": 309,
         "sizeTag": "memoryLarge",
         "type": "enemy",
-        "replace_as": "Cannon Gun",
+        "tags": [
+            "nobody"
+        ],
+        "replace_as": "Dancer",
         "variations": [
             "Assassin"
         ],
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "isnightmare": false,
         "parent": "Assassin",
         "variationof": null,
@@ -6713,7 +6718,8 @@
             "Terra"
         ],
         "blacklist_source": [
-            "Thresholder"
+            "Thresholder",
+            "Larxene"
         ],
         "adds": [
             {
@@ -6781,7 +6787,6 @@
             "Hades II",
             "Hercules",
             "Hostile Program",
-            "Larxene",
             "Lexaeus",
             "Luxord",
             "Marluxia",
@@ -6984,7 +6989,8 @@
         "obj_id": 313,
         "sizeTag": "memoryLarge",
         "tags": [
-            "large"
+            "large",
+            "nobody"
         ],
         "type": "enemy",
         "variations": [
@@ -6993,7 +6999,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "large",
+        "category": "large-nobody",
         "parent": "Berserker",
         "variationof": null,
         "children": [
@@ -7862,14 +7868,16 @@
         "obj_id": 317,
         "sizeTag": "memorySmall",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Creeper"
         ],
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "isnightmare": false,
         "parent": "Creeper",
         "variationof": null,
@@ -8309,6 +8317,9 @@
         "obj_id": 312,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Dancer",
             "Dancer (99 0)"
@@ -8316,8 +8327,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "parent": "Dancer",
         "variationof": null,
         "children": [
@@ -8363,6 +8373,9 @@
         "obj_id": 312,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Dancer",
             "Dancer (99 0)"
@@ -8370,8 +8383,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "parent": "Dancer",
         "variationof": null,
         "children": [],
@@ -9464,7 +9476,8 @@
         "obj_id": 308,
         "sizeTag": "memoryLarge",
         "tags": [
-            "large"
+            "large",
+            "nobody"
         ],
         "type": "enemy",
         "variations": [
@@ -9474,7 +9487,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "large",
+        "category": "large-nobody",
         "parent": "Dragoon",
         "variationof": null,
         "children": [
@@ -9520,7 +9533,8 @@
         "obj_id": 308,
         "sizeTag": "memoryLarge",
         "tags": [
-            "large"
+            "large",
+            "nobody"
         ],
         "type": "enemy",
         "variations": [
@@ -9530,7 +9544,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "large",
+        "category": "large-nobody",
         "parent": "Dragoon",
         "variationof": null,
         "children": [],
@@ -9678,6 +9692,9 @@
         "obj_id": 318,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Dusk",
             "Dusk (99 0)"
@@ -9685,8 +9702,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "isnightmare": false,
         "parent": "Dusk",
         "variationof": null,
@@ -9732,6 +9748,9 @@
         "obj_id": 318,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Dusk",
             "Dusk (99 0)"
@@ -9739,8 +9758,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "isnightmare": false,
         "parent": "Dusk",
         "variationof": null,
@@ -10506,6 +10524,9 @@
         "obj_id": 314,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Gambler",
             "Gambler (5 0)",
@@ -10515,8 +10536,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "isnightmare": false,
         "parent": "Gambler",
         "variationof": null,
@@ -10562,6 +10582,9 @@
         "obj_id": 314,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Gambler",
             "Gambler (5 0)",
@@ -10571,8 +10594,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "isnightmare": false,
         "parent": "Gambler",
         "variationof": null,
@@ -10616,6 +10638,9 @@
         "obj_id": 314,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Gambler",
             "Gambler (5 0)",
@@ -10625,8 +10650,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "isnightmare": false,
         "parent": "Gambler",
         "variationof": null,
@@ -10670,6 +10694,9 @@
         "obj_id": 314,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Gambler",
             "Gambler (5 0)",
@@ -10679,8 +10706,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "isnightmare": false,
         "parent": "Gambler",
         "variationof": null,
@@ -15288,6 +15314,9 @@
         "model": "M_EX550",
         "obj_id": 7,
         "sizeTag": "memorySmall",
+        "tags": [
+            "ranged"
+        ],
         "replace_as": "Cannon Gun",
         "type": "enemy",
         "variations": [
@@ -15296,8 +15325,7 @@
         ],
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "ranged",
         "isnightmare": false,
         "parent": "Minute Bomb",
         "variationof": null,
@@ -15343,6 +15371,9 @@
         "model": "M_EX550",
         "obj_id": 7,
         "sizeTag": "memorySmall",
+        "tags": [
+            "ranged"
+        ],
         "replace_as": "Cannon Gun",
         "type": "enemy",
         "variations": [
@@ -15351,8 +15382,7 @@
         ],
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "ranged",
         "isnightmare": false,
         "parent": "Minute Bomb",
         "variationof": null,
@@ -15389,6 +15419,9 @@
         "name": "Minute Bomb WI",
         "enabled": true,
         "variationof": "Minute Bomb",
+        "tags": [
+            "ranged"
+        ],
         "replace_as": "Cannon Gun",
         "enmp_index": 57,
         "hp": 100,
@@ -15403,8 +15436,7 @@
         ],
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "ranged",
         "isnightmare": false,
         "parent": "Minute Bomb",
         "children": [],
@@ -18376,6 +18408,9 @@
         "obj_id": 310,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Samurai",
             "Samurai (99 0)"
@@ -18383,8 +18418,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "parent": "Samurai",
         "variationof": null,
         "children": [
@@ -18430,6 +18464,9 @@
         "obj_id": 310,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "nobody"
+        ],
         "variations": [
             "Samurai",
             "Samurai (99 0)"
@@ -18437,8 +18474,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "nobody",
         "parent": "Samurai",
         "variationof": null,
         "children": [],
@@ -20051,7 +20087,8 @@
         "type": "enemy",
         "tags": [
             "ranged",
-            "large"
+            "large",
+            "nobody"
         ],
         "variations": [
             "Sniper"
@@ -20059,7 +20096,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "large-ranged",
+        "category": "large-nobody-ranged",
         "parent": "Sniper",
         "variationof": null,
         "children": [
@@ -20320,7 +20357,8 @@
         "sizeTag": "memoryLarge",
         "tags": [
             "large",
-            "ranged"
+            "ranged",
+            "nobody"
         ],
         "type": "enemy",
         "variations": [
@@ -20329,7 +20367,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "large-ranged",
+        "category": "large-nobody-ranged",
         "isnightmare": false,
         "parent": "Sorcerer",
         "variationof": null,

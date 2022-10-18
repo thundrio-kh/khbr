@@ -1,10 +1,12 @@
 2.1.5
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)
+* Added an option to treat Nobodys as a separate type of enemy, depending on the other options enabled this can cause some enemies to randomize very predictably
 * Updated several bosses allowed replacements to reduce the possibility of known softlocks/crashes (common ones involving Barbossa, Grim Reaper 2, Demyx)
 * Remove Scar Ghost from being able to appear as a boss enemy
 * Fixed MSN files getting created without the .bar extension
 * Fixed cases where some bosses were not getting properly changed when a specific boss was selected
 * Moved Spawn locations in Armor Xemnas 1 fight to prevent bosses getting softlocked by landing strangely on the throne
+* Move Spawn location for Groundshaker in front of Sora and to ground level
 
 2.1
 * Redesigned "Wild" enemies to now only put up to 5 different kinds of enemies in any one room (between all spawns in that room), which should make it mostly playable. This number will be reduced if necessary, and Wild is still only possible for PC. Due to the way the randomization is currently implemented, some enemies will be very likely to be vanilla (for example, the Bolt Towers in the first part of the Minnie Escort fight)

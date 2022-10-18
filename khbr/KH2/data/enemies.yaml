@@ -252,6 +252,8 @@ Demyx's water form (EH):
   obj_id: 2294
   size: 0
   type: enemy
+  tags:
+  - nobody
   variations:
     Demyx's water form (EH):
       vars:
@@ -961,6 +963,7 @@ Armor Xemnas II:
   enmp_index: 0xA0
   tags:
   - teleport_blocked
+  - solo # not really but data demyx would still be kinda stupid here
   hp: 100
   level: 99
   limiter: 0
@@ -1010,7 +1013,9 @@ Assassin:
   obj_id: 309
   sizeTag: memoryLarge
   type: enemy
-  replace_as: Cannon Gun # FIXME I'm being lazy need a better fix for the explosion softlock issue
+  tags:
+  - nobody
+  replace_as: Dancer # FIXME I'm being lazy need a better fix for the explosion softlock issue
   variations:
     Assassin:
       vars:
@@ -1261,6 +1266,7 @@ Berserker:
   sizeTag: memoryLarge
   tags:
   - large
+  - nobody
   type: enemy
   variations:
     Berserker:
@@ -1467,6 +1473,8 @@ Creeper:
   obj_id: 317
   sizeTag: memorySmall
   type: enemy
+  tags:
+  - nobody
   variations:
     Creeper:
       vars:
@@ -1552,6 +1560,8 @@ Dancer:
   obj_id: 312
   sizeTag: memoryLarge
   type: enemy
+  tags:
+  - nobody
   variations:
     Dancer:
       vars:
@@ -1878,6 +1888,7 @@ Dragoon:
   sizeTag: memoryLarge
   tags:
   - large
+  - nobody
   type: enemy
   variations:
     Dragoon:
@@ -1929,6 +1940,8 @@ Dusk:
   obj_id: 318
   sizeTag: memoryLarge
   type: enemy
+  tags:
+  - nobody
   variations:
     Dusk:
       vars:
@@ -2108,6 +2121,8 @@ Gambler:
   obj_id: 314
   sizeTag: memoryLarge
   type: enemy
+  tags:
+  - nobody
   variations:
     Gambler:
       vars:
@@ -3131,6 +3146,8 @@ Minute Bomb:
   model: M_EX550
   obj_id: 7
   sizeTag: memorySmall
+  tags: 
+  - ranged # Not really but because it's replaced by Cannon gun
   replace_as: Cannon Gun # FIXME I'm being lazy need a real solution to explosion bug
   type: enemy
   variations:
@@ -3145,6 +3162,8 @@ Minute Bomb:
 Minute Bomb WI:
   enabled: true
   variationof: Minute Bomb
+  tags: 
+  - ranged # Not really but because it's replaced by Cannon gun
   replace_as: Cannon Gun # FIXME I'm being lazy need a real solution to explosion bug
   enmp_index: 57
   hp: 100
@@ -3643,6 +3662,8 @@ Samurai:
   obj_id: 310
   sizeTag: memoryLarge
   type: enemy
+  tags:
+  - nobody
   variations:
     Samurai:
       vars:
@@ -4059,6 +4080,7 @@ Sniper:
   tags:
   - ranged
   - large
+  - nobody
   variations:
     Sniper:
       vars:
@@ -4116,6 +4138,7 @@ Sorcerer:
   tags:
   - large
   - ranged
+  - nobody
   type: enemy
   variations:
     Sorcerer:

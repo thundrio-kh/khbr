@@ -15,6 +15,7 @@ class SpawnManager:
             "ax2_40": self.ax2_40,
             "ax2_50": self.ax2_50,
             "stormrider_61": self.stormrider_61,
+            "groundshaker": self.groundshaker,
             "ax1_40": self.ax1_40
         }
 
@@ -30,6 +31,16 @@ class SpawnManager:
             print("Warning: could not find {} method for editing spawn, leaving unmodified".format(editname))
             return
         self.roommodedits(spawnpoint)
+
+    def groundshaker(self, spawnpoint):
+        groundshaker = spawnpoint[0]["Entities"][3]
+        # Position groundshaker entity right in front of sora and at proper ground height
+        groundshaker["PositionZ"] = 4330
+        groundshaker["PositionY"] = -384
+
+        for boss_add in spawnpoint[0]["Entities"][4:]:
+            boss_add["PositionY"] = groundshaker["PositionY"]
+            boss_add["PositionZ"] = groundshaker["PositionZ"]
 
     def ax1_40(self, spawnpoint):
         sora = spawnpoint[0]["Entities"][0]
@@ -62,6 +73,10 @@ class SpawnManager:
         boss = spawnpoint[0]["Entities"][2]
         boss["PositionY"] = 14940
         boss["PositionZ"] = bossz
+
+        for boss_add in spawnpoint[0]["Entities"][3:]:
+            boss_add["PositionY"] = boss["PositionY"]
+            boss_add["PositionZ"] = boss["PositionZ"]
 
     def ax2_40(self, spawnpoint):
         # remove the buildings
