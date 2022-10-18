@@ -8,6 +8,7 @@
 * Prevent bosses from spawning in The Ravine or Checkpoint rooms, when bosses as enemies mode is enabled.
 * Moved Spawn locations in Armor Xemnas 1 fight to prevent bosses getting softlocked by landing strangely on the throne
 * Move Spawn location for Groundshaker in front of Sora and to ground level
+* Prevent the option for Mickey appearing in STT boss fights, due to Roxas missing animations for summoning mickey causing T-Poses
 
 2.1
 * Redesigned "Wild" enemies to now only put up to 5 different kinds of enemies in any one room (between all spawns in that room), which should make it mostly playable. This number will be reduced if necessary, and Wild is still only possible for PC. Due to the way the randomization is currently implemented, some enemies will be very likely to be vanilla (for example, the Bolt Towers in the first part of the Minnie Escort fight)

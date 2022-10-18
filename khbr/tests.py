@@ -101,8 +101,9 @@ class Tests(unittest.TestCase):
     def test_seedgen_boss_mickey_rule(self):
         options = {"boss": "One to One", "mickey_rule": "all"}
         randomization = testutils.generateSeed(options)
-        for key, value in randomization["msn_map"].items():
-            assert value["setmickey"] == True
+        assert randomization["msn_map"]["BB05_MS104B"]["setmickey"] == True # Dark Thorn
+        assert randomization["msn_map"]["CA01_MS204"]["setmickey"] == False # GR 2
+        assert randomization["msn_map"]["CA18_MS202"]["setmickey"] == True # GR 1
         options = {"boss": "One to One", "mickey_rule": "none"}
         randomization = testutils.generateSeed(options)
         for key, value in randomization["msn_map"].items():
@@ -123,6 +124,11 @@ class Tests(unittest.TestCase):
                 assert new_object["setmickey"] == False
             if new_object["name"] == "CA18_MS202":
                 assert new_object["setmickey"] == True   
+
+    def test_seedgen_no_mickey_for_roxas(self):
+        options = {"boss": "One to One", "mickey_rule": "all"}
+        randomization = testutils.generateSeed(options)
+        assert randomization["msn_map"]["TT34_MS304"]["setmickey"] == False
 
     def test_seedgen_boss_one_to_one(self):
         options = {"boss": "One to One"}
@@ -292,7 +298,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_seedgen_error5()
+ut.test_seedgen_no_mickey_for_roxas()
 
 # Uncomment to run the actual tests
-unittest.main()
+#unittest.main()
