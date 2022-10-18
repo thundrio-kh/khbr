@@ -9978,6 +9978,7 @@ Hollow Bastion:
             isboss: true
             name: Sephiroth
   The Great Maw:
+    ignored: true # battle 1K is weird
     size: 5000000
     spawnpoints:
       b_99:

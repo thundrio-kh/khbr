@@ -5,6 +5,7 @@
 * Remove Scar Ghost from being able to appear as a boss enemy
 * Fixed MSN files getting created without the .bar extension
 * Fixed cases where some bosses were not getting properly changed when a specific boss was selected
+* Prevent any attempt at randomizing Battle of 1K, to prevent crashes
 * Prevent bosses from spawning in The Ravine or Checkpoint rooms, when bosses as enemies mode is enabled.
 * Moved Spawn locations in Armor Xemnas 1 fight to prevent bosses getting softlocked by landing strangely on the throne
 * Move Spawn location for Groundshaker in front of Sora and to ground level
