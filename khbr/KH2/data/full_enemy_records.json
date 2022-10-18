@@ -3051,7 +3051,7 @@
             0
         ],
         "name": "Scar Ghost",
-        "can_be_enemy_override": true,
+        "can_be_enemy_override": false,
         "enabled": false,
         "enmp_index": 999,
         "model": "B_LK110_PHANTOM",
@@ -6715,6 +6715,14 @@
                 "Terra"
             ]
         },
+        "blacklist_destination": [
+            "Thresholder",
+            "The Beast",
+            "Xigbar"
+        ],
+        "blacklist_source": [
+            "Thresholder"
+        ],
         "adds": [
             {
                 "ObjectId": 358,
@@ -6758,8 +6766,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
-        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "subtracts": [],
@@ -6790,7 +6796,6 @@
             "Setzer",
             "The Beast",
             "The Experiment",
-            "Thresholder",
             "Tifa",
             "Vivi",
             "Volcano Lord",
@@ -7037,7 +7042,10 @@
             "Sephiroth",
             "Terra",
             "Armor Xemnas I",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Twilight Thorn",
+            "Xigbar",
+            "Roxas"
         ],
         "tags": [
             "large"
@@ -7125,7 +7133,10 @@
             "Sephiroth",
             "Terra",
             "Armor Xemnas I",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Twilight Thorn",
+            "Xigbar",
+            "Roxas"
         ],
         "type": "boss",
         "variations": [
@@ -9020,7 +9031,8 @@
             "Sark",
             "Roxas",
             "Roxas (Data)",
-            "Prison Keeper"
+            "Prison Keeper",
+            "The Beast"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -10904,7 +10916,12 @@
             "blacklist_source": [
                 "Pete OC II",
                 "Hades II",
-                "Past Pete"
+                "Past Pete",
+                "Blizzard Lord",
+                "Volcano Lord",
+                "Hades Cups",
+                "The Beast",
+                "Sephiroth"
             ]
         },
         "blacklist_destination": [
@@ -11079,7 +11096,6 @@
             "Setzer",
             "Storm Rider",
             "Terra",
-            "The Beast",
             "The Experiment",
             "Tifa",
             "Vexen",
@@ -11350,7 +11366,6 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Beast",
             "The Experiment",
             "Tifa",
             "Vivi",
@@ -18602,7 +18617,6 @@
             "Sephiroth",
             "Setzer",
             "Terra",
-            "The Beast",
             "The Experiment",
             "Tifa",
             "Twilight Thorn",
@@ -20775,6 +20789,9 @@
         ],
         "name": "The Beast",
         "aimod": false,
+        "tags": [
+            "needs_rc"
+        ],
         "enabled": true,
         "enmp_index": 73,
         "blacklist_source": [
@@ -20783,7 +20800,6 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
-        "msn_replace_allowed": false,
         "model": "P_BB000_BTL",
         "msn": "BB03_MS103",
         "obj_id": 718,
@@ -20803,8 +20819,8 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "msn_replace_allowed": true,
+        "category": "needs_rc",
         "isnightmare": false,
         "parent": "The Beast",
         "variationof": null,
@@ -20835,6 +20851,7 @@
             "Grim Reaper I",
             "Hayner",
             "Hercules",
+            "Hostile Program",
             "Leon",
             "Past Pete",
             "Pete Cups",
@@ -21807,7 +21824,10 @@
             "Sephiroth",
             "Terra",
             "Armor Xemnas I",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Twilight Thorn",
+            "Xigbar",
+            "Roxas"
         ],
         "tags": [
             "large"
@@ -21895,7 +21915,10 @@
             "Sephiroth",
             "Terra",
             "Armor Xemnas I",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Twilight Thorn",
+            "Xigbar",
+            "Roxas"
         ],
         "type": "boss",
         "variations": [
@@ -22002,7 +22025,7 @@
         "model": "B_EX130",
         "msn": "BB15_MS203",
         "obj_id": 997,
-        "size": 3.63,
+        "size": 3.83,
         "program": 82,
         "room_size": 9.61,
         "type": "boss",
@@ -22200,7 +22223,8 @@
             "Sark",
             "Roxas",
             "Roxas (Data)",
-            "Prison Keeper"
+            "Prison Keeper",
+            "The Beast"
         ],
         "enabled": true,
         "tags": [
@@ -22256,7 +22280,6 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",

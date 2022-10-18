@@ -3051,7 +3051,7 @@
             0
         ],
         "name": "Scar Ghost",
-        "can_be_enemy_override": true,
+        "can_be_enemy_override": false,
         "enabled": false,
         "enmp_index": 999,
         "model": "B_LK110_PHANTOM",
@@ -6705,6 +6705,16 @@
                 "Terra"
             ]
         },
+        "blacklist_destination": [
+            "Thresholder",
+            "The Beast",
+            "Xigbar",
+            "Luxord",
+            "Terra"
+        ],
+        "blacklist_source": [
+            "Thresholder"
+        ],
         "adds": [
             {
                 "ObjectId": 358,
@@ -6731,10 +6741,6 @@
         "variations": [
             "Barbossa"
         ],
-        "blacklist_destination": [
-            "Luxord",
-            "Terra"
-        ],
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
@@ -6752,7 +6758,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "subtracts": [],
@@ -6794,7 +6799,6 @@
             "Terra",
             "The Beast",
             "The Experiment",
-            "Thresholder",
             "Twilight Thorn",
             "Vexen",
             "Volcano Lord",
@@ -7044,7 +7048,10 @@
             "Sephiroth",
             "Terra",
             "Armor Xemnas I",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Twilight Thorn",
+            "Xigbar",
+            "Roxas"
         ],
         "tags": [
             "large"
@@ -7097,16 +7104,13 @@
             "Pete OC II",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Sark",
             "Scar",
             "Shan-Yu",
             "The Beast",
-            "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Xigbar"
+            "Xemnas"
         ]
     },
     "Blizzard Lord (Cups)": {
@@ -7139,7 +7143,10 @@
             "Sephiroth",
             "Terra",
             "Armor Xemnas I",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Twilight Thorn",
+            "Xigbar",
+            "Roxas"
         ],
         "type": "boss",
         "variations": [
@@ -9044,7 +9051,8 @@
             "Sark",
             "Roxas",
             "Roxas (Data)",
-            "Prison Keeper"
+            "Prison Keeper",
+            "The Beast"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -10936,7 +10944,8 @@
                 "Blizzard Lord",
                 "Volcano Lord",
                 "Hades Cups",
-                "The Beast"
+                "The Beast",
+                "Sephiroth"
             ]
         },
         "blacklist_destination": [
@@ -10973,7 +10982,8 @@
             "Blizzard Lord",
             "Volcano Lord",
             "Hades Cups",
-            "The Beast"
+            "The Beast",
+            "Sephiroth"
         ],
         "replace_as": null,
         "source_replace_allowed": true,
@@ -11025,7 +11035,6 @@
             "Saix",
             "Sark",
             "Scar",
-            "Sephiroth",
             "Shan-Yu",
             "Terra",
             "The Experiment",
@@ -20799,7 +20808,6 @@
         "hp": 100,
         "level": 99,
         "limiter": 0,
-        "msn_replace_allowed": false,
         "model": "P_BB000_BTL",
         "msn": "BB03_MS103",
         "obj_id": 718,
@@ -20819,6 +20827,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
+        "msn_replace_allowed": true,
         "category": "needs_rc",
         "isnightmare": false,
         "parent": "The Beast",
@@ -20847,14 +20856,17 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
+            "Demyx",
             "Final Xemnas",
             "Grim Reaper I",
             "Hades II",
             "Hercules",
+            "Hostile Program",
             "Larxene",
+            "Lexaeus",
+            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete Cups",
@@ -20862,6 +20874,7 @@
             "Prison Keeper",
             "Riku",
             "Roxas",
+            "Saix",
             "Sark",
             "Scar",
             "Sephiroth",
@@ -20871,10 +20884,11 @@
             "The Experiment",
             "Thresholder",
             "Twilight Thorn",
+            "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar"
+            "Zexion"
         ]
     },
     "The Experiment": {
@@ -21057,7 +21071,6 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -21841,7 +21854,10 @@
             "Sephiroth",
             "Terra",
             "Armor Xemnas I",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Twilight Thorn",
+            "Xigbar",
+            "Roxas"
         ],
         "tags": [
             "large"
@@ -21894,16 +21910,13 @@
             "Pete OC II",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Sark",
             "Scar",
             "Shan-Yu",
             "The Beast",
-            "Twilight Thorn",
             "Volcano Lord",
             "Xaldin",
-            "Xemnas",
-            "Xigbar"
+            "Xemnas"
         ]
     },
     "Volcano Lord (Cups)": {
@@ -21936,7 +21949,10 @@
             "Sephiroth",
             "Terra",
             "Armor Xemnas I",
-            "Armor Xemnas II"
+            "Armor Xemnas II",
+            "Twilight Thorn",
+            "Xigbar",
+            "Roxas"
         ],
         "type": "boss",
         "variations": [
@@ -22043,7 +22059,7 @@
         "model": "B_EX130",
         "msn": "BB15_MS203",
         "obj_id": 997,
-        "size": 3.63,
+        "size": 3.83,
         "program": 82,
         "room_size": 9.61,
         "type": "boss",
@@ -22228,7 +22244,8 @@
             "Sark",
             "Roxas",
             "Roxas (Data)",
-            "Prison Keeper"
+            "Prison Keeper",
+            "The Beast"
         ],
         "enabled": true,
         "tags": [
@@ -22284,7 +22301,6 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",

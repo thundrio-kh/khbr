@@ -14,8 +14,10 @@ class SpawnManager:
             "ax2_99": self.ax2_99,
             "ax2_40": self.ax2_40,
             "ax2_50": self.ax2_50,
-            "stormrider_61": self.stormrider_61
+            "stormrider_61": self.stormrider_61,
+            "ax1_40": self.ax1_40
         }
+
 
     # TODO 
     # I don't think this is needed
@@ -28,6 +30,22 @@ class SpawnManager:
             print("Warning: could not find {} method for editing spawn, leaving unmodified".format(editname))
             return
         self.roommodedits(spawnpoint)
+
+    def ax1_40(self, spawnpoint):
+        sora = spawnpoint[0]["Entities"][0]
+        sora["PositionZ"] = -770
+
+        friend1 = spawnpoint[0]["Entities"][1]
+        friend1["PositionZ"] = -800
+
+        friend2 = spawnpoint[0]["Entities"][2]
+        friend2["PositionZ"] = -800
+
+        # Lots of adds possible here, so find the boss
+        for ent in spawnpoint[0]["Entities"]:
+            if ent["PositionZ"] == 650:
+                ent["PositionZ"] = -150
+                ent["PositionY"] =-50
 
     def ax2_99(self, spawnpoint):
         # set the characters Y values and X values properly
@@ -153,7 +171,7 @@ class SpawnManager:
             return False
         if rand_seed.config.bossmode == "Wild" and "onetooneonly" in old_boss["tags"]:
             return False
-        if rand_seed.bossmapping and old_boss_parent["name"] not in rand_seed.bossmapping:
+        if rand_seed.config.bossmode == "One to One" and rand_seed.bossmapping and old_boss_parent["name"] not in rand_seed.bossmapping:
             return False
         return True
 

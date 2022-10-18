@@ -21764,6 +21764,8 @@ The World That Never Was:
             isboss: true
             name: Armor Xemnas II
   The World of Nothing 24:
+    roommodedits:
+      b_40: ax1_40 # adjust boss placement
     size: 5000000
     spawnpoints:
       b_40:
