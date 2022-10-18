@@ -221,7 +221,7 @@ class SpawnManager:
             return new_boss
     
     @staticmethod
-    def get_new_enemy(rand_seed, old_enemy_object):
+    def get_new_enemy(rand_seed, old_enemy_object, room):
         if rand_seed.config.selected_enemy:
             new_enemy = rand_seed.config.selected_enemy
         elif rand_seed.config.enemymode == "Wild":
@@ -230,7 +230,7 @@ class SpawnManager:
             if old_enemy_object["name"] not in rand_seed.enemymapping:
                 return None # if it's not in mapping it's not enabled
             new_enemy = rand_seed.enemymapping[old_enemy_object["name"]]
-        if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses:
+        if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses and not room.get("bossenemy_ignored"):            
             chance = 0.012
             if random.random() < chance:
                 # TODO this list doesn't need to be generated every time

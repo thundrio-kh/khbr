@@ -8785,6 +8785,7 @@ Hollow Bastion:
   Ravine Trail:
     size: 5000000
     ignored: true 
+    bossenemy_ignored: true
     pc:
       ignored: false
     spawnpoints:
@@ -18258,6 +18259,7 @@ The Land of Dragons:
             isboss: false
             name: Sniper
   Checkpoint:
+    bossenemy_ignored: true
     size: 5000000
     spawnpoints:
       b_00:

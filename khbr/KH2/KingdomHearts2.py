@@ -219,7 +219,7 @@ class KingdomHearts2:
                                     if not self.spawn_manager.should_replace_enemy(old_enemy_object):
                                         continue
 
-                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object)
+                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object, room)
                                     if not new_enemy:
                                         continue
                                     if new_enemy == old_enemy_object["name"] and not entity.get("nameForReplace", "") == new_enemy:
