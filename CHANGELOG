@@ -1,4 +1,4 @@
-2.1.5
+2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)
 * Added an option to treat Nobodys as a separate type of enemy, depending on the other options enabled this can cause some enemies to randomize very predictably
 * Updated several bosses allowed replacements to reduce the possibility of known softlocks/crashes (common ones involving Barbossa, Grim Reaper 2, Demyx)

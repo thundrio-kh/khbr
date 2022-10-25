@@ -101,8 +101,6 @@ class EnemySeed:
             msn_object["setretry"] = True
         elif new_boss_object["final_fight"]:
             msn_object["setretry"] = False
-        if self._get_msn_name(old_boss_object) == "HE18_MS108":
-            print(msn_object, old_boss_object["name"], new_boss_object["name"])
         self.msn_mapping[self._get_msn_name(old_boss_object)] = msn_object
 
     @staticmethod

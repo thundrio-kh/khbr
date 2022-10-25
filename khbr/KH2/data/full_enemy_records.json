@@ -8636,6 +8636,7 @@
     },
     "Final Xemnas (Clone) (Data)": {
         "source_replace_allowed": false,
+        "enabled": false,
         "vars": [
             0,
             0
@@ -8646,7 +8647,6 @@
             "organization",
             "solo"
         ],
-        "enabled": true,
         "luamod": "final_xemnas",
         "variationof": "Final Xemnas",
         "msn_replace_allowed": false,
@@ -10251,7 +10251,7 @@
         "type": "boss",
         "variations": [
             "Final Xemnas",
-            "Final Xemnas (Copy)"
+            "Final Xemnas (Clone)"
         ],
         "replace_as": null,
         "source_replace_allowed": true,
@@ -10324,13 +10324,14 @@
             "Yuffie"
         ]
     },
-    "Final Xemnas (Copy)": {
+    "Final Xemnas (Clone)": {
         "source_replace_allowed": false,
+        "enabled": false,
         "vars": [
             0,
             0
         ],
-        "name": "Final Xemnas (Copy)",
+        "name": "Final Xemnas (Clone)",
         "aimod": true,
         "luamod": "final_xemnas",
         "can_be_enemy": false,
@@ -10338,7 +10339,6 @@
             "solo",
             "organization"
         ],
-        "enabled": true,
         "hp": 100,
         "isnightmare": true,
         "level": 99,
@@ -10365,7 +10365,7 @@
         "type": "boss",
         "variations": [
             "Final Xemnas",
-            "Final Xemnas (Copy)"
+            "Final Xemnas (Clone)"
         ],
         "replace_as": null,
         "category": "organization-solo",
