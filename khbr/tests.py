@@ -98,11 +98,14 @@ class Tests(unittest.TestCase):
         print("Selected Boss")
         testutils.validate_selected(randomization, "Xemnas", isboss=True)
 
+
     def test_seedgen_boss_mickey_rule(self):
         options = {"boss": "One to One", "mickey_rule": "all"}
         randomization = testutils.generateSeed(options)
-        for key, value in randomization["msn_map"].items():
-            assert value["setmickey"] == True
+        assert randomization["msn_map"]["BB05_MS104B"]["setmickey"] == True # Dark Thorn
+        assert randomization["msn_map"]["CA01_MS204"]["setmickey"] == True # GR 2
+        assert randomization["msn_map"]["CA18_MS202"]["setmickey"] == True # GR 1
+        assert randomization["msn_map"]["TT34_MS304"]["setmickey"] == False # Twilight Thorn, mickey is always off for Roxas
         options = {"boss": "One to One", "mickey_rule": "none"}
         randomization = testutils.generateSeed(options)
         for key, value in randomization["msn_map"].items():
@@ -234,6 +237,13 @@ class Tests(unittest.TestCase):
         import base64
         base64.decodebytes(b64)
 
+    def test_seedgen_error5(self):
+        options = {'remove_damage_cap': True, 'cups_give_xp': True, 'retry_data_final_xemnas': True, 'retry_dark_thorn': True, 'boss': 'Disabled', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': False, 'data_bosses': False, 'mickey_rule': 'follow', 'enemy': 'One to One', 'nightmare_enemies': False, 'combine_enemy_sizes': False, 'combine_melee_ranged': False, 'memory_expansion': True}
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        base64.decodebytes(b64)
+
     def test_getbosses(self):
         kh2 = KingdomHearts2()
         kh2.enemy_manager.create_enemy_records(getavail=True)
@@ -285,7 +295,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_seedgen_boss_and_enemy_one_to_one()
+ut.test_seedgen_boss_mickey_rule()
 
 # Uncomment to run the actual tests
-unittest.main()
+#unittest.main()

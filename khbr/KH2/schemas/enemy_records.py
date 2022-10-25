@@ -39,5 +39,6 @@ def get_schema():
         "program": None,
         "roomsizemultiplier": 1,
         "unchanged_file_size": False,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": None
     }

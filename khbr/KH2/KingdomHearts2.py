@@ -32,11 +32,12 @@ class KingdomHearts2:
                                 "type": "enemy", "possible_values": [None] + sorted(self.get_valid_enemies()), "hidden_values": []},
             "nightmare_enemies": {"display_name": "Nightmare Enemies", "description": "Replaces enemies using only the most difficult enemies in the game.",
                                 "type": "enemy", "possible_values": [False, True], "hidden_values": []},
+            "separate_nobodys": {"display_name": "Randomize Nobodys separately", "description": "Treats nobodys as a separate type of enemy, so they are only randomized among themselves.", 
+                                 "type": "enemy", "possible_values": [False, True], "hidden_values": []},
             "combine_enemy_sizes": {"display_name": "Combine Enemy Sizes (Experimental)", "description": "Normally small enemies are randomized separately from big enemies to prevent crashing. On PC it is less likely to crash, so this option is to combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": [], "experimental": True},
             "combine_melee_ranged": {"display_name": "Combine Melee and Ranged enemies (Experimental)", "description": "Normally ranged and melee enemies are randomized separate from each other, both for difficulty and to reduce crashing. On PC it is less likely to crash, so this option will combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": [], "experimental": True},
-
 
             "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. If a selected boss is filled in this setting is ignored and every boss (almost) will become that boss.",
                                 "type": "boss", "possible_values": ["Disabled", "One to One", "Wild"], "hidden_values": []},
@@ -49,6 +50,8 @@ class KingdomHearts2:
             "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One'.",
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra and Sephiroth",
+                                "type": "boss", "possible_values": [False, True], "hidden_values": []},
+            "lua_bosses": {"display_name": "Randomize Final Xemnas (Must setup LuaBackend properly)", "description": "Include Final Xemnas in the randomization pool (and his data, if Superbosses are enabled). Generates a lua script that must be loaded via ModManager.",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "mickey_rule": {"display_name": "Mickey Appearance Settings", "description": "Choose when Mickey appears. Options are 'follow', where mickey appears for the same bosses as in the vanilla game, regardless of their location. 'stay', where mickey appears in the same locations as in the vanilla game, regardless of the location. 'all', mickey will appear for every boss in the game, regardless of if mickey normally apepars there. 'none', mickey will never appear. Might make PS2 boss fights less stable",
                                 "type": "boss", "possible_values": ["follow", "stay", "all", 'none'], "hidden_values": []}
@@ -110,6 +113,7 @@ class KingdomHearts2:
             enemies = self.enemy_manager.get_enemies() if enemymode != 'Disabled' else {},
             combine_enemy_sizes = options.get("combine_enemy_sizes"),
             combine_melee_ranged = options.get("combine_melee_ranged"),
+            separate_nobodys = options.get("separate_nobodys"),
             nightmare_enemies = options.get("nightmare_enemies"),
 
             bossmode = bossmode,
@@ -164,7 +168,7 @@ class KingdomHearts2:
     def create_seed(self, rand_seed: EnemySeed):
             rand_seed.bossmapping = pickbossmapping(self.enemy_manager.enemy_records, rand_seed.config.bosses) if not rand_seed.config.duplicate_bosses else None
             if rand_seed.config.enemies and rand_seed.config.enemymode != "Selected Enemy":
-                categorized_enemies = self.enemy_manager.categorize_enemies(rand_seed.config.enemies, combine_sizes=rand_seed.config.combine_enemy_sizes, combine_ranged=rand_seed.config.combine_melee_ranged, ispc=rand_seed.config.memory_expansion)
+                categorized_enemies = self.enemy_manager.categorize_enemies(rand_seed.config.enemies, combine_sizes=rand_seed.config.combine_enemy_sizes, combine_ranged=rand_seed.config.combine_melee_ranged, separate_nobodys=rand_seed.config.separate_nobodys, ispc=rand_seed.config.memory_expansion)
                 rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemy"], nightmare=rand_seed.config.nightmare_enemies)
             
             self.location_manager.set_locations()
@@ -201,7 +205,10 @@ class KingdomHearts2:
                                     if new_boss == old_boss_object["name"]:
                                         # still need to update msn mapping for mickey rules
                                         rand_seed.update_msn_mapping(old_boss_object, old_boss_object)
-                                        continue
+
+                                        # When GR II replaces itself need to remove the medals that start on the ground
+                                        if not old_boss_object["name"] == "Grim Reaper II":
+                                            continue
 
                                     new_boss_object = self.enemy_manager.get_new_boss_object(old_boss_object, new_boss, rand_seed)
 
@@ -215,7 +222,7 @@ class KingdomHearts2:
                                     if not self.spawn_manager.should_replace_enemy(old_enemy_object):
                                         continue
 
-                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object)
+                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object, room)
                                     if not new_enemy:
                                         continue
                                     if new_enemy == old_enemy_object["name"] and not entity.get("nameForReplace", "") == new_enemy:
@@ -243,6 +250,7 @@ class KingdomHearts2:
         assetgenerator.generateObjEntry(randomization.get("object_map", {}))
         assetgenerator.generateEnmp(randomization.get("scale_map",{}), remove_damage_cap="remove_damage_cap" in utility_mods)
         assetgenerator.generateAiMods(randomization.get("ai_mods"))
+        assetgenerator.generateLuaMods(randomization.get("lua_mods"))
         assetgenerator.generateMsns(randomization.get("msn_map", {}), self.mission_manager.msninfo)
         # self.set_spawns() # TODO is this needed?
         self.location_manager.set_locations() # TODO this might be unneeded time waste????

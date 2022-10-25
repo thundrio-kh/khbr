@@ -9,7 +9,7 @@ class Tests(unittest.TestCase):
     def test_one_to_one_long(self):
         print("One to One long")
         N = 100
-        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True}
+        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "lua_bosses": True}
         randomizations = []
         for _ in range(N):
             print("{}\{}".format(_,N))
@@ -23,7 +23,7 @@ class Tests(unittest.TestCase):
     def test_wild_long(self):
         print("Wild long")
         N = 100
-        options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True}
+        options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "lua_bosses": True}
         randomizations = []
         for _ in range(N):
             print("{}\{}".format(_,N))
@@ -36,7 +36,7 @@ class Tests(unittest.TestCase):
     def test_one_to_one_long_pc(self):
         print("One to One long pc")
         N = 100
-        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "memory_expansion": True}
+        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "memory_expansion": True, "lua_bosses": True}
         randomizations = []
         for _ in range(N):
             print("{}\{}".format(_,N))
@@ -62,7 +62,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_wild_long_pc()
+#ut.test_wild_long()
 
 # Uncomment to run the actual tests
 unittest.main()

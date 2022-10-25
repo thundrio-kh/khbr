@@ -252,6 +252,8 @@ Demyx's water form (EH):
   obj_id: 2294
   size: 0
   type: enemy
+  tags:
+  - nobody
   variations:
     Demyx's water form (EH):
       vars:
@@ -527,7 +529,7 @@ Reckless:
       - 0
       - 0
 Scar Ghost:
-  can_be_enemy_override: true
+  can_be_enemy_override: false # reports this doesn't work well
   enabled: false # Gives no XP so should not be in pool
   enmp_index: 999
   model: B_LK110_PHANTOM
@@ -958,9 +960,11 @@ Armor Xemnas II:
   enabled: true
   blacklist_source:
   - Axel I
+  - Saix # Report of crash
   enmp_index: 0xA0
   tags:
   - teleport_blocked
+  - solo # not really but data demyx would still be kinda stupid here
   hp: 100
   level: 99
   limiter: 0
@@ -1010,7 +1014,9 @@ Assassin:
   obj_id: 309
   sizeTag: memoryLarge
   type: enemy
-  replace_as: Cannon Gun # FIXME I'm being lazy need a better fix for the explosion softlock issue
+  tags:
+  - nobody
+  replace_as: Dancer # FIXME I'm being lazy need a better fix for the explosion softlock issue
   variations:
     Assassin:
       vars:
@@ -1169,6 +1175,13 @@ Barbossa:
     blacklist_destination:
     - Luxord # report of crash after cutscene
     - Terra # report of crash at cutscene
+  blacklist_destination:
+  - Thresholder # Illuminator spawn loc
+  - The Beast # Illuminator spawn loc
+  - Xigbar # You are put in boxed in space
+  blacklist_source:
+  - Thresholder # report of fight not ending
+  - Larxene # report of fight not ending
   adds:
   - ObjectId: 358 #Illuminator
     name: Illuminator
@@ -1254,6 +1267,7 @@ Berserker:
   sizeTag: memoryLarge
   tags:
   - large
+  - nobody
   type: enemy
   variations:
     Berserker:
@@ -1276,6 +1290,9 @@ Blizzard Lord:
   - Terra # Too hard in multi boss fights
   - Armor Xemnas I
   - Armor Xemnas II
+  - Twilight Thorn
+  - Xigbar
+  - Roxas # crashes a lot
   tags:
   - large
   type: boss
@@ -1457,6 +1474,8 @@ Creeper:
   obj_id: 317
   sizeTag: memorySmall
   type: enemy
+  tags:
+  - nobody
   variations:
     Creeper:
       vars:
@@ -1542,6 +1561,8 @@ Dancer:
   obj_id: 312
   sizeTag: memoryLarge
   type: enemy
+  tags:
+  - nobody
   variations:
     Dancer:
       vars:
@@ -1565,6 +1586,8 @@ Dark Thorn:
   roommaxsize: 17.03
   blacklist_source:
   - Storm Rider # Gets stuck on edges of map
+  - Vexen # memory in forms
+  - Lexaeus
   adds:
   - ObjectId: 644 # chandelier
     modPositionY: -1500
@@ -1625,7 +1648,8 @@ Final Xemnas (Data):
   - data
   - organization
   - solo
-  enabled: false
+  enabled: true
+  luamod: "final_xemnas"
   variationof: Final Xemnas
   msn_replace_allowed: false # this might break things
   hp: 100
@@ -1646,6 +1670,7 @@ Final Xemnas (Data):
   variations:
     Final Xemnas (Clone) (Data):
       source_replace_allowed: false
+      enabled: false
       vars:
       - 0
       - 0
@@ -1867,6 +1892,7 @@ Dragoon:
   sizeTag: memoryLarge
   tags:
   - large
+  - nobody
   type: enemy
   variations:
     Dragoon:
@@ -1918,6 +1944,8 @@ Dusk:
   obj_id: 318
   sizeTag: memoryLarge
   type: enemy
+  tags:
+  - nobody
   variations:
     Dusk:
       vars:
@@ -2030,11 +2058,12 @@ Fiery Globe Treasure Room:
       - 0
 Final Xemnas:
   aimod: true
-  can_be_enemy: true
+  luamod: "final_xemnas"
+  can_be_enemy: false
   tags:
   - solo
   - organization
-  enabled: false
+  enabled: true
   hp: 100
   isnightmare: true
   level: 99
@@ -2055,13 +2084,13 @@ Final Xemnas:
   type: boss
   variations:
     Final Xemnas:
-      enabled: false
       final_fight: true
       vars:
       - 1
       - 0
-    Final Xemnas (Copy):
+    Final Xemnas (Clone):
       source_replace_allowed: false
+      enabled: false
       vars:
       - 0
       - 0
@@ -2097,6 +2126,8 @@ Gambler:
   obj_id: 314
   sizeTag: memoryLarge
   type: enemy
+  tags:
+  - nobody
   variations:
     Gambler:
       vars:
@@ -2189,12 +2220,18 @@ Grim Reaper II:
   enabled: true
   enmp_index: 0x7C
   hp: 100
+  tags:
+  - needs_rc
   level: 99
   pc:
     blacklist_source:
     - Pete OC II # crashes on fight start
     - Hades II
-    - Past Pete
+    - Blizzard Lord
+    - Volcano Lord
+    - Hades Cups
+    - The Beast
+    - Sephiroth # report of fire pillar crash
   blacklist_destination:
   - Dark Thorn # medals get lost on ground
   - Shadow Stalker # medals get lost on ground
@@ -2238,6 +2275,8 @@ Groundshaker:
   enmp_index: 0x5F
   hp: 100
   level: 99
+  blacklist_source:
+  - Demyx # Weird fall through floor doesn't start
   limiter: 0
   tags:
   - rc_blocked
@@ -2630,7 +2669,7 @@ Hydra:
   - Dark Thorn
   - Shadow Stalker
   - Storm Rider
-  - Terra
+  #- Terra # Crash report on PS2
   enmp_index: 20
   hp: 100
   level: 99
@@ -3115,6 +3154,8 @@ Minute Bomb:
   model: M_EX550
   obj_id: 7
   sizeTag: memorySmall
+  tags: 
+  - ranged # Not really but because it's replaced by Cannon gun
   replace_as: Cannon Gun # FIXME I'm being lazy need a real solution to explosion bug
   type: enemy
   variations:
@@ -3129,6 +3170,8 @@ Minute Bomb:
 Minute Bomb WI:
   enabled: true
   variationof: Minute Bomb
+  tags: 
+  - ranged # Not really but because it's replaced by Cannon gun
   replace_as: Cannon Gun # FIXME I'm being lazy need a real solution to explosion bug
   enmp_index: 57
   hp: 100
@@ -3627,6 +3670,8 @@ Samurai:
   obj_id: 310
   sizeTag: memoryLarge
   type: enemy
+  tags:
+  - nobody
   variations:
     Samurai:
       vars:
@@ -3670,6 +3715,7 @@ Scar:
   - solo # Not really but this mostly only is for data demyx so it works
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
+  - Dark Thorn # Reports of tpose from grab causing softlock
   hp: 100
   level: 99
   limiter: 0
@@ -3891,6 +3937,8 @@ Shadow Stalker:
   limiter: 0
   blacklist_source:
   - Demyx # Battle doesn't start properly
+  - Vexen # memory in forms
+  - Lexaeus # memory in forms
   model: B_BB120
   msn: BB05_MS104A
   obj_id: 355
@@ -4043,6 +4091,7 @@ Sniper:
   tags:
   - ranged
   - large
+  - nobody
   variations:
     Sniper:
       vars:
@@ -4100,6 +4149,7 @@ Sorcerer:
   tags:
   - large
   - ranged
+  - nobody
   type: enemy
   variations:
     Sorcerer:
@@ -4223,14 +4273,15 @@ Terra:
       - 0
 The Beast:
   aimod: false
+  tags: 
+  - needs_rc
   enabled: true
   enmp_index: 0x49
   blacklist_source:
-  - Grim Reaper II
+  - Grim Reaper II # remove once GR2 is phase 3 only
   hp: 100
   level: 99
   limiter: 0
-  msn_replace_allowed: false
   model: P_BB000_BTL
   msn: BB03_MS103
   obj_id: 718
@@ -4551,6 +4602,9 @@ Volcano Lord:
   - Terra # Too hard in multi boss fights
   - Armor Xemnas I
   - Armor Xemnas II
+  - Twilight Thorn
+  - Xigbar
+  - Roxas # crashes a lot
   tags:
   - large
   type: boss
@@ -4608,7 +4662,7 @@ Xaldin:
   model: B_EX130
   msn: BB15_MS203
   obj_id: 997
-  size: 3.63
+  size: 3.83
   program: 82
   room_size: 9.61
   type: boss
@@ -4655,6 +4709,7 @@ Xigbar:
   - Roxas
   - Roxas (Data)
   - Prison Keeper
+  - The Beast
   enabled: true
   tags:
   - organization

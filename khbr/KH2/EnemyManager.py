@@ -49,6 +49,7 @@ class EnemyManager:
                 variation = dict(main["variations"][v])
                 variation["name"] = v
                 self.inheritConfig(main, variation, defaults, ispc=ispc)
+
                 variation["category"] = self.getCategory(variation, ispc=ispc)
 
                 # TODO I'd like to make this better but I don't know how
@@ -58,7 +59,6 @@ class EnemyManager:
                 if parent not in parent_children_mapping:
                     parent_children_mapping[parent] = []
                 parent_children_mapping[parent].append(name)
-                
                 enemies[v] = variation
         
         # This is making sure that children who aren't just variations also get inherited config
@@ -117,6 +117,7 @@ class EnemyManager:
             if ispc and k == "pc":
                 for k_pc in parent["pc"]:
                     value = parent["pc"][k_pc]
+                    
                     if k_pc not in parent:
                         keys_to_add[k_pc] = value
                     # Allow different blacklist/whitelists for pc vs ps2
@@ -126,13 +127,17 @@ class EnemyManager:
                                 parent[k_pc].append(v)
                     else:
                         parent[k_pc] = parent["pc"][k_pc]
+        
+        parent.update(keys_to_add)
+        for k in parent:
             if k == "variations":
                 if k not in variation: # confused, what is this for
                     variation[k] = list(parent[k].keys())
                 continue
             if k not in variation:
                 variation[k] = parent[k]
-        parent.update(keys_to_add)
+        
+        # This must be adding the keys to a temporary version of the object, its not what gets written
         for d in defaults:
             if d not in variation:
                 variation[d] = defaults[d]
@@ -185,6 +190,7 @@ class EnemyManager:
         # TODO On PC cups bosses are exhibiting crashy behavior, so just disable them always for now on PC
         use_cups_bosses = (not ispc) and (nightmare_bosses or options.get("cups_bosses"))
         use_data_bosses = nightmare_bosses or options.get("data_bosses")
+        use_lua_bosses = options.get("lua_bosses")
 
         for k,v in self.enemy_records.items():
             if v["type"] != "boss":
@@ -193,10 +199,12 @@ class EnemyManager:
                 continue
             if nightmare_bosses and not v["isnightmare"]:
                 continue
-            if not use_cups_bosses and "cups" in v["tags"]:
-                    continue
-            if not use_data_bosses and "data" in v["tags"]:
-                    continue
+            if "cups" in v["tags"] and not use_cups_bosses:
+                continue
+            if "data" in v["tags"] and not use_data_bosses:
+                continue
+            if v.get("luamod") and not use_lua_bosses:
+                continue
             bosses[k] = v
 
         # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
@@ -270,7 +278,7 @@ class EnemyManager:
         return '-'.join(categories)
 
 
-    def categorize_enemies(self, included_enemylist, combine_sizes=False, combine_ranged=False, ispc=False):
+    def categorize_enemies(self, included_enemylist, combine_sizes=False, combine_ranged=False, separate_nobodys=True, ispc=False):
         if not self.enemy_records:
             self.set_enemies(ispc)
         categories = {}
@@ -278,6 +286,8 @@ class EnemyManager:
             parent = self.enemy_records[e["parent"]]
             # Might not be respecting childrens tags properly
             category_name = parent["category"]
+            if not separate_nobodys:
+                category_name = self._remove_category(category_name, "nobody")
             if combine_sizes:
                 category_name = self._remove_category(category_name, "large")
             if combine_ranged:

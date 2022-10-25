@@ -14,8 +14,11 @@ class SpawnManager:
             "ax2_99": self.ax2_99,
             "ax2_40": self.ax2_40,
             "ax2_50": self.ax2_50,
-            "stormrider_61": self.stormrider_61
+            "stormrider_61": self.stormrider_61,
+            "groundshaker": self.groundshaker,
+            "ax1_40": self.ax1_40
         }
+
 
     # TODO 
     # I don't think this is needed
@@ -28,6 +31,32 @@ class SpawnManager:
             print("Warning: could not find {} method for editing spawn, leaving unmodified".format(editname))
             return
         self.roommodedits(spawnpoint)
+
+    def groundshaker(self, spawnpoint):
+        groundshaker = spawnpoint[0]["Entities"][3]
+        # Position groundshaker entity right in front of sora and at proper ground height
+        groundshaker["PositionZ"] = 4330
+        groundshaker["PositionY"] = -384
+
+        for boss_add in spawnpoint[0]["Entities"][4:]:
+            boss_add["PositionY"] = groundshaker["PositionY"]
+            boss_add["PositionZ"] = groundshaker["PositionZ"]
+
+    def ax1_40(self, spawnpoint):
+        sora = spawnpoint[0]["Entities"][0]
+        sora["PositionZ"] = -770
+
+        friend1 = spawnpoint[0]["Entities"][1]
+        friend1["PositionZ"] = -800
+
+        friend2 = spawnpoint[0]["Entities"][2]
+        friend2["PositionZ"] = -800
+
+        # Lots of adds possible here, so find the boss
+        for ent in spawnpoint[0]["Entities"]:
+            if ent["PositionZ"] == 650:
+                ent["PositionZ"] = -150
+                ent["PositionY"] =-50
 
     def ax2_99(self, spawnpoint):
         # set the characters Y values and X values properly
@@ -44,6 +73,10 @@ class SpawnManager:
         boss = spawnpoint[0]["Entities"][2]
         boss["PositionY"] = 14940
         boss["PositionZ"] = bossz
+
+        for boss_add in spawnpoint[0]["Entities"][3:]:
+            boss_add["PositionY"] = boss["PositionY"]
+            boss_add["PositionZ"] = boss["PositionZ"]
 
     def ax2_40(self, spawnpoint):
         # remove the buildings
@@ -153,7 +186,7 @@ class SpawnManager:
             return False
         if rand_seed.config.bossmode == "Wild" and "onetooneonly" in old_boss["tags"]:
             return False
-        if rand_seed.bossmapping and old_boss_parent["name"] not in rand_seed.bossmapping:
+        if rand_seed.config.bossmode == "One to One" and rand_seed.bossmapping and old_boss_parent["name"] not in rand_seed.bossmapping:
             return False
         return True
 
@@ -184,11 +217,15 @@ class SpawnManager:
             if "solo" in old_boss_object["tags"]:
                 if new_boss == "Demyx (Data)":
                     return "Demyx" # Actual fix would be to just mod the ai to increase the time for destroying clones
-            
+            if old_boss_object["name"] == "Luxord" and new_boss == "Luxord (Data)":
+                return "Luxord" # There is a strange crash on Luxord Datas DM in original Luxords arena
+            if old_boss_object["name"] in ["Xaldin", "Xaldin (Data)"] and new_boss == "Axel (Data)":
+                return "Axel II" # For some reason his RC never appears so the fight isn't winnable? Might be an issue with party members
+
             return new_boss
     
     @staticmethod
-    def get_new_enemy(rand_seed, old_enemy_object):
+    def get_new_enemy(rand_seed, old_enemy_object, room):
         if rand_seed.config.selected_enemy:
             new_enemy = rand_seed.config.selected_enemy
         elif rand_seed.config.enemymode == "Wild":
@@ -197,7 +234,7 @@ class SpawnManager:
             if old_enemy_object["name"] not in rand_seed.enemymapping:
                 return None # if it's not in mapping it's not enabled
             new_enemy = rand_seed.enemymapping[old_enemy_object["name"]]
-        if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses:
+        if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses and not room.get("bossenemy_ignored"):            
             chance = 0.012
             if random.random() < chance:
                 # TODO this list doesn't need to be generated every time

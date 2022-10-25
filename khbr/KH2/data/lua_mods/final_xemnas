@@ -1,0 +1,48 @@
+function _OnInit()
+local VersionNum = 'GoA Version 1.53.3'
+if (GAME_ID == 0xF266B00B or GAME_ID == 0xFAF99301) and ENGINE_TYPE == "ENGINE" then --PCSX2
+	if ENGINE_VERSION < 3.0 then
+		print('LuaEngine is Outdated. Things might not work properly.')
+	end
+	print(VersionNum)
+	OnPC = false
+	Slot     = {[1]=0x1C6C750} --Unit Slot 1
+    NextSlot = 0x268
+elseif GAME_ID == 0x431219CC and ENGINE_TYPE == 'BACKEND' then --PC
+	if ENGINE_VERSION < 5.0 then
+		ConsolePrint('LuaBackend is Outdated. Things might not work properly.',2)
+	end
+	ConsolePrint(VersionNum,0)
+	OnPC = true
+    Slot      = {[1]=0x2A20C58 - 0x56450E}
+    NextSlot = 0x278
+for i = 1,13 do
+    Slot[i+1] = Slot[i] - NextSlot
+end
+end
+
+function _OnFrame()
+--Xemnas II Laser Dome Skip
+for i = 1,6 do -- xemnas will never be in a slot past 6
+	local enmp = Slot[i+1]
+	--print(enmp)
+	if not OnPC then
+		enmp = ReadInt(enmp+0x264)
+	else
+		local x = ARD & 0xFFFFFF000000
+		local y = ReadInt(enmp+0x270)
+		if y == 0 then
+			enmp = 0
+		else
+			y = y & 0xFFFFFF
+			enmp = x + y
+		end
+	end
+	if enmp > 0 then
+		enmp = ReadShort(enmp,OnPC)
+		if (enmp == 0x5A or enmp == 0xEF) and ReadInt(Slot[i+1]) == 1 then
+			WriteInt(Slot[i+1],0)
+		end
+	end
+end
+end

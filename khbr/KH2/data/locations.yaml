@@ -8785,6 +8785,7 @@ Hollow Bastion:
   Ravine Trail:
     size: 5000000
     ignored: true 
+    bossenemy_ignored: true
     pc:
       ignored: false
     spawnpoints:
@@ -9977,6 +9978,7 @@ Hollow Bastion:
             isboss: true
             name: Sephiroth
   The Great Maw:
+    ignored: true # battle 1K is weird
     size: 5000000
     spawnpoints:
       b_99:
@@ -16940,6 +16942,8 @@ Pride Land:
             isboss: true
             name: Shenzie
   The Savannah:
+    roommodedits:
+      b_60: groundshaker # groundshaker in front of sora
     size: 5000000
     spawnpoints:
       b_60:
@@ -18256,6 +18260,7 @@ The Land of Dragons:
             isboss: false
             name: Sniper
   Checkpoint:
+    bossenemy_ignored: true
     size: 5000000
     spawnpoints:
       b_00:
@@ -21764,6 +21769,8 @@ The World That Never Was:
             isboss: true
             name: Armor Xemnas II
   The World of Nothing 24:
+    roommodedits:
+      b_40: ax1_40 # adjust boss placement
     size: 5000000
     spawnpoints:
       b_40:

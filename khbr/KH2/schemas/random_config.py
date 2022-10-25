@@ -14,6 +14,7 @@ class RandomConfig:
     enemies: dict
     combine_enemy_sizes: bool
     combine_melee_ranged: bool
+    separate_nobodys: bool
     bosses: dict
     bosses_replace_enemies: bool
     boss_as_enemy_overrides: list

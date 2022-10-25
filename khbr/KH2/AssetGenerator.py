@@ -1,6 +1,7 @@
 from khbr.textutils import final_fight_text
 from khbr.KH2.Mission import Mission
 from khbr.KH2.AiManager import AiManager
+from khbr.KH2.LuaManager import LuaManager
 from khbr.utils import print_debug
 from khbr._config import KH2_DIR, HARDCAP, DEBUG_HEALTH
 from khbr.KH2.AreaDataScript import AreaDataScript
@@ -84,12 +85,21 @@ class AssetGenerator:
 
             ai_manager.modify_data(data)
             
-            self.modwriter.writeAi
 
             enemy = self.enemy_manager.enemy_records[ai]
             modelname = enemy["model"]
 
             asset = self.modwriter.writeAi(ai_manager.fn, modelname, data)
+            self.assets.append(asset)
+
+    def generateLuaMods(self, lua_mods):
+        if not lua_mods:
+            return
+        for lua_name in lua_mods:
+            lua = LuaManager(lua_name)
+            lua.create_file()
+
+            asset = self.modwriter.writeLua(lua.fn, lua.data)
             self.assets.append(asset)
 
     def generateMsns(self, msn_map, msninfo):
@@ -139,15 +149,16 @@ class AssetGenerator:
 
                 basespawns = original_spawns[w][r]
                 roommods = self.spawn_manager.apply_room_mods(basespawns, ardname)
-
+                
                 for spn, spawnpoint in room["spawnpoints"].items():
                     existing_spawnpoint = self.spawn_manager.getSpawnpoint(ardname, spn, roommods)
                     for i, spid in spawnpoint["sp_ids"].items():
+                        gr2_self_replace = False
                         for new_entity in spid:
                             old_spid = self.spawn_manager.getSpId(existing_spawnpoint, int(i))
                             # Get to the right spawnpointid sp_instance
                             old_spawn_index = new_entity["index"]
-
+                            
 
                             if new_entity["index"] == "new":
                                 self.spawn_manager.add_new_object(old_spid, new_entity)
@@ -159,6 +170,9 @@ class AssetGenerator:
                                     continue # Case like AX1 room where AX1 was replaced subtracting the spawns that got replaced by the icy cube... Smelly way to fix this
                                 old_spawn = old_spid["Entities"][old_spawn_index]
 
+                                if old_spawn["ObjectId"] == 1543 and new_entity["name"] == "Grim Reaper II" and old_spawn["Argument1"] == 0: # Grim Reaper II is replacing itself
+                                    gr2_self_replace = True
+
                                 final_txt = final_fight_text(old_spawn, new_entity["name"])
                                 if final_txt:
                                     text_spoilers["final_fights"].append(final_txt)
@@ -167,9 +181,14 @@ class AssetGenerator:
 
                         if subtract_map:
                             entities_to_remove = subtract_map.get(w, {}).get(r, {}).get("spawnpoints", {}).get(spn, []) 
+                            if gr2_self_replace:
+                                entities_to_remove = []
                             if entities_to_remove:
                                 self.spawn_manager.subtract_spawns(existing_spawnpoint, entities_to_remove)
                         
+                        if gr2_self_replace:
+                            for entity in existing_spawnpoint[0]["Entities"]:
+                                entity["Medal"] = 0
                     spasset = self.modwriter.writeSpawnpoint(ardname, spn, existing_spawnpoint)
                     roomasset["source"].append(spasset)
                     if spn in roommods:
