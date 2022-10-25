@@ -7,8 +7,8 @@ with open('README.md') as f:
 setup(
 	name = 'khbr',
 	packages = find_packages(),
-	package_data={'': ['KH2/data/**/**']},
-	version = '2.2.22',
+	include_package_data=True,
+	version = '2.2.25',
 	long_description = long_description,
 	long_description_content_type='text/markdown',
 	license = 'MIT',
