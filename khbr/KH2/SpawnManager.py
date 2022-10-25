@@ -217,7 +217,11 @@ class SpawnManager:
             if "solo" in old_boss_object["tags"]:
                 if new_boss == "Demyx (Data)":
                     return "Demyx" # Actual fix would be to just mod the ai to increase the time for destroying clones
-            
+            if old_boss_object["name"] == "Luxord" and new_boss == "Luxord (Data)":
+                return "Luxord" # There is a strange crash on Luxord Datas DM in original Luxords arena
+            if old_boss_object["name"] in ["Xaldin", "Xaldin (Data)"] and new_boss == "Axel (Data)":
+                return "Axel II" # For some reason his RC never appears so the fight isn't winnable? Might be an issue with party members
+
             return new_boss
     
     @staticmethod

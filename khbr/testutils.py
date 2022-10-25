@@ -222,6 +222,9 @@ def validate_consistent_bosses(randomization, pc=False):
     normal_demyx = get_enemies_in(randomization, "Hollow Bastion", "Castle Gate", "b_40")[0]["name"]
     data_demyx = get_enemies_in(randomization, "Hollow Bastion", "Castle Gate", "b_80")[0]["name"]
     assert kh2.enemy_manager.enemy_records[normal_demyx]["parent"] == kh2.enemy_manager.enemy_records[data_demyx]["parent"]
+    normal_luxord = get_enemies_in(randomization, "The World That Never Was", "Havocs Divide", "b_40")[0]["name"]
+    data_luxord = get_enemies_in(randomization, "The World That Never Was", "Havocs Divide", "b_80")[0]["name"]
+    assert kh2.enemy_manager.enemy_records[normal_luxord]["parent"] == kh2.enemy_manager.enemy_records[data_luxord]["parent"]
 
 def validate_bosses_show_up_once(randomization, pc=False):
     assert True

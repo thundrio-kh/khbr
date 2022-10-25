@@ -93,12 +93,16 @@ class EnemySeed:
             # keeping old msn, but this picking the first item in the msn list might not work
             msn_object = {"name": self._get_msn_name(old_boss_object)}
         msn_object["setmickey"] = self._should_place_mickey(old_boss_object, new_boss_object)
+        if old_boss_object["name"] == "Hades Cups":
+            return # fixme MSN should not be replaced in this instance, also more thinking but maybe this should just be a condition on msn_replace_allowed
         if "roxas" in old_boss_object.get("tags"):
             msn_object["setmickey"] = False # Fights as roxas will tpose when summoning mickey
         if old_boss_object["final_fight"]:
             msn_object["setretry"] = True
         elif new_boss_object["final_fight"]:
             msn_object["setretry"] = False
+        if self._get_msn_name(old_boss_object) == "HE18_MS108":
+            print(msn_object, old_boss_object["name"], new_boss_object["name"])
         self.msn_mapping[self._get_msn_name(old_boss_object)] = msn_object
 
     @staticmethod

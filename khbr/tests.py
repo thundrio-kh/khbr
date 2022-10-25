@@ -301,4 +301,4 @@ ut = Tests()
 ut.test_seedgen_no_mickey_for_roxas()
 
 # Uncomment to run the actual tests
-#unittest.main()
+unittest.main()

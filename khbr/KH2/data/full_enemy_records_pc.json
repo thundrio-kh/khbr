@@ -6097,7 +6097,8 @@
         "name": "Armor Xemnas II",
         "enabled": true,
         "blacklist_source": [
-            "Axel I"
+            "Axel I",
+            "Saix"
         ],
         "enmp_index": 160,
         "tags": [
@@ -6159,7 +6160,6 @@
             "Pete OC II",
             "Prison Keeper",
             "Riku",
-            "Saix",
             "Sark",
             "Scar",
             "Shan-Yu",
@@ -8430,7 +8430,9 @@
         "room_size": 14.0,
         "roommaxsize": 17.03,
         "blacklist_source": [
-            "Storm Rider"
+            "Storm Rider",
+            "Vexen",
+            "Lexaeus"
         ],
         "adds": [
             {
@@ -8486,7 +8488,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Lexaeus",
             "Luxord",
             "Marluxia",
             "Past Pete",
@@ -8504,7 +8505,6 @@
             "The Beast",
             "Thresholder",
             "Twilight Thorn",
-            "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
@@ -10961,12 +10961,14 @@
         "aimod": true,
         "enmp_index": 124,
         "hp": 100,
+        "tags": [
+            "needs_rc"
+        ],
         "level": 99,
         "pc": {
             "blacklist_source": [
                 "Pete OC II",
                 "Hades II",
-                "Past Pete",
                 "Blizzard Lord",
                 "Volcano Lord",
                 "Hades Cups",
@@ -11004,7 +11006,6 @@
         "blacklist_source": [
             "Pete OC II",
             "Hades II",
-            "Past Pete",
             "Blizzard Lord",
             "Volcano Lord",
             "Hades Cups",
@@ -11014,8 +11015,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "needs_rc",
         "parent": "Grim Reaper II",
         "variationof": null,
         "children": [
@@ -11054,6 +11054,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Past Pete",
             "Pete Cups",
             "Prison Keeper",
             "Riku",
@@ -11083,14 +11084,14 @@
         "enmp_index": 95,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Shan-Yu"
+        ],
         "limiter": 0,
         "tags": [
             "rc_blocked",
             "teleport_blocked",
             "solo"
-        ],
-        "blacklist_source": [
-            "Shan-Yu"
         ],
         "model": "B_LK120",
         "msn": "LK15_MS202",
@@ -11414,7 +11415,6 @@
             "Demyx",
             "Final Xemnas",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
             "Hercules",
             "Hostile Program",
@@ -13386,8 +13386,7 @@
             "Final Xemnas",
             "Dark Thorn",
             "Shadow Stalker",
-            "Storm Rider",
-            "Terra"
+            "Storm Rider"
         ],
         "enmp_index": 20,
         "hp": 100,
@@ -18607,7 +18606,8 @@
             "solo"
         ],
         "blacklist_source": [
-            "Shan-Yu"
+            "Shan-Yu",
+            "Dark Thorn"
         ],
         "hp": 100,
         "level": 99,
@@ -18656,7 +18656,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Dark Thorn",
             "Demyx",
             "Final Xemnas",
             "Grim Reaper I",
@@ -19535,7 +19534,9 @@
         "level": 99,
         "limiter": 0,
         "blacklist_source": [
-            "Demyx"
+            "Demyx",
+            "Vexen",
+            "Lexaeus"
         ],
         "model": "B_BB120",
         "msn": "BB05_MS104A",
@@ -19601,7 +19602,6 @@
             "Hercules",
             "Hostile Program",
             "Larxene",
-            "Lexaeus",
             "Luxord",
             "Marluxia",
             "Past Pete",
@@ -19619,7 +19619,6 @@
             "Terra",
             "The Beast",
             "Twilight Thorn",
-            "Vexen",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",

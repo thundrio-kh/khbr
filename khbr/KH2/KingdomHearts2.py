@@ -205,7 +205,10 @@ class KingdomHearts2:
                                     if new_boss == old_boss_object["name"]:
                                         # still need to update msn mapping for mickey rules
                                         rand_seed.update_msn_mapping(old_boss_object, old_boss_object)
-                                        continue
+
+                                        # When GR II replaces itself need to remove the medals that start on the ground
+                                        if not old_boss_object["name"] == "Grim Reaper II":
+                                            continue
 
                                     new_boss_object = self.enemy_manager.get_new_boss_object(old_boss_object, new_boss, rand_seed)
 

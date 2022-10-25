@@ -960,6 +960,7 @@ Armor Xemnas II:
   enabled: true
   blacklist_source:
   - Axel I
+  - Saix # Report of crash
   enmp_index: 0xA0
   tags:
   - teleport_blocked
@@ -1585,6 +1586,8 @@ Dark Thorn:
   roommaxsize: 17.03
   blacklist_source:
   - Storm Rider # Gets stuck on edges of map
+  - Vexen # memory in forms
+  - Lexaeus
   adds:
   - ObjectId: 644 # chandelier
     modPositionY: -1500
@@ -2215,12 +2218,13 @@ Grim Reaper II:
   enabled: true
   enmp_index: 0x7C
   hp: 100
+  tags:
+  - needs_rc
   level: 99
   pc:
     blacklist_source:
     - Pete OC II # crashes on fight start
     - Hades II
-    - Past Pete
     - Blizzard Lord
     - Volcano Lord
     - Hades Cups
@@ -2269,6 +2273,8 @@ Groundshaker:
   enmp_index: 0x5F
   hp: 100
   level: 99
+  blacklist_source:
+  - Demyx # Weird fall through floor doesn't start
   limiter: 0
   tags:
   - rc_blocked
@@ -2661,7 +2667,7 @@ Hydra:
   - Dark Thorn
   - Shadow Stalker
   - Storm Rider
-  - Terra
+  #- Terra # Crash report on PS2
   enmp_index: 20
   hp: 100
   level: 99
@@ -3707,6 +3713,7 @@ Scar:
   - solo # Not really but this mostly only is for data demyx so it works
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
+  - Dark Thorn # Reports of tpose from grab causing softlock
   hp: 100
   level: 99
   limiter: 0
@@ -3928,6 +3935,8 @@ Shadow Stalker:
   limiter: 0
   blacklist_source:
   - Demyx # Battle doesn't start properly
+  - Vexen # memory in forms
+  - Lexaeus # memory in forms
   model: B_BB120
   msn: BB05_MS104A
   obj_id: 355
