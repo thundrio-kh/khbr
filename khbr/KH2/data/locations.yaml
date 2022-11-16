@@ -18471,6 +18471,7 @@ The Land of Dragons:
             isboss: false
             name: Rapid Thruster
   Encampment:
+    bossenemy_ignored: true
     size: 5000000
     spawnpoints:
       b_00:
@@ -21732,7 +21733,7 @@ The World That Never Was:
           '47':
           - index: 2
             isboss: true
-            name: Final Xemnas (Copy)
+            name: Final Xemnas (Clone)
           - index: 3
             isboss: true
             name: Final Xemnas
@@ -23417,8 +23418,6 @@ Twilight Town:
     size: 5000000
     spawnpoints:
       b_40:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '78':
@@ -23426,8 +23425,6 @@ Twilight Town:
             isboss: true
             name: Hayner
       b_41:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '100':
@@ -23455,8 +23452,6 @@ Twilight Town:
             isboss: true
             name: Axel I
       b_44:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '166':
@@ -23493,8 +23488,6 @@ Twilight Town:
             isboss: false
             name: Dusk
       b_41:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '71':
@@ -23502,8 +23495,6 @@ Twilight Town:
             isboss: true
             name: Seifer (1)
       b_42:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '93':
@@ -23556,8 +23547,6 @@ Twilight Town:
             isboss: false
             name: Berserker
       b_45:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '2215':
@@ -23565,8 +23554,6 @@ Twilight Town:
             isboss: true
             name: Seifer (3)
       b_50:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '2343':
@@ -23574,8 +23561,6 @@ Twilight Town:
             isboss: true
             name: Hayner
       b_51:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '2375':
@@ -23583,8 +23568,6 @@ Twilight Town:
             isboss: true
             name: Seifer (4)
       b_52:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '2407':

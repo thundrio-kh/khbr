@@ -1430,8 +1430,9 @@ Cloud:
   level: 99
   limiter: 0
   model: N_HB550_BTL2
-  pc:
-    enabled: false # PC will cause crash on end of fight
+  pc: 
+    tags: 
+    - disablecamera
   tags:
   - cups
   msn_replace_allowed: false
@@ -2059,6 +2060,13 @@ Fiery Globe Treasure Room:
 Final Xemnas:
   aimod: true
   luamod: "final_xemnas"
+  blacklist_destination:
+  - Volcano Lord
+  - Blizzard Lord
+  - Leon
+  - Yuffie
+  - Tifa
+  - Cloud
   can_be_enemy: false
   tags:
   - solo
@@ -2223,15 +2231,6 @@ Grim Reaper II:
   tags:
   - needs_rc
   level: 99
-  pc:
-    blacklist_source:
-    - Pete OC II # crashes on fight start
-    - Hades II
-    - Blizzard Lord
-    - Volcano Lord
-    - Hades Cups
-    - The Beast
-    - Sephiroth # report of fire pillar crash
   blacklist_destination:
   - Dark Thorn # medals get lost on ground
   - Shadow Stalker # medals get lost on ground
@@ -2257,7 +2256,6 @@ Grim Reaper II:
   variations:
     Grim Reaper II:
       enabled: true
-      isnightmare: false # just hack because he breaks when ai mod + vanilla spot
       msn: CA01_MS204
       program: 54
       size: 2.58
@@ -2620,7 +2618,6 @@ Hook Bat AL:
 Hostile Program:
   enabled: true
   blacklist_source:
-  - Axel II # Report of Fire pillar killing during intro cutscene
   - Axel I
   enmp_index: 0x6A
   hp: 100
@@ -2835,7 +2832,7 @@ Larxene:
   tags:
   - organization
   - needs_teleport
-  can_be_enemy: true
+  can_be_enemy: false #expensive
   enabled: true
   enmp_index: 0xD8
   hp: 100
@@ -2874,8 +2871,9 @@ Leon:
   hp: 100
   level: 99
   limiter: 0
-  pc:
-    enabled: false # PC will cause crash on end of fight
+  pc: 
+    tags: 
+    - disablecamera
   model: N_HB530_BTL2
   msn_replace_allowed: false
   obj_id: 2296
@@ -3370,8 +3368,10 @@ Pete OC II:
       - 0
       - 0
 Pete TR:
-  enabled: false
-  source_replace_allowed: false # TODO supposedly demyx super crashes here and most bosses cause crashes here
+  enabled: true
+  pc: 
+    source_replace_allowed: true # TODO supposedly demyx super crashes here on ps2 and most bosses cause crashes here
+  source_replace_allowed: false
   replace_as: Pete Cups
   hp: 100
   level: 99
@@ -3584,7 +3584,7 @@ Roxas:
   - organization
   - solo
   - needs_teleport
-  can_be_enemy: true
+  can_be_enemy: false #expensive
   enabled: true
   enmp_index: 0xD5
   hp: 100
@@ -3734,8 +3734,6 @@ Scar:
 Seifer:
   obj_edits:
     ObjectType: BOSS
-  pc:
-    enabled: false # Uses an objentry edit to be treated as an enemy
   enabled: true
   enmp_index: 0x87
   tags:
@@ -3851,8 +3849,6 @@ Sephiroth:
       - 0
 Setzer:
   aimod: true
-  pc: 
-    enabled: false
   enabled: true
   enmp_index: 0x9E
   tags:
@@ -3937,8 +3933,6 @@ Shadow Stalker:
   limiter: 0
   blacklist_source:
   - Demyx # Battle doesn't start properly
-  - Vexen # memory in forms
-  - Lexaeus # memory in forms
   model: B_BB120
   msn: BB05_MS104A
   obj_id: 355
@@ -4248,7 +4242,7 @@ Surveillance Robot:
       - 0
       - 0
 Terra:
-  can_be_enemy: true
+  can_be_enemy: false #expensive
   tags:
   - data
   enabled: true
@@ -4367,9 +4361,11 @@ Tifa:
   limiter: 0
   model: N_HB570_BTL2
   msn_replace_allowed: false
+  msn_source_as: "WI03_MS104"
   obj_id: 2298
   pc: 
-    enabled: false # pc crashes when killing cups bosses
+    tags: 
+    - disablecamera
   tags:
   - cups
   size: 1.32
@@ -4535,8 +4531,6 @@ Vexen:
       - 0
 Vivi:
   aimod: true
-  pc:
-    enabled: false
   enabled: true
   enmp_index: 0x9D
   tags:
@@ -4742,8 +4736,9 @@ Yuffie:
   model: N_HB580_BTL2
   msn_replace_allowed: false
   obj_id: 2299
-  pc:
-    enabled: false # PC will cause crash on end of fight
+  pc: 
+    tags: 
+    - disablecamera
   tags:
   - cups
   size: 0.95

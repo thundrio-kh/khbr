@@ -3125,6 +3125,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -6147,6 +6148,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Sark",
@@ -6477,6 +6479,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -6585,6 +6588,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -7531,6 +7535,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Sark",
@@ -7646,7 +7651,9 @@
         "limiter": 0,
         "model": "N_HB550_BTL2",
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "tags": [
             "cups"
@@ -7708,6 +7715,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -7748,7 +7756,9 @@
         "limiter": 0,
         "model": "N_HB550_BTL2",
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "tags": [
             "cups"
@@ -7807,7 +7817,9 @@
         "limiter": 0,
         "model": "N_HB550_BTL2",
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "tags": [
             "cups"
@@ -8755,7 +8767,14 @@
         "roommaxsize": null,
         "enmp_index": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
+        "blacklist_destination": [
+            "Volcano Lord",
+            "Blizzard Lord",
+            "Leon",
+            "Yuffie",
+            "Tifa",
+            "Cloud"
+        ],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [
@@ -9140,6 +9159,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Sark",
@@ -10219,6 +10239,14 @@
         "name": "Final Xemnas",
         "aimod": true,
         "luamod": "final_xemnas",
+        "blacklist_destination": [
+            "Volcano Lord",
+            "Blizzard Lord",
+            "Leon",
+            "Yuffie",
+            "Tifa",
+            "Cloud"
+        ],
         "can_be_enemy": false,
         "tags": [
             "solo",
@@ -10270,7 +10298,6 @@
         "roommaxsize": null,
         "enmp_index": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "msn_list": [],
@@ -10300,6 +10327,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -10334,6 +10362,14 @@
         "name": "Final Xemnas (Clone)",
         "aimod": true,
         "luamod": "final_xemnas",
+        "blacklist_destination": [
+            "Volcano Lord",
+            "Blizzard Lord",
+            "Leon",
+            "Yuffie",
+            "Tifa",
+            "Cloud"
+        ],
         "can_be_enemy": false,
         "tags": [
             "solo",
@@ -10381,7 +10417,6 @@
         "roommaxsize": null,
         "enmp_index": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "msn_list": [],
@@ -10917,7 +10952,6 @@
     },
     "Grim Reaper II": {
         "enabled": true,
-        "isnightmare": false,
         "msn": "CA01_MS204",
         "program": 54,
         "size": 2.58,
@@ -10944,17 +10978,6 @@
             "needs_rc"
         ],
         "level": 99,
-        "pc": {
-            "blacklist_source": [
-                "Pete OC II",
-                "Hades II",
-                "Blizzard Lord",
-                "Volcano Lord",
-                "Hades Cups",
-                "The Beast",
-                "Sephiroth"
-            ]
-        },
         "blacklist_destination": [
             "Dark Thorn",
             "Shadow Stalker"
@@ -10986,6 +11009,7 @@
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "category": "needs_rc",
+        "isnightmare": false,
         "parent": "Grim Reaper II",
         "variationof": null,
         "children": [
@@ -11117,6 +11141,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Sark",
@@ -11390,6 +11415,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Riku",
             "Sark",
             "Scar",
@@ -11621,6 +11647,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -11716,6 +11743,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -13205,7 +13233,6 @@
         "name": "Hostile Program",
         "enabled": true,
         "blacklist_source": [
-            "Axel II",
             "Axel I"
         ],
         "enmp_index": 106,
@@ -13260,6 +13287,7 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
+            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -13280,6 +13308,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -13897,7 +13926,7 @@
             "organization",
             "needs_teleport"
         ],
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "enabled": true,
         "enmp_index": 216,
         "hp": 100,
@@ -14000,7 +14029,7 @@
             1
         ],
         "name": "Larxene (Data)",
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "enmp_index": 216,
         "hp": 100,
         "level": 99,
@@ -14062,7 +14091,9 @@
         "level": 99,
         "limiter": 0,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
@@ -14126,6 +14157,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -14165,7 +14197,9 @@
         "level": 99,
         "limiter": 0,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
@@ -14225,7 +14259,9 @@
         "level": 99,
         "limiter": 0,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
@@ -14285,7 +14321,9 @@
         "level": 99,
         "limiter": 0,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "model": "N_HB530_BTL2",
         "msn_replace_allowed": false,
@@ -14918,6 +14956,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -15852,6 +15891,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Riku",
             "Sark",
             "Scar",
@@ -15944,6 +15984,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -16105,7 +16146,10 @@
             0
         ],
         "name": "Pete TR",
-        "enabled": false,
+        "enabled": true,
+        "pc": {
+            "source_replace_allowed": true
+        },
         "source_replace_allowed": false,
         "replace_as": "Pete Cups",
         "hp": 100,
@@ -16250,6 +16294,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -18054,7 +18099,7 @@
             "solo",
             "needs_teleport"
         ],
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "enabled": true,
         "enmp_index": 213,
         "hp": 100,
@@ -18125,6 +18170,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -18164,7 +18210,7 @@
             1
         ],
         "name": "Roxas (Data)",
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "enmp_index": 213,
         "hp": 100,
         "level": 99,
@@ -18340,6 +18386,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -18546,6 +18593,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -18646,6 +18694,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -18677,9 +18726,6 @@
         "name": "Seifer",
         "obj_edits": {
             "ObjectType": "BOSS"
-        },
-        "pc": {
-            "enabled": false
         },
         "enabled": true,
         "enmp_index": 135,
@@ -18767,6 +18813,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -18789,9 +18836,6 @@
         "name": "Seifer (1)",
         "obj_edits": {
             "ObjectType": "BOSS"
-        },
-        "pc": {
-            "enabled": false
         },
         "enabled": true,
         "enmp_index": 135,
@@ -18879,9 +18923,6 @@
         "obj_edits": {
             "ObjectType": "BOSS"
         },
-        "pc": {
-            "enabled": false
-        },
         "enabled": true,
         "enmp_index": 135,
         "tags": [
@@ -18964,9 +19005,6 @@
         "name": "Seifer (3)",
         "obj_edits": {
             "ObjectType": "BOSS"
-        },
-        "pc": {
-            "enabled": false
         },
         "enabled": true,
         "enmp_index": 135,
@@ -19052,9 +19090,6 @@
         "name": "Seifer (4)",
         "obj_edits": {
             "ObjectType": "BOSS"
-        },
-        "pc": {
-            "enabled": false
         },
         "enabled": true,
         "enmp_index": 135,
@@ -19218,6 +19253,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -19263,9 +19299,6 @@
         ],
         "name": "Setzer",
         "aimod": true,
-        "pc": {
-            "enabled": false
-        },
         "enabled": true,
         "enmp_index": 158,
         "tags": [
@@ -19353,6 +19386,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -19539,9 +19573,7 @@
         "level": 99,
         "limiter": 0,
         "blacklist_source": [
-            "Demyx",
-            "Vexen",
-            "Lexaeus"
+            "Demyx"
         ],
         "model": "B_BB120",
         "msn": "BB05_MS104A",
@@ -20529,6 +20561,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -20720,7 +20753,7 @@
             0
         ],
         "name": "Terra",
-        "can_be_enemy": true,
+        "can_be_enemy": false,
         "tags": [
             "data"
         ],
@@ -20796,6 +20829,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -21117,9 +21151,12 @@
         "limiter": 0,
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
+        "msn_source_as": "WI03_MS104",
         "obj_id": 2298,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "tags": [
             "cups"
@@ -21141,7 +21178,6 @@
             "Tifa"
         ],
         "msn_required": false,
-        "msn_source_as": null,
         "aimod": null,
         "mickey_source": false,
         "final_fight": false,
@@ -21179,6 +21215,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -21219,9 +21256,12 @@
         "limiter": 0,
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
+        "msn_source_as": "WI03_MS104",
         "obj_id": 2298,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "tags": [
             "cups"
@@ -21241,7 +21281,6 @@
         "variationof": null,
         "children": [],
         "msn_required": false,
-        "msn_source_as": null,
         "aimod": null,
         "mickey_source": false,
         "final_fight": false,
@@ -21278,9 +21317,12 @@
         "limiter": 0,
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
+        "msn_source_as": "WI03_MS104",
         "obj_id": 2298,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "tags": [
             "cups"
@@ -21300,7 +21342,6 @@
         "variationof": null,
         "children": [],
         "msn_required": false,
-        "msn_source_as": null,
         "aimod": null,
         "mickey_source": false,
         "final_fight": false,
@@ -21575,6 +21616,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -21741,9 +21783,6 @@
         ],
         "name": "Vivi",
         "aimod": true,
-        "pc": {
-            "enabled": false
-        },
         "enabled": true,
         "enmp_index": 157,
         "tags": [
@@ -22125,6 +22164,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -22226,6 +22266,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -22335,6 +22376,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Sark",
@@ -22375,7 +22417,9 @@
         "msn_replace_allowed": false,
         "obj_id": 2299,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "tags": [
             "cups"
@@ -22435,6 +22479,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -22479,7 +22524,9 @@
         "msn_replace_allowed": false,
         "obj_id": 2299,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "tags": [
             "cups"
@@ -22538,7 +22585,9 @@
         "msn_replace_allowed": false,
         "obj_id": 2299,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "tags": [
             "cups"
@@ -22598,7 +22647,9 @@
         "msn_replace_allowed": false,
         "obj_id": 2299,
         "pc": {
-            "enabled": false
+            "tags": [
+                "disablecamera"
+            ]
         },
         "tags": [
             "cups"
@@ -22722,6 +22773,7 @@
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
+            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",

@@ -97,6 +97,8 @@ class EnemySeed:
             return # fixme MSN should not be replaced in this instance, also more thinking but maybe this should just be a condition on msn_replace_allowed
         if "roxas" in old_boss_object.get("tags"):
             msn_object["setmickey"] = False # Fights as roxas will tpose when summoning mickey
+        if "disablecamera" in new_boss_object.get("tags"):
+            msn_object["disablecamera"] = True
         if old_boss_object["final_fight"]:
             msn_object["setretry"] = True
         elif new_boss_object["final_fight"]:

@@ -115,6 +115,8 @@ class AssetGenerator:
             bonus_byte = new_msn_mapping.get("setbonus", msninfo[oldmsn]["bonus"])
             mission.set_bonus_byte(bonus_byte)
 
+            if "disablecamera" in new_msn_mapping:
+                mission.set_camera_complete_byte()
 
             if "setmickey" in new_msn_mapping:
                 mission.set_mickey_bit(new_msn_mapping["setmickey"])
@@ -232,5 +234,6 @@ class AssetGenerator:
                 script.update_program(p, HARDCAP)
             if self.ispc:
                 script.add_packet_spec(p)
+                script.add_enemy_spec(p)
             programasset = self.modwriter.writeAreaDataProgram(ardname, "btl", p, script.get_program(p))
             roomsource.append(programasset)
