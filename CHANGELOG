@@ -2,7 +2,8 @@
 * Fix crash that was preventing FF bosses from being randomized on PC (the mission complete camera will look different from normal)
 * Updated allowed replacements for reducing known softlocks/crashes
 * Prevent bosses from spawning in Encampment, when bosses as enemies mode is enabled
-* Added an AllocEnemy line to events on PC, which should help prevent crashes due to going out of memory on PC (IE limit form against Lexaeus was a common one)
+* Added an AllocEnemy line to event scripts on PC, which should help prevent crashes due to going out of memory on PC (IE limit form against Lexaeus was a common one)
+* Refactoring of some internals to allow for additional features
 
 2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)

@@ -1,0 +1,82 @@
+
+class AreaDataProgram:
+    def __init__(self, lines, ispc=False):
+        self.lines = lines
+        self.ispc = ispc
+        self.map = self.map_program()
+    def make_program(self):
+        return '\n'.join(self.lines)
+    def map_program(self):
+        smap = {}
+        for l in range(len(self.lines)):
+            line = self.lines[l]
+            word = line.strip().split(" ")[0] 
+            if not word in smap:
+                smap[word] = [l]
+            else:
+                smap[word].append(l) # I THINK this only happens with If statements and really only the colloseum so don't really have to worry about this case
+        return smap
+    def has_command(self, command):
+        return command in self.map
+    def get_command(self, command):
+        if self.has_command(command):
+            return self.lines[self.map[command][0]].replace(command, "").strip()
+        return ""
+    def add_command(self, command, parameters):
+        '''command is a word, parameters is a string'''
+        '''adds not SetX comma'''
+        newline = "{} {}".format(command, parameters)
+        if command.startswith("Set"):
+            newline = "\t"+newline
+        if self.has_command(command):
+            if len(self.map[command]) > 1:
+                raise Exception ("Updating AreaDataPrograms with 2 or more of a command is not implemented")
+            self.lines[self.map[command][0]] = newline
+        else:
+            if not command.startswith("Set"):
+                # There might be something here where you need to find the first empty line and add before that
+                self.lines.insert(1,newline)
+            else:
+                # Find the last "Set" line
+                f = 0
+                for l in range(len(self.lines)):
+                    line = self.lines[l]
+                    if line.strip().startswith("Set"):
+                        print(line)
+                        f = l
+                self.lines.insert(f+1, newline)
+        self.map = self.map_program()
+    def remove_command(self, command):
+        if not self.has_command(command):
+            return
+        lines_to_pop = self.map[command]
+        for l in lines_to_pop[::-1]:
+            self.lines.pop(l)
+        self.map = self.map_program()
+
+    def add_packet_spec(self, packet_size=0x100000/2):
+        self.add_command("AllocPacket", str(int(packet_size)))
+    def add_enemy_spec(self, enemy_size=0x200000):
+        self.add_command("AllocEnemy", str(int(enemy_size)))
+    def get_mission(self):
+        return self.get_command("Mission").split(" ")[-1].replace('"','')
+    def update_capacity(self, capacity=None):
+        if self.ispc:
+            self.remove_command("Capacity")
+        elif capacity:
+            self.add_command("Capacity", str(capacity))
+    def set_jump(self, world, room, program, fadetype="16386", jumptype="2", entrance="0"):
+        parameters = "Type {} World {} Area {} Entrance {} LocalSet {} FadeType {}".format(jumptype, world, room, entrance, program, fadetype)
+        self.add_command("SetJump", parameters)
+    def set_open_menu(self, open_menu):
+        self.add_command("SetPartyMenu", "1" if open_menu else "0")
+    def remove_event(self):
+        self.remove_command("SetEvent")
+    def set_flags(self, flags=None):
+        if not flags:
+            flags = []
+        existingflags = self.get_command("SetProgressFlag")
+        if existingflags:
+            flags += existingflags.split(" ")
+        parameters = " ".join([f for f in flags])
+        self.add_command("SetProgressFlag", parameters)
