@@ -13,7 +13,7 @@ class AreaDataScript:
         for line in script.split("\n"):
             if line.startswith("Program"):
                 if currentProgram:
-                    programs[currentProgram] = lines_program
+                    programs[currentProgram] = AreaDataProgram(lines_program, ispc=self.ispc)
                 currentProgram = int(line.split(" ")[1], 16)
                 lines_program = [line]
             else:

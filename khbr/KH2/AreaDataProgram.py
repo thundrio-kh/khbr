@@ -53,7 +53,6 @@ class AreaDataProgram:
         for l in lines_to_pop[::-1]:
             self.lines.pop(l)
         self.map = self.map_program()
-
     def add_packet_spec(self, packet_size=0x100000/2):
         self.add_command("AllocPacket", str(int(packet_size)))
     def add_enemy_spec(self, enemy_size=0x200000):
@@ -69,7 +68,11 @@ class AreaDataProgram:
         parameters = "Type {} World {} Area {} Entrance {} LocalSet {} FadeType {}".format(jumptype, world, room, entrance, program, fadetype)
         self.add_command("SetJump", parameters)
     def set_open_menu(self, open_menu):
-        self.add_command("SetPartyMenu", "1" if open_menu else "0")
+        if open_menu:
+            self.add_command("SetPartyMenu", "1")
+            self.add_command("SetMember", "3")
+        else:
+            self.add_command("SetPartyMenu", "0")
     def remove_event(self):
         self.remove_command("SetEvent")
     def set_flags(self, flags=None):
