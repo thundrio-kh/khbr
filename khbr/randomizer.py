@@ -223,7 +223,7 @@ if __name__ == '__main__':
     # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"enemy\": \"Wild\", \"combine_enemy_sizes\": true}" randomization_only
     # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"data_bosses\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
-    # run randomizer.py devgenerate "{\"selected_boss\": \"Luxord\"}" randomization_only
+    # run randomizer.py devgenerate "{\"selected_boss\": \"Past Pete\"}" randomization_only
     # run randomizer.py devgenerate "{\"selected_enemy\": \"Dancer\"}"
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\", \"combine_enemy_sizes\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"mickey_rule\": \"all\"}" randomization_only
@@ -266,8 +266,8 @@ if __name__ == '__main__':
         print(options)
         b64 = rando.read_seed("kh2", seedfn=options["seed"], outfn=fn)
     else:
-        while True:
-            b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=randomization_only)
-            if b64["spawns"]["Olympus Coliseum"]["Coliseum Gates"]['spawnpoints']['b_40']['sp_ids']['41'][0]["name"] == "Luxord":
-                0/0
+        # while True:
+        b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=randomization_only)
+            # if b64["spawns"]["Olympus Coliseum"]["Coliseum Gates"]['spawnpoints']['b_40']['sp_ids']['41'][0]["name"] == "Luxord":
+            #     0/0
     print("Total thing took {}s".format(time.time()-t))

@@ -41,6 +41,28 @@ class ModWriter:
                 }
             ]
         }
+    
+    def writePlrp(self, plrp):
+        outfn = os.path.join(self.outdir, "files", "root", "plrp.list")
+        fn = os.path.join("files", "root", "plrp.list")
+        self.write_method(outfn, fn, yaml.dump(plrp))
+        return {
+            "name": "00battle.bin",
+            "method": "binarc",
+            "source": [
+                {
+                    "name": "plrp",
+                    "method": "listpatch",
+                    "source": [
+                        {
+                            "name": fn,
+                            "type": "plrp"
+                        }
+                    ],
+                    "type": "List"
+                }
+            ]
+        }
 
     def writeEnmp(self, enmp):
         outfn = os.path.join(self.outdir, "files", "root", "enmp.list")
@@ -103,17 +125,17 @@ class ModWriter:
             "type": "AreaDataScript"
         }
 
-    def writeAi(self, aifn, modelname, data):
-        relfn = os.path.join("files", "ai", aifn)
+    def writeAi(self, aifn, modelname, type, data):
+        relfn = os.path.join("files", "ai", modelname+"_"+aifn)
         outfn = os.path.join(self.outdir, relfn)
         
         self.write_method(outfn, relfn, data)
         return {
             "method": "binarc",
-            "name": "obj/{}.mdlx".format(modelname),
+            "name": "obj/{}.mdlx".format(modelname) if type == "obj" else "msn/us/{}.bar".format(modelname),
             "source": [
                 {
-                    "method": "copy",
+                    "method": "bdscript",
                     "name": os.path.basename(aifn).split(".")[0],
                     "source": [{"name": relfn}],
                     "type": "Bdx"
@@ -136,10 +158,12 @@ class ModWriter:
         relfn = os.path.join("files", "msns", msnname + ".bar")
         outfn = os.path.join(self.outdir, relfn)
         self.write_method(outfn, relfn, data)
+        formattedname = "msn/jp/{}.bar".format(msnname)
         # create the asset
         asset = {
             "method": "copy",
-            "name": "msn/jp/{}.bar".format(msnname),
+            "name": formattedname,
+            "multi": [{"name": formattedname.replace("jp", r)} for r in ["us","fr","gr","it","sp","uk"]],
             "source": [{"name": relfn}]
         }
         return asset

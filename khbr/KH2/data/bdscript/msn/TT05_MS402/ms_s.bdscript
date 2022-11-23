@@ -1,5 +1,5 @@
 ---
-WorkSize: 32
+WorkSize: 16
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -115,16 +115,6 @@ L191:
  ret 
 TR3:
  syscall 1, 317 ; trap_status_no_gameover (0 in, 0 out)
-
- halt 
- pushFromPWp W16
- pushImm {obj_id}
- syscall 1, 114 ; trap_obj_search_by_entry (2 in, 0 out)
- pushFromPWp W16
- syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
- pushImm 1
- pushImm 0
- syscall 1, 231 ; trap_sheet_set_min_hp (3 in, 0 out)
  pushFromPWp W0
  gosub 4, L199
  ret 
@@ -245,6 +235,4 @@ TXT411:
 
  section .bss
 W0:
- resb 16
-W16:
  resb 16

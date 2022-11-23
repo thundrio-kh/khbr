@@ -907,7 +907,6 @@ L623:
  syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
  pushImm 1
  pushImm 0
- syscall 1, 231 ; trap_sheet_set_min_hp (3 in, 0 out)
  pushFromFSp 0
  pushImm 1106247680
  syscall 2, 76 ; trap_enemy_set_karma_limit (2 in, 0 out)
@@ -925,6 +924,7 @@ L623:
  pushImm 0
  popToSpVal 124
  ret 
+ syscall 1, 231 ; trap_sheet_set_min_hp (3 in, 0 out) DISABLED
 L2097:
  popToSp 4
  popToSp 0

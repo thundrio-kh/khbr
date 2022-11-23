@@ -926,7 +926,9 @@ Air Pirate:
       - 1
       - 0
 Armor Xemnas I:
-  aimod: true
+  aimods: 
+  - filename: B_EX260/b_ex.bdscript
+    type: obj
   enabled: true
   enmp_index: 0xA0
   hp: 100
@@ -1170,7 +1172,9 @@ Banzai:
       - 2
       - 0
 Barbossa:
-  aimod: true
+  aimods: 
+  - name: B_CA010/b_ca.bdscript
+    type: obj
   pc:
     blacklist_destination:
     - Luxord # report of crash after cutscene
@@ -1185,7 +1189,7 @@ Barbossa:
   adds:
   - ObjectId: 358 #Illuminator
     name: Illuminator
-    aimod: false
+    #aimods: false # obj/B_CA000/b_ca.bdscript
   tags:
   - needs_teleport
   enabled: true
@@ -1754,7 +1758,9 @@ Xemnas (Data):
   tags:
   - data
   - organization
-  aimod: true
+  aimods: 
+  - name: B_EX160_LAST_99/b_ex.bdscript
+    type: obj
   can_be_enemy: false
   enabled: true
   variationof: Xemnas
@@ -2058,7 +2064,9 @@ Fiery Globe Treasure Room:
       - 0
       - 0
 Final Xemnas:
-  aimod: true
+  aimods: 
+  - name: B_EX170/LAST_LV99/b_ex.bdscript
+    type: obj
   luamod: "final_xemnas"
   blacklist_destination:
   - Volcano Lord
@@ -2224,7 +2232,9 @@ Grim Reaper I:
       - 1
       - 0
 Grim Reaper II:
-  aimod: true
+  aimods: 
+  - name: B_CA050/b_ca.bdscript
+    type: obj
   enabled: true
   enmp_index: 0x7C
   hp: 100
@@ -2424,9 +2434,14 @@ Hammer Frame WI:
       - 0
       - 0
 Hayner:
-  aimod: true
-  pc:
-    enabled: false
+  aimods: 
+  - name: TT05_MS401/ms_s.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
+  - name: N_EX500_BTL/n_ex.bdscript
+    type: obj
   enabled: true
   tags:
   - roxas
@@ -2470,13 +2485,15 @@ Hayner:
   - Yuffie
   variations:
     Hayner:
-      msn_list:
-      - program: 182
-        msn: TT04_MS00
-        room_size: 7.61
-      - program: 84
-        msn: TT05_MS401
-        room_size: 11.57
+      # msn_list:
+      # - program: 182
+      #   msn: TT04_MS00
+      #   room_size: 7.61
+      # - program: 84
+      #   msn: TT05_MS401
+      #   room_size: 11.57
+      msn: TT05_MS401
+      room_size: 11.57
       vars:
       - 0
       - 0
@@ -2729,7 +2746,7 @@ Icy Cube Treasure Room:
       - 0
 Illuminator:
   enabled: false
-  aimod: false
+  #aimods: false # obj/B_CA000/b_ca.bdscript
   enmp_index: 0x62
   hp: 100
   level: 99
@@ -3557,7 +3574,9 @@ Rapid Thruster WI:
       - 0
 Riku:
   can_be_enemy: false
-  aimod: true
+  aimods: 
+  - name: N_EX940_BTL/n_ex.bdscript
+    type: obj
   enabled: true
   enmp_index: 0x82
   tags:
@@ -3734,6 +3753,12 @@ Scar:
 Seifer:
   obj_edits:
     ObjectType: BOSS
+  aimods:
+  - name: TT04_MS107/tt04_ms107.bdscript
+    source: old
+    type: msn
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 0x87
   tags:
@@ -3848,7 +3873,14 @@ Sephiroth:
       - 0
       - 0
 Setzer:
-  aimod: true
+  aimods:
+  - name: N_EX600_BTL/n_ex.bdscript 
+    type: obj
+  - name: TT05_MS405/ms_s.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 0x9E
   tags:
@@ -3892,13 +3924,16 @@ Setzer:
   - Yuffie
   variations:
     Setzer:
-      msn_list:
-      - program: 183
-        msn: TT04_MS01
-        room_size: 6.68
-      - program: 88
-        msn: TT05_MS405
-        room_size: 11.56
+      # msn_list:
+      # - program: 183
+      #   msn: TT04_MS01
+      #   room_size: 6.68
+      # - program: 88
+      #   msn: TT05_MS405
+      #   room_size: 11.56
+      msn: TT05_MS405
+      room_size: 6.68
+      program: 88
       vars:
       - 0
       - 0
@@ -4266,7 +4301,6 @@ Terra:
       - 0
       - 0
 The Beast:
-  aimod: false
   tags: 
   - needs_rc
   enabled: true
@@ -4447,7 +4481,9 @@ Trick Ghost:
       - 0
       - 0
 Twilight Thorn:
-  aimod: true
+  aimods:
+  - name: B_EX100/b_ex.bdscript
+    type: obj
   enabled: true
   enmp_index: 0x56
   tags:
@@ -4530,7 +4566,14 @@ Vexen:
       - 1
       - 0
 Vivi:
-  aimod: true
+  aimods:
+  - name: N_EX610_BTL/n_ex.bdscript
+    type: obj
+  - name: TT05_MS402/ms_s.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 0x9D
   tags:
@@ -4671,7 +4714,9 @@ Xemnas:
   - organization
   - solo
   - teleport_blocked
-  aimod: true
+  aimods:
+  - name: B_EX170/b_ex.bdscript
+    type: obj
   can_be_enemy: false
   enabled: true
   #enmp_index: 0x5A  Final Xemnas has same ENMP index so it's problematic to scale Xemnas
@@ -4783,7 +4828,7 @@ Zexion:
   - organization
   - needs_teleport
   - needs_rc
-  aimod: false # TODO current ai mod is a bit crashy I think, so just ban from weird rooms
+  #aimods: false # TODO current ai mod is a bit crashy I think, so just ban from weird rooms
   enabled: true
   hp: 100
   level: 99

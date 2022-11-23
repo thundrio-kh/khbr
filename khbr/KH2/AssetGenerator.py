@@ -18,6 +18,40 @@ class AssetGenerator:
         self.spawn_manager = spawn_manager
         self.ispc = ispc
 
+    #TODO might want an inhouse mergeasset someday
+    #also this assumes pass by reference works
+    def _find_asset(self, assetname):
+        for asset in self.assets:
+            if asset["name"].endswith(assetname):
+                return asset
+        return None
+
+    def generatePlrp(self, hp=20, mp=100, ap=50, accessoryslt=3, armorslt=3, itemslt=3, items=[]):
+        # Must give to noncrit and crit version of sora
+        def _genobj(character, charid):
+            itms = [int(i) for i in items]
+            while len(itms) < 32:
+                itms.append(0)
+            return {
+            "AccessorySlotMax": accessoryslt,
+            "Ap": ap,
+            "ArmorSlotMax": armorslt,
+            "Character": character,
+            "Hp": hp,
+            "Mp": mp,
+            "Id": charid,
+            "ItemSlotMax": itemslt,
+            "Items": itms,
+            "Padding": [0 for _ in range(52)]
+        }
+        plrp = [_genobj(1, 0)]
+        asset = self.modwriter.writePlrp(plrp)
+        existingasset = self._find_asset("00battle.bin")
+        if existingasset:
+            existingasset["source"].append(asset["source"][0])
+        else:
+            self.assets.append(asset)
+
     def generateObjEntry(self, object_map):
         if not object_map:
             return
@@ -76,21 +110,22 @@ class AssetGenerator:
         if not ai_mods:
             return
         for ai in ai_mods:
-            with open(os.path.join(os.path.dirname(__file__), "data", "ai_mods", ai)) as f:
-                edits_string = f.read().split("\n")
-            ai_manager = AiManager(edits_string)
+            # This logic is a little messy
+            replaced_enemy_object = self.enemy_manager.enemy_records[ai_mods[ai]] # sometimes this is the new enemy, sometimes it's the old
+            ai_to_modify_object = self.enemy_manager.enemy_records[ai]
+            modelname = ai_to_modify_object["model"]
+            mods = ai_to_modify_object["aimods"]
 
-            with open(os.path.join(KH2_DIR, "subfiles", "bdx", "obj",  ai_manager.fn), "rb") as f:
-                data = bytearray(f.read())
+            for mod in mods:
+                modelname = mod["name"].split("/")[0]
+                with open(os.path.join(os.path.dirname(__file__), "data", "bdscript", mod["type"], mod["name"])) as f:
+                    ai_manager = AiManager(ai, f.read())
+                    
+                    for orig,new in mod.get("replacements", {}).items():
+                        ai_manager.replace(orig, replaced_enemy_object[new])
 
-            ai_manager.modify_data(data)
-            
-
-            enemy = self.enemy_manager.enemy_records[ai]
-            modelname = enemy["model"]
-
-            asset = self.modwriter.writeAi(ai_manager.fn, modelname, data)
-            self.assets.append(asset)
+                    asset = self.modwriter.writeAi(os.path.basename(mod["name"]), modelname, mod["type"],ai_manager.get_script())
+                    self.assets.append(asset)
 
     def generateLuaMods(self, lua_mods):
         if not lua_mods:
@@ -143,11 +178,17 @@ class AssetGenerator:
             for r, room in world.items():
                 ardname = self.location_manager.locmap[r]
                 region = '' if not self.ispc else 'us/'
+                # Ideally this would be 
+                formattedname =  "ard/{}{}.ard".format(region, ardname)
                 roomasset = {
                     "method": "binarc",
-                    "name": "ard/{}{}.ard".format(region, ardname),
+                    "name": formattedname,
                     "source": []
                 }
+                if region:
+                    multi = [{"name": formattedname.replace(region, r)} for r in ["jp","fr","gr","it","sp","uk"]]
+                    roomasset["multi"] = multi
+
 
                 basespawns = original_spawns[w][r]
                 roommods = self.spawn_manager.apply_room_mods(basespawns, ardname)
@@ -221,19 +262,42 @@ class AssetGenerator:
         with open(btlfn) as f:
             script = AreaDataScript(f.read(), ispc=self.ispc)
         for p in script.programs:
-            if script.has_capacity(p):
+            prg = script.programs[p]
+            if prg.has_command("Capacity"):
                 if ardname in ["mu07", "mu09"]:
                     # Summit will crash when capacity is infinite, and shan yu's summons can sometimes crash the game
                     continue
-                mission = script.get_mission(p)
+                mission = prg.get_mission()
                 if (not script.ispc) and (not mission):
                     # It's not a big deal if enemies fail to spawn properly in areas where you don't have a mission going on
                     continue 
                 if mission == "\"MU02_MS103B\"":
                     continue # Ambush has some serious issues related to cost
-                script.update_program(p, HARDCAP)
+                prg.update_capacity(HARDCAP)
             if self.ispc:
-                script.add_packet_spec(p)
-                script.add_enemy_spec(p)
-            programasset = self.modwriter.writeAreaDataProgram(ardname, "btl", p, script.get_program(p))
+                prg.add_packet_spec()
+                prg.add_enemy_spec()
+            programasset = self.modwriter.writeAreaDataProgram(ardname, "btl", p, prg.make_program())
             roomsource.append(programasset)
+
+    def generateEvt(self, world, room, programnumber, roomsource, options=None):
+        if not options:
+            print("Warning: generate_evt not generating anything")
+        ardname = world.lower()+room.lower()
+        evtfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "evt.script")
+        with open(evtfn) as f:
+            script = AreaDataScript(f.read())
+        program = script.programs[programnumber]
+        if "jump_to" in options:
+            program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"])
+        if "open_menu" in options:
+            program.set_open_menu(options["open_menu"])
+        if "remove_event" in options:
+            program.remove_event()
+        if "remove_excess_flags"in options:
+            program.remove_command("SetProgressFlag")
+        if "flags" in options:
+            program.set_flags(options["flags"])
+        programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", programnumber, program.make_program())
+        roomsource.append(programasset)
+        

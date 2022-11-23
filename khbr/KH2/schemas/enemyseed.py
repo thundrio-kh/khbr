@@ -24,7 +24,7 @@ class EnemySeed:
             "utility_mods": self.utility_mods,
             "spawns": self.spawns, 
             "msn_map": self.msn_mapping, 
-            "ai_mods": list(set(self.ai_mods)), 
+            "ai_mods": self.ai_mods, 
             "lua_mods": list(set(self.lua_mods)),
             "object_map": self.object_map, 
             "scale_map": self.set_scaling, 
@@ -137,10 +137,14 @@ class EnemySeed:
             self.object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
 
     def update_aimod(self, old_boss_object, new_boss_object):
-        if new_boss_object.get("aimod"):
+        # this is a wordy way of adding the old boss if it's a source old or new boss if it's a source new
+        if len([m for m in new_boss_object.get("aimods",[]) if m.get("source", "new") == "new"]) > 0:
             self.ai_mods[new_boss_object["name"]] = old_boss_object["name"]
+        if len([m for m in old_boss_object.get("aimods",[]) if m.get("source", "new") == "old"]) > 0:
+            self.ai_mods[old_boss_object["name"]] = new_boss_object["name"]
+
         for add in new_boss_object["adds"]:
-            if add.get("aimod"):
+            if add.get("aimods"):
                 self.ai_mods[add["name"]] = old_boss_object["name"]
 
     def update_luamod(self, new_boss_object):
