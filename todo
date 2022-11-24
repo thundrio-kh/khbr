@@ -2,16 +2,10 @@
 
 
 # then finish your documentation stuff and "release" it
-# then finish adjusting khbr to use the ai decomp files
-   # so it's working EXCEPT the msn files are in the root when they should be in /us 
-   # but the region thing needs to be figured out
-   # I think the best way to do that is pass more responsibility for the mod yaml to the mod writer
-   # It can handle the region lines
-
 # then reimplement all the ai mods I have already and test them
-# test and make sure the item is correct on hayner fight
 # and then I can go over my bug reports from the last run
 # then I can do the last couple things in immediate changes
+# make tickets for openkh for the 2 things the patcher can't do
 
 # finally with ADP implemented and the evt thing implemented I should be able to go through and add the cutscene removal options the way I want
 

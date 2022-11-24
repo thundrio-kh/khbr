@@ -51,8 +51,8 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra and Sephiroth",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
-            "lua_bosses": {"display_name": "Advanced Boss Replacements (Must setup LuaBackend hook)", "description": "Takes advantage of Lua scripting and other methods to include bosses that are more difficult to randomize (ex: Final Xemnas). Generates a lua script that must be loaded via ModManager.",
-                                "type": "boss", "possible_values": [False, True], "hidden_values": []},
+            # "lua_bosses": {"display_name": "Advanced Boss Replacements (Must setup LuaBackend hook)", "description": "Takes advantage of Lua scripting and other methods to include bosses that are more difficult to randomize (ex: Final Xemnas). Generates a lua script that must be loaded via ModManager.",
+            #                     "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "mickey_rule": {"display_name": "Mickey Appearance Settings", "description": "Choose when Mickey appears. Options are 'follow', where mickey appears for the same bosses as in the vanilla game, regardless of their location. 'stay', where mickey appears in the same locations as in the vanilla game, regardless of the location. 'all', mickey will appear for every boss in the game, regardless of if mickey normally apepars there. 'none', mickey will never appear. Might make PS2 boss fights less stable",
                                 "type": "boss", "possible_values": ["follow", "stay", "all", 'none'], "hidden_values": []}
         }

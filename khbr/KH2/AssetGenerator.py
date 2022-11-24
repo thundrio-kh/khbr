@@ -107,8 +107,11 @@ class AssetGenerator:
         self.assets.append(asset)
 
     def generateAiMods(self, ai_mods):
+        # Sort of a known issue but this will apply all the old and new mods for an ai, may cause issues someday
+        # ie vivi
         if not ai_mods:
             return
+        created_mods = []
         for ai in ai_mods:
             # This logic is a little messy
             replaced_enemy_object = self.enemy_manager.enemy_records[ai_mods[ai]] # sometimes this is the new enemy, sometimes it's the old
@@ -118,7 +121,11 @@ class AssetGenerator:
 
             for mod in mods:
                 modelname = mod["name"].split("/")[0]
-                with open(os.path.join(os.path.dirname(__file__), "data", "bdscript", mod["type"], mod["name"])) as f:
+                modfilename = os.path.join(os.path.dirname(__file__), "data", "bdscript", mod["type"], mod["name"])
+                if modfilename in created_mods: # Sometimes for instance Seifer the same mod is attempted to be made multiple times
+                    continue
+                created_mods.append(modfilename)
+                with open(modfilename) as f:
                     ai_manager = AiManager(ai, f.read())
                     
                     for orig,new in mod.get("replacements", {}).items():
@@ -186,7 +193,7 @@ class AssetGenerator:
                     "source": []
                 }
                 if region:
-                    multi = [{"name": formattedname.replace(region, r)} for r in ["jp","fr","gr","it","sp","uk"]]
+                    multi = [{"name": formattedname.replace(region, r)} for r in ["jp/","fr/","gr/","it/","sp/","uk/"]]
                     roomasset["multi"] = multi
 
 

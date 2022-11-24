@@ -125,23 +125,27 @@ class ModWriter:
             "type": "AreaDataScript"
         }
 
-    def writeAi(self, aifn, modelname, type, data):
+    def writeAi(self, aifn, modelname, tpe, data):
         relfn = os.path.join("files", "ai", modelname+"_"+aifn)
         outfn = os.path.join(self.outdir, relfn)
         
         self.write_method(outfn, relfn, data)
-        return {
+        formattedname = "obj/{}.mdlx".format(modelname) if tpe == "obj" else "msn/jp/{}.bar".format(modelname)
+        asset = {
             "method": "binarc",
-            "name": "obj/{}.mdlx".format(modelname) if type == "obj" else "msn/us/{}.bar".format(modelname),
+            "name": formattedname,
             "source": [
                 {
                     "method": "bdscript",
-                    "name": os.path.basename(aifn).split(".")[0],
+                    "name": os.path.basename(aifn).split(".")[0][:4],
                     "source": [{"name": relfn}],
                     "type": "Bdx"
                 }
             ]
         }
+        if "msn" in formattedname:
+            asset["multi"] = [{"name": formattedname.replace("jp", r)} for r in ["us","fr","gr","it","sp","uk"]]
+        return asset
 
     def writeLua(self, luafn, data):
         relfn = os.path.join("files", "lua", luafn)

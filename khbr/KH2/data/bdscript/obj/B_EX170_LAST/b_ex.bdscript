@@ -213,7 +213,7 @@ L371:
  popToSp 0
  popToSp 4
  pushImm 112
- pushImm 399
+ pushImm 399 ; ___possible_ref
  pushFromFSp 4
  gosub 8, L847
  popToSp 8
@@ -560,7 +560,7 @@ L935:
  gosub 12, L1054
  drop 
  pushFromFSp 8
- pushImm 1085
+ pushImm 1085 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  ret 
@@ -619,7 +619,7 @@ L1104:
  halt 
  jmp L1104
 L1116:
- pushFromPAi L27786
+ pushFromPAi L27786 ; ___ai: 'riku detach' (L27786)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  pushFromPWp W688
  pushImm 144
@@ -730,7 +730,7 @@ L1266:
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
  pushFromPSpVal 144
- pushImm 1402
+ pushImm 1402 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromPSpVal 144
@@ -758,13 +758,13 @@ L1266:
  gosub 12, L1054
  drop 
  pushFromFSp 0
- pushFromPAi L27708 ; TXT27708: 'rc_invitation_to_dark2' 
+ pushFromPAi L27708 ; ___ai: 'rc_invitation_to_dark2' (TXT27708)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromPSpVal 0
  pushImm 9
  syscall 1, 52 ; method_obj_enable_collision (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27737
+ pushFromPAi L27737 ; ___ai: '50' (L27737)
  pushFromFSp 4
  syscall 1, 157 ; trap_obj_camera_start (3 in, 0 out)
  ret 
@@ -803,14 +803,14 @@ L1443:
 L1444:
  popToSp 0
  popToSp 4
- pushImm 19571
+ pushImm 19571 ; ___possible_ref
  syscall 4, 4 ; trap_mission_information (1 in, 0 out)
  pushFromPWp W448
  pushFromFSp 4
  pushFromFSp 0
  gosub 4, L1484
  pushFromFSp 0
- pushImm 1670
+ pushImm 1670 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromFSp 0
@@ -927,7 +927,7 @@ L1697:
  pushImm 1
  syscall 1, 150 ; trap_obj_motion_check_range (2 in, 1 out)
  jnz L1712
- pushFromPAi L28006
+ pushFromPAi L28006 ; ___ai: 'range 1' (L28006)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  jmp L1712
 L1712:
@@ -935,7 +935,7 @@ L1712:
  pushImm 2
  syscall 1, 150 ; trap_obj_motion_check_range (2 in, 1 out)
  jnz L1727
- pushFromPAi L28030
+ pushFromPAi L28030 ; ___ai: 'range 2' (L28030)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  jmp L1727
 L1727:
@@ -1592,7 +1592,7 @@ L2896:
  popToSp 8
  popToSp 12
  pushImm 288
- pushImm 2944
+ pushImm 2944 ; ___possible_ref
  pushFromFSp 12
  gosub 8, L4675
  popToSp 16
@@ -2825,7 +2825,7 @@ L5168:
  popToSp 4
  popToSp 8
  pushImm 96
- pushImm 5195
+ pushImm 5195 ; ___possible_ref
  pushFromFSp 8
  pushFromFSp 4
  gosub 8, L5769
@@ -3061,7 +3061,7 @@ L5624:
  popToSp 4
  popToSp 8
  pushImm 68
- pushImm 5651
+ pushImm 5651 ; ___possible_ref
  pushFromFSp 8
  gosub 8, L847
  popToSp 12
@@ -3156,7 +3156,7 @@ L5809:
  popToSp 0
  popToSp 4
  pushImm 68
- pushImm 5841
+ pushImm 5841 ; ___possible_ref
  pushFromFSp 4
  pushFromFSp 0
  gosub 8, L5769
@@ -3303,7 +3303,7 @@ L6076:
  popToSp 4
  popToSp 8
  pushImm 176
- pushImm 6103
+ pushImm 6103 ; ___possible_ref
  pushFromFSp 8
  gosub 8, L847
  popToSp 12
@@ -3835,7 +3835,7 @@ L7026:
  gosub 8, L1054
  drop 
  pushFromFSp 8
- pushImm 7049
+ pushImm 7049 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  ret 
@@ -3944,7 +3944,7 @@ L7206:
  ret 
 L7213:
  popToSp 0
- pushFromPAi L28020
+ pushFromPAi L28020 ; ___ai: 'crowd_laser_finish' (L28020)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  syscall 8, 5 ; trap_special_last_xemnus_laser_end (0 in, 0 out)
  pushFromPWp W176
@@ -3964,7 +3964,7 @@ L7213:
  pushFromPWp W176
  pushImm 160
  add 
- pushImm 7302
+ pushImm 7302 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushImm 1135869952
@@ -4055,12 +4055,12 @@ L7323:
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromPSpVal 0
- pushFromPAi L27957 ; TXT27957: 'rc_crowd_laser_finish' 
+ pushFromPAi L27957 ; ___ai: 'rc_crowd_laser_finish' (TXT27957)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
- pushFromPAi L27973
+ pushFromPAi L27973 ; ___ai: 'camera start 70' (L27973)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27986
+ pushFromPAi L27986 ; ___ai: '70' (L27986)
  syscall 1, 164 ; trap_obj_camera_start_global (2 in, 0 out)
  pushFromFSp 4
  pushImm 0
@@ -4109,7 +4109,7 @@ L7475:
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
  pushFromPWp W176
- pushFromPAi L27887
+ pushFromPAi L27887 ; ___ai: '71' (L27887)
  syscall 1, 164 ; trap_obj_camera_start_global (2 in, 0 out)
  jmp L7558
 L7558:
@@ -4143,7 +4143,7 @@ L7558:
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
  pushFromPWp W176
- pushFromPAi L27898
+ pushFromPAi L27898 ; ___ai: '72' (L27898)
  syscall 1, 164 ; trap_obj_camera_start_global (2 in, 0 out)
  jmp L7630
 L7630:
@@ -4187,7 +4187,7 @@ TR11:
  popToSp 4
  popToSp 8
  pushFromFSp 4
- pushFromPAi L28102 ; TXT28102: 'INT' 
+ pushFromPAi L28102 ; ___ai: 'INT' (TXT28102)
  syscall 0, 0 ; trap_puti (2 in, 0 out)
  pushFromFSp 4
  dup 
@@ -4354,7 +4354,7 @@ L7884:
  gosub 16, L1054
  drop 
  pushFromFSp 8
- pushImm 8066
+ pushImm 8066 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  jmp L8031
@@ -4366,7 +4366,7 @@ L8008:
  gosub 16, L1054
  drop 
  pushFromFSp 8
- pushImm 8583
+ pushImm 8583 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
 L8031:
@@ -4737,7 +4737,7 @@ L8661:
  jmp L8712
 L8712:
  pushFromFSp 8
- pushImm 8874
+ pushImm 8874 ; ___possible_ref
  pushFromPSpVal 240
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromFSp 8
@@ -5089,7 +5089,7 @@ L9244:
  jmp L9309
 L9309:
  pushFromPSpVal 160
- pushImm 8874
+ pushImm 8874 ; ___possible_ref
  pushFromPSpVal 240
  pushImm 8
  add 
@@ -5173,7 +5173,7 @@ L9432:
  pushFromPSpVal 0
  syscall 10, 7 ; trap_obj_reset_special_command (1 in, 0 out)
  pushFromFSp 8
- pushImm 9629
+ pushImm 9629 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromFSp 8
@@ -5211,7 +5211,7 @@ L9475:
  pushImm 0
  syscall 1, 18 ; trap_obj_attach (6 in, 0 out)
  pushFromPSpVal 144
- pushImm 9654
+ pushImm 9654 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromFSp 0
@@ -5237,10 +5237,10 @@ L9475:
  pushImm 0
  syscall 1, 13 ; trap_sysobj_motion_push (3 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27841 ; TXT27841: 'rc_invitation_to_dark2_finish' 
+ pushFromPAi L27841 ; ___ai: 'rc_invitation_to_dark2_finish' (TXT27841)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27866 ; TXT27866: '51' 
+ pushFromPAi L27866 ; ___ai: '51' (TXT27866)
  pushFromFSp 8
  syscall 1, 157 ; trap_obj_camera_start (3 in, 0 out)
  ret 
@@ -5344,7 +5344,7 @@ L9759:
  syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
 L9769:
  pushFromFSp 0
- pushFromPAi L28112 ; TXT28112: 'reborn' 
+ pushFromPAi L28112 ; ___ai: 'reborn' (TXT28112)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L9777
 L9777:
@@ -5375,7 +5375,7 @@ L9789:
  pushImm 1
  memcpy 0
  pushFromFSp 0
- pushFromPAi L27777 ; TXT27777: 'mode_battle_boss' 
+ pushFromPAi L27777 ; ___ai: 'mode_battle_boss' (TXT27777)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L9951
 L9833:
@@ -5398,7 +5398,7 @@ L9833:
  pushImm 2
  memcpy 0
  pushFromFSp 0
- pushFromPAi L27777 ; TXT27777: 'mode_battle_boss' 
+ pushFromPAi L27777 ; ___ai: 'mode_battle_boss' (TXT27777)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L9951
 L9877:
@@ -5435,9 +5435,9 @@ L9935:
  jmp L9937
 L9937:
  pushFromFSp 0
- pushFromPAi L27777 ; TXT27777: 'mode_battle_boss' 
+ pushFromPAi L27777 ; ___ai: 'mode_battle_boss' (TXT27777)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
- pushFromPAi L27947 ; TXT27947: 'damage' 
+ pushFromPAi L27947 ; ___ai: 'damage' (TXT27947)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  jmp L9949
 L9949:
@@ -5563,13 +5563,13 @@ L10135:
  gosub 4, L9960
  jnz L10177
  pushFromFSp 0
- pushFromPAi L28144 ; TXT28144: 'atk_throw' 
+ pushFromPAi L28144 ; ___ai: 'atk_throw' (TXT28144)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28172 ; TXT28172: 'atk_dance_l' 
+ pushFromPAi L28172 ; ___ai: 'atk_dance_l' (TXT28172)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28228 ; TXT28228: 'run_near' 
+ pushFromPAi L28228 ; ___ai: 'run_near' (TXT28228)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L10177
 L10177:
@@ -5583,7 +5583,7 @@ L10177:
  eqz 
  jnz L10203
  pushFromFSp 0
- pushFromPAi L27889 ; TXT27889: 'mode_battle_dark' 
+ pushFromPAi L27889 ; ___ai: 'mode_battle_dark' (TXT27889)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L10203
 L10203:
@@ -5603,7 +5603,7 @@ L10205:
 L10225:
  jnz L10235
  pushFromFSp 0
- pushFromPAi L27777 ; TXT27777: 'mode_battle_boss' 
+ pushFromPAi L27777 ; ___ai: 'mode_battle_boss' (TXT27777)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L10235
 L10235:
@@ -5665,9 +5665,9 @@ L10302:
  pushFromPWp W1248
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28098 ; TXT28098: 'appear' 
+ pushFromPAi L28098 ; ___ai: 'appear' (TXT28098)
  pushImm 100
- pushImm 13148
+ pushImm L13148 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5678,9 +5678,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27690 ; TXT27690: 'leave' 
+ pushFromPAi L27690 ; ___ai: 'leave' (TXT27690)
  pushImm 196908
- pushImm 13380
+ pushImm L13380 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5691,9 +5691,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28010 ; TXT28010: 'freeze' 
+ pushFromPAi L28010 ; ___ai: 'freeze' (TXT28010)
  pushImm 100
- pushImm 13436
+ pushImm L13436 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5704,22 +5704,22 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27801 ; TXT27801: 'event' 
+ pushFromPAi L27801 ; ___ai: 'event' (TXT27801)
  pushImm 196908
- pushImm 13453
+ pushImm L13453 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 13458
+ pushImm L13458 ; ___ref
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27856 ; TXT27856: 'idle' 
+ pushFromPAi L27856 ; ___ai: 'idle' (TXT27856)
  pushImm 100
- pushImm 13473
+ pushImm L13473 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5730,9 +5730,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27813 ; TXT27813: 'idle_time' 
+ pushFromPAi L27813 ; ___ai: 'idle_time' (TXT27813)
  pushImm 100
- pushImm 13747
+ pushImm L13747 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5743,9 +5743,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27831 ; TXT27831: 'footwork' 
+ pushFromPAi L27831 ; ___ai: 'footwork' (TXT27831)
  pushImm 100
- pushImm 13803
+ pushImm L13803 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5756,9 +5756,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27988 ; TXT27988: 'mode_battle' 
+ pushFromPAi L27988 ; ___ai: 'mode_battle' (TXT27988)
  pushImm 100
- pushImm 13819
+ pushImm L13819 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5769,9 +5769,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27859 ; TXT27859: 'mode_revenge' 
+ pushFromPAi L27859 ; ___ai: 'mode_revenge' (TXT27859)
  pushImm 100
- pushImm 14067
+ pushImm L14067 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5782,9 +5782,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27777 ; TXT27777: 'mode_battle_boss' 
+ pushFromPAi L27777 ; ___ai: 'mode_battle_boss' (TXT27777)
  pushImm 100
- pushImm 14109
+ pushImm L14109 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5795,9 +5795,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27868 ; TXT27868: 'mode_revenge_boss' 
+ pushFromPAi L27868 ; ___ai: 'mode_revenge_boss' (TXT27868)
  pushImm 100
- pushImm 14175
+ pushImm L14175 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5808,9 +5808,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28003 ; TXT28003: 'talk' 
+ pushFromPAi L28003 ; ___ai: 'talk' (TXT28003)
  pushImm 100
- pushImm 14241
+ pushImm L14241 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5821,9 +5821,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28080 ; TXT28080: 'near_wait' 
+ pushFromPAi L28080 ; ___ai: 'near_wait' (TXT28080)
  pushImm 100
- pushImm 14565
+ pushImm L14565 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5834,9 +5834,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28149 ; TXT28149: 'near' 
+ pushFromPAi L28149 ; ___ai: 'near' (TXT28149)
  pushImm 100
- pushImm 14643
+ pushImm L14643 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5847,9 +5847,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27734 ; TXT27734: 'dead' 
+ pushFromPAi L27734 ; ___ai: 'dead' (TXT27734)
  pushImm 196908
- pushImm 14743
+ pushImm L14743 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5860,9 +5860,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28116 ; TXT28116: 'rc_air_fight' 
+ pushFromPAi L28116 ; ___ai: 'rc_air_fight' (TXT28116)
  pushImm 100
- pushImm 14838
+ pushImm L14838 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5873,10 +5873,10 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28178 ; TXT28178: 'rc_crowd_laser' 
+ pushFromPAi L28178 ; ___ai: 'rc_crowd_laser' (TXT28178)
  pushImm 100
- pushImm 14922
- pushImm 15101
+ pushImm L14922 ; ___ref
+ pushImm L15101 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5886,22 +5886,22 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27920 ; TXT27920: 'laser_faint' 
+ pushFromPAi L27920 ; ___ai: 'laser_faint' (TXT27920)
  pushImm 100
- pushImm 15150
+ pushImm L15150 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 15181
+ pushImm L15181 ; ___ref
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27957 ; TXT27957: 'rc_crowd_laser_finish' 
+ pushFromPAi L27957 ; ___ai: 'rc_crowd_laser_finish' (TXT27957)
  pushImm 100
- pushImm 15189
+ pushImm L15189 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5912,9 +5912,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27726 ; TXT27726: 'atk_crowd_laser' 
+ pushFromPAi L27726 ; ___ai: 'atk_crowd_laser' (TXT27726)
  pushImm 300
- pushImm 15545
+ pushImm L15545 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5925,10 +5925,10 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27685 ; TXT27685: 'atk_dark' 
+ pushFromPAi L27685 ; ___ai: 'atk_dark' (TXT27685)
  pushImm 65836
- pushImm 16250
- pushImm 16317
+ pushImm L16250 ; ___ref
+ pushImm L16317 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5938,35 +5938,35 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27708 ; TXT27708: 'rc_invitation_to_dark2' 
+ pushFromPAi L27708 ; ___ai: 'rc_invitation_to_dark2' (TXT27708)
  pushImm 100
- pushImm 16324
- pushImm 17004
+ pushImm L16324 ; ___ref
+ pushImm L17004 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 17021
+ pushImm L17021 ; ___ref
  pushImm 0
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27841 ; TXT27841: 'rc_invitation_to_dark2_finish' 
+ pushFromPAi L27841 ; ___ai: 'rc_invitation_to_dark2_finish' (TXT27841)
  pushImm 65636
- pushImm 17052
+ pushImm L17052 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 17174
+ pushImm L17174 ; ___ref
  pushImm 0
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27807 ; TXT27807: 'stop' 
+ pushFromPAi L27807 ; ___ai: 'stop' (TXT27807)
  pushImm 100
- pushImm 17265
+ pushImm L17265 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5977,9 +5977,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28247 ; TXT28247: 'walk_start' 
+ pushFromPAi L28247 ; ___ai: 'walk_start' (TXT28247)
  pushImm 100
- pushImm 17307
+ pushImm L17307 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -5990,23 +5990,23 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27994 ; TXT27994: 'walk' 
+ pushFromPAi L27994 ; ___ai: 'walk' (TXT27994)
  pushImm 100
- pushImm 17359
+ pushImm L17359 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 17401
+ pushImm L17401 ; ___ref
  pushImm 0
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27906 ; TXT27906: 'run_start' 
+ pushFromPAi L27906 ; ___ai: 'run_start' (TXT27906)
  pushImm 100
- pushImm 17441
- pushImm 17794
+ pushImm L17441 ; ___ref
+ pushImm L17794 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6016,23 +6016,23 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28069 ; TXT28069: 'run' 
+ pushFromPAi L28069 ; ___ai: 'run' (TXT28069)
  pushImm 100
- pushImm 17801
- pushImm 17926
+ pushImm L17801 ; ___ref
+ pushImm L17926 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 17933
+ pushImm L17933 ; ___ref
  pushImm 0
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27929 ; TXT27929: 'run2_start' 
+ pushFromPAi L27929 ; ___ai: 'run2_start' (TXT27929)
  pushImm 100
- pushImm 17978
- pushImm 18063
+ pushImm L17978 ; ___ref
+ pushImm L18063 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6042,23 +6042,23 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27693 ; TXT27693: 'run2' 
+ pushFromPAi L27693 ; ___ai: 'run2' (TXT27693)
  pushImm 100
- pushImm 18070
- pushImm 18149
+ pushImm L18070 ; ___ref
+ pushImm L18149 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 18156
+ pushImm L18156 ; ___ref
  pushImm 0
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28233 ; TXT28233: 'run3_start' 
+ pushFromPAi L28233 ; ___ai: 'run3_start' (TXT28233)
  pushImm 100
- pushImm 18201
- pushImm 18944
+ pushImm L18201 ; ___ref
+ pushImm L18944 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6068,22 +6068,22 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27810 ; TXT27810: 'run3' 
+ pushFromPAi L27810 ; ___ai: 'run3' (TXT27810)
  pushImm 100
- pushImm 18951
- pushImm 19030
+ pushImm L18951 ; ___ref
+ pushImm L19030 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 19037
+ pushImm L19037 ; ___ref
  pushImm 0
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28228 ; TXT28228: 'run_near' 
+ pushFromPAi L28228 ; ___ai: 'run_near' (TXT28228)
  pushImm 100
- pushImm 19082
+ pushImm L19082 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6094,9 +6094,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28186 ; TXT28186: 'atk_normal_laser1' 
+ pushFromPAi L28186 ; ___ai: 'atk_normal_laser1' (TXT28186)
  pushImm 200
- pushImm 19122
+ pushImm L19122 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6107,9 +6107,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28160 ; TXT28160: 'atk_normal_laser1_child' 
+ pushFromPAi L28160 ; ___ai: 'atk_normal_laser1_child' (TXT28160)
  pushImm 200
- pushImm 20570
+ pushImm L20570 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6120,10 +6120,10 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28206 ; TXT28206: 'atk_normal_laser2' 
+ pushFromPAi L28206 ; ___ai: 'atk_normal_laser2' (TXT28206)
  pushImm 200
- pushImm 20689
- pushImm 21567
+ pushImm L20689 ; ___ref
+ pushImm L21567 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6133,9 +6133,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28273 ; TXT28273: 'atk_normal_laser3' 
+ pushFromPAi L28273 ; ___ai: 'atk_normal_laser3' (TXT28273)
  pushImm 200
- pushImm 21577
+ pushImm L21577 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6146,9 +6146,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27739 ; TXT27739: 'atk_normal_laser3_child' 
+ pushFromPAi L27739 ; ___ai: 'atk_normal_laser3_child' (TXT27739)
  pushImm 200
- pushImm 22503
+ pushImm L22503 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6159,22 +6159,22 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27757 ; TXT27757: 'atk_normal_laser3_finish' 
+ pushFromPAi L27757 ; ___ai: 'atk_normal_laser3_finish' (TXT27757)
  pushImm 200
- pushImm 23278
- pushImm 23607
+ pushImm L23278 ; ___ref
+ pushImm L23607 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 23622
+ pushImm L23622 ; ___ref
  pushImm 0
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28144 ; TXT28144: 'atk_throw' 
+ pushFromPAi L28144 ; ___ai: 'atk_throw' (TXT28144)
  pushImm 200
- pushImm 23633
+ pushImm L23633 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6185,9 +6185,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27696 ; TXT27696: 'atk_dance1' 
+ pushFromPAi L27696 ; ___ai: 'atk_dance1' (TXT27696)
  pushImm 200
- pushImm 24074
+ pushImm L24074 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6198,9 +6198,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28259 ; TXT28259: 'atk_dance2' 
+ pushFromPAi L28259 ; ___ai: 'atk_dance2' (TXT28259)
  pushImm 200
- pushImm 24391
+ pushImm L24391 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6211,9 +6211,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27881 ; TXT27881: 'atk_dance4' 
+ pushFromPAi L27881 ; ___ai: 'atk_dance4' (TXT27881)
  pushImm 200
- pushImm 24401
+ pushImm L24401 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6224,9 +6224,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28253 ; TXT28253: 'atk_dance5' 
+ pushFromPAi L28253 ; ___ai: 'atk_dance5' (TXT28253)
  pushImm 200
- pushImm 24411
+ pushImm L24411 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6237,9 +6237,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27751 ; TXT27751: 'atk_dance6' 
+ pushFromPAi L27751 ; ___ai: 'atk_dance6' (TXT27751)
  pushImm 200
- pushImm 24421
+ pushImm L24421 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6250,9 +6250,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27702 ; TXT27702: 'atk_dance7' 
+ pushFromPAi L27702 ; ___ai: 'atk_dance7' (TXT27702)
  pushImm 200
- pushImm 24431
+ pushImm L24431 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6263,9 +6263,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27720 ; TXT27720: 'atk_dance8' 
+ pushFromPAi L27720 ; ___ai: 'atk_dance8' (TXT27720)
  pushImm 200
- pushImm 24441
+ pushImm L24441 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6276,9 +6276,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27679
+ pushFromPAi L27679 ; ___ai: 'atk_dance9' (L27679)
  pushImm 200
- pushImm 24451
+ pushImm L24451 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6289,22 +6289,22 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28239 ; TXT28239: 'atk_dance_start' 
+ pushFromPAi L28239 ; ___ai: 'atk_dance_start' (TXT28239)
  pushImm 200
- pushImm 24461
- pushImm 24494
+ pushImm L24461 ; ___ref
+ pushImm L24494 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 24504
+ pushImm L24504 ; ___ref
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27792 ; TXT27792: 'atk_dance_finish' 
+ pushFromPAi L27792 ; ___ai: 'atk_dance_finish' (TXT27792)
  pushImm 200
- pushImm 24514
+ pushImm L24514 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6315,9 +6315,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28265 ; TXT28265: 'atk_dance_wait' 
+ pushFromPAi L28265 ; ___ai: 'atk_dance_wait' (TXT28265)
  pushImm 200
- pushImm 24546
+ pushImm L24546 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6328,9 +6328,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28172 ; TXT28172: 'atk_dance_l' 
+ pushFromPAi L28172 ; ___ai: 'atk_dance_l' (TXT28172)
  pushImm 200
- pushImm 24594
+ pushImm L24594 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6341,9 +6341,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27951 ; TXT27951: 'atk_dance_s' 
+ pushFromPAi L27951 ; ___ai: 'atk_dance_s' (TXT27951)
  pushImm 200
- pushImm 24709
+ pushImm L24709 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6354,22 +6354,22 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27824 ; TXT27824: 'atk_dance_s2' 
+ pushFromPAi L27824 ; ___ai: 'atk_dance_s2' (TXT27824)
  pushImm 200
- pushImm 24882
+ pushImm L24882 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 24933
+ pushImm L24933 ; ___ref
  pushImm 0
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28093 ; TXT28093: 'atk_bomb' 
+ pushFromPAi L28093 ; ___ai: 'atk_bomb' (TXT28093)
  pushImm 200
- pushImm 24978
+ pushImm L24978 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6380,9 +6380,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27940 ; TXT27940: 'idle_wait' 
+ pushFromPAi L27940 ; ___ai: 'idle_wait' (TXT27940)
  pushImm 100
- pushImm 25097
+ pushImm L25097 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6393,9 +6393,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28129 ; TXT28129: 'atk_thorn1' 
+ pushFromPAi L28129 ; ___ai: 'atk_thorn1' (TXT28129)
  pushImm 200
- pushImm 25123
+ pushImm L25123 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6406,9 +6406,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27770 ; TXT27770: 'atk_air_fight' 
+ pushFromPAi L27770 ; ___ai: 'atk_air_fight' (TXT27770)
  pushImm 200
- pushImm 25163
+ pushImm L25163 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6419,10 +6419,10 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27997 ; TXT27997: 'atk_shield' 
+ pushFromPAi L27997 ; ___ai: 'atk_shield' (TXT27997)
  pushImm 200
- pushImm 25699
- pushImm 26257
+ pushImm L25699 ; ___ref
+ pushImm L26257 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6432,10 +6432,10 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28061 ; TXT28061: 'mode_dark_start' 
+ pushFromPAi L28061 ; ___ai: 'mode_dark_start' (TXT28061)
  pushImm 100
- pushImm 26267
- pushImm 26356
+ pushImm L26267 ; ___ref
+ pushImm L26356 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6445,9 +6445,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28112 ; TXT28112: 'reborn' 
+ pushFromPAi L28112 ; ___ai: 'reborn' (TXT28112)
  pushImm 300
- pushImm 26371
+ pushImm L26371 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6458,9 +6458,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27889 ; TXT27889: 'mode_battle_dark' 
+ pushFromPAi L27889 ; ___ai: 'mode_battle_dark' (TXT27889)
  pushImm 100
- pushImm 26429
+ pushImm L26429 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6471,9 +6471,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L27911 ; TXT27911: 'revenge' 
+ pushFromPAi L27911 ; ___ai: 'revenge' (TXT27911)
  pushImm 65836
- pushImm 26530
+ pushImm L26530 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6484,9 +6484,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28014 ; TXT28014: 'btl_normal' 
+ pushFromPAi L28014 ; ___ai: 'btl_normal' (TXT28014)
  pushImm 100
- pushImm 26622
+ pushImm L26622 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6497,9 +6497,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28123 ; TXT28123: 'rvg_normal' 
+ pushFromPAi L28123 ; ___ai: 'rvg_normal' (TXT28123)
  pushImm 100
- pushImm 26818
+ pushImm L26818 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6510,9 +6510,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28040 ; TXT28040: 'btl_hard' 
+ pushFromPAi L28040 ; ___ai: 'btl_hard' (TXT28040)
  pushImm 100
- pushImm 26897
+ pushImm L26897 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6523,9 +6523,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28139 ; TXT28139: 'rvg_hard' 
+ pushFromPAi L28139 ; ___ai: 'rvg_hard' (TXT28139)
  pushImm 100
- pushImm 27180
+ pushImm L27180 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6536,9 +6536,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28085 ; TXT28085: 'btl_super_hard' 
+ pushFromPAi L28085 ; ___ai: 'btl_super_hard' (TXT28085)
  pushImm 100
- pushImm 27208
+ pushImm L27208 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6549,9 +6549,9 @@ L10302:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W1248
- pushFromPAi L28152 ; TXT28152: 'rvg_super_hard' 
+ pushFromPAi L28152 ; ___ai: 'rvg_super_hard' (TXT28152)
  pushImm 100
- pushImm 27223
+ pushImm L27223 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -6652,7 +6652,7 @@ L13014:
  pushFromFSp 0
  pushImm 2
  syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
- pushFromPAi L27804 ; TXT27804: 'init' 
+ pushFromPAi L27804 ; ___ai: 'init' (TXT27804)
  syscall 0, 0 ; trap_puti (2 in, 0 out)
  pushFromFSp 0
  gosub 12, L17212
@@ -7118,7 +7118,7 @@ L13819:
  infzf 
  jnz L13866
  pushFromFSp 0
- pushFromPAi L27900
+ pushFromPAi L27900 ; ___ai: 'btl_attack' (L27900)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L13892
 L13866:
@@ -7130,12 +7130,12 @@ L13866:
  infzf 
  jnz L13886
  pushFromFSp 0
- pushFromPAi L27915
+ pushFromPAi L27915 ; ___ai: 'btl_short' (L27915)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L13892
 L13886:
  pushFromFSp 0
- pushFromPAi L27935
+ pushFromPAi L27935 ; ___ai: 'btl_long' (L27935)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L13892:
  ret 
@@ -7145,7 +7145,7 @@ L13893:
  gosub 4, L13911
  jnz L13910
  pushFromFSp 0
- pushFromPAi L27690 ; TXT27690: 'leave' 
+ pushFromPAi L27690 ; ___ai: 'leave' (TXT27690)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  halt 
  jmp L13910
@@ -7249,16 +7249,16 @@ L14067:
  infzf 
  jnz L14096
  pushFromFSp 0
- pushFromPAi L27968
+ pushFromPAi L27968 ; ___ai: 'rvg_short' (L27968)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L14102
 L14096:
  pushFromFSp 0
- pushFromPAi L27981
+ pushFromPAi L27981 ; ___ai: 'rvg_long' (L27981)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L14102:
  pushFromFSp 0
- pushFromPAi L27988 ; TXT27988: 'mode_battle' 
+ pushFromPAi L27988 ; ___ai: 'mode_battle' (TXT27988)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  ret 
 L14109:
@@ -7275,7 +7275,7 @@ L14109:
  jmp L14139
 L14131:
  pushFromFSp 0
- pushFromPAi L28014 ; TXT28014: 'btl_normal' 
+ pushFromPAi L28014 ; ___ai: 'btl_normal' (TXT28014)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L14173
 L14139:
@@ -7286,7 +7286,7 @@ L14139:
  jmp L14156
 L14148:
  pushFromFSp 0
- pushFromPAi L28040 ; TXT28040: 'btl_hard' 
+ pushFromPAi L28040 ; ___ai: 'btl_hard' (TXT28040)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L14173
 L14156:
@@ -7297,7 +7297,7 @@ L14156:
  jmp L14173
 L14165:
  pushFromFSp 0
- pushFromPAi L28085 ; TXT28085: 'btl_super_hard' 
+ pushFromPAi L28085 ; ___ai: 'btl_super_hard' (TXT28085)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L14173
 L14173:
@@ -7317,7 +7317,7 @@ L14175:
  jmp L14205
 L14197:
  pushFromFSp 0
- pushFromPAi L28123 ; TXT28123: 'rvg_normal' 
+ pushFromPAi L28123 ; ___ai: 'rvg_normal' (TXT28123)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L14239
 L14205:
@@ -7328,7 +7328,7 @@ L14205:
  jmp L14222
 L14214:
  pushFromFSp 0
- pushFromPAi L28139 ; TXT28139: 'rvg_hard' 
+ pushFromPAi L28139 ; ___ai: 'rvg_hard' (TXT28139)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L14239
 L14222:
@@ -7339,7 +7339,7 @@ L14222:
  jmp L14239
 L14231:
  pushFromFSp 0
- pushFromPAi L28152 ; TXT28152: 'rvg_super_hard' 
+ pushFromPAi L28152 ; ___ai: 'rvg_super_hard' (TXT28152)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L14239
 L14239:
@@ -7537,7 +7537,7 @@ L14572:
  supoezf 
  jnz L14602
  pushFromFSp 0
- pushFromPAi L28149 ; TXT28149: 'near' 
+ pushFromPAi L28149 ; ___ai: 'near' (TXT28149)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L14602
 L14602:
@@ -7613,7 +7613,7 @@ L14731:
  jmp L14739
 L14733:
  pushFromFSp 0
- pushFromPAi L28080 ; TXT28080: 'near_wait' 
+ pushFromPAi L28080 ; ___ai: 'near_wait' (TXT28080)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L14739:
  halt 
@@ -7743,14 +7743,14 @@ L14922:
  gosub 12, L15077
  memcpyToSp 16, 32
  pushFromPSp 32
- pushFromPAi L27807 ; TXT27807: 'stop' 
+ pushFromPAi L27807 ; ___ai: 'stop' (TXT27807)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L15024
 L15013:
  gosub 12, L15089
  memcpyToSp 16, 32
  pushFromPSp 32
- pushFromPAi L27807 ; TXT27807: 'stop' 
+ pushFromPAi L27807 ; ___ai: 'stop' (TXT27807)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L15024:
  pushFromFSp 0
@@ -8009,7 +8009,7 @@ L15358:
  pushImm 1
  syscall 1, 43 ; func_obj_control_on (1 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27920 ; TXT27920: 'laser_faint' 
+ pushFromPAi L27920 ; ___ai: 'laser_faint' (TXT27920)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  ret 
 L15545:
@@ -8129,7 +8129,7 @@ L15676:
  pushImm 0
  syscall 1, 70 ; trap_obj_set_flag (2 in, 0 out)
  pushFromFSp 8
- pushImm 16000
+ pushImm 16000 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromPSpVal 160
@@ -8153,7 +8153,7 @@ L15676:
  gosub 12, L1054
  drop 
  pushFromPSpVal 160
- pushImm 16000
+ pushImm 16000 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromPSpVal 160
@@ -8173,12 +8173,12 @@ L15848:
  gosub 12, L291
  memcpyToSp 16, 32
  pushFromPSp 32
- pushFromPAi L28178 ; TXT28178: 'rc_crowd_laser' 
+ pushFromPAi L28178 ; ___ai: 'rc_crowd_laser' (TXT28178)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28201
+ pushFromPAi L28201 ; ___ai: '60' (L28201)
  syscall 1, 164 ; trap_obj_camera_start_global (2 in, 0 out)
- pushImm 16062
+ pushImm 16062 ; ___possible_ref
  pushFromFSp 0
  syscall 2, 20 ; trap_magic_start_thread (2 in, 1 out)
  drop 
@@ -8283,7 +8283,7 @@ L16062:
  pushImm 19572
  syscall 4, 4 ; trap_mission_information (1 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28137
+ pushFromPAi L28137 ; ___ai: '61' (L28137)
  syscall 1, 164 ; trap_obj_camera_start_global (2 in, 0 out)
  pushFromPSpVal 160
  syscall 1, 161 ; trap_obj_is_attach (1 in, 1 out)
@@ -8446,7 +8446,7 @@ L16324:
  pushImm 225
  pushImm 0
  syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
- pushFromPAi L27926
+ pushFromPAi L27926 ; ___ai: 'dark' (L27926)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  pushFromFSp 0
  gosub 4, L16727
@@ -8454,7 +8454,7 @@ L16324:
  pushFromFSp 0
  gosub 4, L16951
  pushFromFSp 0
- pushFromPAi L27708 ; TXT27708: 'rc_invitation_to_dark2' 
+ pushFromPAi L27708 ; ___ai: 'rc_invitation_to_dark2' (TXT27708)
  pushImm 0
  syscall 1, 90 ; trap_obj_act_shout (3 in, 0 out)
  pushFromFSp 0
@@ -8468,7 +8468,7 @@ L16324:
 L16429:
  popToSp 0
  pushImm 112
- pushImm 16446
+ pushImm 16446 ; ___possible_ref
  pushFromFSp 0
  gosub 4, L847
  popToSp 4
@@ -8623,7 +8623,7 @@ L16727:
  fetchValue 4
  gosub 8, L302
  pushImm 84
- pushImm 16752
+ pushImm 16752 ; ___possible_ref
  pushFromFSp 0
  gosub 8, L847
  popToSp 4
@@ -8693,7 +8693,7 @@ L16856:
  ipos 
  jnz L16928
  pushFromFSp 4
- pushFromPAi L27877
+ pushFromPAi L27877 ; ___ai: 'add hp' (L27877)
  syscall 0, 0 ; trap_puti (2 in, 0 out)
  pushFromFSp 8
  pushFromFSp 4
@@ -8793,7 +8793,7 @@ L17021:
  pushFromFSp 0
  syscall 1, 127 ; trap_obj_act_clear (1 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28061 ; TXT28061: 'mode_dark_start' 
+ pushFromPAi L28061 ; ___ai: 'mode_dark_start' (TXT28061)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L17051
 L17051:
@@ -8818,7 +8818,7 @@ L17052:
  pushImm 0
  syscall 1, 18 ; trap_obj_attach (6 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27841 ; TXT27841: 'rc_invitation_to_dark2_finish' 
+ pushFromPAi L27841 ; ___ai: 'rc_invitation_to_dark2_finish' (TXT27841)
  pushImm 0
  syscall 1, 90 ; trap_obj_act_shout (3 in, 0 out)
  pushFromFSp 0
@@ -8929,7 +8929,7 @@ L17283:
 L17307:
  popToSp 0
  pushFromFSp 0
- pushFromPAi L27994 ; TXT27994: 'walk' 
+ pushFromPAi L27994 ; ___ai: 'walk' (TXT27994)
  pushImm 0
  syscall 1, 90 ; trap_obj_act_shout (3 in, 0 out)
  halt 
@@ -8980,7 +8980,7 @@ L17401:
  neqz 
  jnz L17440
  pushFromFSp 0
- pushFromPAi L27994 ; TXT27994: 'walk' 
+ pushFromPAi L27994 ; ___ai: 'walk' (TXT27994)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
  pushFromFSp 4
@@ -8995,7 +8995,7 @@ L17440:
 L17441:
  popToSp 0
  pushFromFSp 0
- pushFromPAi L28069 ; TXT28069: 'run' 
+ pushFromPAi L28069 ; ___ai: 'run' (TXT28069)
  pushImm 0
  syscall 1, 90 ; trap_obj_act_shout (3 in, 0 out)
  halt 
@@ -9251,7 +9251,7 @@ L17933:
  pushFromFSp 4
  memcpyToSpVal 16, 128
  pushFromFSp 0
- pushFromPAi L28069 ; TXT28069: 'run' 
+ pushFromPAi L28069 ; ___ai: 'run' (TXT28069)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
  pushFromFSp 4
@@ -9266,7 +9266,7 @@ L17977:
 L17978:
  popToSp 0
  pushFromFSp 0
- pushFromPAi L27693 ; TXT27693: 'run2' 
+ pushFromPAi L27693 ; ___ai: 'run2' (TXT27693)
  pushImm 0
  syscall 1, 90 ; trap_obj_act_shout (3 in, 0 out)
  halt 
@@ -9361,7 +9361,7 @@ L18156:
  pushFromFSp 4
  memcpyToSpVal 16, 128
  pushFromFSp 0
- pushFromPAi L27693 ; TXT27693: 'run2' 
+ pushFromPAi L27693 ; ___ai: 'run2' (TXT27693)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
  pushFromFSp 4
@@ -9376,7 +9376,7 @@ L18200:
 L18201:
  popToSp 0
  pushFromFSp 0
- pushFromPAi L27810 ; TXT27810: 'run3' 
+ pushFromPAi L27810 ; ___ai: 'run3' (TXT27810)
  pushImm 0
  syscall 1, 90 ; trap_obj_act_shout (3 in, 0 out)
  halt 
@@ -9417,7 +9417,7 @@ L18201:
 L18287:
  popToSp 0
  pushImm 72
- pushImm 18301
+ pushImm 18301 ; ___possible_ref
  pushFromFSp 0
  gosub 4, L847
  drop 
@@ -9574,7 +9574,7 @@ L18585:
  popToSp 4
  popToSp 8
  pushImm 176
- pushImm 18636
+ pushImm 18636 ; ___possible_ref
  pushFromFSp 8
  gosub 8, L847
  popToSp 12
@@ -9799,7 +9799,7 @@ L19037:
  pushFromFSp 4
  memcpyToSpVal 16, 128
  pushFromFSp 0
- pushFromPAi L27810 ; TXT27810: 'run3' 
+ pushFromPAi L27810 ; ___ai: 'run3' (TXT27810)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
  pushFromFSp 4
@@ -9820,19 +9820,19 @@ L19082:
  infzf 
  jnz L19103
  pushFromFSp 0
- pushFromPAi L27906 ; TXT27906: 'run_start' 
+ pushFromPAi L27906 ; ___ai: 'run_start' (TXT27906)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L19109
 L19103:
  pushFromFSp 0
- pushFromPAi L27929 ; TXT27929: 'run2_start' 
+ pushFromPAi L27929 ; ___ai: 'run2_start' (TXT27929)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L19109:
  pushFromFSp 0
- pushFromPAi L27940 ; TXT27940: 'idle_wait' 
+ pushFromPAi L27940 ; ___ai: 'idle_wait' (TXT27940)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27951 ; TXT27951: 'atk_dance_s' 
+ pushFromPAi L27951 ; ___ai: 'atk_dance_s' (TXT27951)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  ret 
 L19122:
@@ -9847,7 +9847,7 @@ L19122:
  subf 
  infzf 
  jnz L19161
- pushFromPAi L28203
+ pushFromPAi L28203 ; ___ai: 'right' (L28203)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  pushImm 1032780318
  popToSp 36
@@ -10005,7 +10005,7 @@ L19425:
  gosub 20, L15077
  memcpyToSp 16, 64
  pushFromPSp 64
- pushFromPAi L28160 ; TXT28160: 'atk_normal_laser1_child' 
+ pushFromPAi L28160 ; ___ai: 'atk_normal_laser1_child' (TXT28160)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushImm 1114636288
  pushImm 1127481344
@@ -10040,7 +10040,7 @@ L19539:
  popToSp 0
  popToSp 4
  pushImm 80
- pushImm 19571
+ pushImm 19571 ; ___possible_ref
  pushFromFSp 4
  gosub 8, L847
  popToSp 8
@@ -10093,7 +10093,7 @@ L19620:
  ipos 
  jnz L19638
  pushFromFSpVal 64
- pushFromPAi L28055
+ pushFromPAi L28055 ; ___ai: '@ref_count' (L28055)
  syscall 0, 0 ; trap_puti (2 in, 0 out)
  halt 
  jmp L19620
@@ -10177,7 +10177,7 @@ L19753:
 L19780:
  popToSp 0
  pushImm 228
- pushImm 19801
+ pushImm 19801 ; ___possible_ref
  pushFromFSp 0
  gosub 4, L847
  popToSp 4
@@ -10902,7 +10902,7 @@ L21148:
 L21175:
  popToSp 0
  pushImm 228
- pushImm 21196
+ pushImm 21196 ; ___possible_ref
  pushFromFSp 0
  gosub 4, L847
  popToSp 4
@@ -11149,7 +11149,7 @@ L21577:
  gosub 20, L15077
  memcpyToSp 16, 64
  pushFromPSp 64
- pushFromPAi L27739 ; TXT27739: 'atk_normal_laser3_child' 
+ pushFromPAi L27739 ; ___ai: 'atk_normal_laser3_child' (TXT27739)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushImm 1131413504
  popToSp 56
@@ -11272,7 +11272,7 @@ L21905:
  pushImm 1119092736
  gosub 20, L1244
  pushFromFSp 0
- pushFromPAi L27757 ; TXT27757: 'atk_normal_laser3_finish' 
+ pushFromPAi L27757 ; ___ai: 'atk_normal_laser3_finish' (TXT27757)
  pushImm 0
  syscall 1, 90 ; trap_obj_act_shout (3 in, 0 out)
  halt 
@@ -11380,7 +11380,7 @@ L22084:
 L22111:
  popToSp 0
  pushImm 228
- pushImm 22132
+ pushImm 22132 ; ___possible_ref
  pushFromFSp 0
  gosub 4, L847
  popToSp 4
@@ -11835,7 +11835,7 @@ L22961:
  subf 
  infzf 
  jnz L23004
- pushFromPAi L28203
+ pushFromPAi L28203 ; ___ai: 'right' (L28203)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  pushImm 1032780318
  popToSp 36
@@ -12146,7 +12146,7 @@ L23622:
  popToSp 4
  popToSp 0
  pushFromFSp 0
- pushFromPAi L27757 ; TXT27757: 'atk_normal_laser3_finish' 
+ pushFromPAi L27757 ; ___ai: 'atk_normal_laser3_finish' (TXT27757)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  ret 
 L23633:
@@ -12185,7 +12185,7 @@ L23633:
  pushFromFSp 0
  gosub 12, L23900
  pushFromFSp 0
- pushFromPAi L27945
+ pushFromPAi L27945 ; ___ai: '11' (L27945)
  pushFromFSp 0
  syscall 1, 157 ; trap_obj_camera_start (3 in, 0 out)
  pushFromFSp 0
@@ -12318,7 +12318,7 @@ L23900:
  syscall 1, 29 ; trap_obj_motion_capture (4 in, 1 out)
  drop 
  pushFromPSp 16
- pushImm 24014
+ pushImm 24014 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  ret 
@@ -12666,40 +12666,40 @@ L24594:
  eqz 
  jnz L24708
  pushFromFSp 0
- pushFromPAi L28239 ; TXT28239: 'atk_dance_start' 
+ pushFromPAi L28239 ; ___ai: 'atk_dance_start' (TXT28239)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28253 ; TXT28253: 'atk_dance5' 
+ pushFromPAi L28253 ; ___ai: 'atk_dance5' (TXT28253)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28259 ; TXT28259: 'atk_dance2' 
+ pushFromPAi L28259 ; ___ai: 'atk_dance2' (TXT28259)
  syscall 6, 58 ; trap_obj_act_child_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28265 ; TXT28265: 'atk_dance_wait' 
+ pushFromPAi L28265 ; ___ai: 'atk_dance_wait' (TXT28265)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27679
+ pushFromPAi L27679 ; ___ai: 'atk_dance9' (L27679)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27696 ; TXT27696: 'atk_dance1' 
+ pushFromPAi L27696 ; ___ai: 'atk_dance1' (TXT27696)
  syscall 6, 58 ; trap_obj_act_child_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28265 ; TXT28265: 'atk_dance_wait' 
+ pushFromPAi L28265 ; ___ai: 'atk_dance_wait' (TXT28265)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27702 ; TXT27702: 'atk_dance7' 
+ pushFromPAi L27702 ; ___ai: 'atk_dance7' (TXT27702)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27720 ; TXT27720: 'atk_dance8' 
+ pushFromPAi L27720 ; ___ai: 'atk_dance8' (TXT27720)
  syscall 6, 58 ; trap_obj_act_child_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28265 ; TXT28265: 'atk_dance_wait' 
+ pushFromPAi L28265 ; ___ai: 'atk_dance_wait' (TXT28265)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27751 ; TXT27751: 'atk_dance6' 
+ pushFromPAi L27751 ; ___ai: 'atk_dance6' (TXT27751)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27751 ; TXT27751: 'atk_dance6' 
+ pushFromPAi L27751 ; ___ai: 'atk_dance6' (TXT27751)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
  fetchValue 16
@@ -12708,15 +12708,15 @@ L24594:
  eqz 
  jnz L24694
  pushFromFSp 0
- pushFromPAi L27770 ; TXT27770: 'atk_air_fight' 
+ pushFromPAi L27770 ; ___ai: 'atk_air_fight' (TXT27770)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L24706
 L24694:
  pushFromFSp 0
- pushFromPAi L27792 ; TXT27792: 'atk_dance_finish' 
+ pushFromPAi L27792 ; ___ai: 'atk_dance_finish' (TXT27792)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27940 ; TXT27940: 'idle_wait' 
+ pushFromPAi L27940 ; ___ai: 'idle_wait' (TXT27940)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L24706:
  jmp L24708
@@ -12727,7 +12727,7 @@ L24709:
  pushImm 214
  popToSp 36
  pushFromFSp 0
- pushFromPAi L27824 ; TXT27824: 'atk_dance_s2' 
+ pushFromPAi L27824 ; ___ai: 'atk_dance_s2' (TXT27824)
  pushImm 0
  syscall 1, 90 ; trap_obj_act_shout (3 in, 0 out)
  halt 
@@ -12850,7 +12850,7 @@ L24933:
  pushFromFSp 4
  memcpyToSpVal 16, 128
  pushFromFSp 0
- pushFromPAi L27824 ; TXT27824: 'atk_dance_s2' 
+ pushFromPAi L27824 ; ___ai: 'atk_dance_s2' (TXT27824)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
  pushFromFSp 4
@@ -13045,7 +13045,7 @@ L25232:
  gosub 12, L1054
  drop 
  pushFromFSp 8
- pushImm 25395
+ pushImm 25395 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromPSpVal 144
@@ -13058,10 +13058,10 @@ L25232:
  pushImm 0
  syscall 1, 29 ; trap_obj_motion_capture (4 in, 1 out)
  drop 
- pushFromPAi L28104
+ pushFromPAi L28104 ; ___ai: 'riku hook start' (L28104)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  pushFromPSpVal 144
- pushImm 25603
+ pushImm 25603 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  jmp L25353
@@ -13071,10 +13071,10 @@ L25353:
  pushImm 0
  syscall 1, 20 ; trap_sysobj_fadein (2 in, 0 out)
  pushFromFSp 4
- pushFromPAi L28116 ; TXT28116: 'rc_air_fight' 
+ pushFromPAi L28116 ; ___ai: 'rc_air_fight' (TXT28116)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28135
+ pushFromPAi L28135 ; ___ai: '40' (L28135)
  pushFromFSp 8
  syscall 1, 157 ; trap_obj_camera_start (3 in, 0 out)
  ret 
@@ -13218,7 +13218,7 @@ L25646:
  pushFromFSp 0
  fetchValue 4
  syscall 1, 15 ; trap_sysobj_motion_id (1 in, 1 out)
- pushFromPAi L28045
+ pushFromPAi L28045 ; ___ai: 'riku end motion_id' (L28045)
  syscall 0, 0 ; trap_puti (2 in, 0 out)
  pushFromFSp 0
  syscall 1, 161 ; trap_obj_is_attach (1 in, 1 out)
@@ -13232,7 +13232,7 @@ L25668:
  jnz L25698
  pushFromFSp 0
  syscall 1, 95 ; trap_obj_fly_to_jump (1 in, 0 out)
- pushFromPAi L28071
+ pushFromPAi L28071 ; ___ai: 'riku fly_to_jump' (L28071)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  pushFromFSp 0
  pushImm 4
@@ -13356,7 +13356,7 @@ L25909:
  popToSp 4
  popToSp 8
  pushImm 80
- pushImm 25936
+ pushImm 25936 ; ___possible_ref
  pushFromFSp 8
  gosub 8, L847
  popToSp 12
@@ -13566,7 +13566,7 @@ L26267:
  jmp L26349
 L26349:
  pushFromFSp 0
- pushFromPAi L27997 ; TXT27997: 'atk_shield' 
+ pushFromPAi L27997 ; ___ai: 'atk_shield' (TXT27997)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  ret 
 L26356:
@@ -13603,7 +13603,7 @@ L26371:
  pushImm 1098907648
  gosub 4, L1244
  pushFromFSp 0
- pushFromPAi L28061 ; TXT28061: 'mode_dark_start' 
+ pushFromPAi L28061 ; ___ai: 'mode_dark_start' (TXT28061)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  ret 
 L26429:
@@ -13637,12 +13637,12 @@ L26429:
  infzf 
  jnz L26498
  pushFromFSp 0
- pushFromPAi L27997 ; TXT27997: 'atk_shield' 
+ pushFromPAi L27997 ; ___ai: 'atk_shield' (TXT27997)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L26504
 L26498:
  pushFromFSp 0
- pushFromPAi L28093 ; TXT28093: 'atk_bomb' 
+ pushFromPAi L28093 ; ___ai: 'atk_bomb' (TXT28093)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L26504:
  jmp L26529
@@ -13653,12 +13653,12 @@ L26506:
  infzf 
  jnz L26523
  pushFromFSp 0
- pushFromPAi L27997 ; TXT27997: 'atk_shield' 
+ pushFromPAi L27997 ; ___ai: 'atk_shield' (TXT27997)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L26529
 L26523:
  pushFromFSp 0
- pushFromPAi L28112 ; TXT28112: 'reborn' 
+ pushFromPAi L28112 ; ___ai: 'reborn' (TXT28112)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L26529:
  ret 
@@ -13679,12 +13679,12 @@ L26545:
  infzf 
  jnz L26564
  pushFromFSp 0
- pushFromPAi L27951 ; TXT27951: 'atk_dance_s' 
+ pushFromPAi L27951 ; ___ai: 'atk_dance_s' (TXT27951)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L26570
 L26564:
  pushFromFSp 0
- pushFromPAi L28129 ; TXT28129: 'atk_thorn1' 
+ pushFromPAi L28129 ; ___ai: 'atk_thorn1' (TXT28129)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L26570:
  jmp L26620
@@ -13702,18 +13702,18 @@ L26581:
  infzf 
  jnz L26606
  pushFromFSp 0
- pushFromPAi L28144 ; TXT28144: 'atk_throw' 
+ pushFromPAi L28144 ; ___ai: 'atk_throw' (TXT28144)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28172 ; TXT28172: 'atk_dance_l' 
+ pushFromPAi L28172 ; ___ai: 'atk_dance_l' (TXT28172)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L26618
 L26606:
  pushFromFSp 0
- pushFromPAi L28186 ; TXT28186: 'atk_normal_laser1' 
+ pushFromPAi L28186 ; ___ai: 'atk_normal_laser1' (TXT28186)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28206 ; TXT28206: 'atk_normal_laser2' 
+ pushFromPAi L28206 ; ___ai: 'atk_normal_laser2' (TXT28206)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L26618:
  jmp L26620
@@ -13744,12 +13744,12 @@ L26622:
  infzf 
  jnz L26669
  pushFromFSp 0
- pushFromPAi L28129 ; TXT28129: 'atk_thorn1' 
+ pushFromPAi L28129 ; ___ai: 'atk_thorn1' (TXT28129)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L26675
 L26669:
  pushFromFSp 0
- pushFromPAi L28093 ; TXT28093: 'atk_bomb' 
+ pushFromPAi L28093 ; ___ai: 'atk_bomb' (TXT28093)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L26675:
  pushFromFSp 0
@@ -13759,7 +13759,7 @@ L26675:
  infzf 
  jnz L26694
  pushFromFSp 0
- pushFromPAi L28228 ; TXT28228: 'run_near' 
+ pushFromPAi L28228 ; ___ai: 'run_near' (TXT28228)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L26694
 L26694:
@@ -13779,12 +13779,12 @@ L26696:
  infzf 
  jnz L26727
  pushFromFSp 0
- pushFromPAi L28228 ; TXT28228: 'run_near' 
+ pushFromPAi L28228 ; ___ai: 'run_near' (TXT28228)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L26733
 L26727:
  pushFromFSp 0
- pushFromPAi L28129 ; TXT28129: 'atk_thorn1' 
+ pushFromPAi L28129 ; ___ai: 'atk_thorn1' (TXT28129)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L26733:
  pushFromFSp 0
@@ -13794,7 +13794,7 @@ L26733:
  infzf 
  jnz L26752
  pushFromFSp 0
- pushFromPAi L28233 ; TXT28233: 'run3_start' 
+ pushFromPAi L28233 ; ___ai: 'run3_start' (TXT28233)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L26752
 L26752:
@@ -13807,12 +13807,12 @@ L26754:
  infzf 
  jnz L26773
  pushFromFSp 0
- pushFromPAi L28247 ; TXT28247: 'walk_start' 
+ pushFromPAi L28247 ; ___ai: 'walk_start' (TXT28247)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L26798
 L26773:
  pushFromFSp 0
- pushFromPAi L28129 ; TXT28129: 'atk_thorn1' 
+ pushFromPAi L28129 ; ___ai: 'atk_thorn1' (TXT28129)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
  gosub 4, L10071
@@ -13821,7 +13821,7 @@ L26773:
  infzf 
  jnz L26798
  pushFromFSp 0
- pushFromPAi L28093 ; TXT28093: 'atk_bomb' 
+ pushFromPAi L28093 ; ___ai: 'atk_bomb' (TXT28093)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L26798
 L26798:
@@ -13832,7 +13832,7 @@ L26798:
  infzf 
  jnz L26817
  pushFromFSp 0
- pushFromPAi L28233 ; TXT28233: 'run3_start' 
+ pushFromPAi L28233 ; ___ai: 'run3_start' (TXT28233)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L26817
 L26817:
@@ -13853,15 +13853,15 @@ L26818:
  infzf 
  jnz L26851
  pushFromFSp 0
- pushFromPAi L27951 ; TXT27951: 'atk_dance_s' 
+ pushFromPAi L27951 ; ___ai: 'atk_dance_s' (TXT27951)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L26863
 L26851:
  pushFromFSp 0
- pushFromPAi L28144 ; TXT28144: 'atk_throw' 
+ pushFromPAi L28144 ; ___ai: 'atk_throw' (TXT28144)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28129 ; TXT28129: 'atk_thorn1' 
+ pushFromPAi L28129 ; ___ai: 'atk_thorn1' (TXT28129)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L26863:
  jmp L26896
@@ -13873,15 +13873,15 @@ L26865:
  infzf 
  jnz L26890
  pushFromFSp 0
- pushFromPAi L28144 ; TXT28144: 'atk_throw' 
+ pushFromPAi L28144 ; ___ai: 'atk_throw' (TXT28144)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28129 ; TXT28129: 'atk_thorn1' 
+ pushFromPAi L28129 ; ___ai: 'atk_thorn1' (TXT28129)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L26896
 L26890:
  pushFromFSp 0
- pushFromPAi L28129 ; TXT28129: 'atk_thorn1' 
+ pushFromPAi L28129 ; ___ai: 'atk_thorn1' (TXT28129)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L26896:
  ret 
@@ -13899,7 +13899,7 @@ L26897:
  pushImm 0
  memcpy 0
  pushFromFSp 0
- pushFromPAi L28186 ; TXT28186: 'atk_normal_laser1' 
+ pushFromPAi L28186 ; ___ai: 'atk_normal_laser1' (TXT28186)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L27179
 L26928:
@@ -13918,7 +13918,7 @@ L26928:
  add 
  memcpy 0
  pushFromFSp 0
- pushFromPAi L28206 ; TXT28206: 'atk_normal_laser2' 
+ pushFromPAi L28206 ; ___ai: 'atk_normal_laser2' (TXT28206)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L27179
 L26961:
@@ -13937,7 +13937,7 @@ L26961:
  add 
  memcpy 0
  pushFromFSp 0
- pushFromPAi L28186 ; TXT28186: 'atk_normal_laser1' 
+ pushFromPAi L28186 ; ___ai: 'atk_normal_laser1' (TXT28186)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L27179
 L26994:
@@ -13956,7 +13956,7 @@ L26994:
  add 
  memcpy 0
  pushFromFSp 0
- pushFromPAi L28273 ; TXT28273: 'atk_normal_laser3' 
+ pushFromPAi L28273 ; ___ai: 'atk_normal_laser3' (TXT28273)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L27179
 L27027:
@@ -13972,7 +13972,7 @@ L27027:
  neqz 
  jnz L27055
  pushFromFSp 0
- pushFromPAi L27685 ; TXT27685: 'atk_dark' 
+ pushFromPAi L27685 ; ___ai: 'atk_dark' (TXT27685)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L27069
 L27055:
@@ -14002,15 +14002,15 @@ L27071:
  add 
  memcpy 0
  pushFromFSp 0
- pushFromPAi L28144 ; TXT28144: 'atk_throw' 
+ pushFromPAi L28144 ; ___ai: 'atk_throw' (TXT28144)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L28172 ; TXT28172: 'atk_dance_l' 
+ pushFromPAi L28172 ; ___ai: 'atk_dance_l' (TXT28172)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L27179
 L27110:
  pushFromFSp 0
- pushFromPAi L28233 ; TXT28233: 'run3_start' 
+ pushFromPAi L28233 ; ___ai: 'run3_start' (TXT28233)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
  gosub 4, L10071
@@ -14019,12 +14019,12 @@ L27110:
  infzf 
  jnz L27135
  pushFromFSp 0
- pushFromPAi L28129 ; TXT28129: 'atk_thorn1' 
+ pushFromPAi L28129 ; ___ai: 'atk_thorn1' (TXT28129)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L27141
 L27135:
  pushFromFSp 0
- pushFromPAi L28228 ; TXT28228: 'run_near' 
+ pushFromPAi L28228 ; ___ai: 'run_near' (TXT28228)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L27141:
  pushFromFSp 0
@@ -14034,7 +14034,7 @@ L27141:
  infzf 
  jnz L27160
  pushFromFSp 0
- pushFromPAi L28247 ; TXT28247: 'walk_start' 
+ pushFromPAi L28247 ; ___ai: 'walk_start' (TXT28247)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L27160
 L27160:
@@ -14045,7 +14045,7 @@ L27160:
  infzf 
  jnz L27179
  pushFromFSp 0
- pushFromPAi L27940 ; TXT27940: 'idle_wait' 
+ pushFromPAi L27940 ; ___ai: 'idle_wait' (TXT27940)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L27179
 L27179:
@@ -14059,22 +14059,22 @@ L27180:
  infzf 
  jnz L27201
  pushFromFSp 0
- pushFromPAi L28186 ; TXT28186: 'atk_normal_laser1' 
+ pushFromPAi L28186 ; ___ai: 'atk_normal_laser1' (TXT28186)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L27207
 L27201:
  pushFromFSp 0
- pushFromPAi L28206 ; TXT28206: 'atk_normal_laser2' 
+ pushFromPAi L28206 ; ___ai: 'atk_normal_laser2' (TXT28206)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L27207:
  ret 
 L27208:
  popToSp 0
  pushFromFSp 0
- pushFromPAi L27726 ; TXT27726: 'atk_crowd_laser' 
+ pushFromPAi L27726 ; ___ai: 'atk_crowd_laser' (TXT27726)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L27856 ; TXT27856: 'idle' 
+ pushFromPAi L27856 ; ___ai: 'idle' (TXT27856)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  ret 
 L27223:
@@ -14263,7 +14263,7 @@ L27541:
  popToSp 8
  popToSp 12
  pushImm 84
- pushImm 27574
+ pushImm 27574 ; ___possible_ref
  pushFromFSp 12
  gosub 8, L847
  popToSp 16

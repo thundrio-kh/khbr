@@ -182,14 +182,14 @@ L215:
  pushImm 0
  syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9313 ; TXT9313: '00' 
+ pushFromPAi L9313 ; ___ai: '00' (TXT9313)
  pushFromFSp 8
  syscall 1, 157 ; trap_obj_camera_start (3 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9327 ; TXT9327: 'rc_invitation_to_dark' 
+ pushFromPAi L9327 ; ___ai: 'rc_invitation_to_dark' (TXT9327)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 8
- pushImm 525
+ pushImm 525 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  ret 
@@ -366,7 +366,7 @@ L641:
  pushFromFSp 8
  gosub 8, L387
  pushFromFSp 8
- pushImm 525
+ pushImm 525 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromFSp 0
@@ -388,7 +388,7 @@ L641:
  pushImm 0
  syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9370 ; TXT9370: '10' 
+ pushFromPAi L9370 ; ___ai: '10' (TXT9370)
  pushFromFSp 8
  syscall 1, 157 ; trap_obj_camera_start (3 in, 0 out)
  ret 
@@ -411,7 +411,7 @@ L735:
  pushFromFSp 8
  gosub 8, L387
  pushFromFSp 8
- pushImm 525
+ pushImm 525 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromFSp 0
@@ -433,7 +433,7 @@ L735:
  pushImm 0
  syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9401 ; TXT9401: '20' 
+ pushFromPAi L9401 ; ___ai: '20' (TXT9401)
  pushFromFSp 8
  syscall 1, 157 ; trap_obj_camera_start (3 in, 0 out)
  ret 
@@ -450,7 +450,7 @@ L829:
  popToSp 8
  popToSp 0
  pushFromFSp 8
- pushImm 525
+ pushImm 525 ; ___possible_ref
  pushImm 0
  syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
  pushFromFSp 0
@@ -478,7 +478,7 @@ L829:
  pushImm 0
  syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9439 ; TXT9439: '30' 
+ pushFromPAi L9439 ; ___ai: '30' (TXT9439)
  pushFromFSp 8
  syscall 1, 157 ; trap_obj_camera_start (3 in, 0 out)
  ret 
@@ -533,7 +533,7 @@ L981:
  pushFromFSp 4
  fetchValue 4
  gosub 4, L363
- pushImm 1002
+ pushImm 1002 ; ___possible_ref
  pushFromFSp 0
  syscall 2, 20 ; trap_magic_start_thread (2 in, 1 out)
  drop 
@@ -674,7 +674,7 @@ L1234:
  gosub 8, L1272
  jnz L1264
  pushImm 128
- pushImm 1468
+ pushImm 1468 ; ___possible_ref
  pushFromFSp 0
  gosub 8, L2371
  popToSp 4
@@ -868,7 +868,7 @@ L1568:
  add 
  popToSpVal 116
  pushImm 0
- pushImm 1933
+ pushImm 1933 ; ___possible_ref
  pushImm 0
  pushFromFSp 0
  syscall 0, 9 ; trap_thread_start (4 in, 1 out)
@@ -1087,7 +1087,7 @@ L1993:
  pushFromPSp 16
  gosub 12, L2121
  pushFromPSp 16
- pushFromPAi L9565
+ pushFromPAi L9565 ; ___ai: 'root' (L9565)
  syscall 0, 8 ; trap_vector_dump (2 in, 0 out)
  pushFromPSp 16
  pushFromFSp 0
@@ -1105,7 +1105,7 @@ L1993:
  pushFromPSp 16
  gosub 12, L2172
  pushFromPSp 16
- pushFromPAi L9209
+ pushFromPAi L9209 ; ___ai: 'dir' (L9209)
  syscall 0, 8 ; trap_vector_dump (2 in, 0 out)
  pushFromPSp 16
  pushImm 1065353216
@@ -1120,7 +1120,7 @@ L1993:
  pushFromPSp 16
  gosub 12, L2194
  pushFromPSp 16
- pushFromPAi L9556
+ pushFromPAi L9556 ; ___ai: 'scale' (L9556)
  syscall 0, 8 ; trap_vector_dump (2 in, 0 out)
  jmp L2102
 L2098:
@@ -1363,7 +1363,7 @@ L2455:
  pushFromFSp 0
  gosub 4, L2492
  pushFromFSp 0
- pushFromPAi L9344 ; TXT9344: 'mode_revenge' 
+ pushFromPAi L9344 ; ___ai: 'mode_revenge' (TXT9344)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L2491
 L2491:
@@ -1401,7 +1401,7 @@ L2529:
  memcpy 0
  pushImm 1
  popToSpVal 156
- pushFromPAi L9445 ; TXT9445: 'RC Mode ready!!!' 
+ pushFromPAi L9445 ; ___ai: 'RC Mode ready!!!' (TXT9445)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  jmp L2552
 L2552:
@@ -1420,7 +1420,7 @@ TR1:
 L2570:
  popToSp 0
  pushFromFSp 0
- pushFromPAi L9471 ; TXT9471: 'saber_effect_on' 
+ pushFromPAi L9471 ; ___ai: 'saber_effect_on' (TXT9471)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
  gosub 4, L2668
@@ -1468,7 +1468,7 @@ L2649:
  eqz 
  jnz L2664
  pushFromFSp 0
- pushFromPAi L9412 ; TXT9412: 'mode_battle' 
+ pushFromPAi L9412 ; ___ai: 'mode_battle' (TXT9412)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L2664
 L2664:
@@ -1516,9 +1516,9 @@ L2704:
  pushFromPWp W336
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9467 ; TXT9467: 'appear' 
+ pushFromPAi L9467 ; ___ai: 'appear' (TXT9467)
  pushImm 100
- pushImm 4479
+ pushImm L4479 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1529,9 +1529,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9221 ; TXT9221: 'leave' 
+ pushFromPAi L9221 ; ___ai: 'leave' (TXT9221)
  pushImm 196908
- pushImm 4692
+ pushImm L4692 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1542,9 +1542,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9424 ; TXT9424: 'freeze' 
+ pushFromPAi L9424 ; ___ai: 'freeze' (TXT9424)
  pushImm 100
- pushImm 4752
+ pushImm L4752 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1555,22 +1555,22 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9362 ; TXT9362: 'event' 
+ pushFromPAi L9362 ; ___ai: 'event' (TXT9362)
  pushImm 196908
- pushImm 4769
+ pushImm L4769 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
  pushImm 0
- pushImm 4774
+ pushImm L4774 ; ___ref
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9297 ; TXT9297: 'idle' 
+ pushFromPAi L9297 ; ___ai: 'idle' (TXT9297)
  pushImm 100
- pushImm 4789
+ pushImm L4789 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1581,9 +1581,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9372 ; TXT9372: 'idle_time' 
+ pushFromPAi L9372 ; ___ai: 'idle_time' (TXT9372)
  pushImm 100
- pushImm 5063
+ pushImm L5063 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1594,9 +1594,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9377 ; TXT9377: 'footwork' 
+ pushFromPAi L9377 ; ___ai: 'footwork' (TXT9377)
  pushImm 100
- pushImm 5119
+ pushImm L5119 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1607,9 +1607,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9387 ; TXT9387: 'mode_battle_boss' 
+ pushFromPAi L9387 ; ___ai: 'mode_battle_boss' (TXT9387)
  pushImm 100
- pushImm 5135
+ pushImm L5135 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1620,9 +1620,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9403 ; TXT9403: 'mode_revenge_boss' 
+ pushFromPAi L9403 ; ___ai: 'mode_revenge_boss' (TXT9403)
  pushImm 100
- pushImm 5216
+ pushImm L5216 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1633,9 +1633,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9264 ; TXT9264: 'mode_check' 
+ pushFromPAi L9264 ; ___ai: 'mode_check' (TXT9264)
  pushImm 65836
- pushImm 5282
+ pushImm L5282 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1646,9 +1646,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9471 ; TXT9471: 'saber_effect_on' 
+ pushFromPAi L9471 ; ___ai: 'saber_effect_on' (TXT9471)
  pushImm 100
- pushImm 5439
+ pushImm L5439 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1659,9 +1659,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9490 ; TXT9490: 'saber_effect_off' 
+ pushFromPAi L9490 ; ___ai: 'saber_effect_off' (TXT9490)
  pushImm 100
- pushImm 5473
+ pushImm L5473 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1672,9 +1672,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9581 ; TXT9581: 'idle_short' 
+ pushFromPAi L9581 ; ___ai: 'idle_short' (TXT9581)
  pushImm 100
- pushImm 5514
+ pushImm L5514 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1685,9 +1685,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9418 ; TXT9418: 'idle_middle' 
+ pushFromPAi L9418 ; ___ai: 'idle_middle' (TXT9418)
  pushImm 100
- pushImm 5558
+ pushImm L5558 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1698,9 +1698,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9507 ; TXT9507: 'idle_long' 
+ pushFromPAi L9507 ; ___ai: 'idle_long' (TXT9507)
  pushImm 100
- pushImm 5602
+ pushImm L5602 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1711,9 +1711,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9428 ; TXT9428: 'idle_wait' 
+ pushFromPAi L9428 ; ___ai: 'idle_wait' (TXT9428)
  pushImm 100
- pushImm 5646
+ pushImm L5646 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1724,9 +1724,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9281 ; TXT9281: 'faint_short' 
+ pushFromPAi L9281 ; ___ai: 'faint_short' (TXT9281)
  pushImm 100
- pushImm 5694
+ pushImm L5694 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1737,9 +1737,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9351 ; TXT9351: 'faint_long' 
+ pushFromPAi L9351 ; ___ai: 'faint_long' (TXT9351)
  pushImm 100
- pushImm 5753
+ pushImm L5753 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1750,9 +1750,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9292 ; TXT9292: 'comeback' 
+ pushFromPAi L9292 ; ___ai: 'comeback' (TXT9292)
  pushImm 100
- pushImm 5796
+ pushImm L5796 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1763,9 +1763,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9233 ; TXT9233: 'warp_target_near' 
+ pushFromPAi L9233 ; ___ai: 'warp_target_near' (TXT9233)
  pushImm 65836
- pushImm 5823
+ pushImm L5823 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1776,9 +1776,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9211 ; TXT9211: 'warp_target_middle' 
+ pushFromPAi L9211 ; ___ai: 'warp_target_middle' (TXT9211)
  pushImm 65836
- pushImm 6413
+ pushImm L6413 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1789,9 +1789,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9242 ; TXT9242: 'warp_target_far' 
+ pushFromPAi L9242 ; ___ai: 'warp_target_far' (TXT9242)
  pushImm 65836
- pushImm 6452
+ pushImm L6452 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1802,9 +1802,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9512 ; TXT9512: 'warp_building_front' 
+ pushFromPAi L9512 ; ___ai: 'warp_building_front' (TXT9512)
  pushImm 100
- pushImm 6491
+ pushImm L6491 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1815,9 +1815,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9559 ; TXT9559: 'move_shield' 
+ pushFromPAi L9559 ; ___ai: 'move_shield' (TXT9559)
  pushImm 100
- pushImm 6829
+ pushImm L6829 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1828,9 +1828,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9568 ; TXT9568: 'move_counter' 
+ pushFromPAi L9568 ; ___ai: 'move_counter' (TXT9568)
  pushImm 100
- pushImm 7127
+ pushImm L7127 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1841,9 +1841,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9258 ; TXT9258: 'move_combo' 
+ pushFromPAi L9258 ; ___ai: 'move_combo' (TXT9258)
  pushImm 100
- pushImm 7143
+ pushImm L7143 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1854,9 +1854,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9327 ; TXT9327: 'rc_invitation_to_dark' 
+ pushFromPAi L9327 ; ___ai: 'rc_invitation_to_dark' (TXT9327)
  pushImm 100
- pushImm 7159
+ pushImm L7159 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1867,9 +1867,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9528 ; TXT9528: 'atk_dark' 
+ pushFromPAi L9528 ; ___ai: 'atk_dark' (TXT9528)
  pushImm 200
- pushImm 7403
+ pushImm L7403 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1880,9 +1880,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9538 ; TXT9538: 'check_atk_dark_hit' 
+ pushFromPAi L9538 ; ___ai: 'check_atk_dark_hit' (TXT9538)
  pushImm 100
- pushImm 7482
+ pushImm L7482 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1893,9 +1893,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9315 ; TXT9315: 'atk_shield' 
+ pushFromPAi L9315 ; ___ai: 'atk_shield' (TXT9315)
  pushImm 200
- pushImm 7491
+ pushImm L7491 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1906,9 +1906,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  pushImm 200
- pushImm 7569
+ pushImm L7569 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1919,9 +1919,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  pushImm 200
- pushImm 7583
+ pushImm L7583 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1932,10 +1932,10 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  pushImm 200
- pushImm 7656
- pushImm 7996
+ pushImm L7656 ; ___ref
+ pushImm L7996 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1945,9 +1945,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9270 ; TXT9270: 'mode_dark' 
+ pushFromPAi L9270 ; ___ai: 'mode_dark' (TXT9270)
  pushImm 65836
- pushImm 8022
+ pushImm L8022 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1958,9 +1958,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9321 ; TXT9321: 'mode_normal' 
+ pushFromPAi L9321 ; ___ai: 'mode_normal' (TXT9321)
  pushImm 100
- pushImm 8067
+ pushImm L8067 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1971,9 +1971,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9308 ; TXT9308: 'mode_hard' 
+ pushFromPAi L9308 ; ___ai: 'mode_hard' (TXT9308)
  pushImm 100
- pushImm 8162
+ pushImm L8162 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1984,9 +1984,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9300 ; TXT9300: 'mode_super_hard' 
+ pushFromPAi L9300 ; ___ai: 'mode_super_hard' (TXT9300)
  pushImm 100
- pushImm 8301
+ pushImm L8301 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -1997,9 +1997,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9412 ; TXT9412: 'mode_battle' 
+ pushFromPAi L9412 ; ___ai: 'mode_battle' (TXT9412)
  pushImm 100
- pushImm 8463
+ pushImm L8463 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -2010,9 +2010,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9344 ; TXT9344: 'mode_revenge' 
+ pushFromPAi L9344 ; ___ai: 'mode_revenge' (TXT9344)
  pushImm 100
- pushImm 8658
+ pushImm L8658 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -2023,9 +2023,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9441 ; TXT9441: 'revenge' 
+ pushFromPAi L9441 ; ___ai: 'revenge' (TXT9441)
  pushImm 65836
- pushImm 8794
+ pushImm L8794 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -2036,9 +2036,9 @@ L2704:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromPWp W336
- pushFromPAi L9255 ; TXT9255: 'dead' 
+ pushFromPAi L9255 ; ___ai: 'dead' (TXT9255)
  pushImm 196908
- pushImm 9011
+ pushImm L9011 ; ___ref
  pushImm 0
  pushImm 0
  pushImm 0
@@ -2565,7 +2565,7 @@ L5135:
  jmp L5165
 L5157:
  pushFromFSp 0
- pushFromPAi L9433
+ pushFromPAi L9433 ; ___ai: 'btl_normal' (L9433)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L5199
 L5165:
@@ -2576,7 +2576,7 @@ L5165:
  jmp L5182
 L5174:
  pushFromFSp 0
- pushFromPAi L9454
+ pushFromPAi L9454 ; ___ai: 'btl_hard' (L9454)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L5199
 L5182:
@@ -2587,7 +2587,7 @@ L5182:
  jmp L5199
 L5191:
  pushFromFSp 0
- pushFromPAi L9459
+ pushFromPAi L9459 ; ___ai: 'btl_super_hard' (L9459)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L5199
 L5199:
@@ -2616,7 +2616,7 @@ L5216:
  jmp L5246
 L5238:
  pushFromFSp 0
- pushFromPAi L9479
+ pushFromPAi L9479 ; ___ai: 'rvg_normal' (L9479)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L5280
 L5246:
@@ -2627,7 +2627,7 @@ L5246:
  jmp L5263
 L5255:
  pushFromFSp 0
- pushFromPAi L9485
+ pushFromPAi L9485 ; ___ai: 'rvg_hard' (L9485)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L5280
 L5263:
@@ -2638,7 +2638,7 @@ L5263:
  jmp L5280
 L5272:
  pushFromFSp 0
- pushFromPAi L9499
+ pushFromPAi L9499 ; ___ai: 'rvg_super_hard' (L9499)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L5280
 L5280:
@@ -2935,7 +2935,7 @@ L5753:
  info 
  jnz L5795
  pushFromFSp 0
- pushFromPAi L9351 ; TXT9351: 'faint_long' 
+ pushFromPAi L9351 ; ___ai: 'faint_long' (TXT9351)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L5795
 L5795:
@@ -2990,7 +2990,7 @@ L5861:
  gosub 4, L1862
  pushImm 1
  popToSpVal 140
- pushImm 5957
+ pushImm 5957 ; ___possible_ref
  pushFromFSp 0
  syscall 2, 20 ; trap_magic_start_thread (2 in, 1 out)
  drop 
@@ -3600,7 +3600,7 @@ L7019:
 L7042:
  jnz L7054
  pushFromFSp 0
- pushFromPAi L9233 ; TXT9233: 'warp_target_near' 
+ pushFromPAi L9233 ; ___ai: 'warp_target_near' (TXT9233)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L7063
 L7052:
@@ -4130,24 +4130,24 @@ L8022:
  pushFromFSpVal 148
  jnz L8040
  pushFromFSp 0
- pushFromPAi L9507 ; TXT9507: 'idle_long' 
+ pushFromPAi L9507 ; ___ai: 'idle_long' (TXT9507)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L8046
 L8040:
  pushFromFSp 0
- pushFromPAi L9512 ; TXT9512: 'warp_building_front' 
+ pushFromPAi L9512 ; ___ai: 'warp_building_front' (TXT9512)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
 L8046:
  jmp L8066
 L8048:
  pushFromFSp 0
- pushFromPAi L9233 ; TXT9233: 'warp_target_near' 
+ pushFromPAi L9233 ; ___ai: 'warp_target_near' (TXT9233)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9528 ; TXT9528: 'atk_dark' 
+ pushFromPAi L9528 ; ___ai: 'atk_dark' (TXT9528)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9538 ; TXT9538: 'check_atk_dark_hit' 
+ pushFromPAi L9538 ; ___ai: 'check_atk_dark_hit' (TXT9538)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L8066:
  ret 
@@ -4168,21 +4168,21 @@ L8067:
  eqz 
  jnz L8108
  pushFromFSp 0
- pushFromPAi L9559 ; TXT9559: 'move_shield' 
+ pushFromPAi L9559 ; ___ai: 'move_shield' (TXT9559)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9315 ; TXT9315: 'atk_shield' 
+ pushFromPAi L9315 ; ___ai: 'atk_shield' (TXT9315)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8149
 L8108:
  pushFromFSp 0
- pushFromPAi L9568 ; TXT9568: 'move_counter' 
+ pushFromPAi L9568 ; ___ai: 'move_counter' (TXT9568)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9581 ; TXT9581: 'idle_short' 
+ pushFromPAi L9581 ; ___ai: 'idle_short' (TXT9581)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
  gosub 4, L8150
@@ -4223,13 +4223,13 @@ L8162:
  eqz 
  jnz L8209
  pushFromFSp 0
- pushFromPAi L9211 ; TXT9211: 'warp_target_middle' 
+ pushFromPAi L9211 ; ___ai: 'warp_target_middle' (TXT9211)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8300
 L8209:
@@ -4240,13 +4240,13 @@ L8209:
  eqz 
  jnz L8240
  pushFromFSp 0
- pushFromPAi L9233 ; TXT9233: 'warp_target_near' 
+ pushFromPAi L9233 ; ___ai: 'warp_target_near' (TXT9233)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8300
 L8240:
@@ -4257,18 +4257,18 @@ L8240:
  eqz 
  jnz L8265
  pushFromFSp 0
- pushFromPAi L9242 ; TXT9242: 'warp_target_far' 
+ pushFromPAi L9242 ; ___ai: 'warp_target_far' (TXT9242)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8300
 L8265:
  pushFromFSp 0
- pushFromPAi L9233 ; TXT9233: 'warp_target_near' 
+ pushFromPAi L9233 ; ___ai: 'warp_target_near' (TXT9233)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
  gosub 4, L8150
@@ -4295,7 +4295,7 @@ L8301:
  add 
  memcpy 0
  pushFromFSp 0
- pushFromPAi L9233 ; TXT9233: 'warp_target_near' 
+ pushFromPAi L9233 ; ___ai: 'warp_target_near' (TXT9233)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
  fetchValue 16
@@ -4304,19 +4304,19 @@ L8301:
  eqz 
  jnz L8366
  pushFromFSp 0
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9559 ; TXT9559: 'move_shield' 
+ pushFromPAi L9559 ; ___ai: 'move_shield' (TXT9559)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8462
 L8366:
@@ -4327,36 +4327,36 @@ L8366:
  eqz 
  jnz L8415
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9258 ; TXT9258: 'move_combo' 
+ pushFromPAi L9258 ; ___ai: 'move_combo' (TXT9258)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9559 ; TXT9559: 'move_shield' 
+ pushFromPAi L9559 ; ___ai: 'move_shield' (TXT9559)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8462
 L8415:
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9568 ; TXT9568: 'move_counter' 
+ pushFromPAi L9568 ; ___ai: 'move_counter' (TXT9568)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
  gosub 4, L8150
@@ -4378,12 +4378,12 @@ L8463:
  pushImm 0
  gosub 4, L5201
  pushFromFSp 0
- pushFromPAi L9264 ; TXT9264: 'mode_check' 
+ pushFromPAi L9264 ; ___ai: 'mode_check' (TXT9264)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSpVal 156
  jnz L8490
  pushFromFSp 0
- pushFromPAi L9270 ; TXT9270: 'mode_dark' 
+ pushFromPAi L9270 ; ___ai: 'mode_dark' (TXT9270)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8657
 L8490:
@@ -4400,13 +4400,13 @@ L8490:
  jmp L8530
 L8510:
  pushFromFSp 0
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9233 ; TXT9233: 'warp_target_near' 
+ pushFromPAi L9233 ; ___ai: 'warp_target_near' (TXT9233)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8605
 L8530:
@@ -4417,13 +4417,13 @@ L8530:
  jmp L8559
 L8539:
  pushFromFSp 0
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8605
 L8559:
@@ -4434,10 +4434,10 @@ L8559:
  jmp L8582
 L8568:
  pushFromFSp 0
- pushFromPAi L9281 ; TXT9281: 'faint_short' 
+ pushFromPAi L9281 ; ___ai: 'faint_short' (TXT9281)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9292 ; TXT9292: 'comeback' 
+ pushFromPAi L9292 ; ___ai: 'comeback' (TXT9292)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8605
 L8582:
@@ -4448,10 +4448,10 @@ L8582:
  jmp L8605
 L8591:
  pushFromFSp 0
- pushFromPAi L9351 ; TXT9351: 'faint_long' 
+ pushFromPAi L9351 ; ___ai: 'faint_long' (TXT9351)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9292 ; TXT9292: 'comeback' 
+ pushFromPAi L9292 ; ___ai: 'comeback' (TXT9292)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8605
 L8605:
@@ -4467,7 +4467,7 @@ L8613:
  eqz 
  jnz L8632
  pushFromFSp 0
- pushFromPAi L9300 ; TXT9300: 'mode_super_hard' 
+ pushFromPAi L9300 ; ___ai: 'mode_super_hard' (TXT9300)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8657
 L8632:
@@ -4478,24 +4478,24 @@ L8632:
  eqz 
  jnz L8651
  pushFromFSp 0
- pushFromPAi L9308 ; TXT9308: 'mode_hard' 
+ pushFromPAi L9308 ; ___ai: 'mode_hard' (TXT9308)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8657
 L8651:
  pushFromFSp 0
- pushFromPAi L9321 ; TXT9321: 'mode_normal' 
+ pushFromPAi L9321 ; ___ai: 'mode_normal' (TXT9321)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L8657:
  ret 
 L8658:
  popToSp 0
  pushFromFSp 0
- pushFromPAi L9264 ; TXT9264: 'mode_check' 
+ pushFromPAi L9264 ; ___ai: 'mode_check' (TXT9264)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSpVal 156
  jnz L8678
  pushFromFSp 0
- pushFromPAi L9270 ; TXT9270: 'mode_dark' 
+ pushFromPAi L9270 ; ___ai: 'mode_dark' (TXT9270)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8793
 L8678:
@@ -4512,12 +4512,12 @@ L8678:
  infzf 
  jnz L8708
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8714
 L8708:
  pushFromFSp 0
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L8714:
  jmp L8793
@@ -4532,7 +4532,7 @@ L8716:
  gosub 4, L8150
  popToSp 4
  pushFromFSp 0
- pushFromPAi L9233 ; TXT9233: 'warp_target_near' 
+ pushFromPAi L9233 ; ___ai: 'warp_target_near' (TXT9233)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 4
  pushImm 1050253722
@@ -4540,7 +4540,7 @@ L8716:
  infzf 
  jnz L8756
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8785
 L8756:
@@ -4550,28 +4550,28 @@ L8756:
  infzf 
  jnz L8779
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8785
 L8779:
  pushFromFSp 0
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L8785:
  jmp L8793
 L8787:
  pushFromFSp 0
- pushFromPAi L9412 ; TXT9412: 'mode_battle' 
+ pushFromPAi L9412 ; ___ai: 'mode_battle' (TXT9412)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L8793:
  ret 
 L8794:
  popToSp 0
  pushFromFSp 0
- pushFromPAi L9264 ; TXT9264: 'mode_check' 
+ pushFromPAi L9264 ; ___ai: 'mode_check' (TXT9264)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  pushFromFSp 0
  syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
@@ -4595,7 +4595,7 @@ L8837:
  pushFromFSpVal 156
  jnz L8849
  pushFromFSp 0
- pushFromPAi L9270 ; TXT9270: 'mode_dark' 
+ pushFromPAi L9270 ; ___ai: 'mode_dark' (TXT9270)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L9010
 L8849:
@@ -4615,10 +4615,10 @@ L8849:
 L8872:
  jnz L8888
  pushFromFSp 0
- pushFromPAi L9233 ; TXT9233: 'warp_target_near' 
+ pushFromPAi L9233 ; ___ai: 'warp_target_near' (TXT9233)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8913
 L8888:
@@ -4629,12 +4629,12 @@ L8888:
  infzf 
  jnz L8907
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L8913
 L8907:
  pushFromFSp 0
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L8913:
  jmp L9010
@@ -4649,7 +4649,7 @@ L8915:
  gosub 4, L8150
  popToSp 4
  pushFromFSp 0
- pushFromPAi L9233 ; TXT9233: 'warp_target_near' 
+ pushFromPAi L9233 ; ___ai: 'warp_target_near' (TXT9233)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 4
  pushImm 1053609165
@@ -4657,10 +4657,10 @@ L8915:
  infzf 
  jnz L8961
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L9002
 L8961:
@@ -4670,27 +4670,27 @@ L8961:
  infzf 
  jnz L8984
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  jmp L9002
 L8984:
  pushFromFSp 0
- pushFromPAi L9250 ; TXT9250: 'atk_combo' 
+ pushFromPAi L9250 ; ___ai: 'atk_combo' (TXT9250)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9224 ; TXT9224: 'atk_shield_short' 
+ pushFromPAi L9224 ; ___ai: 'atk_shield_short' (TXT9224)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
  pushFromFSp 0
- pushFromPAi L9575 ; TXT9575: 'atk_counter' 
+ pushFromPAi L9575 ; ___ai: 'atk_counter' (TXT9575)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L9002:
  jmp L9010
 L9004:
  pushFromFSp 0
- pushFromPAi L9412 ; TXT9412: 'mode_battle' 
+ pushFromPAi L9412 ; ___ai: 'mode_battle' (TXT9412)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L9010:
  ret 

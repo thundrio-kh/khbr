@@ -6766,8 +6766,6 @@
             ]
         },
         "blacklist_destination": [
-            "Thresholder",
-            "The Beast",
             "Xigbar",
             "Luxord",
             "Terra"
@@ -6779,7 +6777,13 @@
         "adds": [
             {
                 "ObjectId": 358,
-                "name": "Illuminator"
+                "name": "Illuminator",
+                "aimods": [
+                    {
+                        "name": "B_CA000/b_ca.bdscript",
+                        "type": "obj"
+                    }
+                ]
             }
         ],
         "tags": [
@@ -8769,7 +8773,12 @@
             "organization",
             "solo"
         ],
-        "luamod": "final_xemnas",
+        "aimods": [
+            {
+                "name": "B_EX170_LAST_99/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "variationof": "Final Xemnas",
         "msn_replace_allowed": false,
         "hp": 100,
@@ -8803,7 +8812,6 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,
@@ -8819,7 +8827,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Final Xemnas (Data)": {
         "final_fight": true,
@@ -8834,7 +8843,12 @@
             "solo"
         ],
         "enabled": true,
-        "luamod": "final_xemnas",
+        "aimods": [
+            {
+                "name": "B_EX170_LAST_99/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "variationof": "Final Xemnas",
         "msn_replace_allowed": false,
         "hp": 100,
@@ -8869,12 +8883,6 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [
-            {
-                "name": "B_EX170/LAST_LV99/b_ex.bdscript",
-                "type": "obj"
-            }
-        ],
         "mickey_source": false,
         "can_be_enemy": false,
         "can_be_enemy_override": false,
@@ -8902,7 +8910,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Luxord (Data)": {
         "vars": [
@@ -10370,11 +10379,10 @@
         "name": "Final Xemnas",
         "aimods": [
             {
-                "name": "B_EX170/LAST_LV99/b_ex.bdscript",
+                "name": "B_EX170_LAST/b_ex.bdscript",
                 "type": "obj"
             }
         ],
-        "luamod": "final_xemnas",
         "blacklist_destination": [
             "Volcano Lord",
             "Blizzard Lord",
@@ -10440,6 +10448,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
+        "luamod": null,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -10496,11 +10505,10 @@
         "name": "Final Xemnas (Clone)",
         "aimods": [
             {
-                "name": "B_EX170/LAST_LV99/b_ex.bdscript",
+                "name": "B_EX170_LAST/b_ex.bdscript",
                 "type": "obj"
             }
         ],
-        "luamod": "final_xemnas",
         "blacklist_destination": [
             "Volcano Lord",
             "Blizzard Lord",
@@ -10561,7 +10569,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {}
+        "obj_edits": {},
+        "luamod": null
     },
     "Fortuneteller": {
         "vars": [
@@ -13834,6 +13843,12 @@
         ],
         "name": "Illuminator",
         "enabled": false,
+        "aimods": [
+            {
+                "name": "B_CA000/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enmp_index": 98,
         "hp": 100,
         "level": 99,
@@ -13857,7 +13872,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,
@@ -21400,6 +21414,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -21633,6 +21648,7 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",

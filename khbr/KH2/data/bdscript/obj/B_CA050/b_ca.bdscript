@@ -1437,7 +1437,7 @@ L3024:
  pushImm 107
  syscall 1, 265 ; trap_obj_set_medal (2 in, 0 out)
  pushFromPSpVal 288
- pushImm 652
+ pushImm 775
  syscall 1, 265 ; trap_obj_set_medal (2 in, 0 out)
  jmp L3268
 L3220:

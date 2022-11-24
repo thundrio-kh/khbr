@@ -1180,8 +1180,6 @@ Barbossa:
     - Luxord # report of crash after cutscene
     - Terra # report of crash at cutscene
   blacklist_destination:
-  - Thresholder # Illuminator spawn loc
-  - The Beast # Illuminator spawn loc
   - Xigbar # You are put in boxed in space
   blacklist_source:
   - Thresholder # report of fight not ending
@@ -1189,7 +1187,9 @@ Barbossa:
   adds:
   - ObjectId: 358 #Illuminator
     name: Illuminator
-    #aimods: false # obj/B_CA000/b_ca.bdscript
+    aimods:
+    - name: B_CA000/b_ca.bdscript
+      type: obj
   tags:
   - needs_teleport
   enabled: true
@@ -1654,7 +1654,9 @@ Final Xemnas (Data):
   - organization
   - solo
   enabled: true
-  luamod: "final_xemnas"
+  aimods: 
+  - name: B_EX170_LAST_99/b_ex.bdscript
+    type: obj
   variationof: Final Xemnas
   msn_replace_allowed: false # this might break things
   hp: 100
@@ -2065,9 +2067,8 @@ Fiery Globe Treasure Room:
       - 0
 Final Xemnas:
   aimods: 
-  - name: B_EX170/LAST_LV99/b_ex.bdscript
+  - name: B_EX170_LAST/b_ex.bdscript
     type: obj
-  luamod: "final_xemnas"
   blacklist_destination:
   - Volcano Lord
   - Blizzard Lord
@@ -2746,7 +2747,9 @@ Icy Cube Treasure Room:
       - 0
 Illuminator:
   enabled: false
-  #aimods: false # obj/B_CA000/b_ca.bdscript
+  aimods:
+  - name: B_CA000/b_ca.bdscript
+    type: obj
   enmp_index: 0x62
   hp: 100
   level: 99
