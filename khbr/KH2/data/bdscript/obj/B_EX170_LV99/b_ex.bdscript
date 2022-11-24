@@ -4874,7 +4874,7 @@ TXT9321:
  db 'mode_normal',0
 L9327:
 TXT9327:
- db 'rc_invitation_to_dark',0
+ db '',0
 TXT9338:
  db 'btl_attack',0,0
 L9344:
@@ -4947,7 +4947,7 @@ TXT9467:
  db 'appear',0,0
 L9471:
 TXT9471:
- db 'saber_effect_on',0
+ db '',0
 TXT9479:
 L9479:
  db 'rvg_normal',0,0
@@ -4965,7 +4965,7 @@ TXT9507:
  db 'idle_long',0
 L9512:
 TXT9512:
- db 'warp_building_front',0
+ db '',0
 TXT9522:
  db 'rst_normal',0,0
 L9528:

@@ -5591,7 +5591,7 @@ L10209:
  memcpyToSp 16, 16
  pushFromPSp 16
  pushImm 9
- syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
+ syscall 1, 212 ; trap_obj_pattern_disable (2 in, 0 out)
  pushFromFSp 0
  gosub 4, L10034
  jnz L10233
@@ -15039,7 +15039,7 @@ TXT28976:
  db 'atk_dance5',0,0
 L28982:
 TXT28982:
- db 'reborn',0,0
+ db '',0,0
 L28986:
 TXT28986:
  db 'atk_dance2',0,0
@@ -15057,7 +15057,7 @@ TXT29011:
  db 'dead',0,0
 L29014:
 TXT29014:
- db 'rc_invitation_to_dark2',0,0
+ db '',0,0
 L29026:
 TXT29026:
  db 'atk_dance9',0,0
@@ -15087,7 +15087,7 @@ TXT29069:
  db 'init',0,0
 TXT29072:
 L29072:
- db 'riku detach',0
+ db '',0
 L29078:
 TXT29078:
  db 'stop',0,0
@@ -15104,7 +15104,7 @@ TXT29105:
  db 'atk_dance6',0,0
 L29111:
 TXT29111:
- db 'atk_dark',0,0
+ db '',0,0
 TXT29116:
  db 'jump end',0,0
 L29121:
@@ -15121,7 +15121,7 @@ TXT29146:
  db 'idle',0,0
 L29149:
 TXT29149:
- db 'rc_invitation_to_dark2_finish',0
+ db '',0
 L29164:
 TXT29164:
  db 'atk_dance_finish',0,0
@@ -15157,7 +15157,7 @@ L29218:
  db 'btl_long',0,0
 TXT29223:
 L29223:
- db 'dark',0,0
+ db '',0,0
 L29226:
 TXT29226:
  db 'atk_crowd_laser',0
@@ -15175,7 +15175,7 @@ TXT29255:
  db 'run_start',0
 L29260:
 TXT29260:
- db 'event',0
+ db '',0
 TXT29263:
 L29263:
  db 'camera start 70',0
@@ -15217,7 +15217,7 @@ TXT29325:
  db 'footwork',0,0
 L29330:
 TXT29330:
- db 'talk',0,0
+ db '',0,0
 L29333:
 TXT29333:
  db 'btl_normal',0,0
@@ -15282,7 +15282,7 @@ TXT29456:
  db 'atk_dance4',0,0
 TXT29462:
 L29462:
- db 'riku hook start',0
+ db '',0
 L29470:
 TXT29470:
  db 'rvg_normal',0,0
@@ -15297,7 +15297,7 @@ TXT29488:
  db 'rvg_hard',0,0
 L29493:
 TXT29493:
- db 'mode_battle_dark',0,0
+ db '',0,0
 TXT29502:
 L29502:
  db '40',0,0
@@ -15312,7 +15312,7 @@ TXT29509:
  db 'rvg_super_hard',0,0
 L29517:
 TXT29517:
- db 'mode_dark_start',0
+ db '',0
 L29525:
 TXT29525:
  db 'revenge',0

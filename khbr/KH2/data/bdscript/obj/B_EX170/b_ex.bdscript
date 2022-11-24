@@ -4666,7 +4666,7 @@ L8937:
  db 'dir',0
 L8939:
 TXT8939:
- db 'warp_building_front',0
+ db '',0
 L8949:
 TXT8949:
  db 'atk_dark',0,0
@@ -4715,7 +4715,7 @@ TXT9032:
  db 'warp_target_far',0
 L9040:
 TXT9040:
- db 'rc_invitation_to_dark',0
+ db '',0
 TXT9051:
  db 'btl_attack',0,0
 L9057:
@@ -4836,7 +4836,7 @@ L9285:
  db 'root',0,0
 L9288:
 TXT9288:
- db 'saber_effect_on',0
+ db '',0
 L9296:
 TXT9296:
  db 'idle_long',0

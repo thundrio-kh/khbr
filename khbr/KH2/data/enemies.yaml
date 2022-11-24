@@ -1655,7 +1655,7 @@ Final Xemnas (Data):
   - solo
   enabled: true
   aimods: 
-  - name: B_EX170_LAST_99/b_ex.bdscript
+  - name: B_EX170_LAST_LV99/b_ex.bdscript
     type: obj
   variationof: Final Xemnas
   msn_replace_allowed: false # this might break things
@@ -4484,9 +4484,6 @@ Trick Ghost:
       - 0
       - 0
 Twilight Thorn:
-  aimods:
-  - name: B_EX100/b_ex.bdscript
-    type: obj
   enabled: true
   enmp_index: 0x56
   tags:

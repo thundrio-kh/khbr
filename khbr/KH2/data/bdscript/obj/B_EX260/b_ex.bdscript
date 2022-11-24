@@ -3011,7 +3011,7 @@ TXT5797:
  db 'test_call',0
 TXT5802:
 L5802:
- db 'nobady_call',0
+ db '',0
 L5808:
 TXT5808:
  db 'warp_test',0

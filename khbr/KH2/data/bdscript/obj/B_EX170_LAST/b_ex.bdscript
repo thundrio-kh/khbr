@@ -5558,7 +5558,7 @@ L10135:
  memcpyToSp 16, 16
  pushFromPSp 16
  pushImm 9
- syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
+ syscall 1, 212 ; trap_obj_pattern_disable (2 in, 0 out)
  pushFromFSp 0
  gosub 4, L9960
  jnz L10177
@@ -14343,7 +14343,7 @@ TXT27679:
  db 'atk_dance9',0,0
 L27685:
 TXT27685:
- db 'atk_dark',0,0
+ db '',0,0
 L27690:
 TXT27690:
  db 'leave',0
@@ -14358,7 +14358,7 @@ TXT27702:
  db 'atk_dance7',0,0
 L27708:
 TXT27708:
- db 'rc_invitation_to_dark2',0,0
+ db '',0,0
 L27720:
 TXT27720:
  db 'atk_dance8',0,0
@@ -14388,13 +14388,13 @@ TXT27777:
  db 'mode_battle_boss',0,0
 TXT27786:
 L27786:
- db 'riku detach',0
+ db '',0
 L27792:
 TXT27792:
  db 'atk_dance_finish',0,0
 L27801:
 TXT27801:
- db 'event',0
+ db '',0
 L27804:
 TXT27804:
  db 'init',0,0
@@ -14419,7 +14419,7 @@ TXT27836:
  db 'jump end',0,0
 L27841:
 TXT27841:
- db 'rc_invitation_to_dark2_finish',0
+ db '',0
 L27856:
 TXT27856:
  db 'idle',0,0
@@ -14434,7 +14434,7 @@ TXT27868:
  db 'mode_revenge_boss',0
 TXT27877:
 L27877:
- db 'add hp',0,0
+ db '',0,0
 L27881:
 TXT27881:
  db 'atk_dance4',0,0
@@ -14443,7 +14443,7 @@ L27887:
  db '71',0,0
 L27889:
 TXT27889:
- db 'mode_battle_dark',0,0
+ db '',0,0
 TXT27898:
 L27898:
  db '72',0,0
@@ -14464,7 +14464,7 @@ TXT27920:
  db 'laser_faint',0
 TXT27926:
 L27926:
- db 'dark',0,0
+ db '',0,0
 L27929:
 TXT27929:
  db 'run2_start',0,0
@@ -14509,7 +14509,7 @@ TXT27997:
  db 'atk_shield',0,0
 L28003:
 TXT28003:
- db 'talk',0,0
+ db '',0,0
 TXT28006:
 L28006:
  db 'range 1',0
@@ -14538,7 +14538,7 @@ L28055:
  db '@ref_count',0,0
 L28061:
 TXT28061:
- db 'mode_dark_start',0
+ db '',0
 L28069:
 TXT28069:
  db 'run',0
@@ -14562,10 +14562,10 @@ TXT28102:
  db 'INT',0
 TXT28104:
 L28104:
- db 'riku hook start',0
+ db '',0
 L28112:
 TXT28112:
- db 'reborn',0,0
+ db '',0,0
 L28116:
 TXT28116:
  db 'rc_air_fight',0,0

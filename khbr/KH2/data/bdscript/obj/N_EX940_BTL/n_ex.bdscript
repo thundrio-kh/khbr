@@ -1152,7 +1152,7 @@ L1559:
  pushImm 0
  syscall 1, 228 ; trap_sheet_hp (2 in, 1 out)
  cfti 
- pushImm 1050253722
+ pushImm 0
  mulf 
  citf 
  pushImm 0

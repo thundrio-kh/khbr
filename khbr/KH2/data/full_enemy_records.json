@@ -8674,7 +8674,7 @@
         ],
         "aimods": [
             {
-                "name": "B_EX170_LAST_99/b_ex.bdscript",
+                "name": "B_EX170_LAST_LV99/b_ex.bdscript",
                 "type": "obj"
             }
         ],
@@ -8744,7 +8744,7 @@
         "enabled": true,
         "aimods": [
             {
-                "name": "B_EX170_LAST_99/b_ex.bdscript",
+                "name": "B_EX170_LAST_LV99/b_ex.bdscript",
                 "type": "obj"
             }
         ],
@@ -21627,12 +21627,6 @@
             0
         ],
         "name": "Twilight Thorn",
-        "aimods": [
-            {
-                "name": "B_EX100/b_ex.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 86,
         "tags": [
@@ -21690,6 +21684,7 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,
