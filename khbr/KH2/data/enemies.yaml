@@ -945,6 +945,7 @@ Armor Xemnas I:
       mickey_source: true
       final_fight: true
       program: 71
+      outprogram: 0x57
       size: 3.82
       room_size: 12.98
       adds:
@@ -977,6 +978,7 @@ Armor Xemnas II:
     Armor Xemnas II:
       msn: EH23_MS112
       program: 73
+      outprogram: 0x54
       replace_as: Armor Xemnas I
       final_fight: true
       size: 1.7
@@ -1057,6 +1059,7 @@ Axel I:
   msn: TT05_MS404
   enmp_index: 0x94
   program: 87
+  outprogram: 0x05
   room_size: 9.43
   size: 2.92
   obj_id: 2229
@@ -1105,6 +1108,7 @@ Axel II:
   model: B_EX110
   msn: TT20_MS603
   program: 137
+  outprogram: 0xD4
   room_size: 3.68
   size: 3.74
   obj_id: 81
@@ -1201,6 +1205,7 @@ Barbossa:
   msn: CA10_MS107
   msn_source_as: WI01_MS101
   program: 60
+  outprogram: 0x02 # probably wrong3
   size: 3.95
   room_size: 11.84
   obj_id: 1015
@@ -1305,6 +1310,7 @@ Blizzard Lord:
       msn: AL03_MS103
       mickey_source: true
       program: 59
+      outprogram: 3
       room_size: 10.32
       roommaxsize: 13.36 # instead of roomsizemultiplier
       vars:
@@ -1403,6 +1409,7 @@ Cerberus:
       msn: HE07_MS103
       mickey_source: true
       program: 114
+      outprogram: 0x0A # probably wrong
       room_size: 10.54
       vars:
       - 0
@@ -1585,7 +1592,8 @@ Dark Thorn:
   limiter: 0
   model: B_BB110
   msn: BB05_MS104B
-  program: 79
+  program: 78
+  outprogram: 79
   size: 4.19
   room_size: 14.00
   roommaxsize: 17.03
@@ -3278,8 +3286,11 @@ Bomb Bell A:
       - 0
       - 0
 Oogie Boogie:
-  enabled: false
+  enabled: true
   enmp_index: 0x4B
+  aimods: 
+  - name: B_NM000/b_nm.bdscript
+    type: obj
   tags:
   - teleport_blocked
   hp: 100

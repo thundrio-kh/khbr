@@ -4,6 +4,10 @@
 * Prevent bosses from spawning in Encampment, when bosses as enemies mode is enabled
 * Added an AllocEnemy line to event scripts on PC, which should help prevent crashes due to going out of memory on PC (IE limit form against Lexaeus was a common one)
 * Refactoring of some internals to allow for additional features
+* Final Xemnas now works regardless of if Lua support is being used
+* Struggle bosses have all been reenabled on PC
+* Struggle fights will now prevent the placed boss from dying, so the struggle fight is actually a full struggle
+* The Illuminator will no longer move from the spot where Barbossa spawns it, to prevent issues where it moves to a unreachable location
 
 2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)
