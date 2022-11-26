@@ -403,7 +403,7 @@ L490:
  pushFromPSp 48
  pushImm 1
  pushImm 0
- syscall 1, 22 ; trap_obj_effect_start_pos (5 in, 1 out)
+ syscall 1, 22 ; trap_obj_effect_start_pos (5 in, 1 out) __exp
  popToSp 68
  pushFromPSp 16
  pushImm 1065353216
@@ -1515,14 +1515,14 @@ L2783:
  gosub 28, L1838
  pushFromPSp 4
  pushFromPSp 32
- syscall 1, 227 ; trap_obj_jump_direct (2 in, 0 out)
+ syscall 1, 227 ; trap_obj_jump_direct (2 in, 0 out) __exp
  jmp L2804
 L2804:
  pushFromPSpVal 0
  pushFromPSp 4
  pushImm 254
  pushImm 0
- syscall 1, 29 ; trap_obj_motion_capture (4 in, 1 out)
+ syscall 1, 29 ; trap_obj_motion_capture (4 in, 1 out) __exp
  drop 
  pushFromPSp 4
  pushImm 8
@@ -1622,7 +1622,7 @@ L3001:
  fetchValue 4
  pushImm 0
  pushImm 1098907648
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out) __exp
 L3020:
  ret 
 L3021:
@@ -1742,7 +1742,7 @@ L3114:
  memcpyToSp 16, 32
  pushFromPSp 32
  pushImm 0
- syscall 1, 111 ; trap_obj_set_movement (3 in, 0 out)
+ syscall 1, 111 ; trap_obj_set_movement (3 in, 0 out) __exp
  pushFromPSp 16
  pushImm 1065353216
  gosub 12, L1838
@@ -1759,7 +1759,7 @@ L3114:
  fetchValue 4
  pushImm 0
  pushImm 0
- syscall 1, 13 ; trap_sysobj_motion_push (3 in, 0 out)
+ syscall 1, 13 ; trap_sysobj_motion_push (3 in, 0 out) __exp
  pushFromFSp 0
  pushFromPAi L11322 ; ___ai: 'rc_roll_up' (TXT11322)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
@@ -1792,7 +1792,7 @@ L3322:
  syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
  memcpyToSp 16, 16
  pushFromPSp 16
- syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
+ syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out) __exp
  pushFromFSp 0
  pushFromFSp 8
  syscall 1, 201 ; trap_obj_dir (1 in, 1 out)
@@ -1899,7 +1899,7 @@ L3498:
  fetchValue 4
  pushImm 152
  pushImm 0
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out) __exp
  pushFromFSp 0
  pushFromFSp 8
  pushImm 253
@@ -2198,6 +2198,7 @@ L4042:
 L4077:
  ret 
 TR1:
+ syscall 1, 288 ; trap_status_begin_free_ability (0 in, 0 out)
  pushFromPWp W192
  gosub 4, L4083
  ret 
@@ -2263,10 +2264,6 @@ L4126:
  jnz L4206
  pushImm 1092616192
  popToSp 32
- pushFromFSp 0
- pushFromPSp 16
- pushFromFSp 32
- syscall 1, 111 ; trap_obj_set_movement (3 in, 0 out)
  jmp L4211
 L4206:
  pushImm 1
@@ -3251,7 +3248,7 @@ L6466:
  fetchValue 4
  pushImm 44
  pushImm 0
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out) __exp
  pushFromFSp 0
  syscall 1, 124 ; trap_obj_is_entry_fly (1 in, 1 out)
  dup 
@@ -3300,7 +3297,7 @@ L6605:
  fetchValue 4
  pushFromFSp 32
  pushImm 0
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out) __exp
  ret 
 L6617:
  pushFromPSp 0
@@ -3878,14 +3875,14 @@ L7564:
  fetchValue 4
  pushImm 132
  pushImm 0
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out) __exp
  jmp L7602
 L7590:
  pushFromFSp 0
  fetchValue 4
  pushImm 131
  pushImm 0
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out) __exp
 L7602:
  pushFromFSp 0
  pushImm 0
@@ -3896,7 +3893,7 @@ L7602:
  gosub 8, L3021
  pushFromFSp 0
  pushImm 1028443341
- syscall 1, 107 ; trap_obj_motion_speed (2 in, 0 out)
+ syscall 1, 107 ; trap_obj_motion_speed (2 in, 0 out) __exp
  gosub 8, L6740
  ret 
 L7630:
@@ -5155,7 +5152,7 @@ L10098:
  pushFromFSp 0
  pushFromFSp 16
  gosub 8, L7997
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out) __exp
  jmp L10123
 L10123:
  pushFromFSp 0
