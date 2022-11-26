@@ -927,7 +927,7 @@ Air Pirate:
       - 0
 Armor Xemnas I:
   aimods: 
-  - filename: B_EX260/b_ex.bdscript
+  - name: B_EX260/b_ex.bdscript
     type: obj
   enabled: true
   enmp_index: 0xA0
@@ -3286,7 +3286,7 @@ Bomb Bell A:
       - 0
       - 0
 Oogie Boogie:
-  enabled: true
+  enabled: false
   enmp_index: 0x4B
   aimods: 
   - name: B_NM000/b_nm.bdscript
@@ -3305,11 +3305,11 @@ Oogie Boogie:
   pc:
     unchanged_file_size: false
   room_size: 12.41
-  # adds:
-  # - ObjectId: 969 # ???
-  # - ObjectId: 1604 # oogies punch
-  # - ObjectId: 928 # ???
-  # - ObjectId: 1003 # present box
+  adds:
+  - ObjectId: 969 # ???
+  - ObjectId: 1604 # oogies punch
+  - ObjectId: 928 # ???
+  - ObjectId: 1003 # present box
   type: boss
   variations:
     Oogie Boogie:

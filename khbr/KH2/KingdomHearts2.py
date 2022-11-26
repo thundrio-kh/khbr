@@ -255,7 +255,8 @@ class KingdomHearts2:
         # self.set_spawns() # TODO is this needed?
         self.location_manager.set_locations() # TODO this might be unneeded time waste????
         assetgenerator.generateSpawns(randomization.get("spawns", ""), randomization.get("subtract_map"))
-        
+        assetgenerator.generateCustomMoveset()
+
         if DIAGNOSTICS:
             end_time = time.time()
             print_debug("Files Generated: {}s".format(end_time-start_time))

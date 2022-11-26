@@ -187,8 +187,7 @@ class EnemyManager:
         bosses = {}
 
         # Nightmare mode should override settings and always use datas and cups (until nightmare is a preset)
-        # TODO On PC cups bosses are exhibiting crashy behavior, so just disable them always for now on PC
-        use_cups_bosses = (not ispc) and (nightmare_bosses or options.get("cups_bosses"))
+        use_cups_bosses = nightmare_bosses or options.get("cups_bosses")
         use_data_bosses = nightmare_bosses or options.get("data_bosses")
         use_lua_bosses = options.get("lua_bosses")
 

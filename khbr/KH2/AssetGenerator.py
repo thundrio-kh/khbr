@@ -106,6 +106,17 @@ class AssetGenerator:
         asset = self.modwriter.writeEnmp(enmp_data_modified)
         self.assets.append(asset)
 
+    def generateCustomMoveset(self):
+        # sora moveset
+        with open(os.path.join(os.path.dirname(__file__), "data", "bin", "B_EX100.mset"), "rb") as f:
+            mset_data = f.read()
+        asset = self.modwriter.writeMset("B_EX100.mset", mset_data)
+        self.assets.append(asset)
+        with open(os.path.join(os.path.dirname(__file__), "data", "bin", "cmd.bin"), "rb") as f:
+            cmd_data = f.read()
+        asset = self.modwriter.writeCmd(cmd_data)
+        self.assets.append(asset)
+
     def generateAiMods(self, ai_mods):
         # Sort of a known issue but this will apply all the old and new mods for an ai, may cause issues someday
         # ie vivi

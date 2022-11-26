@@ -86,6 +86,41 @@ class ModWriter:
             ]
         }
 
+    def writeCmd(self, data):
+        outfn = os.path.join(self.outdir, "files", "root", "cmd.list")
+        fn = os.path.join("files", "root", "cmd.list")
+        self.write_method(outfn, fn, data)
+        return {
+            "name": "03system.bin",
+            "method": "binarc",
+            "source": [
+                {
+                    "name": "cmd",
+                    "type": "list",
+                    "method": "copy",
+                    "source": [
+                        {
+                            "name": fn
+                        }
+                    ]
+                }
+            ]
+        }
+
+    def writeMset(self, mset_fn, data):
+        outfn = os.path.join(self.outdir, "files", "obj", mset_fn)
+        fn = os.path.join("files", "obj", mset_fn)
+        self.write_method(outfn, fn, data)
+        return {
+            "name": "obj/{}".format(mset_fn),
+            "method": "copy",
+            "source": [
+                {
+                    "name": fn
+                }
+            ]
+        }
+
     def writeMSG(self, name, obj):
         outfn = os.path.join(self.outdir, "files", "msg", name+".yml")
         fn = os.path.join("files", "msg", name+".yml")

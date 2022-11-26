@@ -8,6 +8,7 @@
 * Struggle bosses have all been reenabled on PC
 * Struggle fights will now prevent the placed boss from dying, so the struggle fight is actually a full struggle
 * The Illuminator will no longer move from the spot where Barbossa spawns it, to prevent issues where it moves to a unreachable location
+* Now generating a custom moveset (thanks to DA) for Sora that will allow Twilight Thorn to work without major AI modifications
 
 2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)
