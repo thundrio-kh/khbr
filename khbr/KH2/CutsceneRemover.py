@@ -15,66 +15,69 @@ class CutsceneRemover:
             "lm", # little mermaid is all cutscenes lol so it softlocks
         ]
         self.ignore_ards = [
-            "lk08.ard", # Entering jungle for second visit story crashes pcsx2
-            "wi03.ard", # Beating WI causes the portal to not turn purple
-            "dc05.ard", # Marluxias portal doesn't show up after beating WI
-            "hb05.ard", # Causes you to be sent to SP instead of skipping it, and makes the HB portal send you to Data Demyx
-            "tt32.ard", # Causes GOA Mod to not give out the weapons of each ally, preventing second visits from working
-            "nm05.ard", # Fix vexens portal not showing up (likely an issue with the ard being a different size now)
-            "ca16.ard" # Fix OG Larxene portal still showing up (issue with ard size)
-            "hb26.ard" # Prevents third chest from showing up in GOA, and can cause incorrect portals to turn purple
+            "lk08", # Entering jungle for second visit story crashes pcsx2
+            "wi03", # Beating WI causes the portal to not turn purple
+            "dc05", # Marluxias portal doesn't show up after beating WI
+            "hb05", # Causes you to be sent to SP instead of skipping it, and makes the HB portal send you to Data Demyx
+            "tt32", # Causes GOA Mod to not give out the weapons of each ally, preventing second visits from working
+            "nm05", # Fix vexens portal not showing up (likely an issue with the ard being a different size now)
+            "ca16", # Fix OG Larxene portal still showing up (issue with ard size)
+            "hb26" # Prevents third chest from showing up in GOA, and can cause incorrect portals to turn purple
         ]
         self.ignore_programs =  {
-            "tt27.ard": ["0x02"], # Talking to yen sid
-            "tt28.ard": ["0x02"], # changing to kh2 sora
-            "tr01.ard": ["0x33"], # causes entering SP the second time to go to data larxene
-            "hb09.ard": ["0x33"], # causes first cutscene in merlin to not fire
+            "tt27": [0x02], # Talking to yen sid
+            "tt28": [0x02], # changing to kh2 sora
+            "tr01": [0x33], # causes entering SP the second time to go to data larxene
+            "hb09": [0x33], # causes first cutscene in merlin to not fire
             # "hb05.ard": ["0x02", "0x05", "0x06", "0x08"], # Causes you to be sent to SP instead of skipped, and makes demyx portal real
-            "eh20.ard": ["0x4a"]
+            "eh20": [0x4a]
         }
         # I have a check to not skip cutscenes with type > 100 because those tend to signify menu events
         # but sometimes (like with postgame cutscenes) these are real cutscenes that should be removed
         self.always_remove = {
-            "eh20.ard": [
-                "0x4A" # postgame
+            "eh20": [
+                0x4A # postgame
             ]
         }
         self.unskippable = []
-        self.ignored = []
-    def shouldIgnore(self, ard, program, eventtype, setsinventory, ismission):
-        ignore = False
+    def shouldRemove(self, ard, program, eventtype, setsinventory, ismission):
         if ard[:2] in self.ignore_worlds:
-            ignore = True
+            return False
         if ard in self.ignore_ards:
-            ignore = True
+            return False
         # NEEDED To make choosing weapons work
         if int(eventtype) >= 128 and not ard.startswith("eh") and not ard.startswith("es"):
-            self.unskippable.append("{}-{}".format(ard,program))
-            ignore = True
+            return False
         if ard in self.ignore_programs:
-            if program.strip() in self.ignore_programs[ard]:
-                ignore = True
+            if program in self.ignore_programs[ard]:
+                return False
         if ard in self.always_remove:
-            if program.strip() in self.always_remove[ard]:
-                ignore = False
+            if program in self.always_remove[ard]:
+                return True
         # Maximum ignore set first, then go back and turn off for lower levels
         if self.level < 3 and setsinventory:
-            ignore = False
+            return False
         if self.level < 2 and ismission:
-            ignore = False
-        if ignore:
-            self.ignored.append("{}-{}".format(ard,program.strip()))
-        return ignore
+            print(ard, program)
+            return False
+        return True
         
     def removeCutscenes(self):
         for ardname in self.location_manager.locmap.values():
-            ardasset = self.assetgenerator.find_asset(ardname+".ard", self.assetgenerator.getDefaultRoomAsset(ardname+".ard"))
+            ardasset = self.assetgenerator.find_asset(ardname+".ard", self.assetgenerator.getDefaultRoomAsset(ardname))
             evtfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "evt.script")
+            evtfn_goa = os.path.join(os.path.dirname(__file__), "data", "goa", "ard", ardname, "evt.script")
             btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
+            if not os.path.exists(evtfn):
+                continue
+            if os.path.exists(evtfn_goa):
+                evtfn = evtfn_goa
             with open(evtfn) as f:
                 evtscript = AreaDataScript(f.read())
-            with open(btlfn) as f:
-                btlscript = AreaDataScript(f.read())
+            hasbattle = os.path.exists(btlfn)
+            if hasbattle:
+                with open(btlfn) as f:
+                    btlscript = AreaDataScript(f.read())
             for num in evtscript.programs:
                 evtprogram = evtscript.get_program(num)
                 hascs = evtprogram.has_command("SetEvent")
@@ -84,10 +87,17 @@ class CutsceneRemover:
                 if eventtype == "66": # Is theater cutscene can ignore
                     continue
                 setsinventory = evtprogram.has_command("SetInventory")
-                btlprogram = btlscript.get_program(num)
-                ismission = bool(btlprogram.get_mission()) if btlprogram else False
-                removecs = self.shouldIgnore(ardname, num, eventtype, setsinventory, ismission)
+                if hasbattle:
+                    btlprogram = btlscript.get_program(num)
+                    ismission = bool(btlprogram.get_mission()) if btlprogram else False
+                else:
+                    ismission = False
+                removecs = self.shouldRemove(ardname, num, eventtype, setsinventory, ismission)
                 if removecs:
                     evtprogram.remove_event()
-                    prgasset = self.modwriter.writeAreaDataProgram(ardname, "evt", num, evtprogram.make_program())
+                    prgasset = self.assetgenerator.modwriter.writeAreaDataProgram(ardname, "evt", num, evtprogram.make_program())
                     ardasset["source"].append(prgasset)
+
+# 2 issues
+# ard.ard
+# lm only

@@ -1840,7 +1840,7 @@ Demyx:
       - 1
       - 0
 Demyx OC:
-  enabled: false
+  enabled: true
   hp: 100
   level: 99
   limiter: 0
@@ -1848,7 +1848,6 @@ Demyx OC:
   tags:
   - teleport_blocked
   msn: HE17_MS105
-  source_replace_allowed: false
   obj_id: 795
   size: 2.74
   room_size: 9.09

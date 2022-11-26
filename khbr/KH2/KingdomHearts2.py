@@ -95,7 +95,7 @@ class KingdomHearts2:
             utility_mods.append("retry_dark_thorn")
         rmcs = options.get("remove_cutscenes", "Disabled")
         if rmcs and rmcs != "Disabled":
-            utility_mods.append("remove_cutscenes-{}".format(options.get("remove_cutscenes")))
+            utility_mods.append("remove_cutscenes{}".format(options.get("remove_cutscenes")))
         return utility_mods
 
     def perform_randomization(self, options, seed=None):
@@ -258,7 +258,7 @@ class KingdomHearts2:
         rmcs = [u for u in utility_mods if u.startswith("remove_cutscenes")]
         if len(rmcs):
             cutsceneremover = CutsceneRemover(assetgenerator, mode=rmcs[0].replace("remove_cutscenes", ""))
-            cutsceneremover.removeCutscenes(assetgenerator, mode=rmcs[0].replace("remove_cutscenes", ""))
+            cutsceneremover.removeCutscenes()
         assetgenerator.generateAiMods(randomization.get("ai_mods"))
         assetgenerator.generateLuaMods(randomization.get("lua_mods"))
         assetgenerator.generateMsns(randomization.get("msn_map", {}), self.mission_manager.msninfo)

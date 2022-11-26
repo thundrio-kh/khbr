@@ -1,0 +1,15 @@
+- Type: 1
+  Flag: 0
+  Id: 172
+  Teleport:
+    Place: 0
+    Door: 0
+    World: 0
+    Unknown: 0
+  Unk20: 0
+  Unk24: 0
+  Entities: []
+  EventActivators: []
+  WalkPath: []
+  ReturnParameters: []
+  Signals: []

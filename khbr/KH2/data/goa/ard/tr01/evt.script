@@ -1,0 +1,7 @@
+Program 0x0B
+AreaSettings 1 25
+	SetJump Type 1 World TR Area 4 Entrance 0 LocalSet 0 FadeType 1
+	SetPartyMenu 0
+
+Spawn "e_06"
+Spawn "e_50"
