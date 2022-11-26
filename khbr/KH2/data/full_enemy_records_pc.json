@@ -13964,6 +13964,12 @@
         ],
         "name": "Jafar",
         "enabled": false,
+        "aimods": [
+            {
+                "name": "B_AL020/b_al.bdscript",
+                "type": "obj"
+            }
+        ],
         "enmp_index": 138,
         "hp": 100,
         "level": 99,
@@ -13991,7 +13997,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,

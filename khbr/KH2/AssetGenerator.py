@@ -10,7 +10,7 @@ import os, yaml
 
 # TODO future refactor could use jsonpath to make looking through the complex spawns dict easier
 class AssetGenerator:
-    def __init__(self, modwriter, spawn_manager = None, location_manager=None, enemy_manager = None, ispc=False):
+    def __init__(self, modwriter, spawn_manager = None, location_manager=None, enemy_manager = None, ispc=False, cutscene_remover=False):
         self.assets = []
         self.modwriter = modwriter
         self.enemy_manager = enemy_manager
@@ -18,13 +18,15 @@ class AssetGenerator:
         self.spawn_manager = spawn_manager
         self.ispc = ispc
 
-    #TODO might want an inhouse mergeasset someday
-    #also this assumes pass by reference works
-    def _find_asset(self, assetname):
+    #TODO this might be super slow
+    def find_asset(self, assetname, default=None):
         for asset in self.assets:
             if asset["name"].endswith(assetname):
                 return asset
-        return None
+        if not default:
+            return None
+        self.assets.append(default)
+        return default
 
     def generatePlrp(self, hp=20, mp=100, ap=50, accessoryslt=3, armorslt=3, itemslt=3, items=[]):
         # Must give to noncrit and crit version of sora
@@ -46,7 +48,7 @@ class AssetGenerator:
         }
         plrp = [_genobj(1, 0)]
         asset = self.modwriter.writePlrp(plrp)
-        existingasset = self._find_asset("00battle.bin")
+        existingasset = self.find_asset("00battle.bin")
         if existingasset:
             existingasset["source"].append(asset["source"][0])
         else:
@@ -182,6 +184,20 @@ class AssetGenerator:
 
             self.assets.append(asset)
 
+    def getDefaultRoomAsset(self, ardname):
+        region = '' if not self.ispc else 'us/'
+        # Ideally this would be 
+        formattedname =  "ard/{}{}.ard".format(region, ardname)
+        roomasset = {
+            "method": "binarc",
+            "name": formattedname,
+            "source": []
+        }
+        if region:
+            multi = [{"name": formattedname.replace(region, r)} for r in ["jp/","fr/","gr/","it/","sp/","uk/"]]
+            roomasset["multi"] = multi
+        return roomasset
+
     def generateSpawns(self, replacement_spawns, subtract_map):
         original_spawns = self.location_manager.locations
 
@@ -195,18 +211,7 @@ class AssetGenerator:
         for w, world in replacement_spawns.items():
             for r, room in world.items():
                 ardname = self.location_manager.locmap[r]
-                region = '' if not self.ispc else 'us/'
-                # Ideally this would be 
-                formattedname =  "ard/{}{}.ard".format(region, ardname)
-                roomasset = {
-                    "method": "binarc",
-                    "name": formattedname,
-                    "source": []
-                }
-                if region:
-                    multi = [{"name": formattedname.replace(region, r)} for r in ["jp/","fr/","gr/","it/","sp/","uk/"]]
-                    roomasset["multi"] = multi
-
+                roomasset = self.getDefaultRoomAsset(ardname)
 
                 basespawns = original_spawns[w][r]
                 roommods = self.spawn_manager.apply_room_mods(basespawns, ardname)

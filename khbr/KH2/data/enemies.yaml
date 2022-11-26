@@ -2788,7 +2788,11 @@ Iron Hammer:
       - 0
       - 0
 Jafar:
-  enabled: false
+  enabled: true
+  source_replace_allowed: false
+  aimods: 
+  - name: B_AL020/b_al.bdscript
+    type: obj
   enmp_index: 0x8A
   hp: 100
   level: 99

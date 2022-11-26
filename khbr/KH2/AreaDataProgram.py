@@ -58,6 +58,8 @@ class AreaDataProgram:
     def add_enemy_spec(self, enemy_size=0x200000):
         self.add_command("AllocEnemy", str(int(enemy_size)))
     def get_mission(self):
+        if not self.has_command("Mission"):
+            return False
         return self.get_command("Mission").split(" ")[-1].replace('"','')
     def update_capacity(self, capacity=None):
         if self.ispc:

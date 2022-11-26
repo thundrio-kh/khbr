@@ -23,5 +23,5 @@ class AreaDataScript:
         return programs
     def get_program(self, number):
         if number not in self.programs:
-            raise Exception("Program not found")
+            return None
         return self.programs[number]

@@ -1,4 +1,5 @@
 from khbr.KH2.AssetGenerator import AssetGenerator
+from khbr.KH2.CutsceneRemover import CutsceneRemover
 from khbr.KH2.ModWriter import ModWriter
 from khbr.KH2.schemas.enemyseed import EnemySeed
 from khbr.textutils import create_spoiler_text
@@ -71,7 +72,9 @@ class KingdomHearts2:
             "retry_data_final_xemnas": {"display_name": "Retry Data Final Xemnas", "description": "If you die to Data Final Xemnas, continue will put you right back into the fight, instead of having to fight Data Xemnas I again (warning will be a softlock if you are unable to beat Final Xemnas)",
                                 "possible_values": [], "hidden_values": [False, True]},
             "retry_dark_thorn": {"display_name": "Retry Dark Thorn", "description": "If you die to Dark Thorn, continue will put you right back into the fight, instead of having to fight Shadow Stalker again (warning will be a softlock if you are unable to beat Shadow Stalker)",
-                                "possible_values": [], "hidden_values": [False, True]}
+                                "possible_values": [], "hidden_values": [False, True]},
+            "remove_cutscenes": {"display_name": "Remove Cutscenes", "description": "Removes as many cutscenes from the game as possible. 3 different levels. 1 - Minimal: Remove as many cutscenes as possible without causing side effects. 2 - Non-Reward: Also remove cutscenes prior to forced fights, which causes the 'continue' on game over to work like 'retry' in later games (can be worked around easily with the auto-save mod). 3 - Maximum: Also remove cutscenes prior to receiving popup rewards, which causes the popops to not appear (although you still get the rewards, and they still show up on the tracker).",
+                                "possible_values": [], "hidden_values": ["Disabled", "Minimal", "Non-Reward", "Maximum"]}
         }
 
     def get_valid_enemies(self):
@@ -90,6 +93,9 @@ class KingdomHearts2:
             utility_mods.append("retry_data_final_xemnas")
         if options.get("retry_dark_thorn"):
             utility_mods.append("retry_dark_thorn")
+        rmcs = options.get("remove_cutscenes", "Disabled")
+        if rmcs and rmcs != "Disabled":
+            utility_mods.append("remove_cutscenes-{}".format(options.get("remove_cutscenes")))
         return utility_mods
 
     def perform_randomization(self, options, seed=None):
@@ -249,6 +255,10 @@ class KingdomHearts2:
 
         assetgenerator.generateObjEntry(randomization.get("object_map", {}))
         assetgenerator.generateEnmp(randomization.get("scale_map",{}), remove_damage_cap="remove_damage_cap" in utility_mods)
+        rmcs = [u for u in utility_mods if u.startswith("remove_cutscenes")]
+        if len(rmcs):
+            cutsceneremover = CutsceneRemover(assetgenerator, mode=rmcs[0].replace("remove_cutscenes", ""))
+            cutsceneremover.removeCutscenes(assetgenerator, mode=rmcs[0].replace("remove_cutscenes", ""))
         assetgenerator.generateAiMods(randomization.get("ai_mods"))
         assetgenerator.generateLuaMods(randomization.get("lua_mods"))
         assetgenerator.generateMsns(randomization.get("msn_map", {}), self.mission_manager.msninfo)
