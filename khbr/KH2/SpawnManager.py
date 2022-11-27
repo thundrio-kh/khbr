@@ -210,17 +210,8 @@ class SpawnManager:
                 bosspicklist = old_boss_parent["available"]
             new_boss = pick_boss_to_replace(enemy_records, bosspicklist)
 
-            if "roxas" in old_boss_object["tags"]:
-                if new_boss == "Axel (Data)":
-                    # This fight is probably not very winnable as roxas, so force to normal axel II
-                    return "Axel II"
-            if "solo" in old_boss_object["tags"]:
-                if new_boss == "Demyx (Data)":
-                    return "Demyx" # Actual fix would be to just mod the ai to increase the time for destroying clones
             if old_boss_object["name"] == "Luxord" and new_boss == "Luxord (Data)":
                 return "Luxord" # There is a strange crash on Luxord Datas DM in original Luxords arena
-            if old_boss_object["name"] in ["Xaldin", "Xaldin (Data)"] and new_boss == "Axel (Data)":
-                return "Axel II" # For some reason his RC never appears so the fight isn't winnable? Might be an issue with party members
 
             return new_boss
     

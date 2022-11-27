@@ -1118,7 +1118,6 @@ Axel II:
   obj_id: 81
   blacklist_destination:
   - Scar
-  - Cerberus # Axel Data can't do RC so unbeatable
   type: boss
   whitelist_source:
   - Axel I
@@ -1620,6 +1619,9 @@ Axel (Data):
   tags:
   - data
   - organization
+  aimods: 
+  - name: B_EX110_LV99/b_ex.bdscript
+    type: obj
   enabled: true
   variationof: Axel II
   enmp_index: 0xF5
@@ -1642,6 +1644,9 @@ Demyx (Data):
   tags:
   - data
   - organization
+  aimods: 
+  - name: B_EX120_HB_LV99/b_ex.bdscript
+    type: obj
   enabled: true
   variationof: Demyx
   enmp_index: 0xF0
@@ -2688,6 +2693,9 @@ Hot Rod WI:
       - 0
 Hydra:
   enabled: true
+  aimods:
+  - name: B_HE100/b_he.bdscript
+    type: obj
   whitelist_destination:
   - Armor Xemnas II
   - Groundshaker
@@ -3598,6 +3606,11 @@ Riku:
   aimods: 
   - name: N_EX940_BTL/n_ex.bdscript
     type: obj
+  - name: MU07_MS201/mu07.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 0x82
   tags:
@@ -3609,7 +3622,6 @@ Riku:
   msn: MU07_MS201
   msn_replace_allowed: false
   obj_id: 1596
-  source_replace_allowed: false
   size: 1.22
   program: 76
   room_size: 8.62
@@ -3748,6 +3760,9 @@ Sark:
 Scar:
   can_be_enemy: true
   isnightmare: true
+  aimods: 
+  - name: B_LK110/b_lk.bdscript
+    type: obj
   enabled: true
   enmp_index: 0x5E
   tags:

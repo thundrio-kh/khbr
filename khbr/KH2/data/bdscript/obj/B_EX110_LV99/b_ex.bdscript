@@ -2497,7 +2497,7 @@ L3585:
  popToWp W4560
  pushFromFSp 0
  pushImm 9
- syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
+ syscall 1, 212 ; trap_obj_pattern_enable (2 in, 0 out)
  pushImm 1
  popToWp W4564
  pushImm 0
@@ -5091,7 +5091,7 @@ L9698:
  popToSp 0
  pushFromFSp 0
  pushImm 9
- syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
+ syscall 1, 212 ; trap_obj_pattern_enable (2 in, 0 out)
  ret 
 L9708:
  popToSp 0

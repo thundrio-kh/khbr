@@ -6093,13 +6093,6 @@
         ],
         "name": "Armor Xemnas II",
         "enabled": true,
-        "aimods": [
-            {
-                "name": "EH23_MS112/ms_b.bdscript",
-                "type": "msn",
-                "source": "old"
-            }
-        ],
         "blacklist_source": [
             "Axel I",
             "Saix"
@@ -6129,6 +6122,7 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "mickey_source": false,
         "can_be_enemy": false,
         "can_be_enemy_override": false,
@@ -8559,6 +8553,12 @@
             "data",
             "organization"
         ],
+        "aimods": [
+            {
+                "name": "B_EX110_LV99/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "variationof": "Axel II",
         "enmp_index": 245,
@@ -8584,7 +8584,6 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,
@@ -8641,6 +8640,12 @@
             "data",
             "organization"
         ],
+        "aimods": [
+            {
+                "name": "B_EX120_HB_LV99/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "variationof": "Demyx",
         "enmp_index": 240,
@@ -8666,7 +8671,6 @@
         "children": [],
         "msn_required": true,
         "msn_source_as": null,
-        "aimods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,
@@ -13517,6 +13521,12 @@
         ],
         "name": "Hydra",
         "enabled": true,
+        "aimods": [
+            {
+                "name": "B_HE100/b_he.bdscript",
+                "type": "obj"
+            }
+        ],
         "whitelist_destination": [
             "Armor Xemnas II",
             "Groundshaker",
@@ -13574,7 +13584,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "final_fight": false,
         "can_be_enemy": false,
         "can_be_enemy_override": false,
@@ -18212,6 +18221,14 @@
             {
                 "name": "N_EX940_BTL/n_ex.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "MU07_MS201/mu07.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "obj_id"
+                }
             }
         ],
         "enabled": true,
@@ -18226,7 +18243,6 @@
         "msn": "MU07_MS201",
         "msn_replace_allowed": false,
         "obj_id": 1596,
-        "source_replace_allowed": false,
         "size": 1.22,
         "program": 76,
         "room_size": 8.62,
@@ -18235,6 +18251,7 @@
             "Riku"
         ],
         "replace_as": null,
+        "source_replace_allowed": true,
         "category": "solo",
         "isnightmare": false,
         "parent": "Riku",
@@ -18261,7 +18278,50 @@
         "obj_edits": {},
         "luamod": null,
         "available": [
-            "Riku"
+            "Armor Xemnas I",
+            "Armor Xemnas II",
+            "Axel I",
+            "Axel II",
+            "Barbossa",
+            "Blizzard Lord",
+            "Cerberus",
+            "Cloud",
+            "Dark Thorn",
+            "Demyx OC",
+            "Final Xemnas",
+            "Grim Reaper I",
+            "Hades II",
+            "Hayner",
+            "Hercules",
+            "Jafar",
+            "Larxene",
+            "Leon",
+            "Marluxia",
+            "Past Pete",
+            "Pete Cups",
+            "Pete OC II",
+            "Pete TR",
+            "Prison Keeper",
+            "Riku",
+            "Roxas",
+            "Sark",
+            "Scar",
+            "Seifer",
+            "Sephiroth",
+            "Setzer",
+            "Shan-Yu",
+            "Terra",
+            "The Beast",
+            "The Experiment",
+            "Thresholder",
+            "Tifa",
+            "Twilight Thorn",
+            "Vivi",
+            "Volcano Lord",
+            "Xaldin",
+            "Xemnas",
+            "Xigbar",
+            "Yuffie"
         ]
     },
     "Roxas": {
@@ -18805,6 +18865,12 @@
         "name": "Scar",
         "can_be_enemy": true,
         "isnightmare": true,
+        "aimods": [
+            {
+                "name": "B_LK110/b_lk.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 94,
         "tags": [
@@ -18839,7 +18905,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy_override": false,
