@@ -961,6 +961,10 @@ Armor Xemnas I:
       - 0
 Armor Xemnas II:
   enabled: true
+  aimods:
+  - name: EH23_MS112/ms_b.bdscript
+    type: msn
+    source: old
   blacklist_source:
   - Axel I
   - Saix # Report of crash

@@ -6093,6 +6093,13 @@
         ],
         "name": "Armor Xemnas II",
         "enabled": true,
+        "aimods": [
+            {
+                "name": "EH23_MS112/ms_b.bdscript",
+                "type": "msn",
+                "source": "old"
+            }
+        ],
         "blacklist_source": [
             "Axel I",
             "Saix"
@@ -6122,7 +6129,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "mickey_source": false,
         "can_be_enemy": false,
         "can_be_enemy_override": false,
@@ -19394,7 +19400,7 @@
         ],
         "name": "Sephiroth",
         "tags": [
-            "data",
+            "sephiroth",
             "solo"
         ],
         "can_be_enemy": true,
@@ -19427,7 +19433,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-solo",
+        "category": "sephiroth-solo",
         "parent": "Sephiroth",
         "variationof": null,
         "children": [
@@ -20988,7 +20994,7 @@
         "name": "Terra",
         "can_be_enemy": false,
         "tags": [
-            "data"
+            "terra"
         ],
         "enabled": true,
         "enmp_index": 244,
@@ -21012,7 +21018,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data",
+        "category": "terra",
         "parent": "Terra",
         "variationof": null,
         "children": [
