@@ -246,16 +246,21 @@ class KingdomHearts2:
                                     created_enemies.append(new_enemy_object)
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_enemy_object)
                         for aimod in spawnpoint.get("aimods",[]):
+                            createmod=True
                             for var in aimod["vars"]:
                                 varvalue = aimod["vars"][var]
                                 if varvalue.startswith("$"):
                                     varargs = varvalue[1:].split(".")
                                     if varargs[0] == "enemy":
+                                        if len(created_enemies) == 0:
+                                            createmod=False
+                                            continue # hack but these types of aimods should not be created when only boss rando is run
                                         index = int(varargs[1])
                                         argument = varargs[2]
                                         enemy = created_enemies[index]
                                         aimod["vars"][var] = enemy[argument]
-                            rand_seed.ai_mods[aimod["name"]] = aimod
+                            if createmod:
+                                rand_seed.ai_mods[aimod["name"]] = aimod
         
     def generate_files(self, outdir='', randomization={}, outzip=None):
         if DIAGNOSTICS:

@@ -6522,7 +6522,6 @@ Halloween Town:
             isboss: false
             name: Shadow (NM)
       b_99:
-        ignored: true # randomizing this might not cause presents to appear
         size: 0
         sp_ids:
           '686':
