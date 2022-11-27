@@ -3398,7 +3398,7 @@ L6695:
  syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
  pushFromFSp 0
  fetchValue 4
- pushImm 203
+ pushImm 0
  pushImm 1090519040
  syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
  pushFromFSp 0
