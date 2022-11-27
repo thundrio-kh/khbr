@@ -191,11 +191,12 @@ class KingdomHearts2:
                         continue
                     if rand_seed.config.enemymode == "One to One Per Room":
                         rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemy"], nightmare=rand_seed.config.nightmare_enemies)
-                    
+
                     for sp, spawnpoint in room["spawnpoints"].items():
                         self.location_manager.update_location(spawnpoint, rand_seed.config)
                         if spawnpoint.get("ignored"):
                             continue
+                        created_enemies = []
                         for i, entities in spawnpoint["sp_ids"].items():
                             # TODO might be able to make this just for entity in entities
                             for e in range(len(entities)):
@@ -239,7 +240,19 @@ class KingdomHearts2:
                                         continue
 
                                     new_enemy_object = self.enemy_manager.get_new_enemy_object(new_enemy, rand_seed)
+                                    created_enemies.append(new_enemy_object)
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_enemy_object)
+                        for aimod in spawnpoint.get("aimods",[]):
+                            for var in aimod["vars"]:
+                                varvalue = aimod["vars"][var]
+                                if varvalue.startswith("$"):
+                                    varargs = varvalue[1:].split(".")
+                                    if varargs[0] == "enemy":
+                                        index = int(varargs[1])
+                                        argument = varargs[2]
+                                        enemy = created_enemies[index]
+                                        aimod["vars"][var] = enemy[argument]
+                            rand_seed.ai_mods[aimod["name"]] = aimod
         
     def generate_files(self, outdir='', randomization={}, outzip=None):
         if DIAGNOSTICS:

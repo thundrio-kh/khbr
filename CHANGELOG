@@ -13,6 +13,7 @@
 * Demyx OC has been added into the randomization pool
 * Randomize superbosses option has been split into 3 options, for terra, sephiroth, and the datas
 * Cutscene Remover option has been added, with 3 different options (PUT MORE DESCRIPTION HERE)
+* Enabled randomizing the two single dusk fights in STT where the enemy is invulnerable
 
 2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)

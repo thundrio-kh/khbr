@@ -23502,7 +23502,12 @@ Twilight Town:
             isboss: true
             name: Seifer (2)
       b_43:
-        ignored: true
+        aimods:
+        - name: TT04_MS301/tt04.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '115':
@@ -23975,7 +23980,12 @@ Twilight Town:
             isboss: false
             name: Samurai
       b_41:
-        ignored: true # if the dusk dies you are softlocked
+        aimods:
+        - name: TT14_MS109/tt_d.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '65':

@@ -126,11 +126,18 @@ class AssetGenerator:
             return
         created_mods = []
         for ai in ai_mods:
-            # This logic is a little messy
-            replaced_enemy_object = self.enemy_manager.enemy_records[ai_mods[ai]] # sometimes this is the new enemy, sometimes it's the old
-            ai_to_modify_object = self.enemy_manager.enemy_records[ai]
-            modelname = ai_to_modify_object["model"]
-            mods = ai_to_modify_object["aimods"]
+            aimod = ai_mods[ai]
+
+            if type(aimod) == type({}):
+                mods = [aimod]
+            else:
+                # This logic is a little messy
+                replaced_enemy_object = self.enemy_manager.enemy_records[ai_mods[ai]] # sometimes this is the new enemy, sometimes it's the old
+                ai_to_modify_object = self.enemy_manager.enemy_records[ai]
+                modelname = ai_to_modify_object["model"]
+                mods = ai_to_modify_object["aimods"]
+                for mod in mods:
+                    mod["vars"] = replaced_enemy_object
 
             for mod in mods:
                 modelname = mod["name"].split("/")[0]
@@ -142,7 +149,7 @@ class AssetGenerator:
                     ai_manager = AiManager(ai, f.read())
                     
                     for orig,new in mod.get("replacements", {}).items():
-                        ai_manager.replace(orig, replaced_enemy_object[new])
+                        ai_manager.replace(orig, mod["vars"][new])
 
                     asset = self.modwriter.writeAi(os.path.basename(mod["name"]), modelname, mod["type"],ai_manager.get_script())
                     self.assets.append(asset)
