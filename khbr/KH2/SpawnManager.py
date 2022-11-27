@@ -16,6 +16,7 @@ class SpawnManager:
             "ax2_50": self.ax2_50,
             "stormrider_61": self.stormrider_61,
             "groundshaker": self.groundshaker,
+            "shadow_stalker": self.shadow_stalker,
             "ax1_40": self.ax1_40
         }
 
@@ -100,6 +101,13 @@ class SpawnManager:
 
         boss = spawnpoint[0]["Entities"][3]
         boss["PositionY"] = 0
+
+    def shadow_stalker(self, spawnpoint):
+        # move enemies height to the bottom
+        sora = spawnpoint[0]["Entities"][0]
+
+        boss = spawnpoint[0]["Entities"][3]
+        boss["PositionY"] = sora["PositionY"]
 
     def apply_room_mods(self, basespawns, ardname):
         roommods = {}

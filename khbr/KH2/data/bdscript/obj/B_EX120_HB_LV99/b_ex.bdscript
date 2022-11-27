@@ -7186,7 +7186,7 @@ L13675:
  mul 
  add 
  fetchValue 0
- pushImm 30
+ pushImm 40 ; timer length
  gosub 4, L13701
  ret 
 L13701:

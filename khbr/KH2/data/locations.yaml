@@ -2666,6 +2666,8 @@ Beast's Castle:
             isboss: false
             name: Dusk
   Ballroom 05:
+    roommodedits:
+      b_40: shadow_stalker
     size: 5000000
     spawnpoints:
       b_40:
