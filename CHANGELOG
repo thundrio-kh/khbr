@@ -16,6 +16,7 @@
 * Enabled randomizing the two single dusk fights in STT where the enemy is invulnerable
 * When bosses as enemies is enabled, do not allow more than one boss per spawnpoint, which will hopefully help with stability
 * HT Presents fight is reenabled
+* Riku is now enabled in one to one
 
 2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)
