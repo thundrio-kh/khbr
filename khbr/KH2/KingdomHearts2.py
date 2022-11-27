@@ -197,6 +197,7 @@ class KingdomHearts2:
                         if spawnpoint.get("ignored"):
                             continue
                         created_enemies = []
+                        bosses_as_enemies = 0
                         for i, entities in spawnpoint["sp_ids"].items():
                             # TODO might be able to make this just for entity in entities
                             for e in range(len(entities)):
@@ -233,13 +234,15 @@ class KingdomHearts2:
                                     if not self.spawn_manager.should_replace_enemy(old_enemy_object):
                                         continue
 
-                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object, room)
+                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object, room, existing_bosses_as_enemies=bosses_as_enemies)
                                     if not new_enemy:
                                         continue
                                     if new_enemy == old_enemy_object["name"] and not entity.get("nameForReplace", "") == new_enemy:
                                         continue
 
                                     new_enemy_object = self.enemy_manager.get_new_enemy_object(new_enemy, rand_seed)
+                                    if new_enemy_object["type"] == "boss":
+                                        bosses_as_enemis += 1
                                     created_enemies.append(new_enemy_object)
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_enemy_object)
                         for aimod in spawnpoint.get("aimods",[]):

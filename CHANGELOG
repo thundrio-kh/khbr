@@ -14,6 +14,7 @@
 * Randomize superbosses option has been split into 3 options, for terra, sephiroth, and the datas
 * Cutscene Remover option has been added, with 3 different options (PUT MORE DESCRIPTION HERE)
 * Enabled randomizing the two single dusk fights in STT where the enemy is invulnerable
+* When bosses as enemies is enabled, do not allow more than one boss per spawnpoint, which will hopefully help with stability
 
 2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)
