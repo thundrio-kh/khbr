@@ -198,16 +198,9 @@ class Randomizer:
         self._validate_options(self.get_options_cli(game), options)
 
         randomization = game.perform_randomization(options)
+    
         assets = game.generate_files(randomization=randomization, outzip=outZip)
-        for asset in assets:
-            found = False
-            for modobj_asset in modobj["assets"]:
-                if modobj_asset["name"] == asset["name"]:
-                    found = True
-                    for source in asset["source"]:
-                        modobj_asset["source"].append(source)
-            if not found:
-                modobj["assets"].append(asset)
+        modobj["assets"] += assets
         return create_spoiler_text(game.spoilers)
     
     def getSchemaForGame(self, g):

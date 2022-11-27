@@ -68,10 +68,12 @@ class CutsceneRemover:
             evtfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "evt.script")
             evtfn_goa = os.path.join(os.path.dirname(__file__), "data", "goa", "ard", ardname, "evt.script")
             btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
+            evtscript_goa = None
             if not os.path.exists(evtfn):
                 continue
             if os.path.exists(evtfn_goa):
-                evtfn = evtfn_goa
+                with open(evtfn_goa) as f:
+                    evtscript_goa = AreaDataScript(f.read())
             with open(evtfn) as f:
                 evtscript = AreaDataScript(f.read())
             hasbattle = os.path.exists(btlfn)
@@ -79,7 +81,11 @@ class CutsceneRemover:
                 with open(btlfn) as f:
                     btlscript = AreaDataScript(f.read())
             for num in evtscript.programs:
-                evtprogram = evtscript.get_program(num)
+                evtprogram = None
+                if evtprogram:
+                    evtscript = evtscript_goa.get_program(num)
+                if not evtprogram:
+                    evtprogram = evtscript.get_program(num)
                 hascs = evtprogram.has_command("SetEvent")
                 if not hascs:
                     continue
