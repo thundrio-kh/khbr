@@ -2693,9 +2693,6 @@ Hot Rod WI:
       - 0
 Hydra:
   enabled: true
-  aimods:
-  - name: B_HE100/b_he.bdscript
-    type: obj
   whitelist_destination:
   - Armor Xemnas II
   - Groundshaker
@@ -2711,7 +2708,6 @@ Hydra:
   model: B_HE100
   unchanged_file_size: true
   pc:
-    enabled: false # ctd on killing 3rd mini head
     unchanged_file_size: false
   msn: HE18_MS108
   obj_id: 352
@@ -2726,6 +2722,7 @@ Hydra:
   - ObjectId: 364 # phil
     Argument1: 1
   - ObjectId: 363 # pegasus
+  - ObjectId: 365 # Meg
   type: boss
   variations:
     Hydra:

@@ -6528,8 +6528,7 @@
         "size": 3.74,
         "obj_id": 81,
         "blacklist_destination": [
-            "Scar",
-            "Cerberus"
+            "Scar"
         ],
         "type": "boss",
         "whitelist_source": [
@@ -7549,6 +7548,7 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
+            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -8592,8 +8592,7 @@
         "roommaxsize": null,
         "blacklist_source": [],
         "blacklist_destination": [
-            "Scar",
-            "Cerberus"
+            "Scar"
         ],
         "whitelist_source": [
             "Axel I",
@@ -13521,12 +13520,6 @@
         ],
         "name": "Hydra",
         "enabled": true,
-        "aimods": [
-            {
-                "name": "B_HE100/b_he.bdscript",
-                "type": "obj"
-            }
-        ],
         "whitelist_destination": [
             "Armor Xemnas II",
             "Groundshaker",
@@ -13542,7 +13535,6 @@
         "model": "B_HE100",
         "unchanged_file_size": true,
         "pc": {
-            "enabled": false,
             "unchanged_file_size": false
         },
         "msn": "HE18_MS108",
@@ -13565,6 +13557,9 @@
             },
             {
                 "ObjectId": 363
+            },
+            {
+                "ObjectId": 365
             }
         ],
         "type": "boss",
@@ -13584,6 +13579,7 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "final_fight": false,
         "can_be_enemy": false,
         "can_be_enemy_override": false,
