@@ -17,7 +17,8 @@ class SpawnManager:
             "stormrider_61": self.stormrider_61,
             "groundshaker": self.groundshaker,
             "shadow_stalker": self.shadow_stalker,
-            "ax1_40": self.ax1_40
+            "ax1_40": self.ax1_40,
+            "jafar_60": self.jafar_60
         }
 
 
@@ -109,6 +110,13 @@ class SpawnManager:
         boss = spawnpoint[0]["Entities"][3]
         boss["PositionY"] = sora["PositionY"]
 
+    def jafar_60(self, spawnpoint):
+        # move enemies height to the sora
+        sora = spawnpoint[0]["Entities"][0]
+
+        boss = spawnpoint[0]["Entities"][1]
+        boss["PositionY"] = sora["PositionZ"]
+
     def apply_room_mods(self, basespawns, ardname):
         roommods = {}
         if "roommodedits" in basespawns:
@@ -137,9 +145,31 @@ class SpawnManager:
                     sp_instance["Entities"].pop(e)
 
     @staticmethod
-    def add_new_object(original_spawns, new_spawn_descriptor):
+    def add_new_object(original_spawns, new_spawn_descriptor, default_object=None):
+        # TOTEST might need to pass in the default_object with coordinates but maybe not. test in Past Pete fight
+        if not default_object:
+            default_object = {
+                "ObjectId": 0,
+                "PositionX": 0,
+                "PositionY": 0,
+                "PositionZ": 0,
+                "RotationX": 0,
+                "RotationY": 0,
+                "RotationZ": 0,
+                "SpawnType": 0,
+                "SpawnArgument": 0,
+                "Serial": 0,
+                "Argument1": 0,
+                "Argument2": 0,
+                "ReactionCommand": 0,
+                "SpawnDelay": 0,
+                "Command": 0,
+                "SpawnRange": 0,
+                "Level": 0,
+                "Medal": 0
+            }
         # adding new entity to list, defaulting all values to the first entity in the list
-        new_ent = dict(original_spawns["Entities"][0])
+        new_ent = dict(original_spawns["Entities"][0])  if len(original_spawns["Entities"]) else dict(default_object)
         # TODO Make a unique serial for the spawnpoint?? Maybe 6xx
         for attr in new_spawn_descriptor:
             if attr.startswith("mod"):
@@ -253,3 +283,27 @@ class SpawnManager:
             if spid["Id"] == idnum:
                 return spid
         raise Exception("Spid not found!")
+
+    @staticmethod
+    def getNewUnit(defaults):
+        unit = {
+            "Type": 1,
+            "Flag": 0,
+            "Id": 26,
+            "Unk20": 0,
+            "Unk24": 0,
+            "Entities": [],
+            "EventActivators": [],
+            "WalkPath": [],
+            "ReturnParameters": [],
+            "Signals": [],
+            "Teleport": {
+                "Place": 0,
+                "Door": 0,
+                "World": 0,
+                "Unknown": 0
+            }
+        }
+        for k,v in defaults.items():
+            unit[k] = v
+        return unit

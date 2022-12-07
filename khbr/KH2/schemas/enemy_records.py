@@ -34,6 +34,7 @@ def get_schema():
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [],
+        "sp_ids": [],
         "subtracts": [],
         "msn_list": [],
         "program": None,

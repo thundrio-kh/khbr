@@ -64,17 +64,15 @@ def main(cli_args: list=[]):
 
     options = parser.add_argument_group(
         "Options",
-        "Options"
-    )
-
-    options.add_argument
-
-    '''prototype boss rush mod
+        """prototype boss rush mod
     selected boss replacement
     start in selected boss room
     start with good stuff for combat
     winning the fight is seed over
-    '''
+    """
+    )
+
+
 
     kh2 = KingdomHearts2()
     bosses = [b for b in kh2.get_valid_bosses() if b not in IGNORE_BOSSES]
@@ -170,7 +168,7 @@ def main(cli_args: list=[]):
         for i in range(MAXITEMS):
             stuff.append(ITEMS[random.choice(ITEMS)])
 
-    moddir = os.path.join(openkh_dir, "mods")
+    moddir = os.path.join(openkh_dir, "mods", "kh2")
     # TODO TEMP FOR FASTER TESTING
     if os.path.exists(os.path.join(moddir, "bossrush")):
         shutil.rmtree(os.path.join(moddir, "bossrush"))
@@ -250,7 +248,7 @@ def main(cli_args: list=[]):
 
 if __name__ == "__main__":
     import sys
-    main()
+    main_ui()
     # if "cmd" in sys.argv:
     #     main()
     # else:

@@ -245,7 +245,7 @@ if __name__ == '__main__':
     if mode.startswith("dev"):
         # moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
         #moddir = "C:\\Users\\Arcade\\Desktop\\git\\OpenKh\\OpenKh.Tools.ModsManager\\bin\\Debug\\net5.0-windows\\mods\\thundrio-kh"
-        moddir = "C:\\Users\\12sam\\Desktop\\openkh\\mods\\thundrio-kh"
+        moddir = "C:\\Users\\12sam\\Desktop\\openkh\\mods\\kh2\\thundrio-kh"
         fn = "devmod"
         if os.path.exists(os.path.join(moddir, fn)):
             shutil.rmtree(os.path.join(moddir, fn))

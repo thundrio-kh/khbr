@@ -950,12 +950,142 @@ Armor Xemnas I:
       room_size: 12.98
       adds:
       - ObjectId: 2116 # ??? B_EX300
+        Serial: 12
       - ObjectId: 2115 # Xig B_EX290 (x2)
+        Serial: 10
+      - ObjectId: 2115 # Xig B_EX290 (x2)
+        Serial: 11
       - ObjectId: 2114 # Saix Claymore (x2)
+        Serial: 8
+      - ObjectId: 2114 # Saix Claymore (x2)
+        Serial: 9
       - ObjectId: 2117 # xaldin B_EX310
+        Serial: 13
       - ObjectId: 2118 # Axel B_EX320 (x2)
-        Argument1: 1
+        Serial: 14
+      - ObjectId: 2118 # Axel B_EX320 (x2)
+        Serial: 14
       - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
+        SpawnType: 2
+        Serial: 18
+        customUnit:
+          Type: 2
+          Flag: 1
+          Id: 26
+          EventActivators:
+          - Shape: 2
+            Option: 0
+            PositionX: 45.011569976806641
+            PositionY: -100
+            PositionZ: -888.35009765625
+            ScaleX: 54.833000183105469
+            ScaleY: 100
+            ScaleZ: 74.166999816894531
+            RotationX: 0
+            RotationY: -0.081681407988071442
+            RotationZ: 0
+            Flags: 0
+            Type: 0
+            OnBgGroup: 0
+            OffBgGroup: 0
+      - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
+        SpawnType: 2
+        Serial: 19
+        customUnit:
+          Type: 2
+          Flag: 1
+          Id: 26
+          EventActivators:
+          - Shape: 2
+            Option: 0
+            PositionX: 45.011569976806641
+            PositionY: -100
+            PositionZ: -888.35009765625
+            ScaleX: 54.833000183105469
+            ScaleY: 100
+            ScaleZ: 74.166999816894531
+            RotationX: 0
+            RotationY: -0.081681407988071442
+            RotationZ: 0
+            Flags: 0
+            Type: 0
+            OnBgGroup: 0
+            OffBgGroup: 0
+      - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
+        SpawnType: 2
+        Serial: 20
+        customUnit:
+          Type: 2
+          Flag: 1
+          Id: 26
+          EventActivators:
+          - Shape: 2
+            Option: 0
+            PositionX: 45.011569976806641
+            PositionY: -100
+            PositionZ: -888.35009765625
+            ScaleX: 54.833000183105469
+            ScaleY: 100
+            ScaleZ: 74.166999816894531
+            RotationX: 0
+            RotationY: -0.081681407988071442
+            RotationZ: 0
+            Flags: 0
+            Type: 0
+            OnBgGroup: 0
+            OffBgGroup: 0
+      - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
+        SpawnType: 2
+        Serial: 21
+        customUnit:
+          Type: 2
+          Flag: 1
+          Id: 26
+          EventActivators:
+          - Shape: 2
+            Option: 0
+            PositionX: 45.011569976806641
+            PositionY: -100
+            PositionZ: -888.35009765625
+            ScaleX: 54.833000183105469
+            ScaleY: 100
+            ScaleZ: 74.166999816894531
+            RotationX: 0
+            RotationY: -0.081681407988071442
+            RotationZ: 0
+            Flags: 0
+            Type: 0
+            OnBgGroup: 0
+            OffBgGroup: 0
+      - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
+        SpawnType: 2
+        Serial: 22
+        customUnit:
+          Type: 2
+          Flag: 1
+          Id: 26
+          EventActivators:
+          - Shape: 2
+            Option: 0
+            PositionX: 45.011569976806641
+            PositionY: -100
+            PositionZ: -888.35009765625
+            ScaleX: 54.833000183105469
+            ScaleY: 100
+            ScaleZ: 74.166999816894531
+            RotationX: 0
+            RotationY: -0.081681407988071442
+            RotationZ: 0
+            Flags: 0
+            Type: 0
+            OnBgGroup: 0
+            OffBgGroup: 0
+      - ObjectId: 2286 # Luxord card?
+        Serial: 17
+        customUnit:
+          Type: 5
+          Flag: 1
+          Id: 34
       vars:
       - 1
       - 0
@@ -971,7 +1101,6 @@ Armor Xemnas II:
   enmp_index: 0xA0
   tags:
   - teleport_blocked
-  - solo # not really but data demyx would still be kinda stupid here
   hp: 100
   level: 99
   limiter: 0
@@ -1320,8 +1449,6 @@ Blizzard Lord:
       - 0
       - 0
     Blizzard Lord (Cups):
-      pc: 
-        enabled: false
       tags:
       - cups
       - large
@@ -1396,8 +1523,6 @@ Cerberus:
   enabled: true
   enmp_index: 0x13
   hp: 100
-  tags:
-  - solo # not really but data demyx would still be kinda stupid here
   level: 99
   limiter: 0
   model: B_HE020
@@ -1420,8 +1545,6 @@ Cerberus:
     Cerberus (Cups):
       # tags:
       # - cups
-      pc: 
-        enabled: false
       enabled: true
       msn_list:
       - program: 194
@@ -1778,7 +1901,7 @@ Xemnas (Data):
   - data
   - organization
   aimods: 
-  - name: B_EX160_LAST_99/b_ex.bdscript
+  - name: B_EX170_LV99/b_ex.bdscript
     type: obj
   can_be_enemy: false
   enabled: true
@@ -2306,7 +2429,6 @@ Groundshaker:
   tags:
   - rc_blocked
   - teleport_blocked
-  - solo # Not really but this mostly only is for data demyx so it works
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   model: B_LK120
@@ -2716,13 +2838,24 @@ Hydra:
   program: 171
   adds:
   - ObjectId: 922 # hydra head
-    modPositionY: 1500
+    Serial: 14
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 52
+  - ObjectId: 365 # Meg
+    Serial: 17
+    Argument1: 1
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 52
   - ObjectId: 801 # yellow orb
     Argument1: 99
   - ObjectId: 364 # phil
     Argument1: 1
   - ObjectId: 363 # pegasus
-  - ObjectId: 365 # Meg
+
   type: boss
   variations:
     Hydra:
@@ -2798,6 +2931,17 @@ Iron Hammer:
 Jafar:
   enabled: true
   source_replace_allowed: true
+  whitelist_source:
+  - Armor Xemnas I
+  - Blizzard Lord
+  - Final Xemnas
+  - Grim Reaper I
+  - Hostile Program
+  - Prison Keeper
+  - Shadow Stalker
+  - Storm Rider
+  - The Experiment
+  - Volcano Lord
   aimods: 
   - name: B_AL020/b_al.bdscript
     type: obj
@@ -2811,7 +2955,6 @@ Jafar:
   size: 1.86
   room_size: 11.19
   obj_id: 348
-  source_replace_allowed: false
   type: boss
   variations:
     Jafar:
@@ -3319,9 +3462,19 @@ Oogie Boogie:
   room_size: 12.41
   adds:
   - ObjectId: 969 # ???
+    Serial: 19
+    Argument: 1
+  - ObjectId: 969 # ???
+    Serial: 20
+    Argument: 2
+  - ObjectId: 966 # Oogie spikes
+    Serial: 24
   - ObjectId: 1604 # oogies punch
+    Serial: 21
   - ObjectId: 928 # ???
+    Serial: 36
   - ObjectId: 1003 # present box
+    Serial: 26
   type: boss
   variations:
     Oogie Boogie:
@@ -3424,9 +3577,104 @@ Pete TR:
   obj_id: 359
   adds:
   - ObjectId: 1758 # cannon tower
+    SpawnType: 2
+    Serial: 101
+    Argument1: 1
+    Argument2: 3
+    customUnit:
+      Type: 2
+      Flag: 1
+      Id: 247
+      EventActivators:
+      - Shape: 2
+        Option: 0
+        PositionX: 1242.9849853515625
+        PositionY: -300
+        PositionZ: 1462.8909912109375
+        ScaleX: 398.71649169921875
+        ScaleY: 400
+        ScaleZ: 599.67999267578125
+        RotationX: 0
+        RotationY: 0.1808859258890152
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+  - ObjectId: 1758 # cannon tower
+    SpawnType: 2
+    Serial: 102
+    Argument1: 1
+    Argument2: 1
+    customUnit:
+      Type: 2
+      Flag: 1
+      Id: 247
+      EventActivators:
+      - Shape: 2
+        Option: 0
+        PositionX: 1242.9849853515625
+        PositionY: -300
+        PositionZ: 1462.8909912109375
+        ScaleX: 398.71649169921875
+        ScaleY: 400
+        ScaleZ: 599.67999267578125
+        RotationX: 0
+        RotationY: 0.1808859258890152
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+  - ObjectId: 1758 # cannon tower
+    SpawnType: 2
+    Serial: 103
+    Argument1: 1
+    Argument2: 2
+    customUnit:
+      Type: 2
+      Flag: 1
+      Id: 247
+      EventActivators:
+      - Shape: 2
+        Option: 0
+        PositionX: 1242.9849853515625
+        PositionY: -300
+        PositionZ: 1462.8909912109375
+        ScaleX: 398.71649169921875
+        ScaleY: 400
+        ScaleZ: 599.67999267578125
+        RotationX: 0
+        RotationY: 0.1808859258890152
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
   - ObjectId: 1759 # building sites platform
+    SpawnType: 3
+    Serial: 104
+    Argument1: 1
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 254
   - ObjectId: 1612 # burning building
-  - ObjectId: 1610 # ???
+    SpawnType: 3
+    Serial: 105
+    Argument1: 1
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 254
+  - ObjectId: 758 # ???
+    SpawnType: 3
+    Serial: 106
+    Argument1: 1
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 254
   size: 3.68
   room_size: 12.16
   program: 53
@@ -3452,10 +3700,6 @@ Prison Keeper:
   size: 3.87
   room_size: 9.21
   program: 52
-  adds:
-  - ObjectId: 992 # lock
-  - ObjectId: 993 # shock
-  - ObjectId: 994 # barrel
   type: boss
   variations:
     Prison Keeper:
@@ -3764,7 +4008,6 @@ Scar:
   enmp_index: 0x5E
   tags:
   - rc_blocked
-  - solo # Not really but this mostly only is for data demyx so it works
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   - Dark Thorn # Reports of tpose from grab causing softlock
@@ -4014,6 +4257,9 @@ Shadow Stalker:
   - ObjectId: 646 # ground trap
   - ObjectId: 645 # columns
   - ObjectId: 644 # chandelier
+    Serial: 24
+  - ObjectId: 799 # ???
+    Serial: 17
   type: boss
   variations:
     Shadow Stalker:
@@ -4244,16 +4490,119 @@ Storm Rider:
   limiter: 0
   model: B_MU120
   msn: MU08_MS204
-  pc:
-    enabled: false # many reports of crashes
   obj_id: 357
   size: 3.03
   program: 79
   room_size: 9.27
-  subtracts:
-  - ObjectId: 721 # Should probably be an add, but needs more testing
   adds:
+  - ObjectId: 721 # barrier?
+    Serial: 94
+    Argument1: 1
+    customUnit:
+      Type: 1
+      Id: 187
+  - ObjectId: 721
+    Serial: 95
+    Argument2: 2
+    customUnit:
+      Type: 1
+      Id: 187
   - ObjectId: 1111 # Wind
+    SpawnType: 2
+    SpawnArgument: 1
+    Serial: 89
+    SpawnRange: 300
+    customUnit:
+      Type: 2
+      Id: 97
+      EventActivators:
+      - Shape: 0
+        Option: 0
+        PositionX: 0
+        PositionY: -490
+        PositionZ: -0
+        ScaleX: 3250
+        ScaleY: 500
+        ScaleZ: 2150
+        RotationX: 0
+        RotationY: 0
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+  - ObjectId: 1111 # Wind
+    SpawnType: 2
+    SpawnArgument: 2
+    Serial: 109
+    SpawnRange: 1500
+    customUnit: 
+      Type: 2
+      Id: 97
+      EventActivators:
+      - Shape: 0
+        Option: 0
+        PositionX: 0
+        PositionY: -490
+        PositionZ: -0
+        ScaleX: 3250
+        ScaleY: 500
+        ScaleZ: 2150
+        RotationX: 0
+        RotationY: 0
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+  - ObjectId: 1111 # Wind
+    SpawnType: 2
+    SpawnArgument: 2
+    Serial: 110
+    SpawnRange: 1500
+    customUnit:
+      Type: 2
+      Id: 97
+      EventActivators:
+      - Shape: 0
+        Option: 0
+        PositionX: 0
+        PositionY: -490
+        PositionZ: -0
+        ScaleX: 3250
+        ScaleY: 500
+        ScaleZ: 2150
+        RotationX: 0
+        RotationY: 0
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+  - ObjectId: 1111 # Wind
+    SpawnType: 2
+    SpawnArgument: 1
+    Serial: 114
+    SpawnRange: 1000
+    customUnit:
+      Type: 2
+      Id: 98
+      EventActivators:
+      - Shape: 0
+        Option: 0
+        PositionX: 0
+        PositionY: -490
+        PositionZ: -0
+        ScaleX: 3250
+        ScaleY: 500
+        ScaleZ: 2150
+        RotationX: 0
+        RotationY: 0
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
   type: boss
   variations:
     Storm Rider:
@@ -4334,6 +4683,9 @@ Terra:
       - 0
       - 0
 The Beast:
+  aimods: 
+  - name: P_BB000_BTL/p_bb.bdscript
+    type: obj
   tags: 
   - needs_rc
   enabled: true
@@ -4686,8 +5038,6 @@ Volcano Lord:
       - 0
       - 0
     Volcano Lord (Cups):
-      pc:
-        enabled: false
       tags:
       - cups
       - large

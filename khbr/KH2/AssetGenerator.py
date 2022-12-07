@@ -225,15 +225,23 @@ class AssetGenerator:
                 
                 for spn, spawnpoint in room["spawnpoints"].items():
                     existing_spawnpoint = self.spawn_manager.getSpawnpoint(ardname, spn, roommods)
-                    for i, spid in spawnpoint["sp_ids"].items():
+                    #default_object = dict(existing_spawnpoint[0]["Entities"][0])
+
+                    def _update_spid(i, spid, custom_unit_list):
                         gr2_self_replace = False
                         for new_entity in spid:
                             old_spid = self.spawn_manager.getSpId(existing_spawnpoint, int(i))
                             # Get to the right spawnpointid sp_instance
                             old_spawn_index = new_entity["index"]
-                            
 
-                            if new_entity["index"] == "new":
+                            if new_entity.get("customUnit", False):
+                                cu = new_entity["customUnit"]
+                                cu_id = cu["Id"]
+                                if not cu_id in custom_unit_list:
+                                    custom_unit_list[cu_id] = self.spawn_manager.getNewUnit(cu)
+                                del new_entity["customUnit"]
+                                self.spawn_manager.add_new_object(custom_unit_list[cu_id], new_entity)#, default_object=default_object)
+                            elif new_entity["index"] == "new":
                                 self.spawn_manager.add_new_object(old_spid, new_entity)
                             elif type(new_entity["name"]) == int:
                                 self.spawn_manager.set_object_by_id(old_spid["Entities"][old_spawn_index], new_entity)
@@ -262,6 +270,15 @@ class AssetGenerator:
                         if gr2_self_replace:
                             for entity in existing_spawnpoint[0]["Entities"]:
                                 entity["Medal"] = 0
+
+                    custom_unit_list = {} # keyed on ID
+                    for i, spid in spawnpoint["sp_ids"].items():
+                        _update_spid(i, spid, custom_unit_list)
+                    for cid, unit in custom_unit_list.items():
+                        if cid in [s["Id"] for s in existing_spawnpoint]:
+                            print("Warning: spid already exists in spawnpoint, test for problems. {} {}".format(cid, ardname)) # DEBUG ONLY
+                        existing_spawnpoint.append(unit)
+                    
                     spasset = self.modwriter.writeSpawnpoint(ardname, spn, existing_spawnpoint)
                     roomasset["source"].append(spasset)
                     if spn in roommods:

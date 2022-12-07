@@ -116,6 +116,8 @@
             name: Bees (Disappearing)
 Agrabah:
   Above Agrabah:
+    roommodedits:
+      b_60: jafar_60 # characters
     size: 5000000
     spawnpoints:
       b_60:

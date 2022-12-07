@@ -198,7 +198,7 @@ class KingdomHearts2:
                             continue
                         created_enemies = []
                         bosses_as_enemies = 0
-                        for i, entities in spawnpoint["sp_ids"].items():
+                        for i, entities in spawnpoint["sp_ids"].items(): # Fun fact: The internal game code refers to these as "unit"s I believe
                             # TODO might be able to make this just for entity in entities
                             for e in range(len(entities)):
                                 entity = entities[e]
@@ -242,7 +242,7 @@ class KingdomHearts2:
 
                                     new_enemy_object = self.enemy_manager.get_new_enemy_object(new_enemy, rand_seed)
                                     if new_enemy_object["type"] == "boss":
-                                        bosses_as_enemis += 1
+                                        bosses_as_enemies += 1
                                     created_enemies.append(new_enemy_object)
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_enemy_object)
                         for aimod in spawnpoint.get("aimods",[]):
