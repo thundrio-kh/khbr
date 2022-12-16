@@ -926,9 +926,9 @@ Air Pirate:
       - 1
       - 0
 Armor Xemnas I:
-  aimods: 
-  - name: B_EX260/b_ex.bdscript
-    type: obj
+  # aimods: 
+  # - name: B_EX260/b_ex.bdscript
+  #   type: obj
   enabled: true
   enmp_index: 0xA0
   hp: 100
@@ -1972,7 +1972,7 @@ Demyx:
       - 1
       - 0
 Demyx OC:
-  enabled: true
+  enabled: false
   hp: 100
   level: 99
   limiter: 0
@@ -2814,7 +2814,7 @@ Hot Rod WI:
       - 0
       - 0
 Hydra:
-  enabled: true
+  enabled: false
   whitelist_destination:
   - Armor Xemnas II
   - Groundshaker
@@ -2852,6 +2852,27 @@ Hydra:
       Id: 52
   - ObjectId: 801 # yellow orb
     Argument1: 99
+    SpawnType: 2
+    customUnit:
+      Type: 2
+      Flag: 0
+      Id: 42
+      EventActivators:
+      - Shape: 2
+        Option: 0
+        PositionX: 1119.9000244140625
+        PositionY: -100
+        PositionZ: -630.16180419921875
+        ScaleX: 421.81851196289062
+        ScaleY: 100
+        ScaleZ: 485.27700805664062
+        RotationX: 0
+        RotationY: -0.11938385665416718
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
   - ObjectId: 364 # phil
     Argument1: 1
   - ObjectId: 363 # pegasus

@@ -6349,6 +6349,7 @@ Halloween Town:
             name: Bulky Vendor
   Halloween Town Square:
     size: 5000000
+    bossenemy_ignored: true
     spawnpoints:
       b_00:
         size: 0
