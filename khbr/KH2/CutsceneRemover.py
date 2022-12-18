@@ -13,6 +13,7 @@ class CutsceneRemover:
         }[mode]
         self.ignore_worlds = [
             "lm", # little mermaid is all cutscenes lol so it softlocks
+            "dc" # there are problems with not being able to enter the world right now, so hammer
         ]
         self.ignore_ards = [
             "lk08", # Entering jungle for second visit story crashes pcsx2
@@ -22,7 +23,8 @@ class CutsceneRemover:
             "tt32", # Causes GOA Mod to not give out the weapons of each ally, preventing second visits from working
             "nm05", # Fix vexens portal not showing up (likely an issue with the ard being a different size now)
             "ca16", # Fix OG Larxene portal still showing up (issue with ard size)
-            "hb26" # Prevents third chest from showing up in GOA, and can cause incorrect portals to turn purple
+            "hb26", # Prevents third chest from showing up in GOA, and can cause incorrect portals to turn purple
+            "dc06" # first cutscene in dc
         ]
         self.ignore_programs =  {
             "tt27": [0x02], # Talking to yen sid
@@ -30,7 +32,13 @@ class CutsceneRemover:
             "tr01": [0x33], # causes entering SP the second time to go to data larxene
             "hb09": [0x33], # causes first cutscene in merlin to not fire
             # "hb05.ard": ["0x02", "0x05", "0x06", "0x08"], # Causes you to be sent to SP instead of skipped, and makes demyx portal real
-            "eh20": [0x4a]
+            "eh20": [0x4a],
+            "po00": [0x0a], # leaving 100 acre
+            "al10": [0x3A], # leaving treasure room
+            # fix losing keyblades when leaving stt
+            "tt04": [0x4C, 0x4D, 0x4E, 0x4F],
+            "tt05": [0x54, 0x55, 0x58],
+            "tt14": [0x7f]
         }
         # I have a check to not skip cutscenes with type > 100 because those tend to signify menu events
         # but sometimes (like with postgame cutscenes) these are real cutscenes that should be removed
