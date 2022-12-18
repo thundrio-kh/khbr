@@ -2814,7 +2814,7 @@ Hot Rod WI:
       - 0
       - 0
 Hydra:
-  enabled: false
+  enabled: true
   whitelist_destination:
   - Armor Xemnas II
   - Groundshaker
@@ -2838,7 +2838,7 @@ Hydra:
   program: 171
   adds:
   - ObjectId: 922 # hydra head
-    Serial: 14
+    Serial: 2
     customUnit:
       Type: 5
       Flag: 1
@@ -2846,33 +2846,13 @@ Hydra:
   - ObjectId: 365 # Meg
     Serial: 17
     Argument1: 1
-    customUnit:
-      Type: 5
-      Flag: 1
-      Id: 52
+    # customUnit:
+    #   Type: 5
+    #   Flag: 1
+    #   Id: 52
   - ObjectId: 801 # yellow orb
     Argument1: 99
-    SpawnType: 2
-    customUnit:
-      Type: 2
-      Flag: 0
-      Id: 42
-      EventActivators:
-      - Shape: 2
-        Option: 0
-        PositionX: 1119.9000244140625
-        PositionY: -100
-        PositionZ: -630.16180419921875
-        ScaleX: 421.81851196289062
-        ScaleY: 100
-        ScaleZ: 485.27700805664062
-        RotationX: 0
-        RotationY: -0.11938385665416718
-        RotationZ: 0
-        Flags: 0
-        Type: 0
-        OnBgGroup: 0
-        OffBgGroup: 0
+    SpawnType: 0
   - ObjectId: 364 # phil
     Argument1: 1
   - ObjectId: 363 # pegasus

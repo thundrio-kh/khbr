@@ -14079,7 +14079,7 @@
         "adds": [
             {
                 "ObjectId": 922,
-                "Serial": 14,
+                "Serial": 2,
                 "customUnit": {
                     "Type": 5,
                     "Flag": 1,
@@ -14089,41 +14089,12 @@
             {
                 "ObjectId": 365,
                 "Serial": 17,
-                "Argument1": 1,
-                "customUnit": {
-                    "Type": 5,
-                    "Flag": 1,
-                    "Id": 52
-                }
+                "Argument1": 1
             },
             {
                 "ObjectId": 801,
                 "Argument1": 99,
-                "SpawnType": 2,
-                "customUnit": {
-                    "Type": 2,
-                    "Flag": 0,
-                    "Id": 42,
-                    "EventActivators": [
-                        {
-                            "Shape": 2,
-                            "Option": 0,
-                            "PositionX": 1119.9000244140625,
-                            "PositionY": -100,
-                            "PositionZ": -630.1618041992188,
-                            "ScaleX": 421.8185119628906,
-                            "ScaleY": 100,
-                            "ScaleZ": 485.2770080566406,
-                            "RotationX": 0,
-                            "RotationY": -0.11938385665416718,
-                            "RotationZ": 0,
-                            "Flags": 0,
-                            "Type": 0,
-                            "OnBgGroup": 0,
-                            "OffBgGroup": 0
-                        }
-                    ]
-                }
+                "SpawnType": 0
             },
             {
                 "ObjectId": 364,
