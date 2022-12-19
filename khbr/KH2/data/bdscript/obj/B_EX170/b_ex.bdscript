@@ -906,11 +906,11 @@ L1653:
  supzf 
  jz L1708
  pushFromFSpVal 112
- citf 
+ cfti 
  popToSp 4
  pushFromFSpVal 112
  pushFromFSp 4
- cfti 
+ citf 
  subf 
  popToSpVal 112
  jmp L1713

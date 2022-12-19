@@ -1543,7 +1543,7 @@ L2729:
  pushFromFSp 48
  pushFromFSp 52
  pushFromFSp 56
- cfti 
+ citf 
  mulf 
  addf 
  popToSp 48
@@ -7156,11 +7156,11 @@ L13322:
  pushFromPAi L14563 ; ___ai: 'FLOAT' (L14563)
  syscall 0, 1 ; trap_putf (2 in, 0 out)
  pushFromFSpVal 84
- citf 
+ cfti 
  popToSp 8
  pushFromFSpVal 84
  pushFromFSp 8
- cfti 
+ citf 
  subf 
  popToSpVal 84
  jmp L13368

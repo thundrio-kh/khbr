@@ -1151,10 +1151,10 @@ L1559:
  syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
  pushImm 0
  syscall 1, 228 ; trap_sheet_hp (2 in, 1 out)
- cfti 
+ citf 
  pushImm 0
  mulf 
- citf 
+ cfti 
  pushImm 0
  syscall 1, 231 ; trap_sheet_set_min_hp (3 in, 0 out)
  pushFromFSp 0

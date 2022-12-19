@@ -1847,7 +1847,7 @@ L3339:
  add 
  pushImmf 12
  pushFromFSp 36
- cfti 
+ citf 
  mulf 
  memcpy 0
  pushFromFSp 36

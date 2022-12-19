@@ -8675,11 +8675,11 @@ L16796:
  supzf 
  jz L16851
  pushFromFSpVal 72
- citf 
+ cfti 
  popToSp 4
  pushFromFSpVal 72
  pushFromFSp 4
- cfti 
+ citf 
  subf 
  popToSpVal 72
  jmp L16856

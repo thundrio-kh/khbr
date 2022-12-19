@@ -1715,11 +1715,11 @@ L3047:
  addf 
  popToSp 16
  pushFromFSp 16
- citf 
+ cfti 
  popToSp 24
  pushFromFSp 16
  pushFromFSp 24
- cfti 
+ citf 
  subf 
  popToSp 16
 L3086:
@@ -2821,11 +2821,11 @@ L5096:
  addf 
  popToSp 16
  pushFromFSp 16
- citf 
+ cfti 
  popToSp 24
  pushFromFSp 16
  pushFromFSp 24
- cfti 
+ citf 
  subf 
  popToSp 16
 L5135:

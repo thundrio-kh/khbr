@@ -2420,7 +2420,7 @@ L4943:
  jnz L4996
  pushImm 1074137745
  pushFromFSp 52
- cfti 
+ citf 
  mulf 
  popToSp 80
  pushFromPSp 16
@@ -3639,7 +3639,7 @@ L7173:
  div 
  pushImm 1
  add 
- cfti 
+ citf 
  pushImm 1051900103
  mulf 
  popToSp 80
@@ -3665,7 +3665,7 @@ L7223:
  div 
  pushImm 1
  add 
- cfti 
+ citf 
  pushImm 1051900103
  mulf 
  popToSp 80
@@ -4143,7 +4143,7 @@ L8129:
 L8134:
  popToSp 0
  pushFromFSpVal 80
- cfti 
+ citf 
  pushImm 1082130432
  mulf 
  gosub 4, L785
@@ -4280,7 +4280,7 @@ L8388:
  pushFromPSp 48
  pushImm 1057360534
  pushFromFSp 64
- cfti 
+ citf 
  mulf 
  syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
  memcpyToSp 16, 80
@@ -4302,7 +4302,7 @@ L8429:
 L8437:
  pushFromPSp 32
  pushFromFSp 72 ; ___possible_ref
- cfti 
+ citf 
  pushImm 1106247680
  mulf 
  pushImm 1133903872
