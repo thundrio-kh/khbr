@@ -1,0 +1,22 @@
+# Ok so I got distracted but I'm moving backwards, I hope I can implement all this by the end of the weekend
+
+# then finish your documentation stuff and "release" it
+# and then I can go over my bug reports from the last run
+# then I can do the last couple things in immediate changes
+# make tickets for openkh for the 2 things the patcher can't do
+
+
+# for boss rush specifically
+# plrp should be blanking out the crit mode stuff so it doesn't crash
+# need to start with 6 drive gauge and level 50 stats (00battle changes)
+# The second evt thats generated should be the old room program + 1, and go to the current boss location or the final (you can find the end program to modify the jump by checking the spawns for a boss, then outputting the MSN and the program number)
+# work with vanilla boss in room
+# work with setting a specific boss room 
+# num bosses 1 should work
+# num bosses 3 should work
+# randomize starting stuff vs not should work
+# open menu before each fight vs not should work
+
+# Get bonuses should all be blanked out
+# Figure out how to get the full 58 items with plrp
+# should have TT warp you to the world where the fight will happen first for party member altering

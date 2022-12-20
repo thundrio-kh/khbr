@@ -18,6 +18,10 @@ class Mission:
     def set_bonus_byte(self, value):
         self.set_list_byte(0x0D, value)
 
+    def set_camera_complete_byte(self, value=0):
+        # it's possible the byte number might be different on MSNs that are not the one Tifa uses in Boss rando
+        self.set_list_byte(0x1E, value)
+
     def set_mickey_bit(self, boolean=False):
         self.set_flag_bit(14, boolean)
 

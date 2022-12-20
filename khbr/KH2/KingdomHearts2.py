@@ -1,4 +1,5 @@
 from khbr.KH2.AssetGenerator import AssetGenerator
+from khbr.KH2.CutsceneRemover import CutsceneRemover
 from khbr.KH2.ModWriter import ModWriter
 from khbr.KH2.schemas.enemyseed import EnemySeed
 from khbr.textutils import create_spoiler_text
@@ -47,12 +48,16 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "bosses_replace_enemies": {"display_name": "Bosses Can Replace Enemies (Experimental)", "description": "Replaces 0.5 percent of enemies in the game with a random boss. This option is intended for PC use only.",
                     "type": "boss", "possible_values": [False, True], "hidden_values": [], "experimental": True},
-            "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool. In 'One for One'.",
+            "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool'.",
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
-            "data_bosses": {"display_name": "Randomize Superbosses", "description": "Include the Data versions of organization members in the pool, as well as Terra and Sephiroth",
+            "data_bosses": {"display_name": "Randomize Data Bosses", "description": "Include the Data versions of organization members in the pool",
+                                "type": "boss", "possible_values": [False, True], "hidden_values": []},        
+            "sephiroth": {"display_name": "Randomize Sephiroth", "description": "Include Sephiroth in the boss randomization pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
-            "lua_bosses": {"display_name": "Randomize Final Xemnas (Must setup LuaBackend properly)", "description": "Include Final Xemnas in the randomization pool (and his data, if Superbosses are enabled). Generates a lua script that must be loaded via ModManager.",
+            "terra": {"display_name": "Randomize Terra", "description": "Include Terra in the boss randomization pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
+            # "lua_bosses": {"display_name": "Advanced Boss Replacements (Must setup LuaBackend hook)", "description": "Takes advantage of Lua scripting and other methods to include bosses that are more difficult to randomize (ex: Final Xemnas). Generates a lua script that must be loaded via ModManager.",
+            #                     "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "mickey_rule": {"display_name": "Mickey Appearance Settings", "description": "Choose when Mickey appears. Options are 'follow', where mickey appears for the same bosses as in the vanilla game, regardless of their location. 'stay', where mickey appears in the same locations as in the vanilla game, regardless of the location. 'all', mickey will appear for every boss in the game, regardless of if mickey normally apepars there. 'none', mickey will never appear. Might make PS2 boss fights less stable",
                                 "type": "boss", "possible_values": ["follow", "stay", "all", 'none'], "hidden_values": []}
         }
@@ -71,7 +76,9 @@ class KingdomHearts2:
             "retry_data_final_xemnas": {"display_name": "Retry Data Final Xemnas", "description": "If you die to Data Final Xemnas, continue will put you right back into the fight, instead of having to fight Data Xemnas I again (warning will be a softlock if you are unable to beat Final Xemnas)",
                                 "possible_values": [], "hidden_values": [False, True]},
             "retry_dark_thorn": {"display_name": "Retry Dark Thorn", "description": "If you die to Dark Thorn, continue will put you right back into the fight, instead of having to fight Shadow Stalker again (warning will be a softlock if you are unable to beat Shadow Stalker)",
-                                "possible_values": [], "hidden_values": [False, True]}
+                                "possible_values": [], "hidden_values": [False, True]},
+            "remove_cutscenes": {"display_name": "Remove Cutscenes", "description": "Removes as many cutscenes from the game as possible. 3 different levels. 1 - Minimal: Remove as many cutscenes as possible without causing side effects. 2 - Non-Reward: Also remove cutscenes prior to forced fights, which causes the 'continue' on game over to work like 'retry' in later games (can be worked around easily with the auto-save mod). 3 - Maximum: Also remove cutscenes prior to receiving popup rewards, which causes the popops to not appear (although you still get the rewards, and they still show up on the tracker).",
+                                "possible_values": [], "hidden_values": ["Disabled", "Minimal", "Non-Reward", "Maximum"]}
         }
 
     def get_valid_enemies(self):
@@ -90,6 +97,9 @@ class KingdomHearts2:
             utility_mods.append("retry_data_final_xemnas")
         if options.get("retry_dark_thorn"):
             utility_mods.append("retry_dark_thorn")
+        rmcs = options.get("remove_cutscenes", "Disabled")
+        if rmcs and rmcs != "Disabled":
+            utility_mods.append("remove_cutscenes{}".format(options.get("remove_cutscenes")))
         return utility_mods
 
     def perform_randomization(self, options, seed=None):
@@ -181,12 +191,14 @@ class KingdomHearts2:
                         continue
                     if rand_seed.config.enemymode == "One to One Per Room":
                         rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemy"], nightmare=rand_seed.config.nightmare_enemies)
-                    
+
                     for sp, spawnpoint in room["spawnpoints"].items():
                         self.location_manager.update_location(spawnpoint, rand_seed.config)
                         if spawnpoint.get("ignored"):
                             continue
-                        for i, entities in spawnpoint["sp_ids"].items():
+                        created_enemies = []
+                        bosses_as_enemies = 0
+                        for i, entities in spawnpoint["sp_ids"].items(): # Fun fact: The internal game code refers to these as "unit"s I believe
                             # TODO might be able to make this just for entity in entities
                             for e in range(len(entities)):
                                 entity = entities[e]
@@ -222,14 +234,33 @@ class KingdomHearts2:
                                     if not self.spawn_manager.should_replace_enemy(old_enemy_object):
                                         continue
 
-                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object, room)
+                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object, room, existing_bosses_as_enemies=bosses_as_enemies)
                                     if not new_enemy:
                                         continue
                                     if new_enemy == old_enemy_object["name"] and not entity.get("nameForReplace", "") == new_enemy:
                                         continue
 
                                     new_enemy_object = self.enemy_manager.get_new_enemy_object(new_enemy, rand_seed)
+                                    if new_enemy_object["type"] == "boss":
+                                        bosses_as_enemies += 1
+                                    created_enemies.append(new_enemy_object)
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_enemy_object)
+                        for aimod in spawnpoint.get("aimods",[]):
+                            createmod=True
+                            for var in aimod["vars"]:
+                                varvalue = aimod["vars"][var]
+                                if varvalue.startswith("$"):
+                                    varargs = varvalue[1:].split(".")
+                                    if varargs[0] == "enemy":
+                                        if len(created_enemies) == 0:
+                                            createmod=False
+                                            continue # hack but these types of aimods should not be created when only boss rando is run
+                                        index = int(varargs[1])
+                                        argument = varargs[2]
+                                        enemy = created_enemies[index]
+                                        aimod["vars"][var] = enemy[argument]
+                            if createmod:
+                                rand_seed.ai_mods[aimod["name"]] = aimod
         
     def generate_files(self, outdir='', randomization={}, outzip=None):
         if DIAGNOSTICS:
@@ -249,13 +280,18 @@ class KingdomHearts2:
 
         assetgenerator.generateObjEntry(randomization.get("object_map", {}))
         assetgenerator.generateEnmp(randomization.get("scale_map",{}), remove_damage_cap="remove_damage_cap" in utility_mods)
+        rmcs = [u for u in utility_mods if u.startswith("remove_cutscenes")]
+        if len(rmcs):
+            cutsceneremover = CutsceneRemover(assetgenerator, mode=rmcs[0].replace("remove_cutscenes", ""))
+            cutsceneremover.removeCutscenes()
         assetgenerator.generateAiMods(randomization.get("ai_mods"))
         assetgenerator.generateLuaMods(randomization.get("lua_mods"))
         assetgenerator.generateMsns(randomization.get("msn_map", {}), self.mission_manager.msninfo)
         # self.set_spawns() # TODO is this needed?
         self.location_manager.set_locations() # TODO this might be unneeded time waste????
         assetgenerator.generateSpawns(randomization.get("spawns", ""), randomization.get("subtract_map"))
-        
+        assetgenerator.generateCustomMoveset()
+
         if DIAGNOSTICS:
             end_time = time.time()
             print_debug("Files Generated: {}s".format(end_time-start_time))

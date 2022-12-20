@@ -41,6 +41,28 @@ class ModWriter:
                 }
             ]
         }
+    
+    def writePlrp(self, plrp):
+        outfn = os.path.join(self.outdir, "files", "root", "plrp.list")
+        fn = os.path.join("files", "root", "plrp.list")
+        self.write_method(outfn, fn, yaml.dump(plrp))
+        return {
+            "name": "00battle.bin",
+            "method": "binarc",
+            "source": [
+                {
+                    "name": "plrp",
+                    "method": "listpatch",
+                    "source": [
+                        {
+                            "name": fn,
+                            "type": "plrp"
+                        }
+                    ],
+                    "type": "List"
+                }
+            ]
+        }
 
     def writeEnmp(self, enmp):
         outfn = os.path.join(self.outdir, "files", "root", "enmp.list")
@@ -60,6 +82,41 @@ class ModWriter:
                             "name": fn
                         }
                     ]
+                }
+            ]
+        }
+
+    def writeCmd(self, data):
+        outfn = os.path.join(self.outdir, "files", "root", "cmd.list")
+        fn = os.path.join("files", "root", "cmd.list")
+        self.write_method(outfn, fn, data)
+        return {
+            "name": "03system.bin",
+            "method": "binarc",
+            "source": [
+                {
+                    "name": "cmd",
+                    "type": "list",
+                    "method": "copy",
+                    "source": [
+                        {
+                            "name": fn
+                        }
+                    ]
+                }
+            ]
+        }
+
+    def writeMset(self, mset_fn, data):
+        outfn = os.path.join(self.outdir, "files", "obj", mset_fn)
+        fn = os.path.join("files", "obj", mset_fn)
+        self.write_method(outfn, fn, data)
+        return {
+            "name": "obj/{}".format(mset_fn),
+            "method": "copy",
+            "source": [
+                {
+                    "name": fn
                 }
             ]
         }
@@ -103,23 +160,27 @@ class ModWriter:
             "type": "AreaDataScript"
         }
 
-    def writeAi(self, aifn, modelname, data):
-        relfn = os.path.join("files", "ai", aifn)
+    def writeAi(self, aifn, modelname, tpe, data):
+        relfn = os.path.join("files", "ai", modelname+"_"+aifn)
         outfn = os.path.join(self.outdir, relfn)
         
         self.write_method(outfn, relfn, data)
-        return {
+        formattedname = "obj/{}.mdlx".format(modelname) if tpe == "obj" else "msn/jp/{}.bar".format(modelname)
+        asset = {
             "method": "binarc",
-            "name": "obj/{}.mdlx".format(modelname),
+            "name": formattedname,
             "source": [
                 {
-                    "method": "copy",
-                    "name": os.path.basename(aifn).split(".")[0],
+                    "method": "bdscript",
+                    "name": os.path.basename(aifn).split(".")[0][:4],
                     "source": [{"name": relfn}],
                     "type": "Bdx"
                 }
             ]
         }
+        if "msn" in formattedname:
+            asset["multi"] = [{"name": formattedname.replace("jp", r)} for r in ["us","fr","gr","it","sp","uk"]]
+        return asset
 
     def writeLua(self, luafn, data):
         relfn = os.path.join("files", "lua", luafn)
@@ -136,10 +197,12 @@ class ModWriter:
         relfn = os.path.join("files", "msns", msnname + ".bar")
         outfn = os.path.join(self.outdir, relfn)
         self.write_method(outfn, relfn, data)
+        formattedname = "msn/jp/{}.bar".format(msnname)
         # create the asset
         asset = {
             "method": "copy",
-            "name": "msn/jp/{}.bar".format(msnname),
+            "name": formattedname,
+            "multi": [{"name": formattedname.replace("jp", r)} for r in ["us","fr","gr","it","sp","uk"]],
             "source": [{"name": relfn}]
         }
         return asset

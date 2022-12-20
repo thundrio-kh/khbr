@@ -198,16 +198,9 @@ class Randomizer:
         self._validate_options(self.get_options_cli(game), options)
 
         randomization = game.perform_randomization(options)
+    
         assets = game.generate_files(randomization=randomization, outzip=outZip)
-        for asset in assets:
-            found = False
-            for modobj_asset in modobj["assets"]:
-                if modobj_asset["name"] == asset["name"]:
-                    found = True
-                    for source in asset["source"]:
-                        modobj_asset["source"].append(source)
-            if not found:
-                modobj["assets"].append(asset)
+        modobj["assets"] += assets
         return create_spoiler_text(game.spoilers)
     
     def getSchemaForGame(self, g):
@@ -223,7 +216,7 @@ if __name__ == '__main__':
     # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"enemy\": \"Wild\", \"combine_enemy_sizes\": true}" randomization_only
     # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"data_bosses\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"Wild\", \"cups_bosses\": false, \"data_bosses\": false, \"scale_boss_stats\": true}"
-    # run randomizer.py devgenerate "{\"selected_boss\": \"Luxord\"}" randomization_only
+    # run randomizer.py devgenerate "{\"selected_boss\": \"Tifa\", \"memory_expansion\": true}" randomization_only
     # run randomizer.py devgenerate "{\"selected_enemy\": \"Dancer\"}"
     # run randomizer.py devgenerate "{\"enemy\": \"One to One\", \"combine_enemy_sizes\": true}"
     # run randomizer.py devgenerate "{\"boss\": \"One to One\", \"mickey_rule\": \"all\"}" randomization_only
@@ -252,7 +245,7 @@ if __name__ == '__main__':
     if mode.startswith("dev"):
         # moddir = "/mnt/c/Users/15037/git/OpenKh/OpenKh.Tools.ModsManager/bin/debug/net5.0-windows/mods/thundrio-kh"
         #moddir = "C:\\Users\\Arcade\\Desktop\\git\\OpenKh\\OpenKh.Tools.ModsManager\\bin\\Debug\\net5.0-windows\\mods\\thundrio-kh"
-        moddir = "C:\\Users\\12sam\\Desktop\\openkh\\mods\\thundrio-kh"
+        moddir = "C:\\Users\\12sam\\Desktop\\openkh\\mods\\kh2\\thundrio-kh"
         fn = "devmod"
         if os.path.exists(os.path.join(moddir, fn)):
             shutil.rmtree(os.path.join(moddir, fn))
@@ -266,8 +259,8 @@ if __name__ == '__main__':
         print(options)
         b64 = rando.read_seed("kh2", seedfn=options["seed"], outfn=fn)
     else:
-        while True:
-            b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=randomization_only)
-            if b64["spawns"]["Olympus Coliseum"]["Coliseum Gates"]['spawnpoints']['b_40']['sp_ids']['41'][0]["name"] == "Luxord":
-                0/0
+        # while True:
+        b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=randomization_only)
+            # if b64["spawns"]["Olympus Coliseum"]["Coliseum Gates"]['spawnpoints']['b_40']['sp_ids']['41'][0]["name"] == "Luxord":
+            #     0/0
     print("Total thing took {}s".format(time.time()-t))

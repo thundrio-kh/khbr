@@ -116,6 +116,8 @@
             name: Bees (Disappearing)
 Agrabah:
   Above Agrabah:
+    roommodedits:
+      b_60: jafar_60 # characters
     size: 5000000
     spawnpoints:
       b_60:
@@ -2666,6 +2668,8 @@ Beast's Castle:
             isboss: false
             name: Dusk
   Ballroom 05:
+    roommodedits:
+      b_40: shadow_stalker
     size: 5000000
     spawnpoints:
       b_40:
@@ -6345,6 +6349,7 @@ Halloween Town:
             name: Bulky Vendor
   Halloween Town Square:
     size: 5000000
+    bossenemy_ignored: true
     spawnpoints:
       b_00:
         size: 0
@@ -6522,7 +6527,6 @@ Halloween Town:
             isboss: false
             name: Shadow (NM)
       b_99:
-        ignored: true # randomizing this might not cause presents to appear
         size: 0
         sp_ids:
           '686':
@@ -18471,6 +18475,7 @@ The Land of Dragons:
             isboss: false
             name: Rapid Thruster
   Encampment:
+    bossenemy_ignored: true
     size: 5000000
     spawnpoints:
       b_00:
@@ -21732,7 +21737,7 @@ The World That Never Was:
           '47':
           - index: 2
             isboss: true
-            name: Final Xemnas (Copy)
+            name: Final Xemnas (Clone)
           - index: 3
             isboss: true
             name: Final Xemnas
@@ -23417,8 +23422,6 @@ Twilight Town:
     size: 5000000
     spawnpoints:
       b_40:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '78':
@@ -23426,8 +23429,6 @@ Twilight Town:
             isboss: true
             name: Hayner
       b_41:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '100':
@@ -23455,8 +23456,6 @@ Twilight Town:
             isboss: true
             name: Axel I
       b_44:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '166':
@@ -23493,8 +23492,6 @@ Twilight Town:
             isboss: false
             name: Dusk
       b_41:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '71':
@@ -23502,8 +23499,6 @@ Twilight Town:
             isboss: true
             name: Seifer (1)
       b_42:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '93':
@@ -23511,7 +23506,12 @@ Twilight Town:
             isboss: true
             name: Seifer (2)
       b_43:
-        ignored: true
+        aimods:
+        - name: TT04_MS301/tt04.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '115':
@@ -23556,8 +23556,6 @@ Twilight Town:
             isboss: false
             name: Berserker
       b_45:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '2215':
@@ -23565,8 +23563,6 @@ Twilight Town:
             isboss: true
             name: Seifer (3)
       b_50:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '2343':
@@ -23574,8 +23570,6 @@ Twilight Town:
             isboss: true
             name: Hayner
       b_51:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '2375':
@@ -23583,8 +23577,6 @@ Twilight Town:
             isboss: true
             name: Seifer (4)
       b_52:
-        pc:
-          ignored: true
         size: 0
         sp_ids:
           '2407':
@@ -23992,7 +23984,12 @@ Twilight Town:
             isboss: false
             name: Samurai
       b_41:
-        ignored: true # if the dusk dies you are softlocked
+        aimods:
+        - name: TT14_MS109/tt_d.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '65':

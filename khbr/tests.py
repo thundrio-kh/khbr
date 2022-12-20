@@ -295,7 +295,7 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_seedgen_boss_mickey_rule()
+#ut.test_seedgen_boss_mickey_rule()
 
 # Uncomment to run the actual tests
-#unittest.main()
+unittest.main()

@@ -16,7 +16,9 @@ class SpawnManager:
             "ax2_50": self.ax2_50,
             "stormrider_61": self.stormrider_61,
             "groundshaker": self.groundshaker,
-            "ax1_40": self.ax1_40
+            "shadow_stalker": self.shadow_stalker,
+            "ax1_40": self.ax1_40,
+            "jafar_60": self.jafar_60
         }
 
 
@@ -101,6 +103,20 @@ class SpawnManager:
         boss = spawnpoint[0]["Entities"][3]
         boss["PositionY"] = 0
 
+    def shadow_stalker(self, spawnpoint):
+        # move enemies height to the bottom
+        sora = spawnpoint[0]["Entities"][0]
+
+        boss = spawnpoint[0]["Entities"][3]
+        boss["PositionY"] = sora["PositionY"]
+
+    def jafar_60(self, spawnpoint):
+        # move enemies height to the sora
+        sora = spawnpoint[0]["Entities"][0]
+
+        boss = spawnpoint[0]["Entities"][1]
+        boss["PositionY"] = sora["PositionZ"]
+
     def apply_room_mods(self, basespawns, ardname):
         roommods = {}
         if "roommodedits" in basespawns:
@@ -129,9 +145,31 @@ class SpawnManager:
                     sp_instance["Entities"].pop(e)
 
     @staticmethod
-    def add_new_object(original_spawns, new_spawn_descriptor):
+    def add_new_object(original_spawns, new_spawn_descriptor, default_object=None):
+        # TOTEST might need to pass in the default_object with coordinates but maybe not. test in Past Pete fight
+        if not default_object:
+            default_object = {
+                "ObjectId": 0,
+                "PositionX": 0,
+                "PositionY": 0,
+                "PositionZ": 0,
+                "RotationX": 0,
+                "RotationY": 0,
+                "RotationZ": 0,
+                "SpawnType": 0,
+                "SpawnArgument": 0,
+                "Serial": 0,
+                "Argument1": 0,
+                "Argument2": 0,
+                "ReactionCommand": 0,
+                "SpawnDelay": 0,
+                "Command": 0,
+                "SpawnRange": 0,
+                "Level": 0,
+                "Medal": 0
+            }
         # adding new entity to list, defaulting all values to the first entity in the list
-        new_ent = dict(original_spawns["Entities"][0])
+        new_ent = dict(original_spawns["Entities"][0])  if len(original_spawns["Entities"]) else dict(default_object)
         # TODO Make a unique serial for the spawnpoint?? Maybe 6xx
         for attr in new_spawn_descriptor:
             if attr.startswith("mod"):
@@ -210,22 +248,13 @@ class SpawnManager:
                 bosspicklist = old_boss_parent["available"]
             new_boss = pick_boss_to_replace(enemy_records, bosspicklist)
 
-            if "roxas" in old_boss_object["tags"]:
-                if new_boss == "Axel (Data)":
-                    # This fight is probably not very winnable as roxas, so force to normal axel II
-                    return "Axel II"
-            if "solo" in old_boss_object["tags"]:
-                if new_boss == "Demyx (Data)":
-                    return "Demyx" # Actual fix would be to just mod the ai to increase the time for destroying clones
             if old_boss_object["name"] == "Luxord" and new_boss == "Luxord (Data)":
                 return "Luxord" # There is a strange crash on Luxord Datas DM in original Luxords arena
-            if old_boss_object["name"] in ["Xaldin", "Xaldin (Data)"] and new_boss == "Axel (Data)":
-                return "Axel II" # For some reason his RC never appears so the fight isn't winnable? Might be an issue with party members
 
             return new_boss
     
     @staticmethod
-    def get_new_enemy(rand_seed, old_enemy_object, room):
+    def get_new_enemy(rand_seed, old_enemy_object, room, existing_bosses_as_enemies=0):
         if rand_seed.config.selected_enemy:
             new_enemy = rand_seed.config.selected_enemy
         elif rand_seed.config.enemymode == "Wild":
@@ -236,7 +265,7 @@ class SpawnManager:
             new_enemy = rand_seed.enemymapping[old_enemy_object["name"]]
         if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses and not room.get("bossenemy_ignored"):            
             chance = 0.012
-            if random.random() < chance:
+            if existing_bosses_as_enemies < 1 and random.random() < chance:
                 # TODO this list doesn't need to be generated every time
                 if not rand_seed.config.boss_enemies:
                     for boss_name in rand_seed.config.bosses:
@@ -254,3 +283,27 @@ class SpawnManager:
             if spid["Id"] == idnum:
                 return spid
         raise Exception("Spid not found!")
+
+    @staticmethod
+    def getNewUnit(defaults):
+        unit = {
+            "Type": 1,
+            "Flag": 0,
+            "Id": 26,
+            "Unk20": 0,
+            "Unk24": 0,
+            "Entities": [],
+            "EventActivators": [],
+            "WalkPath": [],
+            "ReturnParameters": [],
+            "Signals": [],
+            "Teleport": {
+                "Place": 0,
+                "Door": 0,
+                "World": 0,
+                "Unknown": 0
+            }
+        }
+        for k,v in defaults.items():
+            unit[k] = v
+        return unit

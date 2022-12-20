@@ -187,9 +187,10 @@ class EnemyManager:
         bosses = {}
 
         # Nightmare mode should override settings and always use datas and cups (until nightmare is a preset)
-        # TODO On PC cups bosses are exhibiting crashy behavior, so just disable them always for now on PC
-        use_cups_bosses = (not ispc) and (nightmare_bosses or options.get("cups_bosses"))
+        use_cups_bosses = nightmare_bosses or options.get("cups_bosses")
         use_data_bosses = nightmare_bosses or options.get("data_bosses")
+        use_sephiroth = nightmare_bosses or options.get("sephiroth")
+        use_terra = nightmare_bosses or options.get("terra")
         use_lua_bosses = options.get("lua_bosses")
 
         for k,v in self.enemy_records.items():
@@ -202,6 +203,10 @@ class EnemyManager:
             if "cups" in v["tags"] and not use_cups_bosses:
                 continue
             if "data" in v["tags"] and not use_data_bosses:
+                continue
+            if "terra" in v["tags"] and not use_terra:
+                continue
+            if "sephiroth" in v["tags"] and not use_sephiroth:
                 continue
             if v.get("luamod") and not use_lua_bosses:
                 continue

@@ -1,3 +1,23 @@
+3.0.0
+* Fix crash that was preventing FF bosses from being randomized on PC (the mission complete camera will look different from normal)
+* Updated allowed replacements for reducing known softlocks/crashes
+* Prevent bosses from spawning in Encampment, when bosses as enemies mode is enabled
+* Added an AllocEnemy line to event scripts on PC, which should help prevent crashes due to going out of memory on PC (IE limit form against Lexaeus was a common one)
+* Refactoring of some internals to allow for additional features
+* Final Xemnas now works regardless of if Lua support is being used
+* Struggle bosses have all been reenabled on PC
+* Struggle fights will now prevent the placed boss from dying, so the struggle fight is actually a full struggle
+* The Illuminator will no longer move from the spot where Barbossa spawns it, to prevent issues where it moves to a unreachable location
+* Now generating a custom moveset (thanks to DA) for Sora that will allow Twilight Thorn to work without major AI modifications
+* Jafar has been added into the randomization pool for Wild boss replacement mode
+* Demyx OC has been added into the randomization pool
+* Randomize superbosses option has been split into 3 options, for terra, sephiroth, and the datas
+* Cutscene Remover option has been added, with 3 different options (PUT MORE DESCRIPTION HERE)
+* Enabled randomizing the two single dusk fights in STT where the enemy is invulnerable
+* When bosses as enemies is enabled, do not allow more than one boss per spawnpoint, which will hopefully help with stability
+* HT Presents fight is reenabled
+* Riku is now enabled in one to one
+
 2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)
 * Added an option to treat Nobodys as a separate type of enemy, depending on the other options enabled this can cause some enemies to randomize very predictably

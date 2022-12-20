@@ -926,7 +926,9 @@ Air Pirate:
       - 1
       - 0
 Armor Xemnas I:
-  aimod: true
+  # aimods: 
+  # - name: B_EX260/b_ex.bdscript
+  #   type: obj
   enabled: true
   enmp_index: 0xA0
   hp: 100
@@ -943,28 +945,162 @@ Armor Xemnas I:
       mickey_source: true
       final_fight: true
       program: 71
+      outprogram: 0x57
       size: 3.82
       room_size: 12.98
       adds:
       - ObjectId: 2116 # ??? B_EX300
+        Serial: 12
       - ObjectId: 2115 # Xig B_EX290 (x2)
+        Serial: 10
+      - ObjectId: 2115 # Xig B_EX290 (x2)
+        Serial: 11
       - ObjectId: 2114 # Saix Claymore (x2)
+        Serial: 8
+      - ObjectId: 2114 # Saix Claymore (x2)
+        Serial: 9
       - ObjectId: 2117 # xaldin B_EX310
+        Serial: 13
       - ObjectId: 2118 # Axel B_EX320 (x2)
-        Argument1: 1
+        Serial: 14
+      - ObjectId: 2118 # Axel B_EX320 (x2)
+        Serial: 14
       - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
+        SpawnType: 2
+        Serial: 18
+        customUnit:
+          Type: 2
+          Flag: 1
+          Id: 26
+          EventActivators:
+          - Shape: 2
+            Option: 0
+            PositionX: 45.011569976806641
+            PositionY: -100
+            PositionZ: -888.35009765625
+            ScaleX: 54.833000183105469
+            ScaleY: 100
+            ScaleZ: 74.166999816894531
+            RotationX: 0
+            RotationY: -0.081681407988071442
+            RotationZ: 0
+            Flags: 0
+            Type: 0
+            OnBgGroup: 0
+            OffBgGroup: 0
+      - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
+        SpawnType: 2
+        Serial: 19
+        customUnit:
+          Type: 2
+          Flag: 1
+          Id: 26
+          EventActivators:
+          - Shape: 2
+            Option: 0
+            PositionX: 45.011569976806641
+            PositionY: -100
+            PositionZ: -888.35009765625
+            ScaleX: 54.833000183105469
+            ScaleY: 100
+            ScaleZ: 74.166999816894531
+            RotationX: 0
+            RotationY: -0.081681407988071442
+            RotationZ: 0
+            Flags: 0
+            Type: 0
+            OnBgGroup: 0
+            OffBgGroup: 0
+      - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
+        SpawnType: 2
+        Serial: 20
+        customUnit:
+          Type: 2
+          Flag: 1
+          Id: 26
+          EventActivators:
+          - Shape: 2
+            Option: 0
+            PositionX: 45.011569976806641
+            PositionY: -100
+            PositionZ: -888.35009765625
+            ScaleX: 54.833000183105469
+            ScaleY: 100
+            ScaleZ: 74.166999816894531
+            RotationX: 0
+            RotationY: -0.081681407988071442
+            RotationZ: 0
+            Flags: 0
+            Type: 0
+            OnBgGroup: 0
+            OffBgGroup: 0
+      - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
+        SpawnType: 2
+        Serial: 21
+        customUnit:
+          Type: 2
+          Flag: 1
+          Id: 26
+          EventActivators:
+          - Shape: 2
+            Option: 0
+            PositionX: 45.011569976806641
+            PositionY: -100
+            PositionZ: -888.35009765625
+            ScaleX: 54.833000183105469
+            ScaleY: 100
+            ScaleZ: 74.166999816894531
+            RotationX: 0
+            RotationY: -0.081681407988071442
+            RotationZ: 0
+            Flags: 0
+            Type: 0
+            OnBgGroup: 0
+            OffBgGroup: 0
+      - ObjectId: 2294 # dancers M_EX880_DANCER_EH (x5)
+        SpawnType: 2
+        Serial: 22
+        customUnit:
+          Type: 2
+          Flag: 1
+          Id: 26
+          EventActivators:
+          - Shape: 2
+            Option: 0
+            PositionX: 45.011569976806641
+            PositionY: -100
+            PositionZ: -888.35009765625
+            ScaleX: 54.833000183105469
+            ScaleY: 100
+            ScaleZ: 74.166999816894531
+            RotationX: 0
+            RotationY: -0.081681407988071442
+            RotationZ: 0
+            Flags: 0
+            Type: 0
+            OnBgGroup: 0
+            OffBgGroup: 0
+      - ObjectId: 2286 # Luxord card?
+        Serial: 17
+        customUnit:
+          Type: 5
+          Flag: 1
+          Id: 34
       vars:
       - 1
       - 0
 Armor Xemnas II:
   enabled: true
+  # aimods:
+  # - name: EH23_MS112/ms_b.bdscript
+  #   type: msn
+  #   source: old
   blacklist_source:
   - Axel I
   - Saix # Report of crash
   enmp_index: 0xA0
   tags:
   - teleport_blocked
-  - solo # not really but data demyx would still be kinda stupid here
   hp: 100
   level: 99
   limiter: 0
@@ -975,6 +1111,7 @@ Armor Xemnas II:
     Armor Xemnas II:
       msn: EH23_MS112
       program: 73
+      outprogram: 0x54
       replace_as: Armor Xemnas I
       final_fight: true
       size: 1.7
@@ -1055,6 +1192,7 @@ Axel I:
   msn: TT05_MS404
   enmp_index: 0x94
   program: 87
+  outprogram: 0x05
   room_size: 9.43
   size: 2.92
   obj_id: 2229
@@ -1103,12 +1241,12 @@ Axel II:
   model: B_EX110
   msn: TT20_MS603
   program: 137
+  outprogram: 0xD4
   room_size: 3.68
   size: 3.74
   obj_id: 81
   blacklist_destination:
   - Scar
-  - Cerberus # Axel Data can't do RC so unbeatable
   type: boss
   whitelist_source:
   - Axel I
@@ -1170,14 +1308,14 @@ Banzai:
       - 2
       - 0
 Barbossa:
-  aimod: true
+  aimods: 
+  - name: B_CA010/b_ca.bdscript
+    type: obj
   pc:
     blacklist_destination:
     - Luxord # report of crash after cutscene
     - Terra # report of crash at cutscene
   blacklist_destination:
-  - Thresholder # Illuminator spawn loc
-  - The Beast # Illuminator spawn loc
   - Xigbar # You are put in boxed in space
   blacklist_source:
   - Thresholder # report of fight not ending
@@ -1185,7 +1323,9 @@ Barbossa:
   adds:
   - ObjectId: 358 #Illuminator
     name: Illuminator
-    aimod: false
+    aimods:
+    - name: B_CA000/b_ca.bdscript
+      type: obj
   tags:
   - needs_teleport
   enabled: true
@@ -1197,6 +1337,7 @@ Barbossa:
   msn: CA10_MS107
   msn_source_as: WI01_MS101
   program: 60
+  outprogram: 0x02 # probably wrong3
   size: 3.95
   room_size: 11.84
   obj_id: 1015
@@ -1301,14 +1442,13 @@ Blizzard Lord:
       msn: AL03_MS103
       mickey_source: true
       program: 59
+      outprogram: 3
       room_size: 10.32
       roommaxsize: 13.36 # instead of roomsizemultiplier
       vars:
       - 0
       - 0
     Blizzard Lord (Cups):
-      pc: 
-        enabled: false
       tags:
       - cups
       - large
@@ -1383,8 +1523,6 @@ Cerberus:
   enabled: true
   enmp_index: 0x13
   hp: 100
-  tags:
-  - solo # not really but data demyx would still be kinda stupid here
   level: 99
   limiter: 0
   model: B_HE020
@@ -1399,6 +1537,7 @@ Cerberus:
       msn: HE07_MS103
       mickey_source: true
       program: 114
+      outprogram: 0x0A # probably wrong
       room_size: 10.54
       vars:
       - 0
@@ -1406,8 +1545,6 @@ Cerberus:
     Cerberus (Cups):
       # tags:
       # - cups
-      pc: 
-        enabled: false
       enabled: true
       msn_list:
       - program: 194
@@ -1430,8 +1567,9 @@ Cloud:
   level: 99
   limiter: 0
   model: N_HB550_BTL2
-  pc:
-    enabled: false # PC will cause crash on end of fight
+  pc: 
+    tags: 
+    - disablecamera
   tags:
   - cups
   msn_replace_allowed: false
@@ -1580,7 +1718,8 @@ Dark Thorn:
   limiter: 0
   model: B_BB110
   msn: BB05_MS104B
-  program: 79
+  program: 78
+  outprogram: 79
   size: 4.19
   room_size: 14.00
   roommaxsize: 17.03
@@ -1603,6 +1742,9 @@ Axel (Data):
   tags:
   - data
   - organization
+  aimods: 
+  - name: B_EX110_LV99/b_ex.bdscript
+    type: obj
   enabled: true
   variationof: Axel II
   enmp_index: 0xF5
@@ -1625,6 +1767,9 @@ Demyx (Data):
   tags:
   - data
   - organization
+  aimods: 
+  - name: B_EX120_HB_LV99/b_ex.bdscript
+    type: obj
   enabled: true
   variationof: Demyx
   enmp_index: 0xF0
@@ -1649,7 +1794,9 @@ Final Xemnas (Data):
   - organization
   - solo
   enabled: true
-  luamod: "final_xemnas"
+  aimods: 
+  - name: B_EX170_LAST_LV99/b_ex.bdscript
+    type: obj
   variationof: Final Xemnas
   msn_replace_allowed: false # this might break things
   hp: 100
@@ -1753,7 +1900,9 @@ Xemnas (Data):
   tags:
   - data
   - organization
-  aimod: true
+  aimods: 
+  - name: B_EX170_LV99/b_ex.bdscript
+    type: obj
   can_be_enemy: false
   enabled: true
   variationof: Xemnas
@@ -1831,7 +1980,6 @@ Demyx OC:
   tags:
   - teleport_blocked
   msn: HE17_MS105
-  source_replace_allowed: false
   obj_id: 795
   size: 2.74
   room_size: 9.09
@@ -2057,8 +2205,16 @@ Fiery Globe Treasure Room:
       - 0
       - 0
 Final Xemnas:
-  aimod: true
-  luamod: "final_xemnas"
+  aimods: 
+  - name: B_EX170_LAST/b_ex.bdscript
+    type: obj
+  blacklist_destination:
+  - Volcano Lord
+  - Blizzard Lord
+  - Leon
+  - Yuffie
+  - Tifa
+  - Cloud
   can_be_enemy: false
   tags:
   - solo
@@ -2216,22 +2372,15 @@ Grim Reaper I:
       - 1
       - 0
 Grim Reaper II:
-  aimod: true
+  aimods: 
+  - name: B_CA050/b_ca.bdscript
+    type: obj
   enabled: true
   enmp_index: 0x7C
   hp: 100
   tags:
   - needs_rc
   level: 99
-  pc:
-    blacklist_source:
-    - Pete OC II # crashes on fight start
-    - Hades II
-    - Blizzard Lord
-    - Volcano Lord
-    - Hades Cups
-    - The Beast
-    - Sephiroth # report of fire pillar crash
   blacklist_destination:
   - Dark Thorn # medals get lost on ground
   - Shadow Stalker # medals get lost on ground
@@ -2257,7 +2406,6 @@ Grim Reaper II:
   variations:
     Grim Reaper II:
       enabled: true
-      isnightmare: false # just hack because he breaks when ai mod + vanilla spot
       msn: CA01_MS204
       program: 54
       size: 2.58
@@ -2281,7 +2429,6 @@ Groundshaker:
   tags:
   - rc_blocked
   - teleport_blocked
-  - solo # Not really but this mostly only is for data demyx so it works
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   model: B_LK120
@@ -2426,9 +2573,14 @@ Hammer Frame WI:
       - 0
       - 0
 Hayner:
-  aimod: true
-  pc:
-    enabled: false
+  aimods: 
+  - name: TT05_MS401/ms_s.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
+  - name: N_EX500_BTL/n_ex.bdscript
+    type: obj
   enabled: true
   tags:
   - roxas
@@ -2472,13 +2624,15 @@ Hayner:
   - Yuffie
   variations:
     Hayner:
-      msn_list:
-      - program: 182
-        msn: TT04_MS00
-        room_size: 7.61
-      - program: 84
-        msn: TT05_MS401
-        room_size: 11.57
+      # msn_list:
+      # - program: 182
+      #   msn: TT04_MS00
+      #   room_size: 7.61
+      # - program: 84
+      #   msn: TT05_MS401
+      #   room_size: 11.57
+      msn: TT05_MS401
+      room_size: 11.57
       vars:
       - 0
       - 0
@@ -2620,7 +2774,6 @@ Hook Bat AL:
 Hostile Program:
   enabled: true
   blacklist_source:
-  - Axel II # Report of Fire pillar killing during intro cutscene
   - Axel I
   enmp_index: 0x6A
   hp: 100
@@ -2677,7 +2830,6 @@ Hydra:
   model: B_HE100
   unchanged_file_size: true
   pc:
-    enabled: false # ctd on killing 3rd mini head
     unchanged_file_size: false
   msn: HE18_MS108
   obj_id: 352
@@ -2686,12 +2838,25 @@ Hydra:
   program: 171
   adds:
   - ObjectId: 922 # hydra head
-    modPositionY: 1500
+    Serial: 2
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 52
+  - ObjectId: 365 # Meg
+    Serial: 17
+    Argument1: 1
+    # customUnit:
+    #   Type: 5
+    #   Flag: 1
+    #   Id: 52
   - ObjectId: 801 # yellow orb
     Argument1: 99
+    SpawnType: 0
   - ObjectId: 364 # phil
     Argument1: 1
   - ObjectId: 363 # pegasus
+
   type: boss
   variations:
     Hydra:
@@ -2732,7 +2897,9 @@ Icy Cube Treasure Room:
       - 0
 Illuminator:
   enabled: false
-  aimod: false
+  aimods:
+  - name: B_CA000/b_ca.bdscript
+    type: obj
   enmp_index: 0x62
   hp: 100
   level: 99
@@ -2763,7 +2930,22 @@ Iron Hammer:
       - 0
       - 0
 Jafar:
-  enabled: false
+  enabled: true
+  source_replace_allowed: true
+  whitelist_source:
+  - Armor Xemnas I
+  - Blizzard Lord
+  - Final Xemnas
+  - Grim Reaper I
+  - Hostile Program
+  - Prison Keeper
+  - Shadow Stalker
+  - Storm Rider
+  - The Experiment
+  - Volcano Lord
+  aimods: 
+  - name: B_AL020/b_al.bdscript
+    type: obj
   enmp_index: 0x8A
   hp: 100
   level: 99
@@ -2774,7 +2956,6 @@ Jafar:
   size: 1.86
   room_size: 11.19
   obj_id: 348
-  source_replace_allowed: false
   type: boss
   variations:
     Jafar:
@@ -2835,7 +3016,7 @@ Larxene:
   tags:
   - organization
   - needs_teleport
-  can_be_enemy: true
+  can_be_enemy: false #expensive
   enabled: true
   enmp_index: 0xD8
   hp: 100
@@ -2874,8 +3055,9 @@ Leon:
   hp: 100
   level: 99
   limiter: 0
-  pc:
-    enabled: false # PC will cause crash on end of fight
+  pc: 
+    tags: 
+    - disablecamera
   model: N_HB530_BTL2
   msn_replace_allowed: false
   obj_id: 2296
@@ -3262,6 +3444,9 @@ Bomb Bell A:
 Oogie Boogie:
   enabled: false
   enmp_index: 0x4B
+  aimods: 
+  - name: B_NM000/b_nm.bdscript
+    type: obj
   tags:
   - teleport_blocked
   hp: 100
@@ -3276,11 +3461,21 @@ Oogie Boogie:
   pc:
     unchanged_file_size: false
   room_size: 12.41
-  # adds:
-  # - ObjectId: 969 # ???
-  # - ObjectId: 1604 # oogies punch
-  # - ObjectId: 928 # ???
-  # - ObjectId: 1003 # present box
+  adds:
+  - ObjectId: 969 # ???
+    Serial: 19
+    Argument: 1
+  - ObjectId: 969 # ???
+    Serial: 20
+    Argument: 2
+  - ObjectId: 966 # Oogie spikes
+    Serial: 24
+  - ObjectId: 1604 # oogies punch
+    Serial: 21
+  - ObjectId: 928 # ???
+    Serial: 36
+  - ObjectId: 1003 # present box
+    Serial: 26
   type: boss
   variations:
     Oogie Boogie:
@@ -3370,8 +3565,10 @@ Pete OC II:
       - 0
       - 0
 Pete TR:
-  enabled: false
-  source_replace_allowed: false # TODO supposedly demyx super crashes here and most bosses cause crashes here
+  enabled: true
+  pc: 
+    source_replace_allowed: true # TODO supposedly demyx super crashes here on ps2 and most bosses cause crashes here
+  source_replace_allowed: false
   replace_as: Pete Cups
   hp: 100
   level: 99
@@ -3381,9 +3578,104 @@ Pete TR:
   obj_id: 359
   adds:
   - ObjectId: 1758 # cannon tower
+    SpawnType: 2
+    Serial: 101
+    Argument1: 1
+    Argument2: 3
+    customUnit:
+      Type: 2
+      Flag: 1
+      Id: 247
+      EventActivators:
+      - Shape: 2
+        Option: 0
+        PositionX: 1242.9849853515625
+        PositionY: -300
+        PositionZ: 1462.8909912109375
+        ScaleX: 398.71649169921875
+        ScaleY: 400
+        ScaleZ: 599.67999267578125
+        RotationX: 0
+        RotationY: 0.1808859258890152
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+  - ObjectId: 1758 # cannon tower
+    SpawnType: 2
+    Serial: 102
+    Argument1: 1
+    Argument2: 1
+    customUnit:
+      Type: 2
+      Flag: 1
+      Id: 247
+      EventActivators:
+      - Shape: 2
+        Option: 0
+        PositionX: 1242.9849853515625
+        PositionY: -300
+        PositionZ: 1462.8909912109375
+        ScaleX: 398.71649169921875
+        ScaleY: 400
+        ScaleZ: 599.67999267578125
+        RotationX: 0
+        RotationY: 0.1808859258890152
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+  - ObjectId: 1758 # cannon tower
+    SpawnType: 2
+    Serial: 103
+    Argument1: 1
+    Argument2: 2
+    customUnit:
+      Type: 2
+      Flag: 1
+      Id: 247
+      EventActivators:
+      - Shape: 2
+        Option: 0
+        PositionX: 1242.9849853515625
+        PositionY: -300
+        PositionZ: 1462.8909912109375
+        ScaleX: 398.71649169921875
+        ScaleY: 400
+        ScaleZ: 599.67999267578125
+        RotationX: 0
+        RotationY: 0.1808859258890152
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
   - ObjectId: 1759 # building sites platform
+    SpawnType: 3
+    Serial: 104
+    Argument1: 1
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 254
   - ObjectId: 1612 # burning building
-  - ObjectId: 1610 # ???
+    SpawnType: 3
+    Serial: 105
+    Argument1: 1
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 254
+  - ObjectId: 758 # ???
+    SpawnType: 3
+    Serial: 106
+    Argument1: 1
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 254
   size: 3.68
   room_size: 12.16
   program: 53
@@ -3409,10 +3701,6 @@ Prison Keeper:
   size: 3.87
   room_size: 9.21
   program: 52
-  adds:
-  - ObjectId: 992 # lock
-  - ObjectId: 993 # shock
-  - ObjectId: 994 # barrel
   type: boss
   variations:
     Prison Keeper:
@@ -3557,7 +3845,14 @@ Rapid Thruster WI:
       - 0
 Riku:
   can_be_enemy: false
-  aimod: true
+  aimods: 
+  - name: N_EX940_BTL/n_ex.bdscript
+    type: obj
+  - name: MU07_MS201/mu07.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 0x82
   tags:
@@ -3569,7 +3864,6 @@ Riku:
   msn: MU07_MS201
   msn_replace_allowed: false
   obj_id: 1596
-  source_replace_allowed: false
   size: 1.22
   program: 76
   room_size: 8.62
@@ -3584,7 +3878,7 @@ Roxas:
   - organization
   - solo
   - needs_teleport
-  can_be_enemy: true
+  can_be_enemy: false #expensive
   enabled: true
   enmp_index: 0xD5
   hp: 100
@@ -3708,11 +4002,13 @@ Sark:
 Scar:
   can_be_enemy: true
   isnightmare: true
+  aimods: 
+  - name: B_LK110/b_lk.bdscript
+    type: obj
   enabled: true
   enmp_index: 0x5E
   tags:
   - rc_blocked
-  - solo # Not really but this mostly only is for data demyx so it works
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   - Dark Thorn # Reports of tpose from grab causing softlock
@@ -3734,8 +4030,12 @@ Scar:
 Seifer:
   obj_edits:
     ObjectType: BOSS
-  pc:
-    enabled: false # Uses an objentry edit to be treated as an enemy
+  aimods:
+  - name: TT04_MS107/tt04_ms107.bdscript
+    source: old
+    type: msn
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 0x87
   tags:
@@ -3819,7 +4119,7 @@ Seifer:
       - 0
 Sephiroth:
   tags:
-  - data
+  - sephiroth
   - solo
   can_be_enemy: true
   enabled: true
@@ -3850,9 +4150,14 @@ Sephiroth:
       - 0
       - 0
 Setzer:
-  aimod: true
-  pc: 
-    enabled: false
+  aimods:
+  - name: N_EX600_BTL/n_ex.bdscript 
+    type: obj
+  - name: TT05_MS405/ms_s.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 0x9E
   tags:
@@ -3896,13 +4201,16 @@ Setzer:
   - Yuffie
   variations:
     Setzer:
-      msn_list:
-      - program: 183
-        msn: TT04_MS01
-        room_size: 6.68
-      - program: 88
-        msn: TT05_MS405
-        room_size: 11.56
+      # msn_list:
+      # - program: 183
+      #   msn: TT04_MS01
+      #   room_size: 6.68
+      # - program: 88
+      #   msn: TT05_MS405
+      #   room_size: 11.56
+      msn: TT05_MS405
+      room_size: 6.68
+      program: 88
       vars:
       - 0
       - 0
@@ -3937,8 +4245,6 @@ Shadow Stalker:
   limiter: 0
   blacklist_source:
   - Demyx # Battle doesn't start properly
-  - Vexen # memory in forms
-  - Lexaeus # memory in forms
   model: B_BB120
   msn: BB05_MS104A
   obj_id: 355
@@ -3952,6 +4258,9 @@ Shadow Stalker:
   - ObjectId: 646 # ground trap
   - ObjectId: 645 # columns
   - ObjectId: 644 # chandelier
+    Serial: 24
+  - ObjectId: 799 # ???
+    Serial: 17
   type: boss
   variations:
     Shadow Stalker:
@@ -4182,16 +4491,119 @@ Storm Rider:
   limiter: 0
   model: B_MU120
   msn: MU08_MS204
-  pc:
-    enabled: false # many reports of crashes
   obj_id: 357
   size: 3.03
   program: 79
   room_size: 9.27
-  subtracts:
-  - ObjectId: 721 # Should probably be an add, but needs more testing
   adds:
+  - ObjectId: 721 # barrier?
+    Serial: 94
+    Argument1: 1
+    customUnit:
+      Type: 1
+      Id: 187
+  - ObjectId: 721
+    Serial: 95
+    Argument2: 2
+    customUnit:
+      Type: 1
+      Id: 187
   - ObjectId: 1111 # Wind
+    SpawnType: 2
+    SpawnArgument: 1
+    Serial: 89
+    SpawnRange: 300
+    customUnit:
+      Type: 2
+      Id: 97
+      EventActivators:
+      - Shape: 0
+        Option: 0
+        PositionX: 0
+        PositionY: -490
+        PositionZ: -0
+        ScaleX: 3250
+        ScaleY: 500
+        ScaleZ: 2150
+        RotationX: 0
+        RotationY: 0
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+  - ObjectId: 1111 # Wind
+    SpawnType: 2
+    SpawnArgument: 2
+    Serial: 109
+    SpawnRange: 1500
+    customUnit: 
+      Type: 2
+      Id: 97
+      EventActivators:
+      - Shape: 0
+        Option: 0
+        PositionX: 0
+        PositionY: -490
+        PositionZ: -0
+        ScaleX: 3250
+        ScaleY: 500
+        ScaleZ: 2150
+        RotationX: 0
+        RotationY: 0
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+  - ObjectId: 1111 # Wind
+    SpawnType: 2
+    SpawnArgument: 2
+    Serial: 110
+    SpawnRange: 1500
+    customUnit:
+      Type: 2
+      Id: 97
+      EventActivators:
+      - Shape: 0
+        Option: 0
+        PositionX: 0
+        PositionY: -490
+        PositionZ: -0
+        ScaleX: 3250
+        ScaleY: 500
+        ScaleZ: 2150
+        RotationX: 0
+        RotationY: 0
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+  - ObjectId: 1111 # Wind
+    SpawnType: 2
+    SpawnArgument: 1
+    Serial: 114
+    SpawnRange: 1000
+    customUnit:
+      Type: 2
+      Id: 98
+      EventActivators:
+      - Shape: 0
+        Option: 0
+        PositionX: 0
+        PositionY: -490
+        PositionZ: -0
+        ScaleX: 3250
+        ScaleY: 500
+        ScaleZ: 2150
+        RotationX: 0
+        RotationY: 0
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
   type: boss
   variations:
     Storm Rider:
@@ -4248,9 +4660,9 @@ Surveillance Robot:
       - 0
       - 0
 Terra:
-  can_be_enemy: true
+  can_be_enemy: false #expensive
   tags:
-  - data
+  - terra
   enabled: true
   enmp_index: 0xF4
   hp: 100
@@ -4272,7 +4684,9 @@ Terra:
       - 0
       - 0
 The Beast:
-  aimod: false
+  aimods: 
+  - name: P_BB000_BTL/p_bb.bdscript
+    type: obj
   tags: 
   - needs_rc
   enabled: true
@@ -4367,9 +4781,11 @@ Tifa:
   limiter: 0
   model: N_HB570_BTL2
   msn_replace_allowed: false
+  msn_source_as: "WI03_MS104"
   obj_id: 2298
   pc: 
-    enabled: false # pc crashes when killing cups bosses
+    tags: 
+    - disablecamera
   tags:
   - cups
   size: 1.32
@@ -4451,7 +4867,6 @@ Trick Ghost:
       - 0
       - 0
 Twilight Thorn:
-  aimod: true
   enabled: true
   enmp_index: 0x56
   tags:
@@ -4534,9 +4949,14 @@ Vexen:
       - 1
       - 0
 Vivi:
-  aimod: true
-  pc:
-    enabled: false
+  aimods:
+  - name: N_EX610_BTL/n_ex.bdscript
+    type: obj
+  - name: TT05_MS402/ms_s.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 0x9D
   tags:
@@ -4619,8 +5039,6 @@ Volcano Lord:
       - 0
       - 0
     Volcano Lord (Cups):
-      pc:
-        enabled: false
       tags:
       - cups
       - large
@@ -4677,7 +5095,9 @@ Xemnas:
   - organization
   - solo
   - teleport_blocked
-  aimod: true
+  aimods:
+  - name: B_EX170/b_ex.bdscript
+    type: obj
   can_be_enemy: false
   enabled: true
   #enmp_index: 0x5A  Final Xemnas has same ENMP index so it's problematic to scale Xemnas
@@ -4742,8 +5162,9 @@ Yuffie:
   model: N_HB580_BTL2
   msn_replace_allowed: false
   obj_id: 2299
-  pc:
-    enabled: false # PC will cause crash on end of fight
+  pc: 
+    tags: 
+    - disablecamera
   tags:
   - cups
   size: 0.95
@@ -4788,7 +5209,7 @@ Zexion:
   - organization
   - needs_teleport
   - needs_rc
-  aimod: false # TODO current ai mod is a bit crashy I think, so just ban from weird rooms
+  #aimods: false # TODO current ai mod is a bit crashy I think, so just ban from weird rooms
   enabled: true
   hp: 100
   level: 99
