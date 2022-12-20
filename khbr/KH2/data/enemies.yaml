@@ -3566,6 +3566,9 @@ Pete OC II:
       - 0
 Pete TR:
   enabled: true
+  aimods:
+  - name: N_EX760_BTL/n_ex.bdscript
+    type: obj
   pc: 
     source_replace_allowed: true # TODO supposedly demyx super crashes here on ps2 and most bosses cause crashes here
   source_replace_allowed: false
