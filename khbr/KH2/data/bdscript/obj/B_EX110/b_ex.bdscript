@@ -1,0 +1,7483 @@
+---
+WorkSize: 4576
+StackSize: 512
+TempSize: 512
+Triggers:
+- Key: 11
+  Addr: TR11
+- Key: 17
+  Addr: TR17
+- Key: 16
+  Addr: TR16
+- Key: 6
+  Addr: TR6
+- Key: 13
+  Addr: TR13
+- Key: 1
+  Addr: TR1
+- Key: 0
+  Addr: TR0
+Name: b_ex110
+
+---
+; codeLabels: 
+; codeRevealer: -l 303 -l 563 -l 1239 -l 1433 -l 1536 -l 1659 -l 1728 -l 1964 -l 2135 -l 2419 -l 2599 -l 2883 -l 3544 -l 5137 -l 5389 -l 5448 -l 5449 -l 5466 -l 5471 -l 5486 -l 5672 -l 5777 -l 5790 -l 5935 -l 6001 -l 6067 -l 6179 -l 6246 -l 6917 -l 6927 -l 6961 -l 6975 -l 6985 -l 7763 -l 8122 -l 8165 -l 8176 -l 8217 -l 8264 -l 8275 -l 8285 -l 8826 -l 8914 -l 8929 -l 9071 -l 9408 -l 9423 -l 9505 -l 9667 -l 9846 -l 9923 -l 9931 -l 10000 -l 10029 -l 10064 -l 10166 -l 10229 -l 10329 -l 10534 -l 10615 -l 11019 -l 11053 -l 11326 -l 11389 -l 11398 -l 11548 -l 11734 -l 12313 -l 12512 -l 13075 -l 13526
+ section .text
+TR11:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushFromFSp 4
+ pushFromPAi L13983 ; ___ai 'cmd' (L13983)
+ syscall 0, 0 ; trap_puti (2 in, 0 out)
+ pushFromFSp 4
+ dup 
+ pushImm 443
+ sub 
+ jz L61
+ jmp L69
+L61:
+ pushFromFSp 8
+ pushFromFSp 0
+ gosub 8, L129
+ jmp L127
+L69:
+ dup 
+ pushImm 490
+ sub 
+ jz L78
+ jmp L86
+L78:
+ pushFromFSp 8
+ pushFromFSp 0
+ gosub 8, L350
+ jmp L127
+L86:
+ dup 
+ pushImm 444
+ sub 
+ jz L95
+ jmp L127
+L95:
+ pushFromFSp 8
+ pushFromFSp 0
+ pushFromFSp 0
+ gosub 8, L374
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ fetchValue 4
+ syscall 1, 15 ; trap_sysobj_motion_id (1 in, 1 out)
+ pushImm 210
+ sub 
+ eqz 
+ gosub 12, L486
+ pushFromPWp W292
+ pushFromPAi L13939 ; ___ai 'idle_after_rc' (L13939)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L127
+L127:
+ drop 
+ ret 
+L129:
+ popToSp 0
+ popToSp 4
+ pushFromPWp W0
+ pushFromFSp 4
+ gosub 4, L140
+ ret 
+L140:
+ popToSp 4
+ popToSp 0
+ pushFromPSp 16
+ pushImmf 0
+ pushImmf 0
+ pushImmf -1
+ pushImmf 1
+ gosub 12, L225
+ pushFromFSp 4
+ pushFromPSp 16
+ syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
+ pushFromPSp 16
+ pushImmf 1
+ gosub 12, L252
+ pushFromFSp 4
+ pushFromPSp 16
+ syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L13898 ; ___ai '10' (L13898)
+ syscall 1, 164 ; trap_obj_camera_start_global (2 in, 0 out)
+ pushFromFSp 0
+ pushFromFSp 4
+ pushImm 255
+ pushImmf 0
+ gosub 12, L272
+ drop 
+ pushFromFSp 4
+ fetchValue 4
+ pushImm 4
+ pushImmf 0
+ syscall 1, 13 ; trap_sysobj_motion_push (3 in, 0 out)
+ pushFromPSpVal 0
+ pushFromPAi L13913 ; ___ai 'rc_clear_light' (L13913)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushImm L303
+ pushFromFSp 0
+ syscall 2, 20 ; trap_magic_start_thread (2 in, 1 out)
+ drop 
+ ret 
+L225:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 16
+ popToSp 0
+ pushFromFSp 16
+ popToSpVal 0
+ pushFromFSp 12
+ popToSpVal 4
+ pushFromFSp 8
+ popToSpVal 8
+ pushFromFSp 4
+ popToSpVal 12
+ ret 
+L252:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 0
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+ pushFromFSp 4
+ gosub 4, L225
+ ret 
+L272:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 0
+ pushFromPSpVal 0
+ pushFromFSp 12
+ pushFromFSp 8
+ pushFromFSp 4
+ syscall 1, 29 ; trap_obj_motion_capture (4 in, 1 out)
+ popToSpVal 132
+ pushFromFSp 8
+ popToSpVal 128
+ pushFromFSp 4
+ popToSpVal 124
+ pushFromFSpVal 132
+ ret 
+D303:
+L303:
+ popToSp 0
+ pushImmf 110
+ gosub 4, L328
+ pushImmf 70
+ syscall 0, 31 ; func_screen_whiteout (1 in, 0 out)
+ pushImmf 70
+ gosub 4, L328
+ syscall 1, 295 ; trap_camera_reset (0 in, 0 out)
+ pushImmf 30
+ syscall 0, 32 ; func_screen_whitein (1 in, 0 out)
+ ret 
+L328:
+ popToSp 0
+L330:
+ pushFromFSp 0
+ pushImmf 0
+ subf 
+ supzf 
+ jz L349
+ pushFromFSp 0
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 0
+ halt 
+ jmp L330
+L349:
+ ret 
+L350:
+ popToSp 0
+ popToSp 4
+ pushFromPWp W0
+ pushFromFSp 0
+ gosub 4, L374
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ gosub 12, L394
+ pushFromPWp W0
+ pushFromFSp 4
+ gosub 4, L409
+ ret 
+L374:
+ popToSp 0
+ pushFromPSp 16
+ pushFromFSpVal 0
+ gosub 12, L385
+ pushFromPSp 16
+ ret 
+L385:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 4
+ popToSpVal 4
+ ret 
+L394:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 4
+ memcpyToSpVal 16, 0
+ pushImm -1
+ popToSpVal 128
+ ret 
+L409:
+ popToSp 4
+ popToSp 0
+ pushFromPSp 16
+ pushImmf 0
+ pushImmf 0
+ pushImmf -1
+ pushImmf 1
+ gosub 12, L225
+ pushFromFSp 4
+ pushFromPSp 16
+ syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
+ pushFromPSp 16
+ pushImmf 1
+ gosub 12, L252
+ pushFromFSp 4
+ pushFromPSp 16
+ syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L13847 ; ___ai '00' (L13847)
+ syscall 1, 164 ; trap_obj_camera_start_global (2 in, 0 out)
+ pushFromFSp 0
+ pushFromFSp 4
+ pushImm 254
+ pushImmf 0
+ gosub 12, L272
+ drop 
+ pushFromFSp 4
+ fetchValue 4
+ pushImm 4
+ pushImmf 0
+ syscall 1, 13 ; trap_sysobj_motion_push (3 in, 0 out)
+ pushFromPSpVal 0
+ pushFromPAi L13859 ; ___ai 'rc_run_up' (L13859)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ ret 
+L486:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushFromPWp W144
+ pushFromFSp 4
+ gosub 8, L374
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushFromFSp 0
+ gosub 12, L514
+ pushFromPWp W144
+ pushFromFSp 8
+ gosub 8, L531
+ ret 
+L514:
+ popToSp 4
+ popToSp 8
+ popToSp 0
+ pushFromFSp 0
+ pushFromFSp 8
+ gosub 8, L394
+ pushFromFSp 4
+ popToSpVal 144
+ ret 
+L531:
+ popToSp 4
+ popToSp 0
+ pushFromPSpVal 0
+ syscall 1, 207 ; trap_camera_watch (1 in, 0 out)
+ pushFromFSp 0
+ pushFromFSp 4
+ pushImm 252
+ pushImmf 0
+ gosub 4, L272
+ drop 
+ pushFromFSp 4
+ pushImm L563
+ pushImm 0
+ syscall 1, 112 ; trap_obj_hook (3 in, 0 out)
+ ret 
+D563:
+L563:
+ popToSp 0
+ pushFromPWp W144
+ pushFromFSp 0
+ gosub 4, L572
+ ret 
+L572:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 4
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ pushFromFSp 4
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
+ pushFromFSpVal 144
+ jz L633
+ pushFromFSp 4
+ syscall 1, 201 ; trap_obj_dir (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ pushImmf -1
+ syscall 0, 36 ; trap_vector_mul (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 32
+ jmp L766
+L633:
+ pushFromPSpVal 0
+ syscall 1, 201 ; trap_obj_dir (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ memcpyToSp 16, 16
+ pushFromFSp 4
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ pushFromPSpVal 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ memcpyToSp 16, 32
+ pushFromPSp 16
+ pushFromPSp 32
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf 0
+ subf 
+ infzf 
+ jz L703
+ pushFromPSp 16
+ pushImmf -1.570796
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ memcpyToSp 16, 16
+ jmp L718
+L703:
+ pushFromPSp 16
+ pushImmf 1.570796
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ memcpyToSp 16, 16
+L718:
+ pushFromPSp 16
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ drop 
+ pushFromPSp 16
+ pushImmf 300
+ syscall 0, 35 ; method_vector_scale (2 in, 0 out)
+ pushFromPSp 16
+ pushFromFSp 4
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ pushImm 4
+ add 
+ pushImmf 0
+ memcpy 0
+ pushFromPSp 32
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ drop 
+L766:
+ pushFromFSp 4
+ fetchValue 4
+ pushImm 4
+ pushImmf 0
+ syscall 1, 13 ; trap_sysobj_motion_push (3 in, 0 out)
+ pushFromFSp 0
+ pushFromFSp 4
+ pushFromPSp 32
+ gosub 16, L787
+ ret 
+L787:
+ popToSp 4
+ popToSp 8
+ popToSp 0
+ pushFromPSp 12
+ pushImmf 12
+ pushImmf -0.001
+ pushImmf 0
+ pushImmf 0
+ gosub 12, L876
+L809:
+ pushFromFSp 8
+ pushFromFSpVal 132
+ gosub 12, L971
+ eqz 
+ jz L875
+ pushFromFSp 8
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ pushFromFSp 8
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 1, 4 ; trap_obj_wish_dir (2 in, 0 out)
+ pushFromFSp 8
+ pushImm 1
+ syscall 1, 150 ; trap_obj_motion_check_range (2 in, 1 out)
+ jz L868
+ pushFromFSp 8
+ pushFromFSp 4
+ pushFromPSp 12
+ gosub 12, L1004
+ syscall 1, 89 ; trap_obj_move_request (3 in, 0 out)
+ jmp L868
+L868:
+ halt 
+ pushFromPSp 12
+ gosub 12, L1009
+ jmp L809
+L875:
+ ret 
+L876:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 16
+ popToSp 0
+ pushFromFSp 0
+ pushFromFSp 16
+ pushFromFSp 12
+ pushFromFSp 8
+ gosub 8, L903
+ pushFromFSp 0
+ pushFromFSp 4
+ gosub 8, L957
+ ret 
+L903:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 0
+ pushFromFSp 0
+ pushFromFSp 12
+ gosub 8, L930
+ pushFromFSp 0
+ pushFromFSp 8
+ gosub 8, L939
+ pushFromFSp 0
+ pushFromFSp 4
+ gosub 8, L948
+ ret 
+L930:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 4
+ popToSpVal 8
+ ret 
+L939:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 4
+ popToSpVal 4
+ ret 
+L948:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 4
+ popToSpVal 0
+ ret 
+L957:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 0
+ pushImm 12
+ add 
+ pushFromFSp 4
+ memcpy 0
+ ret 
+L971:
+ popToSp 0
+ popToSp 4
+ pushFromFSp 4
+ fetchValue 4
+ syscall 1, 94 ; trap_sysobj_is_exist (1 in, 1 out)
+ dup 
+ jz L991
+ pushFromFSp 4
+ fetchValue 4
+ syscall 1, 14 ; trap_sysobj_motion_is_end (1 in, 1 out)
+ eqzv 
+L991:
+ dup 
+ jnz L1003
+ pushFromFSp 4
+ syscall 1, 238 ; trap_obj_motion_capture_id (1 in, 1 out)
+ pushFromFSp 0
+ sub 
+ neqz 
+ neqzv 
+L1003:
+ ret 
+L1004:
+ popToSp 0
+ pushFromFSpVal 8
+ ret 
+L1009:
+ popToSp 0
+ pushFromFSpVal 8
+ pushFromFSpVal 8
+ pushFromFSpVal 4
+ mulf 
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ mulf 
+ pushFromFSpVal 0
+ gosub 4, L1028
+ popToSpVal 8
+ ret 
+L1028:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushFromFSp 8
+ pushFromFSp 4
+ addf 
+ popToSp 8
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ infzf 
+ jz L1066
+ pushFromFSp 8
+ pushFromFSp 0
+ subf 
+ infzf 
+ jz L1064
+ pushFromFSp 0
+ popToSp 8
+ jmp L1064
+L1064:
+ jmp L1080
+L1066:
+ pushFromFSp 8
+ pushFromFSp 0
+ subf 
+ supzf 
+ jz L1080
+ pushFromFSp 0
+ popToSp 8
+ jmp L1080
+L1080:
+ pushFromFSp 8
+ ret 
+TR17:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushFromFSp 4
+ dup 
+ pushImm 0
+ sub 
+ jz L1100
+ jmp L1109
+L1100:
+ pushFromPWp W292
+ pushImmf 0.3
+ syscall 1, 107 ; trap_obj_motion_speed (2 in, 0 out)
+ jmp L1164
+L1109:
+ dup 
+ pushImm 1
+ sub 
+ jz L1118
+ jmp L1127
+L1118:
+ pushFromPWp W292
+ pushImmf 1
+ syscall 1, 107 ; trap_obj_motion_speed (2 in, 0 out)
+ jmp L1164
+L1127:
+ dup 
+ pushImm 10
+ sub 
+ jz L1136
+ jmp L1164
+L1136:
+ pushFromPWp W292
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L1162
+ pushFromPWp W292
+ pushImm 12
+ pushImm 2
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L1162
+L1162:
+ jmp L1164
+L1164:
+ drop 
+ ret 
+TR16:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushFromFSp 4
+ dup 
+ pushImm 17
+ sub 
+ jz L1183
+ jmp L1189
+L1183:
+ pushFromFSp 8
+ gosub 8, L1225
+ jmp L1223
+L1189:
+ dup 
+ pushImm 26
+ sub 
+ jz L1198
+ jmp L1206
+L1198:
+ pushFromFSp 8
+ pushFromFSp 0
+ gosub 8, L1946
+ jmp L1223
+L1206:
+ dup 
+ pushImm 37
+ sub 
+ jz L1215
+ jmp L1223
+L1215:
+ pushFromFSp 8
+ pushFromFSp 0
+ gosub 8, L2346
+ jmp L1223
+L1223:
+ drop 
+ ret 
+L1225:
+ popToSp 0
+ pushImm 188
+ pushImm L1239
+ pushFromFSp 0
+ gosub 4, L1852
+ drop 
+ ret 
+D1239:
+L1239:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1258
+ pushFromPAi L13895 ; ___ai 'main' (L13895)
+ syscall 0, 2 ; trap_puts (1 in, 0 out)
+ pushFromFSp 0
+ gosub 4, L1341
+ pushFromFSp 0
+ gosub 4, L1939
+ ret 
+L1258:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1307
+ pushImm 0
+ popToSpVal 184
+ pushImm 0
+ popToSp 4
+L1274:
+ pushFromFSp 4
+ pushImm 30
+ sub 
+ msb 
+ jz L1306
+ pushFromPSpVal 64
+ pushFromFSp 4
+ pushImm 4
+ mul 
+ add 
+ pushImm 0
+ memcpy 0
+ pushFromFSp 4
+ pushImm 1
+ add 
+ popToSp 4
+ jmp L1274
+L1306:
+ ret 
+L1307:
+ popToSp 0
+ pushFromFSpVal 16
+ pushImm 0
+ sub 
+ neqz 
+ dup 
+ jz L1324
+ pushFromFSpVal 16
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ eqzv 
+L1324:
+ jz L1340
+ pushFromFSpVal 16
+ syscall 0, 53 ; trap_effect_pos (1 in, 1 out)
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToSpVal 16, 32
+ jmp L1340
+L1340:
+ ret 
+L1341:
+ popToSp 0
+ pushImmf 30
+ popToSp 16
+ pushImmf 4
+ popToSp 12
+ pushFromPSpVal 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 32
+ pushFromPSpVal 0
+ syscall 1, 201 ; trap_obj_dir (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 48
+ pushImmf 30
+ popToSp 8
+ pushImmf 24
+ popToSp 4
+ pushImm 0
+ popToSp 20
+L1392:
+ pushFromFSp 20
+ jz L1413
+ pushFromFSp 8
+ pushImmf -1
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ mulf 
+ pushImmf 10
+ gosub 20, L1028
+ popToSp 8
+ jmp L1413
+L1413:
+ pushFromPSp 32
+ pushFromPSp 48
+ pushFromFSp 8
+ syscall 0, 45 ; trap_vector_addf (3 in, 0 out)
+ halt 
+ pushFromPSpVal 0
+ fetchValue 4
+ syscall 1, 94 ; trap_sysobj_is_exist (1 in, 1 out)
+ eqz 
+ jz L1435
+ jmp L1542
+L1433:
+ jmp L1435
+L1435:
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ supzf 
+ jz L1469
+ pushFromFSp 4
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 4
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L1467
+ pushImm 1
+ popToSp 20
+ jmp L1467
+L1467:
+ jmp L1469
+L1469:
+ pushFromFSp 12
+ pushImmf 0
+ subf 
+ supzf 
+ jz L1509
+ pushFromFSp 12
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 12
+ pushFromFSp 12
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L1507
+ pushFromFSp 0
+ pushFromPSp 32
+ gosub 20, L1543
+ pushImmf 4
+ popToSp 12
+ jmp L1507
+L1507:
+ jmp L1509
+L1509:
+ pushFromFSp 16
+ pushImmf 0
+ subf 
+ supzf 
+ jz L1540
+ pushFromFSp 16
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 16
+ pushFromFSp 16
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L1538
+ jmp L1542
+L1536:
+ jmp L1538
+L1538:
+ jmp L1540
+L1540:
+ jmp L1392
+L1542:
+ ret 
+L1543:
+ popToSp 4
+ popToSp 0
+ pushFromFSpVal 184
+ pushFromPAi L13974 ; ___ai 'INT' (L13974)
+ syscall 0, 0 ; trap_puti (2 in, 0 out)
+ pushFromPSpVal 64
+ pushFromFSpVal 184
+ pushImm 4
+ mul 
+ add 
+ pushFromPSpVal 0
+ pushImm 434
+ pushImmf 36
+ gosub 4, L1616
+ memcpy 0
+ pushFromPSpVal 64
+ pushFromFSpVal 184
+ pushImm 4
+ mul 
+ add 
+ fetchValue 0
+ pushFromFSp 4
+ gosub 4, L1735
+ pushFromPSpVal 64
+ pushFromFSpVal 184
+ pushImm 4
+ mul 
+ add 
+ fetchValue 0
+ pushImmf 50
+ pushImmf 300
+ gosub 4, L1762
+ pushFromFSpVal 184
+ pushImm 1
+ add 
+ popToSpVal 184
+ ret 
+L1616:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushImm 84
+ pushImm L1659
+ pushFromFSp 8
+ gosub 8, L1852
+ popToSp 12
+ pushFromFSp 12
+ gosub 8, L1927
+ pushFromFSp 12
+ pushImm 68
+ add 
+ pushFromFSp 4
+ memcpy 0
+ pushFromFSp 12
+ pushImm 72
+ add 
+ pushFromFSp 0
+ memcpy 0
+ pushFromFSp 12
+ ret 
+L1659:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1670
+ pushFromFSp 0
+ gosub 4, L1796
+ ret 
+L1670:
+ popToSp 0
+ pushFromPSpVal 0
+ pushFromFSpVal 68
+ pushImm -1
+ pushImm 0
+ syscall 2, 10 ; trap_attack_new (4 in, 1 out)
+ popToSpVal 64
+ pushFromFSp 0
+ pushFromPSpVal 32
+ gosub 4, L1735
+ pushFromFSp 0
+ pushFromFSpVal 76
+ pushFromFSpVal 80
+ gosub 4, L1762
+L1700:
+ halt 
+ pushFromFSpVal 72
+ pushImmf 0
+ subf 
+ supzf 
+ jz L1732
+ pushFromFSpVal 72
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSpVal 72
+ pushFromFSpVal 72
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L1730
+ jmp L1734
+L1728:
+ jmp L1730
+L1730:
+ jmp L1732
+L1732:
+ jmp L1700
+L1734:
+ ret 
+L1735:
+ popToSp 4
+ popToSp 0
+ pushFromFSpVal 64
+ pushImm 0
+ sub 
+ neqz 
+ jz L1756
+ pushFromFSpVal 64
+ pushFromFSp 4
+ syscall 2, 12 ; trap_attack_set_pos (2 in, 0 out)
+ jmp L1756
+L1756:
+ pushFromFSp 4
+ memcpyToSpVal 16, 32
+ ret 
+L1762:
+ popToSp 4
+ popToSp 8
+ popToSp 0
+ pushFromFSpVal 64
+ pushImm 0
+ sub 
+ neqz 
+ jz L1787
+ pushFromFSpVal 64
+ pushFromFSp 8
+ pushFromFSp 4
+ syscall 2, 11 ; trap_attack_set_radius (3 in, 0 out)
+ jmp L1787
+L1787:
+ pushFromFSp 8
+ popToSpVal 76
+ pushFromFSp 4
+ popToSpVal 80
+ ret 
+L1796:
+ popToSp 0
+ pushFromFSpVal 64
+ pushImm 0
+ sub 
+ neqz 
+ jz L1818
+ pushFromFSp 0
+ gosub 4, L1823
+ pushImm 0
+ popToSpVal 64
+ jmp L1818
+L1818:
+ pushFromFSp 0
+ gosub 4, L1841
+ ret 
+L1823:
+ popToSp 0
+ pushFromFSpVal 64
+ pushImm 0
+ sub 
+ neqz 
+ jz L1840
+ pushFromFSpVal 64
+ syscall 2, 13 ; trap_attack_free (1 in, 0 out)
+ jmp L1840
+L1840:
+ ret 
+L1841:
+ popToSp 0
+ pushFromFSpVal 48
+ syscall 1, 132 ; trap_target_free (1 in, 0 out)
+ pushFromFSp 0
+ syscall 0, 48 ; trap_memory_free (1 in, 0 out)
+ ret 
+L1852:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushFromFSp 8
+ pushFromFSp 4
+ pushFromFSp 0
+ gosub 8, L1884
+ popToSp 12
+ pushFromFSp 12
+ pushImm 52
+ add 
+ pushFromFSp 4
+ pushFromFSp 12
+ syscall 2, 20 ; trap_magic_start_thread (2 in, 1 out)
+ memcpy 0
+ pushFromFSp 12
+ ret 
+L1884:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushFromFSp 8
+ syscall 0, 47 ; trap_memory_alloc (1 in, 1 out)
+ popToSp 12
+ pushFromFSp 12
+ pushFromFSp 0
+ memcpy 16
+ pushFromFSp 12
+ pushImm 16
+ add 
+ pushImm 0
+ memcpy 0
+ pushFromFSp 12
+ pushImm 48
+ add 
+ pushFromFSp 12
+ syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
+ syscall 1, 131 ; trap_target_dup (1 in, 1 out)
+ memcpy 0
+ pushFromFSp 12
+ ret 
+D1927:
+L1927:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1307
+ pushImm 0
+ popToSpVal 64
+ ret 
+L1939:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1841
+ ret 
+L1946:
+ popToSp 0
+ popToSp 4
+ pushImm 68
+ pushImm L1964
+ pushFromFSp 4
+ pushFromFSp 0
+ gosub 4, L2316
+ drop 
+ ret 
+D1964:
+L1964:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1979
+ pushFromFSp 0
+ gosub 4, L1991
+ pushFromFSp 0
+ gosub 4, L2282
+ ret 
+L1979:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1307
+ pushImm 0
+ popToSpVal 64
+ ret 
+L1991:
+ popToSp 0
+ pushImmf 20
+ popToSp 32
+ pushFromPSpVal 0
+ pushImm 436
+ pushImm -1
+ pushImm 0
+ syscall 2, 10 ; trap_attack_new (4 in, 1 out)
+ popToSpVal 64
+ pushFromFSpVal 64
+ pushFromPSpVal 32
+ syscall 2, 12 ; trap_attack_set_pos (2 in, 0 out)
+ pushImmf 160
+ popToSp 36
+L2024:
+ pushFromFSpVal 16
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ jz L2141
+ pushImm 0
+ popToSp 40
+ pushImm 3
+L2038:
+ dup 
+ pushFromFSp 40
+ sub 
+ info 
+ jnz L2091
+ pushFromFSp 40
+ gosub 16, L2142
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ memcpyToSp 16, 16
+ pushFromFSp 0
+ pushFromPSp 16
+ pushFromFSp 36
+ gosub 16, L2158
+ jz L2081
+ pushFromFSpVal 64
+ pushFromPSp 16
+ pushImm 1
+ pushImm 0
+ syscall 2, 17 ; trap_attack_strike (4 in, 0 out)
+ jmp L2081
+L2081:
+ pushFromFSp 40
+ pushImm 1
+ add 
+ popToSp 40
+ jmp L2038
+L2091:
+ drop 
+ halt 
+ pushFromFSp 36
+ pushImmf 23
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ mulf 
+ pushImmf 500
+ gosub 16, L1028
+ popToSp 36
+ pushFromFSp 32
+ pushImmf 0
+ subf 
+ supzf 
+ jz L2139
+ pushFromFSp 32
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 32
+ pushFromFSp 32
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L2137
+ jmp L2141
+L2135:
+ jmp L2137
+L2137:
+ jmp L2139
+L2139:
+ jmp L2024
+L2141:
+ ret 
+L2142:
+ popToSp 0
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushFromFSp 0
+ syscall 1, 93 ; trap_sysobj_party (1 in, 1 out)
+ memcpy 0
+ pushFromPSp 16
+ ret 
+L2158:
+ popToSp 4
+ popToSp 8
+ popToSp 0
+ pushImm 0
+ popToSp 32
+ pushFromFSp 8
+ fetchValue 4
+ syscall 1, 94 ; trap_sysobj_is_exist (1 in, 1 out)
+ dup 
+ jz L2183
+ pushFromFSp 8
+ gosub 12, L2274
+ eqzv 
+L2183:
+ dup 
+ jz L2193
+ pushFromFSpVal 64
+ pushFromFSp 8
+ syscall 2, 18 ; trap_attack_is_strike (2 in, 1 out)
+ eqzv 
+L2193:
+ jz L2271
+ pushFromFSp 8
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ pushFromPSpVal 32
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ fetchValue 4
+ syscall 0, 23 ; trap_absf (1 in, 1 out)
+ pushImmf 100
+ subf 
+ infzf 
+ jz L2269
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushImmf 0
+ memcpy 0
+ pushFromPSp 16
+ syscall 0, 6 ; trap_vector_len (1 in, 1 out)
+ popToSp 36
+ pushFromFSp 36
+ pushFromFSp 4
+ subf 
+ infoezf 
+ dup 
+ jz L2265
+ pushFromFSp 36
+ pushFromFSp 4
+ pushImmf 100
+ subf 
+ subf 
+ supoezf 
+ eqzv 
+L2265:
+ popToSp 32
+ jmp L2269
+L2269:
+ jmp L2271
+L2271:
+ pushFromFSp 32
+ ret 
+L2274:
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ eqz 
+ ret 
+L2282:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L2293
+ pushFromFSp 0
+ gosub 4, L1841
+ ret 
+L2293:
+ popToSp 0
+ pushFromFSpVal 64
+ pushImm 0
+ sub 
+ neqz 
+ jz L2315
+ pushFromFSpVal 64
+ syscall 2, 13 ; trap_attack_free (1 in, 0 out)
+ pushImm 0
+ popToSpVal 64
+ jmp L2315
+L2315:
+ ret 
+L2316:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ pushFromFSp 12
+ pushFromFSp 8
+ pushFromFSp 4
+ gosub 8, L1852
+ popToSp 16
+ pushFromFSp 16
+ pushImm 16
+ add 
+ pushFromFSp 0
+ memcpy 0
+ pushFromFSp 16
+ ret 
+L2346:
+ popToSp 0
+ popToSp 4
+ pushFromPSp 16
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+ pushImmf 1
+ gosub 12, L225
+ pushFromFSp 4
+ pushFromFSp 0
+ pushFromPSp 16
+ pushImmf 0
+ gosub 12, L2378
+ ret 
+L2378:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ pushImm 96
+ pushImm L2419
+ pushFromFSp 12
+ pushFromFSp 8
+ gosub 8, L2316
+ popToSp 16
+ pushFromFSp 16
+ pushImm 64
+ add 
+ pushFromFSp 4
+ memcpy 16
+ pushFromFSp 16
+ pushImm 80
+ add 
+ pushFromFSp 0
+ memcpy 0
+ ret 
+D2419:
+L2419:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L2434
+ pushFromFSp 0
+ gosub 4, L2456
+ pushFromFSp 0
+ gosub 4, L3211
+ ret 
+L2434:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1307
+ pushImm 0
+ popToSpVal 88
+ pushImm 1
+ popToSpVal 92
+ pushImmf 14
+ popToSpVal 84
+ ret 
+L2456:
+ popToSp 0
+ pushImmf 60
+ popToSp 60
+ pushImmf 0
+ popToSp 56
+ pushFromPSpVal 32
+ memcpyToSp 16, 32
+ pushFromPSpVal 0
+ syscall 1, 201 ; trap_obj_dir (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 16
+ pushImmf 20
+ popToSp 48
+ pushFromFSpVal 84
+ popToSp 52
+L2494:
+ pushFromFSp 48
+ pushImmf 0
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ mulf 
+ pushImmf 20
+ gosub 20, L1028
+ popToSp 48
+ halt 
+ pushFromFSp 56
+ pushFromFSp 48
+ addf 
+ popToSp 56
+ pushFromFSp 52
+ pushImmf 0
+ subf 
+ supzf 
+ jz L2572
+ pushFromFSp 52
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 52
+ pushFromFSp 52
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L2570
+ pushFromFSp 0
+ pushFromPSp 32
+ pushFromPSp 16
+ pushFromFSp 56
+ gosub 20, L2606
+ pushFromFSpVal 84
+ pushImmf -2
+ pushImmf 6
+ gosub 20, L1028
+ popToSpVal 84
+ pushFromFSpVal 84
+ popToSp 52
+ jmp L2570
+L2570:
+ jmp L2572
+L2572:
+ pushFromFSp 60
+ pushImmf 0
+ subf 
+ supzf 
+ jz L2603
+ pushFromFSp 60
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 60
+ pushFromFSp 60
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L2601
+ jmp L2605
+L2599:
+ jmp L2601
+L2601:
+ jmp L2603
+L2603:
+ jmp L2494
+L2605:
+ ret 
+L2606:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 0
+ pushFromPSpVal 0
+ fetchValue 4
+ syscall 1, 94 ; trap_sysobj_is_exist (1 in, 1 out)
+ jz L2661
+ pushFromFSp 0
+ pushFromFSp 12
+ pushFromFSp 8
+ pushFromFSp 4
+ gosub 12, L2662
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ memcpyToSp 16, 16
+ pushFromFSp 0
+ pushFromPSp 16
+ pushImmf 100
+ gosub 12, L2785
+ jz L2659
+ pushFromPSpVal 0
+ pushFromPSp 16
+ gosub 12, L2857
+ jmp L2659
+L2659:
+ jmp L2661
+L2661:
+ ret 
+L2662:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 0
+ pushFromFSp 8
+ memcpyToSp 16, 32
+ pushImmf 0.261799
+ popToSp 52
+ pushImmf -0.523599
+ popToSp 48
+ pushImm 3
+ syscall 0, 16 ; trap_random_get (1 in, 1 out)
+ popToSp 56
+ pushFromFSp 56
+ pushFromFSpVal 88
+ sub 
+ eqz 
+ jz L2729
+ pushFromFSp 56
+ pushImm 2
+ add 
+ popToSp 56
+ pushFromFSp 56
+ pushImm 4
+ sub 
+ msbi 
+ jz L2727
+ pushFromFSp 56
+ pushImm 4
+ sub 
+ popToSp 56
+ jmp L2727
+L2727:
+ jmp L2729
+L2729:
+ pushFromFSp 56
+ popToSpVal 88
+ pushFromFSp 48
+ pushFromFSp 52
+ pushFromFSp 56
+ cfti 
+ mulf 
+ addf 
+ popToSp 48
+ pushFromFSp 48
+ pushFromFSp 48
+ pushFromFSp 52
+ addf 
+ syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ popToSp 52
+ pushFromPSp 32
+ pushFromFSp 52
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 32
+ pushFromFSp 12
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushFromPSp 32
+ pushFromFSp 4
+ syscall 0, 45 ; trap_vector_addf (3 in, 0 out)
+ pushFromPSp 16
+ ret 
+L2785:
+ popToSp 4
+ popToSp 8
+ popToSp 0
+ pushFromFSpVal 80
+ pushImmf 0
+ subf 
+ eqzf 
+ jz L2807
+ pushImm 1
+ popToSp 36
+ jmp L2854
+L2807:
+ pushFromPSpVal 64
+ pushFromFSp 8
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ syscall 0, 6 ; trap_vector_len (1 in, 1 out)
+ pushFromFSp 4
+ addf 
+ popToSp 32
+ pushFromFSpVal 80
+ pushFromFSp 32
+ subf 
+ pushImmf 0
+ subf 
+ infzf 
+ jz L2849
+ pushImm 0
+ popToSp 36
+ jmp L2854
+L2849:
+ pushImm 1
+ popToSp 36
+L2854:
+ pushFromFSp 36
+ ret 
+L2857:
+ popToSp 0
+ popToSp 4
+ pushImm 72
+ pushImm L2883
+ pushFromFSp 4
+ gosub 8, L3185
+ popToSp 8
+ pushFromFSp 8
+ pushImm 32
+ add 
+ pushFromFSp 0
+ memcpy 16
+ ret 
+L2883:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L2898
+ pushFromFSp 0
+ gosub 4, L2922
+ pushFromFSp 0
+ gosub 4, L3110
+ ret 
+L2898:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L2905
+ ret 
+L2905:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1307
+ pushImm 0
+ popToSpVal 64
+ pushImm 0
+ popToSpVal 68
+ ret 
+L2922:
+ popToSp 0
+ pushFromPSpVal 0
+ pushImm 38
+ pushImm 0
+ pushImm 0
+ syscall 1, 21 ; trap_obj_effect_start (4 in, 1 out)
+ popToSpVal 64
+ pushFromFSp 0
+ pushFromPSpVal 32
+ gosub 8, L3066
+ pushImmf 0
+ popToSp 4
+ pushImm 0
+ popToSp 8
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ eqzf 
+ jz L2971
+ pushImmf 0.01
+ popToSp 4
+ jmp L2971
+L2971:
+ pushFromFSpVal 64
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ jz L3065
+ halt 
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ supzf 
+ jz L3063
+ pushFromFSp 4
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 4
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L3061
+ pushFromFSp 8
+ jz L3018
+ pushFromFSpVal 68
+ syscall 2, 13 ; trap_attack_free (1 in, 0 out)
+ pushImm 0
+ popToSpVal 68
+ jmp L3059
+L3018:
+ pushFromPSpVal 0
+ pushImm 432
+ pushImm -1
+ pushImm 0
+ syscall 2, 10 ; trap_attack_new (4 in, 1 out)
+ popToSpVal 68
+ pushFromFSpVal 68
+ pushImmf 100
+ pushImmf 800
+ syscall 2, 11 ; trap_attack_set_radius (3 in, 0 out)
+ pushFromFSp 0
+ pushFromPSpVal 32
+ gosub 8, L3066
+ pushImm 1
+ popToSp 8
+ pushImmf 35
+ popToSp 4
+L3059:
+ jmp L3061
+L3061:
+ jmp L3063
+L3063:
+ jmp L2971
+L3065:
+ ret 
+L3066:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 4
+ memcpyToSpVal 16, 32
+ pushFromFSpVal 64
+ pushImm 0
+ sub 
+ neqz 
+ jz L3092
+ pushFromFSpVal 64
+ pushFromFSp 4
+ syscall 0, 38 ; trap_effect_set_pos (2 in, 0 out)
+ jmp L3092
+L3092:
+ pushFromFSpVal 68
+ pushImm 0
+ sub 
+ neqz 
+ jz L3109
+ pushFromFSpVal 68
+ pushFromFSp 4
+ syscall 2, 12 ; trap_attack_set_pos (2 in, 0 out)
+ jmp L3109
+L3109:
+ ret 
+L3110:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L3117
+ ret 
+L3117:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L3128
+ pushFromFSp 0
+ gosub 4, L1841
+ ret 
+L3128:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L3139
+ pushFromFSp 0
+ gosub 4, L3162
+ ret 
+L3139:
+ popToSp 0
+ pushFromFSpVal 64
+ pushImm 0
+ sub 
+ neqz 
+ jz L3161
+ pushFromFSpVal 64
+ syscall 0, 51 ; trap_effect_kill (1 in, 0 out)
+ pushImm 0
+ popToSpVal 64
+ jmp L3161
+L3161:
+ ret 
+L3162:
+ popToSp 0
+ pushFromFSpVal 68
+ pushImm 0
+ sub 
+ neqz 
+ jz L3184
+ pushFromFSpVal 68
+ syscall 2, 13 ; trap_attack_free (1 in, 0 out)
+ pushImm 0
+ popToSpVal 68
+ jmp L3184
+L3184:
+ ret 
+L3185:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushFromFSp 8
+ pushFromFSp 4
+ pushFromFSp 0
+ gosub 8, L1852
+ popToSp 12
+ pushFromFSp 12
+ gosub 8, L3208
+ pushFromFSp 12
+ ret 
+L3208:
+ popToSp 0
+ ret 
+L3211:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1841
+ ret 
+TR6:
+ popToSp 0
+ pushFromPWp W292
+ pushFromFSp 0
+ gosub 4, L3227
+ ret 
+L3227:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L3393
+ dup 
+ jz L3251
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ eqzv 
+L3251:
+ jz L3295
+ pushFromPAi L13854 ; ___ai 'alg_hard!' (L13854)
+ syscall 0, 2 ; trap_puts (1 in, 0 out)
+ pushFromFSp 0
+ pushImm 16
+ add 
+ pushImm -1
+ memcpy 0
+ pushFromFSp 0
+ pushImm 20
+ add 
+ pushImm -1
+ memcpy 0
+ pushFromFSp 0
+ pushImm 24
+ add 
+ pushImm 1
+ memcpy 0
+ pushFromFSp 0
+ pushFromPAi L13872 ; ___ai 'mode_battle_boss' (L13872)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L3392
+L3295:
+ pushFromFSp 0
+ gosub 4, L3447
+ dup 
+ jz L3315
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ eqzv 
+L3315:
+ jz L3364
+ pushFromPAi L13881 ; ___ai 'alg_super_hard!' (L13881)
+ syscall 0, 2 ; trap_puts (1 in, 0 out)
+ pushFromFSp 0
+ pushImm 16
+ add 
+ pushImm -1
+ memcpy 0
+ pushFromFSp 0
+ pushImm 20
+ add 
+ pushImm -1
+ memcpy 0
+ pushImm 0
+ popToWp W4564
+ pushFromFSp 0
+ pushImm 24
+ add 
+ pushImm 2
+ memcpy 0
+ pushFromFSp 0
+ pushFromPAi L13872 ; ___ai 'mode_battle_boss' (L13872)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L3392
+L3364:
+ pushFromFSp 4
+ syscall 2, 8 ; trap_damage_is_reaction (1 in, 1 out)
+ jz L3392
+ pushFromFSp 0
+ pushImm 20
+ add 
+ dup 
+ fetchValue 0
+ pushImm 1
+ add 
+ memcpy 0
+ pushFromFSp 0
+ pushFromPAi L13813 ; ___ai 'mode_revenge_boss' (L13813)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L3392
+L3392:
+ ret 
+L3393:
+ popToSp 0
+ pushImm 0
+ popToSp 4
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 0
+ sub 
+ eqz 
+ dup 
+ jz L3423
+ pushFromFSp 0
+ gosub 4, L3435
+ pushFromFSp 0
+ fetchValue 64
+ subf 
+ infzf 
+ eqzv 
+L3423:
+ jz L3432
+ pushImm 1
+ popToSp 4
+ jmp L3432
+L3432:
+ pushFromFSp 4
+ ret 
+L3435:
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
+ pushImm 0
+ syscall 1, 230 ; trap_sheet_hp_rate (2 in, 1 out)
+ ret 
+L3447:
+ popToSp 0
+ pushImm 0
+ popToSp 4
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 1
+ sub 
+ eqz 
+ dup 
+ jz L3477
+ pushFromFSp 0
+ gosub 4, L3435
+ pushFromFSp 0
+ fetchValue 68
+ subf 
+ infzf 
+ eqzv 
+L3477:
+ jz L3486
+ pushImm 1
+ popToSp 4
+ jmp L3486
+L3486:
+ pushFromFSp 4
+ ret 
+TR13:
+ pushFromPWp W292
+ pushImmf 0
+ syscall 1, 128 ; trap_obj_sysjump (2 in, 0 out)
+ pushFromPWp W292
+ fetchValue 4
+ pushImm 4
+ pushImmf 8
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ pushFromPWp W292
+ syscall 1, 65 ; trap_obj_exec_fall (1 in, 0 out)
+ ret 
+TR1:
+ pushFromPWp W292
+ gosub 4, L3518
+ ret 
+L3518:
+ popToSp 0
+ pushFromFSp 0
+ pushFromPAi L13976 ; ___ai 'battle_start' (L13976)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+L3526:
+ pushFromFSp 0
+ syscall 1, 10 ; trap_obj_is_act_exec (1 in, 1 out)
+ eqz 
+ jz L3541
+ pushFromFSp 0
+ pushFromPAi L13872 ; ___ai 'mode_battle_boss' (L13872)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L3541
+L3541:
+ halt 
+ jmp L3526
+D3544:
+L3544:
+ ret 
+TR0:
+ popToSp 0
+ pushFromPWp W292
+ pushFromFSp 0
+ gosub 4, L3554
+ ret 
+L3554:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 0
+ pushFromFSp 4
+ gosub 8, L5019
+ pushFromFSp 0
+ pushFromPWp W436
+ gosub 8, L5097
+ pushFromFSp 0
+ pushFromPWp W436
+ syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13951 ; ___ai 'appear' (L13951)
+ pushImm 100
+ pushImm L5137
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L14012 ; ___ai 'leave' (L14012)
+ pushImm 196908
+ pushImm L5389
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13935 ; ___ai 'freeze' (L13935)
+ pushImm 100
+ pushImm L5449
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13921 ; ___ai 'event' (L13921)
+ pushImm 196908
+ pushImm L5466
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm L5471
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13924 ; ___ai 'idle_time' (L13924)
+ pushImm 100
+ pushImm L5486
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13807 ; ___ai 'mode_battle' (L13807)
+ pushImm 100
+ pushImm L5672
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13872 ; ___ai 'mode_battle_boss' (L13872)
+ pushImm 100
+ pushImm L5935
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13813 ; ___ai 'mode_revenge_boss' (L13813)
+ pushImm 100
+ pushImm L6001
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ pushImm 200
+ pushImm L6067
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L14015 ; ___ai 'atk_burst' (L14015)
+ pushImm 200
+ pushImm L6246
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13747 ; ___ai 'atk_burst_fast' (L13747)
+ pushImm 200
+ pushImm L6917
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13822 ; ___ai 'atk_burst_revenge' (L13822)
+ pushImm 65736
+ pushImm L6927
+ pushImm L6961
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm L6975
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13783 ; ___ai 'atk_assault' (L13783)
+ pushImm 200
+ pushImm L6985
+ pushImm L8122
+ pushImm 0
+ pushImm L8165
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13837 ; ___ai 'atk_assault_revenge' (L13837)
+ pushImm 65736
+ pushImm L8176
+ pushImm L8217
+ pushImm 0
+ pushImm L8264
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm L8275
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13740 ; ___ai 'atk_disorder' (L13740)
+ pushImm 200
+ pushImm L8285
+ pushImm L8826
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm L8914
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13766 ; ___ai 'atk_prison' (L13766)
+ pushImm 200
+ pushImm L8929
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ pushImm 100
+ pushImm L9071
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ pushImm 100
+ pushImm L9505
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13988 ; ___ai 'knock_down' (L13988)
+ pushImm 100
+ pushImm L9931
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13794 ; ___ai 'idle' (L13794)
+ pushImm 100
+ pushImm L10000
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13939 ; ___ai 'idle_after_rc' (L13939)
+ pushImm 100
+ pushImm L10029
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13732 ; ___ai 'footwork' (L13732)
+ pushImm 100
+ pushImm L10064
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13859 ; ___ai 'rc_run_up' (L13859)
+ pushImm 65836
+ pushImm L10166
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13913 ; ___ai 'rc_clear_light' (L13913)
+ pushImm 65836
+ pushImm L10229
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13831 ; ___ai 'btl_normal' (L13831)
+ pushImm 100
+ pushImm L10329
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13889 ; ___ai 'rvg_normal' (L13889)
+ pushImm 100
+ pushImm L10534
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13849 ; ___ai 'btl_hard' (L13849)
+ pushImm 100
+ pushImm L10615
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13900 ; ___ai 'rvg_hard' (L13900)
+ pushImm 100
+ pushImm L11019
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13864 ; ___ai 'btl_super_hard' (L13864)
+ pushImm 100
+ pushImm L11053
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13905 ; ___ai 'rvg_super_hard' (L13905)
+ pushImm 100
+ pushImm L11326
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13955 ; ___ai 'mode_revenge' (L13955)
+ pushImm 100
+ pushImm L11389
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13970 ; ___ai 'revenge' (L13970)
+ pushImm 65836
+ pushImm L11398
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13737 ; ___ai 'dead' (L13737)
+ pushImm 196908
+ pushImm L11548
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromPWp W436
+ pushFromPAi L13976 ; ___ai 'battle_start' (L13976)
+ pushImm 100
+ pushImm L11734
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ pushImm 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ jz L4821
+ pushImm 78
+ popToSp 8
+ jmp L4842
+L4821:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L4842
+ pushImm 148
+ popToSp 8
+ jmp L4842
+L4842:
+ pushFromFSp 0
+ pushFromFSp 8
+ pushImm -1
+ pushImmf 300
+ pushImmf 600
+ pushImmf 8
+ pushImm -1
+ pushImmf 0.75
+ pushImmf 0.4
+ gosub 8, L11946
+ pushFromFSp 0
+ gosub 8, L12261
+ pushImm 1
+ popToWp W4560
+ pushImm 1
+ popToWp W4564
+ pushImm 0
+ popToWp W4568
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ jz L4930
+ pushFromPWp W4544
+ pushImmf 1
+ gosub 8, L252
+ pushFromFSp 0
+ gosub 8, L12296
+ popToSpVal 112
+ pushFromFSp 0
+ gosub 8, L13058
+ popToSpVal 116
+ pushFromFSp 0
+ pushImmf 92
+ syscall 2, 76 ; trap_enemy_set_karma_limit (2 in, 0 out)
+ jmp L4969
+L4930:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L4969
+ pushFromFSp 0
+ pushImm 20
+ syscall 1, 53 ; method_obj_disable_collision (2 in, 0 out)
+ pushFromPWp W4544
+ pushImmf 0
+ pushImmf -90
+ pushImmf 0
+ pushImmf 1
+ gosub 8, L225
+ jmp L4969
+L4969:
+ pushFromFSp 0
+ pushImm 25
+ syscall 1, 53 ; method_obj_disable_collision (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 26
+ syscall 1, 53 ; method_obj_disable_collision (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 27
+ syscall 1, 53 ; method_obj_disable_collision (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 28
+ syscall 1, 53 ; method_obj_disable_collision (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 29
+ syscall 1, 53 ; method_obj_disable_collision (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 30
+ syscall 1, 53 ; method_obj_disable_collision (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 31
+ syscall 1, 53 ; method_obj_disable_collision (2 in, 0 out)
+ ret 
+L5019:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 0
+ pushFromFSp 4
+ gosub 4, L385
+ pushImm -1
+ popToSpVal 28
+ pushImmf 30
+ popToSpVal 32
+ pushFromPSpVal 72
+ gosub 4, L5054
+ pushImmf 2000
+ popToSpVal 56
+ pushImmf 1000
+ popToSpVal 60
+ ret 
+L5054:
+ popToSp 0
+ pushImmf 200
+ popToSpVal 0
+ pushImmf 200
+ popToSpVal 4
+ pushImmf 0
+ popToSpVal 8
+ pushImm 2
+ popToSpVal 12
+ pushImmf 8
+ popToSpVal 16
+ pushImm 3
+ popToSpVal 20
+ pushImmf 8
+ popToSpVal 24
+ pushImm 0
+ popToSpVal 32
+ ret 
+L5097:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 0
+ pushFromFSp 4
+ gosub 4, L5128
+ pushFromFSp 0
+ pushImm 16
+ add 
+ pushImm 0
+ memcpy 0
+ pushFromFSp 0
+ pushImm 20
+ add 
+ pushImm 0
+ memcpy 0
+ ret 
+L5128:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 4
+ syscall 1, 5 ; trap_act_table_init (1 in, 0 out)
+ ret 
+D5137:
+L5137: ;___label for action appear
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 110 ; trap_obj_get_appear_way (1 in, 1 out)
+ dup 
+ pushImm 2
+ sub 
+ jz L5159
+ dup 
+ pushImm -1
+ sub 
+ jz L5159
+ jmp L5165
+L5159:
+ pushFromFSp 0
+ gosub 4, L5171
+ jmp L5169
+L5165:
+ pushFromFSp 0
+ gosub 4, L5334
+L5169:
+ drop 
+ ret 
+L5171:
+ popToSp 0
+ gosub 12, L5322
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 96
+ pushFromPSp 96
+ memcpyToSp 16, 16
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
+ pushImm 4
+ popToSp 32
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 44
+ pushImmf 0
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ pushFromFSp 0
+ syscall 1, 124 ; trap_obj_is_entry_fly (1 in, 1 out)
+ dup 
+ jnz L5242
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ eqz 
+ neqzv 
+L5242:
+ jz L5251
+ pushImm 0
+ popToSp 32
+ jmp L5251
+L5251:
+ pushFromFSp 0
+ fetchValue 4
+ pushFromFSpVal 32
+ syscall 1, 20 ; trap_sysobj_fadein (2 in, 0 out)
+L5259:
+ pushFromFSp 0
+ fetchValue 4
+ syscall 1, 14 ; trap_sysobj_motion_is_end (1 in, 1 out)
+ eqz 
+ jz L5310
+ gosub 12, L5322
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 96
+ pushFromPSp 96
+ memcpyToSp 16, 16
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 4 ; trap_obj_wish_dir (2 in, 0 out)
+ halt 
+ jmp L5259
+L5310:
+ pushFromFSp 0
+ fetchValue 4
+ pushFromFSp 32
+ pushImmf 0
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ ret 
+L5322:
+ pushFromPSp 0
+ pushImm 4
+ add 
+ syscall 1, 3 ; trap_sysobj_player (0 in, 1 out)
+ memcpy 0
+ pushFromPSp 0
+ ret 
+L5334:
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushFromFSp 0
+ pushImm 0
+ syscall 1, 67 ; trap_obj_motion_get_length (2 in, 1 out)
+ syscall 0, 17 ; trap_random_getf (1 in, 1 out)
+ pushImmf 0
+ syscall 1, 61 ; trap_sysobj_motion_frame_start (4 in, 0 out)
+ pushFromFSp 0
+ gosub 4, L5362
+ ret 
+L5362:
+ popToSp 0
+ gosub 4, L5381
+L5366:
+ syscall 1, 301 ; trap_tutorial_is_open (0 in, 1 out)
+ jz L5373
+ halt 
+ jmp L5366
+L5373:
+ pushImmf 30
+ syscall 0, 17 ; trap_random_getf (1 in, 1 out)
+ gosub 4, L328
+ ret 
+L5381:
+ syscall 1, 34 ; trap_event_is_exec (0 in, 1 out)
+ jz L5388
+ halt 
+ jmp L5381
+L5388:
+ ret 
+L5389: ;___label for action leave
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 45
+ pushImmf 0
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ pushImm 1
+ pushImm 0
+ syscall 1, 87 ; trap_obj_effect_start_bind (4 in, 1 out)
+ drop 
+ pushFromFSp 0
+ pushImm 3
+ syscall 1, 70 ; trap_obj_set_flag (2 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ pushImmf 30
+ syscall 1, 19 ; trap_sysobj_fadeout (2 in, 0 out)
+ pushImmf 30
+ gosub 4, L328
+ pushFromFSp 0
+ syscall 1, 28 ; trap_obj_leave (1 in, 0 out)
+ gosub 4, L5445
+ ret 
+L5445:
+ halt 
+ jmp L5445
+L5448:
+ ret 
+L5449: ;___label for action freeze
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ gosub 4, L5445
+ ret 
+L5466: ;___label for action event
+ popToSp 0
+ gosub 4, L5445
+ ret 
+L5471: ;___callback for action event
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ ret 
+L5486: ;___label for action idle_time
+ popToSp 0
+ pushImmf 15
+ pushImmf 45
+ syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ popToSp 4
+ pushFromFSp 0
+ gosub 4, L5542
+ pushFromFSp 0
+ gosub 4, L5571
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushFromFSp 0
+ pushImm 0
+ gosub 4, L5610
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+L5522:
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ supzf 
+ jz L5541
+ pushFromFSp 4
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 4
+ halt 
+ jmp L5522
+L5541:
+ ret 
+L5542:
+ popToSp 0
+L5544:
+ pushFromFSp 0
+ syscall 1, 124 ; trap_obj_is_entry_fly (1 in, 1 out)
+ eqz 
+ dup 
+ jz L5557
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ eqzv 
+L5557:
+ dup 
+ jnz L5565
+ pushFromFSp 0
+ syscall 2, 5 ; trap_enemy_is_no_control (1 in, 1 out)
+ neqzv 
+L5565:
+ jz L5570
+ halt 
+ jmp L5544
+L5570:
+ ret 
+L5571:
+ popToSp 0
+ pushFromFSp 0
+ syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
+ syscall 1, 120 ; trap_target_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 16
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 4 ; trap_obj_wish_dir (2 in, 0 out)
+ ret 
+L5610:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 36
+ popToSp 8
+ pushFromFSp 4
+ dup 
+ pushImm 0
+ sub 
+ jz L5631
+ jmp L5668
+L5631:
+ pushFromFSp 0
+ fetchValue 4
+ syscall 1, 15 ; trap_sysobj_motion_id (1 in, 1 out)
+ pushImm 2
+ sub 
+ neqz 
+ dup 
+ jz L5657
+ pushFromFSp 0
+ fetchValue 4
+ syscall 1, 15 ; trap_sysobj_motion_id (1 in, 1 out)
+ pushImm 1
+ sub 
+ neqz 
+ eqzv 
+L5657:
+ jz L5666
+ pushImmf 0
+ popToSp 8
+ jmp L5666
+L5666:
+ jmp L5668
+L5668:
+ drop 
+ pushFromFSp 8
+ ret 
+L5672: ;___label for action mode_battle
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L5746
+ pushFromFSp 0
+ pushImm 0
+ gosub 4, L5869
+ pushFromFSp 0
+ pushImm 16
+ add 
+ dup 
+ fetchValue 0
+ pushImm 1
+ add 
+ memcpy 0
+ pushFromFSp 0
+ gosub 4, L5884
+ pushFromFSp 0
+ fetchValue 48
+ subf 
+ infzf 
+ jz L5719
+ pushFromFSp 0
+ pushFromPAi L13755 ; ___ai 'btl_attack' (L13755)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L5745
+L5719:
+ pushFromFSp 0
+ gosub 4, L5884
+ pushFromFSp 0
+ fetchValue 52
+ subf 
+ infzf 
+ jz L5739
+ pushFromFSp 0
+ pushFromPAi L13761 ; ___ai 'btl_short' (L13761)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L5745
+L5739:
+ pushFromFSp 0
+ pushFromPAi L13778 ; ___ai 'btl_long' (L13778)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+L5745:
+ ret 
+L5746:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L5764
+ jz L5763
+ pushFromFSp 0
+ pushFromPAi L14012 ; ___ai 'leave' (L14012)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ halt 
+ jmp L5763
+L5763:
+ ret 
+L5764:
+ popToSp 0
+ syscall 1, 206 ; trap_status_is_force_leave (0 in, 1 out)
+ jz L5779
+ pushImm 1
+ popToSp 8
+ jmp L5834
+L5777:
+ jmp L5792
+L5779:
+ syscall 1, 171 ; trap_status_no_leave (0 in, 1 out)
+ jz L5792
+ pushImm 0
+ popToSp 8
+ jmp L5834
+L5790:
+ jmp L5792
+L5792:
+ pushImm 0
+ popToSp 8
+ pushFromFSp 0
+ gosub 8, L5322
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ gosub 12, L5837
+ popToSp 4
+ pushFromFSp 0
+ syscall 1, 56 ; method_obj_is_culling (1 in, 1 out)
+ jz L5826
+ pushFromFSp 4
+ pushFromFSpVal 60
+ subf 
+ supzf 
+ popToSp 8
+ jmp L5834
+L5826:
+ pushFromFSp 4
+ pushFromFSpVal 56
+ subf 
+ supzf 
+ popToSp 8
+L5834:
+ pushFromFSp 8
+ ret 
+L5837:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 4
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 0, 6 ; trap_vector_len (1 in, 1 out)
+ ret 
+L5869:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 0
+ syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
+ pushFromFSp 0
+ pushFromFSp 4
+ syscall 1, 121 ; trap_target_search (3 in, 0 out)
+ ret 
+L5884:
+ popToSp 0
+ pushFromFSp 0
+ syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
+ syscall 1, 120 ; trap_target_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushImmf 0
+ memcpy 0
+ pushFromPSp 16
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ popToSp 32
+ pushFromFSp 32
+ ret 
+L5935: ;___label for action mode_battle_boss
+ popToSp 0
+ pushFromFSp 0
+ pushImm 2
+ gosub 4, L5869
+ pushFromFSp 0
+ fetchValue 24
+ dup 
+ pushImm 0
+ sub 
+ jz L5957
+ jmp L5965
+L5957:
+ pushFromFSp 0
+ pushFromPAi L13831 ; ___ai 'btl_normal' (L13831)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L5999
+L5965:
+ dup 
+ pushImm 1
+ sub 
+ jz L5974
+ jmp L5982
+L5974:
+ pushFromFSp 0
+ pushFromPAi L13849 ; ___ai 'btl_hard' (L13849)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L5999
+L5982:
+ dup 
+ pushImm 2
+ sub 
+ jz L5991
+ jmp L5999
+L5991:
+ pushFromFSp 0
+ pushFromPAi L13864 ; ___ai 'btl_super_hard' (L13864)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L5999
+L5999:
+ drop 
+ ret 
+L6001: ;___label for action mode_revenge_boss
+ popToSp 0
+ pushFromFSp 0
+ pushImm 2
+ gosub 4, L5869
+ pushFromFSp 0
+ fetchValue 24
+ dup 
+ pushImm 0
+ sub 
+ jz L6023
+ jmp L6031
+L6023:
+ pushFromFSp 0
+ pushFromPAi L13889 ; ___ai 'rvg_normal' (L13889)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L6065
+L6031:
+ dup 
+ pushImm 1
+ sub 
+ jz L6040
+ jmp L6048
+L6040:
+ pushFromFSp 0
+ pushFromPAi L13900 ; ___ai 'rvg_hard' (L13900)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L6065
+L6048:
+ dup 
+ pushImm 2
+ sub 
+ jz L6057
+ jmp L6065
+L6057:
+ pushFromFSp 0
+ pushFromPAi L13905 ; ___ai 'rvg_super_hard' (L13905)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L6065
+L6065:
+ drop 
+ ret 
+L6067: ;___label for action atk_slice
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.1
+ subf 
+ infzf 
+ jz L6092
+ pushFromFSp 0
+ pushImm 27
+ pushImm 1
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L6092
+L6092:
+ pushFromFSp 0
+ pushImm 201
+ pushImm 0
+ pushImm -1
+ gosub 4, L6118
+ ret 
+L6106:
+ popToSp 0
+ pushImmf 1
+ syscall 0, 17 ; trap_random_getf (1 in, 1 out)
+ popToSp 4
+ pushFromFSp 4
+ ret 
+L6118:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 0
+ pushFromFSp 0
+ gosub 8, L5542
+ pushFromFSp 8
+ pushImm 3
+ sub 
+ neqz 
+ jz L6145
+ pushFromFSp 0
+ gosub 8, L5571
+ jmp L6145
+L6145:
+ pushFromFSp 0
+ fetchValue 4
+ pushFromFSp 12
+ pushFromFSp 0
+ pushFromFSp 12
+ gosub 8, L5610
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+L6159:
+ pushFromFSp 0
+ fetchValue 4
+ syscall 1, 14 ; trap_sysobj_motion_is_end (1 in, 1 out)
+ eqz 
+ jz L6192
+ halt 
+ pushFromFSp 0
+ pushFromFSp 12
+ gosub 8, L6215
+ jz L6181
+ jmp L6192
+L6179:
+ jmp L6181
+L6181:
+ pushFromFSp 0
+ syscall 2, 5 ; trap_enemy_is_no_control (1 in, 1 out)
+ jz L6190
+ halt 
+ jmp L6181
+L6190:
+ jmp L6159
+L6192:
+ pushFromFSp 4
+ pushImm 0
+ sub 
+ msbi 
+ jz L6214
+ pushFromFSp 0
+ fetchValue 4
+ pushFromFSp 4
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ jmp L6214
+L6214:
+ ret 
+L6215:
+ popToSp 4
+ popToSp 0
+ pushImm 0
+ popToSp 8
+ pushFromFSp 0
+ fetchValue 4
+ syscall 1, 15 ; trap_sysobj_motion_id (1 in, 1 out)
+ pushFromFSp 4
+ sub 
+ neqz 
+ jz L6243
+ pushImm 1
+ popToSp 8
+ jmp L6243
+L6243:
+ pushFromFSp 8
+ ret 
+L6246: ;___label for action atk_burst
+ popToSp 0
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L6269
+ pushImmf 120
+ popToSp 4
+ jmp L6323
+L6269:
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 0
+ sub 
+ eqz 
+ jz L6287
+ pushImmf 90
+ popToSp 4
+ jmp L6323
+L6287:
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 1
+ sub 
+ eqz 
+ jz L6305
+ pushImmf 45
+ popToSp 4
+ jmp L6323
+L6305:
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 2
+ sub 
+ eqz 
+ jz L6323
+ pushImmf 5
+ popToSp 4
+ jmp L6323
+L6323:
+ pushFromFSp 0
+ gosub 4, L5571
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 202
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ jz L6365
+ pushFromFSp 0
+ pushImm 14
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L6391
+L6365:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L6391
+ pushFromFSp 0
+ pushImm 13
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L6391
+L6391:
+ pushFromFSp 0
+ syscall 1, 63 ; trap_obj_is_motion_in_loop (1 in, 1 out)
+ eqz 
+ jz L6401
+ halt 
+ jmp L6391
+L6401:
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ supzf 
+ jz L6420
+ halt 
+ pushFromFSp 4
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 4
+ jmp L6401
+L6420:
+ pushFromFSp 0
+ pushImm 0
+ gosub 4, L6428
+ ret 
+L6428:
+ popToSp 4
+ popToSp 0
+ pushImmf 0.872665
+ popToSp 12
+ pushFromFSp 0
+ gosub 16, L6106
+ pushImmf 0.5
+ subf 
+ infzf 
+ jz L6458
+ pushFromFSp 12
+ pushImmf -1
+ mulf 
+ popToSp 12
+ jmp L6458
+L6458:
+ pushImmf 20
+ pushFromFSp 0
+ gosub 16, L5884
+ pushImmf 100
+ subf 
+ pushImmf 0.021
+ mulf 
+ addf 
+ popToSp 8
+ pushFromFSp 0
+ gosub 16, L5884
+ pushImmf 700
+ subf 
+ supzf 
+ jz L6497
+ pushFromFSp 8
+ pushImmf 2
+ addf 
+ popToSp 8
+ jmp L6497
+L6497:
+ gosub 16, L5322
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 16
+L6514:
+ pushFromFSp 8
+ pushImmf 0
+ subf 
+ supzf 
+ jz L6591
+ pushFromPSp 16
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ drop 
+ pushFromPSp 32
+ pushFromFSp 12
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ memcpyToSp 16, 32
+ pushFromFSp 0
+ pushFromPSp 32
+ syscall 1, 4 ; trap_obj_wish_dir (2 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 203
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 8
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 8
+ halt 
+ jmp L6514
+L6591:
+ pushFromFSp 4
+ jz L6807
+ pushFromPSp 32
+ pushImmf 1
+ gosub 16, L252
+ pushFromFSp 0
+ pushFromPSp 32
+ gosub 16, L6890
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ jz L6713
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 204
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ jz L6652
+ pushFromFSp 0
+ pushImm 15
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L6678
+L6652:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L6678
+ pushFromFSp 0
+ pushImm 16
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L6678
+L6678:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 151 ; trap_obj_motion_check_trigger (2 in, 1 out)
+ eqz 
+ jz L6691
+ halt 
+ jmp L6678
+L6691:
+ pushFromFSp 0
+ syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 4
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ gosub 16, L5542
+ jmp L6783
+L6713:
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 204
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ jz L6751
+ pushFromFSp 0
+ pushImm 15
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L6777
+L6751:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L6777
+ pushFromFSp 0
+ pushImm 16
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L6777
+L6777:
+ pushFromFSp 0
+ fetchValue 4
+ gosub 16, L6904
+L6783:
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushImmf 45
+ pushImmf 60
+ syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ gosub 16, L328
+ jmp L6889
+L6807:
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 204
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ jz L6845
+ pushFromFSp 0
+ pushImm 15
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L6871
+L6845:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L6871
+ pushFromFSp 0
+ pushImm 16
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L6871
+L6871:
+ pushFromFSp 0
+ fetchValue 4
+ gosub 16, L6904
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+L6889:
+ ret 
+L6890:
+ popToSp 4
+ popToSp 0
+ pushFromFSpVal 4
+ pushImm 32
+ add 
+ pushFromFSp 4
+ memcpy 16
+ ret 
+L6904:
+ popToSp 0
+L6906:
+ pushFromFSp 0
+ syscall 1, 14 ; trap_sysobj_motion_is_end (1 in, 1 out)
+ eqz 
+ jz L6916
+ halt 
+ jmp L6906
+L6916:
+ ret 
+L6917: ;___label for action atk_burst_fast
+ popToSp 0
+ pushFromFSp 0
+ pushImm 0
+ gosub 4, L6428
+ ret 
+L6927: ;___label for action atk_burst_revenge
+ popToSp 0
+ pushFromPSp 16
+ pushImmf 1
+ gosub 12, L252
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ jz L6953
+ pushFromFSp 0
+ pushFromPSp 16
+ pushImmf 0
+ syscall 1, 58 ; trap_obj_fly (3 in, 0 out)
+ jmp L6953
+L6953:
+ pushFromFSp 0
+ pushImm 1
+ gosub 12, L6428
+ ret 
+L6961: ;___callback for action atk_burst_revenge
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 212 ; trap_obj_pattern_disable (2 in, 0 out)
+ ret 
+L6975: ;___callback for action atk_burst_revenge
+ popToSp 0
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
+ ret 
+L6985: ;___label for action atk_assault
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 0
+ sub 
+ eqz 
+ jz L7010
+ pushImmf 150
+ popToSp 4
+ pushImm 1
+ popToSp 8
+ jmp L7056
+L7010:
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 1
+ sub 
+ eqz 
+ jz L7033
+ pushImmf 120
+ popToSp 4
+ pushImm 3
+ popToSp 8
+ jmp L7056
+L7033:
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 2
+ sub 
+ eqz 
+ jz L7056
+ pushImmf 90
+ popToSp 4
+ pushImm 5
+ popToSp 8
+ jmp L7056
+L7056:
+ pushFromFSp 0
+ pushImm 18
+ pushImm 1
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ pushFromFSp 0
+ pushFromFSp 8
+ pushFromFSp 4
+ gosub 8, L7075
+ ret 
+L7075:
+ popToSp 4
+ popToSp 8
+ popToSp 0
+ pushFromFSp 8
+ popToSp 100
+L7085:
+ pushFromFSp 100
+ pushImm 0
+ sub 
+ ipos 
+ jz L7787
+ pushFromFSp 0
+ syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
+ pushImm 6
+ pushImm 0
+ syscall 1, 311 ; trap_sheet_set_element_rate (3 in, 0 out)
+ pushFromPWp W4544
+ memcpyToSp 16, 48
+ pushFromPSp 32
+ pushImmf 0
+ pushImmf 150
+ pushImmf 0
+ pushImmf 1
+ gosub 32, L225
+ pushFromFSp 0
+ pushFromPSp 32
+ pushImm 208
+ pushImmf 8
+ pushImm 0
+ syscall 1, 55 ; method_obj_jump (5 in, 0 out)
+L7142:
+ pushFromFSp 0
+ syscall 1, 57 ; trap_obj_is_jump (1 in, 1 out)
+ eqz 
+ jz L7349
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 112
+ pushFromPSp 112
+ fetchValue 0
+ pushImmf 0
+ subf 
+ eqzf 
+ dup 
+ jz L7185
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 128
+ pushFromPSp 128
+ fetchValue 8
+ pushImmf 0
+ subf 
+ eqzf 
+ eqzv 
+L7185:
+ jz L7199
+ pushFromPSp 48
+ pushImm 8
+ add 
+ pushImmf 1
+ memcpy 0
+ jmp L7209
+L7199:
+ pushFromPSp 48
+ pushImm 8
+ add 
+ pushImmf 0
+ memcpy 0
+L7209:
+ pushFromPSp 48
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 112
+ pushFromPSp 112
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 128
+ pushFromPSp 128
+ memcpyToSp 16, 16
+ pushFromPSp 48
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 112
+ pushFromPSp 112
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 128
+ pushFromPSp 128
+ memcpyToSp 16, 64
+ pushFromPSp 48
+ pushFromFSp 0
+ syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
+ gosub 32, L374
+ memcpyToSp 16, 112
+ pushFromPSp 112
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 128
+ pushFromPSp 128
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 144
+ pushFromPSp 144
+ memcpyToSp 16, 80
+ pushFromPSp 64
+ pushFromPSp 80
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf -0.261799
+ subf 
+ supoezf 
+ dup 
+ jz L7307
+ pushFromPSp 64
+ pushFromPSp 80
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf 0.261799
+ subf 
+ infoezf 
+ eqzv 
+L7307:
+ dup 
+ jz L7321
+ pushFromPSp 64
+ syscall 0, 6 ; trap_vector_len (1 in, 1 out)
+ pushFromPSp 80
+ syscall 0, 6 ; trap_vector_len (1 in, 1 out)
+ subf 
+ infoezf 
+ eqzv 
+L7321:
+ jz L7340
+ pushFromPSp 64
+ pushImmf 3.141593
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 112
+ pushFromPSp 112
+ memcpyToSp 16, 16
+ jmp L7340
+L7340:
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 4 ; trap_obj_wish_dir (2 in, 0 out)
+ halt 
+ jmp L7142
+L7349:
+ pushFromPSp 16
+ pushImmf 3.141593
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 112
+ pushFromPSp 112
+ memcpyToSp 16, 16
+ pushFromFSp 0
+ pushFromPSp 16
+ pushImmf 450
+ syscall 1, 111 ; trap_obj_set_movement (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 0
+ syscall 1, 70 ; trap_obj_set_flag (2 in, 0 out)
+L7380:
+ pushFromFSp 0
+ gosub 32, L8090
+ pushImmf 600
+ subf 
+ infoezf 
+ jz L7394
+ halt 
+ jmp L7380
+L7394:
+ pushFromFSp 0
+ gosub 32, L7819
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 70 ; trap_obj_set_flag (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 5
+ syscall 1, 70 ; trap_obj_set_flag (2 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ pushImmf 20
+ syscall 1, 19 ; trap_sysobj_fadeout (2 in, 0 out)
+ pushImmf 20
+ gosub 32, L328
+ pushFromPSp 16
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+ pushImmf 1
+ gosub 32, L225
+ pushFromFSp 0
+ pushFromPSp 16
+ gosub 32, L6890
+ pushFromFSp 0
+ syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 112
+ pushFromPSp 112
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushImmf 0
+ memcpy 0
+ pushFromPSp 16
+ pushImm 12
+ add 
+ pushImmf 1
+ memcpy 0
+ pushFromPSp 16
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ drop 
+ pushFromPSp 16
+ pushImmf 700
+ syscall 0, 35 ; method_vector_scale (2 in, 0 out)
+ pushFromFSp 0
+ gosub 32, L6106
+ pushImmf 0.5
+ subf 
+ infzf 
+ jz L7530
+ pushFromPSp 16
+ pushImmf -90
+ pushImmf -60
+ syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ degr 
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 112
+ pushFromPSp 112
+ memcpyToSp 16, 16
+ jmp L7551
+L7530:
+ pushFromPSp 16
+ pushImmf 60
+ pushImmf 90
+ syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ degr 
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 112
+ pushFromPSp 112
+ memcpyToSp 16, 16
+L7551:
+ pushFromFSp 0
+ gosub 32, L6106
+ pushImmf 0.5
+ subf 
+ infzf 
+ jz L7584
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushImmf 0
+ memcpy 0
+ pushImm 209
+ popToSp 96
+ pushImm 19
+ popToSp 104
+ jmp L7604
+L7584:
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushImmf -350
+ memcpy 0
+ pushImm 210
+ popToSp 96
+ pushImm 21
+ popToSp 104
+L7604:
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
+ pushFromFSp 0
+ gosub 32, L7910
+ pushFromFSp 0
+ pushImm 5
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ pushFromFSp 4
+ gosub 32, L328
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 112
+ pushFromPSp 112
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 128
+ pushFromPSp 128
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ drop 
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
+ pushFromFSp 0
+ gosub 32, L8001
+ pushFromFSp 0
+ fetchValue 4
+ pushFromFSp 96
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ pushFromFSp 104
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ pushFromFSp 0
+ gosub 32, L8008
+ pushFromFSp 0
+ fetchValue 4
+ pushImmf 20
+ syscall 1, 20 ; trap_sysobj_fadein (2 in, 0 out)
+L7694:
+ pushFromFSp 0
+ gosub 32, L8090
+ pushImmf 550
+ subf 
+ supoezf 
+ jz L7708
+ halt 
+ jmp L7694
+L7708:
+ pushFromFSp 0
+ pushImm 0
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 3
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ pushFromFSp 0
+ syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
+ pushImm 6
+ pushImm 100
+ syscall 1, 311 ; trap_sheet_set_element_rate (3 in, 0 out)
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 2
+ sub 
+ eqz 
+ jz L7770
+L7752:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 151 ; trap_obj_motion_check_trigger (2 in, 1 out)
+ jz L7765
+ jmp L7768
+L7763:
+ jmp L7765
+L7765:
+ halt 
+ jmp L7752
+L7768:
+ jmp L7776
+L7770:
+ pushFromFSp 0
+ fetchValue 4
+ gosub 32, L6904
+L7776:
+ pushFromFSp 100
+ pushImm 1
+ sub 
+ popToSp 100
+ halt 
+ jmp L7085
+L7787:
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 2
+ sub 
+ eqz 
+ jz L7806
+ pushFromFSp 0
+ fetchValue 4
+ gosub 32, L6904
+ jmp L7806
+L7806:
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ ret 
+L7819:
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ fetchValue 4
+ pushImmf 115
+ subf 
+ memcpy 0
+ pushFromFSp 0
+ pushImm 13
+ pushFromPSp 16
+ pushImm 1
+ pushImm 0
+ syscall 1, 22 ; trap_obj_effect_start_pos (5 in, 1 out)
+ popToSp 4
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushImmf 0
+ memcpy 0
+ pushFromFSp 4
+ pushFromPSp 16
+ syscall 0, 41 ; trap_effect_set_dir (2 in, 0 out)
+ ret 
+L7910:
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ fetchValue 4
+ pushImmf 115
+ subf 
+ memcpy 0
+ pushFromFSp 0
+ pushImm 14
+ pushFromPSp 16
+ pushImm 1
+ pushImm 0
+ syscall 1, 22 ; trap_obj_effect_start_pos (5 in, 1 out)
+ popToSpVal 108
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushImmf 0
+ memcpy 0
+ pushFromFSpVal 108
+ pushFromPSp 16
+ syscall 0, 41 ; trap_effect_set_dir (2 in, 0 out)
+ ret 
+L8001:
+ popToSp 0
+ pushFromFSpVal 108
+ syscall 0, 44 ; trap_effect_loop_end (1 in, 0 out)
+ ret 
+L8008:
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ fetchValue 4
+ pushImmf 115
+ subf 
+ memcpy 0
+ pushFromFSp 0
+ pushImm 15
+ pushFromPSp 16
+ pushImm 1
+ pushImm 0
+ syscall 1, 22 ; trap_obj_effect_start_pos (5 in, 1 out)
+ popToSp 4
+ pushFromFSp 0
+ syscall 1, 201 ; trap_obj_dir (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushImmf 0
+ memcpy 0
+ pushFromFSp 4
+ pushFromPSp 16
+ syscall 0, 41 ; trap_effect_set_dir (2 in, 0 out)
+ ret 
+L8090:
+ popToSp 0
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ popToSp 32
+ pushFromFSp 32
+ ret 
+L8122: ;___callback for action atk_assault
+ popToSp 0
+ pushFromFSp 0
+ pushImm 0
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 3
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ pushFromFSp 0
+ syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
+ pushImm 6
+ pushImm 100
+ syscall 1, 311 ; trap_sheet_set_element_rate (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 5
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ ret 
+L8165: ;___callback for action atk_assault
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
+ pushFromFSp 0
+ syscall 1, 66 ; trap_obj_exec_land (1 in, 0 out)
+ ret 
+L8176: ;___label for action atk_assault_revenge
+ popToSp 0
+ pushFromPSp 16
+ pushImmf 1
+ gosub 12, L252
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ jz L8202
+ pushFromFSp 0
+ pushFromPSp 16
+ pushImmf 0
+ syscall 1, 58 ; trap_obj_fly (3 in, 0 out)
+ jmp L8202
+L8202:
+ pushFromFSp 0
+ pushImm 1
+ pushImmf 90
+ gosub 12, L7075
+ pushFromFSp 0
+ syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
+ ret 
+L8217: ;___callback for action atk_assault_revenge
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 212 ; trap_obj_pattern_disable (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 0
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ pushFromFSp 0
+ pushImm 3
+ syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
+ pushFromFSp 0
+ syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
+ pushImm 6
+ pushImm 100
+ syscall 1, 311 ; trap_sheet_set_element_rate (3 in, 0 out)
+ ret 
+L8264: ;___callback for action atk_assault_revenge
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
+ pushFromFSp 0
+ syscall 1, 66 ; trap_obj_exec_land (1 in, 0 out)
+ ret 
+L8275: ;___callback for action atk_assault_revenge
+ popToSp 0
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
+ ret 
+L8285: ;___label for action atk_disorder
+ popToSp 0
+ pushImm 0
+ syscall 1, 181 ; trap_light_create (1 in, 1 out)
+ popToWp W4536
+ pushFromFWp W4536
+ pushImm 1
+ syscall 1, 182 ; trap_light_set_flag (2 in, 0 out)
+ pushFromFWp W4536
+ pushImm 80
+ pushImm 80
+ pushImm 80
+ pushImmf 60
+ syscall 1, 183 ; trap_light_set_color (5 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 205
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ jz L8355
+ pushFromFSp 0
+ pushImm 23
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L8381
+L8355:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L8381
+ pushFromFSp 0
+ pushImm 45
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L8381
+L8381:
+ pushImmf 40
+ gosub 20, L328
+ pushFromFSp 0
+ gosub 20, L8718
+ pushFromFSp 0
+ fetchValue 4
+ gosub 20, L6904
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ jz L8645
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 216
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+L8422:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 150 ; trap_obj_motion_check_range (2 in, 1 out)
+ eqz 
+ jz L8435
+ halt 
+ jmp L8422
+L8435:
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ memcpyToSp 16, 32
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
+ gosub 20, L374
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 96
+ pushFromPSp 96
+ memcpyToSp 16, 16
+ pushFromPSp 32
+ pushFromPSp 16
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf -0.523599
+ subf 
+ supoezf 
+ dup 
+ jz L8512
+ pushFromPSp 32
+ pushFromPSp 16
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf 0.523599
+ subf 
+ infoezf 
+ eqzv 
+L8512:
+ dup 
+ jz L8526
+ pushFromPSp 32
+ syscall 0, 6 ; trap_vector_len (1 in, 1 out)
+ pushFromPSp 16
+ syscall 0, 6 ; trap_vector_len (1 in, 1 out)
+ subf 
+ infoezf 
+ eqzv 
+L8526:
+ jz L8627
+L8528:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 150 ; trap_obj_motion_check_range (2 in, 1 out)
+ jz L8625
+ pushFromFSp 0
+ gosub 20, L8090
+ pushImmf 50
+ subf 
+ supoezf 
+ jz L8618
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ pushImmf 3.141593
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 48
+ pushFromFSp 0
+ pushFromPSp 48
+ syscall 1, 4 ; trap_obj_wish_dir (2 in, 0 out)
+ pushFromFSp 0
+ pushFromFSp 0
+ syscall 1, 201 ; trap_obj_dir (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ pushImmf 3.141593
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ pushImmf 20
+ syscall 1, 111 ; trap_obj_set_movement (3 in, 0 out)
+ jmp L8622
+L8618:
+ pushFromFSp 0
+ gosub 20, L5571
+L8622:
+ halt 
+ jmp L8528
+L8625:
+ jmp L8643
+L8627:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 150 ; trap_obj_motion_check_range (2 in, 1 out)
+ jz L8643
+ pushFromFSp 0
+ gosub 20, L5571
+ halt 
+ jmp L8627
+L8643:
+ jmp L8673
+L8645:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L8673
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 215
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ jmp L8673
+L8673:
+ pushFromFSp 0
+ fetchValue 4
+ gosub 20, L6904
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L8717
+ pushFromFSp 0
+ pushImm 47
+ pushImm 1
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L8717
+L8717:
+ ret 
+L8718:
+ popToSp 0
+ pushFromPSpVal 120
+ pushFromFSp 0
+ pushImm 39
+ pushImm 0
+ gosub 4, L8793
+ pushFromPSpVal 124
+ pushFromFSp 0
+ pushImm 40
+ pushImm 0
+ gosub 4, L8793
+ pushFromPSpVal 128
+ pushFromFSp 0
+ pushImm 41
+ pushImm 0
+ gosub 4, L8793
+ pushFromPSpVal 132
+ pushFromFSp 0
+ pushImm 42
+ pushImm 0
+ gosub 4, L8793
+ pushFromPSpVal 136
+ pushFromFSp 0
+ pushImm 43
+ pushImm 0
+ gosub 4, L8793
+ pushFromPSpVal 140
+ pushFromFSp 0
+ pushImm 44
+ pushImm 0
+ gosub 4, L8793
+ ret 
+L8793:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 0
+ pushFromFSpVal 0
+ pushImm 0
+ sub 
+ eqz 
+ jz L8825
+ pushFromFSp 12
+ pushFromFSp 8
+ pushImm 0
+ pushFromFSp 4
+ syscall 1, 87 ; trap_obj_effect_start_bind (4 in, 1 out)
+ popToSpVal 0
+ jmp L8825
+L8825:
+ ret 
+L8826: ;___callback for action atk_disorder
+ popToSp 0
+ pushImm 1
+ popToWp W4568
+ pushFromFSp 0
+ pushImmf 1
+ syscall 1, 107 ; trap_obj_motion_speed (2 in, 0 out)
+ pushFromFSp 0
+ gosub 4, L8864
+ pushFromFWp W4536
+ pushImmf 30
+ syscall 1, 184 ; trap_light_fadeout (2 in, 0 out)
+ pushFromFSp 0
+ syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
+ pushImm 6
+ pushImm 100
+ syscall 1, 311 ; trap_sheet_set_element_rate (3 in, 0 out)
+ ret 
+L8864:
+ popToSp 0
+ pushFromPSpVal 120
+ gosub 4, L8891
+ pushFromPSpVal 124
+ gosub 4, L8891
+ pushFromPSpVal 128
+ gosub 4, L8891
+ pushFromPSpVal 132
+ gosub 4, L8891
+ pushFromPSpVal 136
+ gosub 4, L8891
+ pushFromPSpVal 140
+ gosub 4, L8891
+ ret 
+L8891:
+ popToSp 0
+ pushFromFSpVal 0
+ pushImm 0
+ sub 
+ neqz 
+ jz L8913
+ pushFromFSpVal 0
+ syscall 0, 85 ; trap_effect_loop_end_kill (1 in, 0 out)
+ pushImm 0
+ popToSpVal 0
+ jmp L8913
+L8913:
+ ret 
+L8914: ;___callback for action atk_disorder
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
+ pushImm 6
+ pushImm 0
+ syscall 1, 311 ; trap_sheet_set_element_rate (3 in, 0 out)
+ ret 
+L8929: ;___label for action atk_prison
+ popToSp 0
+ pushImmf 80
+ popToSp 32
+ pushImm 1
+ popToWp W4560
+ pushImm 1
+ popToWp W4564
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 206
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+L8958:
+ pushFromFSp 32
+ pushImmf 0
+ subf 
+ supzf 
+ jz L9009
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ drop 
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 4 ; trap_obj_wish_dir (2 in, 0 out)
+ pushFromFSp 32
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 32
+ halt 
+ jmp L8958
+L9009:
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 207
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushImmf 124
+ gosub 12, L328
+ pushFromFSp 0
+ gosub 12, L9049
+ pushFromFSp 0
+ fetchValue 4
+ gosub 12, L6904
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ ret 
+L9049:
+ popToSp 0
+ pushFromFSp 0
+ pushImm 20
+ syscall 1, 54 ; method_obj_reset_collision (2 in, 0 out)
+ pushFromFSpVal 112
+ gosub 4, L9063
+ ret 
+L9063:
+ popToSp 0
+ pushImm 0
+ popToSpVal 64
+ ret 
+L9071: ;___label for action move_various
+ popToSp 0
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 32
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
+ gosub 16, L374
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ memcpyToSp 16, 16
+ pushFromPSp 32
+ pushFromPSp 16
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf -0.523599
+ subf 
+ supoezf 
+ dup 
+ jz L9150
+ pushFromPSp 32
+ pushFromPSp 16
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf 0.523599
+ subf 
+ infoezf 
+ eqzv 
+L9150:
+ dup 
+ jz L9164
+ pushFromPSp 32
+ syscall 0, 6 ; trap_vector_len (1 in, 1 out)
+ pushFromPSp 16
+ syscall 0, 6 ; trap_vector_len (1 in, 1 out)
+ subf 
+ infoezf 
+ eqzv 
+L9164:
+ jz L9172
+ pushFromFSp 0
+ gosub 16, L9241
+ jmp L9240
+L9172:
+ pushFromPSp 32
+ pushFromPSp 16
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf 1.570796
+ subf 
+ supoezf 
+ dup 
+ jz L9198
+ pushFromPSp 32
+ pushFromPSp 16
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf 3.141593
+ subf 
+ infoezf 
+ eqzv 
+L9198:
+ dup 
+ jnz L9228
+ pushFromPSp 32
+ pushFromPSp 16
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf -1.570796
+ subf 
+ supoezf 
+ dup 
+ jz L9227
+ pushFromPSp 32
+ pushFromPSp 16
+ syscall 0, 21 ; trap_vector_get_rot_xz (2 in, 1 out)
+ pushImmf -3.141593
+ subf 
+ infoezf 
+ eqzv 
+L9227:
+ neqzv 
+L9228:
+ jz L9236
+ pushFromFSp 0
+ gosub 16, L9321
+ jmp L9240
+L9236:
+ pushFromFSp 0
+ gosub 16, L9440
+L9240:
+ ret 
+L9241:
+ popToSp 0
+ pushFromPWp W4544
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ drop 
+ pushFromPSp 16
+ pushImmf 3.141593
+ syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ memcpyToSp 16, 16
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 4 ; trap_obj_wish_dir (2 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 163
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ gosub 12, L6904
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ ret 
+L9321:
+ popToSp 0
+ pushImmf 300
+ popToSp 48
+ pushFromPWp W4544
+ memcpyToSp 16, 16
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 2
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+L9345:
+ pushFromFSp 48
+ pushImmf 0
+ subf 
+ supzf 
+ jz L9427
+ pushFromPSp 16
+ pushFromFSp 0
+ syscall 1, 98 ; trap_obj_step_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ drop 
+ pushFromFSp 0
+ pushFromPSp 32
+ syscall 1, 4 ; trap_obj_wish_dir (2 in, 0 out)
+ pushFromFSp 48
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 48
+ halt 
+ pushFromFSp 0
+ gosub 16, L5884
+ pushFromFSp 0
+ fetchValue 52
+ subf 
+ infzf 
+ jz L9410
+ jmp L9427
+L9408:
+ jmp L9410
+L9410:
+ pushFromFSp 0
+ gosub 16, L8090
+ pushImmf 50
+ subf 
+ infoezf 
+ jz L9425
+ jmp L9427
+L9423:
+ jmp L9425
+L9425:
+ jmp L9345
+L9427:
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ ret 
+L9440:
+ popToSp 0
+ pushImm 161
+ popToSp 4
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.5
+ subf 
+ infoezf 
+ jz L9465
+ pushImm 162
+ popToSp 4
+ jmp L9465
+L9465:
+ pushFromFSp 0
+ fetchValue 4
+ pushFromFSp 4
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+L9476:
+ pushFromFSp 0
+ fetchValue 4
+ syscall 1, 14 ; trap_sysobj_motion_is_end (1 in, 1 out)
+ eqz 
+ jz L9492
+ pushFromFSp 0
+ gosub 4, L5571
+ halt 
+ jmp L9476
+L9492:
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ ret 
+L9505: ;___label for action move_target
+ popToSp 0
+ pushFromFSp 0
+ pushImmf 90
+ pushImmf 120
+ syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ pushImm 2
+ pushImmf -1
+ pushImmf -1
+ pushImm 0
+ gosub 4, L9544
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ ret 
+L9544:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 16
+ popToSp 20
+ popToSp 0
+ pushFromFSp 0
+ gosub 12, L5542
+ pushFromFSp 12
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L9583
+ pushFromFSp 0
+ fetchValue 52
+ popToSp 12
+ pushFromFSp 0
+ fetchValue 48
+ popToSp 8
+ jmp L9583
+L9583:
+ pushFromFSp 0
+ gosub 12, L5884
+ pushFromFSp 8
+ subf 
+ infzf 
+ jz L9599
+ pushFromFSp 12
+ popToSp 28
+ jmp L9611
+L9599:
+ pushFromFSp 8
+ popToSp 28
+ pushFromFSp 20
+ pushImmf 2
+ mulf 
+ popToSp 20
+L9611:
+ pushFromPSpVal 72
+ pushImm 12
+ add 
+ pushFromFSp 16
+ memcpy 0
+ pushFromPSpVal 72
+ pushImm 16
+ add 
+ pushFromFSpVal 36
+ memcpy 0
+L9629:
+ pushFromFSp 20
+ pushImmf 0
+ subf 
+ supzf 
+ jz L9679
+ pushFromFSp 0
+ pushFromFSp 0
+ syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
+ syscall 1, 120 ; trap_target_pos (1 in, 1 out)
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ pushFromPSpVal 72
+ gosub 16, L9680
+ popToSp 24
+ pushFromFSp 24
+ pushFromFSp 28
+ subf 
+ infoezf 
+ jz L9669
+ jmp L9679
+L9667:
+ jmp L9669
+L9669:
+ halt 
+ pushFromFSp 20
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 20
+ jmp L9629
+L9679:
+ ret 
+L9680:
+ popToSp 4
+ popToSp 8
+ popToSp 0
+ pushFromFSp 8
+ pushFromFSp 0
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ popToSp 48
+ pushFromFSp 0
+ syscall 1, 78 ; trap_obj_motion_is_no_control (1 in, 1 out)
+ eqz 
+ jz L9928
+ pushFromFSp 0
+ pushFromPSp 32
+ pushFromFSp 4
+ fetchValue 8
+ syscall 1, 80 ; trap_obj_turn_dir (3 in, 1 out)
+ drop 
+ pushFromFSp 0
+ syscall 1, 57 ; trap_obj_is_jump (1 in, 1 out)
+ jz L9756
+ pushFromFSp 0
+ pushFromFSp 0
+ syscall 1, 201 ; trap_obj_dir (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ pushFromFSp 4
+ fetchValue 24
+ syscall 1, 111 ; trap_obj_set_movement (3 in, 0 out)
+ jmp L9926
+L9756:
+ pushFromFSp 0
+ fetchValue 4
+ pushFromFSp 4
+ fetchValue 12
+ pushFromFSp 4
+ fetchValue 16
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ syscall 1, 201 ; trap_obj_dir (1 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 12
+ add 
+ pushImmf 100
+ memcpy 0
+ pushFromFSp 4
+ pushImm 28
+ add 
+ pushFromFSp 0
+ pushFromPSp 16
+ pushFromFSp 4
+ fetchValue 0
+ pushFromFSp 4
+ fetchValue 4
+ syscall 1, 119 ; trap_obj_check_step (4 in, 1 out)
+ memcpy 0
+ pushFromFSp 4
+ fetchValue 28
+ dup 
+ pushImm 1
+ sub 
+ jz L9833
+ dup 
+ pushImm 2
+ sub 
+ jz L9833
+ jmp L9912
+L9833:
+ pushFromFSp 4
+ fetchValue 20
+ pushImm 0
+ sub 
+ msb 
+ jz L9848
+ jmp L9925
+L9846:
+ jmp L9848
+L9848:
+ pushFromPSp 16
+ pushImm 4
+ add 
+ pushFromFSp 4
+ fetchValue 0
+ memcpy 0
+ pushFromPSp 16
+ pushImm 12
+ add 
+ pushFromFSp 4
+ fetchValue 24
+ memcpy 0
+ pushFromFSp 4
+ fetchValue 32
+ jz L9894
+ pushFromFSp 0
+ pushFromPSp 16
+ pushFromFSp 4
+ fetchValue 20
+ pushImmf 0
+ pushImm 1
+ syscall 1, 168 ; trap_obj_flyjump (5 in, 0 out)
+ jmp L9910
+L9894:
+ pushFromFSp 0
+ pushFromPSp 16
+ pushFromFSp 4
+ fetchValue 20
+ pushImmf 0
+ pushImm 1
+ syscall 1, 55 ; method_obj_jump (5 in, 0 out)
+L9910:
+ jmp L9925
+L9912:
+ dup 
+ pushImm 3
+ sub 
+ jz L9921
+ jmp L9925
+L9921:
+ jmp L9925
+L9923:
+ jmp L9925
+L9925:
+ drop 
+L9926:
+ jmp L9928
+L9928:
+ pushFromFSp 48
+ ret 
+L9931: ;___label for action knock_down
+ popToSp 0
+ pushImmf 180
+ popToSp 4
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 191
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+L9950:
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ supzf 
+ jz L9969
+ pushFromFSp 4
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 4
+ halt 
+ jmp L9950
+L9969:
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 192
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ gosub 4, L6904
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ ret 
+L10000: ;___label for action idle
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L5571
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushImmf 45
+ pushImmf 60
+ syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ gosub 4, L328
+ ret 
+L10029: ;___label for action idle_after_rc
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 4
+ gosub 4, L6904
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+L10049:
+ gosub 4, L5322
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ syscall 1, 101 ; trap_obj_motion_is_capture (1 in, 1 out)
+ jz L10063
+ halt 
+ jmp L10049
+L10063:
+ ret 
+L10064: ;___label for action footwork
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 47
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.3
+ subf 
+ infzf 
+ jz L10137
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 1
+ sub 
+ eqz 
+ dup 
+ jnz L10111
+ pushFromFSp 0
+ fetchValue 24
+ pushImm 0
+ sub 
+ eqz 
+ neqzv 
+L10111:
+ jz L10125
+ pushFromFSp 0
+ pushImm 30
+ pushImm 1
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L10135
+L10125:
+ pushFromFSp 0
+ pushImm 35
+ pushImm 1
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+L10135:
+ jmp L10137
+L10137:
+ pushFromFSp 0
+ fetchValue 4
+ syscall 1, 14 ; trap_sysobj_motion_is_end (1 in, 1 out)
+ eqz 
+ jz L10153
+ pushFromFSp 0
+ gosub 4, L5571
+ halt 
+ jmp L10137
+L10153:
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ ret 
+L10166: ;___label for action rc_run_up
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L5322
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 16386
+ pushImm 1
+ pushImm 0
+ pushImm 0
+ syscall 1, 18 ; trap_obj_attach (6 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 241
+ pushImmf 0
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 13 ; trap_sysobj_motion_push (3 in, 0 out)
+L10215:
+ pushFromFSp 0
+ pushImm 241
+ gosub 4, L6215
+ eqz 
+ jz L10228
+ halt 
+ jmp L10215
+L10228:
+ ret 
+L10229: ;___label for action rc_clear_light
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L5322
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 16386
+ pushImm 1
+ pushImm 0
+ pushImm 0
+ syscall 1, 18 ; trap_obj_attach (6 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 242
+ pushImmf 0
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 13 ; trap_sysobj_motion_push (3 in, 0 out)
+L10278:
+ pushFromFSp 0
+ pushImm 242
+ gosub 4, L6215
+ eqz 
+ jz L10291
+ halt 
+ jmp L10278
+L10291:
+ pushFromFSp 0
+ gosub 4, L10307
+ pushImm 0
+ popToWp W4560
+ pushFromFSp 0
+ pushFromPAi L13988 ; ___ai 'knock_down' (L13988)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ ret 
+L10307:
+ popToSp 0
+ pushFromFSp 0
+ pushImm 20
+ syscall 1, 53 ; method_obj_disable_collision (2 in, 0 out)
+ pushFromFSpVal 112
+ gosub 4, L10321
+ ret 
+L10321:
+ popToSp 0
+ pushImm 2
+ popToSpVal 64
+ ret 
+L10329: ;___label for action btl_normal
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L5884
+ pushFromFSp 0
+ fetchValue 52
+ subf 
+ infzf 
+ jz L10502
+ pushFromFSp 0
+ pushImm 16
+ add 
+ dup 
+ fetchValue 0
+ pushImm 1
+ add 
+ memcpy 0
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.8
+ subf 
+ infzf 
+ jz L10407
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.6
+ subf 
+ infzf 
+ jz L10399
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10405
+L10399:
+ pushFromFSp 0
+ pushFromPAi L14015 ; ___ai 'atk_burst' (L14015)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L10405:
+ jmp L10407
+L10407:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.4
+ subf 
+ infzf 
+ jz L10432
+ pushFromFSp 0
+ pushFromPAi L13732 ; ___ai 'footwork' (L13732)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10432
+L10432:
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.6
+ subf 
+ infzf 
+ jz L10463
+ pushFromFSp 0
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10463
+L10463:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.5
+ subf 
+ infzf 
+ jz L10488
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10500
+L10488:
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14015 ; ___ai 'atk_burst' (L14015)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L10500:
+ jmp L10533
+L10502:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.3
+ subf 
+ infzf 
+ jz L10521
+ pushFromFSp 0
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10533
+L10521:
+ pushFromFSp 0
+ pushFromPAi L14015 ; ___ai 'atk_burst' (L14015)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L10533:
+ ret 
+L10534: ;___label for action rvg_normal
+ popToSp 0
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ dup 
+ jz L10566
+ pushFromFSp 0
+ syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
+ pushImm 0
+ syscall 1, 230 ; trap_sheet_hp_rate (2 in, 1 out)
+ pushImmf 0.5
+ subf 
+ infzf 
+ eqzv 
+L10566:
+ dup 
+ jz L10573
+ pushFromFWp W4568
+ eqz 
+ eqzv 
+L10573:
+ jz L10583
+ pushFromFSp 0
+ pushFromPAi L13740 ; ___ai 'atk_disorder' (L13740)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L10614
+L10583:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.8
+ subf 
+ infzf 
+ jz L10608
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10614
+L10608:
+ pushFromFSp 0
+ pushFromPAi L13747 ; ___ai 'atk_burst_fast' (L13747)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+L10614:
+ ret 
+L10615: ;___label for action btl_hard
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 16
+ pushImm -1
+ sub 
+ eqz 
+ dup 
+ jnz L10639
+ pushFromFSp 0
+ fetchValue 16
+ pushImm 5
+ sub 
+ msbi 
+ neqzv 
+L10639:
+ jz L10739
+ pushFromFWp W4564
+ eqz 
+ dup 
+ jz L10651
+ pushFromFWp W4560
+ eqz 
+ eqzv 
+L10651:
+ dup 
+ jz L10664
+ pushFromFSp 0
+ fetchValue 16
+ pushImm 5
+ sub 
+ msbi 
+ eqzv 
+L10664:
+ jz L10690
+ pushFromFSp 0
+ pushImm 16
+ add 
+ pushImm 0
+ memcpy 0
+ pushFromFSp 0
+ pushFromPAi L13766 ; ___ai 'atk_prison' (L13766)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L13783 ; ___ai 'atk_assault' (L13783)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10706
+L10690:
+ pushFromFSp 0
+ pushImm 16
+ add 
+ pushImm 0
+ memcpy 0
+ pushFromFSp 0
+ pushFromPAi L13783 ; ___ai 'atk_assault' (L13783)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+L10706:
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.6
+ subf 
+ infzf 
+ jz L10731
+ pushFromFSp 0
+ pushFromPAi L14015 ; ___ai 'atk_burst' (L14015)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10737
+L10731:
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L10737:
+ jmp L11018
+L10739:
+ pushFromFSp 0
+ fetchValue 16
+ pushImm 3
+ sub 
+ eqz 
+ jz L10784
+ pushFromFSp 0
+ pushImm 16
+ add 
+ dup 
+ fetchValue 0
+ pushImm 1
+ add 
+ memcpy 0
+ pushFromFSp 0
+ pushFromPAi L13783 ; ___ai 'atk_assault' (L13783)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L13747 ; ___ai 'atk_burst_fast' (L13747)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L11018
+L10784:
+ pushFromFSp 0
+ pushImm 16
+ add 
+ dup 
+ fetchValue 0
+ pushImm 1
+ add 
+ memcpy 0
+ pushFromFSp 0
+ gosub 4, L5884
+ pushFromFSp 0
+ fetchValue 52
+ subf 
+ infzf 
+ jz L10974
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.6
+ subf 
+ infzf 
+ jz L10847
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10910
+L10847:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.4
+ subf 
+ infzf 
+ jz L10866
+ pushFromFSp 0
+ pushFromPAi L13732 ; ___ai 'footwork' (L13732)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L10910
+L10866:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.7
+ subf 
+ infzf 
+ jz L10904
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.4
+ subf 
+ infzf 
+ jz L10902
+ pushFromFSp 0
+ pushFromPAi L14015 ; ___ai 'atk_burst' (L14015)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10902
+L10902:
+ jmp L10910
+L10904:
+ pushFromFSp 0
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+L10910:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.4
+ subf 
+ infzf 
+ jz L10935
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14015 ; ___ai 'atk_burst' (L14015)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10953
+L10935:
+ pushFromFSp 0
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L13747 ; ___ai 'atk_burst_fast' (L13747)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L10953:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.4
+ subf 
+ infzf 
+ jz L10972
+ pushFromFSp 0
+ pushFromPAi L13732 ; ___ai 'footwork' (L13732)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L10972
+L10972:
+ jmp L11018
+L10974:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.7
+ subf 
+ infzf 
+ jz L11012
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.5
+ subf 
+ infzf 
+ jz L11004
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L11010
+L11004:
+ pushFromFSp 0
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L11010:
+ jmp L11018
+L11012:
+ pushFromFSp 0
+ pushFromPAi L14015 ; ___ai 'atk_burst' (L14015)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L11018:
+ ret 
+L11019: ;___label for action rvg_hard
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.7
+ subf 
+ infzf 
+ jz L11040
+ pushFromFSp 0
+ pushFromPAi L13747 ; ___ai 'atk_burst_fast' (L13747)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L11052
+L11040:
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L11052:
+ ret 
+L11053: ;___label for action btl_super_hard
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 16
+ pushImm -1
+ sub 
+ eqz 
+ dup 
+ jnz L11077
+ pushFromFSp 0
+ fetchValue 16
+ pushImm 5
+ sub 
+ msbi 
+ neqzv 
+L11077:
+ jz L11123
+ pushFromFSp 0
+ pushImm 16
+ add 
+ pushImm 0
+ memcpy 0
+ pushFromFSp 0
+ pushFromPAi L13740 ; ___ai 'atk_disorder' (L13740)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFWp W4564
+ eqz 
+ dup 
+ jz L11105
+ pushFromFWp W4560
+ eqz 
+ eqzv 
+L11105:
+ jz L11121
+ pushFromFSp 0
+ pushFromPAi L13766 ; ___ai 'atk_prison' (L13766)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L13783 ; ___ai 'atk_assault' (L13783)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L11121
+L11121:
+ jmp L11325
+L11123:
+ pushFromFSp 0
+ pushImm 16
+ add 
+ dup 
+ fetchValue 0
+ pushImm 1
+ add 
+ memcpy 0
+ pushFromFSp 0
+ gosub 4, L5884
+ pushFromFSp 0
+ fetchValue 52
+ subf 
+ infzf 
+ jz L11294
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.5
+ subf 
+ infzf 
+ jz L11180
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L13747 ; ___ai 'atk_burst_fast' (L13747)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L11230
+L11180:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.4
+ subf 
+ infzf 
+ jz L11205
+ pushFromFSp 0
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L13783 ; ___ai 'atk_assault' (L13783)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L11211
+L11205:
+ pushFromFSp 0
+ pushFromPAi L13783 ; ___ai 'atk_assault' (L13783)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+L11211:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.4
+ subf 
+ infzf 
+ jz L11230
+ pushFromFSp 0
+ pushFromPAi L13732 ; ___ai 'footwork' (L13732)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L11230
+L11230:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.4
+ subf 
+ infzf 
+ jz L11249
+ pushFromFSp 0
+ pushFromPAi L14015 ; ___ai 'atk_burst' (L14015)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L11273
+L11249:
+ pushFromFSp 0
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L11273:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.4
+ subf 
+ infzf 
+ jz L11292
+ pushFromFSp 0
+ pushFromPAi L13732 ; ___ai 'footwork' (L13732)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ jmp L11292
+L11292:
+ jmp L11325
+L11294:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.4
+ subf 
+ infzf 
+ jz L11313
+ pushFromFSp 0
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L11325
+L11313:
+ pushFromFSp 0
+ pushFromPAi L14015 ; ___ai 'atk_burst' (L14015)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L11325:
+ ret 
+L11326: ;___label for action rvg_super_hard
+ popToSp 0
+ pushFromFSp 0
+ fetchValue 20
+ pushImm 50
+ sub 
+ msbi 
+ jz L11357
+ pushFromFSp 0
+ pushImm 20
+ add 
+ pushImm 0
+ memcpy 0
+ pushFromFSp 0
+ pushFromPAi L13740 ; ___ai 'atk_disorder' (L13740)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L11388
+L11357:
+ pushFromFSp 0
+ gosub 4, L6106
+ pushImmf 0.7
+ subf 
+ infzf 
+ jz L11376
+ pushFromFSp 0
+ pushFromPAi L13747 ; ___ai 'atk_burst_fast' (L13747)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L11388
+L11376:
+ pushFromFSp 0
+ pushFromPAi L13994 ; ___ai 'move_target' (L13994)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L14000 ; ___ai 'atk_slice' (L14000)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+L11388:
+ ret 
+L11389: ;___label for action mode_revenge
+ popToSp 0
+ pushFromFSp 0
+ pushFromPAi L13813 ; ___ai 'mode_revenge_boss' (L13813)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ ret 
+L11398: ;___label for action revenge
+ popToSp 0
+ pushFromPSp 16
+ pushImmf 1
+ gosub 12, L252
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L11443
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ jz L11435
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 227 ; trap_obj_jump_direct (2 in, 0 out)
+ jmp L11435
+L11435:
+ pushFromFSp 0
+ pushFromPAi L13822 ; ___ai 'atk_burst_revenge' (L13822)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L11547
+L11443:
+ pushFromFSp 0
+ fetchValue 24
+ dup 
+ pushImm 0
+ sub 
+ jz L11456
+ jmp L11478
+L11456:
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ jz L11470
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 227 ; trap_obj_jump_direct (2 in, 0 out)
+ jmp L11470
+L11470:
+ pushFromFSp 0
+ pushFromPAi L13822 ; ___ai 'atk_burst_revenge' (L13822)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L11546
+L11478:
+ dup 
+ pushImm 1
+ sub 
+ jz L11487
+ jmp L11515
+L11487:
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ jz L11507
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 227 ; trap_obj_jump_direct (2 in, 0 out)
+ pushFromFSp 0
+ pushFromPAi L13837 ; ___ai 'atk_assault_revenge' (L13837)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L11513
+L11507:
+ pushFromFSp 0
+ pushFromPAi L13822 ; ___ai 'atk_burst_revenge' (L13822)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+L11513:
+ jmp L11546
+L11515:
+ dup 
+ pushImm 2
+ sub 
+ jz L11524
+ jmp L11546
+L11524:
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ jz L11538
+ pushFromFSp 0
+ pushFromPSp 16
+ syscall 1, 227 ; trap_obj_jump_direct (2 in, 0 out)
+ jmp L11538
+L11538:
+ pushFromFSp 0
+ pushFromPAi L13837 ; ___ai 'atk_assault_revenge' (L13837)
+ syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
+ jmp L11546
+L11546:
+ drop 
+L11547:
+ ret 
+L11548: ;___label for action dead
+ popToSp 0
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ jz L11576
+ pushFromFSp 0
+ pushImm 37
+ pushImm 1
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L11602
+L11576:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L11602
+ pushFromFSp 0
+ pushImm 43
+ pushImm 1
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ jmp L11602
+L11602:
+ pushFromFSp 0
+ pushImm 0
+ pushImm 0
+ gosub 4, L11613
+ ret 
+L11613:
+ popToSp 4
+ popToSp 8
+ popToSp 0
+ pushFromFSp 0
+ syscall 1, 60 ; trap_obj_is_air (1 in, 1 out)
+ jz L11639
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 132
+ pushImmf 0
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ jmp L11651
+L11639:
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 131
+ pushImmf 0
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+L11651:
+ pushFromFSp 0
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+ gosub 8, L11679
+ pushImmf 30
+ gosub 8, L328
+ pushFromFSp 0
+ pushImmf 0.05
+ syscall 1, 107 ; trap_obj_motion_speed (2 in, 0 out)
+ gosub 8, L5445
+ ret 
+L11679:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 0
+ pushFromFSp 4
+ popToSp 16
+ pushFromPSp 32
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+ pushImmf 1
+ gosub 16, L225
+ pushFromFSp 0
+ pushFromPSp 32
+ pushFromFSp 16
+ syscall 1, 58 ; trap_obj_fly (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 40
+ add 
+ pushFromFSp 8
+ memcpy 0
+ pushFromFSp 0
+ pushImm 44
+ add 
+ pushFromFSp 12
+ memcpy 0
+ ret 
+L11734: ;___label for action battle_start
+ popToSp 0
+ pushFromFSp 0
+ pushImm 2
+ gosub 4, L5869
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 0
+ sub 
+ eqz 
+ jz L11854
+ pushImmf 72
+ gosub 4, L328
+ pushFromFSp 0
+ pushImm 28
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 33
+ syscall 1, 85 ; trap_obj_texanm_start (2 in, 0 out)
+ pushImmf 96
+ gosub 4, L328
+ pushFromFSp 0
+ pushImm 33
+ syscall 1, 86 ; trap_obj_texanm_stop (2 in, 0 out)
+ pushImmf 74
+ gosub 4, L328
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 207
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushImmf 60
+ gosub 4, L328
+ pushImmf 40
+ gosub 4, L328
+ pushFromFSp 0
+ gosub 4, L9049
+ pushFromFSp 0
+ fetchValue 4
+ gosub 4, L6904
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ jmp L11939
+L11854:
+ pushFromFSp 0
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ pushImm 1
+ sub 
+ eqz 
+ jz L11939
+ pushImmf 100
+ gosub 4, L328
+ pushFromFSp 0
+ pushImm 33
+ pushImm 0
+ syscall 1, 262 ; trap_obj_voice (3 in, 0 out)
+ pushFromFSp 0
+ pushImm 33
+ syscall 1, 85 ; trap_obj_texanm_start (2 in, 0 out)
+ pushImmf 66
+ gosub 4, L328
+ pushFromFSp 0
+ pushImm 33
+ syscall 1, 86 ; trap_obj_texanm_stop (2 in, 0 out)
+ pushImmf 134
+ gosub 4, L328
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 201
+ pushImmf 8
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ pushFromFSp 0
+ fetchValue 4
+ gosub 4, L6904
+ pushFromFSp 0
+ fetchValue 4
+ pushImm 0
+ pushImmf 0
+ syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
+ jmp L11939
+L11939:
+ pushFromFSp 0
+ pushFromPAi L14005 ; ___ai 'move_various' (L14005)
+ syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
+ ret 
+L11946:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 16
+ popToSp 20
+ popToSp 24
+ popToSp 28
+ popToSp 32
+ popToSp 0
+ pushFromFSp 0
+ pushFromFSp 32
+ pushImm 0
+ syscall 2, 9 ; trap_btlobj_set_sheet (3 in, 0 out)
+ pushFromFSp 0
+ pushFromFSp 28
+ pushFromFSp 24
+ pushFromFSp 20
+ pushFromFSp 16
+ pushFromFSp 12
+ pushFromFSp 8
+ pushFromFSp 4
+ gosub 12, L11992
+ ret 
+L11992:
+ popToSp 4
+ popToSp 8
+ popToSp 12
+ popToSp 16
+ popToSp 20
+ popToSp 24
+ popToSp 28
+ popToSp 0
+ pushFromFSp 0
+ pushFromFSp 16
+ gosub 12, L12076
+ pushFromFSp 0
+ pushFromFSp 24
+ pushFromFSp 20
+ gosub 12, L12090
+ pushFromFSp 0
+ pushImm 28
+ add 
+ pushFromFSp 28
+ memcpy 0
+ pushFromFSp 0
+ pushFromFSp 12
+ gosub 12, L12115
+ pushFromFSp 0
+ pushFromFSp 8
+ pushFromFSp 4
+ gosub 12, L12236
+ pushFromFSp 0
+ pushImm 24
+ add 
+ pushImm 0
+ memcpy 0
+ pushFromFSp 0
+ pushImm 16
+ add 
+ pushImm -1
+ memcpy 0
+ pushFromFSp 0
+ pushImm 20
+ add 
+ pushImm -1
+ memcpy 0
+ ret 
+L12076:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 0
+ pushImm 36
+ add 
+ pushFromFSp 4
+ memcpy 0
+ ret 
+L12090:
+ popToSp 4
+ popToSp 8
+ popToSp 0
+ pushFromFSp 0
+ pushImm 48
+ add 
+ pushFromFSp 8
+ memcpy 0
+ pushFromFSp 0
+ pushImm 52
+ add 
+ pushFromFSp 4
+ memcpy 0
+ ret 
+L12115:
+ popToSp 4
+ popToSp 0
+ pushFromFSp 4
+ dup 
+ pushImm 5
+ sub 
+ jz L12130
+ jmp L12152
+L12130:
+ pushFromFSp 0
+ pushImm 56
+ add 
+ pushImmf 2500
+ memcpy 0
+ pushFromFSp 0
+ pushImm 60
+ add 
+ pushImmf 1800
+ memcpy 0
+ jmp L12234
+L12152:
+ dup 
+ pushImm 6
+ sub 
+ jz L12161
+ jmp L12183
+L12161:
+ pushFromFSp 0
+ pushImm 56
+ add 
+ pushImmf 2500
+ memcpy 0
+ pushFromFSp 0
+ pushImm 60
+ add 
+ pushImmf 1200
+ memcpy 0
+ jmp L12234
+L12183:
+ syscall 1, 23 ; trap_area_world (0 in, 1 out)
+ pushImm 10
+ sub 
+ eqz 
+ jz L12214
+ pushFromFSp 0
+ pushImm 56
+ add 
+ pushImmf 2500
+ memcpy 0
+ pushFromFSp 0
+ pushImm 60
+ add 
+ pushImmf 1200
+ memcpy 0
+ jmp L12234
+L12214:
+ pushFromFSp 0
+ pushImm 56
+ add 
+ pushImmf 2000
+ memcpy 0
+ pushFromFSp 0
+ pushImm 60
+ add 
+ pushImmf 1200
+ memcpy 0
+L12234:
+ drop 
+ ret 
+L12236:
+ popToSp 4
+ popToSp 8
+ popToSp 0
+ pushFromFSp 0
+ pushImm 64
+ add 
+ pushFromFSp 8
+ memcpy 0
+ pushFromFSp 0
+ pushImm 68
+ add 
+ pushFromFSp 4
+ memcpy 0
+ ret 
+L12261:
+ popToSp 0
+ pushFromPSpVal 120
+ gosub 4, L12288
+ pushFromPSpVal 124
+ gosub 4, L12288
+ pushFromPSpVal 128
+ gosub 4, L12288
+ pushFromPSpVal 132
+ gosub 4, L12288
+ pushFromPSpVal 136
+ gosub 4, L12288
+ pushFromPSpVal 140
+ gosub 4, L12288
+ ret 
+L12288:
+ popToSp 0
+ pushImm 0
+ popToSpVal 0
+ ret 
+L12296:
+ popToSp 0
+ pushImm 88
+ pushImm L12313
+ pushFromFSp 0
+ gosub 4, L1852
+ popToSp 4
+ pushFromFSp 4
+ ret 
+D12313:
+L12313:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L12328
+ pushFromFSp 0
+ gosub 4, L12360
+ pushFromFSp 0
+ gosub 4, L13047
+ ret 
+L12328:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1307
+ pushImm 0
+ popToSpVal 76
+ pushImm 0
+ popToSpVal 80
+ pushImm 0
+ popToSpVal 72
+ pushImm 2
+ popToSpVal 64
+ pushImmf 0
+ popToSpVal 84
+ ret 
+L12360:
+ popToSp 0
+L12362:
+ pushFromFSpVal 72
+ eqz 
+ jz L12417
+ pushFromFSpVal 64
+ dup 
+ pushImm 0
+ sub 
+ jz L12378
+ jmp L12384
+L12378:
+ pushFromFSp 0
+ gosub 4, L12418
+ jmp L12414
+L12384:
+ dup 
+ pushImm 1
+ sub 
+ jz L12393
+ jmp L12399
+L12393:
+ pushFromFSp 0
+ gosub 4, L12711
+ jmp L12414
+L12399:
+ dup 
+ pushImm 2
+ sub 
+ jz L12408
+ jmp L12414
+L12408:
+ pushFromFSp 0
+ gosub 4, L12872
+ jmp L12414
+L12414:
+ drop 
+ jmp L12362
+L12417:
+ ret 
+L12418:
+ popToSp 0
+ pushImm 1
+ popToSpVal 64
+ pushImm 1
+ popToSpVal 68
+ pushFromFSp 0
+ gosub 4, L12435
+ ret 
+L12435:
+ popToSp 0
+ pushFromPSp 16
+ pushImmf 1
+ gosub 12, L252
+ pushFromPSpVal 0
+ pushFromPSp 16
+ gosub 12, L12486
+ pushImmf 30
+ gosub 12, L328
+ pushFromPSpVal 0
+ pushImm 11
+ pushImm 0
+ pushImm 0
+ syscall 1, 21 ; trap_obj_effect_start (4 in, 1 out)
+ popToSpVal 76
+ pushFromPSpVal 0
+ pushImm 12
+ pushImm 0
+ pushImm 0
+ syscall 1, 21 ; trap_obj_effect_start (4 in, 1 out)
+ popToSpVal 80
+ ret 
+L12486:
+ popToSp 0
+ popToSp 4
+ pushImm 72
+ pushImm L12512
+ pushFromFSp 4
+ gosub 8, L12685
+ popToSp 8
+ pushFromFSp 8
+ pushImm 32
+ add 
+ pushFromFSp 0
+ memcpy 16
+ ret 
+L12512:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L12527
+ pushFromFSp 0
+ gosub 4, L12534
+ pushFromFSp 0
+ gosub 4, L12678
+ ret 
+L12527:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L2905
+ ret 
+L12534:
+ popToSp 0
+ pushFromPSpVal 0
+ pushImm 10
+ pushImm 0
+ pushImm 0
+ syscall 1, 21 ; trap_obj_effect_start (4 in, 1 out)
+ popToSpVal 64
+ pushFromFSp 0
+ pushFromPSpVal 32
+ gosub 8, L3066
+ pushImmf 20
+ popToSp 4
+ pushImm 0
+ popToSp 8
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ eqzf 
+ jz L12583
+ pushImmf 0.01
+ popToSp 4
+ jmp L12583
+L12583:
+ pushFromFSpVal 64
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ jz L12677
+ halt 
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ supzf 
+ jz L12675
+ pushFromFSp 4
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 4
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L12673
+ pushFromFSp 8
+ jz L12630
+ pushFromFSpVal 68
+ syscall 2, 13 ; trap_attack_free (1 in, 0 out)
+ pushImm 0
+ popToSpVal 68
+ jmp L12671
+L12630:
+ pushFromPSpVal 0
+ pushImm 429
+ pushImm -1
+ pushImm 0
+ syscall 2, 10 ; trap_attack_new (4 in, 1 out)
+ popToSpVal 68
+ pushFromFSpVal 68
+ pushImmf 100
+ pushImmf 500
+ syscall 2, 11 ; trap_attack_set_radius (3 in, 0 out)
+ pushFromFSp 0
+ pushFromPSpVal 32
+ gosub 8, L3066
+ pushImm 1
+ popToSp 8
+ pushImmf 40
+ popToSp 4
+L12671:
+ jmp L12673
+L12673:
+ jmp L12675
+L12675:
+ jmp L12583
+L12677:
+ ret 
+L12678:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L3117
+ ret 
+L12685:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushFromFSp 8
+ pushFromFSp 4
+ pushFromFSp 0
+ gosub 8, L1852
+ popToSp 12
+ pushFromFSp 12
+ gosub 8, L12708
+ pushFromFSp 12
+ ret 
+L12708:
+ popToSp 0
+ ret 
+L12711:
+ popToSp 0
+ pushImm 0
+ popToSp 8
+ pushFromFSpVal 68
+ jz L12870
+ gosub 8, L5322
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ syscall 1, 225 ; trap_obj_is_star (1 in, 1 out)
+ eqz 
+ jz L12744
+ pushFromFSpVal 84
+ pushImmf 0.005
+ addf 
+ popToSpVal 84
+ jmp L12744
+L12744:
+ gosub 8, L5322
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
+ pushImm 0
+ syscall 1, 228 ; trap_sheet_hp (2 in, 1 out)
+ popToSp 4
+ pushFromFSpVal 84
+ pushImmf 1
+ subf 
+ supzf 
+ jz L12790
+ pushFromFSpVal 84
+ pushFromPAi L13985 ; ___ai 'FLOAT' (L13985)
+ syscall 0, 1 ; trap_putf (2 in, 0 out)
+ pushFromFSpVal 84
+ citf 
+ popToSp 8
+ pushFromFSpVal 84
+ pushFromFSp 8
+ cfti 
+ subf 
+ popToSpVal 84
+ jmp L12790
+L12790:
+ pushFromFSp 8
+ pushImm 0
+ sub 
+ ipos 
+ dup 
+ jz L12808
+ pushFromFSp 4
+ pushImm 1
+ sub 
+ ipos 
+ eqzv 
+L12808:
+ jz L12867
+ pushFromFSp 4
+ pushFromFSp 8
+ sub 
+ pushImm 1
+ sub 
+ msb 
+ jz L12846
+ gosub 8, L5322
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImm 1
+ pushFromFSp 4
+ sub 
+ pushImm 0
+ pushImm 0
+ syscall 1, 155 ; trap_obj_add_hp (4 in, 1 out)
+ drop 
+ jmp L12865
+L12846:
+ gosub 8, L5322
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushFromFSp 8
+ neg 
+ pushImm 0
+ pushImm 0
+ syscall 1, 155 ; trap_obj_add_hp (4 in, 1 out)
+ drop 
+L12865:
+ jmp L12867
+L12867:
+ halt 
+ jmp L12871
+L12870:
+ halt 
+L12871:
+ ret 
+L12872:
+ popToSp 0
+ pushImm 1
+ popToSpVal 64
+ pushFromFSp 0
+ gosub 4, L12884
+ ret 
+L12884:
+ popToSp 0
+ pushFromFSpVal 76
+ pushImm 0
+ sub 
+ neqz 
+ dup 
+ jz L12901
+ pushFromFSpVal 76
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ eqzv 
+L12901:
+ jz L12915
+ pushFromFSpVal 76
+ pushImmf 1
+ pushImm 0
+ syscall 0, 52 ; trap_effect_fadeout (3 in, 0 out)
+ jmp L12915
+L12915:
+ pushFromFSpVal 80
+ pushImm 0
+ sub 
+ neqz 
+ dup 
+ jz L12930
+ pushFromFSpVal 80
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ eqzv 
+L12930:
+ jz L12938
+ pushFromFSpVal 80
+ syscall 0, 44 ; trap_effect_loop_end (1 in, 0 out)
+ jmp L12938
+L12938:
+ pushFromFSpVal 80
+ pushImm 0
+ sub 
+ neqz 
+ dup 
+ jz L12953
+ pushFromFSpVal 80
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ eqzv 
+L12953:
+ jz L12966
+L12955:
+ pushFromFSpVal 80
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ jz L12964
+ halt 
+ jmp L12955
+L12964:
+ jmp L12966
+L12966:
+ pushFromFSpVal 76
+ pushImm 0
+ sub 
+ neqz 
+ dup 
+ jz L12981
+ pushFromFSpVal 76
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ eqzv 
+L12981:
+ jz L12994
+L12983:
+ pushFromFSpVal 76
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ jz L12992
+ halt 
+ jmp L12983
+L12992:
+ jmp L12994
+L12994:
+ pushFromFSp 0
+ gosub 4, L13004
+ pushImm 0
+ popToSpVal 68
+ ret 
+L13004:
+ popToSp 0
+ pushFromFSpVal 76
+ pushImm 0
+ sub 
+ neqz 
+ jz L13026
+ pushFromFSpVal 76
+ syscall 0, 51 ; trap_effect_kill (1 in, 0 out)
+ pushImm 0
+ popToSpVal 76
+ jmp L13026
+L13026:
+ pushFromFSpVal 80
+ pushImm 0
+ sub 
+ neqz 
+ jz L13046
+ pushFromFSpVal 80
+ syscall 0, 51 ; trap_effect_kill (1 in, 0 out)
+ pushImm 0
+ popToSpVal 80
+ jmp L13046
+L13046:
+ ret 
+L13047:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L13004
+ pushFromFSp 0
+ gosub 4, L1841
+ ret 
+L13058:
+ popToSp 0
+ pushImm 76
+ pushImm L13075
+ pushFromFSp 0
+ gosub 4, L1852
+ popToSp 4
+ pushFromFSp 4
+ ret 
+D13075:
+L13075:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L13090
+ pushFromFSp 0
+ gosub 4, L13114
+ pushFromFSp 0
+ gosub 4, L13725
+ ret 
+L13090:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1307
+ pushFromFSp 0
+ gosub 4, L13106
+ pushImm 0
+ popToSpVal 68
+ ret 
+L13106:
+ popToSp 0
+ pushImm 1
+ popToSpVal 64
+ ret 
+L13114:
+ popToSp 0
+ pushFromPSp 32
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+ pushImmf 1
+ gosub 16, L225
+ pushImm 1
+ popToSpVal 72
+ pushImmf 0
+ popToSp 48
+L13142:
+ pushFromFSp 0
+ fetchValue 68
+ eqz 
+ dup 
+ jz L13157
+ pushFromPSpVal 0
+ fetchValue 4
+ syscall 1, 94 ; trap_sysobj_is_exist (1 in, 1 out)
+ eqzv 
+L13157:
+ jz L13389
+ pushFromPSpVal 0
+ syscall 6, 63 ; trap_obj_is_damage_motion (1 in, 1 out)
+ jz L13177
+ pushImmf 30
+ popToSp 48
+ pushImm 0
+ popToSpVal 72
+ jmp L13211
+L13177:
+ pushFromFSp 48
+ pushImmf 0
+ subf 
+ supzf 
+ jz L13211
+ pushFromFSp 48
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 48
+ pushFromFSp 48
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L13209
+ pushImm 1
+ popToSpVal 72
+ jmp L13209
+L13209:
+ jmp L13211
+L13211:
+ pushFromFSp 0
+ fetchValue 64
+ jz L13386
+ syscall 1, 3 ; trap_sysobj_player (0 in, 1 out)
+ memcpyToSp 16, 52
+ pushFromPSp 52
+ fetchValue 4
+ syscall 1, 94 ; trap_sysobj_is_exist (1 in, 1 out)
+ jz L13249
+ syscall 1, 3 ; trap_sysobj_player (0 in, 1 out)
+ memcpyToSp 16, 52
+ pushFromPSp 52
+ syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ memcpyToSp 16, 32
+ jmp L13265
+L13249:
+ pushFromPSp 32
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+ pushImmf 1
+ gosub 16, L225
+L13265:
+ pushFromFSp 0
+ pushFromPSp 32
+ gosub 16, L13390
+ jz L13384
+ pushFromPSp 16
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+ pushImmf 1
+ gosub 16, L225
+ pushFromPSp 32
+ pushFromPSp 16
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ pushImm 4
+ add 
+ pushImmf 0
+ memcpy 0
+ pushFromPSp 32
+ syscall 0, 7 ; trap_vector_normalize (1 in, 1 out)
+ drop 
+ pushFromPSp 16
+ pushFromPSp 32
+ pushImmf 670
+ syscall 0, 36 ; trap_vector_mul (2 in, 1 out)
+ memcpyToSp 16, 64
+ pushFromPSp 64
+ syscall 0, 4 ; trap_vector_add (2 in, 1 out)
+ memcpyToSp 16, 80
+ pushFromPSp 80
+ memcpyToSp 16, 32
+ pushFromPSp 32
+ pushImm 4
+ add 
+ dup 
+ fetchValue 0
+ pushImmf -100
+ addf 
+ memcpy 0
+ pushFromPSp 32
+ pushFromPSp 32
+ pushImmf 10000 ; ___possible_ref
+ syscall 1, 141 ; trap_bg_ground_pos (3 in, 1 out)
+ drop 
+ pushFromPSpVal 0
+ pushFromPSp 32
+ gosub 16, L13500
+ pushImmf 30
+ popToSp 48
+ pushImm 0
+ popToSpVal 72
+ jmp L13384
+L13384:
+ jmp L13386
+L13386:
+ halt 
+ jmp L13142
+L13389:
+ ret 
+L13390:
+ popToSp 4
+ popToSp 0
+ pushFromPSp 8
+ pushFromPSpVal 0
+ fetchValue 4
+ gosub 40, L5019
+ pushFromFSpVal 72
+ jz L13469
+ pushFromPSp 128
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+ pushImmf 1
+ gosub 40, L225
+ pushFromPSp 128
+ pushFromFSp 4
+ syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
+ memcpyToSp 16, 160
+ pushFromPSp 160
+ memcpyToSp 16, 128
+ pushImmf 680
+ pushFromPSp 128
+ syscall 0, 6 ; trap_vector_len (1 in, 1 out)
+ subf 
+ popToSp 144
+ pushFromFSp 144
+ pushImmf 300
+ subf 
+ infzf 
+ jz L13462
+ pushImm 1
+ popToSp 148
+ jmp L13467
+L13462:
+ pushImm 0
+ popToSp 148
+L13467:
+ jmp L13474
+L13469:
+ pushImm 0
+ popToSp 148
+L13474:
+ pushFromPSp 8
+ syscall 2, 6 ; trap_enemy_is_damage_motion (1 in, 1 out)
+ eqz 
+ dup 
+ jz L13493
+ gosub 40, L5322
+ memcpyToSp 16, 160
+ pushFromPSp 160
+ syscall 1, 225 ; trap_obj_is_star (1 in, 1 out)
+ eqz 
+ eqzv 
+L13493:
+ dup 
+ jz L13499
+ pushFromFSp 148
+ eqzv 
+L13499:
+ ret 
+L13500:
+ popToSp 0
+ popToSp 4
+ pushImm 72
+ pushImm L13526
+ pushFromFSp 4
+ gosub 8, L13699
+ popToSp 8
+ pushFromFSp 8
+ pushImm 32
+ add 
+ pushFromFSp 0
+ memcpy 16
+ ret 
+L13526:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L13541
+ pushFromFSp 0
+ gosub 4, L13548
+ pushFromFSp 0
+ gosub 4, L13692
+ ret 
+L13541:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L2905
+ ret 
+L13548:
+ popToSp 0
+ pushFromPSpVal 0
+ pushImm 47
+ pushImm 0
+ pushImm 0
+ syscall 1, 21 ; trap_obj_effect_start (4 in, 1 out)
+ popToSpVal 64
+ pushFromFSp 0
+ pushFromPSpVal 32
+ gosub 8, L3066
+ pushImmf 20
+ popToSp 4
+ pushImm 0
+ popToSp 8
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ eqzf 
+ jz L13597
+ pushImmf 0.01
+ popToSp 4
+ jmp L13597
+L13597:
+ pushFromFSpVal 64
+ syscall 0, 50 ; trap_effect_is_active (1 in, 1 out)
+ jz L13691
+ halt 
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ supzf 
+ jz L13689
+ pushFromFSp 4
+ syscall 0, 3 ; trap_frametime (0 in, 1 out)
+ subf 
+ popToSp 4
+ pushFromFSp 4
+ pushImmf 0
+ subf 
+ infoezf 
+ jz L13687
+ pushFromFSp 8
+ jz L13644
+ pushFromFSpVal 68
+ syscall 2, 13 ; trap_attack_free (1 in, 0 out)
+ pushImm 0
+ popToSpVal 68
+ jmp L13685
+L13644:
+ pushFromPSpVal 0
+ pushImm 503
+ pushImm -1
+ pushImm 0
+ syscall 2, 10 ; trap_attack_new (4 in, 1 out)
+ popToSpVal 68
+ pushFromFSpVal 68
+ pushImmf 100
+ pushImmf 500
+ syscall 2, 11 ; trap_attack_set_radius (3 in, 0 out)
+ pushFromFSp 0
+ pushFromPSpVal 32
+ gosub 8, L3066
+ pushImm 1
+ popToSp 8
+ pushImmf 60
+ popToSp 4
+L13685:
+ jmp L13687
+L13687:
+ jmp L13689
+L13689:
+ jmp L13597
+L13691:
+ ret 
+L13692:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L3117
+ ret 
+L13699:
+ popToSp 0
+ popToSp 4
+ popToSp 8
+ pushFromFSp 8
+ pushFromFSp 4
+ pushFromFSp 0
+ gosub 8, L1852
+ popToSp 12
+ pushFromFSp 12
+ gosub 8, L13722
+ pushFromFSp 12
+ ret 
+L13722:
+ popToSp 0
+ ret 
+L13725:
+ popToSp 0
+ pushFromFSp 0
+ gosub 4, L1841
+ ret 
+L13732:
+TXT13732:
+ db 'footwork',0,0
+L13737:
+TXT13737:
+ db 'dead',0,0
+L13740:
+TXT13740:
+ db 'atk_disorder',0,0
+L13747:
+TXT13747:
+ db 'atk_burst_fast',0,0
+TXT13755:
+L13755:
+ db 'btl_attack',0,0
+TXT13761:
+L13761:
+ db 'btl_short',0
+L13766:
+TXT13766:
+ db 'atk_prison',0,0
+TXT13772:
+ db 'jump start',0,0
+TXT13778:
+L13778:
+ db 'btl_long',0,0
+L13783:
+TXT13783:
+ db 'atk_assault',0
+TXT13789:
+ db 'jump end',0,0
+L13794:
+TXT13794:
+ db 'idle',0,0
+TXT13797:
+ db 'rvg_short',0
+TXT13802:
+ db 'rvg_long',0,0
+L13807:
+TXT13807:
+ db 'mode_battle',0
+L13813:
+TXT13813:
+ db 'mode_revenge_boss',0
+L13822:
+TXT13822:
+ db 'atk_burst_revenge',0
+L13831:
+TXT13831:
+ db 'btl_normal',0,0
+L13837:
+TXT13837:
+ db 'atk_assault_revenge',0
+L13847:
+TXT13847:
+ db '00',0,0
+L13849:
+TXT13849:
+ db 'btl_hard',0,0
+L13854:
+TXT13854:
+ db 'alg_hard!',0
+L13859:
+TXT13859:
+ db 'rc_run_up',0
+L13864:
+TXT13864:
+ db 'btl_super_hard',0,0
+L13872:
+TXT13872:
+ db 'mode_battle_boss',0,0
+L13881:
+TXT13881:
+ db 'alg_super_hard!',0
+L13889:
+TXT13889:
+ db 'rvg_normal',0,0
+TXT13895:
+L13895:
+ db 'main',0,0
+L13898:
+TXT13898:
+ db '10',0,0
+L13900:
+TXT13900:
+ db 'rvg_hard',0,0
+L13905:
+TXT13905:
+ db 'rvg_super_hard',0,0
+L13913:
+TXT13913:
+ db 'rc_clear_light',0,0
+L13921:
+TXT13921:
+ db 'event',0
+L13924:
+TXT13924:
+ db 'idle_time',0
+TXT13929:
+ db 'rst_normal',0,0
+L13935:
+TXT13935:
+ db 'freeze',0,0
+L13939:
+TXT13939:
+ db 'idle_after_rc',0
+TXT13946:
+ db 'rst_hard',0,0
+L13951:
+TXT13951:
+ db 'appear',0,0
+L13955:
+TXT13955:
+ db 'mode_revenge',0,0
+TXT13962:
+ db 'rst_super_hard',0,0
+L13970:
+TXT13970:
+ db 'revenge',0
+TXT13974:
+L13974:
+ db 'INT',0
+L13976:
+TXT13976:
+ db 'battle_start',0,0
+L13983:
+TXT13983:
+ db 'cmd',0
+TXT13985:
+L13985:
+ db 'FLOAT',0
+L13988:
+TXT13988:
+ db 'knock_down',0,0
+L13994:
+TXT13994:
+ db 'move_target',0
+L14000:
+TXT14000:
+ db 'atk_slice',0
+L14005:
+TXT14005:
+ db 'move_various',0,0
+L14012:
+TXT14012:
+ db 'leave',0
+L14015:
+TXT14015:
+ db 'atk_burst',0
+
+ section .bss
+W0:
+ resb 144
+W144:
+ resb 148
+W292:
+ resb 144
+W436:
+ resb 4100
+W4536:
+ resb 8
+W4544:
+ resb 16
+W4560:
+ resb 4
+W4564:
+ resb 4
+W4568:
+ resb 8
