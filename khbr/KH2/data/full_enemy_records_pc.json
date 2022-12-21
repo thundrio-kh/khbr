@@ -11370,6 +11370,77 @@
             "Giant Sark"
         ]
     },
+    "MCP": {
+        "vars": [
+            0,
+            0
+        ],
+        "name": "MCP",
+        "enabled": false,
+        "enmp_index": 141,
+        "hp": 100,
+        "level": 99,
+        "limiter": 0,
+        "source_replace_allowed": false,
+        "model": "B_TR020",
+        "msn": "TR09_MS205",
+        "size": 1.41,
+        "program": 59,
+        "room_size": 10.35,
+        "msn_replace_allowed": false,
+        "obj_id": 1762,
+        "type": "boss",
+        "adds": [
+            {
+                "ObjectId": 863,
+                "Serial": 13
+            },
+            {
+                "ObjectId": 864,
+                "Serial": 15,
+                "customUnit": {
+                    "Type": 5,
+                    "Flag": 1,
+                    "Id": 80
+                }
+            }
+        ],
+        "variations": [
+            "MCP"
+        ],
+        "replace_as": null,
+        "tags": [],
+        "category": "",
+        "isnightmare": false,
+        "parent": "MCP",
+        "variationof": null,
+        "children": [
+            "MCP"
+        ],
+        "msn_required": false,
+        "msn_source_as": null,
+        "aimods": [],
+        "mickey_source": false,
+        "final_fight": false,
+        "can_be_enemy": false,
+        "can_be_enemy_override": false,
+        "sizeTag": null,
+        "roommaxsize": null,
+        "blacklist_source": [],
+        "blacklist_destination": [],
+        "whitelist_source": [],
+        "whitelist_destination": [],
+        "sp_ids": [],
+        "subtracts": [],
+        "msn_list": [],
+        "roomsizemultiplier": 1,
+        "unchanged_file_size": false,
+        "obj_edits": {},
+        "luamod": null,
+        "available": [
+            "MCP"
+        ]
+    },
     "Graveyard NM": {
         "vars": [
             0,
@@ -17050,6 +17121,12 @@
         ],
         "name": "Pete TR",
         "enabled": true,
+        "aimods": [
+            {
+                "name": "N_EX760_BTL/n_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "pc": {
             "source_replace_allowed": true
         },
@@ -17207,7 +17284,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,
