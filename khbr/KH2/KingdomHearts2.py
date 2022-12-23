@@ -78,7 +78,9 @@ class KingdomHearts2:
             "retry_dark_thorn": {"display_name": "Retry Dark Thorn", "description": "If you die to Dark Thorn, continue will put you right back into the fight, instead of having to fight Shadow Stalker again (warning will be a softlock if you are unable to beat Shadow Stalker)",
                                 "possible_values": [], "hidden_values": [False, True]},
             "remove_cutscenes": {"display_name": "Remove Cutscenes", "description": "Removes as many cutscenes from the game as possible. 3 different levels. 1 - Minimal: Remove as many cutscenes as possible without causing side effects. 2 - Non-Reward: Also remove cutscenes prior to forced fights, which causes the 'continue' on game over to work like 'retry' in later games (can be worked around easily with the auto-save mod). 3 - Maximum: Also remove cutscenes prior to receiving popup rewards, which causes the popops to not appear (although you still get the rewards, and they still show up on the tracker).",
-                                "possible_values": [], "hidden_values": ["Disabled", "Minimal", "Non-Reward", "Maximum"]}
+                                "possible_values": [], "hidden_values": ["Disabled", "Minimal", "Non-Reward", "Maximum"]},
+            "revenge_limit_rando": {"display_name": "Revenge Limit Randomizer", "description": "Randomizes the revenge value limit of each enemy/boss in the game. Can be either set to 0, set to basically infinity, randomly swapped, or set to a random value between 0 and 200",
+                                "possible_values": [], "hidden_values": ["Vanilla", "Set 0", "Set Infinity", "Random Swap", "Random Values"]}
         }
 
     def get_valid_enemies(self):
@@ -100,6 +102,9 @@ class KingdomHearts2:
         rmcs = options.get("remove_cutscenes", "Disabled")
         if rmcs and rmcs != "Disabled":
             utility_mods.append("remove_cutscenes{}".format(options.get("remove_cutscenes")))
+        rvlr = options.get("revenge_limit_rando", "Vanilla")
+        if rvlr and rvlr != "Disabled":
+            utility_mods.append("revenge_limit_rando{}".format(options.get("revenge_limit_rando")))
         return utility_mods
 
     def perform_randomization(self, options, seed=None):
@@ -278,13 +283,18 @@ class KingdomHearts2:
 
         utility_mods = randomization.get("utility_mods", [])
 
+        rvlrando = None
+        for mod in utility_mods:
+            if mod.startswith("revenge_limit_rando"):
+                rvlrando = mod.replace("revenge_limit_rando", "")
+
         assetgenerator.generateObjEntry(randomization.get("object_map", {}))
         assetgenerator.generateEnmp(randomization.get("scale_map",{}), remove_damage_cap="remove_damage_cap" in utility_mods)
         rmcs = [u for u in utility_mods if u.startswith("remove_cutscenes")]
         if len(rmcs):
             cutsceneremover = CutsceneRemover(assetgenerator, mode=rmcs[0].replace("remove_cutscenes", ""))
             cutsceneremover.removeCutscenes()
-        assetgenerator.generateAiMods(randomization.get("ai_mods"))
+        assetgenerator.generateAiMods(randomization.get("ai_mods"), rvlrando)
         assetgenerator.generateLuaMods(randomization.get("lua_mods"))
         assetgenerator.generateMsns(randomization.get("msn_map", {}), self.mission_manager.msninfo)
         # self.set_spawns() # TODO is this needed?

@@ -6,6 +6,7 @@ from khbr.utils import print_debug
 from khbr._config import KH2_DIR, HARDCAP, DEBUG_HEALTH
 from khbr.KH2.AreaDataScript import AreaDataScript
 import os, yaml
+import random
 
 
 # TODO future refactor could use jsonpath to make looking through the complex spawns dict easier
@@ -119,12 +120,10 @@ class AssetGenerator:
         asset = self.modwriter.writeCmd(cmd_data)
         self.assets.append(asset)
 
-    def generateAiMods(self, ai_mods):
+    def generateAiMods(self, ai_mods, rvlrando=None):
         # Sort of a known issue but this will apply all the old and new mods for an ai, may cause issues someday
         # ie vivi
-        if not ai_mods:
-            return
-        created_mods = []
+        created_mods = {}
         for ai in ai_mods:
             aimod = ai_mods[ai]
 
@@ -141,8 +140,9 @@ class AssetGenerator:
 
             for mod in mods:
                 modelname = mod["name"].split("/")[0]
+                modbasename = os.path.basename(mod["name"])
                 modfilename = os.path.join(os.path.dirname(__file__), "data", "bdscript", mod["type"], mod["name"])
-                if modfilename in created_mods: # Sometimes for instance Seifer the same mod is attempted to be made multiple times
+                if modbasename in created_mods: # Sometimes for instance Seifer the same mod is attempted to be made multiple times
                     continue
                 created_mods.append(modfilename)
                 with open(modfilename) as f:
@@ -151,8 +151,57 @@ class AssetGenerator:
                     for orig,new in mod.get("replacements", {}).items():
                         ai_manager.replace(orig, mod["vars"][new])
 
-                    asset = self.modwriter.writeAi(os.path.basename(mod["name"]), modelname, mod["type"],ai_manager.get_script())
-                    self.assets.append(asset)
+                    created_mods[modelname] = {
+                        "name": modbasename,
+                        "model": modelname,
+                        "type": mod["type"],
+                        "manager": ai_manager
+                    }
+
+        if rvlrando:
+            print("uhh")
+            rando_type = rvlrando.replace("revenge_limit_rando", "")
+            karma_values = [92.0, 75.0, 92.0, 75.0, 100.0, 75.0, 75.0, 55.0, 75.0, 75.0, 75.0, 75.0, 100.0, 100.0, 75.0, 75.0, 75.0, 50.0, 80.0, 75.0, 100.0, 75.0, 100.0, 75.0, 100.0, 5.0, 200.0, 200.0, 200.0, 200.0, 50.0, 80.0, 60.0, 60.0, 60.0, 60.0, 50.0, 40.0, 40.0, 75.0, 100.0, 75.0, 100.0, 150.0, 125.0, 50.0, 50.0, 30.0, 60.0, 60.0, 100.0, 100.0, 100.0, 100.0, 80.0, 70.0, 60.0, 50.0, 100.0, 80.0, 60.0, 40.0, 100.0, 80.0, 60.0, 40.0, 100.0, 80.0, 60.0, 40.0, 100.0, 80.0, 60.0, 40.0, 50.0, 95.0, 90.0, 85.0, 80.0, 100.0, 40.0]
+            karma_values += [100 for _ in range(150)] # The number of scripts to modify that don't normally change the revenge value from the default of 100
+            if rando_type == "Vanilla":
+                pass # pass
+            elif rando_type == "Set 0":
+                karma_values = [0 for _ in karma_values]
+            elif rando_type == "Set Infinity":
+                karma_values = [9999 for _ in karma_values]
+            elif rando_type == "Random Swap":
+                random.shuffle(karma_values)
+            elif rando_type == "Random Values":
+                karma_values = [random.randint(0,200) for _ in karma_values]
+            else:
+                raise Exception("Invalid Karma Limit Value: {}".format(rando_type))
+
+            print("Ok here")
+            objdir = os.path.join(os.path.dirname(__file__), "data", "bdscript", "obj")
+            for modelname in os.listdir(objdir):
+                aifiles = os.listdir(os.path.join(objdir, modelname))
+                if len(aifiles) != 1:
+                    raise Exception("Wrong number of files for {}: {}".format(modelname, len(aifiles)))
+                if modelname in created_mods:
+                    created_mods[modelname]["manager"].set_karma_limit(karma_values)
+                else:
+                    modfilename = os.path.join(objdir, modelname, aifiles[0])
+                    with open(modfilename) as f:
+                        ai_manager = AiManager(modfilename, f.read())
+
+                        ai_manager.set_karma_limit(karma_values)
+
+                        created_mods[modelname] = {
+                            "name": aifiles[0],
+                            "model": modelname,
+                            "type": "obj",
+                            "manager": ai_manager
+                        }
+            print("Karma left: {}".format(karma_values))
+
+        for modelname, ai in created_mods.items():
+            asset = self.modwriter.writeAi(ai["name"], ai["model"], ai["type"], ai["manager"].get_script())
+            self.assets.append(asset)
 
     def generateLuaMods(self, lua_mods):
         if not lua_mods:
@@ -334,17 +383,18 @@ class AssetGenerator:
         evtfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "evt.script")
         with open(evtfn) as f:
             script = AreaDataScript(f.read())
-        program = script.programs[programnumber]
-        if "jump_to" in options:
-            program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"])
-        if "open_menu" in options:
-            program.set_open_menu(options["open_menu"])
-        if "remove_event" in options:
-            program.remove_event()
-        if "remove_excess_flags"in options:
-            program.remove_command("SetProgressFlag")
-        if "flags" in options:
-            program.set_flags(options["flags"])
-        programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", programnumber, program.make_program())
-        roomsource.append(programasset)
+        programs_to_edit = script.programs if programnumber=="all" else {programnumber: script.programs[programnumber]}
+        for currentprogramnumber, program in programs_to_edit.items():
+            if "jump_to" in options:
+                program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"])
+            if "open_menu" in options:
+                program.set_open_menu(options["open_menu"])
+            if "remove_event" in options:
+                program.remove_event()
+            if "remove_excess_flags"in options:
+                program.remove_command("SetProgressFlag")
+            if "flags" in options:
+                program.set_flags(options["flags"])
+            programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
+            roomsource.append(programasset)
         
