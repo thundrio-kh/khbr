@@ -103,7 +103,7 @@ class KingdomHearts2:
         if rmcs and rmcs != "Disabled":
             utility_mods.append("remove_cutscenes{}".format(options.get("remove_cutscenes")))
         rvlr = options.get("revenge_limit_rando", "Vanilla")
-        if rvlr and rvlr != "Disabled":
+        if rvlr and rvlr != "Vanilla":
             utility_mods.append("revenge_limit_rando{}".format(options.get("revenge_limit_rando")))
         return utility_mods
 
@@ -301,6 +301,7 @@ class KingdomHearts2:
         self.location_manager.set_locations() # TODO this might be unneeded time waste????
         assetgenerator.generateSpawns(randomization.get("spawns", ""), randomization.get("subtract_map"))
         assetgenerator.generateCustomMoveset()
+        assetgenerator.generateCustomCmd(randomization.get("cmd_mods", {}))
 
         if DIAGNOSTICS:
             end_time = time.time()
