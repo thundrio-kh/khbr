@@ -13,6 +13,7 @@ class EnemySeed:
         self.ai_mods = {}
         self.lua_mods = []
         self.utility_mods = {}
+        self.cmd_mods = {}
         self.data_replacements = {}
         self.config = config
 
@@ -26,6 +27,7 @@ class EnemySeed:
             "msn_map": self.msn_mapping, 
             "ai_mods": self.ai_mods, 
             "lua_mods": list(set(self.lua_mods)),
+            "cmd_mods": self.cmd_mods,
             "object_map": self.object_map, 
             "scale_map": self.set_scaling, 
             "limiter_map": self.spawn_limiters, 
@@ -65,6 +67,7 @@ class EnemySeed:
         self.update_objentry(new_boss_object)
         self.update_aimod(old_boss_object, new_boss_object)
         self.update_luamod(new_boss_object)
+        self.add_cmdmod(new_boss_object)
 
     def update_extras(self, old_boss_object, new_boss_object, world, room, spawnpoint, spid):
         # self, world, room, spawnpoint, spid, entity, new_boss_object
@@ -151,6 +154,12 @@ class EnemySeed:
         if new_boss_object.get("luamod"):
             self.lua_mods.append(new_boss_object["luamod"])
             
+    def add_cmdmod(self, new_boss_object):
+        for cmd_mod in new_boss_object["cmdmods"]:
+            if cmd_mod["value"] in self.cmd_mods:
+                print("Warning: cmd mod {} getting overwritten by {}".format(cmd_mod["value"], new_boss_object["name"]))
+            self.cmd_mods[cmd_mod["value"]] = cmd_mod["changes"]
+
     def set_data_final_xemnas_retry(self, shouldretry):
         msn_name = "EH20_MS113_RE"
         if msn_name in self.msn_mapping:

@@ -2330,6 +2330,9 @@ Giant Sark:
       - 0
       - 0
 MCP:
+  aimods:
+  - name: B_TR020/b_tr.bdscript
+    type: obj
   enabled: false
   enmp_index: 0x8d
   hp: 100
@@ -2975,6 +2978,10 @@ Jafar:
   aimods: 
   - name: B_AL020/b_al.bdscript
     type: obj
+  cmdmods:
+  - value: 604
+    changes:
+      Flags: 4294967295
   enmp_index: 0x8A
   hp: 100
   level: 99

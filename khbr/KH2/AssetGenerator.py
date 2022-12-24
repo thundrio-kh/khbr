@@ -1,3 +1,4 @@
+from khbr.KH2.CommandManager import CommandManager
 from khbr.textutils import final_fight_text
 from khbr.KH2.Mission import Mission
 from khbr.KH2.AiManager import AiManager
@@ -115,9 +116,13 @@ class AssetGenerator:
             mset_data = f.read()
         asset = self.modwriter.writeMset("B_EX100.mset", mset_data)
         self.assets.append(asset)
-        with open(os.path.join(os.path.dirname(__file__), "data", "bin", "cmd.bin"), "rb") as f:
-            cmd_data = f.read()
-        asset = self.modwriter.writeCmd(cmd_data)
+
+    def generateCustomCmd(self, cmd_mods):
+        cmd = CommandManager(os.path.join(os.path.dirname(__file__), "data", "bin", "cmd.bin"))
+        for index, changes in cmd_mods.items():
+            cmd.update_entry(index, changes)
+            print(cmd)
+        asset = self.modwriter.writeCmd(cmd.dump_bin())
         self.assets.append(asset)
 
     def generateAiMods(self, ai_mods, rvlrando=None):
@@ -142,9 +147,8 @@ class AssetGenerator:
                 modelname = mod["name"].split("/")[0]
                 modbasename = os.path.basename(mod["name"])
                 modfilename = os.path.join(os.path.dirname(__file__), "data", "bdscript", mod["type"], mod["name"])
-                if modbasename in created_mods: # Sometimes for instance Seifer the same mod is attempted to be made multiple times
+                if modelname in created_mods: # Sometimes for instance Seifer the same mod is attempted to be made multiple times
                     continue
-                created_mods.append(modfilename)
                 with open(modfilename) as f:
                     ai_manager = AiManager(ai, f.read())
                     
