@@ -45,8 +45,6 @@ L44:
 L66:
  ret 
 TR3:
- syscall 1, 288 ; trap_status_begin_free_ability (0 in, 0 out)
- syscall 1, 289 ; trap_status_end_free_ability (0 in, 0 out)
  pushFromPWp W0
  gosub 4, L72
  ret 
