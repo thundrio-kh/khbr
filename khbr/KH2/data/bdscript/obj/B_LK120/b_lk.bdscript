@@ -12239,7 +12239,7 @@ TXT23350:
  db 'rc_jump_wait',0,0
 L23357:
 TXT23357:
- db 'atk_force_rush',0,0
+ db '',0,0
 L23365:
 TXT23365:
  db 'change_super_mode',0
@@ -12314,7 +12314,7 @@ TXT23498:
  db 'atk_punch',0
 L23503:
 TXT23503:
- db 'atk_unison_dash_loop',0,0
+ db '',0,0
 TXT23514:
 L23514:
  db 'counter',0
@@ -12384,7 +12384,7 @@ TXT23637:
  db 'btl_normal',0,0
 L23643:
 TXT23643:
- db 'unison_run',0,0
+ db '',0,0
 L23649:
 TXT23649:
  db 'btl_hard',0,0
@@ -12392,7 +12392,7 @@ TXT23654:
  db 'set pos',0
 L23658:
 TXT23658:
- db 'change_unison_start',0
+ db '',0
 L23668:
 TXT23668:
  db 'test_move_stop',0,0
@@ -12452,7 +12452,7 @@ L23772:
  db 'rst_normal',0,0
 L23778:
 TXT23778:
- db 'atk_unison_dash',0
+ db '',0
 L23786:
 TXT23786:
  db 'command',0
