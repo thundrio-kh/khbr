@@ -783,7 +783,7 @@ L479:
  pushImm 0
  popToWp W4396
  pushFromPWp W4400
- pushImm 987
+ pushImm 567
  syscall 1, 114 ; trap_obj_search_by_entry (2 in, 0 out)
  pushFromFSp 0
  pushImm 128
@@ -3621,7 +3621,7 @@ L7179:
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  pushFromPSp 32
  pushImmf -73
- pushImmf -13873.4
+ pushImmf -1000 ; TODO put a mod pos here
  pushImmf 148.1
  pushImmf 1
  gosub 24, L5666
@@ -3641,13 +3641,13 @@ L7179:
  syscall 1, 37 ; trap_bg_show (1 in, 0 out)
  pushFromPSp 48
  pushImmf -500
- pushImmf -13848
+ pushImmf -1005 ; TODO put a mod pos here
  pushImmf 150
  pushImmf 1
  gosub 24, L5666
  pushFromPSp 16
  pushImmf 350
- pushImmf -13848
+ pushImmf -1005 ; TODO put a mod pos here
  pushImmf 150
  pushImmf 1
  gosub 24, L5666
