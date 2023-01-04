@@ -146,6 +146,8 @@ class SpawnManager:
 
     @staticmethod
     def add_new_object(original_spawns, new_spawn_descriptor, default_object=None):
+        if new_spawn_descriptor["ObjectId"] == -1:
+            return # -1 means was an object for making a custom unit, but shouldn't be added as an entity
         # TOTEST might need to pass in the default_object with coordinates but maybe not. test in Past Pete fight
         if not default_object:
             default_object = {
