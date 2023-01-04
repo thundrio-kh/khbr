@@ -91,7 +91,7 @@ L131:
  ret 
 TR3:
  pushFromPSp 0
- pushImm 318
+ pushImm {obj_id}
  syscall 1, 114 ; trap_obj_search_by_entry (2 in, 0 out)
  pushFromPSp 0
  pushImm 13

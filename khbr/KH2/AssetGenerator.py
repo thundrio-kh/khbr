@@ -224,6 +224,11 @@ class AssetGenerator:
             if type(new_msn_mapping) == str:
                 new_msn_mapping = {"name": new_msn_mapping}
             new_msn_name = new_msn_mapping["name"]
+
+            # This might cause some issues with bosses like the FF bosses because the camera complete won't work, and of course it prevents mickey in some fights, which is most likely fine
+            if self.find_asset(oldmsn+".bar"):
+                print("Old MSN {} has an ai edit, so can't copy over {}".format(oldmsn, new_msn_name))
+                continue
             info = msninfo[new_msn_name]
             mission = Mission(new_msn_name, info)
 
