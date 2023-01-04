@@ -192,7 +192,7 @@ def main(cli_args: list=[]):
     open_menu_before_each_fight = args.open_menu_before_each_fight
     openkh_dir = args.openkh_dir
     
-
+    print(args.abilities_start_equipped)
 
     boss_order = []
     index = bosses.index(starting_room)
@@ -205,6 +205,8 @@ def main(cli_args: list=[]):
                 boss_order = boss_order[boss_order.index(starting_room):]
             else:
                 boss_order = [starting_room] + boss_order
+    if len(boss_order) > num_bosses:
+        boss_order = boss_order[:num_bosses]
     if not randomize_starting_stuff:
         stuff = ["Scan","Guard Break", "Explosion",
         "Finishing Leap", "Guard",
@@ -232,9 +234,10 @@ def main(cli_args: list=[]):
         MAXITEMS = 32
         for i in range(MAXITEMS):
             itemvalue = int(ITEMS[random.choice(ITEMS)])
-            if abilities_start_equipped:
+            if abilities_start_equipped: # TODO This only works on randomize_starting_stuff and it would break non equipped stuff
                 itemvalue += 0x8000
             stuff.append(str(itemvalue))
+
 
     moddir = os.path.join(openkh_dir, "mods", "kh2")
     # TODO TEMP FOR FASTER TESTING
@@ -317,7 +320,7 @@ def main(cli_args: list=[]):
 
 if __name__ == "__main__":
     import sys
-    main_ui()
+    main()
     # if "cmd" in sys.argv:
     #     main()
     # else:
