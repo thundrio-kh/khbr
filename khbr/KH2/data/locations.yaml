@@ -17740,6 +17740,9 @@ Space Paranoids:
         size: 0
         sp_ids:
           '69':
+          - index: 3
+            isboss: true
+            name: MCP
           - index: 5
             isboss: true
             name: Giant Sark
