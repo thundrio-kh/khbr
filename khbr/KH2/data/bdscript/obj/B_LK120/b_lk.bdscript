@@ -572,7 +572,7 @@ L1007:
 L1029:
  ret 
 D1030:
-L1030:
+L1030: ; maybe here TODO
  popToSp 4
  popToSp 8
  popToSp 0
@@ -2615,7 +2615,7 @@ TR1:
  pushFromPWp W576
  gosub 4, L4703
  ret 
-L4703:
+L4703: ; around here is interesting TODO
  popToSp 0
  pushImm L4795
  pushFromFSp 0
@@ -2641,7 +2641,7 @@ L4738:
  pushFromPAi L23800 ; ___ai battle_start (L23800)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  halt 
-L4752:
+L4752: ; if there is just a ret here groundshaker is still but idol is invisible TODO
  pushFromFSp 0
  gosub 4, L5360
  jz L4767
@@ -3838,6 +3838,7 @@ L5615:
  pushImm 0
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ ; also a lot here to fuck with TODO
  pushFromFSp 0
  gosub 12, L20865
  pushFromFSp 0
@@ -11249,7 +11250,7 @@ L21530:
  pushFromFSp 4
  memcpy 0
  ret 
-L21555:
+L21555: ; maybe TODO
  popToSp 0
  pushFromPSpVal 108
  gosub 4, L655
