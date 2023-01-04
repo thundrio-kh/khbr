@@ -189,6 +189,7 @@ class EnemyManager:
         # Nightmare mode should override settings and always use datas and cups (until nightmare is a preset)
         use_cups_bosses = nightmare_bosses or options.get("cups_bosses")
         use_data_bosses = nightmare_bosses or options.get("data_bosses")
+        use_gimmick_bosses = options.get("gimmick_bosses")
         use_sephiroth = nightmare_bosses or options.get("sephiroth")
         use_terra = nightmare_bosses or options.get("terra")
         use_lua_bosses = options.get("lua_bosses")
@@ -203,6 +204,8 @@ class EnemyManager:
             if "cups" in v["tags"] and not use_cups_bosses:
                 continue
             if "data" in v["tags"] and not use_data_bosses:
+                continue
+            if "gimmick" in v["tags"] and not use_gimmick_bosses:
                 continue
             if "terra" in v["tags"] and not use_terra:
                 continue
