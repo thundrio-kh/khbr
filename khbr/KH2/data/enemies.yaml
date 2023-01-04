@@ -1,5 +1,8 @@
 Bees ETC PO:
-  enabled: false
+  enabled: true
+  tags:
+  - other
+  variationof: Bees TT PO
   enmp_index: 999
   model: F_PO090_ETC
   obj_id: 2139
@@ -11,7 +14,9 @@ Bees ETC PO:
       - 0
       - 3
 Bees TT PO:
-  enabled: false
+  enabled: true
+  tags:
+  - other
   enmp_index: 999
   model: F_PO090_TT
   obj_id: 2138
@@ -156,11 +161,13 @@ Bookmaster (TR):
       - 0
       - 0
 Bulky Vendor:
-  enabled: false
+  enabled: true
   enmp_index: 999
   model: M_EX590
   obj_id: 75
   size: 0
+  tags:
+  - other
   type: enemy
   variations:
     Bulky Vendor (Disappears):
@@ -172,12 +179,15 @@ Bulky Vendor:
       - 0
       - 0
 Bulky Vendor (NM):
-  enabled: false
+  enabled: true
+  tags:
+  - other
   enmp_index: 999
   model: M_EX590_NM
   obj_id: 2509
   size: 0
   type: enemy
+  variationof: Bulky Vendor
   variations:
     Bulky Vendor (NM) (Disappears):
       vars:
@@ -1091,10 +1101,12 @@ Armor Xemnas I:
       - 0
 Armor Xemnas II:
   enabled: true
-  # aimods:
+  aimods: 
+  - name: B_EX260/b_ex.bdscript
+    type: obj
   # - name: EH23_MS112/ms_b.bdscript
   #   type: msn
-  #   source: old
+    # source: old
   blacklist_source:
   - Axel I
   - Saix # Report of crash
@@ -1112,7 +1124,7 @@ Armor Xemnas II:
       msn: EH23_MS112
       program: 73
       outprogram: 0x54
-      replace_as: Armor Xemnas I
+      #replace_as: Armor Xemnas I
       final_fight: true
       size: 1.7
       room_size: 9.23
@@ -1367,13 +1379,17 @@ Barrel:
       - 0
       - 0
 Bees (Disappearing):
-  enabled: false
+  enabled: true
+  tags:
+  - other
   hp: 100
   level: 99
   limiter: 12
   model: F_PO090
   obj_id: 1573
   size: 41084
+  replace_as: Bees
+  variationof: Bees TT PO
   type: enemy
   variations:
     Bees (Disappearing):
@@ -2330,24 +2346,25 @@ Giant Sark:
       - 0
       - 0
 MCP:
-  aimods:
-  - name: B_TR020/b_tr.bdscript
-    type: obj
-  enabled: false
+  # aimods:
+  # - name: B_TR020/b_tr.bdscript
+  #   type: obj
+  enabled: true
+  tags:
+  - gimmick
   enmp_index: 0x8d
   hp: 100
   level: 99
   limiter: 0
-  source_replace_allowed: false
   model: B_TR020
   msn: TR09_MS205
   size: 1.41
   program: 59
   room_size: 10.35
-  msn_replace_allowed: false
   obj_id: 1762
   type: boss
   adds:
+  - ObjectId: 724 # tron, needed for delete RC
   - ObjectId: 863 # MCP Barrier
     Serial: 13
   - ObjectId: 864 # MCP Wall
@@ -2451,16 +2468,24 @@ Grim Reaper II:
       - 0
       - 0
 Groundshaker:
+  aimods: 
+  - name: B_LK120/b_lk.bdscript
+    type: obj
   enabled: false
   enmp_index: 0x5F
   hp: 100
   level: 99
   blacklist_source:
   - Demyx # Weird fall through floor doesn't start
+  whitelist_destination:
+  - Terra
+  - Armor Xemnas II
+  - Final Xemnas
   limiter: 0
   tags:
   - rc_blocked
   - teleport_blocked
+  - gimmick
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   model: B_LK120
@@ -2978,6 +3003,8 @@ Jafar:
   aimods: 
   - name: B_AL020/b_al.bdscript
     type: obj
+  tags:
+  - gimmick # Only because it's unstable with the infinite jumps... TODO
   cmdmods:
   - value: 604
     changes:
@@ -3478,13 +3505,14 @@ Bomb Bell A:
       - 0
       - 0
 Oogie Boogie:
-  enabled: false
+  enabled: true
   enmp_index: 0x4B
   aimods: 
   - name: B_NM000/b_nm.bdscript
     type: obj
   tags:
   - teleport_blocked
+  - gimmick
   hp: 100
   level: 99
   limiter: 0
@@ -3497,7 +3525,17 @@ Oogie Boogie:
   pc:
     unchanged_file_size: false
   room_size: 12.41
-  adds:
+  subtracts:
+  - ObjectId: 1003 # present box
+    Serial: 26
+    customUnit:
+      Type: 1
+      Id: 97
+  - ObjectId: 1604 # oogies punch
+    Serial: 21
+    customUnit:
+      Type: 1
+      Id: 85
   - ObjectId: 969 # ???
     Serial: 19
     Argument: 1
@@ -3506,12 +3544,8 @@ Oogie Boogie:
     Argument: 2
   - ObjectId: 966 # Oogie spikes
     Serial: 24
-  - ObjectId: 1604 # oogies punch
-    Serial: 21
   - ObjectId: 928 # ???
     Serial: 36
-  - ObjectId: 1003 # present box
-    Serial: 26
   type: boss
   variations:
     Oogie Boogie:
@@ -3608,7 +3642,6 @@ Pete TR:
   pc: 
     source_replace_allowed: true # TODO supposedly demyx super crashes here on ps2 and most bosses cause crashes here
   source_replace_allowed: false
-  replace_as: Pete Cups
   hp: 100
   level: 99
   limiter: 20
@@ -3616,7 +3649,153 @@ Pete TR:
   msn: WI03_MS104
   obj_id: 359
   adds:
+  - ObjectId: -1 # Empty Unit 1
+    customUnit:
+      Type: 4
+      Flag: 1
+      Id: 244
+      Teleport:
+        Place: 92
+        Door: 0
+        World: 0
+        Unknown: 0
+      EventActivators:
+      - Shape: 1
+        Option: 0
+        PositionX: -508.90249633789062
+        PositionY: -300
+        PositionZ: 525.50341796875
+        ScaleX: 286.08859252929688
+        ScaleY: 400
+        ScaleZ: 273.35345458984375
+        RotationX: 0
+        RotationY: -0.18849574029445648
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+      ReturnParameters:
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+  - ObjectId: -1 # Empty Unit 2
+    customUnit:
+      Type: 4
+      Flag: 1
+      Id: 245
+      Teleport:
+        Place: 93
+        Door: 0
+        World: 0
+        Unknown: 0
+      EventActivators:
+      - Shape: 1
+        Option: 0
+        PositionX: 690.76788330078125
+        PositionY: -300
+        PositionZ: 72.229660034179688
+        ScaleX: 269.2049560546875
+        ScaleY: 400
+        ScaleZ: 459.30096435546875
+        RotationX: 0
+        RotationY: 0.36696508526802063
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+      ReturnParameters:
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+  - ObjectId: -1 # Empty Unit 3
+    customUnit:
+      Type: 4
+      Flag: 1
+      Id: 246
+      Teleport:
+        Place: 94
+        Door: 0
+        World: 0
+        Unknown: 0
+      EventActivators:
+      - Shape: 1
+        Option: 0
+        PositionX: -300.2421875
+        PositionY: -300
+        PositionZ: -590.82379150390625
+        ScaleX: 261.31048583984375
+        ScaleY: 400
+        ScaleZ: 266.0386962890625
+        RotationX: 0
+        RotationY: -0.18849574029445648
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+      ReturnParameters:
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
   - ObjectId: 1758 # cannon tower
+    PositionX: -300
+    PositionZ: -600
     SpawnType: 2
     Serial: 101
     Argument1: 1
@@ -3642,6 +3821,8 @@ Pete TR:
         OnBgGroup: 0
         OffBgGroup: 0
   - ObjectId: 1758 # cannon tower
+    PositionX: -300
+    PositionZ: 540
     SpawnType: 2
     Serial: 102
     Argument1: 1
@@ -3667,6 +3848,8 @@ Pete TR:
         OnBgGroup: 0
         OffBgGroup: 0
   - ObjectId: 1758 # cannon tower
+    PositionX: 690
+    PositionZ: 150
     SpawnType: 2
     Serial: 103
     Argument1: 1
@@ -4279,6 +4462,10 @@ Shadow:
 Shadow Stalker:
   enabled: false
   enmp_index: 0x17
+  tags:
+  - teleport_blocked
+  - needs_rc
+  - gimmick
   hp: 100
   level: 99
   limiter: 0
@@ -4293,11 +4480,14 @@ Shadow Stalker:
   roommaxsize: 16.10
   program: 78
   adds:
+    # Todo this is bugging out and causing two copies of 355 to be placed, which works as placing sora twice
     #TODO the roommaxsize implies some of these are still being loaded into memory
+  - ObjectId: 713 # windows
   - ObjectId: 646 # ground trap
   - ObjectId: 645 # columns
   - ObjectId: 644 # chandelier
     Serial: 24
+    PositionY: -1500
   - ObjectId: 799 # ???
     Serial: 17
   type: boss
@@ -4728,6 +4918,7 @@ The Beast:
     type: obj
   tags: 
   - needs_rc
+  - gimmick
   enabled: true
   enmp_index: 0x49
   blacklist_source:

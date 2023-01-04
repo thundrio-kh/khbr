@@ -5,7 +5,11 @@
             3
         ],
         "name": "Bees ETC PO",
-        "enabled": false,
+        "enabled": true,
+        "tags": [
+            "other"
+        ],
+        "variationof": "Bees TT PO",
         "enmp_index": 999,
         "model": "F_PO090_ETC",
         "obj_id": 2139,
@@ -17,15 +21,11 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
-        "parent": "Bees ETC PO",
-        "variationof": null,
-        "children": [
-            "Bees ETC PO"
-        ],
+        "parent": "Bees TT PO",
+        "children": [],
         "hp": 100,
         "limiter": 1,
         "msn_required": false,
@@ -60,7 +60,10 @@
             0
         ],
         "name": "Bees TT PO",
-        "enabled": false,
+        "enabled": true,
+        "tags": [
+            "other"
+        ],
         "enmp_index": 999,
         "model": "F_PO090_TT",
         "obj_id": 2138,
@@ -72,13 +75,14 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
         "parent": "Bees TT PO",
         "variationof": null,
         "children": [
+            "Bees (Disappearing)",
+            "Bees ETC PO",
             "Bees TT PO"
         ],
         "hp": 100,
@@ -671,11 +675,14 @@
             0
         ],
         "name": "Bulky Vendor (Disappears)",
-        "enabled": false,
+        "enabled": true,
         "enmp_index": 999,
         "model": "M_EX590",
         "obj_id": 75,
         "size": 0,
+        "tags": [
+            "other"
+        ],
         "type": "enemy",
         "variations": [
             "Bulky Vendor (Disappears)",
@@ -684,8 +691,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
         "parent": "Bulky Vendor",
@@ -725,11 +731,14 @@
             0
         ],
         "name": "Bulky Vendor",
-        "enabled": false,
+        "enabled": true,
         "enmp_index": 999,
         "model": "M_EX590",
         "obj_id": 75,
         "size": 0,
+        "tags": [
+            "other"
+        ],
         "type": "enemy",
         "variations": [
             "Bulky Vendor (Disappears)",
@@ -738,14 +747,14 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
         "parent": "Bulky Vendor",
         "variationof": null,
         "children": [
-            "Bulky Vendor"
+            "Bulky Vendor",
+            "Bulky Vendor (NM)"
         ],
         "hp": 100,
         "limiter": 1,
@@ -781,12 +790,16 @@
             0
         ],
         "name": "Bulky Vendor (NM) (Disappears)",
-        "enabled": false,
+        "enabled": true,
+        "tags": [
+            "other"
+        ],
         "enmp_index": 999,
         "model": "M_EX590_NM",
         "obj_id": 2509,
         "size": 0,
         "type": "enemy",
+        "variationof": "Bulky Vendor",
         "variations": [
             "Bulky Vendor (NM) (Disappears)",
             "Bulky Vendor (NM)"
@@ -794,12 +807,10 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
-        "parent": "Bulky Vendor (NM)",
-        "variationof": null,
+        "parent": "Bulky Vendor",
         "children": [],
         "hp": 100,
         "limiter": 1,
@@ -835,12 +846,16 @@
             0
         ],
         "name": "Bulky Vendor (NM)",
-        "enabled": false,
+        "enabled": true,
+        "tags": [
+            "other"
+        ],
         "enmp_index": 999,
         "model": "M_EX590_NM",
         "obj_id": 2509,
         "size": 0,
         "type": "enemy",
+        "variationof": "Bulky Vendor",
         "variations": [
             "Bulky Vendor (NM) (Disappears)",
             "Bulky Vendor (NM)"
@@ -848,15 +863,11 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
-        "parent": "Bulky Vendor (NM)",
-        "variationof": null,
-        "children": [
-            "Bulky Vendor (NM)"
-        ],
+        "parent": "Bulky Vendor",
+        "children": [],
         "hp": 100,
         "limiter": 1,
         "msn_required": false,
@@ -3224,6 +3235,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -3235,6 +3247,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -6442,6 +6455,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -6453,6 +6467,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -6485,7 +6500,6 @@
         "msn": "EH23_MS112",
         "program": 73,
         "outprogram": 84,
-        "replace_as": "Armor Xemnas I",
         "final_fight": true,
         "size": 1.7,
         "room_size": 9.23,
@@ -6495,6 +6509,12 @@
         ],
         "name": "Armor Xemnas II",
         "enabled": true,
+        "aimods": [
+            {
+                "name": "B_EX260/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "blacklist_source": [
             "Axel I",
             "Saix"
@@ -6512,6 +6532,7 @@
         "variations": [
             "Armor Xemnas II"
         ],
+        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "category": "teleport_blocked",
@@ -6523,7 +6544,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "can_be_enemy": false,
@@ -6550,6 +6570,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -6560,6 +6581,7 @@
             "Leon",
             "Lexaeus",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -7242,6 +7264,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -7252,6 +7275,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -7345,28 +7369,28 @@
             0
         ],
         "name": "Bees (Disappearing)",
-        "enabled": false,
+        "enabled": true,
+        "tags": [
+            "other"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 12,
         "model": "F_PO090",
         "obj_id": 1573,
         "size": 41084,
+        "replace_as": "Bees",
+        "variationof": "Bees TT PO",
         "type": "enemy",
         "variations": [
             "Bees (Disappearing)"
         ],
-        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "isnightmare": false,
-        "parent": "Bees (Disappearing)",
-        "variationof": null,
-        "children": [
-            "Bees (Disappearing)"
-        ],
+        "parent": "Bees TT PO",
+        "children": [],
         "msn_required": false,
         "msn_source_as": null,
         "aimods": [],
@@ -7379,7 +7403,7 @@
         "sizeTag": null,
         "room_size": 0,
         "roommaxsize": null,
-        "enmp_index": null,
+        "enmp_index": 999,
         "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
@@ -7579,6 +7603,7 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -7587,6 +7612,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -8030,6 +8056,7 @@
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -8041,6 +8068,7 @@
             "Leon",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -8220,6 +8248,7 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -8228,6 +8257,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -9037,6 +9067,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -9048,6 +9079,7 @@
             "Leon",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -9763,6 +9795,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -9775,6 +9808,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -9870,6 +9904,7 @@
             "Demyx",
             "Demyx OC",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -9879,6 +9914,7 @@
             "Leon",
             "Lexaeus",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -11027,6 +11063,7 @@
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -11037,6 +11074,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -11556,27 +11594,25 @@
             0
         ],
         "name": "MCP",
-        "aimods": [
-            {
-                "name": "B_TR020/b_tr.bdscript",
-                "type": "obj"
-            }
+        "enabled": true,
+        "tags": [
+            "gimmick"
         ],
-        "enabled": false,
         "enmp_index": 141,
         "hp": 100,
         "level": 99,
         "limiter": 0,
-        "source_replace_allowed": false,
         "model": "B_TR020",
         "msn": "TR09_MS205",
         "size": 1.41,
         "program": 59,
         "room_size": 10.35,
-        "msn_replace_allowed": false,
         "obj_id": 1762,
         "type": "boss",
         "adds": [
+            {
+                "ObjectId": 724
+            },
             {
                 "ObjectId": 863,
                 "Serial": 13
@@ -11595,8 +11631,9 @@
             "MCP"
         ],
         "replace_as": null,
-        "tags": [],
-        "category": "",
+        "source_replace_allowed": true,
+        "msn_replace_allowed": true,
+        "category": "gimmick",
         "isnightmare": false,
         "parent": "MCP",
         "variationof": null,
@@ -11605,6 +11642,7 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -11624,7 +11662,58 @@
         "obj_edits": {},
         "luamod": null,
         "available": [
-            "MCP"
+            "Armor Xemnas I",
+            "Armor Xemnas II",
+            "Axel I",
+            "Axel II",
+            "Barbossa",
+            "Blizzard Lord",
+            "Cerberus",
+            "Cloud",
+            "Dark Thorn",
+            "Demyx",
+            "Final Xemnas",
+            "MCP",
+            "Grim Reaper I",
+            "Hades II",
+            "Hayner",
+            "Hercules",
+            "Hostile Program",
+            "Jafar",
+            "Larxene",
+            "Leon",
+            "Lexaeus",
+            "Luxord",
+            "Marluxia",
+            "Oogie Boogie",
+            "Past Pete",
+            "Pete Cups",
+            "Pete OC II",
+            "Pete TR",
+            "Prison Keeper",
+            "Riku",
+            "Roxas",
+            "Saix",
+            "Sark",
+            "Scar",
+            "Seifer",
+            "Sephiroth",
+            "Setzer",
+            "Shan-Yu",
+            "Terra",
+            "The Beast",
+            "The Experiment",
+            "Thresholder",
+            "Tifa",
+            "Twilight Thorn",
+            "Vexen",
+            "Vivi",
+            "Volcano Lord",
+            "Xaldin",
+            "Xemnas",
+            "Xigbar",
+            "Yuffie",
+            "Zexion"
         ]
     },
     "Graveyard NM": {
@@ -11751,6 +11840,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -11760,6 +11850,7 @@
             "Leon",
             "Lexaeus",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -11886,6 +11977,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -11898,6 +11990,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -11934,6 +12027,12 @@
             0
         ],
         "name": "Groundshaker",
+        "aimods": [
+            {
+                "name": "B_LK120/b_lk.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": false,
         "enmp_index": 95,
         "hp": 100,
@@ -11941,10 +12040,16 @@
         "blacklist_source": [
             "Shan-Yu"
         ],
+        "whitelist_destination": [
+            "Terra",
+            "Armor Xemnas II",
+            "Final Xemnas"
+        ],
         "limiter": 0,
         "tags": [
             "rc_blocked",
-            "teleport_blocked"
+            "teleport_blocked",
+            "gimmick"
         ],
         "model": "B_LK120",
         "msn": "LK15_MS202",
@@ -11964,7 +12069,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "rc_blocked-teleport_blocked",
+        "category": "gimmick-rc_blocked-teleport_blocked",
         "isnightmare": false,
         "parent": "Groundshaker",
         "variationof": null,
@@ -11973,7 +12078,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -11983,7 +12087,6 @@
         "roommaxsize": null,
         "blacklist_destination": [],
         "whitelist_source": [],
-        "whitelist_destination": [],
         "adds": [],
         "sp_ids": [],
         "msn_list": [],
@@ -12000,6 +12103,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Groundshaker",
             "Hades II",
@@ -12010,6 +12114,7 @@
             "Jafar",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -12290,6 +12395,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -12300,6 +12406,7 @@
             "Leon",
             "Lexaeus",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -12635,6 +12742,7 @@
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -12643,6 +12751,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -14242,6 +14351,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -14254,6 +14364,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -14441,6 +14552,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -14454,6 +14566,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -14736,6 +14849,9 @@
                 "type": "obj"
             }
         ],
+        "tags": [
+            "gimmick"
+        ],
         "cmdmods": [
             {
                 "value": 604,
@@ -14760,8 +14876,7 @@
         ],
         "replace_as": null,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "gimmick",
         "isnightmare": false,
         "parent": "Jafar",
         "variationof": null,
@@ -15039,6 +15154,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -15050,6 +15166,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -15217,6 +15334,7 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -15225,6 +15343,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -15526,6 +15645,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -15537,6 +15657,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -16052,6 +16173,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -16064,6 +16186,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -16337,6 +16460,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -16348,6 +16472,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -16898,7 +17023,7 @@
             0
         ],
         "name": "Oogie Boogie",
-        "enabled": false,
+        "enabled": true,
         "enmp_index": 75,
         "aimods": [
             {
@@ -16907,7 +17032,8 @@
             }
         ],
         "tags": [
-            "teleport_blocked"
+            "teleport_blocked",
+            "gimmick"
         ],
         "hp": 100,
         "level": 99,
@@ -16922,7 +17048,23 @@
             "unchanged_file_size": false
         },
         "room_size": 12.41,
-        "adds": [
+        "subtracts": [
+            {
+                "ObjectId": 1003,
+                "Serial": 26,
+                "customUnit": {
+                    "Type": 1,
+                    "Id": 97
+                }
+            },
+            {
+                "ObjectId": 1604,
+                "Serial": 21,
+                "customUnit": {
+                    "Type": 1,
+                    "Id": 85
+                }
+            },
             {
                 "ObjectId": 969,
                 "Serial": 19,
@@ -16938,16 +17080,8 @@
                 "Serial": 24
             },
             {
-                "ObjectId": 1604,
-                "Serial": 21
-            },
-            {
                 "ObjectId": 928,
                 "Serial": 36
-            },
-            {
-                "ObjectId": 1003,
-                "Serial": 26
             }
         ],
         "type": "boss",
@@ -16957,7 +17091,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "teleport_blocked",
+        "category": "gimmick-teleport_blocked",
         "isnightmare": false,
         "parent": "Oogie Boogie",
         "variationof": null,
@@ -16977,8 +17111,8 @@
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
+        "adds": [],
         "sp_ids": [],
-        "subtracts": [],
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
@@ -16991,6 +17125,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -17092,6 +17227,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -17099,6 +17235,7 @@
             "Hostile Program",
             "Jafar",
             "Leon",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -17192,6 +17329,7 @@
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -17201,6 +17339,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -17351,6 +17490,7 @@
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -17359,6 +17499,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -17401,7 +17542,6 @@
             "source_replace_allowed": true
         },
         "source_replace_allowed": true,
-        "replace_as": "Pete Cups",
         "hp": 100,
         "level": 99,
         "limiter": 20,
@@ -17410,7 +17550,195 @@
         "obj_id": 359,
         "adds": [
             {
+                "ObjectId": -1,
+                "customUnit": {
+                    "Type": 4,
+                    "Flag": 1,
+                    "Id": 244,
+                    "Teleport": {
+                        "Place": 92,
+                        "Door": 0,
+                        "World": 0,
+                        "Unknown": 0
+                    },
+                    "EventActivators": [
+                        {
+                            "Shape": 1,
+                            "Option": 0,
+                            "PositionX": -508.9024963378906,
+                            "PositionY": -300,
+                            "PositionZ": 525.50341796875,
+                            "ScaleX": 286.0885925292969,
+                            "ScaleY": 400,
+                            "ScaleZ": 273.35345458984375,
+                            "RotationX": 0,
+                            "RotationY": -0.18849574029445648,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ],
+                    "ReturnParameters": [
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": -1,
+                "customUnit": {
+                    "Type": 4,
+                    "Flag": 1,
+                    "Id": 245,
+                    "Teleport": {
+                        "Place": 93,
+                        "Door": 0,
+                        "World": 0,
+                        "Unknown": 0
+                    },
+                    "EventActivators": [
+                        {
+                            "Shape": 1,
+                            "Option": 0,
+                            "PositionX": 690.7678833007812,
+                            "PositionY": -300,
+                            "PositionZ": 72.22966003417969,
+                            "ScaleX": 269.2049560546875,
+                            "ScaleY": 400,
+                            "ScaleZ": 459.30096435546875,
+                            "RotationX": 0,
+                            "RotationY": 0.36696508526802063,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ],
+                    "ReturnParameters": [
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": -1,
+                "customUnit": {
+                    "Type": 4,
+                    "Flag": 1,
+                    "Id": 246,
+                    "Teleport": {
+                        "Place": 94,
+                        "Door": 0,
+                        "World": 0,
+                        "Unknown": 0
+                    },
+                    "EventActivators": [
+                        {
+                            "Shape": 1,
+                            "Option": 0,
+                            "PositionX": -300.2421875,
+                            "PositionY": -300,
+                            "PositionZ": -590.8237915039062,
+                            "ScaleX": 261.31048583984375,
+                            "ScaleY": 400,
+                            "ScaleZ": 266.0386962890625,
+                            "RotationX": 0,
+                            "RotationY": -0.18849574029445648,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ],
+                    "ReturnParameters": [
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        }
+                    ]
+                }
+            },
+            {
                 "ObjectId": 1758,
+                "PositionX": -300,
+                "PositionZ": -600,
                 "SpawnType": 2,
                 "Serial": 101,
                 "Argument1": 1,
@@ -17442,6 +17770,8 @@
             },
             {
                 "ObjectId": 1758,
+                "PositionX": -300,
+                "PositionZ": 540,
                 "SpawnType": 2,
                 "Serial": 102,
                 "Argument1": 1,
@@ -17473,6 +17803,8 @@
             },
             {
                 "ObjectId": 1758,
+                "PositionX": 690,
+                "PositionZ": 150,
                 "SpawnType": 2,
                 "Serial": 103,
                 "Argument1": 1,
@@ -17540,6 +17872,7 @@
         "room_size": 12.16,
         "program": 53,
         "type": "boss",
+        "replace_as": "Pete Cups",
         "variations": [
             "Pete TR"
         ],
@@ -17585,6 +17918,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -17596,6 +17930,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -17691,6 +18026,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -17699,6 +18035,7 @@
             "Jafar",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -19568,6 +19905,7 @@
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -19576,6 +19914,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -19674,6 +20013,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -19686,6 +20026,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -19899,6 +20240,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -19911,6 +20253,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -20121,6 +20464,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -20130,6 +20474,7 @@
             "Leon",
             "Lexaeus",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -20230,6 +20575,7 @@
             "Cloud",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -20240,6 +20586,7 @@
             "Leon",
             "Lexaeus",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -20845,6 +21192,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -20857,6 +21205,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -21186,6 +21535,11 @@
         "name": "Shadow Stalker",
         "enabled": false,
         "enmp_index": 23,
+        "tags": [
+            "teleport_blocked",
+            "needs_rc",
+            "gimmick"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -21201,6 +21555,9 @@
         "program": 78,
         "adds": [
             {
+                "ObjectId": 713
+            },
+            {
                 "ObjectId": 646
             },
             {
@@ -21208,7 +21565,8 @@
             },
             {
                 "ObjectId": 644,
-                "Serial": 24
+                "Serial": 24,
+                "PositionY": -1500
             },
             {
                 "ObjectId": 799,
@@ -21222,8 +21580,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "gimmick-needs_rc-teleport_blocked",
         "isnightmare": false,
         "parent": "Shadow Stalker",
         "variationof": null,
@@ -21251,14 +21608,12 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
-            "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -21266,18 +21621,16 @@
             "Hostile Program",
             "Hydra",
             "Jafar",
-            "Larxene",
             "Leon",
             "Lexaeus",
-            "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Saix",
             "Sark",
             "Scar",
@@ -21290,15 +21643,12 @@
             "Terra",
             "The Beast",
             "Tifa",
-            "Twilight Thorn",
             "Vexen",
             "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Shadow WI": {
@@ -21434,6 +21784,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -21446,6 +21797,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -22379,6 +22731,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -22391,6 +22744,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -22657,6 +23011,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -22669,6 +23024,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -22713,7 +23069,8 @@
             }
         ],
         "tags": [
-            "needs_rc"
+            "needs_rc",
+            "gimmick"
         ],
         "enabled": true,
         "enmp_index": 73,
@@ -22743,7 +23100,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "needs_rc",
+        "category": "gimmick-needs_rc",
         "isnightmare": false,
         "parent": "The Beast",
         "variationof": null,
@@ -22779,6 +23136,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -22790,6 +23148,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -22901,6 +23260,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -22912,6 +23272,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -23020,6 +23381,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -23031,6 +23393,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -23135,6 +23498,7 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -23143,6 +23507,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -23703,6 +24068,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -23710,6 +24076,7 @@
             "Hostile Program",
             "Jafar",
             "Leon",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -23929,6 +24296,7 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -23937,6 +24305,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -24147,6 +24516,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -24158,6 +24528,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -24261,6 +24632,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -24270,6 +24642,7 @@
             "Leon",
             "Lexaeus",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -24377,6 +24750,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -24388,6 +24762,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -24493,6 +24868,7 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -24501,6 +24877,7 @@
             "Larxene",
             "Leon",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
@@ -24797,6 +25174,7 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
+            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -24808,6 +25186,7 @@
             "Lexaeus",
             "Luxord",
             "Marluxia",
+            "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
             "Pete OC II",
