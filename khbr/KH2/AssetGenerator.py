@@ -163,7 +163,6 @@ class AssetGenerator:
                     }
 
         if rvlrando:
-            print("uhh")
             rando_type = rvlrando.replace("revenge_limit_rando", "")
             karma_values = [92.0, 75.0, 92.0, 75.0, 100.0, 75.0, 75.0, 55.0, 75.0, 75.0, 75.0, 75.0, 100.0, 100.0, 75.0, 75.0, 75.0, 50.0, 80.0, 75.0, 100.0, 75.0, 100.0, 75.0, 100.0, 5.0, 200.0, 200.0, 200.0, 200.0, 50.0, 80.0, 60.0, 60.0, 60.0, 60.0, 50.0, 40.0, 40.0, 75.0, 100.0, 75.0, 100.0, 150.0, 125.0, 50.0, 50.0, 30.0, 60.0, 60.0, 100.0, 100.0, 100.0, 100.0, 80.0, 70.0, 60.0, 50.0, 100.0, 80.0, 60.0, 40.0, 100.0, 80.0, 60.0, 40.0, 100.0, 80.0, 60.0, 40.0, 100.0, 80.0, 60.0, 40.0, 50.0, 95.0, 90.0, 85.0, 80.0, 100.0, 40.0]
             karma_values += [100 for _ in range(150)] # The number of scripts to modify that don't normally change the revenge value from the default of 100
@@ -180,7 +179,6 @@ class AssetGenerator:
             else:
                 raise Exception("Invalid Karma Limit Value: {}".format(rando_type))
 
-            print("Ok here")
             objdir = os.path.join(os.path.dirname(__file__), "data", "bdscript", "obj")
             for modelname in os.listdir(objdir):
                 aifiles = os.listdir(os.path.join(objdir, modelname))
@@ -219,7 +217,7 @@ class AssetGenerator:
 
     def generateMsns(self, msn_map, msninfo):
         for oldmsn in msn_map:
-            
+
             new_msn_mapping = msn_map.get(oldmsn)
             if type(new_msn_mapping) == str:
                 new_msn_mapping = {"name": new_msn_mapping}
