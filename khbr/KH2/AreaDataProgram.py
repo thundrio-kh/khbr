@@ -67,8 +67,12 @@ class AreaDataProgram:
         elif capacity:
             self.add_command("Capacity", str(capacity))
     def set_jump(self, world, room, program, fadetype="16386", jumptype="2", entrance="0"):
+        # TODO make this print a warning and not do anything if there is no existing jump
         parameters = "Type {} World {} Area {} Entrance {} LocalSet {} FadeType {}".format(jumptype, world, room, entrance, program, fadetype)
-        self.add_command("SetJump", parameters)
+        if self.has_command("SetJump"):
+            self.add_command("SetJump", parameters)
+        else:
+            print("Trying to SetJump on a program that does not have one is not allowed")
     def set_open_menu(self, open_menu):
         if open_menu:
             self.add_command("SetPartyMenu", "1")
