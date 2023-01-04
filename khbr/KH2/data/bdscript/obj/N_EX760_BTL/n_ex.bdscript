@@ -782,9 +782,7 @@ L479:
  popToWp W4416
  pushImm 0
  popToWp W4396
- pushFromPWp W4400
- pushImm 567
- syscall 1, 114 ; trap_obj_search_by_entry (2 in, 0 out)
+ 
  pushFromFSp 0
  pushImm 128
  pushImm 0
@@ -3405,9 +3403,6 @@ L6690:
  pushImm 0
  memcpy 0
 L6700:
- pushFromPWp W4400
- pushFromPAi L13159 ; ___ai idle_time (L13159)
- syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L6712
 L6708:
  pushFromPAi L12896 ; ___ai capture_false (L12896)
@@ -3487,21 +3482,6 @@ L6783:
  pushFromFSp 0
  pushFromPSp 32
  syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
- pushFromPWp W4400
- pushFromPSp 48
- pushImmf 100
- pushImmf 150
- syscall 1, 247 ; trap_bg_get_random_pos (3 in, 1 out)
- memcpyToSp 16, 80
- pushFromPSp 80
- syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
- pushFromPWp W4400
- syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
- pushFromPWp W4400
- fetchValue 4
- pushImm 0
- pushImmf 0
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
  ret 
 L6918:
  popToSp 0
@@ -3545,21 +3525,6 @@ L6918:
  pushFromFSp 0
  pushFromPSp 32
  syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
- pushFromPWp W4400
- pushFromPSp 48
- pushImmf 100
- pushImmf 150
- syscall 1, 247 ; trap_bg_get_random_pos (3 in, 1 out)
- memcpyToSp 16, 80
- pushFromPSp 80
- syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
- pushFromPWp W4400
- syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
- pushFromPWp W4400
- fetchValue 4
- pushImm 0
- pushImmf 0
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
  ret 
 L7053:
  popToSp 0
@@ -3599,21 +3564,6 @@ L7053:
  pushFromFSp 0
  pushFromPSp 16
  syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
- pushFromPWp W4400
- pushFromPSp 32
- pushImmf 100
- pushImmf 150
- syscall 1, 247 ; trap_bg_get_random_pos (3 in, 1 out)
- memcpyToSp 16, 48
- pushFromPSp 48
- syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
- pushFromPWp W4400
- syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
- pushFromPWp W4400
- fetchValue 4
- pushImm 0
- pushImmf 0
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
  ret 
 L7179:
  popToSp 0
@@ -3707,21 +3657,6 @@ L7342:
  syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
  jmp L7387
 L7387:
- pushFromPWp W4400
- pushFromPSp 48
- pushImmf 300
- pushImmf 450
- syscall 1, 247 ; trap_bg_get_random_pos (3 in, 1 out)
- memcpyToSp 16, 80
- pushFromPSp 80
- syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
- pushFromPWp W4400
- syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
- pushFromPWp W4400
- fetchValue 4
- pushImm 0
- pushImmf 0
- syscall 1, 11 ; trap_sysobj_motion_start (3 in, 0 out)
  ret 
 L7423:
  popToSp 0
