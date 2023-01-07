@@ -4066,7 +4066,7 @@ Rapid Thruster WI:
       - 0
       - 0
 Riku:
-  can_be_enemy: false
+  can_be_enemy: true
   aimods: 
   - name: N_EX940_BTL/n_ex.bdscript
     type: obj

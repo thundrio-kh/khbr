@@ -19831,7 +19831,7 @@
             0
         ],
         "name": "Riku",
-        "can_be_enemy": false,
+        "can_be_enemy": true,
         "aimods": [
             {
                 "name": "N_EX940_BTL/n_ex.bdscript",
