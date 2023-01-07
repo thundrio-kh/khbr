@@ -182,8 +182,8 @@ class KingdomHearts2:
             tron = {'ObjectId': 863, 'Serial': 13, 'index': 'new'}
             rand_seed.add_spawn("Space Paranoids", "Central Computer Core", "b_61", "69", "new", tron)
             if not "Final Xemnas" in rand_seed.ai_mods:
-                rand_seed.ai_mods["Final Xemnas"] = "Party Rando"
-                rand_seed.ai_mods["Final Xemnas (Data)"] = "Party Rando"
+                rand_seed.ai_mods["Final Xemnas"] = "Final Xemnas"
+                rand_seed.ai_mods["Final Xemnas (Data)"] = "Final Xemnas (Data)"
 
         rand_seed_json= rand_seed.toJson()
         if not rand_seed_json:
