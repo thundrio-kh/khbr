@@ -107,6 +107,27 @@ class ModWriter:
             ]
         }
 
+    def writeMemt(self, data):
+        outfn = os.path.join(self.outdir, "files", "root", "memt.list")
+        fn = os.path.join("files", "root", "memt.list")
+        self.write_method(outfn, fn, data)
+        return {
+            "name": "03system.bin",
+            "method": "binarc",
+            "source": [
+                {
+                    "name": "memt",
+                    "type": "list",
+                    "method": "copy",
+                    "source": [
+                        {
+                            "name": fn
+                        }
+                    ]
+                }
+            ]
+        }
+
     def writeMset(self, mset_fn, data):
         outfn = os.path.join(self.outdir, "files", "obj", mset_fn)
         fn = os.path.join("files", "obj", mset_fn)

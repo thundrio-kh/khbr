@@ -32,20 +32,20 @@ class CommandManager:
         ]
         self.read_bin(binfn)
     def read_bin(self, fn):
-        memt = BinaryReader(fn)
-        self.file_version = memt.readInt32()
-        self.num_entries = memt.readInt32()
+        cmd = BinaryReader(fn)
+        self.file_version = cmd.readInt32()
+        self.num_entries = cmd.readInt32()
 
         self.entries = []
         for _ in range(self.num_entries):
             ent = {}
             for ofs in self.schema:
-                ent[ofs[0]] = memt.readType(ofs[1], unpack=True)
+                ent[ofs[0]] = cmd.readType(ofs[1], unpack=True)
             self.entries.append(ent)
-        # We don't care to edit the table at the end of the memt file, so just call it a generic "footer"
-        self.footer = memt.readRest()
+        # We don't care to edit the table at the end of the cmd file, so just call it a generic "footer"
+        self.footer = cmd.readRest()
         if len(self.entries) != self.num_entries:
-            raise Exception("Error, memt specified {} entries but only found {}".format(self.num_entries, len(self.entries)))
+            raise Exception("Error, cmd specified {} entries but only found {}".format(self.num_entries, len(self.entries)))
     def write_entries(self, bw):
         bw.writeInt32(self.file_version)
         bw.writeInt32(len(self.entries))

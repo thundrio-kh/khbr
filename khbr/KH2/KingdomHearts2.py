@@ -82,7 +82,11 @@ class KingdomHearts2:
             "remove_cutscenes": {"display_name": "Remove Cutscenes", "description": "Removes as many cutscenes from the game as possible. 3 different levels. 1 - Minimal: Remove as many cutscenes as possible without causing side effects. 2 - Non-Reward: Also remove cutscenes prior to forced fights, which causes the 'continue' on game over to work like 'retry' in later games (can be worked around easily with the auto-save mod). 3 - Maximum: Also remove cutscenes prior to receiving popup rewards, which causes the popops to not appear (although you still get the rewards, and they still show up on the tracker).",
                                 "possible_values": [], "hidden_values": ["Disabled", "Minimal", "Non-Reward", "Maximum"]},
             "revenge_limit_rando": {"display_name": "Revenge Limit Randomizer", "description": "Randomizes the revenge value limit of each enemy/boss in the game. Can be either set to 0, set to basically infinity, randomly swapped, or set to a random value between 0 and 200",
-                                "possible_values": [], "hidden_values": ["Vanilla", "Set 0", "Set Infinity", "Random Swap", "Random Values"]}
+            "costume_rando": {"display_name": "Costume Randomizer (Beta)", "description": "Randomizes the different costumes that Sora/Donald/Goofy switch between in the different worlds (IE Space Paranoids could now be default sora, while anywhere default sora is used could be Christmas Town Sora",
+                                "possible_values": [], "hidden_values": [False, True]},
+            "party_member_rando": {"display_name": "Revenge Limit Randomizer (Beta)", "description": "Randomizes the World Character party member in each world.",
+                                "possible_values": [], "hidden_values": [False, True]},
+
         }
 
     def get_valid_enemies(self):
@@ -101,6 +105,10 @@ class KingdomHearts2:
             utility_mods.append("retry_data_final_xemnas")
         if options.get("retry_dark_thorn"):
             utility_mods.append("retry_dark_thorn")
+        if options.get("costume_rando"):
+            utility_mods.append("costume_rando")
+        if options.get("party_member_rando"):
+            utility_mods.append("party_member_rando")
         rmcs = options.get("remove_cutscenes", "Disabled")
         if rmcs and rmcs != "Disabled":
             utility_mods.append("remove_cutscenes{}".format(options.get("remove_cutscenes")))
@@ -168,6 +176,14 @@ class KingdomHearts2:
         rand_seed.set_dark_thorn_retry(retry_dt)
         if retry_dt:
             config.utility_mods.remove("retry_dark_thorn")
+
+        party_rando = "party_member_rando" in config.utility_mods
+        if party_rando:
+            tron = {'ObjectId': 863, 'Serial': 13, 'index': 'new'}
+            rand_seed.add_spawn("Space Paranoids", "Central Computer Core", "b_61", "69", "new", tron)
+            if not "Final Xemnas" in rand_seed.ai_mods:
+                rand_seed.ai_mods["Final Xemnas"] = "Party Rando"
+                rand_seed.ai_mods["Final Xemnas (Data)"] = "Party Rando"
 
         rand_seed_json= rand_seed.toJson()
         if not rand_seed_json:
@@ -304,6 +320,10 @@ class KingdomHearts2:
         assetgenerator.generateSpawns(randomization.get("spawns", ""), randomization.get("subtract_map"))
         assetgenerator.generateCustomMoveset()
         assetgenerator.generateCustomCmd(randomization.get("cmd_mods", {}))
+        randomize_party = "party_member_rando" in utility_mods
+        randomize_costumes = "costume_rando" in utility_mods
+        if randomize_party or randomize_costumes:
+            assetgenerator.generateCustomMemt(randomize_party, randomize_costumes)
 
         if DIAGNOSTICS:
             end_time = time.time()

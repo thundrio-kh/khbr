@@ -1,4 +1,5 @@
 from khbr.KH2.CommandManager import CommandManager
+from khbr.KH2.MemtManager import MemtManager
 from khbr.textutils import final_fight_text
 from khbr.KH2.Mission import Mission
 from khbr.KH2.AiManager import AiManager
@@ -124,6 +125,78 @@ class AssetGenerator:
             print(cmd)
         asset = self.modwriter.writeCmd(cmd.dump_bin())
         self.assets.append(asset)
+
+    def generateCustomMemt(self, randomize_party, randomize_costumes):
+        memt = MemtManager(os.path.join(os.path.dirname(__file__), "data", "bin", "memt.bin"))
+
+        if randomize_costumes:
+            # Costume rando
+            
+            wtypes = ["v", "wi", "nm", "xm", "tr"]
+            replacements = {}
+            sora_shuffled = list(wtypes)
+            random.shuffle(sora_shuffled)
+            sora_replacements = {wtypes[i]:sora_shuffled[i] for i in range(len(wtypes))}
+            donald_shuffled = list(wtypes)
+            random.shuffle(donald_shuffled)
+            donald_replacements = {wtypes[i]:donald_shuffled[i] for i in range(len(wtypes))}
+            goofy_shuffled = list(wtypes)
+            random.shuffle(goofy_shuffled)
+            goofy_replacements = {wtypes[i]:goofy_shuffled[i] for i in range(len(wtypes))}
+
+            for entry in memt.entries:
+                for k in memt.sora_keys:
+                    old_value = entry[k]
+                    if old_value in memt.costume_map:
+                        category = memt.costume_map[old_value]
+                        new_category = sora_replacements[category]
+                        new_value = memt.costumes["sora"][k][new_category]
+                        entry[k] = new_value
+                old_value = entry["Friend 1 (Donald)"]
+                if old_value in memt.costume_map:
+                    category = memt.costume_map[old_value]
+                    new_category = donald_replacements[category]
+                    new_value = memt.costumes["Friend 1 (Donald)"][new_category]
+                    entry["Friend 1 (Donald)"] = new_value
+                old_value = entry["Friend 2 (Goofy)"]
+                if old_value in memt.costume_map:
+                    category = memt.costume_map[old_value]
+                    new_category = goofy_replacements[category]
+                    new_value = memt.costumes["Friend 2 (Goofy)"][new_category]
+                    entry["Friend 2 (Goofy)"] = new_value
+
+        if randomize_party:
+            # Party member rando
+
+            party_member_map = {}
+            for k,v in memt.party_members.items():
+                for obj_id in v:
+                    party_member_map[obj_id] = k
+            original = list(memt.party_members.keys())
+            shuffled = list(memt.party_members.keys())
+            random.shuffle(shuffled)
+            replacements = {}
+            for i in range(len(original)):
+                replacements[original[i]] = shuffled[i]
+            for entry in memt.entries:
+                # donald_value = entry["Friend 1 (Donald)"]
+                # if donald_value in party_members["donald"]: # that means we are allowed to change the value
+                #     entry["Friend 1 (Donald)"] = random.choice(party_members[replacements["donald"]])
+                # goofy_value = entry["Friend 2 (Goofy)"]
+                # if goofy_value in party_members["goofy"]: # that means we are allowed to change the value
+                #     entry["Friend 1 (Goofy)"] = random.choice(party_members[replacements["goofy"]])
+                worldvalue = entry["World Character"]
+                if worldvalue:
+                    worldfriend = party_member_map[worldvalue]
+                entry["World Character"] = random.choice(memt.party_members[replacements[worldfriend]])
+            print(replacements) # TODO remove debug
+
+        asset = self.modwriter.writeMemt(memt.dump_bin())
+        existingasset = self.find_asset("03system.bin")
+        if existingasset:
+            existingasset["source"].append(asset["source"][0])
+        else:
+            self.assets.append(asset)
 
     def generateAiMods(self, ai_mods, rvlrando=None):
         # Sort of a known issue but this will apply all the old and new mods for an ai, may cause issues someday
