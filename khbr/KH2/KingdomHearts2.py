@@ -61,7 +61,8 @@ class KingdomHearts2:
             # "lua_bosses": {"display_name": "Advanced Boss Replacements (Must setup LuaBackend hook)", "description": "Takes advantage of Lua scripting and other methods to include bosses that are more difficult to randomize (ex: Final Xemnas). Generates a lua script that must be loaded via ModManager.",
             #                     "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "mickey_rule": {"display_name": "Mickey Appearance Settings", "description": "Choose when Mickey appears. Options are 'follow', where mickey appears for the same bosses as in the vanilla game, regardless of their location. 'stay', where mickey appears in the same locations as in the vanilla game, regardless of the location. 'all', mickey will appear for every boss in the game, regardless of if mickey normally apepars there. 'none', mickey will never appear. Might make PS2 boss fights less stable",
-            "scale_boss_stats": {"display_name": "Scale HP to Original Boss", "description": "Attempts force bosses level/HP to the scale of the boss it is replacing. When turned off uses the games scaling which is partially based on the battle level of the world except for Datas/Terra which are always level 99.",
+                                "type": "boss", "possible_values": ["follow", "stay", "all", 'none'], "hidden_values": []},
+            "scale_boss_stats": {"display_name": "Scale HP to Original Boss", "description": "Attempts to force bosses level/HP to the scale of the boss it is replacing. When turned off uses the games scaling which is partially based on the battle level of the world except for Datas/Terra which are always level 99.",
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
         }
     def get_hidden_options(self):
@@ -69,8 +70,6 @@ class KingdomHearts2:
         return {
             "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game has more limited enemy randomization capabilities. Turn this option on if playing on PC to remove these constraints.",
                                 "possible_values": [False, True], "hidden_values": []},
-            "scale_boss_stats": {"display_name": "Scale Bosses", "description": "Attempts force bosses level/HP to the scale of the boss it is replacing. When turned off uses the games scaling which is partially based on the battle level of the world except for Datas/Terra which are always level 99.",
-                                "type": "boss", "possible_values": [True, False], "hidden_values": []},
             # utility mod options
             "remove_damage_cap": {"display_name": "Remove Damage Cap", "description": "Removes the damage cap for all enemies in the game.",
                                 "possible_values": [], "hidden_values": [False, True]},
