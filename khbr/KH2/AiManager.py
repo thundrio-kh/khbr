@@ -15,7 +15,7 @@ class AiManager:
             return
         act_table_syscall = re.compile(r'pushImm .*\n.*; trap_act_table_add \(12 in, 0 out\)(\n)')
         if act_table_syscall.search(self.script):
-            self.script = act_table_syscall.sub(lambda m: " syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)\n pushFromFSp 0\n pushImmf {}\n syscall 2, 76 ; trap_enemy_set_karma_limit \n".format(str(available_values.pop())), self.script, count=1)
+            self.script = act_table_syscall.sub(lambda m: "syscall 1, 6 ; trap_act_table_add (12 in, 0 out)\n pushFromFSp 0\n pushImmf {}\n syscall 2, 76 ; trap_enemy_set_karma_limit \n".format(str(available_values.pop())), self.script, count=1)
         return
 
     def get_script(self):

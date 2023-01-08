@@ -254,13 +254,13 @@ class AssetGenerator:
 
             objdir = os.path.join(os.path.dirname(__file__), "data", "bdscript", "obj")
             for modelname in os.listdir(objdir):
-                aifiles = os.listdir(os.path.join(objdir, modelname))
+                aifiles = [f for f in os.listdir(os.path.join(objdir, modelname)) if "original" not in f]
                 if len(aifiles) != 1:
                     raise Exception("Wrong number of files for {}: {}".format(modelname, len(aifiles)))
                 if modelname in created_mods:
                     created_mods[modelname]["manager"].set_karma_limit(karma_values)
                 else:
-                    modfilename = os.path.join(objdir, modelname, aifiles[0])
+                    modfilename = os.path.join(objdir, modelname, aifiles[0]).replace(".bdscript", ".original.bdscript")
                     with open(modfilename) as f:
                         ai_manager = AiManager(modfilename, f.read())
 

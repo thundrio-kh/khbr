@@ -525,9 +525,9 @@ L934:
  popToSp 4
  popToSp 0
  pushFromFSp 0
- pushImmf -500
- pushImmf 500
- pushImmf -2400
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
  pushFromFSp 4
  gosub 4, L954
  ret 
@@ -564,9 +564,9 @@ L1001:
  popToSp 0
  popToSp 4
  pushFromPSp 32
- pushImmf -3000
- pushImmf -3000
- pushImmf -3000
+ pushImmf 30
+ pushImmf 100
+ pushImmf 0
  pushImmf 1
  gosub 16, L954
  pushFromFSp 4
@@ -7978,9 +7978,9 @@ L15517:
 L15552:
  popToSp 0
  pushFromPSp 16
- pushImmf 300
- pushImmf 500
- pushImmf -2400
+ pushImmf 0
+ pushImmf 0
+ pushImmf 1000
  pushImmf 1
  gosub 12, L954
  pushFromPWp W0
@@ -7989,7 +7989,7 @@ L15552:
  pushFromPSp 16
  pushImmf 0
  pushImmf 0
- pushImmf -5001
+ pushImmf 1
  pushImmf 1
  gosub 12, L954
  pushFromFSp 0
@@ -8033,8 +8033,8 @@ L15552:
  drop 
  pushFromPSp 16
  pushImmf 0
- pushImmf -1000
- pushImmf -1999
+ pushImmf 0
+ pushImmf 1
  pushImmf 1
  gosub 12, L954
  pushFromPWp W0
@@ -8042,8 +8042,8 @@ L15552:
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
  pushFromPSp 16
  pushImmf 0
- pushImmf -1000
- pushImmf -2000
+ pushImmf 0
+ pushImmf 0
  pushImmf 1
  gosub 12, L954
  pushFromPWp W0
