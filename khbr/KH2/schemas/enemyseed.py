@@ -62,12 +62,13 @@ class EnemySeed:
         if new_boss_object["name"] == "Shadow Roxas":
             return # Nothing to do in this case
         self.update_extras(old_boss_object, new_boss_object, world, room, spawnpoint, spid)
-        self.update_msn_mapping(old_boss_object, new_boss_object)
-        self.update_scaling(old_boss_object, new_boss_object)
         self.update_objentry(new_boss_object)
         self.update_aimod(old_boss_object, new_boss_object)
         self.update_luamod(new_boss_object)
         self.add_cmdmod(new_boss_object)
+        if old_boss_object["type"] == "boss":
+            self.update_msn_mapping(old_boss_object, new_boss_object)
+            self.update_scaling(old_boss_object, new_boss_object)
 
     def update_extras(self, old_boss_object, new_boss_object, world, room, spawnpoint, spid):
         # self, world, room, spawnpoint, spid, entity, new_boss_object

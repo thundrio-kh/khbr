@@ -249,7 +249,6 @@ class KingdomHearts2:
                                     new_boss_object = self.enemy_manager.get_new_boss_object(old_boss_object, new_boss, rand_seed)
 
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_boss_object)
-                                    #TODO spoilers should move into rand_seed
                                     rand_seed.update_seed(old_boss_object, new_boss_object, w, r, sp, i)
 
                                 elif rand_seed.config.enemies and not entity["isboss"]:
@@ -269,6 +268,8 @@ class KingdomHearts2:
                                         bosses_as_enemies += 1
                                     created_enemies.append(new_enemy_object)
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_enemy_object)
+                                    rand_seed.update_seed(old_enemy_object, new_enemy_object, w, r, sp, i)
+            
                         for aimod in spawnpoint.get("aimods",[]):
                             createmod=True
                             for var in aimod["vars"]:
