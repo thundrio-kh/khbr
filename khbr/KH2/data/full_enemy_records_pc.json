@@ -12113,6 +12113,7 @@
             "Hydra",
             "Jafar",
             "Leon",
+            "Lexaeus",
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
@@ -15572,6 +15573,12 @@
             0
         ],
         "name": "Lexaeus",
+        "aimods": [
+            {
+                "name": "N_CM020_BTL/n_cm.bdscript",
+                "type": "obj"
+            }
+        ],
         "tags": [
             "organization"
         ],
@@ -15594,10 +15601,6 @@
             "unchanged_file_size": false
         },
         "blacklist_destination": [
-            "Vexen",
-            "Groundshaker",
-            "Past Pete",
-            "Prison Keeper",
             "Axel II",
             "Cerberus"
         ],
@@ -15615,7 +15618,6 @@
             "Lexaeus"
         ],
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -15701,6 +15703,12 @@
             1
         ],
         "name": "Lexaeus (Data)",
+        "aimods": [
+            {
+                "name": "N_CM020_BTL/n_cm.bdscript",
+                "type": "obj"
+            }
+        ],
         "enmp_index": 214,
         "hp": 100,
         "level": 99,
@@ -15717,10 +15725,6 @@
             "unchanged_file_size": false
         },
         "blacklist_destination": [
-            "Vexen",
-            "Groundshaker",
-            "Past Pete",
-            "Prison Keeper",
             "Axel II",
             "Cerberus"
         ],
@@ -15736,7 +15740,6 @@
         "variationof": null,
         "children": [],
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -17235,6 +17238,7 @@
             "Hostile Program",
             "Jafar",
             "Leon",
+            "Lexaeus",
             "Oogie Boogie",
             "Past Pete",
             "Pete Cups",
@@ -18034,6 +18038,7 @@
             "Hostile Program",
             "Jafar",
             "Leon",
+            "Lexaeus",
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
@@ -23838,6 +23843,12 @@
             0
         ],
         "name": "Twilight Thorn",
+        "aimods": [
+            {
+                "name": "B_EX100/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 86,
         "tags": [
@@ -23895,7 +23906,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -24076,6 +24086,7 @@
             "Hostile Program",
             "Jafar",
             "Leon",
+            "Lexaeus",
             "Oogie Boogie",
             "Past Pete",
             "Pete Cups",

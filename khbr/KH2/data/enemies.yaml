@@ -3163,6 +3163,9 @@ Leon:
       - 2
       - 0
 Lexaeus:
+  aimods: 
+  - name: N_CM020_BTL/n_cm.bdscript
+    type: obj
   tags:
   - organization
   enabled: true
@@ -3183,10 +3186,6 @@ Lexaeus:
   pc:
     unchanged_file_size: false
   blacklist_destination:
-  - Vexen # player can get thrown oob
-  - Groundshaker # player can get thrown oob
-  - Past Pete # Can get thrown OOB
-  - Prison Keeper
   - Axel II
   - Cerberus # Phase 3 can result in pcsx2 crashes
   variations:
@@ -5097,6 +5096,9 @@ Trick Ghost:
       - 0
       - 0
 Twilight Thorn:
+  aimods:
+  - name: B_EX100/b_ex.bdscript
+    type: obj
   enabled: true
   enmp_index: 0x56
   tags:
