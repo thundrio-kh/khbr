@@ -42,8 +42,7 @@ L54:
  eqz 
  dup 
  jz L71
- pushFromFSp 0
- syscall 1, 40 ; trap_obj_is_pirate_shade (1 in, 1 out)
+ pushImm 0
  eqzv 
 L71:
  jz L89
@@ -646,8 +645,7 @@ L1139:
  pushFromPAi L7208 ; ___ai mode_battle (L7208)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L1160:
- pushFromFSp 0
- syscall 1, 40 ; trap_obj_is_pirate_shade (1 in, 1 out)
+ pushImm 0
  jz L1187
  pushFromFSp 0
  syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)

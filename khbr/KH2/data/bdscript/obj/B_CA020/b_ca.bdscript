@@ -391,8 +391,7 @@ L695:
  eqz 
  dup 
  jz L712
- pushFromFSp 0
- syscall 1, 40 ; trap_obj_is_pirate_shade (1 in, 1 out)
+ pushImm 0
  eqzv 
 L712:
  jz L730
@@ -556,8 +555,7 @@ L968:
  pushFromPAi L7190 ; ___ai mode_battle (L7190)
  syscall 1, 9 ; trap_obj_act_push (2 in, 0 out)
 L989:
- pushFromFSp 0
- syscall 1, 40 ; trap_obj_is_pirate_shade (1 in, 1 out)
+ pushImm 0
  jz L1016
  pushFromFSp 0
  syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)

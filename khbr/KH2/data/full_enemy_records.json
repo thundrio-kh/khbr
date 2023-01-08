@@ -3180,7 +3180,7 @@
         "model": "B_LK110_PHANTOM",
         "obj_id": 2099,
         "size": 0,
-        "type": "boss",
+        "type": "enemy",
         "variations": [
             "Scar Ghost"
         ],
@@ -3221,62 +3221,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null,
-        "available": [
-            "Scar Ghost",
-            "Armor Xemnas I",
-            "Armor Xemnas II",
-            "Axel I",
-            "Axel II",
-            "Barbossa",
-            "Blizzard Lord",
-            "Cerberus",
-            "Cloud",
-            "Dark Thorn",
-            "Demyx",
-            "Final Xemnas",
-            "MCP",
-            "Grim Reaper I",
-            "Hades II",
-            "Hayner",
-            "Hercules",
-            "Hostile Program",
-            "Jafar",
-            "Larxene",
-            "Leon",
-            "Lexaeus",
-            "Luxord",
-            "Marluxia",
-            "Oogie Boogie",
-            "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
-            "Prison Keeper",
-            "Riku",
-            "Roxas",
-            "Saix",
-            "Sark",
-            "Scar",
-            "Seifer",
-            "Sephiroth",
-            "Setzer",
-            "Shan-Yu",
-            "Terra",
-            "The Beast",
-            "The Experiment",
-            "Thresholder",
-            "Tifa",
-            "Twilight Thorn",
-            "Vexen",
-            "Vivi",
-            "Volcano Lord",
-            "Xaldin",
-            "Xemnas",
-            "Xigbar",
-            "Yuffie",
-            "Zexion"
-        ]
+        "luamod": null
     },
     "Shadow (NM)": {
         "vars": [
@@ -4063,6 +4008,12 @@
             0
         ],
         "name": "Undead Pirate A",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4098,7 +4049,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4128,6 +4078,12 @@
             0
         ],
         "name": "Undead Pirate A (Jumps up)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4161,7 +4117,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4191,6 +4146,12 @@
             0
         ],
         "name": "Undead Pirate A (Jumps Forward)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4224,7 +4185,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4254,6 +4214,12 @@
             0
         ],
         "name": "Undead Pirate A (90 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4287,7 +4253,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4317,6 +4282,12 @@
             0
         ],
         "name": "Undead Pirate A (93 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4350,7 +4321,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4380,6 +4350,12 @@
             0
         ],
         "name": "Undead Pirate A (22 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4413,7 +4389,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4443,6 +4418,12 @@
             0
         ],
         "name": "Undead Pirate A (24 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4476,7 +4457,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4506,6 +4486,12 @@
             0
         ],
         "name": "Undead Pirate A (20 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4539,7 +4525,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4569,6 +4554,12 @@
             0
         ],
         "name": "Undead Pirate A (91 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4602,7 +4593,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
