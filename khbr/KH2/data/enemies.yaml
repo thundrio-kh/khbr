@@ -355,7 +355,6 @@ Gargoyle Knight:
   sizeTag: memorySmall
   type: enemy
   isnightmare: true
-  replace_as: Gargoyle Knight # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   variations:
     Gargoyle Knight (30 0):
       vars:
@@ -381,7 +380,6 @@ Gargoyle Warrior:
   enabled: true
   enmp_index: 999
   model: M_BB010_AX
-  replace_as: Gargoyle Warrior # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   obj_id: 368
   isnightmare: true
   sizeTag: memorySmall
@@ -2405,14 +2403,12 @@ Gambler:
       vars:
       - 0
       - 0
-    # Nobody "really" wants this, it would be cool for nightmare mode
-    # but it doesn't mesh with how I am doing the enemy mappings right now
-    # so #TODO to make this work in nightmare mode only
-    # Gambler (Summons Darkness):
-    #   enabled: false
-    #   vars:
-    #   - 1
-    #   - 0
+    Gambler (Summons Darkness):
+      enabled: false
+      isnightmare: true
+      vars:
+      - 1
+      - 0
     Gambler (5 0):
       vars:
       - 5

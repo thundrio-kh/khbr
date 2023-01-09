@@ -30,6 +30,8 @@ class EnemyManager:
             if not e_obj["enabled"]: 
                 if use_other_enemies and "other" in e_obj["tags"]:
                     pass
+                elif options.get("nightmare_enemies") and e_obj["isnightmare"]:
+                    pass
                 else:
                     continue
             
