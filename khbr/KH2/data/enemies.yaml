@@ -545,7 +545,7 @@ Scar Ghost:
   model: B_LK110_PHANTOM
   obj_id: 2099
   size: 0
-  type: boss
+  type: enemy
   variations:
     Scar Ghost:
       vars:
@@ -706,6 +706,9 @@ Trick Ghost (NM):
       - 0
       - 0
 Undead Pirate A:
+  aimods:
+  - name: B_CA020/b_ca.bdscript
+    type: obj
   enabled: true
   enmp_index: 999
   model: B_CA020
@@ -752,6 +755,9 @@ Undead Pirate A:
       - 91
       - 0
 Undead Pirate B:
+  aimods:
+  - name: B_CA030/b_ca.bdscript
+    type: obj
   enabled: true
   enmp_index: 999
   isnightmare: true
@@ -779,6 +785,9 @@ Undead Pirate B:
       - 92
       - 0
 Undead Pirate C:
+  aimods:
+  - name: B_CA040/b_ca.bdscript
+    type: obj
   enabled: true
   enmp_index: 999
   model: B_CA040
@@ -1388,7 +1397,7 @@ Bees (Disappearing):
   model: F_PO090
   obj_id: 1573
   size: 41084
-  replace_as: Bees
+  replace_as: Bees TT PO
   variationof: Bees TT PO
   type: enemy
   variations:

@@ -19,9 +19,27 @@ class EnemyManager:
         with open(os.path.join(self.basepath, fn)) as f:
             self.enemy_records = json.load(f)
             
-    def get_enemies(self):
+    def get_enemies(self, options):
         enemies = self.get_valid_enemies()
-        enabled_enemies = [self.enemy_records[e] for e in enemies if self.enemy_records[e]["enabled"]]
+
+        use_other_enemies = options.get("other_enemies")
+
+        enabled_enemies = []
+        for e in enemies:
+            e_obj = self.enemy_records[e]
+            if not e_obj["enabled"]: 
+                if use_other_enemies and "other" in e_obj["tags"]:
+                    pass
+                else:
+                    continue
+            
+            if not (use_other_enemies or options.get("selected_enemy")) and "pirate" in e_obj["tags"]:
+                e_obj["aimods"] = []
+        
+            enabled_enemies.append(e_obj)
+
+        self.remove_tag(enabled_enemies, "pirate")
+
         return enabled_enemies
 
     @staticmethod
@@ -33,7 +51,7 @@ class EnemyManager:
     @staticmethod
     def remove_tag(enemylist, tag):
         for enemy in enemylist:
-            enemy["tags"] = list(filter(lambda k: k != tag), enemylist)
+            enemy["tags"] = [t for t in enemy["tags"] if t != tag]
         return enemylist
 
     def create_enemy_records(self, ispc=False, getavail=True):
