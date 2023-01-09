@@ -19,7 +19,7 @@ class EnemySeed:
 
         # Temporary option needed during generating wild enemies to track enemies already used per room
         self.wild_enemy_set = set()
-            
+
     def toJson(self):
         return {
             "utility_mods": self.utility_mods,
@@ -140,16 +140,21 @@ class EnemySeed:
         if new_boss_object["obj_edits"]:
             self.object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
 
+    def _add_ai(self, ai_to_mod, data_for_mod):
+        #print("modding {} ai with {}".format(ai_to_mod, data_for_mod))
+        self.ai_mods[ai_to_mod] = data_for_mod
+
     def update_aimod(self, old_boss_object, new_boss_object):
+    
         # this is a wordy way of adding the old boss if it's a source old or new boss if it's a source new
         if len([m for m in new_boss_object.get("aimods",[]) if m.get("source", "new") == "new"]) > 0:
-            self.ai_mods[new_boss_object["name"]] = old_boss_object["name"]
+            self._add_ai(new_boss_object["name"], old_boss_object["name"])
         if len([m for m in old_boss_object.get("aimods",[]) if m.get("source", "new") == "old"]) > 0:
-            self.ai_mods[old_boss_object["name"]] = new_boss_object["name"]
+            self._add_ai(old_boss_object["name"], new_boss_object["name"])
 
         for add in new_boss_object["adds"]:
             if add.get("aimods"):
-                self.ai_mods[add["name"]] = old_boss_object["name"]
+                self._add_ai(add["name"], old_boss_object["name"])
 
     def update_luamod(self, new_boss_object):
         if new_boss_object.get("luamod"):

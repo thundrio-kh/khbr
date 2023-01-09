@@ -42,5 +42,6 @@ def get_schema():
         "roomsizemultiplier": 1,
         "unchanged_file_size": False,
         "obj_edits": {},
-        "luamod": None
+        "luamod": None,
+        "roomData": {}
     }
