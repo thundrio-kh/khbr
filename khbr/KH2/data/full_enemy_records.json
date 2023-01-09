@@ -52,7 +52,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bees TT PO": {
         "vars": [
@@ -111,7 +112,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Aerial Knocker": {
         "vars": [
@@ -168,7 +170,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Aerial Knocker (1 0)": {
         "vars": [
@@ -222,7 +225,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Aeriel Champ": {
         "vars": [
@@ -275,7 +279,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Aeroplane": {
         "vars": [
@@ -333,7 +338,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Armored Knight (NM)": {
         "vars": [
@@ -386,7 +392,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Armored Knight (1K Battle, Disappears)": {
         "vars": [
@@ -441,7 +448,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bolt Tower (MU)": {
         "vars": [
@@ -496,7 +504,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bolt Tower (RAW)": {
         "vars": [
@@ -551,7 +560,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bookmaster": {
         "vars": [
@@ -611,7 +621,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bookmaster (TR)": {
         "vars": [
@@ -667,7 +678,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bulky Vendor (Disappears)": {
         "vars": [
@@ -723,7 +735,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bulky Vendor": {
         "vars": [
@@ -782,7 +795,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bulky Vendor (NM) (Disappears)": {
         "vars": [
@@ -838,7 +852,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bulky Vendor (NM)": {
         "vars": [
@@ -894,7 +909,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Camo Cannon": {
         "vars": [
@@ -949,7 +965,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Cannon Gun WI": {
         "vars": [
@@ -1004,7 +1021,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Creeper Plant": {
         "vars": [
@@ -1062,7 +1080,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Creeper Plant (NM)": {
         "vars": [
@@ -1117,7 +1136,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Demyx's water form (EH)": {
         "vars": [
@@ -1174,7 +1194,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Emerald Blues": {
         "vars": [
@@ -1234,7 +1255,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Emerald Blues (TR)": {
         "vars": [
@@ -1289,7 +1311,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fortuneteller (AL)": {
         "vars": [
@@ -1355,7 +1378,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fortuneteller (AL) (14 20)": {
         "vars": [
@@ -1419,7 +1443,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fortuneteller (AL) (13 0)": {
         "vars": [
@@ -1483,7 +1508,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fortuneteller (AL) (10 32)": {
         "vars": [
@@ -1547,7 +1573,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fortuneteller (AL) (13 32)": {
         "vars": [
@@ -1611,7 +1638,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fortuneteller (AL) (1 30)": {
         "vars": [
@@ -1675,7 +1703,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fortuneteller (AL) (6 30)": {
         "vars": [
@@ -1739,7 +1768,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fortuneteller (AL) (7 0)": {
         "vars": [
@@ -1803,7 +1833,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fortuneteller (AL) (10 0)": {
         "vars": [
@@ -1867,7 +1898,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gargoyle Knight (30 0)": {
         "vars": [
@@ -1924,7 +1956,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gargoyle Knight (32 0)": {
         "vars": [
@@ -1981,7 +2014,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gargoyle Knight (34 0)": {
         "vars": [
@@ -2038,7 +2072,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gargoyle Knight (36 0)": {
         "vars": [
@@ -2095,7 +2130,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gargoyle Knight": {
         "vars": [
@@ -2154,7 +2190,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gargoyle Warrior (40 0)": {
         "vars": [
@@ -2211,7 +2248,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gargoyle Warrior (42 0)": {
         "vars": [
@@ -2268,7 +2306,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gargoyle Warrior (44 0)": {
         "vars": [
@@ -2325,7 +2364,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gargoyle Warrior (46 0)": {
         "vars": [
@@ -2382,7 +2422,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gargoyle Warrior": {
         "vars": [
@@ -2441,7 +2482,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hammer Frame": {
         "vars": [
@@ -2499,7 +2541,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hammer Frame (99 0)": {
         "vars": [
@@ -2553,7 +2596,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hot Rod": {
         "vars": [
@@ -2612,7 +2656,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Large Body WI": {
         "vars": [
@@ -2667,7 +2712,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Neoshadow": {
         "vars": [
@@ -2726,7 +2772,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Neoshadow (1 0)": {
         "vars": [
@@ -2782,7 +2829,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Neoshadow (44 0)": {
         "vars": [
@@ -2838,7 +2886,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Neoshadow (99 0)": {
         "vars": [
@@ -2894,7 +2943,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Neoshadow (NM)": {
         "vars": [
@@ -2947,7 +2997,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rabid Dog": {
         "vars": [
@@ -3002,7 +3053,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster (RAW)": {
         "vars": [
@@ -3056,7 +3108,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster (RAW) (1 0)": {
         "vars": [
@@ -3110,7 +3163,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Reckless": {
         "vars": [
@@ -3166,7 +3220,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Scar Ghost": {
         "vars": [
@@ -3221,7 +3276,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shadow (NM)": {
         "vars": [
@@ -3274,7 +3330,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shadow (RAW)": {
         "vars": [
@@ -3328,7 +3385,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shadow (RAW) (99 0)": {
         "vars": [
@@ -3382,7 +3440,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shaman": {
         "vars": [
@@ -3441,7 +3500,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shaman (1 0)": {
         "vars": [
@@ -3497,7 +3557,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Soldier (TR)": {
         "vars": [
@@ -3550,7 +3611,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Soldier (WI)": {
         "vars": [
@@ -3603,7 +3665,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Strafer": {
         "vars": [
@@ -3659,7 +3722,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Surveillance Robot (1K Battle) (Disappears)": {
         "vars": [
@@ -3716,7 +3780,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Surveillance Robot (TR)": {
         "vars": [
@@ -3772,7 +3837,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Surveillance Robot (TR) (2 0)": {
         "vars": [
@@ -3828,7 +3894,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Toy Soldier": {
         "vars": [
@@ -3888,7 +3955,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Toy Soldier (2 0)": {
         "vars": [
@@ -3945,7 +4013,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Trick Ghost (NM)": {
         "vars": [
@@ -4000,7 +4069,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate A": {
         "vars": [
@@ -4070,7 +4140,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate A (Jumps up)": {
         "vars": [
@@ -4138,7 +4209,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate A (Jumps Forward)": {
         "vars": [
@@ -4206,7 +4278,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate A (90 0)": {
         "vars": [
@@ -4274,7 +4347,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate A (93 0)": {
         "vars": [
@@ -4342,7 +4416,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate A (22 0)": {
         "vars": [
@@ -4410,7 +4485,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate A (24 0)": {
         "vars": [
@@ -4478,7 +4554,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate A (20 0)": {
         "vars": [
@@ -4546,7 +4623,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate A (91 0)": {
         "vars": [
@@ -4614,7 +4692,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate B": {
         "vars": [
@@ -4679,7 +4758,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate B (90 0)": {
         "vars": [
@@ -4742,7 +4822,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate B (93 0)": {
         "vars": [
@@ -4805,7 +4886,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate B (92 0)": {
         "vars": [
@@ -4868,7 +4950,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C": {
         "vars": [
@@ -4943,7 +5026,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (Jumps Down)": {
         "vars": [
@@ -5016,7 +5100,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (28 0)": {
         "vars": [
@@ -5089,7 +5174,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (91 0)": {
         "vars": [
@@ -5162,7 +5248,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (Jumps Up)": {
         "vars": [
@@ -5235,7 +5322,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (90 0)": {
         "vars": [
@@ -5308,7 +5396,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (13 0)": {
         "vars": [
@@ -5381,7 +5470,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (92 0)": {
         "vars": [
@@ -5454,7 +5544,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (93 0)": {
         "vars": [
@@ -5527,7 +5618,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (12 0)": {
         "vars": [
@@ -5600,7 +5692,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (6 0)": {
         "vars": [
@@ -5673,7 +5766,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (2 0)": {
         "vars": [
@@ -5746,7 +5840,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (8 0)": {
         "vars": [
@@ -5819,7 +5914,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Undead Pirate C (26 0)": {
         "vars": [
@@ -5892,7 +5988,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Wight Knight": {
         "vars": [
@@ -5948,7 +6045,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Vivi (clones)": {
         "vars": [
@@ -6003,7 +6101,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shadow Roxas": {
         "vars": [
@@ -6058,7 +6157,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Aerial Viking": {
         "vars": [
@@ -6114,7 +6214,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Aeroplane WI": {
         "vars": [
@@ -6169,7 +6270,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Air Pirate": {
         "vars": [
@@ -6223,7 +6325,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Air Pirate (1 0)": {
         "vars": [
@@ -6277,7 +6380,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Armor Xemnas I": {
         "msn": "EH24_MS110",
@@ -6480,6 +6584,11 @@
             0
         ],
         "name": "Armor Xemnas I",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -150
+        },
         "enabled": true,
         "enmp_index": 160,
         "hp": 100,
@@ -6545,6 +6654,11 @@
         ]
     },
     "Armor Xemnas II": {
+        "roomData": {
+            "bossX": 0,
+            "bossY": 14940,
+            "bossZ": 4511.38818359375
+        },
         "msn": "EH23_MS112",
         "program": 73,
         "outprogram": 84,
@@ -6619,6 +6733,7 @@
             "Demyx",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -6639,6 +6754,7 @@
             "Scar",
             "Seifer",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Storm Rider",
             "Terra",
@@ -6708,7 +6824,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Armored Knight (90 0)": {
         "vars": [
@@ -6762,7 +6879,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Assassin": {
         "vars": [
@@ -6819,7 +6937,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Assault Rider": {
         "vars": [
@@ -6876,7 +6995,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Axel I": {
         "vars": [
@@ -6884,6 +7004,11 @@
             0
         ],
         "name": "Axel I",
+        "roomData": {
+            "bossX": 82.84268188476562,
+            "bossY": -90,
+            "bossZ": 107.84269714355469
+        },
         "can_be_enemy": true,
         "enabled": true,
         "hp": 100,
@@ -6990,6 +7115,11 @@
             0
         ],
         "name": "Axel II",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -165
+        },
         "tags": [
             "organization",
             "roxas",
@@ -7152,6 +7282,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Banzai"
         ]
@@ -7210,7 +7341,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Barbossa": {
         "vars": [
@@ -7218,6 +7350,11 @@
             0
         ],
         "name": "Barbossa",
+        "roomData": {
+            "bossX": -530.52001953125,
+            "bossY": -45.31237030029297,
+            "bossZ": -334.4390869140625
+        },
         "aimods": [
             {
                 "name": "B_CA010/b_ca.bdscript",
@@ -7304,6 +7441,7 @@
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -7380,6 +7518,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Barrel"
         ]
@@ -7437,7 +7576,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Beffudler": {
         "vars": [
@@ -7490,7 +7630,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Berserker": {
         "vars": [
@@ -7548,7 +7689,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Blizzard Lord": {
         "msn": "AL03_MS103",
@@ -7562,6 +7704,11 @@
             0
         ],
         "name": "Blizzard Lord",
+        "roomData": {
+            "bossX": 270,
+            "bossY": 0,
+            "bossZ": 730
+        },
         "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 123,
@@ -7622,6 +7769,7 @@
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hayner",
             "Hercules",
             "Jafar",
@@ -7642,6 +7790,11 @@
         ]
     },
     "Blizzard Lord (Cups)": {
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -550
+        },
         "tags": [
             "cups",
             "large"
@@ -7765,7 +7918,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bolt Tower (1)": {
         "vars": [
@@ -7821,7 +7975,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bolt Tower DC": {
         "vars": [
@@ -7876,7 +8031,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Cannon Gun": {
         "vars": [
@@ -7936,7 +8092,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Cannon Gun (1)": {
         "vars": [
@@ -7992,9 +8149,15 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Cerberus": {
+        "roomData": {
+            "bossX": -611.3707885742188,
+            "bossY": 235.92300415039062,
+            "bossZ": -731.3707885742188
+        },
         "msn": "HE07_MS103",
         "mickey_source": true,
         "program": 114,
@@ -8066,6 +8229,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -8083,6 +8247,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Storm Rider",
             "The Beast",
             "The Experiment",
@@ -8098,6 +8263,11 @@
         ]
     },
     "Cerberus (Cups)": {
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -150
+        },
         "enabled": true,
         "msn_list": [
             {
@@ -8171,6 +8341,11 @@
         "luamod": null
     },
     "Cloud": {
+        "roomData": {
+            "bossX": 200.6020050048828,
+            "bossY": -0.0001509865978732705,
+            "bossZ": -307.20660400390625
+        },
         "can_be_enemy_override": true,
         "program": 196,
         "msn": "HE_COL_8_25",
@@ -8246,6 +8421,7 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -8266,6 +8442,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -8282,6 +8459,11 @@
         ]
     },
     "Cloud (1)": {
+        "roomData": {
+            "bossX": -200,
+            "bossY": -0.0001509865978732705,
+            "bossZ": -400
+        },
         "program": 196,
         "msn": "HE_COL_8_40",
         "room_size": 9.14,
@@ -8345,6 +8527,11 @@
         "luamod": null
     },
     "Cloud (2)": {
+        "roomData": {
+            "bossX": 200.6020050048828,
+            "bossY": 0,
+            "bossZ": -307.20660400390625
+        },
         "program": 196,
         "msn": "HE_COL_8_49",
         "room_size": 9.14,
@@ -8462,7 +8649,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Crescendo": {
         "vars": [
@@ -8517,7 +8705,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Crimson Jazz": {
         "vars": [
@@ -8577,7 +8766,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Crimson Jazz (1 0)": {
         "vars": [
@@ -8635,7 +8825,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Crimson Jazz (Zipliner)": {
         "vars": [
@@ -8693,7 +8884,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Crimson Jazz AL (8 1)": {
         "vars": [
@@ -8751,7 +8943,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Crimson Jazz AL (12 0)": {
         "vars": [
@@ -8809,7 +9002,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Crimson Jazz AL": {
         "vars": [
@@ -8869,7 +9063,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Dancer": {
         "vars": [
@@ -8927,7 +9122,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Dancer (99 0)": {
         "vars": [
@@ -8983,7 +9179,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Dark Thorn": {
         "mickey_source": true,
@@ -8992,6 +9189,11 @@
             0
         ],
         "name": "Dark Thorn",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -800
+        },
         "enabled": true,
         "enmp_index": 22,
         "hp": 100,
@@ -9057,6 +9259,7 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hayner",
             "Hercules",
             "Hostile Program",
@@ -9084,6 +9287,11 @@
             0
         ],
         "name": "Axel (Data)",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -165
+        },
         "tags": [
             "data",
             "organization"
@@ -9172,6 +9380,11 @@
             0
         ],
         "name": "Demyx (Data)",
+        "roomData": {
+            "bossX": 150,
+            "bossY": 0,
+            "bossZ": 300
+        },
         "tags": [
             "data",
             "organization"
@@ -9239,6 +9452,11 @@
             0
         ],
         "name": "Final Xemnas (Clone) (Data)",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 1200
+        },
         "tags": [
             "data",
             "organization",
@@ -9310,6 +9528,11 @@
             0
         ],
         "name": "Final Xemnas (Data)",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 1200
+        },
         "tags": [
             "data",
             "organization",
@@ -9394,6 +9617,11 @@
             0
         ],
         "name": "Luxord (Data)",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -400
+        },
         "tags": [
             "data",
             "organization",
@@ -9455,6 +9683,11 @@
             0
         ],
         "name": "Saix (Data)",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 400
+        },
         "tags": [
             "data",
             "organization"
@@ -9511,6 +9744,11 @@
             0
         ],
         "name": "Xaldin (Data)",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -400
+        },
         "tags": [
             "data",
             "organization"
@@ -9569,6 +9807,11 @@
             0
         ],
         "name": "Xemnas (Data)",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 1400
+        },
         "tags": [
             "data",
             "organization"
@@ -9630,6 +9873,11 @@
             0
         ],
         "name": "Xigbar (Data)",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 200
+        },
         "enabled": true,
         "tags": [
             "data",
@@ -9698,6 +9946,11 @@
             0
         ],
         "name": "Demyx",
+        "roomData": {
+            "bossX": 150,
+            "bossY": 0,
+            "bossZ": 300
+        },
         "tags": [
             "organization"
         ],
@@ -9767,6 +10020,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -9785,6 +10039,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "The Beast",
             "The Experiment",
             "Thresholder",
@@ -9852,6 +10107,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -9863,6 +10119,7 @@
             "Demyx OC",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -9884,6 +10141,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -9950,7 +10208,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Devastator": {
         "vars": [
@@ -10011,7 +10270,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Devastator (Ranged Start)": {
         "vars": [
@@ -10069,7 +10329,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Devastator (Ranged)": {
         "vars": [
@@ -10127,7 +10388,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Dragoon": {
         "vars": [
@@ -10186,7 +10448,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Dragoon (99 0)": {
         "vars": [
@@ -10243,7 +10506,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Driller Mole": {
         "vars": [
@@ -10299,7 +10563,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Driller Mole NM": {
         "vars": [
@@ -10352,7 +10617,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Dusk": {
         "vars": [
@@ -10410,7 +10676,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Dusk (99 0)": {
         "vars": [
@@ -10466,7 +10733,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Ed": {
         "program": 51,
@@ -10526,6 +10794,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Ed"
         ]
@@ -10585,7 +10854,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Emerald Blues NM": {
         "vars": [
@@ -10640,7 +10910,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fat Bandit": {
         "vars": [
@@ -10700,7 +10971,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fat Bandit (1 0)": {
         "vars": [
@@ -10758,7 +11030,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fat Bandit (Passive)": {
         "vars": [
@@ -10816,7 +11089,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fiery Globe": {
         "vars": [
@@ -10872,7 +11146,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fiery Globe Treasure Room": {
         "vars": [
@@ -10925,7 +11200,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Final Xemnas": {
         "final_fight": true,
@@ -10934,6 +11210,11 @@
             0
         ],
         "name": "Final Xemnas",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 1200
+        },
         "aimods": [
             {
                 "name": "B_EX170_LAST/b_ex.bdscript",
@@ -11022,6 +11303,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -11043,6 +11325,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Storm Rider",
             "Terra",
@@ -11067,6 +11350,11 @@
             0
         ],
         "name": "Final Xemnas (Clone)",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 1200
+        },
         "aimods": [
             {
                 "name": "B_EX170_LAST/b_ex.bdscript",
@@ -11194,7 +11482,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Fortuneteller (Zipliner)": {
         "vars": [
@@ -11250,7 +11539,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gambler": {
         "vars": [
@@ -11310,7 +11600,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gambler (5 0)": {
         "vars": [
@@ -11368,7 +11659,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gambler (90 0)": {
         "vars": [
@@ -11426,7 +11718,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Gambler (99 0)": {
         "vars": [
@@ -11484,7 +11777,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Giant Sark": {
         "vars": [
@@ -11540,6 +11834,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Giant Sark"
         ]
@@ -11617,6 +11912,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -11630,6 +11926,7 @@
             "Demyx",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -11650,6 +11947,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "The Beast",
             "The Experiment",
@@ -11720,7 +12018,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Grim Reaper I": {
         "mickey_source": true,
@@ -11734,6 +12033,11 @@
             0
         ],
         "name": "Grim Reaper I",
+        "roomData": {
+            "bossX": -28.273300170898438,
+            "bossY": -650.0770263671875,
+            "bossZ": 1194
+        },
         "tags": [
             "teleport_blocked",
             "large"
@@ -11784,6 +12088,7 @@
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hayner",
             "Hostile Program",
             "Jafar",
@@ -11825,6 +12130,11 @@
             0
         ],
         "name": "Grim Reaper II",
+        "roomData": {
+            "bossX": 589.9752197265625,
+            "bossY": -1.9969710111618042,
+            "bossZ": -541.83251953125
+        },
         "aimods": [
             {
                 "name": "B_CA050/b_ca.bdscript",
@@ -11899,6 +12209,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hayner",
             "Hercules",
             "Hostile Program",
@@ -11927,6 +12238,11 @@
             0
         ],
         "name": "Groundshaker",
+        "roomData": {
+            "bossX": 1224.219970703125,
+            "bossY": -384,
+            "bossZ": 4330
+        },
         "aimods": [
             {
                 "name": "B_LK120/b_lk.bdscript",
@@ -12006,6 +12322,7 @@
             "MCP",
             "Grim Reaper I",
             "Groundshaker",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -12040,6 +12357,11 @@
         ]
     },
     "Hades Cups": {
+        "roomData": {
+            "bossX": 0,
+            "bossY": -0.0001509865978732705,
+            "bossZ": -500
+        },
         "enabled": true,
         "msn_list": [
             {
@@ -12115,7 +12437,7 @@
             0
         ],
         "name": "Hades Escape",
-        "enabled": false,
+        "enabled": true,
         "enmp_index": 18,
         "hp": 100,
         "level": 99,
@@ -12163,6 +12485,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Hades Escape"
         ]
@@ -12221,11 +12544,17 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Hades I"
         ]
     },
     "Hades II": {
+        "roomData": {
+            "bossX": 0,
+            "bossY": -0.0001509865978732705,
+            "bossZ": -450
+        },
         "program": 196,
         "msn": "HE_COL_8_50",
         "room_size": 9.14,
@@ -12294,6 +12623,7 @@
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -12320,6 +12650,11 @@
         ]
     },
     "Hades II (1)": {
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -800
+        },
         "enabled": true,
         "msn_replace_allowed": true,
         "msn": "HE19_MS205",
@@ -12428,7 +12763,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hayner": {
         "msn": "TT05_MS401",
@@ -12438,6 +12774,7 @@
             0
         ],
         "name": "Hayner",
+        "roomData": {},
         "aimods": [
             {
                 "name": "TT05_MS401/ms_s.bdscript",
@@ -12549,6 +12886,11 @@
         ]
     },
     "Hercules": {
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0.0001345789059996605,
+            "bossZ": -300
+        },
         "enabled": true,
         "msn_list": [
             {
@@ -12628,6 +12970,7 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -12648,6 +12991,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -12715,7 +13059,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat": {
         "vars": [
@@ -12772,7 +13117,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (3 0)": {
         "vars": [
@@ -12845,7 +13191,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (9 0)": {
         "vars": [
@@ -12918,7 +13265,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL": {
         "vars": [
@@ -12993,7 +13341,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (15 30)": {
         "vars": [
@@ -13066,7 +13415,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (1 31)": {
         "vars": [
@@ -13139,7 +13489,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (3 30)": {
         "vars": [
@@ -13212,7 +13563,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (8 32)": {
         "vars": [
@@ -13285,7 +13637,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (13 31)": {
         "vars": [
@@ -13358,7 +13711,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (2 0)": {
         "vars": [
@@ -13431,7 +13785,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (5 0)": {
         "vars": [
@@ -13504,7 +13859,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (6 0)": {
         "vars": [
@@ -13577,7 +13933,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (11 0)": {
         "vars": [
@@ -13650,7 +14007,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (1 0)": {
         "vars": [
@@ -13723,7 +14081,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (10 0)": {
         "vars": [
@@ -13796,7 +14155,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (14 0)": {
         "vars": [
@@ -13869,7 +14229,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (12 0)": {
         "vars": [
@@ -13942,7 +14303,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (13 0)": {
         "vars": [
@@ -14015,7 +14377,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (7 0)": {
         "vars": [
@@ -14088,7 +14451,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hook Bat AL (3 20)": {
         "vars": [
@@ -14161,7 +14525,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hostile Program": {
         "vars": [
@@ -14169,6 +14534,11 @@
             0
         ],
         "name": "Hostile Program",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 0
+        },
         "enabled": true,
         "blacklist_source": [
             "Axel I"
@@ -14237,6 +14607,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -14260,6 +14631,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "The Beast",
             "The Experiment",
@@ -14328,7 +14700,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Hydra": {
         "mickey_source": true,
@@ -14421,11 +14794,13 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Armor Xemnas II",
             "Blizzard Lord",
             "Cloud",
             "Grim Reaper I",
+            "Hades Escape",
             "Hayner",
             "Hercules",
             "Hydra",
@@ -14499,7 +14874,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Icy Cube Treasure Room": {
         "vars": [
@@ -14552,7 +14928,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Illuminator": {
         "vars": [
@@ -14613,6 +14990,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Illuminator"
         ]
@@ -14668,7 +15046,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Jafar": {
         "vars": [
@@ -14676,6 +15055,11 @@
             0
         ],
         "name": "Jafar",
+        "roomData": {
+            "bossX": 300,
+            "bossY": -21450,
+            "bossZ": 500
+        },
         "enabled": true,
         "source_replace_allowed": true,
         "whitelist_source": [
@@ -14812,7 +15196,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Lance Warrior": {
         "vars": [
@@ -14865,7 +15250,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Large Body": {
         "vars": [
@@ -14923,7 +15309,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Larxene": {
         "vars": [
@@ -14931,6 +15318,11 @@
             0
         ],
         "name": "Larxene",
+        "roomData": {
+            "bossX": -137.8426971435547,
+            "bossY": 0,
+            "bossZ": -137.8426971435547
+        },
         "tags": [
             "organization",
             "needs_teleport"
@@ -14995,6 +15387,7 @@
             "Cloud",
             "Demyx",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -15042,6 +15435,11 @@
             1
         ],
         "name": "Larxene (Data)",
+        "roomData": {
+            "bossX": -137.8426971435547,
+            "bossY": 0,
+            "bossZ": -137.8426971435547
+        },
         "can_be_enemy": false,
         "enmp_index": 216,
         "hp": 100,
@@ -15090,6 +15488,11 @@
         "luamod": null
     },
     "Leon": {
+        "roomData": {
+            "bossX": -200,
+            "bossY": 0,
+            "bossZ": -200
+        },
         "can_be_enemy": true,
         "program": 189,
         "msn": "HE_COL_1_10",
@@ -15166,6 +15569,7 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -15186,6 +15590,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -15202,6 +15607,11 @@
         ]
     },
     "Leon (1)": {
+        "roomData": {
+            "bossX": 200,
+            "bossY": -0.0001509865978732705,
+            "bossZ": -400
+        },
         "program": 196,
         "msn": "HE_COL_8_40",
         "room_size": 9.14,
@@ -15266,6 +15676,11 @@
         "luamod": null
     },
     "Leon (2)": {
+        "roomData": {
+            "bossX": -349.39801025390625,
+            "bossY": 0,
+            "bossZ": -207.20660400390625
+        },
         "program": 196,
         "msn": "HE_COL_8_49",
         "room_size": 9.14,
@@ -15330,6 +15745,11 @@
         "luamod": null
     },
     "Leon (3)": {
+        "roomData": {
+            "bossX": -200,
+            "bossY": 0,
+            "bossZ": -200
+        },
         "program": 193,
         "msn": "HE_COL_5_10",
         "room_size": 9.14,
@@ -15399,6 +15819,11 @@
             0
         ],
         "name": "Lexaeus",
+        "roomData": {
+            "bossX": -137.8426971435547,
+            "bossY": 0,
+            "bossZ": -137.8426971435547
+        },
         "aimods": [
             {
                 "name": "N_CM020_BTL/n_cm.bdscript",
@@ -15470,6 +15895,7 @@
             "Cloud",
             "Demyx",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -15516,6 +15942,11 @@
             1
         ],
         "name": "Lexaeus (Data)",
+        "roomData": {
+            "bossX": -137.8426971435547,
+            "bossY": 0,
+            "bossZ": -137.8426971435547
+        },
         "aimods": [
             {
                 "name": "N_CM020_BTL/n_cm.bdscript",
@@ -15628,7 +16059,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Living Bone (Headless with Necromancer)": {
         "tags": [
@@ -15686,7 +16118,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Living Bone (Necromancer)": {
         "tags": [
@@ -15744,7 +16177,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Lock": {
         "vars": [
@@ -15800,6 +16234,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Lock"
         ]
@@ -15858,7 +16293,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Luna Bandit (1 0)": {
         "vars": [
@@ -15912,7 +16348,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Luxord": {
         "vars": [
@@ -15920,6 +16357,11 @@
             0
         ],
         "name": "Luxord",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -400
+        },
         "tags": [
             "organization",
             "solo",
@@ -15993,6 +16435,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -16017,6 +16460,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Storm Rider",
             "Terra",
@@ -16088,7 +16532,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Magic Phantom": {
         "vars": [
@@ -16145,7 +16590,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Magnum Loader": {
         "vars": [
@@ -16200,7 +16646,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Marluxia": {
         "vars": [
@@ -16208,6 +16655,11 @@
             0
         ],
         "name": "Marluxia",
+        "roomData": {
+            "bossX": -127.84259796142578,
+            "bossY": 0,
+            "bossZ": -127.8427963256836
+        },
         "tags": [
             "organization"
         ],
@@ -16274,6 +16726,7 @@
             "Cloud",
             "Demyx",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -16320,6 +16773,11 @@
             1
         ],
         "name": "Marluxia (Data)",
+        "roomData": {
+            "bossX": -127.84259796142578,
+            "bossY": 0,
+            "bossZ": -127.8427963256836
+        },
         "enmp_index": 215,
         "hp": 100,
         "level": 99,
@@ -16427,7 +16885,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Minute Bomb (99 0)": {
         "vars": [
@@ -16483,7 +16942,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Minute Bomb WI": {
         "vars": [
@@ -16538,7 +16998,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Morning Star": {
         "vars": [
@@ -16596,7 +17057,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Morning Star (99 0)": {
         "vars": [
@@ -16652,7 +17114,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Necromancer": {
         "vars": [
@@ -16707,7 +17170,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Nightwalker": {
         "vars": [
@@ -16762,7 +17226,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Bomb Bell A": {
         "vars": [
@@ -16819,7 +17284,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Oogie Boogie": {
         "vars": [
@@ -16827,6 +17293,11 @@
             0
         ],
         "name": "Oogie Boogie",
+        "roomData": {
+            "bossX": -507.0552062988281,
+            "bossY": -150,
+            "bossZ": -1572.740966796875
+        },
         "enabled": true,
         "enmp_index": 75,
         "aimods": [
@@ -16926,6 +17397,7 @@
             "Blizzard Lord",
             "Cloud",
             "Grim Reaper I",
+            "Hades Escape",
             "Hayner",
             "Hercules",
             "Jafar",
@@ -16951,6 +17423,11 @@
             0
         ],
         "name": "Past Pete",
+        "roomData": {
+            "bossX": -402.96490478515625,
+            "bossY": -137.9427947998047,
+            "bossZ": -444.0494079589844
+        },
         "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 113,
@@ -17009,6 +17486,7 @@
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -17041,6 +17519,11 @@
             0
         ],
         "name": "Pete Cups",
+        "roomData": {
+            "bossX": 0,
+            "bossY": -0.0001509865978732705,
+            "bossZ": -250
+        },
         "can_be_enemy_override": true,
         "enabled": true,
         "tags": [
@@ -17105,6 +17588,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -17125,6 +17609,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -17194,6 +17679,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Pete OC I"
         ]
@@ -17204,6 +17690,11 @@
             0
         ],
         "name": "Pete OC II",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -400
+        },
         "enabled": true,
         "enmp_index": 26,
         "hp": 100,
@@ -17258,6 +17749,7 @@
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hayner",
             "Hercules",
             "Jafar",
@@ -17284,6 +17776,11 @@
             0
         ],
         "name": "Pete TR",
+        "roomData": {
+            "bossX": -272.6265869140625,
+            "bossY": 0,
+            "bossZ": 746.9041748046875
+        },
         "enabled": true,
         "aimods": [
             {
@@ -17669,6 +18166,11 @@
             0
         ],
         "name": "Prison Keeper",
+        "roomData": {
+            "bossX": 416.09521484375,
+            "bossY": -204.1072998046875,
+            "bossZ": -923.3510131835938
+        },
         "can_be_enemy": true,
         "enabled": true,
         "tags": [
@@ -17729,6 +18231,7 @@
             "Demyx",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -17750,6 +18253,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -17817,7 +18321,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster": {
         "vars": [
@@ -17877,7 +18382,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster (90 0)": {
         "vars": [
@@ -17933,7 +18439,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster (1 0)": {
         "vars": [
@@ -17989,7 +18496,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (12 0)": {
         "vars": [
@@ -18063,7 +18571,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (13 0)": {
         "vars": [
@@ -18137,7 +18646,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL": {
         "vars": [
@@ -18213,7 +18723,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (9 0)": {
         "vars": [
@@ -18287,7 +18798,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (14 30)": {
         "vars": [
@@ -18361,7 +18873,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (8 30)": {
         "vars": [
@@ -18435,7 +18948,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (4 30)": {
         "vars": [
@@ -18509,7 +19023,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (12 32)": {
         "vars": [
@@ -18583,7 +19098,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (6 31)": {
         "vars": [
@@ -18657,7 +19173,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (10 31)": {
         "vars": [
@@ -18731,7 +19248,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (2 32)": {
         "vars": [
@@ -18805,7 +19323,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (2 0)": {
         "vars": [
@@ -18879,7 +19398,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (7 0)": {
         "vars": [
@@ -18953,7 +19473,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (14 0)": {
         "vars": [
@@ -19027,7 +19548,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (11 0)": {
         "vars": [
@@ -19101,7 +19623,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (5 0)": {
         "vars": [
@@ -19175,7 +19698,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (6 0)": {
         "vars": [
@@ -19249,7 +19773,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (12 17)": {
         "vars": [
@@ -19323,7 +19848,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (1 0)": {
         "vars": [
@@ -19397,7 +19923,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster AL (3 0)": {
         "vars": [
@@ -19471,7 +19998,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Rapid Thruster WI": {
         "vars": [
@@ -19524,7 +20052,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Riku": {
         "vars": [
@@ -19532,6 +20061,11 @@
             0
         ],
         "name": "Riku",
+        "roomData": {
+            "bossX": 601,
+            "bossY": -7.750160217285156,
+            "bossZ": -480.6151123046875
+        },
         "can_be_enemy": true,
         "aimods": [
             {
@@ -19608,6 +20142,7 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -19628,6 +20163,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -19650,6 +20186,11 @@
             0
         ],
         "name": "Roxas",
+        "roomData": {
+            "bossX": 0.0001049073034664616,
+            "bossY": 0.028669970110058784,
+            "bossZ": -170
+        },
         "tags": [
             "organization",
             "solo",
@@ -19717,6 +20258,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -19741,6 +20283,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -19757,6 +20300,11 @@
         ]
     },
     "Roxas (Data)": {
+        "roomData": {
+            "bossX": 0.0001049073034664616,
+            "bossY": 0.028669970110058784,
+            "bossZ": -170
+        },
         "tags": [
             "data",
             "organization",
@@ -19869,7 +20417,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Saix": {
         "vars": [
@@ -19877,6 +20426,11 @@
             0
         ],
         "name": "Saix",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 400
+        },
         "tags": [
             "organization",
             "needs_rc"
@@ -19943,6 +20497,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -19964,6 +20519,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "The Beast",
             "The Experiment",
@@ -20034,7 +20590,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Samurai (99 0)": {
         "vars": [
@@ -20090,7 +20647,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Sark": {
         "vars": [
@@ -20098,6 +20656,11 @@
             0
         ],
         "name": "Sark",
+        "roomData": {
+            "bossX": -847.7211303710938,
+            "bossY": 0,
+            "bossZ": -2353.952880859375
+        },
         "can_be_enemy": true,
         "enabled": true,
         "blacklist_source": [
@@ -20159,6 +20722,7 @@
             "Demyx",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -20180,6 +20744,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "The Beast",
             "The Experiment",
@@ -20198,6 +20763,11 @@
             0
         ],
         "name": "Scar",
+        "roomData": {
+            "bossX": 1200,
+            "bossY": 5.199999809265137,
+            "bossZ": 250.00010681152344
+        },
         "can_be_enemy": true,
         "isnightmare": true,
         "aimods": [
@@ -20268,6 +20838,7 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -20399,6 +20970,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "luamod": null,
+        "roomData": {},
         "available": [
             "Blizzard Lord",
             "Cloud",
@@ -20422,6 +20994,11 @@
         ]
     },
     "Seifer (1)": {
+        "roomData": {
+            "bossX": -212.1320037841797,
+            "bossY": 0,
+            "bossZ": 212.1320037841797
+        },
         "msn": "TT04_MS107",
         "replace_as": "Seifer",
         "msn_replace_allowed": false,
@@ -20518,6 +21095,11 @@
         "luamod": null
     },
     "Seifer (2)": {
+        "roomData": {
+            "bossX": -601.0407104492188,
+            "bossY": 0,
+            "bossZ": 601.040771484375
+        },
         "msn": "TT04_MS108",
         "replace_as": "Seifer",
         "msn_replace_allowed": false,
@@ -20614,6 +21196,11 @@
         "luamod": null
     },
     "Seifer (3)": {
+        "roomData": {
+            "bossX": -194.31300354003906,
+            "bossY": 10.000100135803223,
+            "bossZ": 3.5454869270324707
+        },
         "replace_as": "Seifer",
         "msn": "TT04_MS500",
         "program": 181,
@@ -20710,6 +21297,11 @@
         "luamod": null
     },
     "Seifer (4)": {
+        "roomData": {
+            "bossX": -200,
+            "bossY": 9.999889373779297,
+            "bossZ": 0
+        },
         "replace_as": "Seifer",
         "msn": "TT04_MS02",
         "program": 184,
@@ -20811,6 +21403,11 @@
             0
         ],
         "name": "Sephiroth",
+        "roomData": {
+            "bossX": -324.8489990234375,
+            "bossY": 0,
+            "bossZ": 1533.1300048828125
+        },
         "tags": [
             "sephiroth",
             "solo"
@@ -20886,6 +21483,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -20910,6 +21508,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -21025,6 +21624,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "luamod": null,
+        "roomData": {},
         "available": [
             "Blizzard Lord",
             "Cloud",
@@ -21105,7 +21705,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shadow (1 0)": {
         "vars": [
@@ -21160,7 +21761,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shadow (Aggressive)": {
         "vars": [
@@ -21215,7 +21817,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shadow Stalker": {
         "mickey_source": true,
@@ -21224,7 +21827,12 @@
             0
         ],
         "name": "Shadow Stalker",
-        "enabled": false,
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -800
+        },
+        "enabled": true,
         "enmp_index": 23,
         "tags": [
             "teleport_blocked",
@@ -21302,6 +21910,7 @@
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hayner",
             "Hercules",
             "Hostile Program",
@@ -21374,7 +21983,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shan-Yu": {
         "mickey_source": true,
@@ -21383,6 +21993,11 @@
             0
         ],
         "name": "Shan-Yu",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 1300
+        },
         "can_be_enemy": true,
         "enabled": true,
         "enmp_index": 71,
@@ -21453,6 +22068,7 @@
             "Cloud",
             "Demyx",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21537,6 +22153,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Shenzie"
         ]
@@ -21596,7 +22213,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Shock": {
         "vars": [
@@ -21652,6 +22270,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Shock"
         ]
@@ -21712,7 +22331,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Silver Rock (1 0)": {
         "vars": [
@@ -21768,7 +22388,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Sniper": {
         "vars": [
@@ -21827,7 +22448,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Soldier": {
         "vars": [
@@ -21887,7 +22509,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Soldier (1 0)": {
         "vars": [
@@ -21942,7 +22565,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Soldier (99 0)": {
         "vars": [
@@ -21997,7 +22621,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Soldier NM": {
         "vars": [
@@ -22050,7 +22675,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Sorcerer": {
         "vars": [
@@ -22109,7 +22735,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Spring Metal": {
         "vars": [
@@ -22164,7 +22791,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Storm Rider": {
         "mickey_source": true,
@@ -22370,6 +22998,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -22383,6 +23012,7 @@
             "Demyx",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -22407,6 +23037,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Storm Rider",
             "Terra",
@@ -22476,7 +23107,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Strafer RAW": {
         "vars": [
@@ -22530,7 +23162,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Surveillance Robot": {
         "vars": [
@@ -22588,7 +23221,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Terra": {
         "vars": [
@@ -22596,6 +23230,11 @@
             0
         ],
         "name": "Terra",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 100
+        },
         "can_be_enemy": false,
         "tags": [
             "terra"
@@ -22663,6 +23302,7 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -22687,6 +23327,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Storm Rider",
             "Terra",
@@ -22711,6 +23352,11 @@
             0
         ],
         "name": "The Beast",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -600
+        },
         "aimods": [
             {
                 "name": "P_BB000_BTL/p_bb.bdscript",
@@ -22781,6 +23427,7 @@
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hayner",
             "Hercules",
             "Hostile Program",
@@ -22809,6 +23456,11 @@
             0
         ],
         "name": "The Experiment",
+        "roomData": {
+            "bossX": -810.4044189453125,
+            "bossY": 4.720623016357422,
+            "bossZ": 894.3668212890625
+        },
         "enabled": true,
         "enmp_index": 120,
         "hp": 100,
@@ -22881,6 +23533,7 @@
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -22971,12 +23624,14 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Armor Xemnas II",
             "Blizzard Lord",
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hayner",
             "Hercules",
             "Hostile Program",
@@ -23000,6 +23655,11 @@
         ]
     },
     "Tifa": {
+        "roomData": {
+            "bossX": 200,
+            "bossY": -0.0001807889057090506,
+            "bossZ": -300
+        },
         "program": 196,
         "msn": "HE_COL_8_10",
         "room_size": 9.14,
@@ -23075,6 +23735,7 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -23095,6 +23756,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -23111,6 +23773,11 @@
         ]
     },
     "Tifa (1)": {
+        "roomData": {
+            "bossX": -149.3979949951172,
+            "bossY": -0.0001509865978732705,
+            "bossZ": -307.20660400390625
+        },
         "program": 196,
         "msn": "HE_COL_8_25",
         "room_size": 9.14,
@@ -23174,6 +23841,11 @@
         "luamod": null
     },
     "Tifa (2)": {
+        "roomData": {
+            "bossX": -149.3979949951172,
+            "bossY": 0,
+            "bossZ": -307.20660400390625
+        },
         "program": 196,
         "msn": "HE_COL_8_49",
         "room_size": 9.14,
@@ -23289,7 +23961,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Toy Soldier NM": {
         "vars": [
@@ -23345,7 +24018,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Trick Ghost": {
         "vars": [
@@ -23403,7 +24077,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Twilight Thorn": {
         "vars": [
@@ -23411,6 +24086,11 @@
             0
         ],
         "name": "Twilight Thorn",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 800
+        },
         "aimods": [
             {
                 "name": "B_EX100/b_ex.bdscript",
@@ -23529,6 +24209,11 @@
             1
         ],
         "name": "Vexen (Data)",
+        "roomData": {
+            "bossX": -13.29675006866455,
+            "bossY": -1.3492799997329712,
+            "bossZ": -1892.85400390625
+        },
         "enmp_index": 200,
         "hp": 100,
         "level": 99,
@@ -23584,6 +24269,11 @@
             0
         ],
         "name": "Vexen",
+        "roomData": {
+            "bossX": -13.29675006866455,
+            "bossY": -1.3492799997329712,
+            "bossZ": -1892.85400390625
+        },
         "tags": [
             "organization",
             "teleport_blocked"
@@ -23644,6 +24334,7 @@
             "Cloud",
             "Demyx",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -23677,6 +24368,11 @@
             0
         ],
         "name": "Vivi",
+        "roomData": {
+            "bossX": -150,
+            "bossY": -90,
+            "bossZ": 0
+        },
         "aimods": [
             {
                 "name": "N_EX610_BTL/n_ex.bdscript",
@@ -23854,12 +24550,14 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "roomData": {},
         "available": [
             "Axel I",
             "Blizzard Lord",
             "Cloud",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hayner",
             "Hercules",
             "Jafar",
@@ -23880,6 +24578,11 @@
         ]
     },
     "Volcano Lord (Cups)": {
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -150
+        },
         "tags": [
             "cups",
             "large"
@@ -23995,7 +24698,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "roomData": {}
     },
     "Xaldin": {
         "mickey_source": true,
@@ -24004,6 +24708,11 @@
             0
         ],
         "name": "Xaldin",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": -400
+        },
         "tags": [
             "organization",
             "mickey_source"
@@ -24070,6 +24779,7 @@
             "Demyx",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24093,6 +24803,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -24115,6 +24826,11 @@
             0
         ],
         "name": "Xemnas",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 1400
+        },
         "tags": [
             "organization",
             "solo",
@@ -24184,6 +24900,7 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24205,6 +24922,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -24225,6 +24943,11 @@
             0
         ],
         "name": "Xigbar",
+        "roomData": {
+            "bossX": 0,
+            "bossY": 0,
+            "bossZ": 200
+        },
         "blacklist_destination": [
             "Grim Reaper 1",
             "Twilight Thorn",
@@ -24300,6 +25023,7 @@
             "Demyx",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24331,6 +25055,11 @@
         ]
     },
     "Yuffie": {
+        "roomData": {
+            "bossX": 200,
+            "bossY": 0,
+            "bossZ": -200
+        },
         "can_be_enemy_override": true,
         "program": 189,
         "msn": "HE_COL_1_10",
@@ -24407,6 +25136,7 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24427,6 +25157,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -24443,6 +25174,11 @@
         ]
     },
     "Yuffie (1)": {
+        "roomData": {
+            "bossX": -200,
+            "bossY": -0.0001807889057090506,
+            "bossZ": -300
+        },
         "program": 196,
         "msn": "HE_COL_8_10",
         "room_size": 9.14,
@@ -24507,6 +25243,11 @@
         "luamod": null
     },
     "Yuffie (2)": {
+        "roomData": {
+            "bossX": 400.60198974609375,
+            "bossY": 0,
+            "bossZ": -207.20660400390625
+        },
         "program": 196,
         "msn": "HE_COL_8_49",
         "room_size": 9.14,
@@ -24571,6 +25312,11 @@
         "luamod": null
     },
     "Yuffie (3)": {
+        "roomData": {
+            "bossX": 200,
+            "bossY": 0,
+            "bossZ": -200
+        },
         "program": 193,
         "msn": "HE_COL_5_10",
         "room_size": 9.14,
@@ -24642,6 +25388,11 @@
             0
         ],
         "name": "Zexion",
+        "roomData": {
+            "bossX": 150,
+            "bossY": 0,
+            "bossZ": 300
+        },
         "tags": [
             "organization",
             "needs_teleport",
@@ -24709,6 +25460,7 @@
             "Demyx",
             "MCP",
             "Grim Reaper I",
+            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24733,6 +25485,7 @@
             "Seifer",
             "Sephiroth",
             "Setzer",
+            "Shadow Stalker",
             "Shan-Yu",
             "Terra",
             "The Beast",
@@ -24764,6 +25517,11 @@
             1
         ],
         "name": "Zexion (Data)",
+        "roomData": {
+            "bossX": 150,
+            "bossY": 0,
+            "bossZ": 300
+        },
         "hp": 100,
         "level": 99,
         "limiter": 0,

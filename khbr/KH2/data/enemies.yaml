@@ -948,6 +948,10 @@ Armor Xemnas I:
   # aimods: 
   # - name: B_EX260/b_ex.bdscript
   #   type: obj
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -150
   enabled: true
   enmp_index: 0xA0
   hp: 100
@@ -1130,6 +1134,10 @@ Armor Xemnas II:
   type: boss
   variations:
     Armor Xemnas II:
+      roomData:
+        bossX: 0
+        bossY: 14940
+        bossZ: 4511.38818359375
       msn: EH23_MS112
       program: 73
       outprogram: 0x54
@@ -1199,7 +1207,10 @@ Assault Rider:
       - 0
       - 0
 Axel I:
-  # Apparantly Axel I can sometimes act like axel 2 thats weird
+  roomData:
+    bossX: 82.84268188476562
+    bossY: -90
+    bossZ: 107.84269714355469
   can_be_enemy: true
   enabled: true
   hp: 100
@@ -1248,6 +1259,10 @@ Axel I:
       - 1
       - 0
 Axel II:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -165
   tags:
   - organization
   - roxas
@@ -1329,6 +1344,10 @@ Banzai:
       - 2
       - 0
 Barbossa:
+  roomData:
+    bossX: -530.52001953125
+    bossY: -45.31237030029297
+    bossZ: -334.4390869140625
   aimods: 
   - name: B_CA010/b_ca.bdscript
     type: obj
@@ -1441,6 +1460,10 @@ Berserker:
       - 0
       - 0
 Blizzard Lord:
+  roomData:
+    bossX: 270
+    bossY: 0
+    bossZ: 730
   can_be_enemy: true
   enabled: true
   enmp_index: 0x7B
@@ -1474,6 +1497,10 @@ Blizzard Lord:
       - 0
       - 0
     Blizzard Lord (Cups):
+      roomData:
+        bossX: 0
+        bossY: 0
+        bossZ: -550
       tags:
       - cups
       - large
@@ -1559,6 +1586,10 @@ Cerberus:
   - The Beast
   variations:
     Cerberus:
+      roomData:
+        bossX: -611.3707885742188
+        bossY: 235.92300415039062
+        bossZ: -731.3707885742188
       msn: HE07_MS103
       mickey_source: true
       program: 114
@@ -1568,6 +1599,10 @@ Cerberus:
       - 0
       - 0
     Cerberus (Cups):
+      roomData:
+        bossX: 0
+        bossY: 0
+        bossZ: -150
       # tags:
       # - cups
       enabled: true
@@ -1603,6 +1638,10 @@ Cloud:
   type: boss
   variations:
     Cloud:
+      roomData:
+        bossX: 200.6020050048828
+        bossY: -0.0001509865978732705
+        bossZ: -307.20660400390625
       can_be_enemy_override: true
       program: 196
       msn: HE_COL_8_25
@@ -1612,6 +1651,10 @@ Cloud:
       - 1
       - 0
     Cloud (1):
+      roomData:
+        bossX: -200
+        bossY: -0.0001509865978732705
+        bossZ: -400
       program: 196
       msn: HE_COL_8_40
       room_size: 9.14
@@ -1620,6 +1663,10 @@ Cloud:
       - 2
       - 0
     Cloud (2):
+      roomData:
+        bossX: 200.6020050048828
+        bossY: 0
+        bossZ: -307.20660400390625
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
@@ -1736,6 +1783,10 @@ Dancer:
       - 99
       - 0
 Dark Thorn:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -800
   enabled: true
   enmp_index: 0x16
   hp: 100
@@ -1764,6 +1815,10 @@ Dark Thorn:
       - 0
       - 0
 Axel (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -165
   tags:
   - data
   - organization
@@ -1789,6 +1844,10 @@ Axel (Data):
       - 0
       - 0
 Demyx (Data):
+  roomData:
+    bossX: 150
+    bossY: 0
+    bossZ: 300
   tags:
   - data
   - organization
@@ -1814,6 +1873,10 @@ Demyx (Data):
       - 1
       - 0
 Final Xemnas (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 1200
   tags:
   - data
   - organization
@@ -1852,6 +1915,10 @@ Final Xemnas (Data):
       - 1
       - 0
 Luxord (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -400
   tags:
   - data
   - organization
@@ -1876,6 +1943,10 @@ Luxord (Data):
       - 0
       - 0
 Saix (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 400
   tags:
   - data
   - organization
@@ -1900,6 +1971,10 @@ Saix (Data):
       - 0
       - 0
 Xaldin (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -400
   tags:
   - data
   - organization
@@ -1922,6 +1997,10 @@ Xaldin (Data):
       - 0
       - 0
 Xemnas (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 1400
   tags:
   - data
   - organization
@@ -1948,6 +2027,10 @@ Xemnas (Data):
       - 0
       - 0
 Xigbar (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 200
   enabled: true
   tags:
   - data
@@ -1971,6 +2054,10 @@ Xigbar (Data):
       - 0
       - 0
 Demyx:
+  roomData:
+    bossX: 150
+    bossY: 0
+    bossZ: 300
   tags:
   - organization
   blacklist_source:
@@ -2230,6 +2317,10 @@ Fiery Globe Treasure Room:
       - 0
       - 0
 Final Xemnas:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 1200
   aimods: 
   - name: B_EX170_LAST/b_ex.bdscript
     type: obj
@@ -2407,6 +2498,10 @@ Graveyard NM:
       - 0
       - 0
 Grim Reaper I:
+  roomData:
+    bossX: -28.273300170898438
+    bossY: -650.0770263671875
+    bossZ: 1194
   tags:
   - teleport_blocked
   - large
@@ -2430,6 +2525,10 @@ Grim Reaper I:
       - 1
       - 0
 Grim Reaper II:
+  roomData:
+    bossX: 589.9752197265625
+    bossY: -1.9969710111618042
+    bossZ: -541.83251953125
   aimods: 
   - name: B_CA050/b_ca.bdscript
     type: obj
@@ -2477,6 +2576,10 @@ Grim Reaper II:
       - 0
       - 0
 Groundshaker:
+  roomData:
+    bossX: 1224.219970703125
+    bossY: -384
+    bossZ: 4330
   aimods: 
   - name: B_LK120/b_lk.bdscript
     type: obj
@@ -2532,6 +2635,10 @@ Hades Cups:
   type: boss
   variations:
     Hades Cups:
+      roomData:
+        bossX: 0
+        bossY: -0.0001509865978732705
+        bossZ: -500
       enabled: true
       msn_list:
       - program: 192
@@ -2544,7 +2651,7 @@ Hades Cups:
       - 0
       - 0
 Hades Escape:
-  enabled: false
+  enabled: true
   enmp_index: 18
   hp: 100
   level: 99
@@ -2599,6 +2706,10 @@ Hades II:
   type: boss
   variations:
     Hades II:
+      roomData:
+        bossX: 0
+        bossY: -0.0001509865978732705
+        bossZ: -450
       program: 196
       msn: HE_COL_8_50
       room_size: 9.14
@@ -2606,6 +2717,10 @@ Hades II:
       - 1
       - 0
     Hades II (1):
+      roomData:
+        bossX: 0
+        bossY: 0
+        bossZ: -800
       enabled: true
       msn_replace_allowed: true
       msn: HE19_MS205
@@ -2639,6 +2754,7 @@ Hammer Frame WI:
       - 0
       - 0
 Hayner:
+  roomData: {}
   aimods: 
   - name: TT05_MS401/ms_s.bdscript
     type: msn
@@ -2718,6 +2834,10 @@ Hercules:
   - cups
   variations:
     Hercules:
+      roomData:
+        bossX: 0
+        bossY: 0.0001345789059996605
+        bossZ: -300
       enabled: true
       msn_list:
       - program: 191
@@ -2838,6 +2958,10 @@ Hook Bat AL:
       - 3
       - 20
 Hostile Program:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 0
   enabled: true
   blacklist_source:
   - Axel I
@@ -2996,6 +3120,10 @@ Iron Hammer:
       - 0
       - 0
 Jafar:
+  roomData:
+    bossX: 300
+    bossY: -21450
+    bossZ: 500
   enabled: true
   source_replace_allowed: true
   whitelist_source:
@@ -3085,6 +3213,10 @@ Large Body:
       - 0
       - 0
 Larxene:
+  roomData:
+    bossX: -137.8426971435547
+    bossY: 0
+    bossZ: -137.8426971435547
   tags:
   - organization
   - needs_teleport
@@ -3139,6 +3271,10 @@ Leon:
   - cups
   variations:
     Leon:
+      roomData:
+        bossX: -200
+        bossY: 0
+        bossZ: -200
       can_be_enemy: true
       program: 189
       msn: HE_COL_1_10
@@ -3148,6 +3284,10 @@ Leon:
       - 1
       - 0
     Leon (1):
+      roomData:
+        bossX: 200
+        bossY: -0.0001509865978732705
+        bossZ: -400
       program: 196
       msn: HE_COL_8_40
       room_size: 9.14
@@ -3156,6 +3296,10 @@ Leon:
       - 3
       - 0
     Leon (2):
+      roomData:
+        bossX: -349.39801025390625
+        bossY: 0
+        bossZ: -207.20660400390625
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
@@ -3164,6 +3308,10 @@ Leon:
       - 4
       - 0
     Leon (3):
+      roomData:
+        bossX: -200
+        bossY: 0
+        bossZ: -200
       program: 193
       msn: HE_COL_5_10
       room_size: 9.14
@@ -3172,6 +3320,10 @@ Leon:
       - 2
       - 0
 Lexaeus:
+  roomData:
+    bossX: -137.8426971435547
+    bossY: 0
+    bossZ: -137.8426971435547
   aimods: 
   - name: N_CM020_BTL/n_cm.bdscript
     type: obj
@@ -3284,6 +3436,10 @@ Luna Bandit:
       - 1
       - 0
 Luxord:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -400
   tags:
   - organization
   - solo
@@ -3362,6 +3518,10 @@ Magnum Loader:
       - 0
       - 0
 Marluxia:
+  roomData:
+    bossX: -127.84259796142578
+    bossY: 0
+    bossZ: -127.8427963256836
   tags:
   - organization
   enabled: true
@@ -3513,6 +3673,10 @@ Bomb Bell A:
       - 0
       - 0
 Oogie Boogie:
+  roomData:
+    bossX: -507.0552062988281
+    bossY: -150
+    bossZ: -1572.740966796875
   enabled: true
   enmp_index: 0x4B
   aimods: 
@@ -3561,6 +3725,10 @@ Oogie Boogie:
       - 1
       - 0
 Past Pete:
+  roomData:
+    bossX: -402.96490478515625
+    bossY: -137.9427947998047
+    bossZ: -444.0494079589844
   can_be_enemy: true
   enabled: true
   enmp_index: 0x71
@@ -3582,6 +3750,10 @@ Past Pete:
       - 1
       - 0
 Pete Cups:
+  roomData:
+    bossX: 0
+    bossY: -0.0001509865978732705
+    bossZ: -250
   can_be_enemy_override: true
   enabled: true
   tags:
@@ -3622,6 +3794,10 @@ Pete OC I:
       - 0
       - 0
 Pete OC II:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -400
   enabled: true
   enmp_index: 0x1A
   hp: 100
@@ -3643,6 +3819,10 @@ Pete OC II:
       - 0
       - 0
 Pete TR:
+  roomData:
+    bossX: -272.6265869140625
+    bossY: 0
+    bossZ: 746.9041748046875
   enabled: true
   aimods:
   - name: N_EX760_BTL/n_ex.bdscript
@@ -3917,6 +4097,10 @@ Pete TR:
       - 4
       - 0
 Prison Keeper:
+  roomData:
+    bossX: 416.09521484375
+    bossY: -204.1072998046875
+    bossZ: -923.3510131835938
   can_be_enemy: true
   enabled: true
   tags:
@@ -4074,6 +4258,10 @@ Rapid Thruster WI:
       - 0
       - 0
 Riku:
+  roomData:
+    bossX: 601
+    bossY: -7.750160217285156
+    bossZ: -480.6151123046875
   can_be_enemy: true
   aimods: 
   - name: N_EX940_BTL/n_ex.bdscript
@@ -4104,6 +4292,10 @@ Riku:
       - 0
       - 0
 Roxas:
+  roomData:
+    bossX: 0.0001049073034664616
+    bossY: 0.028669970110058784
+    bossZ: -170
   tags:
   - organization
   - solo
@@ -4129,6 +4321,10 @@ Roxas:
       - 0
       - 0
     Roxas (Data):
+      roomData:
+        bossX: 0.0001049073034664616
+        bossY: 0.028669970110058784
+        bossZ: -170
       tags:
       - data
       - organization
@@ -4161,6 +4357,10 @@ Runemaster:
       - 0
       - 0
 Saix:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 400
   tags:
   - organization
   - needs_rc
@@ -4206,6 +4406,10 @@ Samurai:
       - 99
       - 0
 Sark:
+  roomData:
+    bossX: -847.7211303710938
+    bossY: 0
+    bossZ: -2353.952880859375
   can_be_enemy: true
   enabled: true
   blacklist_source:
@@ -4230,6 +4434,10 @@ Sark:
       - 0
       - 0
 Scar:
+  roomData:
+    bossX: 1200
+    bossY: 5.199999809265137
+    bossZ: 250.00010681152344
   can_be_enemy: true
   isnightmare: true
   aimods: 
@@ -4313,6 +4521,10 @@ Seifer:
       - 3
       - 0
     Seifer (1):
+      roomData:
+        bossX: -212.1320037841797
+        bossY: 0
+        bossZ: 212.1320037841797
       msn: TT04_MS107
       replace_as: Seifer
       msn_replace_allowed: false 
@@ -4322,6 +4534,10 @@ Seifer:
       - 1
       - 0
     Seifer (2):
+      roomData:
+        bossX: -601.0407104492188
+        bossY: 0
+        bossZ: 601.040771484375
       msn: TT04_MS108
       replace_as: Seifer
       msn_replace_allowed: true
@@ -4332,6 +4548,10 @@ Seifer:
       - 2
       - 0
     Seifer (3):
+      roomData:
+        bossX: -194.31300354003906
+        bossY: 10.000100135803223
+        bossZ: 3.5454869270324707
       replace_as: Seifer #TODO one of these is struggle, others allowed
       msn: TT04_MS500
       program: 181
@@ -4340,6 +4560,10 @@ Seifer:
       - 4
       - 0
     Seifer (4):
+      roomData:
+        bossX: -200
+        bossY: 9.999889373779297
+        bossZ: 0
       replace_as: Seifer
       msn: TT04_MS02
       program: 184
@@ -4348,6 +4572,10 @@ Seifer:
       - 5
       - 0
 Sephiroth:
+  roomData:
+    bossX: -324.8489990234375
+    bossY: 0
+    bossZ: 1533.1300048828125
   tags:
   - sephiroth
   - solo
@@ -4468,7 +4696,11 @@ Shadow:
       - 99
       - 0
 Shadow Stalker:
-  enabled: false
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -800
+  enabled: true
   enmp_index: 0x17
   tags:
   - teleport_blocked
@@ -4488,8 +4720,6 @@ Shadow Stalker:
   roommaxsize: 16.10
   program: 78
   adds:
-    # Todo this is bugging out and causing two copies of 355 to be placed, which works as placing sora twice
-    #TODO the roommaxsize implies some of these are still being loaded into memory
   - ObjectId: 713 # windows
   - ObjectId: 646 # ground trap
   - ObjectId: 645 # columns
@@ -4522,6 +4752,10 @@ Shadow WI:
       - 0
       - 0
 Shan-Yu:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 1300
   can_be_enemy: true
   enabled: true
   enmp_index: 0x47
@@ -4897,6 +5131,10 @@ Surveillance Robot:
       - 0
       - 0
 Terra:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 100
   can_be_enemy: false #expensive
   tags:
   - terra
@@ -4921,6 +5159,10 @@ Terra:
       - 0
       - 0
 The Beast:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -600
   aimods: 
   - name: P_BB000_BTL/p_bb.bdscript
     type: obj
@@ -4951,6 +5193,10 @@ The Beast:
       - 0
       - 0
 The Experiment:
+  roomData:
+    bossX: -810.4044189453125
+    bossY: 4.720623016357422
+    bossZ: 894.3668212890625
   enabled: true
   enmp_index: 0x78
   hp: 100
@@ -5030,6 +5276,10 @@ Tifa:
   type: boss
   variations:
     Tifa:
+      roomData:
+        bossX: 200
+        bossY: -0.0001807889057090506
+        bossZ: -300
       program: 196
       msn: HE_COL_8_10
       room_size: 9.14
@@ -5039,6 +5289,10 @@ Tifa:
       - 1
       - 0
     Tifa (1):
+      roomData:
+        bossX: -149.3979949951172
+        bossY: -0.0001509865978732705
+        bossZ: -307.20660400390625
       program: 196
       msn: HE_COL_8_25
       room_size: 9.14
@@ -5047,6 +5301,10 @@ Tifa:
       - 2
       - 0
     Tifa (2):
+      roomData:
+        bossX: -149.3979949951172
+        bossY: 0
+        bossZ: -307.20660400390625
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
@@ -5105,6 +5363,10 @@ Trick Ghost:
       - 0
       - 0
 Twilight Thorn:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 800
   aimods:
   - name: B_EX100/b_ex.bdscript
     type: obj
@@ -5154,6 +5416,10 @@ Twilight Thorn:
       - 0
       - 0
 Vexen:
+  roomData:
+    bossX: -13.29675006866455
+    bossY: -1.3492799997329712
+    bossZ: -1892.85400390625
   tags:
   - organization
   - teleport_blocked
@@ -5190,6 +5456,10 @@ Vexen:
       - 1
       - 0
 Vivi:
+  roomData:
+    bossX: -150
+    bossY: -90
+    bossZ: 0
   aimods:
   - name: N_EX610_BTL/n_ex.bdscript
     type: obj
@@ -5280,6 +5550,10 @@ Volcano Lord:
       - 0
       - 0
     Volcano Lord (Cups):
+      roomData:
+        bossX: 0
+        bossY: 0
+        bossZ: -150
       tags:
       - cups
       - large
@@ -5307,6 +5581,10 @@ Wight Knight NM:
       - 0
       - 0
 Xaldin:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -400
   tags:
   - organization
   - mickey_source
@@ -5332,6 +5610,10 @@ Xaldin:
       - 0
       - 0
 Xemnas:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 1400
   tags:
   - organization
   - solo
@@ -5359,6 +5641,10 @@ Xemnas:
       - 0
       - 0
 Xigbar:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 200
   blacklist_destination:
   - Grim Reaper 1
   - Twilight Thorn
@@ -5412,6 +5698,10 @@ Yuffie:
   type: boss
   variations:
     Yuffie:
+      roomData:
+        bossX: 200
+        bossY: 0
+        bossZ: -200
       can_be_enemy_override: true
       program: 189
       msn: HE_COL_1_10
@@ -5421,6 +5711,10 @@ Yuffie:
       - 1
       - 0
     Yuffie (1):
+      roomData:
+        bossX: -200
+        bossY: -0.0001807889057090506
+        bossZ: -300
       program: 196
       msn: HE_COL_8_10
       room_size: 9.14
@@ -5430,6 +5724,10 @@ Yuffie:
       - 3
       - 0
     Yuffie (2):
+      roomData:
+        bossX: 400.60198974609375
+        bossY: 0
+        bossZ: -207.20660400390625
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
@@ -5438,6 +5736,10 @@ Yuffie:
       - 4
       - 0
     Yuffie (3):
+      roomData:
+        bossX: 200
+        bossY: 0
+        bossZ: -200
       program: 193
       msn: HE_COL_5_10
       room_size: 9.14
@@ -5446,6 +5748,10 @@ Yuffie:
       - 2
       - 0
 Zexion:
+  roomData:
+    bossX: 150
+    bossY: 0
+    bossZ: 300
   tags:
   - organization
   - needs_teleport
