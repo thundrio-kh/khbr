@@ -1364,8 +1364,6 @@ Barbossa:
     aimods:
     - name: B_CA000/b_ca.bdscript
       type: obj
-  tags:
-  - needs_teleport
   enabled: true
   enmp_index: 0x63
   hp: 100
@@ -3760,6 +3758,7 @@ Pete Cups:
   limiter: 20
   model: N_EX760_BTL_CLSM
   msn: HE_COL_8TI_BOSS
+  variationof: Pete TR
   msn_replace_allowed: false
   obj_id: 2319
   size: 1.57
@@ -3805,6 +3804,7 @@ Pete OC II:
   msn_replace_allowed: false
   obj_id: 1724
   size: 1.57
+  variationof: Pete TR
   room_size: 13.53
   program: 116
   type: boss
@@ -3823,6 +3823,8 @@ Pete TR:
   aimods:
   - name: N_EX760_BTL/n_ex.bdscript
     type: obj
+  tags:
+  - needs_teleport
   pc: 
     source_replace_allowed: true # TODO supposedly demyx super crashes here on ps2 and most bosses cause crashes here
   source_replace_allowed: false
@@ -4086,7 +4088,6 @@ Pete TR:
   room_size: 12.16
   program: 53
   type: boss
-  replace_as: Pete Cups
   variations:
     Pete TR:
       vars:
@@ -4951,6 +4952,7 @@ Spring Metal:
       - 0
       - 0
 Storm Rider:
+  # TODO when radius is a thing figure out how to stop him wandering OOB
   enabled: true
   enmp_index: 0x19
   hp: 100
@@ -5363,15 +5365,15 @@ Twilight Thorn:
     bossX: 0
     bossY: 0
     bossZ: 800
-  aimods:
-  - name: B_EX100/b_ex.bdscript
-    type: obj
+  # aimods:
+  # - name: B_EX100/b_ex.bdscript
+  #   type: obj
   enabled: true
   enmp_index: 0x56
   tags:
   - roxas
   - teleport_blocked
-  - needs_teleport
+  - needs_teleport # TODO complicated aimod to fix, I'm halfway there
   hp: 100
   level: 99
   limiter: 0
@@ -5744,15 +5746,16 @@ Yuffie:
       - 2
       - 0
 Zexion:
+  aimods: 
+  - name: B_EX370/b_ex.bdscript
+    type: obj
   roomData:
     bossX: 150
     bossY: 0
     bossZ: 300
   tags:
   - organization
-  - needs_teleport
   - needs_rc
-  #aimods: false # TODO current ai mod is a bit crashy I think, so just ban from weird rooms
   enabled: true
   hp: 100
   level: 99

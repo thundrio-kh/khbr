@@ -6641,8 +6641,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -6726,6 +6724,7 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -6745,9 +6744,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Sark",
@@ -6766,7 +6762,8 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie"
+            "Yuffie",
+            "Zexion"
         ]
     },
     "Armored Knight": {
@@ -7088,6 +7085,7 @@
         "luamod": null,
         "available": [
             "Axel I",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -7097,9 +7095,6 @@
             "Hercules",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -7204,6 +7199,7 @@
         "luamod": null,
         "available": [
             "Axel II",
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -7213,9 +7209,6 @@
             "Hercules",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -7386,9 +7379,6 @@
                 ]
             }
         ],
-        "tags": [
-            "needs_teleport"
-        ],
         "enabled": true,
         "enmp_index": 99,
         "hp": 100,
@@ -7409,7 +7399,8 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "needs_teleport",
+        "tags": [],
+        "category": "",
         "isnightmare": false,
         "parent": "Barbossa",
         "variationof": null,
@@ -7449,8 +7440,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -7775,8 +7764,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -8237,8 +8224,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -8431,8 +8416,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -9266,8 +9249,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -10029,8 +10010,6 @@
             "Leon",
             "Lexaeus",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -10111,6 +10090,7 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -10130,9 +10110,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -10152,7 +10129,8 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie"
+            "Yuffie",
+            "Zexion"
         ]
     },
     "Demyx's Water Clone": {
@@ -11314,8 +11292,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -12000,8 +11976,6 @@
             "Lexaeus",
             "Marluxia",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -12158,8 +12132,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -12280,8 +12252,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -12377,6 +12347,7 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -12398,9 +12369,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Sark",
@@ -12695,8 +12663,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Riku",
             "Sark",
@@ -12938,8 +12904,6 @@
             "Hercules",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Sark",
             "Seifer",
             "Setzer",
@@ -13044,8 +13008,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -14684,8 +14646,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -14871,8 +14831,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -15461,8 +15419,6 @@
             "Lexaeus",
             "Marluxia",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -15643,8 +15599,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -15969,8 +15923,6 @@
             "Lexaeus",
             "Marluxia",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -16512,8 +16464,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -16800,8 +16750,6 @@
             "Lexaeus",
             "Marluxia",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Prison Keeper",
             "Riku",
             "Roxas",
@@ -17468,8 +17416,6 @@
             "Leon",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -17558,9 +17504,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Riku",
             "Sark",
             "Scar",
@@ -17599,6 +17542,7 @@
         "limiter": 20,
         "model": "N_EX760_BTL_CLSM",
         "msn": "HE_COL_8TI_BOSS",
+        "variationof": "Pete TR",
         "msn_replace_allowed": false,
         "obj_id": 2319,
         "size": 1.57,
@@ -17608,29 +17552,350 @@
             "Pete Cups"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
+        "source_replace_allowed": false,
         "category": "cups",
         "isnightmare": false,
-        "parent": "Pete Cups",
-        "variationof": null,
-        "children": [
-            "Pete Cups"
-        ],
+        "parent": "Pete TR",
+        "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
+        "aimods": [
+            {
+                "name": "N_EX760_BTL/n_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,
         "sizeTag": null,
-        "room_size": 0,
+        "room_size": 12.16,
         "roommaxsize": null,
         "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
-        "adds": [],
+        "adds": [
+            {
+                "ObjectId": -1,
+                "customUnit": {
+                    "Type": 4,
+                    "Flag": 1,
+                    "Id": 244,
+                    "Teleport": {
+                        "Place": 92,
+                        "Door": 0,
+                        "World": 0,
+                        "Unknown": 0
+                    },
+                    "EventActivators": [
+                        {
+                            "Shape": 1,
+                            "Option": 0,
+                            "PositionX": -508.9024963378906,
+                            "PositionY": -300,
+                            "PositionZ": 525.50341796875,
+                            "ScaleX": 286.0885925292969,
+                            "ScaleY": 400,
+                            "ScaleZ": 273.35345458984375,
+                            "RotationX": 0,
+                            "RotationY": -0.18849574029445648,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ],
+                    "ReturnParameters": [
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": -1,
+                "customUnit": {
+                    "Type": 4,
+                    "Flag": 1,
+                    "Id": 245,
+                    "Teleport": {
+                        "Place": 93,
+                        "Door": 0,
+                        "World": 0,
+                        "Unknown": 0
+                    },
+                    "EventActivators": [
+                        {
+                            "Shape": 1,
+                            "Option": 0,
+                            "PositionX": 690.7678833007812,
+                            "PositionY": -300,
+                            "PositionZ": 72.22966003417969,
+                            "ScaleX": 269.2049560546875,
+                            "ScaleY": 400,
+                            "ScaleZ": 459.30096435546875,
+                            "RotationX": 0,
+                            "RotationY": 0.36696508526802063,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ],
+                    "ReturnParameters": [
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": -1,
+                "customUnit": {
+                    "Type": 4,
+                    "Flag": 1,
+                    "Id": 246,
+                    "Teleport": {
+                        "Place": 94,
+                        "Door": 0,
+                        "World": 0,
+                        "Unknown": 0
+                    },
+                    "EventActivators": [
+                        {
+                            "Shape": 1,
+                            "Option": 0,
+                            "PositionX": -300.2421875,
+                            "PositionY": -300,
+                            "PositionZ": -590.8237915039062,
+                            "ScaleX": 261.31048583984375,
+                            "ScaleY": 400,
+                            "ScaleZ": 266.0386962890625,
+                            "RotationX": 0,
+                            "RotationY": -0.18849574029445648,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ],
+                    "ReturnParameters": [
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": 1758,
+                "PositionX": -300,
+                "PositionZ": -600,
+                "SpawnType": 2,
+                "Serial": 101,
+                "Argument1": 1,
+                "Argument2": 3,
+                "customUnit": {
+                    "Type": 2,
+                    "Flag": 1,
+                    "Id": 247,
+                    "EventActivators": [
+                        {
+                            "Shape": 2,
+                            "Option": 0,
+                            "PositionX": 1242.9849853515625,
+                            "PositionY": -300,
+                            "PositionZ": 1462.8909912109375,
+                            "ScaleX": 398.71649169921875,
+                            "ScaleY": 400,
+                            "ScaleZ": 599.6799926757812,
+                            "RotationX": 0,
+                            "RotationY": 0.1808859258890152,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": 1758,
+                "PositionX": -300,
+                "PositionZ": 540,
+                "SpawnType": 2,
+                "Serial": 102,
+                "Argument1": 1,
+                "Argument2": 1,
+                "customUnit": {
+                    "Type": 2,
+                    "Flag": 1,
+                    "Id": 247,
+                    "EventActivators": [
+                        {
+                            "Shape": 2,
+                            "Option": 0,
+                            "PositionX": 1242.9849853515625,
+                            "PositionY": -300,
+                            "PositionZ": 1462.8909912109375,
+                            "ScaleX": 398.71649169921875,
+                            "ScaleY": 400,
+                            "ScaleZ": 599.6799926757812,
+                            "RotationX": 0,
+                            "RotationY": 0.1808859258890152,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": 1758,
+                "PositionX": 690,
+                "PositionZ": 150,
+                "SpawnType": 2,
+                "Serial": 103,
+                "Argument1": 1,
+                "Argument2": 2,
+                "customUnit": {
+                    "Type": 2,
+                    "Flag": 1,
+                    "Id": 247,
+                    "EventActivators": [
+                        {
+                            "Shape": 2,
+                            "Option": 0,
+                            "PositionX": 1242.9849853515625,
+                            "PositionY": -300,
+                            "PositionZ": 1462.8909912109375,
+                            "ScaleX": 398.71649169921875,
+                            "ScaleY": 400,
+                            "ScaleZ": 599.6799926757812,
+                            "RotationX": 0,
+                            "RotationY": 0.1808859258890152,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": 1759,
+                "SpawnType": 3,
+                "Serial": 104,
+                "Argument1": 1,
+                "customUnit": {
+                    "Type": 5,
+                    "Flag": 1,
+                    "Id": 254
+                }
+            },
+            {
+                "ObjectId": 1612,
+                "SpawnType": 3,
+                "Serial": 105,
+                "Argument1": 1,
+                "customUnit": {
+                    "Type": 5,
+                    "Flag": 1,
+                    "Id": 254
+                }
+            },
+            {
+                "ObjectId": 758,
+                "SpawnType": 3,
+                "Serial": 106,
+                "Argument1": 1,
+                "customUnit": {
+                    "Type": 5,
+                    "Flag": 1,
+                    "Id": 254
+                }
+            }
+        ],
         "sp_ids": [],
         "subtracts": [],
         "msn_list": [],
@@ -17638,56 +17903,9 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "available": [
-            "Armor Xemnas I",
-            "Armor Xemnas II",
-            "Axel I",
-            "Axel II",
-            "Barbossa",
-            "Blizzard Lord",
-            "Cerberus",
-            "Cloud",
-            "Dark Thorn",
-            "Final Xemnas",
-            "MCP",
-            "Grim Reaper I",
-            "Grim Reaper II",
-            "Hades Escape",
-            "Hades II",
-            "Hayner",
-            "Hercules",
-            "Jafar",
-            "Larxene",
-            "Leon",
-            "Marluxia",
-            "Oogie Boogie",
-            "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
-            "Prison Keeper",
-            "Riku",
-            "Roxas",
-            "Sark",
-            "Scar",
-            "Seifer",
-            "Sephiroth",
-            "Setzer",
-            "Shadow Stalker",
-            "Shan-Yu",
-            "Terra",
-            "The Beast",
-            "The Experiment",
-            "Thresholder",
-            "Tifa",
-            "Twilight Thorn",
-            "Vivi",
-            "Volcano Lord",
-            "Xaldin",
-            "Xemnas",
-            "Xigbar",
-            "Yuffie"
-        ]
+        "pc": {
+            "source_replace_allowed": true
+        }
     },
     "Pete OC I": {
         "vars": [
@@ -17770,6 +17988,7 @@
         "msn_replace_allowed": false,
         "obj_id": 1724,
         "size": 1.57,
+        "variationof": "Pete TR",
         "room_size": 13.53,
         "program": 116,
         "type": "boss",
@@ -17777,18 +17996,22 @@
         "variations": [
             "Pete OC II"
         ],
-        "source_replace_allowed": true,
-        "tags": [],
+        "source_replace_allowed": false,
+        "tags": [
+            "needs_teleport"
+        ],
         "category": "",
         "isnightmare": false,
-        "parent": "Pete OC II",
-        "variationof": null,
-        "children": [
-            "Pete OC II"
-        ],
+        "parent": "Pete TR",
+        "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
+        "aimods": [
+            {
+                "name": "N_EX760_BTL/n_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -17799,7 +18022,326 @@
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
-        "adds": [],
+        "adds": [
+            {
+                "ObjectId": -1,
+                "customUnit": {
+                    "Type": 4,
+                    "Flag": 1,
+                    "Id": 244,
+                    "Teleport": {
+                        "Place": 92,
+                        "Door": 0,
+                        "World": 0,
+                        "Unknown": 0
+                    },
+                    "EventActivators": [
+                        {
+                            "Shape": 1,
+                            "Option": 0,
+                            "PositionX": -508.9024963378906,
+                            "PositionY": -300,
+                            "PositionZ": 525.50341796875,
+                            "ScaleX": 286.0885925292969,
+                            "ScaleY": 400,
+                            "ScaleZ": 273.35345458984375,
+                            "RotationX": 0,
+                            "RotationY": -0.18849574029445648,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ],
+                    "ReturnParameters": [
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": -1,
+                "customUnit": {
+                    "Type": 4,
+                    "Flag": 1,
+                    "Id": 245,
+                    "Teleport": {
+                        "Place": 93,
+                        "Door": 0,
+                        "World": 0,
+                        "Unknown": 0
+                    },
+                    "EventActivators": [
+                        {
+                            "Shape": 1,
+                            "Option": 0,
+                            "PositionX": 690.7678833007812,
+                            "PositionY": -300,
+                            "PositionZ": 72.22966003417969,
+                            "ScaleX": 269.2049560546875,
+                            "ScaleY": 400,
+                            "ScaleZ": 459.30096435546875,
+                            "RotationX": 0,
+                            "RotationY": 0.36696508526802063,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ],
+                    "ReturnParameters": [
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": -1,
+                "customUnit": {
+                    "Type": 4,
+                    "Flag": 1,
+                    "Id": 246,
+                    "Teleport": {
+                        "Place": 94,
+                        "Door": 0,
+                        "World": 0,
+                        "Unknown": 0
+                    },
+                    "EventActivators": [
+                        {
+                            "Shape": 1,
+                            "Option": 0,
+                            "PositionX": -300.2421875,
+                            "PositionY": -300,
+                            "PositionZ": -590.8237915039062,
+                            "ScaleX": 261.31048583984375,
+                            "ScaleY": 400,
+                            "ScaleZ": 266.0386962890625,
+                            "RotationX": 0,
+                            "RotationY": -0.18849574029445648,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ],
+                    "ReturnParameters": [
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        },
+                        {
+                            "Id": 0,
+                            "Type": 0,
+                            "Rate": 0,
+                            "EntryType": 0,
+                            "Argument04": 0,
+                            "Argument08": 0,
+                            "Argument0c": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": 1758,
+                "PositionX": -300,
+                "PositionZ": -600,
+                "SpawnType": 2,
+                "Serial": 101,
+                "Argument1": 1,
+                "Argument2": 3,
+                "customUnit": {
+                    "Type": 2,
+                    "Flag": 1,
+                    "Id": 247,
+                    "EventActivators": [
+                        {
+                            "Shape": 2,
+                            "Option": 0,
+                            "PositionX": 1242.9849853515625,
+                            "PositionY": -300,
+                            "PositionZ": 1462.8909912109375,
+                            "ScaleX": 398.71649169921875,
+                            "ScaleY": 400,
+                            "ScaleZ": 599.6799926757812,
+                            "RotationX": 0,
+                            "RotationY": 0.1808859258890152,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": 1758,
+                "PositionX": -300,
+                "PositionZ": 540,
+                "SpawnType": 2,
+                "Serial": 102,
+                "Argument1": 1,
+                "Argument2": 1,
+                "customUnit": {
+                    "Type": 2,
+                    "Flag": 1,
+                    "Id": 247,
+                    "EventActivators": [
+                        {
+                            "Shape": 2,
+                            "Option": 0,
+                            "PositionX": 1242.9849853515625,
+                            "PositionY": -300,
+                            "PositionZ": 1462.8909912109375,
+                            "ScaleX": 398.71649169921875,
+                            "ScaleY": 400,
+                            "ScaleZ": 599.6799926757812,
+                            "RotationX": 0,
+                            "RotationY": 0.1808859258890152,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": 1758,
+                "PositionX": 690,
+                "PositionZ": 150,
+                "SpawnType": 2,
+                "Serial": 103,
+                "Argument1": 1,
+                "Argument2": 2,
+                "customUnit": {
+                    "Type": 2,
+                    "Flag": 1,
+                    "Id": 247,
+                    "EventActivators": [
+                        {
+                            "Shape": 2,
+                            "Option": 0,
+                            "PositionX": 1242.9849853515625,
+                            "PositionY": -300,
+                            "PositionZ": 1462.8909912109375,
+                            "ScaleX": 398.71649169921875,
+                            "ScaleY": 400,
+                            "ScaleZ": 599.6799926757812,
+                            "RotationX": 0,
+                            "RotationY": 0.1808859258890152,
+                            "RotationZ": 0,
+                            "Flags": 0,
+                            "Type": 0,
+                            "OnBgGroup": 0,
+                            "OffBgGroup": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "ObjectId": 1759,
+                "SpawnType": 3,
+                "Serial": 104,
+                "Argument1": 1,
+                "customUnit": {
+                    "Type": 5,
+                    "Flag": 1,
+                    "Id": 254
+                }
+            },
+            {
+                "ObjectId": 1612,
+                "SpawnType": 3,
+                "Serial": 105,
+                "Argument1": 1,
+                "customUnit": {
+                    "Type": 5,
+                    "Flag": 1,
+                    "Id": 254
+                }
+            },
+            {
+                "ObjectId": 758,
+                "SpawnType": 3,
+                "Serial": 106,
+                "Argument1": 1,
+                "customUnit": {
+                    "Type": 5,
+                    "Flag": 1,
+                    "Id": 254
+                }
+            }
+        ],
         "sp_ids": [],
         "subtracts": [],
         "msn_list": [],
@@ -17807,32 +18349,9 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "available": [
-            "Armor Xemnas II",
-            "Blizzard Lord",
-            "Cloud",
-            "MCP",
-            "Grim Reaper I",
-            "Hades Escape",
-            "Hayner",
-            "Hercules",
-            "Jafar",
-            "Leon",
-            "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Riku",
-            "Sark",
-            "Scar",
-            "Seifer",
-            "Setzer",
-            "The Beast",
-            "Thresholder",
-            "Tifa",
-            "Vivi",
-            "Volcano Lord",
-            "Yuffie"
-        ]
+        "pc": {
+            "source_replace_allowed": true
+        }
     },
     "Pete TR": {
         "vars": [
@@ -17851,6 +18370,9 @@
                 "name": "N_EX760_BTL/n_ex.bdscript",
                 "type": "obj"
             }
+        ],
+        "tags": [
+            "needs_teleport"
         ],
         "pc": {
             "source_replace_allowed": true
@@ -18186,17 +18708,18 @@
         "room_size": 12.16,
         "program": 53,
         "type": "boss",
-        "replace_as": "Pete Cups",
         "variations": [
             "Pete TR"
         ],
+        "replace_as": null,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "needs_teleport",
         "isnightmare": false,
         "parent": "Pete TR",
         "variationof": null,
         "children": [
+            "Pete Cups",
+            "Pete OC II",
             "Pete TR"
         ],
         "msn_required": false,
@@ -18288,6 +18811,7 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -18306,9 +18830,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -18328,7 +18849,8 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie"
+            "Yuffie",
+            "Zexion"
         ]
     },
     "Rapid Thruster (Zipliner)": {
@@ -20216,8 +20738,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -20335,8 +20855,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -20572,8 +21090,6 @@
             "Luxord",
             "Marluxia",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -20780,6 +21296,7 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -20797,9 +21314,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -20818,7 +21332,8 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie"
+            "Yuffie",
+            "Zexion"
         ]
     },
     "Scar": {
@@ -20914,8 +21429,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -21036,6 +21549,7 @@
         "luamod": null,
         "roomData": {},
         "available": [
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -21045,9 +21559,6 @@
             "Hercules",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -21560,8 +22071,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -21690,6 +22199,7 @@
         "luamod": null,
         "roomData": {},
         "available": [
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -21699,9 +22209,6 @@
             "Hercules",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -21981,8 +22488,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -22140,8 +22645,6 @@
             "Leon",
             "Lexaeus",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Prison Keeper",
             "Riku",
             "Sark",
@@ -23090,8 +23593,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -23379,8 +23880,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -23498,8 +23997,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -23605,8 +24102,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -23702,8 +24197,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -23809,8 +24302,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -24155,12 +24646,6 @@
             "bossY": 0,
             "bossZ": 800
         },
-        "aimods": [
-            {
-                "name": "B_EX100/b_ex.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 86,
         "tags": [
@@ -24218,6 +24703,7 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -24237,6 +24723,7 @@
         "obj_edits": {},
         "luamod": null,
         "available": [
+            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -24246,9 +24733,6 @@
             "Hercules",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Sark",
             "Seifer",
             "Setzer",
@@ -24406,8 +24890,6 @@
             "Leon",
             "Lexaeus",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -24423,7 +24905,8 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie"
+            "Yuffie",
+            "Zexion"
         ]
     },
     "Vivi": {
@@ -24538,8 +25021,6 @@
             "Hercules",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Sark",
             "Seifer",
             "Setzer",
@@ -24627,8 +25108,6 @@
             "Jafar",
             "Leon",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Riku",
             "Sark",
             "Scar",
@@ -24856,8 +25335,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -24956,6 +25433,7 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
+            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -24975,9 +25453,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
-            "Pete TR",
             "Prison Keeper",
             "Riku",
             "Saix",
@@ -24998,7 +25473,8 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie"
+            "Yuffie",
+            "Zexion"
         ]
     },
     "Xigbar": {
@@ -25096,8 +25572,6 @@
             "Leon",
             "Lexaeus",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -25210,8 +25684,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -25452,6 +25924,12 @@
             0
         ],
         "name": "Zexion",
+        "aimods": [
+            {
+                "name": "B_EX370/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "roomData": {
             "bossX": 150,
             "bossY": 0,
@@ -25459,7 +25937,6 @@
         },
         "tags": [
             "organization",
-            "needs_teleport",
             "needs_rc"
         ],
         "enabled": true,
@@ -25483,7 +25960,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "needs_rc-needs_teleport-organization",
+        "category": "needs_rc-organization",
         "isnightmare": false,
         "parent": "Zexion",
         "variationof": null,
@@ -25491,7 +25968,6 @@
             "Zexion"
         ],
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -25537,8 +26013,6 @@
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete Cups",
-            "Pete OC II",
             "Pete TR",
             "Prison Keeper",
             "Riku",
@@ -25581,6 +26055,12 @@
             1
         ],
         "name": "Zexion (Data)",
+        "aimods": [
+            {
+                "name": "B_EX370/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "roomData": {
             "bossX": 150,
             "bossY": 0,
@@ -25612,7 +26092,6 @@
         "variationof": null,
         "children": [],
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,

@@ -6207,9 +6207,6 @@ L12466:
  popToSp 0
  gosub 16, L3462
  memcpyToSp 16, 64
- pushFromPSp 64
- pushFromFSp 4
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushImm 1
  popToSp 48
  pushImm 3
@@ -6235,9 +6232,6 @@ L12489:
  memcpyToSp 16, 64
  pushFromPSp 64
  memcpyToSp 16, 32
- pushFromPSp 16
- pushFromPSp 32
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  jmp L12542
 L12542:
  pushFromFSp 48
@@ -6464,9 +6458,6 @@ L12733:
  pushImmf 10000
  syscall 1, 141 ; trap_bg_ground_pos (3 in, 1 out)
  drop 
- pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromFSp 0
  fetchValue 4
  pushImm 0
@@ -8914,9 +8905,6 @@ L17561:
  pushImmf -200
  addf 
  memcpy 0
- pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushImmf 120
  gosub 12, L8477
 L17701:
@@ -8974,9 +8962,6 @@ L17762:
  pushImmf -200
  addf 
  memcpy 0
- pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  halt 
  pushFromFSp 4
  syscall 0, 3 ; trap_frametime (0 in, 1 out)
@@ -11638,9 +11623,6 @@ L22776: ;___label for action pushFromPAi L27822 ; ___ai rc_vanish
  pushFromFSp 0
  pushFromFSp 0
  syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
- memcpyToSp 16, 32
- pushFromPSp 32
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromFSp 0
  gosub 12, L22823
  ret 
