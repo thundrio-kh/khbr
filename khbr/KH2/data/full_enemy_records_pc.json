@@ -6646,7 +6646,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -6767,7 +6766,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -7476,7 +7474,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -7824,7 +7821,6 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -8293,7 +8289,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -8494,7 +8489,6 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -9338,7 +9332,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -10118,7 +10111,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -10228,7 +10220,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -11411,7 +11402,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -12097,7 +12087,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -12271,7 +12260,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -12416,7 +12404,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -12548,7 +12535,6 @@
             "MCP",
             "Grim Reaper I",
             "Groundshaker",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -12631,7 +12617,16 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
+        "aimods": [
+            {
+                "name": "HE19_MS204/he19.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "obj_id"
+                }
+            }
+        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -12660,6 +12655,16 @@
             0
         ],
         "name": "Hades Escape",
+        "aimods": [
+            {
+                "name": "HE05_MS102/he05.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "obj_id"
+                }
+            }
+        ],
         "enabled": true,
         "enmp_index": 18,
         "hp": 100,
@@ -12667,10 +12672,10 @@
         "limiter": 34,
         "model": "B_HE030_HE05",
         "msn": "HE05_MS102",
-        "source_replace_allowed": false,
         "msn_replace_allowed": false,
         "obj_id": 2066,
         "replace_as": "Hades Cups",
+        "variationof": "Hades II",
         "size": 2.26,
         "program": 111,
         "room_size": 14.21,
@@ -12678,25 +12683,27 @@
         "variations": [
             "Hades Escape"
         ],
-        "tags": [],
+        "source_replace_allowed": true,
+        "tags": [
+            "rc_blocked",
+            "teleport_blocked"
+        ],
         "category": "",
         "isnightmare": false,
-        "parent": "Hades Escape",
-        "variationof": null,
-        "children": [
-            "Hades Escape"
-        ],
+        "parent": "Hades II",
+        "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,
         "can_be_enemy_override": false,
         "sizeTag": null,
-        "roommaxsize": null,
-        "blacklist_source": [],
+        "roommaxsize": 13,
+        "blacklist_source": [
+            "Axel II"
+        ],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -12708,10 +12715,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {},
-        "available": [
-            "Hades Escape"
-        ]
+        "roomData": {
+            "bossX": 0,
+            "bossY": -0.0001509865978732705,
+            "bossZ": -450
+        }
     },
     "Hades I": {
         "vars": [
@@ -12719,7 +12727,18 @@
             0
         ],
         "name": "Hades I",
-        "enabled": false,
+        "aimods": [
+            {
+                "name": "HE06_MS101/he06.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "obj_id"
+                }
+            }
+        ],
+        "variationof": "Hades II",
+        "enabled": true,
         "enmp_index": 18,
         "hp": 100,
         "level": 99,
@@ -12727,34 +12746,35 @@
         "model": "B_HE030_PART",
         "msn": "HE06_MS101",
         "obj_id": 349,
-        "source_replace_allowed": false,
         "replace_as": "Hades Cups",
         "type": "boss",
         "variations": [
             "Hades I"
         ],
+        "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
+        "tags": [
+            "rc_blocked",
+            "teleport_blocked"
+        ],
         "category": "",
         "isnightmare": false,
-        "parent": "Hades I",
-        "variationof": null,
-        "children": [
-            "Hades I"
-        ],
+        "parent": "Hades II",
+        "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
         "can_be_enemy": false,
         "can_be_enemy_override": false,
-        "size": 0,
+        "size": 3.15,
         "sizeTag": null,
-        "room_size": 0,
-        "roommaxsize": null,
-        "blacklist_source": [],
+        "room_size": 9.14,
+        "roommaxsize": 13,
+        "blacklist_source": [
+            "Axel II"
+        ],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -12762,15 +12782,16 @@
         "sp_ids": [],
         "subtracts": [],
         "msn_list": [],
-        "program": null,
+        "program": 196,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {},
-        "available": [
-            "Hades I"
-        ]
+        "roomData": {
+            "bossX": 0,
+            "bossY": -0.0001509865978732705,
+            "bossZ": -450
+        }
     },
     "Hades II": {
         "roomData": {
@@ -12786,6 +12807,16 @@
             0
         ],
         "name": "Hades II",
+        "aimods": [
+            {
+                "name": "HE19_MS204/he19.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "obj_id"
+                }
+            }
+        ],
         "enabled": true,
         "enmp_index": 18,
         "hp": 100,
@@ -12793,7 +12824,8 @@
         "limiter": 0,
         "model": "B_HE030",
         "tags": [
-            "rc_blocked"
+            "rc_blocked",
+            "teleport_blocked"
         ],
         "blacklist_source": [
             "Axel II"
@@ -12809,17 +12841,18 @@
         ],
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "rc_blocked",
+        "category": "rc_blocked-teleport_blocked",
         "isnightmare": false,
         "parent": "Hades II",
         "variationof": null,
         "children": [
             "Hades Cups",
+            "Hades Escape",
+            "Hades I",
             "Hades II"
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -12840,7 +12873,6 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Axel I",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -12850,22 +12882,18 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
             "Hostile Program",
             "Jafar",
-            "Larxene",
             "Leon",
             "Lexaeus",
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
-            "Pete TR",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Sark",
             "Scar",
             "Seifer",
@@ -12875,13 +12903,11 @@
             "Terra",
             "The Experiment",
             "Tifa",
-            "Twilight Thorn",
             "Vexen",
             "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
             "Yuffie"
         ]
     },
@@ -12899,13 +12925,24 @@
             0
         ],
         "name": "Hades II (1)",
+        "aimods": [
+            {
+                "name": "HE19_MS204/he19.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "obj_id"
+                }
+            }
+        ],
         "enmp_index": 18,
         "hp": 100,
         "level": 99,
         "limiter": 0,
         "model": "B_HE030",
         "tags": [
-            "rc_blocked"
+            "rc_blocked",
+            "teleport_blocked"
         ],
         "blacklist_source": [
             "Axel II"
@@ -12920,14 +12957,13 @@
             "Hades II (1)"
         ],
         "source_replace_allowed": true,
-        "category": "rc_blocked",
+        "category": "rc_blocked-teleport_blocked",
         "isnightmare": false,
         "parent": "Hades II",
         "variationof": null,
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -13206,7 +13242,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -14842,7 +14877,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -15045,7 +15079,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -15664,7 +15697,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -15854,7 +15886,6 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -16186,7 +16217,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -16732,7 +16762,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -17027,7 +17056,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -17711,7 +17739,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -17819,7 +17846,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -19090,7 +19116,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -19204,7 +19229,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21114,7 +21138,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21228,7 +21251,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21466,7 +21488,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21697,7 +21718,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21813,7 +21833,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -22454,7 +22473,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -22882,7 +22900,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -23059,7 +23076,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24018,7 +24034,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24307,7 +24322,6 @@
             "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24436,7 +24450,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24565,7 +24578,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24687,7 +24699,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -24809,7 +24820,6 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -25406,7 +25416,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -25639,7 +25648,6 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -25870,7 +25878,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -25992,7 +25999,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -26116,7 +26122,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -26239,7 +26244,6 @@
             "Dark Thorn",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -26569,7 +26573,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Hades Escape",
             "Hades II",
             "Hayner",
             "Hercules",

@@ -11271,7 +11271,6 @@ Olympus Coliseum:
             isboss: false
             name: Dusk
       b_99:
-        ignored: true
         size: 0
         sp_ids:
           '27':
@@ -11341,7 +11340,6 @@ Olympus Coliseum:
     size: 5000000
     spawnpoints:
       b_62:
-        ignored: true # This is invincible fight
         size: 0
         sp_ids:
           '38':
@@ -14192,7 +14190,6 @@ Olympus Coliseum:
             isboss: false
             name: Driller Mole
       b_40:
-        ignored: false # Is a fight that is might cause tposing
         size: 0
         sp_ids:
           '12':

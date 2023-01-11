@@ -2652,6 +2652,12 @@ Hades Cups:
       - 0
       - 0
 Hades Escape:
+  aimods:
+  - name: HE05_MS102/he05.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 18
   hp: 100
@@ -2659,10 +2665,10 @@ Hades Escape:
   limiter: 34
   model: B_HE030_HE05
   msn: HE05_MS102
-  source_replace_allowed: false
   msn_replace_allowed: false
   obj_id: 2066
   replace_as: Hades Cups
+  variationof: Hades II
   size: 2.26
   program: 111
   room_size: 14.21
@@ -2673,7 +2679,14 @@ Hades Escape:
       - 0
       - 0
 Hades I:
-  enabled: false
+  aimods:
+  - name: HE06_MS101/he06.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
+  variationof: Hades II
+  enabled: true
   enmp_index: 18
   hp: 100
   level: 99
@@ -2681,7 +2694,6 @@ Hades I:
   model: B_HE030_PART
   msn: HE06_MS101
   obj_id: 349
-  source_replace_allowed: false
   replace_as: Hades Cups
   type: boss
   variations:
@@ -2690,6 +2702,12 @@ Hades I:
       - 0
       - 0
 Hades II:
+  aimods:
+  - name: HE19_MS204/he19.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 18
   hp: 100
@@ -2698,6 +2716,7 @@ Hades II:
   model: B_HE030
   tags:
   - rc_blocked
+  - teleport_blocked # Due to Hades Escape
   blacklist_source:
     - Axel II # Hercules makes the RC hard to do
   roommaxsize: 13 # just a random guess

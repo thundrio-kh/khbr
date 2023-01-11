@@ -279,7 +279,7 @@ class KingdomHearts2:
                                 if varvalue.startswith("$"):
                                     varargs = varvalue[1:].split(".")
                                     if varargs[0] == "enemy":
-                                        if len(created_enemies) == 0:
+                                        if len(created_enemies) == 0 and not aimod.get("boss_msn"):
                                             createmod=False
                                             continue # hack but these types of aimods should not be created when only boss rando is run
                                         index = int(varargs[1])
