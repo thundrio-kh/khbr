@@ -3580,6 +3580,9 @@ Marluxia:
       - 0
       - 1
 Minute Bomb:
+  aimods:
+  - name: M_EX550/m_ex.bdscript
+    type: obj
   enabled: true
   enmp_index: 57
   hp: 100
@@ -3588,9 +3591,6 @@ Minute Bomb:
   model: M_EX550
   obj_id: 7
   sizeTag: memorySmall
-  tags: 
-  - ranged # Not really but because it's replaced by Cannon gun
-  replace_as: Cannon Gun # FIXME I'm being lazy need a real solution to explosion bug
   type: enemy
   variations:
     Minute Bomb:
@@ -3602,11 +3602,11 @@ Minute Bomb:
       - 99
       - 0
 Minute Bomb WI:
+  aimods:
+  - name: M_EX550/m_ex.bdscript # Can use the OG Minute Bomb ai mod instead of making 2
+    type: obj
   enabled: true
   variationof: Minute Bomb
-  tags: 
-  - ranged # Not really but because it's replaced by Cannon gun
-  replace_as: Cannon Gun # FIXME I'm being lazy need a real solution to explosion bug
   enmp_index: 57
   hp: 100
   level: 99

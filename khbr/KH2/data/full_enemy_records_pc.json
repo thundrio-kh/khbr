@@ -17170,6 +17170,12 @@
             0
         ],
         "name": "Minute Bomb",
+        "aimods": [
+            {
+                "name": "M_EX550/m_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 57,
         "hp": 100,
@@ -17178,18 +17184,16 @@
         "model": "M_EX550",
         "obj_id": 7,
         "sizeTag": "memorySmall",
-        "tags": [
-            "ranged"
-        ],
-        "replace_as": "Cannon Gun",
         "type": "enemy",
         "variations": [
             "Minute Bomb",
             "Minute Bomb (99 0)"
         ],
+        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "ranged",
+        "tags": [],
+        "category": "",
         "isnightmare": false,
         "parent": "Minute Bomb",
         "variationof": null,
@@ -17199,7 +17203,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -17230,6 +17233,12 @@
             0
         ],
         "name": "Minute Bomb (99 0)",
+        "aimods": [
+            {
+                "name": "M_EX550/m_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 57,
         "hp": 100,
@@ -17238,25 +17247,22 @@
         "model": "M_EX550",
         "obj_id": 7,
         "sizeTag": "memorySmall",
-        "tags": [
-            "ranged"
-        ],
-        "replace_as": "Cannon Gun",
         "type": "enemy",
         "variations": [
             "Minute Bomb",
             "Minute Bomb (99 0)"
         ],
+        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "ranged",
+        "tags": [],
+        "category": "",
         "isnightmare": false,
         "parent": "Minute Bomb",
         "variationof": null,
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -17312,7 +17318,12 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
+        "aimods": [
+            {
+                "name": "M_EX550/m_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,

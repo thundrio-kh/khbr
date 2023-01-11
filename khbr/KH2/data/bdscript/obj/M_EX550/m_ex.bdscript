@@ -3135,6 +3135,7 @@ L5958:
  pushFromFSp 32
  ret 
 L6009: ;___label for action pushFromPAi L7062 ; ___ai atk_bomb_splash
+ ret
  popToSp 0
  pushFromPAi L7062 ; ___ai atk_bomb_splash (L7062)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
