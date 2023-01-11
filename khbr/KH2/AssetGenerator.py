@@ -1,3 +1,5 @@
+from khbr.KH2.CommandManager import CommandManager
+from khbr.KH2.MemtManager import MemtManager
 from khbr.textutils import final_fight_text
 from khbr.KH2.Mission import Mission
 from khbr.KH2.AiManager import AiManager
@@ -6,6 +8,7 @@ from khbr.utils import print_debug
 from khbr._config import KH2_DIR, HARDCAP, DEBUG_HEALTH
 from khbr.KH2.AreaDataScript import AreaDataScript
 import os, yaml
+import random
 
 
 # TODO future refactor could use jsonpath to make looking through the complex spawns dict easier
@@ -114,17 +117,91 @@ class AssetGenerator:
             mset_data = f.read()
         asset = self.modwriter.writeMset("B_EX100.mset", mset_data)
         self.assets.append(asset)
-        with open(os.path.join(os.path.dirname(__file__), "data", "bin", "cmd.bin"), "rb") as f:
-            cmd_data = f.read()
-        asset = self.modwriter.writeCmd(cmd_data)
+
+    def generateCustomCmd(self, cmd_mods):
+        cmd = CommandManager(os.path.join(os.path.dirname(__file__), "data", "bin", "cmd.bin"))
+        for index, changes in cmd_mods.items():
+            cmd.update_entry(index, changes)
+            print(cmd)
+        asset = self.modwriter.writeCmd(cmd.dump_bin())
         self.assets.append(asset)
 
-    def generateAiMods(self, ai_mods):
+    def generateCustomMemt(self, randomize_party, randomize_costumes):
+        memt = MemtManager(os.path.join(os.path.dirname(__file__), "data", "bin", "memt.bin"))
+
+        if randomize_costumes:
+            # Costume rando
+            
+            wtypes = ["v", "wi", "nm", "xm", "tr"]
+            replacements = {}
+            sora_shuffled = list(wtypes)
+            random.shuffle(sora_shuffled)
+            sora_replacements = {wtypes[i]:sora_shuffled[i] for i in range(len(wtypes))}
+            donald_shuffled = list(wtypes)
+            random.shuffle(donald_shuffled)
+            donald_replacements = {wtypes[i]:donald_shuffled[i] for i in range(len(wtypes))}
+            goofy_shuffled = list(wtypes)
+            random.shuffle(goofy_shuffled)
+            goofy_replacements = {wtypes[i]:goofy_shuffled[i] for i in range(len(wtypes))}
+
+            for entry in memt.entries:
+                for k in memt.sora_keys:
+                    old_value = entry[k]
+                    if old_value in memt.costume_map:
+                        category = memt.costume_map[old_value]
+                        new_category = sora_replacements[category]
+                        new_value = memt.costumes["sora"][k][new_category]
+                        entry[k] = new_value
+                old_value = entry["Friend 1 (Donald)"]
+                if old_value in memt.costume_map:
+                    category = memt.costume_map[old_value]
+                    new_category = donald_replacements[category]
+                    new_value = memt.costumes["Friend 1 (Donald)"][new_category]
+                    entry["Friend 1 (Donald)"] = new_value
+                old_value = entry["Friend 2 (Goofy)"]
+                if old_value in memt.costume_map:
+                    category = memt.costume_map[old_value]
+                    new_category = goofy_replacements[category]
+                    new_value = memt.costumes["Friend 2 (Goofy)"][new_category]
+                    entry["Friend 2 (Goofy)"] = new_value
+
+        if randomize_party:
+            # Party member rando
+
+            party_member_map = {}
+            for k,v in memt.party_members.items():
+                for obj_id in v:
+                    party_member_map[obj_id] = k
+            original = list(memt.party_members.keys())
+            shuffled = list(memt.party_members.keys())
+            random.shuffle(shuffled)
+            replacements = {}
+            for i in range(len(original)):
+                replacements[original[i]] = shuffled[i]
+            for entry in memt.entries:
+                # donald_value = entry["Friend 1 (Donald)"]
+                # if donald_value in party_members["donald"]: # that means we are allowed to change the value
+                #     entry["Friend 1 (Donald)"] = random.choice(party_members[replacements["donald"]])
+                # goofy_value = entry["Friend 2 (Goofy)"]
+                # if goofy_value in party_members["goofy"]: # that means we are allowed to change the value
+                #     entry["Friend 1 (Goofy)"] = random.choice(party_members[replacements["goofy"]])
+                worldvalue = entry["World Character"]
+                if worldvalue:
+                    worldfriend = party_member_map[worldvalue]
+                entry["World Character"] = random.choice(memt.party_members[replacements[worldfriend]])
+            print(replacements) # TODO remove debug
+
+        asset = self.modwriter.writeMemt(memt.dump_bin())
+        existingasset = self.find_asset("03system.bin")
+        if existingasset:
+            existingasset["source"].append(asset["source"][0])
+        else:
+            self.assets.append(asset)
+
+    def generateAiMods(self, ai_mods, rvlrando=None):
         # Sort of a known issue but this will apply all the old and new mods for an ai, may cause issues someday
         # ie vivi
-        if not ai_mods:
-            return
-        created_mods = []
+        created_mods = {}
         for ai in ai_mods:
             aimod = ai_mods[ai]
 
@@ -141,18 +218,65 @@ class AssetGenerator:
 
             for mod in mods:
                 modelname = mod["name"].split("/")[0]
+                modbasename = os.path.basename(mod["name"])
                 modfilename = os.path.join(os.path.dirname(__file__), "data", "bdscript", mod["type"], mod["name"])
-                if modfilename in created_mods: # Sometimes for instance Seifer the same mod is attempted to be made multiple times
+                if modelname in created_mods: # Sometimes for instance Seifer the same mod is attempted to be made multiple times
                     continue
-                created_mods.append(modfilename)
                 with open(modfilename) as f:
                     ai_manager = AiManager(ai, f.read())
                     
                     for orig,new in mod.get("replacements", {}).items():
                         ai_manager.replace(orig, mod["vars"][new])
 
-                    asset = self.modwriter.writeAi(os.path.basename(mod["name"]), modelname, mod["type"],ai_manager.get_script())
-                    self.assets.append(asset)
+                    created_mods[modelname] = {
+                        "name": modbasename,
+                        "model": modelname,
+                        "type": mod["type"],
+                        "manager": ai_manager
+                    }
+
+        if rvlrando:
+            rando_type = rvlrando.replace("revenge_limit_rando", "")
+            # TODO there are extra karma values left in the list at the end, so I'm clearly not finding everything I should 
+            karma_values = [92.0, 75.0, 92.0, 75.0, 100.0, 75.0, 75.0, 55.0, 75.0, 75.0, 75.0, 75.0, 100.0, 100.0, 75.0, 75.0, 75.0, 50.0, 80.0, 75.0, 100.0, 75.0, 100.0, 75.0, 100.0, 5.0, 200.0, 200.0, 200.0, 200.0, 50.0, 80.0, 60.0, 60.0, 60.0, 60.0, 50.0, 40.0, 40.0, 75.0, 100.0, 75.0, 100.0, 150.0, 125.0, 50.0, 50.0, 30.0, 60.0, 60.0, 100.0, 100.0, 100.0, 100.0, 80.0, 70.0, 60.0, 50.0, 100.0, 80.0, 60.0, 40.0, 100.0, 80.0, 60.0, 40.0, 100.0, 80.0, 60.0, 40.0, 100.0, 80.0, 60.0, 40.0, 50.0, 95.0, 90.0, 85.0, 80.0, 100.0, 40.0]
+            karma_values += [100 for _ in range(145)] # The number of scripts to modify that don't normally change the revenge value from the default of 100
+            if rando_type == "Vanilla":
+                pass # pass
+            elif rando_type == "Set 0":
+                karma_values = [0 for _ in karma_values]
+            elif rando_type == "Set Infinity":
+                karma_values = [9999 for _ in karma_values]
+            elif rando_type == "Random Swap":
+                random.shuffle(karma_values)
+            elif rando_type == "Random Values":
+                karma_values = [random.randint(0,200) for _ in karma_values]
+            else:
+                raise Exception("Invalid Karma Limit Value: {}".format(rando_type))
+
+            objdir = os.path.join(os.path.dirname(__file__), "data", "bdscript", "obj")
+            for modelname in os.listdir(objdir):
+                aifiles = [f for f in os.listdir(os.path.join(objdir, modelname)) if "original" not in f]
+                if len(aifiles) != 1:
+                    raise Exception("Wrong number of files for {}: {}".format(modelname, len(aifiles)))
+                if modelname in created_mods:
+                    created_mods[modelname]["manager"].set_karma_limit(karma_values)
+                else:
+                    modfilename = os.path.join(objdir, modelname, aifiles[0]).replace(".bdscript", ".original.bdscript")
+                    with open(modfilename) as f:
+                        ai_manager = AiManager(modfilename, f.read())
+
+                        ai_manager.set_karma_limit(karma_values)
+
+                        created_mods[modelname] = {
+                            "name": aifiles[0],
+                            "model": modelname,
+                            "type": "obj",
+                            "manager": ai_manager
+                        }
+
+        for modelname, ai in created_mods.items():
+            asset = self.modwriter.writeAi(ai["name"], ai["model"], ai["type"], ai["manager"].get_script())
+            self.assets.append(asset)
 
     def generateLuaMods(self, lua_mods):
         if not lua_mods:
@@ -166,11 +290,16 @@ class AssetGenerator:
 
     def generateMsns(self, msn_map, msninfo):
         for oldmsn in msn_map:
-            
+
             new_msn_mapping = msn_map.get(oldmsn)
             if type(new_msn_mapping) == str:
                 new_msn_mapping = {"name": new_msn_mapping}
             new_msn_name = new_msn_mapping["name"]
+
+            # This might cause some issues with bosses like the FF bosses because the camera complete won't work, and of course it prevents mickey in some fights, which is most likely fine
+            if self.find_asset(oldmsn+".bar"):
+                print("Old MSN {} has an ai edit, so can't copy over {}".format(oldmsn, new_msn_name))
+                continue
             info = msninfo[new_msn_name]
             mission = Mission(new_msn_name, info)
 
@@ -334,17 +463,18 @@ class AssetGenerator:
         evtfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "evt.script")
         with open(evtfn) as f:
             script = AreaDataScript(f.read())
-        program = script.programs[programnumber]
-        if "jump_to" in options:
-            program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"])
-        if "open_menu" in options:
-            program.set_open_menu(options["open_menu"])
-        if "remove_event" in options:
-            program.remove_event()
-        if "remove_excess_flags"in options:
-            program.remove_command("SetProgressFlag")
-        if "flags" in options:
-            program.set_flags(options["flags"])
-        programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", programnumber, program.make_program())
-        roomsource.append(programasset)
+        programs_to_edit = script.programs if programnumber=="all" else {programnumber: script.programs[programnumber]}
+        for currentprogramnumber, program in programs_to_edit.items():
+            if "jump_to" in options:
+                program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"])
+            if "open_menu" in options:
+                program.set_open_menu(options["open_menu"])
+            if "remove_event" in options:
+                program.remove_event()
+            if "remove_excess_flags"in options:
+                program.remove_command("SetProgressFlag")
+            if "flags" in options:
+                program.set_flags(options["flags"])
+            programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
+            roomsource.append(programasset)
         

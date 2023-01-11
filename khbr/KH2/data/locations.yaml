@@ -11271,7 +11271,6 @@ Olympus Coliseum:
             isboss: false
             name: Dusk
       b_99:
-        ignored: true
         size: 0
         sp_ids:
           '27':
@@ -11341,7 +11340,6 @@ Olympus Coliseum:
     size: 5000000
     spawnpoints:
       b_62:
-        ignored: true # This is invincible fight
         size: 0
         sp_ids:
           '38':
@@ -14192,7 +14190,6 @@ Olympus Coliseum:
             isboss: false
             name: Driller Mole
       b_40:
-        ignored: false # Is a fight that is might cause tposing
         size: 0
         sp_ids:
           '12':
@@ -14741,6 +14738,12 @@ Port Royal:
             isboss: false
             name: Armored Knight
       b_30:
+        aimods:
+        - name: CA09_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '484':
@@ -14955,6 +14958,12 @@ Port Royal:
             isboss: false
             name: Hammer Frame
       b_70:
+        aimods:
+        - name: CA13_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.5.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '70':
@@ -15122,6 +15131,12 @@ Port Royal:
             isboss: false
             name: Dusk
       b_70:
+        aimods:
+        - name: CA12_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.1.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '56':
@@ -15233,6 +15248,12 @@ Port Royal:
             isboss: false
             name: Rabid Dog
       b_30:
+        aimods:
+        - name: CA10_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '249':
@@ -15395,6 +15416,12 @@ Port Royal:
             isboss: false
             name: Dusk
       b_60:
+        aimods:
+        - name: CA14_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '63':
@@ -15612,6 +15639,12 @@ Port Royal:
             isboss: false
             name: Dusk
       b_70:
+        aimods:
+        - name: CA15_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '65':
@@ -17740,6 +17773,9 @@ Space Paranoids:
         size: 0
         sp_ids:
           '69':
+          - index: 3
+            isboss: true
+            name: MCP
           - index: 5
             isboss: true
             name: Giant Sark

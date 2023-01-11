@@ -13,12 +13,13 @@ class EnemySeed:
         self.ai_mods = {}
         self.lua_mods = []
         self.utility_mods = {}
+        self.cmd_mods = {}
         self.data_replacements = {}
         self.config = config
 
         # Temporary option needed during generating wild enemies to track enemies already used per room
         self.wild_enemy_set = set()
-            
+
     def toJson(self):
         return {
             "utility_mods": self.utility_mods,
@@ -26,6 +27,7 @@ class EnemySeed:
             "msn_map": self.msn_mapping, 
             "ai_mods": self.ai_mods, 
             "lua_mods": list(set(self.lua_mods)),
+            "cmd_mods": self.cmd_mods,
             "object_map": self.object_map, 
             "scale_map": self.set_scaling, 
             "limiter_map": self.spawn_limiters, 
@@ -57,14 +59,18 @@ class EnemySeed:
         self.subtract_map[world][room]["spawnpoints"][spawnpoint].append(objectid)
 
     def update_seed(self, old_boss_object, new_boss_object, world, room, spawnpoint, spid):
+        if old_boss_object["name"] == new_boss_object["name"]:
+            return # shouldn't do anything in this case, which is mostly only going to happen on selected enemy
         if new_boss_object["name"] == "Shadow Roxas":
             return # Nothing to do in this case
         self.update_extras(old_boss_object, new_boss_object, world, room, spawnpoint, spid)
-        self.update_msn_mapping(old_boss_object, new_boss_object)
-        self.update_scaling(old_boss_object, new_boss_object)
         self.update_objentry(new_boss_object)
         self.update_aimod(old_boss_object, new_boss_object)
         self.update_luamod(new_boss_object)
+        self.add_cmdmod(new_boss_object)
+        if old_boss_object["type"] == "boss":
+            self.update_msn_mapping(old_boss_object, new_boss_object)
+            self.update_scaling(old_boss_object, new_boss_object)
 
     def update_extras(self, old_boss_object, new_boss_object, world, room, spawnpoint, spid):
         # self, world, room, spawnpoint, spid, entity, new_boss_object
@@ -95,7 +101,7 @@ class EnemySeed:
         msn_object["setmickey"] = self._should_place_mickey(old_boss_object, new_boss_object)
         if old_boss_object["name"] == "Hades Cups":
             return # fixme MSN should not be replaced in this instance, also more thinking but maybe this should just be a condition on msn_replace_allowed
-        if "roxas" in old_boss_object.get("tags"):
+        if "roxas" in old_boss_object.get("tags") or "broken_mickey" in old_boss_object.get("tags"):
             msn_object["setmickey"] = False # Fights as roxas will tpose when summoning mickey
         if "disablecamera" in new_boss_object.get("tags"):
             msn_object["disablecamera"] = True
@@ -136,21 +142,31 @@ class EnemySeed:
         if new_boss_object["obj_edits"]:
             self.object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
 
+    def _add_ai(self, ai_to_mod, data_for_mod):
+        #print("modding {} ai with {}".format(ai_to_mod, data_for_mod))
+        self.ai_mods[ai_to_mod] = data_for_mod
+
     def update_aimod(self, old_boss_object, new_boss_object):
         # this is a wordy way of adding the old boss if it's a source old or new boss if it's a source new
         if len([m for m in new_boss_object.get("aimods",[]) if m.get("source", "new") == "new"]) > 0:
-            self.ai_mods[new_boss_object["name"]] = old_boss_object["name"]
+            self._add_ai(new_boss_object["name"], old_boss_object["name"])
         if len([m for m in old_boss_object.get("aimods",[]) if m.get("source", "new") == "old"]) > 0:
-            self.ai_mods[old_boss_object["name"]] = new_boss_object["name"]
+            self._add_ai(old_boss_object["name"], new_boss_object["name"])
 
         for add in new_boss_object["adds"]:
             if add.get("aimods"):
-                self.ai_mods[add["name"]] = old_boss_object["name"]
+                self._add_ai(add["name"], old_boss_object["name"])
 
     def update_luamod(self, new_boss_object):
         if new_boss_object.get("luamod"):
             self.lua_mods.append(new_boss_object["luamod"])
             
+    def add_cmdmod(self, new_boss_object):
+        for cmd_mod in new_boss_object["cmdmods"]:
+            if cmd_mod["value"] in self.cmd_mods:
+                print("Warning: cmd mod {} getting overwritten by {}".format(cmd_mod["value"], new_boss_object["name"]))
+            self.cmd_mods[cmd_mod["value"]] = cmd_mod["changes"]
+
     def set_data_final_xemnas_retry(self, shouldretry):
         msn_name = "EH20_MS113_RE"
         if msn_name in self.msn_mapping:

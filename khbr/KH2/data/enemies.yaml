@@ -1,5 +1,8 @@
 Bees ETC PO:
-  enabled: false
+  enabled: true
+  tags:
+  - other
+  variationof: Bees TT PO
   enmp_index: 999
   model: F_PO090_ETC
   obj_id: 2139
@@ -11,7 +14,9 @@ Bees ETC PO:
       - 0
       - 3
 Bees TT PO:
-  enabled: false
+  enabled: true
+  tags:
+  - other
   enmp_index: 999
   model: F_PO090_TT
   obj_id: 2138
@@ -156,11 +161,13 @@ Bookmaster (TR):
       - 0
       - 0
 Bulky Vendor:
-  enabled: false
+  enabled: true
   enmp_index: 999
   model: M_EX590
   obj_id: 75
   size: 0
+  tags:
+  - other
   type: enemy
   variations:
     Bulky Vendor (Disappears):
@@ -172,12 +179,15 @@ Bulky Vendor:
       - 0
       - 0
 Bulky Vendor (NM):
-  enabled: false
+  enabled: true
+  tags:
+  - other
   enmp_index: 999
   model: M_EX590_NM
   obj_id: 2509
   size: 0
   type: enemy
+  variationof: Bulky Vendor
   variations:
     Bulky Vendor (NM) (Disappears):
       vars:
@@ -345,7 +355,6 @@ Gargoyle Knight:
   sizeTag: memorySmall
   type: enemy
   isnightmare: true
-  replace_as: Gargoyle Knight # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   variations:
     Gargoyle Knight (30 0):
       vars:
@@ -371,7 +380,6 @@ Gargoyle Warrior:
   enabled: true
   enmp_index: 999
   model: M_BB010_AX
-  replace_as: Gargoyle Warrior # This is to make them not attack in cutscenes #TODO Make this not a thing in nightmare mode
   obj_id: 368
   isnightmare: true
   sizeTag: memorySmall
@@ -535,7 +543,7 @@ Scar Ghost:
   model: B_LK110_PHANTOM
   obj_id: 2099
   size: 0
-  type: boss
+  type: enemy
   variations:
     Scar Ghost:
       vars:
@@ -696,6 +704,9 @@ Trick Ghost (NM):
       - 0
       - 0
 Undead Pirate A:
+  aimods:
+  - name: B_CA020/b_ca.bdscript
+    type: obj
   enabled: true
   enmp_index: 999
   model: B_CA020
@@ -742,6 +753,9 @@ Undead Pirate A:
       - 91
       - 0
 Undead Pirate B:
+  aimods:
+  - name: B_CA030/b_ca.bdscript
+    type: obj
   enabled: true
   enmp_index: 999
   isnightmare: true
@@ -769,6 +783,9 @@ Undead Pirate B:
       - 92
       - 0
 Undead Pirate C:
+  aimods:
+  - name: B_CA040/b_ca.bdscript
+    type: obj
   enabled: true
   enmp_index: 999
   model: B_CA040
@@ -929,6 +946,10 @@ Armor Xemnas I:
   # aimods: 
   # - name: B_EX260/b_ex.bdscript
   #   type: obj
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -150
   enabled: true
   enmp_index: 0xA0
   hp: 100
@@ -1091,10 +1112,12 @@ Armor Xemnas I:
       - 0
 Armor Xemnas II:
   enabled: true
-  # aimods:
+  aimods: 
+  - name: B_EX260/b_ex.bdscript
+    type: obj
   # - name: EH23_MS112/ms_b.bdscript
   #   type: msn
-  #   source: old
+    # source: old
   blacklist_source:
   - Axel I
   - Saix # Report of crash
@@ -1109,10 +1132,14 @@ Armor Xemnas II:
   type: boss
   variations:
     Armor Xemnas II:
+      roomData:
+        bossX: 0
+        bossY: 14940
+        bossZ: 4511.38818359375
       msn: EH23_MS112
       program: 73
       outprogram: 0x54
-      replace_as: Armor Xemnas I
+      #replace_as: Armor Xemnas I
       final_fight: true
       size: 1.7
       room_size: 9.23
@@ -1178,7 +1205,10 @@ Assault Rider:
       - 0
       - 0
 Axel I:
-  # Apparantly Axel I can sometimes act like axel 2 thats weird
+  roomData:
+    bossX: 82.84268188476562
+    bossY: -90
+    bossZ: 107.84269714355469
   can_be_enemy: true
   enabled: true
   hp: 100
@@ -1227,6 +1257,10 @@ Axel I:
       - 1
       - 0
 Axel II:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -165
   tags:
   - organization
   - roxas
@@ -1308,6 +1342,10 @@ Banzai:
       - 2
       - 0
 Barbossa:
+  roomData:
+    bossX: -530.52001953125
+    bossY: -45.31237030029297
+    bossZ: -334.4390869140625
   aimods: 
   - name: B_CA010/b_ca.bdscript
     type: obj
@@ -1326,8 +1364,6 @@ Barbossa:
     aimods:
     - name: B_CA000/b_ca.bdscript
       type: obj
-  tags:
-  - needs_teleport
   enabled: true
   enmp_index: 0x63
   hp: 100
@@ -1367,13 +1403,17 @@ Barrel:
       - 0
       - 0
 Bees (Disappearing):
-  enabled: false
+  enabled: true
+  tags:
+  - other
   hp: 100
   level: 99
   limiter: 12
   model: F_PO090
   obj_id: 1573
   size: 41084
+  replace_as: Bees TT PO
+  variationof: Bees TT PO
   type: enemy
   variations:
     Bees (Disappearing):
@@ -1416,6 +1456,10 @@ Berserker:
       - 0
       - 0
 Blizzard Lord:
+  roomData:
+    bossX: 270
+    bossY: 0
+    bossZ: 730
   can_be_enemy: true
   enabled: true
   enmp_index: 0x7B
@@ -1449,6 +1493,10 @@ Blizzard Lord:
       - 0
       - 0
     Blizzard Lord (Cups):
+      roomData:
+        bossX: 0
+        bossY: 0
+        bossZ: -550
       tags:
       - cups
       - large
@@ -1534,6 +1582,10 @@ Cerberus:
   - The Beast
   variations:
     Cerberus:
+      roomData:
+        bossX: -611.3707885742188
+        bossY: 235.92300415039062
+        bossZ: -731.3707885742188
       msn: HE07_MS103
       mickey_source: true
       program: 114
@@ -1543,6 +1595,10 @@ Cerberus:
       - 0
       - 0
     Cerberus (Cups):
+      roomData:
+        bossX: 0
+        bossY: 0
+        bossZ: -150
       # tags:
       # - cups
       enabled: true
@@ -1578,6 +1634,10 @@ Cloud:
   type: boss
   variations:
     Cloud:
+      roomData:
+        bossX: 200.6020050048828
+        bossY: -0.0001509865978732705
+        bossZ: -307.20660400390625
       can_be_enemy_override: true
       program: 196
       msn: HE_COL_8_25
@@ -1587,6 +1647,10 @@ Cloud:
       - 1
       - 0
     Cloud (1):
+      roomData:
+        bossX: -200
+        bossY: -0.0001509865978732705
+        bossZ: -400
       program: 196
       msn: HE_COL_8_40
       room_size: 9.14
@@ -1595,6 +1659,10 @@ Cloud:
       - 2
       - 0
     Cloud (2):
+      roomData:
+        bossX: 200.6020050048828
+        bossY: 0
+        bossZ: -307.20660400390625
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
@@ -1711,6 +1779,10 @@ Dancer:
       - 99
       - 0
 Dark Thorn:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -800
   enabled: true
   enmp_index: 0x16
   hp: 100
@@ -1739,6 +1811,10 @@ Dark Thorn:
       - 0
       - 0
 Axel (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -165
   tags:
   - data
   - organization
@@ -1764,6 +1840,10 @@ Axel (Data):
       - 0
       - 0
 Demyx (Data):
+  roomData:
+    bossX: 150
+    bossY: 0
+    bossZ: 300
   tags:
   - data
   - organization
@@ -1789,6 +1869,10 @@ Demyx (Data):
       - 1
       - 0
 Final Xemnas (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 1200
   tags:
   - data
   - organization
@@ -1827,6 +1911,10 @@ Final Xemnas (Data):
       - 1
       - 0
 Luxord (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -400
   tags:
   - data
   - organization
@@ -1851,6 +1939,10 @@ Luxord (Data):
       - 0
       - 0
 Saix (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 400
   tags:
   - data
   - organization
@@ -1875,6 +1967,10 @@ Saix (Data):
       - 0
       - 0
 Xaldin (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -400
   tags:
   - data
   - organization
@@ -1897,6 +1993,10 @@ Xaldin (Data):
       - 0
       - 0
 Xemnas (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 1400
   tags:
   - data
   - organization
@@ -1923,10 +2023,15 @@ Xemnas (Data):
       - 0
       - 0
 Xigbar (Data):
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 200
   enabled: true
   tags:
   - data
   - organization
+  - broken_mickey
   variationof: Xigbar
   enmp_index: 0xFC
   hp: 100
@@ -1946,6 +2051,10 @@ Xigbar (Data):
       - 0
       - 0
 Demyx:
+  roomData:
+    bossX: 150
+    bossY: 0
+    bossZ: 300
   tags:
   - organization
   blacklist_source:
@@ -2205,6 +2314,10 @@ Fiery Globe Treasure Room:
       - 0
       - 0
 Final Xemnas:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 1200
   aimods: 
   - name: B_EX170_LAST/b_ex.bdscript
     type: obj
@@ -2289,14 +2402,12 @@ Gambler:
       vars:
       - 0
       - 0
-    # Nobody "really" wants this, it would be cool for nightmare mode
-    # but it doesn't mesh with how I am doing the enemy mappings right now
-    # so #TODO to make this work in nightmare mode only
-    # Gambler (Summons Darkness):
-    #   enabled: false
-    #   vars:
-    #   - 1
-    #   - 0
+    Gambler (Summons Darkness):
+      enabled: false
+      isnightmare: true
+      vars:
+      - 1
+      - 0
     Gambler (5 0):
       vars:
       - 5
@@ -2329,6 +2440,39 @@ Giant Sark:
       vars:
       - 0
       - 0
+MCP:
+  # aimods:
+  # - name: B_TR020/b_tr.bdscript
+  #   type: obj
+  enabled: true
+  tags:
+  - gimmick
+  enmp_index: 0x8d
+  hp: 100
+  level: 99
+  limiter: 0
+  model: B_TR020
+  msn: TR09_MS205
+  size: 1.41
+  program: 59
+  room_size: 10.35
+  obj_id: 1762
+  type: boss
+  adds:
+  - ObjectId: 724 # tron, needed for delete RC
+  - ObjectId: 863 # MCP Barrier
+    Serial: 13
+  - ObjectId: 864 # MCP Wall
+    Serial: 15
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 80
+  variations:
+    MCP:
+      vars:
+      - 0
+      - 0
 Graveyard NM:
   enabled: true
   enmp_index: 139
@@ -2349,6 +2493,10 @@ Graveyard NM:
       - 0
       - 0
 Grim Reaper I:
+  roomData:
+    bossX: -28.273300170898438
+    bossY: -650.0770263671875
+    bossZ: 1194
   tags:
   - teleport_blocked
   - large
@@ -2372,10 +2520,18 @@ Grim Reaper I:
       - 1
       - 0
 Grim Reaper II:
+  roomData:
+    bossX: 589.9752197265625
+    bossY: -1.9969710111618042
+    bossZ: -541.83251953125
   aimods: 
   - name: B_CA050/b_ca.bdscript
     type: obj
+  # - name: CA01_MS204/ca01.bdscript
+  #   type: msn
+  #   source: old
   enabled: true
+  msn_source_as: "WI03_MS104"
   enmp_index: 0x7C
   hp: 100
   tags:
@@ -2413,22 +2569,36 @@ Grim Reaper II:
       requires_msn: true
       adds:
       - ObjectId: 1740 # chest
+        dontSub: true # subbing causes crash when msn is still used
       - ObjectId: 2200 # medallions, try the gambler version
+        dontSub: true # subbing causes crash when msn is still used
         Medal: 123
       vars:
       - 0
       - 0
 Groundshaker:
+  roomData:
+    bossX: 1224.219970703125
+    bossY: -384
+    bossZ: 4330
+  aimods: 
+  - name: B_LK120/b_lk.bdscript
+    type: obj
   enabled: false
   enmp_index: 0x5F
   hp: 100
   level: 99
   blacklist_source:
   - Demyx # Weird fall through floor doesn't start
+  whitelist_destination:
+  - Terra
+  - Armor Xemnas II
+  - Final Xemnas
   limiter: 0
   tags:
   - rc_blocked
   - teleport_blocked
+  - gimmick
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   model: B_LK120
@@ -2466,6 +2636,10 @@ Hades Cups:
   type: boss
   variations:
     Hades Cups:
+      roomData:
+        bossX: 0
+        bossY: -0.0001509865978732705
+        bossZ: -500
       enabled: true
       msn_list:
       - program: 192
@@ -2478,17 +2652,23 @@ Hades Cups:
       - 0
       - 0
 Hades Escape:
-  enabled: false
+  aimods:
+  - name: HE05_MS102/he05.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
+  enabled: true
   enmp_index: 18
   hp: 100
   level: 99
   limiter: 34
   model: B_HE030_HE05
   msn: HE05_MS102
-  source_replace_allowed: false
   msn_replace_allowed: false
   obj_id: 2066
   replace_as: Hades Cups
+  variationof: Hades II
   size: 2.26
   program: 111
   room_size: 14.21
@@ -2499,7 +2679,14 @@ Hades Escape:
       - 0
       - 0
 Hades I:
-  enabled: false
+  aimods:
+  - name: HE06_MS101/he06.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
+  variationof: Hades II
+  enabled: true
   enmp_index: 18
   hp: 100
   level: 99
@@ -2507,7 +2694,6 @@ Hades I:
   model: B_HE030_PART
   msn: HE06_MS101
   obj_id: 349
-  source_replace_allowed: false
   replace_as: Hades Cups
   type: boss
   variations:
@@ -2516,6 +2702,12 @@ Hades I:
       - 0
       - 0
 Hades II:
+  aimods:
+  - name: HE19_MS204/he19.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: obj_id
   enabled: true
   enmp_index: 18
   hp: 100
@@ -2524,6 +2716,7 @@ Hades II:
   model: B_HE030
   tags:
   - rc_blocked
+  - teleport_blocked # Due to Hades Escape
   blacklist_source:
     - Axel II # Hercules makes the RC hard to do
   roommaxsize: 13 # just a random guess
@@ -2533,6 +2726,10 @@ Hades II:
   type: boss
   variations:
     Hades II:
+      roomData:
+        bossX: 0
+        bossY: -0.0001509865978732705
+        bossZ: -450
       program: 196
       msn: HE_COL_8_50
       room_size: 9.14
@@ -2540,6 +2737,10 @@ Hades II:
       - 1
       - 0
     Hades II (1):
+      roomData:
+        bossX: 0
+        bossY: 0
+        bossZ: -800
       enabled: true
       msn_replace_allowed: true
       msn: HE19_MS205
@@ -2573,6 +2774,7 @@ Hammer Frame WI:
       - 0
       - 0
 Hayner:
+  roomData: {}
   aimods: 
   - name: TT05_MS401/ms_s.bdscript
     type: msn
@@ -2652,6 +2854,10 @@ Hercules:
   - cups
   variations:
     Hercules:
+      roomData:
+        bossX: 0
+        bossY: 0.0001345789059996605
+        bossZ: -300
       enabled: true
       msn_list:
       - program: 191
@@ -2772,6 +2978,10 @@ Hook Bat AL:
       - 3
       - 20
 Hostile Program:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 0
   enabled: true
   blacklist_source:
   - Axel I
@@ -2930,6 +3140,10 @@ Iron Hammer:
       - 0
       - 0
 Jafar:
+  roomData:
+    bossX: 300
+    bossY: -21450
+    bossZ: 500
   enabled: true
   source_replace_allowed: true
   whitelist_source:
@@ -2946,6 +3160,12 @@ Jafar:
   aimods: 
   - name: B_AL020/b_al.bdscript
     type: obj
+  tags:
+  - gimmick # Only because it's unstable with the infinite jumps... TODO
+  cmdmods:
+  - value: 604
+    changes:
+      Flags: 4294967295
   enmp_index: 0x8A
   hp: 100
   level: 99
@@ -3013,6 +3233,10 @@ Large Body:
       - 0
       - 0
 Larxene:
+  roomData:
+    bossX: -137.8426971435547
+    bossY: 0
+    bossZ: -137.8426971435547
   tags:
   - organization
   - needs_teleport
@@ -3067,6 +3291,10 @@ Leon:
   - cups
   variations:
     Leon:
+      roomData:
+        bossX: -200
+        bossY: 0
+        bossZ: -200
       can_be_enemy: true
       program: 189
       msn: HE_COL_1_10
@@ -3076,6 +3304,10 @@ Leon:
       - 1
       - 0
     Leon (1):
+      roomData:
+        bossX: 200
+        bossY: -0.0001509865978732705
+        bossZ: -400
       program: 196
       msn: HE_COL_8_40
       room_size: 9.14
@@ -3084,6 +3316,10 @@ Leon:
       - 3
       - 0
     Leon (2):
+      roomData:
+        bossX: -349.39801025390625
+        bossY: 0
+        bossZ: -207.20660400390625
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
@@ -3092,6 +3328,10 @@ Leon:
       - 4
       - 0
     Leon (3):
+      roomData:
+        bossX: -200
+        bossY: 0
+        bossZ: -200
       program: 193
       msn: HE_COL_5_10
       room_size: 9.14
@@ -3100,6 +3340,13 @@ Leon:
       - 2
       - 0
 Lexaeus:
+  roomData:
+    bossX: -137.8426971435547
+    bossY: 0
+    bossZ: -137.8426971435547
+  aimods: 
+  - name: N_CM020_BTL/n_cm.bdscript
+    type: obj
   tags:
   - organization
   enabled: true
@@ -3120,10 +3367,6 @@ Lexaeus:
   pc:
     unchanged_file_size: false
   blacklist_destination:
-  - Vexen # player can get thrown oob
-  - Groundshaker # player can get thrown oob
-  - Past Pete # Can get thrown OOB
-  - Prison Keeper
   - Axel II
   - Cerberus # Phase 3 can result in pcsx2 crashes
   variations:
@@ -3213,6 +3456,10 @@ Luna Bandit:
       - 1
       - 0
 Luxord:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -400
   tags:
   - organization
   - solo
@@ -3291,8 +3538,13 @@ Magnum Loader:
       - 0
       - 0
 Marluxia:
+  roomData:
+    bossX: -127.84259796142578
+    bossY: 0
+    bossZ: -127.8427963256836
   tags:
   - organization
+  - broken_mickey
   enabled: true
   enmp_index: 0xD7
   hp: 100
@@ -3442,13 +3694,18 @@ Bomb Bell A:
       - 0
       - 0
 Oogie Boogie:
-  enabled: false
+  roomData:
+    bossX: -507.0552062988281
+    bossY: -150
+    bossZ: -1572.740966796875
+  enabled: true
   enmp_index: 0x4B
   aimods: 
   - name: B_NM000/b_nm.bdscript
     type: obj
   tags:
   - teleport_blocked
+  - gimmick
   hp: 100
   level: 99
   limiter: 0
@@ -3461,7 +3718,17 @@ Oogie Boogie:
   pc:
     unchanged_file_size: false
   room_size: 12.41
-  adds:
+  subtracts:
+  - ObjectId: 1003 # present box
+    Serial: 26
+    customUnit:
+      Type: 1
+      Id: 97
+  - ObjectId: 1604 # oogies punch
+    Serial: 21
+    customUnit:
+      Type: 1
+      Id: 85
   - ObjectId: 969 # ???
     Serial: 19
     Argument: 1
@@ -3470,12 +3737,8 @@ Oogie Boogie:
     Argument: 2
   - ObjectId: 966 # Oogie spikes
     Serial: 24
-  - ObjectId: 1604 # oogies punch
-    Serial: 21
   - ObjectId: 928 # ???
     Serial: 36
-  - ObjectId: 1003 # present box
-    Serial: 26
   type: boss
   variations:
     Oogie Boogie:
@@ -3483,6 +3746,10 @@ Oogie Boogie:
       - 1
       - 0
 Past Pete:
+  roomData:
+    bossX: -402.96490478515625
+    bossY: -137.9427947998047
+    bossZ: -444.0494079589844
   can_be_enemy: true
   enabled: true
   enmp_index: 0x71
@@ -3504,6 +3771,10 @@ Past Pete:
       - 1
       - 0
 Pete Cups:
+  roomData:
+    bossX: 0
+    bossY: -0.0001509865978732705
+    bossZ: -250
   can_be_enemy_override: true
   enabled: true
   tags:
@@ -3514,6 +3785,7 @@ Pete Cups:
   limiter: 20
   model: N_EX760_BTL_CLSM
   msn: HE_COL_8TI_BOSS
+  variationof: Pete TR
   msn_replace_allowed: false
   obj_id: 2319
   size: 1.57
@@ -3544,6 +3816,10 @@ Pete OC I:
       - 0
       - 0
 Pete OC II:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -400
   enabled: true
   enmp_index: 0x1A
   hp: 100
@@ -3555,6 +3831,7 @@ Pete OC II:
   msn_replace_allowed: false
   obj_id: 1724
   size: 1.57
+  variationof: Pete TR
   room_size: 13.53
   program: 116
   type: boss
@@ -3565,11 +3842,19 @@ Pete OC II:
       - 0
       - 0
 Pete TR:
+  roomData:
+    bossX: -272.6265869140625
+    bossY: 0
+    bossZ: 746.9041748046875
   enabled: true
+  aimods:
+  - name: N_EX760_BTL/n_ex.bdscript
+    type: obj
+  tags:
+  - needs_teleport
   pc: 
     source_replace_allowed: true # TODO supposedly demyx super crashes here on ps2 and most bosses cause crashes here
   source_replace_allowed: false
-  replace_as: Pete Cups
   hp: 100
   level: 99
   limiter: 20
@@ -3577,7 +3862,153 @@ Pete TR:
   msn: WI03_MS104
   obj_id: 359
   adds:
+  - ObjectId: -1 # Empty Unit 1
+    customUnit:
+      Type: 4
+      Flag: 1
+      Id: 244
+      Teleport:
+        Place: 92
+        Door: 0
+        World: 0
+        Unknown: 0
+      EventActivators:
+      - Shape: 1
+        Option: 0
+        PositionX: -508.90249633789062
+        PositionY: -300
+        PositionZ: 525.50341796875
+        ScaleX: 286.08859252929688
+        ScaleY: 400
+        ScaleZ: 273.35345458984375
+        RotationX: 0
+        RotationY: -0.18849574029445648
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+      ReturnParameters:
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+  - ObjectId: -1 # Empty Unit 2
+    customUnit:
+      Type: 4
+      Flag: 1
+      Id: 245
+      Teleport:
+        Place: 93
+        Door: 0
+        World: 0
+        Unknown: 0
+      EventActivators:
+      - Shape: 1
+        Option: 0
+        PositionX: 690.76788330078125
+        PositionY: -300
+        PositionZ: 72.229660034179688
+        ScaleX: 269.2049560546875
+        ScaleY: 400
+        ScaleZ: 459.30096435546875
+        RotationX: 0
+        RotationY: 0.36696508526802063
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+      ReturnParameters:
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+  - ObjectId: -1 # Empty Unit 3
+    customUnit:
+      Type: 4
+      Flag: 1
+      Id: 246
+      Teleport:
+        Place: 94
+        Door: 0
+        World: 0
+        Unknown: 0
+      EventActivators:
+      - Shape: 1
+        Option: 0
+        PositionX: -300.2421875
+        PositionY: -300
+        PositionZ: -590.82379150390625
+        ScaleX: 261.31048583984375
+        ScaleY: 400
+        ScaleZ: 266.0386962890625
+        RotationX: 0
+        RotationY: -0.18849574029445648
+        RotationZ: 0
+        Flags: 0
+        Type: 0
+        OnBgGroup: 0
+        OffBgGroup: 0
+      ReturnParameters:
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
+      - Id: 0
+        Type: 0
+        Rate: 0
+        EntryType: 0
+        Argument04: 0
+        Argument08: 0
+        Argument0c: 0
   - ObjectId: 1758 # cannon tower
+    PositionX: -300
+    PositionZ: -600
     SpawnType: 2
     Serial: 101
     Argument1: 1
@@ -3603,6 +4034,8 @@ Pete TR:
         OnBgGroup: 0
         OffBgGroup: 0
   - ObjectId: 1758 # cannon tower
+    PositionX: -300
+    PositionZ: 540
     SpawnType: 2
     Serial: 102
     Argument1: 1
@@ -3628,6 +4061,8 @@ Pete TR:
         OnBgGroup: 0
         OffBgGroup: 0
   - ObjectId: 1758 # cannon tower
+    PositionX: 690
+    PositionZ: 150
     SpawnType: 2
     Serial: 103
     Argument1: 1
@@ -3680,13 +4115,16 @@ Pete TR:
   room_size: 12.16
   program: 53
   type: boss
-  replace_as: Pete Cups
   variations:
     Pete TR:
       vars:
       - 4
       - 0
 Prison Keeper:
+  roomData:
+    bossX: 416.09521484375
+    bossY: -204.1072998046875
+    bossZ: -923.3510131835938
   can_be_enemy: true
   enabled: true
   tags:
@@ -3844,7 +4282,11 @@ Rapid Thruster WI:
       - 0
       - 0
 Riku:
-  can_be_enemy: false
+  roomData:
+    bossX: 601
+    bossY: -7.750160217285156
+    bossZ: -480.6151123046875
+  can_be_enemy: true
   aimods: 
   - name: N_EX940_BTL/n_ex.bdscript
     type: obj
@@ -3874,6 +4316,10 @@ Riku:
       - 0
       - 0
 Roxas:
+  roomData:
+    bossX: 0.0001049073034664616
+    bossY: 0.028669970110058784
+    bossZ: -170
   tags:
   - organization
   - solo
@@ -3899,6 +4345,10 @@ Roxas:
       - 0
       - 0
     Roxas (Data):
+      roomData:
+        bossX: 0.0001049073034664616
+        bossY: 0.028669970110058784
+        bossZ: -170
       tags:
       - data
       - organization
@@ -3931,6 +4381,10 @@ Runemaster:
       - 0
       - 0
 Saix:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 400
   tags:
   - organization
   - needs_rc
@@ -3976,6 +4430,10 @@ Samurai:
       - 99
       - 0
 Sark:
+  roomData:
+    bossX: -847.7211303710938
+    bossY: 0
+    bossZ: -2353.952880859375
   can_be_enemy: true
   enabled: true
   blacklist_source:
@@ -4000,6 +4458,10 @@ Sark:
       - 0
       - 0
 Scar:
+  roomData:
+    bossX: 1200
+    bossY: 5.199999809265137
+    bossZ: 250.00010681152344
   can_be_enemy: true
   isnightmare: true
   aimods: 
@@ -4083,6 +4545,10 @@ Seifer:
       - 3
       - 0
     Seifer (1):
+      roomData:
+        bossX: -212.1320037841797
+        bossY: 0
+        bossZ: 212.1320037841797
       msn: TT04_MS107
       replace_as: Seifer
       msn_replace_allowed: false 
@@ -4092,6 +4558,10 @@ Seifer:
       - 1
       - 0
     Seifer (2):
+      roomData:
+        bossX: -601.0407104492188
+        bossY: 0
+        bossZ: 601.040771484375
       msn: TT04_MS108
       replace_as: Seifer
       msn_replace_allowed: true
@@ -4102,6 +4572,10 @@ Seifer:
       - 2
       - 0
     Seifer (3):
+      roomData:
+        bossX: -194.31300354003906
+        bossY: 10.000100135803223
+        bossZ: 3.5454869270324707
       replace_as: Seifer #TODO one of these is struggle, others allowed
       msn: TT04_MS500
       program: 181
@@ -4110,6 +4584,10 @@ Seifer:
       - 4
       - 0
     Seifer (4):
+      roomData:
+        bossX: -200
+        bossY: 9.999889373779297
+        bossZ: 0
       replace_as: Seifer
       msn: TT04_MS02
       program: 184
@@ -4118,6 +4596,10 @@ Seifer:
       - 5
       - 0
 Sephiroth:
+  roomData:
+    bossX: -324.8489990234375
+    bossY: 0
+    bossZ: 1533.1300048828125
   tags:
   - sephiroth
   - solo
@@ -4238,8 +4720,16 @@ Shadow:
       - 99
       - 0
 Shadow Stalker:
-  enabled: false
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -800
+  enabled: true
   enmp_index: 0x17
+  tags:
+  - teleport_blocked
+  - needs_rc
+  - gimmick
   hp: 100
   level: 99
   limiter: 0
@@ -4254,11 +4744,12 @@ Shadow Stalker:
   roommaxsize: 16.10
   program: 78
   adds:
-    #TODO the roommaxsize implies some of these are still being loaded into memory
+  - ObjectId: 713 # windows
   - ObjectId: 646 # ground trap
   - ObjectId: 645 # columns
   - ObjectId: 644 # chandelier
     Serial: 24
+    PositionY: -1500
   - ObjectId: 799 # ???
     Serial: 17
   type: boss
@@ -4285,6 +4776,10 @@ Shadow WI:
       - 0
       - 0
 Shan-Yu:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 1300
   can_be_enemy: true
   enabled: true
   enmp_index: 0x47
@@ -4484,6 +4979,7 @@ Spring Metal:
       - 0
       - 0
 Storm Rider:
+  # TODO when radius is a thing figure out how to stop him wandering OOB
   enabled: true
   enmp_index: 0x19
   hp: 100
@@ -4660,6 +5156,10 @@ Surveillance Robot:
       - 0
       - 0
 Terra:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 100
   can_be_enemy: false #expensive
   tags:
   - terra
@@ -4684,11 +5184,16 @@ Terra:
       - 0
       - 0
 The Beast:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -600
   aimods: 
   - name: P_BB000_BTL/p_bb.bdscript
     type: obj
   tags: 
   - needs_rc
+  - gimmick
   enabled: true
   enmp_index: 0x49
   blacklist_source:
@@ -4713,6 +5218,10 @@ The Beast:
       - 0
       - 0
 The Experiment:
+  roomData:
+    bossX: -810.4044189453125
+    bossY: 4.720623016357422
+    bossZ: 894.3668212890625
   enabled: true
   enmp_index: 0x78
   hp: 100
@@ -4792,6 +5301,10 @@ Tifa:
   type: boss
   variations:
     Tifa:
+      roomData:
+        bossX: 200
+        bossY: -0.0001807889057090506
+        bossZ: -300
       program: 196
       msn: HE_COL_8_10
       room_size: 9.14
@@ -4801,6 +5314,10 @@ Tifa:
       - 1
       - 0
     Tifa (1):
+      roomData:
+        bossX: -149.3979949951172
+        bossY: -0.0001509865978732705
+        bossZ: -307.20660400390625
       program: 196
       msn: HE_COL_8_25
       room_size: 9.14
@@ -4809,6 +5326,10 @@ Tifa:
       - 2
       - 0
     Tifa (2):
+      roomData:
+        bossX: -149.3979949951172
+        bossY: 0
+        bossZ: -307.20660400390625
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
@@ -4867,12 +5388,19 @@ Trick Ghost:
       - 0
       - 0
 Twilight Thorn:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 800
+  # aimods:
+  # - name: B_EX100/b_ex.bdscript
+  #   type: obj
   enabled: true
   enmp_index: 0x56
   tags:
   - roxas
   - teleport_blocked
-  - needs_teleport
+  - needs_teleport # TODO complicated aimod to fix, I'm halfway there
   hp: 100
   level: 99
   limiter: 0
@@ -4913,6 +5441,10 @@ Twilight Thorn:
       - 0
       - 0
 Vexen:
+  roomData:
+    bossX: -13.29675006866455
+    bossY: -1.3492799997329712
+    bossZ: -1892.85400390625
   tags:
   - organization
   - teleport_blocked
@@ -4949,6 +5481,10 @@ Vexen:
       - 1
       - 0
 Vivi:
+  roomData:
+    bossX: -150
+    bossY: -90
+    bossZ: 0
   aimods:
   - name: N_EX610_BTL/n_ex.bdscript
     type: obj
@@ -5039,6 +5575,10 @@ Volcano Lord:
       - 0
       - 0
     Volcano Lord (Cups):
+      roomData:
+        bossX: 0
+        bossY: 0
+        bossZ: -150
       tags:
       - cups
       - large
@@ -5066,6 +5606,10 @@ Wight Knight NM:
       - 0
       - 0
 Xaldin:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: -400
   tags:
   - organization
   - mickey_source
@@ -5091,6 +5635,10 @@ Xaldin:
       - 0
       - 0
 Xemnas:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 1400
   tags:
   - organization
   - solo
@@ -5118,6 +5666,10 @@ Xemnas:
       - 0
       - 0
 Xigbar:
+  roomData:
+    bossX: 0
+    bossY: 0
+    bossZ: 200
   blacklist_destination:
   - Grim Reaper 1
   - Twilight Thorn
@@ -5134,6 +5686,7 @@ Xigbar:
   tags:
   - organization
   - needs_teleport
+  - broken_mickey
   enmp_index: 0x85
   hp: 100
   level: 99
@@ -5171,6 +5724,10 @@ Yuffie:
   type: boss
   variations:
     Yuffie:
+      roomData:
+        bossX: 200
+        bossY: 0
+        bossZ: -200
       can_be_enemy_override: true
       program: 189
       msn: HE_COL_1_10
@@ -5180,6 +5737,10 @@ Yuffie:
       - 1
       - 0
     Yuffie (1):
+      roomData:
+        bossX: -200
+        bossY: -0.0001807889057090506
+        bossZ: -300
       program: 196
       msn: HE_COL_8_10
       room_size: 9.14
@@ -5189,6 +5750,10 @@ Yuffie:
       - 3
       - 0
     Yuffie (2):
+      roomData:
+        bossX: 400.60198974609375
+        bossY: 0
+        bossZ: -207.20660400390625
       program: 196
       msn: HE_COL_8_49
       room_size: 9.14
@@ -5197,6 +5762,10 @@ Yuffie:
       - 4
       - 0
     Yuffie (3):
+      roomData:
+        bossX: 200
+        bossY: 0
+        bossZ: -200
       program: 193
       msn: HE_COL_5_10
       room_size: 9.14
@@ -5205,11 +5774,16 @@ Yuffie:
       - 2
       - 0
 Zexion:
+  aimods: 
+  - name: B_EX370/b_ex.bdscript
+    type: obj
+  roomData:
+    bossX: 150
+    bossY: 0
+    bossZ: 300
   tags:
   - organization
-  - needs_teleport
   - needs_rc
-  #aimods: false # TODO current ai mod is a bit crashy I think, so just ban from weird rooms
   enabled: true
   hp: 100
   level: 99

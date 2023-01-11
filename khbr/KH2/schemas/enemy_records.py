@@ -17,6 +17,7 @@ def get_schema():
         "msn_required": False,
         "msn_source_as": None,
         "aimods": [],
+        "cmdmods": [],
         "mickey_source": False,
         "final_fight": False,
         "can_be_enemy": False,
@@ -41,5 +42,6 @@ def get_schema():
         "roomsizemultiplier": 1,
         "unchanged_file_size": False,
         "obj_edits": {},
-        "luamod": None
+        "luamod": None,
+        "roomData": {}
     }

@@ -1,4 +1,4 @@
-import random
+import random, struct
 
 def pickbossmapping(enemy_records, parent_bossdict):
     while 1:
@@ -78,3 +78,81 @@ def create_new_entity(old_entity, new_object):
     entity = dict(old_entity)
     entity["name"] = new_object["name"]
     return entity
+
+class BinaryReader:
+    def __init__(self, fn=None, data=None):
+        if data:
+            self.data = data
+        else:
+            self.data = bytearray(open(fn, "rb").read())
+        self.pos = 0
+    def readType(self, tpe, unpack=False):
+        result = {
+            "float32": self.readFloat32,
+            "int32": self.readInt32,
+            "int16": self.readInt16,
+            "byte": self.readByte
+        }[tpe]()
+        if unpack and tpe == "float32":
+            return self.unpackFloat32(result)
+        return result
+    def readByte(self):
+        b = self.data[self.pos]
+        self.pos += 1
+        return b
+    def readRest(self):
+        arr = bytearray()
+        for _ in range(len(self.data)-self.pos):
+            arr.append(self.readByte())
+        return arr
+    def readFloat32(self):
+        import struct
+        bts = bytearray([self.readByte() for _ in range(4)])
+        return bts
+    def unpackFloat32(self, bts):
+        return struct.unpack('<f', bts)[0]
+    def readInt32(self):
+        bts = self.data[self.pos:self.pos+4]
+        self.pos += 4
+        return int.from_bytes(bts, byteorder="little")
+    def readInt16(self):
+        bts = self.data[self.pos:self.pos+2]
+        self.pos += 2
+        return int.from_bytes(bts, byteorder="little")
+
+
+class BinaryWriter:
+    def __init__(self, fn=None):
+        self.bytes = bytearray()
+        self.fp = open(fn, "wb") if fn else None
+        self.nwrites = 0
+    def writeType(self, tpe, data):
+        return {
+            "float32": self.writeFloat32,
+            "int32": self.writeInt32,
+            "int16": self.writeInt16,
+            "byte": self.writeByte
+        }[tpe](data)
+    def writeBytes(self, b):
+        if self.fp:
+            self.fp.write(b)
+        self.bytes += b
+        self.nwrites += len(b)
+        #print([hex(bt) for bt in b])
+    def writeArray(self, arr):
+        for b in arr:
+            self.writeBytes(bytes(b))
+    def writeFloat32(self, value):
+        packed_value = struct.pack('<f',value)
+        self.writeBytes(packed_value)
+    def writeInt32(self, value):
+        self.writeBytes(int.to_bytes(value, length=4, byteorder="little"))
+    def writeInt16(self, value):
+        self.writeBytes(int.to_bytes(value, length=2, byteorder="little"))
+    def writeByte(self, value):
+        self.writeBytes(int.to_bytes(value, length=1, byteorder="little"))
+    def close(self):
+        if self.fp:
+            self.fp.close()
+    def getBytes(self):
+        return self.bytes

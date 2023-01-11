@@ -19,9 +19,29 @@ class EnemyManager:
         with open(os.path.join(self.basepath, fn)) as f:
             self.enemy_records = json.load(f)
             
-    def get_enemies(self):
+    def get_enemies(self, options):
         enemies = self.get_valid_enemies()
-        enabled_enemies = [self.enemy_records[e] for e in enemies if self.enemy_records[e]["enabled"]]
+
+        use_other_enemies = options.get("other_enemies")
+
+        enabled_enemies = []
+        for e in enemies:
+            e_obj = self.enemy_records[e]
+            if not e_obj["enabled"]: 
+                if use_other_enemies and "other" in e_obj["tags"]:
+                    pass
+                elif options.get("nightmare_enemies") and e_obj["isnightmare"]:
+                    pass
+                else:
+                    continue
+            
+            if not (use_other_enemies or options.get("selected_enemy")) and "pirate" in e_obj["tags"]:
+                e_obj["aimods"] = []
+        
+            enabled_enemies.append(e_obj)
+
+        self.remove_tag(enabled_enemies, "pirate")
+
         return enabled_enemies
 
     @staticmethod
@@ -33,7 +53,7 @@ class EnemyManager:
     @staticmethod
     def remove_tag(enemylist, tag):
         for enemy in enemylist:
-            enemy["tags"] = list(filter(lambda k: k != tag), enemylist)
+            enemy["tags"] = [t for t in enemy["tags"] if t != tag]
         return enemylist
 
     def create_enemy_records(self, ispc=False, getavail=True):
@@ -189,6 +209,7 @@ class EnemyManager:
         # Nightmare mode should override settings and always use datas and cups (until nightmare is a preset)
         use_cups_bosses = nightmare_bosses or options.get("cups_bosses")
         use_data_bosses = nightmare_bosses or options.get("data_bosses")
+        use_gimmick_bosses = options.get("gimmick_bosses")
         use_sephiroth = nightmare_bosses or options.get("sephiroth")
         use_terra = nightmare_bosses or options.get("terra")
         use_lua_bosses = options.get("lua_bosses")
@@ -203,6 +224,8 @@ class EnemyManager:
             if "cups" in v["tags"] and not use_cups_bosses:
                 continue
             if "data" in v["tags"] and not use_data_bosses:
+                continue
+            if "gimmick" in v["tags"] and not use_gimmick_bosses:
                 continue
             if "terra" in v["tags"] and not use_terra:
                 continue

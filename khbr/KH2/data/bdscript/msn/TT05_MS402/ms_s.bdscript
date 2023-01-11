@@ -115,8 +115,6 @@ L191:
  ret 
 TR3:
  syscall 1, 317 ; trap_status_no_gameover (0 in, 0 out)
-
- halt 
  pushFromPWp W16
  pushImm {obj_id}
  syscall 1, 114 ; trap_obj_search_by_entry (2 in, 0 out)
@@ -125,7 +123,6 @@ TR3:
  syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
  pushFromPWp W0
  gosub 4, L199
- ret 
  ret 
 L199:
  popToSp 0
