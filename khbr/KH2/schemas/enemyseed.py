@@ -59,6 +59,8 @@ class EnemySeed:
         self.subtract_map[world][room]["spawnpoints"][spawnpoint].append(objectid)
 
     def update_seed(self, old_boss_object, new_boss_object, world, room, spawnpoint, spid):
+        if old_boss_object["name"] == new_boss_object["name"]:
+            return # shouldn't do anything in this case, which is mostly only going to happen on selected enemy
         if new_boss_object["name"] == "Shadow Roxas":
             return # Nothing to do in this case
         self.update_extras(old_boss_object, new_boss_object, world, room, spawnpoint, spid)
@@ -145,7 +147,6 @@ class EnemySeed:
         self.ai_mods[ai_to_mod] = data_for_mod
 
     def update_aimod(self, old_boss_object, new_boss_object):
-    
         # this is a wordy way of adding the old boss if it's a source old or new boss if it's a source new
         if len([m for m in new_boss_object.get("aimods",[]) if m.get("source", "new") == "new"]) > 0:
             self._add_ai(new_boss_object["name"], old_boss_object["name"])

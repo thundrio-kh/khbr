@@ -12178,13 +12178,9 @@
             {
                 "name": "B_CA050/b_ca.bdscript",
                 "type": "obj"
-            },
-            {
-                "name": "CA01_MS204/ca01.bdscript",
-                "type": "msn",
-                "source": "old"
             }
         ],
+        "msn_source_as": "WI03_MS104",
         "enmp_index": 124,
         "hp": 100,
         "tags": [
@@ -12229,7 +12225,6 @@
             "Grim Reaper II"
         ],
         "msn_required": false,
-        "msn_source_as": null,
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,

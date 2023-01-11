@@ -2527,10 +2527,11 @@ Grim Reaper II:
   aimods: 
   - name: B_CA050/b_ca.bdscript
     type: obj
-  - name: CA01_MS204/ca01.bdscript
-    type: msn
-    source: old
+  # - name: CA01_MS204/ca01.bdscript
+  #   type: msn
+  #   source: old
   enabled: true
+  msn_source_as: "WI03_MS104"
   enmp_index: 0x7C
   hp: 100
   tags:
