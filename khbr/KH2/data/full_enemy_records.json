@@ -9862,7 +9862,8 @@
         "enabled": true,
         "tags": [
             "data",
-            "organization"
+            "organization",
+            "broken_mickey"
         ],
         "variationof": "Xigbar",
         "enmp_index": 252,
@@ -9883,7 +9884,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "data-organization",
+        "category": "broken_mickey-data-organization",
         "isnightmare": true,
         "parent": "Xigbar",
         "children": [],
@@ -12154,10 +12155,12 @@
         "requires_msn": true,
         "adds": [
             {
-                "ObjectId": 1740
+                "ObjectId": 1740,
+                "dontSub": true
             },
             {
                 "ObjectId": 2200,
+                "dontSub": true,
                 "Medal": 123
             }
         ],
@@ -12175,6 +12178,11 @@
             {
                 "name": "B_CA050/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "CA01_MS204/ca01.bdscript",
+                "type": "msn",
+                "source": "old"
             }
         ],
         "enmp_index": 124,
@@ -16675,7 +16683,8 @@
             "bossZ": -127.8427963256836
         },
         "tags": [
-            "organization"
+            "organization",
+            "broken_mickey"
         ],
         "enabled": true,
         "enmp_index": 215,
@@ -16705,7 +16714,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "organization",
+        "category": "broken_mickey-organization",
         "parent": "Marluxia",
         "variationof": null,
         "children": [
@@ -25504,7 +25513,8 @@
         "enabled": true,
         "tags": [
             "organization",
-            "needs_teleport"
+            "needs_teleport",
+            "broken_mickey"
         ],
         "enmp_index": 133,
         "hp": 100,
@@ -25525,7 +25535,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "needs_teleport-organization",
+        "category": "broken_mickey-needs_teleport-organization",
         "parent": "Xigbar",
         "variationof": null,
         "children": [

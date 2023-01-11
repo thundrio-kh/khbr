@@ -2527,6 +2527,9 @@ Grim Reaper II:
   aimods: 
   - name: B_CA050/b_ca.bdscript
     type: obj
+  - name: CA01_MS204/ca01.bdscript
+    type: msn
+    source: old
   enabled: true
   enmp_index: 0x7C
   hp: 100
@@ -2565,7 +2568,9 @@ Grim Reaper II:
       requires_msn: true
       adds:
       - ObjectId: 1740 # chest
+        dontSub: true # subbing causes crash when msn is still used
       - ObjectId: 2200 # medallions, try the gambler version
+        dontSub: true # subbing causes crash when msn is still used
         Medal: 123
       vars:
       - 0
@@ -5661,6 +5666,7 @@ Xigbar:
   tags:
   - organization
   - needs_teleport
+  - broken_mickey
   enmp_index: 0x85
   hp: 100
   level: 99
