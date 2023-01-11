@@ -288,7 +288,6 @@ class KingdomHearts2:
                                         aimod["vars"][var] = enemy[argument]
                             
                             if createmod:
-                                print(aimod)
                                 rand_seed.ai_mods[aimod["name"]] = aimod
         
     def generate_files(self, outdir='', randomization={}, outzip=None):

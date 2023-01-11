@@ -14741,6 +14741,12 @@ Port Royal:
             isboss: false
             name: Armored Knight
       b_30:
+        aimods:
+        - name: CA09_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '484':
@@ -14955,6 +14961,12 @@ Port Royal:
             isboss: false
             name: Hammer Frame
       b_70:
+        aimods:
+        - name: CA13_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.5.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '70':
@@ -15122,6 +15134,12 @@ Port Royal:
             isboss: false
             name: Dusk
       b_70:
+        aimods:
+        - name: CA12_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.1.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '56':
@@ -15233,6 +15251,12 @@ Port Royal:
             isboss: false
             name: Rabid Dog
       b_30:
+        aimods:
+        - name: CA10_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '249':
@@ -15395,6 +15419,12 @@ Port Royal:
             isboss: false
             name: Dusk
       b_60:
+        aimods:
+        - name: CA14_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '63':
@@ -15612,6 +15642,12 @@ Port Royal:
             isboss: false
             name: Dusk
       b_70:
+        aimods:
+        - name: CA15_MEDAL/ca_m.bdscript
+          type: msn
+          vars: {"obj_id": "$enemy.0.obj_id"}
+          replacements:
+            obj_id: obj_id
         size: 0
         sp_ids:
           '65':
