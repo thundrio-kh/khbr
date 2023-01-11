@@ -99,7 +99,7 @@ class EnemySeed:
         msn_object["setmickey"] = self._should_place_mickey(old_boss_object, new_boss_object)
         if old_boss_object["name"] == "Hades Cups":
             return # fixme MSN should not be replaced in this instance, also more thinking but maybe this should just be a condition on msn_replace_allowed
-        if "roxas" in old_boss_object.get("tags"):
+        if "roxas" in old_boss_object.get("tags") or "broken_mickey" in old_boss_object.get("tags"):
             msn_object["setmickey"] = False # Fights as roxas will tpose when summoning mickey
         if "disablecamera" in new_boss_object.get("tags"):
             msn_object["disablecamera"] = True

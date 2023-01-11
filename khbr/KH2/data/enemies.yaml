@@ -2031,6 +2031,7 @@ Xigbar (Data):
   tags:
   - data
   - organization
+  - broken_mickey
   variationof: Xigbar
   enmp_index: 0xFC
   hp: 100
@@ -3518,6 +3519,7 @@ Marluxia:
     bossZ: -127.8427963256836
   tags:
   - organization
+  - broken_mickey
   enabled: true
   enmp_index: 0xD7
   hp: 100
