@@ -1169,6 +1169,9 @@ Armored Knight:
       - 90
       - 0
 Assassin:
+  aimods: 
+  - name: M_EX900/m_ex.bdscript
+    type: obj
   enabled: true
   enmp_index: 44
   hp: 100

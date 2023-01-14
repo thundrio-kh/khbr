@@ -6919,6 +6919,12 @@
             0
         ],
         "name": "Assassin",
+        "aimods": [
+            {
+                "name": "M_EX900/m_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 44,
         "hp": 100,
@@ -6931,10 +6937,10 @@
         "tags": [
             "nobody"
         ],
-        "replace_as": "Dancer",
         "variations": [
             "Assassin"
         ],
+        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "category": "nobody",
@@ -6946,7 +6952,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -17293,12 +17298,14 @@
             0
         ],
         "name": "Minute Bomb WI",
+        "aimods": [
+            {
+                "name": "M_EX550/m_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "variationof": "Minute Bomb",
-        "tags": [
-            "ranged"
-        ],
-        "replace_as": "Cannon Gun",
         "enmp_index": 57,
         "hp": 100,
         "level": 99,
@@ -17310,20 +17317,16 @@
         "variations": [
             "Minute Bomb WI"
         ],
+        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "ranged",
+        "tags": [],
+        "category": "",
         "isnightmare": false,
         "parent": "Minute Bomb",
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [
-            {
-                "name": "M_EX550/m_ex.bdscript",
-                "type": "obj"
-            }
-        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
