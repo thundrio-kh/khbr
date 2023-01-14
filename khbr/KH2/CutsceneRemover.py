@@ -33,7 +33,9 @@ class CutsceneRemover:
             "hb09": [0x33], # causes first cutscene in merlin to not fire
             # "hb05.ard": ["0x02", "0x05", "0x06", "0x08"], # Causes you to be sent to SP instead of skipped, and makes demyx portal real
             "eh20": [0x4a],
-            "po00": [0x0a], # leaving 100 acre
+            "po00": [0x0a, 0x04, 0x06, 0x08], # leaving 100 acre
+            "po01": [0x03],
+            "po02": [0x52, 0x02, 0x04, 0x4f],
             "al10": [0x3A], # leaving treasure room
             # fix losing keyblades when leaving stt
             "tt04": [0x4C, 0x4D, 0x4E, 0x4F],
