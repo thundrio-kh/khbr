@@ -7360,11 +7360,15 @@
             ]
         },
         "blacklist_destination": [
-            "Xigbar"
+            "Xigbar",
+            "Thresholder",
+            "The Beast",
+            "Riku"
         ],
         "blacklist_source": [
             "Thresholder",
-            "Larxene"
+            "Larxene",
+            "Axel (Data)"
         ],
         "adds": [
             {
@@ -8229,7 +8233,6 @@
             "Sephiroth",
             "Setzer",
             "Shadow Stalker",
-            "Storm Rider",
             "The Beast",
             "The Experiment",
             "Thresholder",
@@ -9282,6 +9285,9 @@
         "enmp_index": 245,
         "hp": 100,
         "level": 99,
+        "blacklist_destination": [
+            "Luxord"
+        ],
         "limiter": 34,
         "model": "B_EX110_LV99",
         "msn": "TT20_MS603_RE",
@@ -9310,9 +9316,6 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
-        "blacklist_destination": [
-            "Scar"
-        ],
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -9406,7 +9409,8 @@
             "Xigbar"
         ],
         "blacklist_destination": [
-            "Cerberus"
+            "Cerberus",
+            "Armor Xemnas I"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -9607,6 +9611,9 @@
         "enmp_index": 243,
         "hp": 100,
         "level": 99,
+        "blacklist_destination": [
+            "Luxord"
+        ],
         "limiter": 0,
         "model": "B_EX150_LV99",
         "msn": "EH14_MS103",
@@ -9636,7 +9643,6 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [
@@ -9903,7 +9909,11 @@
             "Roxas",
             "Roxas (Data)",
             "Prison Keeper",
-            "The Beast"
+            "The Beast",
+            "Marluxia",
+            "Larxene",
+            "Lexaeus",
+            "Xaldin"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -9948,7 +9958,8 @@
         "program": 55,
         "type": "boss",
         "blacklist_destination": [
-            "Cerberus"
+            "Cerberus",
+            "Armor Xemnas I"
         ],
         "variations": [
             "Demyx"
@@ -12176,6 +12187,11 @@
             "needs_rc"
         ],
         "level": 99,
+        "blacklist_source": [
+            "Volcano Lord",
+            "Blizzard Lord",
+            "Hades II"
+        ],
         "blacklist_destination": [
             "Dark Thorn",
             "Shadow Stalker"
@@ -12188,7 +12204,6 @@
             "Hades II",
             "Hostile Program",
             "Hydra",
-            "Luxord",
             "Pete Cups",
             "Roxas",
             "Saix",
@@ -12221,7 +12236,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "whitelist_source": [],
         "sp_ids": [],
         "subtracts": [],
@@ -12232,7 +12246,6 @@
         "luamod": null,
         "available": [
             "Armor Xemnas II",
-            "Blizzard Lord",
             "Cloud",
             "MCP",
             "Grim Reaper I",
@@ -12253,7 +12266,6 @@
             "Thresholder",
             "Tifa",
             "Vivi",
-            "Volcano Lord",
             "Yuffie"
         ]
     },
@@ -12886,7 +12898,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -12940,7 +12951,6 @@
         "luamod": null,
         "available": [
             "Blizzard Lord",
-            "Cloud",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -15475,7 +15485,6 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -15977,7 +15986,6 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -16487,7 +16495,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -16512,7 +16519,6 @@
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
-            "Storm Rider",
             "Terra",
             "The Beast",
             "The Experiment",
@@ -16803,7 +16809,6 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -17005,12 +17010,14 @@
             0
         ],
         "name": "Minute Bomb WI",
+        "aimods": [
+            {
+                "name": "M_EX550/m_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "variationof": "Minute Bomb",
-        "tags": [
-            "ranged"
-        ],
-        "replace_as": "Cannon Gun",
         "enmp_index": 57,
         "hp": 100,
         "level": 99,
@@ -17022,20 +17029,16 @@
         "variations": [
             "Minute Bomb WI"
         ],
+        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "ranged",
+        "tags": [],
+        "category": "",
         "isnightmare": false,
         "parent": "Minute Bomb",
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [
-            {
-                "name": "M_EX550/m_ex.bdscript",
-                "type": "obj"
-            }
-        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -20764,7 +20767,6 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
@@ -21402,7 +21404,10 @@
         ],
         "blacklist_source": [
             "Shan-Yu",
-            "Dark Thorn"
+            "Dark Thorn",
+            "The Beast",
+            "Xaldin (Data)",
+            "Saix (Data)"
         ],
         "hp": 100,
         "level": 99,
@@ -21531,7 +21536,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -21590,7 +21594,6 @@
         "available": [
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -21655,7 +21658,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -21757,7 +21759,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -21857,7 +21858,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -21958,7 +21958,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -22184,7 +22183,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -22239,7 +22237,6 @@
         "available": [
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -23563,12 +23560,10 @@
             "Armor Xemnas II",
             "Groundshaker",
             "Hydra",
-            "Luxord",
             "Final Xemnas",
             "Dark Thorn",
             "Shadow Stalker",
             "Storm Rider",
-            "Cerberus",
             "Terra"
         ],
         "replace_as": null,
@@ -23967,7 +23962,8 @@
         "enabled": true,
         "enmp_index": 73,
         "blacklist_source": [
-            "Grim Reaper II"
+            "Grim Reaper II",
+            "Larxene"
         ],
         "hp": 100,
         "level": 99,
@@ -24990,7 +24986,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -25043,7 +25038,6 @@
         "luamod": null,
         "available": [
             "Blizzard Lord",
-            "Cloud",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -25383,7 +25377,6 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -25525,7 +25518,11 @@
             "Roxas",
             "Roxas (Data)",
             "Prison Keeper",
-            "The Beast"
+            "The Beast",
+            "Marluxia",
+            "Larxene",
+            "Lexaeus",
+            "Xaldin"
         ],
         "enabled": true,
         "tags": [

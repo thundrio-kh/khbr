@@ -1355,9 +1355,13 @@ Barbossa:
     - Terra # report of crash at cutscene
   blacklist_destination:
   - Xigbar # You are put in boxed in space
+  - Thresholder # Illuminator can spawn out of bounds, softlocking unless you have very specific tools - Kayya
+  - The Beast # Illuminator can spawn out of bounds, softlocking unless you have very specific tools - Kayya
+  - Riku # Allegedly doesn't finish the fight if you kill him - Kayya
   blacklist_source:
   - Thresholder # report of fight not ending
   - Larxene # report of fight not ending
+  - Axel (Data) # Can only SOMETIMES complete the Overtaker RC which can cause a softlock if you can't complete it - Kayya
   adds:
   - ObjectId: 358 #Illuminator
     name: Illuminator
@@ -1826,6 +1830,8 @@ Axel (Data):
   enmp_index: 0xF5
   hp: 100
   level: 99
+  blacklist_destination:
+  - Luxord #Falls through arena during RC - Kayya
   limiter: 34
   model: B_EX110_LV99
   msn: TT20_MS603_RE
@@ -1924,6 +1930,8 @@ Luxord (Data):
   enmp_index: 0xF3
   hp: 100
   level: 99
+  blacklist_destination:
+  - Luxord # DM crashes - Kayya
   limiter: 0
   model: B_EX150_LV99
   msn: EH14_MS103 # TODO DUPE MSN
@@ -2075,6 +2083,7 @@ Demyx:
   type: boss
   blacklist_destination:
   - Cerberus # he might be starting in the sky causing it not to load the fight properly
+  - Armor Xemnas I # Falls down at start and softlocks the fight - Kayya
   variations:
     Demyx:
       vars:
@@ -2537,6 +2546,10 @@ Grim Reaper II:
   tags:
   - needs_rc
   level: 99
+  blacklist_source:
+  - Volcano Lord # Crashes upon entering room - Kayya
+  - Blizzard Lord # Crashes upon entering room - Kayya
+  - Hades II # Crashes upon entering room - Kayya
   blacklist_destination:
   - Dark Thorn # medals get lost on ground
   - Shadow Stalker # medals get lost on ground
@@ -2548,7 +2561,7 @@ Grim Reaper II:
   - Hades II
   - Hostile Program
   - Hydra
-  - Luxord
+  # - Luxord # RC doesn't work in this arena making the fight more tedious than it should be - Kayya
   - Pete Cups
   - Roxas
   - Saix
@@ -2805,7 +2818,7 @@ Hayner:
   - Axel II
   - Barbossa
   - Blizzard Lord
-  - Cloud
+  # - Cloud # Crashes in struggle fights - Kayya
   - Dark Thorn
   - Grim Reaper I
   - Hades II
@@ -3232,7 +3245,7 @@ Large Body:
       vars:
       - 0
       - 0
-Larxene:
+Larxene: #Breaks in some arenas due to Y level differences. Can we fix this? - Kayya
   roomData:
     bossX: -137.8426971435547
     bossY: 0
@@ -4474,6 +4487,9 @@ Scar:
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   - Dark Thorn # Reports of tpose from grab causing softlock
+  - The Beast # Cannot use the RC as Lion Sora which softlocks the fight - Kayya
+  - Xaldin (Data) # Invincible if he gets his wind shield up with no access to Jump, thus being a softlock - Kayya
+  - Saix (Data) # Unable to drain Berserk Gauge due to lack of Claymore, thus being a softlock - Kayya
   hp: 100
   level: 99
   limiter: 0
@@ -4517,7 +4533,7 @@ Seifer:
   - Axel II
   - Barbossa
   - Blizzard Lord
-  - Cloud
+  # - Cloud # Crashes in struggle - Kayya
   - Dark Thorn
   - Grim Reaper I
   - Hades II
@@ -4662,7 +4678,7 @@ Setzer:
   - Axel II
   - Barbossa
   - Blizzard Lord
-  - Cloud
+  # - Cloud # Crashes in struggle - Kayya
   - Dark Thorn
   - Grim Reaper I
   - Hades II
@@ -5111,12 +5127,12 @@ Storm Rider:
   - Armor Xemnas II
   - Groundshaker
   - Hydra
-  - Luxord
+  # - Luxord #Room is way too small for Storm Rider, which can potentially cause it to fall through the floor
   - Final Xemnas
   - Dark Thorn
   - Shadow Stalker
   - Storm Rider
-  - Cerberus
+  # - Cerberus #Room is way too small for Storm Rider, which can potentially cause it to fall through the floor
   - Terra
 Strafer RAW:
   enabled: true
@@ -5198,6 +5214,7 @@ The Beast:
   enmp_index: 0x49
   blacklist_source:
   - Grim Reaper II # remove once GR2 is phase 3 only
+  - Larxene # Can allegedly softlock when summoning clones - Kayya
   hp: 100
   level: 99
   limiter: 0
@@ -5518,7 +5535,7 @@ Vivi:
   - Axel II
   - Barbossa
   - Blizzard Lord
-  - Cloud
+  # - Cloud # Crashes in struggle - Kayya
   - Dark Thorn
   - Grim Reaper I
   - Hades II
@@ -5682,6 +5699,10 @@ Xigbar:
   - Roxas (Data)
   - Prison Keeper
   - The Beast
+  - Marluxia # Can teleport you out of bounds causing a softlock if he chooses to warp to the long room - Kayya
+  - Larxene # Can teleport you out of bounds causing a softlock if he chooses to warp to the long room - Kayya
+  - Lexaeus # Can teleport you out of bounds causing a softlock if he chooses to warp to the long room - Kayya
+  - Xaldin # Can teleport you out of bounds causing a softlock, unsure which room transition casues this though - Kayya
   enabled: true
   tags:
   - organization
