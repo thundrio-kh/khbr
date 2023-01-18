@@ -21870,7 +21870,6 @@
             "Terra",
             "The Experiment",
             "Tifa",
-            "Twilight Thorn",
             "Vexen",
             "Vivi",
             "Volcano Lord",
@@ -23990,8 +23989,7 @@
             "Final Xemnas",
             "Dark Thorn",
             "Shadow Stalker",
-            "Storm Rider",
-            "Terra"
+            "Storm Rider"
         ],
         "replace_as": null,
         "source_replace_allowed": true,
@@ -24350,7 +24348,6 @@
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
-            "Storm Rider",
             "Terra",
             "The Beast",
             "The Experiment",
@@ -25194,6 +25191,9 @@
         "room_size": 3.93,
         "program": 157,
         "type": "boss",
+        "blacklist_destination": [
+            "Scar"
+        ],
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -25243,7 +25243,6 @@
         "sizeTag": null,
         "roommaxsize": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
         "whitelist_destination": [],
         "adds": [],
         "sp_ids": [],
