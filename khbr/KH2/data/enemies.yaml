@@ -5133,7 +5133,7 @@ Storm Rider:
   - Shadow Stalker
   - Storm Rider
   # - Cerberus #Room is way too small for Storm Rider, which can potentially cause it to fall through the floor
-  - Terra
+  # - Terra # Ceiling is too low, can't get on his back - Kayya
 Strafer RAW:
   enabled: true
   variationof: Strafer
@@ -5428,6 +5428,8 @@ Twilight Thorn:
   room_size: 3.93
   program: 157
   type: boss
+  blacklist_destination:
+  - Scar # Tries to use the RC on you as Lion Sora due to disabled AIMod -Kayya
   whitelist_source:
   - Axel I
   - Axel II
