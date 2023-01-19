@@ -7260,12 +7260,14 @@
         },
         "blacklist_destination": [
             "Xigbar",
+            "Riku",
             "Luxord",
             "Terra"
         ],
         "blacklist_source": [
             "Thresholder",
-            "Larxene"
+            "Larxene",
+            "Axel II"
         ],
         "adds": [
             {
@@ -7328,7 +7330,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -8174,7 +8175,6 @@
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
-            "Storm Rider",
             "Terra",
             "The Beast",
             "The Experiment",
@@ -9878,7 +9878,11 @@
             "Roxas",
             "Roxas (Data)",
             "Prison Keeper",
-            "The Beast"
+            "The Beast",
+            "Marluxia",
+            "Larxene",
+            "Lexaeus",
+            "Xaldin"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -9996,6 +10000,7 @@
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
+            "Storm Rider",
             "Terra",
             "The Beast",
             "The Experiment",
@@ -11974,6 +11979,7 @@
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
+            "Storm Rider",
             "Terra",
             "The Beast",
             "The Experiment",
@@ -12210,7 +12216,6 @@
             "Hades II",
             "Hostile Program",
             "Hydra",
-            "Luxord",
             "Pete Cups",
             "Roxas",
             "Saix",
@@ -15296,6 +15301,7 @@
             "Jafar",
             "Prison Keeper",
             "Shadow Stalker",
+            "Storm Rider",
             "The Experiment",
             "Volcano Lord"
         ]
@@ -15585,7 +15591,6 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -16104,7 +16109,6 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -16613,7 +16617,6 @@
             "Final Xemnas",
             "MCP",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -16638,7 +16641,6 @@
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
-            "Storm Rider",
             "Terra",
             "The Beast",
             "The Experiment",
@@ -16943,7 +16945,6 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -17620,6 +17621,7 @@
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
+            "Storm Rider",
             "Terra",
             "The Beast",
             "The Experiment",
@@ -20992,7 +20994,6 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
@@ -21713,7 +21714,6 @@
             "Terra",
             "The Experiment",
             "Tifa",
-            "Twilight Thorn",
             "Vexen",
             "Vivi",
             "Volcano Lord",
@@ -21764,7 +21764,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -21884,7 +21883,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -21986,7 +21984,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -22086,7 +22083,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -22187,7 +22183,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -22350,6 +22345,7 @@
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
+            "Storm Rider",
             "Terra",
             "The Beast",
             "The Experiment",
@@ -22413,7 +22409,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -23825,12 +23820,15 @@
             "Armor Xemnas II",
             "Groundshaker",
             "Hydra",
-            "Luxord",
             "Final Xemnas",
             "Dark Thorn",
+            "Oogie Boogie",
+            "MCP",
+            "Demyx",
+            "Sephiroth",
             "Shadow Stalker",
+            "Jafar",
             "Storm Rider",
-            "Cerberus",
             "Terra"
         ],
         "replace_as": null,
@@ -25022,7 +25020,8 @@
         "tags": [
             "roxas",
             "teleport_blocked",
-            "needs_teleport"
+            "needs_teleport",
+            "needs_rc"
         ],
         "hp": 100,
         "level": 99,
@@ -25065,7 +25064,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "needs_teleport-roxas-teleport_blocked",
+        "category": "needs_rc-needs_teleport-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Twilight Thorn",
         "variationof": null,
@@ -25343,7 +25342,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
@@ -25746,7 +25744,6 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -25888,7 +25885,11 @@
             "Roxas",
             "Roxas (Data)",
             "Prison Keeper",
-            "The Beast"
+            "The Beast",
+            "Marluxia",
+            "Larxene",
+            "Lexaeus",
+            "Xaldin"
         ],
         "enabled": true,
         "tags": [
