@@ -1,6 +1,5 @@
 3.0.0
 
-
 New Features
 * Misc bosses option has been added, and contains bosses such as Jafar, MCP, and other bosses that are more like gimmicks than not. In other news, Groundshaker is the only boss that can not be randomized at all. This should currently be treated as an unstable and experimental option
 * Randomize superbosses option has been split into 3 options, for terra, sephiroth, and the datas
@@ -10,12 +9,6 @@ New Features
 * Costume rando has been added. Pretty simple but it was trivial to add at the same time as Party Member rando
 * Revenge Limit Randomizer has been added as an option. This performs an AI edit on every enemy/boss in the game, even if enemy/boss randomizer is off. Note that all enemies have a base revenge limit cap of 100, which is what gets randomized. Some enemies however don't have any code to do anything when the revenge limit is hit, so in those cases no change will be seen. This is an exciting but beta feature, please give feedback on how it works and how it could be improved.
 * Remove Most Cutscenes option has been added, with 3 different options. Minimal removes all cutscenes that it can without causing any issues. Non-Reward will additionally remove all cutscenes that appear before Missions, however there is a known issue where if you Game Over during a mission, hitting continue will put you right back into that fight (so you are effectively softlocked unless you can beat the fight). Maximum will additionally remove all cutscenes that appear before full screen popup rewards, the downside is that the popups no longer occur (but you do still get the reward, and in my experience the tracker still shows if you got something important). This should be considered beta, and please report any issues you find
-
-
-
-
-
-
 
 Major Improvements
 * Added an AllocEnemy line to event scripts on PC, which should help prevent crashes due to going out of memory on PC (IE limit form against Lexaeus was a common one that should now be fixed). There is a small possibility this will cause crashes in situations that would not crash on the old version, let me know if you think this is the case!
