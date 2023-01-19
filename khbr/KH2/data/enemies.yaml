@@ -1288,6 +1288,7 @@ Axel II:
   obj_id: 81
   blacklist_destination:
   - Scar
+  - Luxord #Falls through arena during RC - Kayya
   type: boss
   whitelist_source:
   - Axel I
@@ -5631,6 +5632,7 @@ Xaldin:
     bossZ: -400
   tags:
   - organization
+  - needs_rc
   - mickey_source
   enabled: true
   blacklist_source:

@@ -293,7 +293,6 @@ class EnemyManager:
         dest_behavior_mods = {
             "needs_rc": "rc_blocked",
             "needs_teleport": "teleport_blocked",
-            "needs_invuln": "cant_invuln"
         }
         dest_boss_behavior_mods = set(dest_behavior_mods).intersection(dest_boss["tags"])
         for k in dest_boss_behavior_mods:

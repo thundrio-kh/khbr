@@ -6998,7 +6998,8 @@
         "size": 3.74,
         "obj_id": 81,
         "blacklist_destination": [
-            "Scar"
+            "Scar",
+            "Luxord"
         ],
         "type": "boss",
         "whitelist_source": [
@@ -8267,6 +8268,7 @@
             "MCP",
             "Grim Reaper I",
             "Hades II",
+            "Hayner",
             "Hercules",
             "Jafar",
             "Larxene",
@@ -8276,10 +8278,13 @@
             "Past Pete",
             "Pete TR",
             "Prison Keeper",
+            "Riku",
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
+            "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
             "Terra",
@@ -8288,6 +8293,7 @@
             "Thresholder",
             "Tifa",
             "Twilight Thorn",
+            "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
@@ -9172,7 +9178,8 @@
         "roommaxsize": null,
         "blacklist_source": [],
         "blacklist_destination": [
-            "Scar"
+            "Scar",
+            "Luxord"
         ],
         "whitelist_source": [
             "Axel I",
@@ -12242,7 +12249,6 @@
             "Vexen",
             "Vivi",
             "Volcano Lord",
-            "Xaldin",
             "Xemnas",
             "Yuffie"
         ]
@@ -12575,7 +12581,6 @@
             "Tifa",
             "Vivi",
             "Volcano Lord",
-            "Xaldin",
             "Xemnas",
             "Yuffie"
         ]
@@ -15493,6 +15498,7 @@
             "MCP",
             "Grim Reaper I",
             "Hades II",
+            "Hayner",
             "Hercules",
             "Jafar",
             "Larxene",
@@ -15502,10 +15508,13 @@
             "Past Pete",
             "Pete TR",
             "Prison Keeper",
+            "Riku",
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
+            "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
             "Terra",
@@ -15514,6 +15523,7 @@
             "Thresholder",
             "Tifa",
             "Twilight Thorn",
+            "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
@@ -16338,7 +16348,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Axel I",
-            "Axel II",
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
@@ -21334,7 +21343,6 @@
             "Vexen",
             "Vivi",
             "Volcano Lord",
-            "Xaldin",
             "Xemnas",
             "Yuffie"
         ]
@@ -24160,6 +24168,7 @@
             "MCP",
             "Grim Reaper I",
             "Hades II",
+            "Hayner",
             "Hercules",
             "Jafar",
             "Larxene",
@@ -24169,10 +24178,13 @@
             "Past Pete",
             "Pete TR",
             "Prison Keeper",
+            "Riku",
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
+            "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
             "Terra",
@@ -24181,6 +24193,7 @@
             "Thresholder",
             "Tifa",
             "Twilight Thorn",
+            "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
@@ -25110,6 +25123,7 @@
         },
         "tags": [
             "organization",
+            "needs_rc",
             "mickey_source"
         ],
         "enabled": true,
@@ -25134,7 +25148,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "mickey_source-organization",
+        "category": "mickey_source-needs_rc-organization",
         "parent": "Xaldin",
         "variationof": null,
         "children": [
@@ -25529,6 +25543,7 @@
             "MCP",
             "Grim Reaper I",
             "Hades II",
+            "Hayner",
             "Hercules",
             "Jafar",
             "Larxene",
@@ -25538,10 +25553,13 @@
             "Past Pete",
             "Pete TR",
             "Prison Keeper",
+            "Riku",
             "Roxas",
             "Sark",
             "Scar",
+            "Seifer",
             "Sephiroth",
+            "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
             "Terra",
@@ -25550,6 +25568,7 @@
             "Thresholder",
             "Tifa",
             "Twilight Thorn",
+            "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
