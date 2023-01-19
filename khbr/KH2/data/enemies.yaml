@@ -2803,7 +2803,7 @@ Hayner:
   tags:
   - needs_invuln
   - roxas
-  - sourcemaxhp
+  #- sourcemaxhp
   - onetooneonly
   - teleport_blocked
   enmp_index: 0x96
@@ -4519,7 +4519,7 @@ Seifer:
   tags:
   - needs_invuln
   - roxas
-  - sourcemaxhp
+  #- sourcemaxhp
   - teleport_blocked
   hp: 100
   level: 99
@@ -4662,7 +4662,7 @@ Setzer:
   tags:
   - needs_invuln
   - roxas
-  - sourcemaxhp
+  #- sourcemaxhp
   - onetooneonly
   - teleport_blocked
   hp: 100
@@ -5513,7 +5513,7 @@ Vivi:
   enmp_index: 0x9D
   tags:
   - roxas
-  - sourcemaxhp
+  #- sourcemaxhp
   - onetooneonly
   - needs_invuln
   - teleport_blocked

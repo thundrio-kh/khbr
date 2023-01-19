@@ -1,3 +1,4 @@
+import math
 from khbr.KH2.CommandManager import CommandManager
 from khbr.KH2.MemtManager import MemtManager
 from khbr.textutils import final_fight_text
@@ -104,6 +105,9 @@ class AssetGenerator:
                 new_enmp_data["health"] = original_enmp_data["health"]
             if DEBUG_HEALTH:
                 new_enmp_data["health"] = [DEBUG_HEALTH for _ in original_enmp_data["health"]]
+                print(new_enemy)
+            # Health value should be capped at Terras due to HP visibility issue
+            new_enmp_data["health"][0] = min(new_enmp_data["health"][0], 1878)
             new_enmp_data["level"] = 0 # All bosses are level 0 to take the worlds battle level EXCEPT for datas/terra, which are 99
         if remove_damage_cap:
             for en in enmp_data_modified:

@@ -131,6 +131,7 @@ class EnemySeed:
     def update_scaling(self, old_boss_object, new_boss_object):
         if new_boss_object["name"] not in self.set_scaling:
             if "sourcemaxhp" in old_boss_object["tags"]:
+                # We don't need this functionality anymore really
                 # I think this will be fine because it's all in stt but could theoretically overload the max hp display which crashes with scan
                 self.set_scaling[new_boss_object["name"]] = 5000 
         if self.config.scale_boss:

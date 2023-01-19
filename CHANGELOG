@@ -39,6 +39,7 @@
 * Invincible hades fights have now been added back into the randomization pool (whoever is set to randomize Hades will be the boss in each location, and they should have an HP floor to not die)
 * Minute bombs have been added back into the randomization pool after a hopeful fix to prevent softlocks in fights such as the first HT fight
 * Aerial Vikings have been tagged as large enemies because they can cause crashes when replacing shadows
+* When HP is scaled, bosses HP is capped at Terras Base HP, to not cause crashes on using scan against higher HP values
 
 2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)

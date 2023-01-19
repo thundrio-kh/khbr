@@ -12927,7 +12927,6 @@
         "tags": [
             "needs_invuln",
             "roxas",
-            "sourcemaxhp",
             "onetooneonly",
             "teleport_blocked"
         ],
@@ -12970,7 +12969,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "needs_invuln-onetooneonly-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-onetooneonly-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Hayner",
         "variationof": null,
@@ -21750,7 +21749,6 @@
         "tags": [
             "needs_invuln",
             "roxas",
-            "sourcemaxhp",
             "teleport_blocked"
         ],
         "hp": 100,
@@ -21795,7 +21793,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "needs_invuln-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -21872,7 +21870,6 @@
         "tags": [
             "needs_invuln",
             "roxas",
-            "sourcemaxhp",
             "teleport_blocked"
         ],
         "hp": 100,
@@ -21915,7 +21912,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "needs_invuln-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -21975,7 +21972,6 @@
         "tags": [
             "needs_invuln",
             "roxas",
-            "sourcemaxhp",
             "teleport_blocked"
         ],
         "hp": 100,
@@ -22017,7 +22013,7 @@
             "Seifer (3)",
             "Seifer (4)"
         ],
-        "category": "needs_invuln-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -22075,7 +22071,6 @@
         "tags": [
             "needs_invuln",
             "roxas",
-            "sourcemaxhp",
             "teleport_blocked"
         ],
         "hp": 100,
@@ -22119,7 +22114,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "needs_invuln-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -22177,7 +22172,6 @@
         "tags": [
             "needs_invuln",
             "roxas",
-            "sourcemaxhp",
             "teleport_blocked"
         ],
         "hp": 100,
@@ -22221,7 +22215,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "needs_invuln-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -22400,7 +22394,6 @@
         "tags": [
             "needs_invuln",
             "roxas",
-            "sourcemaxhp",
             "onetooneonly",
             "teleport_blocked"
         ],
@@ -22442,7 +22435,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "needs_invuln-onetooneonly-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-onetooneonly-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Setzer",
         "variationof": null,
@@ -25327,7 +25320,6 @@
         "enmp_index": 157,
         "tags": [
             "roxas",
-            "sourcemaxhp",
             "onetooneonly",
             "needs_invuln",
             "teleport_blocked"
@@ -25373,7 +25365,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "needs_invuln-onetooneonly-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-onetooneonly-roxas-teleport_blocked",
         "isnightmare": false,
         "parent": "Vivi",
         "variationof": null,
