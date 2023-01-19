@@ -6175,14 +6175,16 @@
         "obj_id": 2413,
         "sizeTag": "memoryLarge",
         "type": "enemy",
+        "tags": [
+            "large"
+        ],
         "variations": [
             "Aerial Viking"
         ],
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "large",
         "isnightmare": false,
         "parent": "Aerial Viking",
         "variationof": null,
@@ -6284,6 +6286,9 @@
         "enmp_index": 3,
         "hp": 100,
         "level": 99,
+        "tags": [
+            "large"
+        ],
         "limiter": 13,
         "model": "M_EX210",
         "obj_id": 74,
@@ -6296,8 +6301,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "large",
         "isnightmare": false,
         "parent": "Aerial Viking",
         "children": [],
@@ -6339,6 +6343,9 @@
         "enmp_index": 3,
         "hp": 100,
         "level": 99,
+        "tags": [
+            "large"
+        ],
         "limiter": 13,
         "model": "M_EX210",
         "obj_id": 74,
@@ -6351,8 +6358,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "large",
         "isnightmare": false,
         "parent": "Aerial Viking",
         "children": [],
@@ -6937,10 +6943,10 @@
         "tags": [
             "nobody"
         ],
+        "replace_as": "Dancer",
         "variations": [
             "Assassin"
         ],
-        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "category": "nobody",

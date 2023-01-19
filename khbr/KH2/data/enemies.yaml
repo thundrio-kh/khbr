@@ -899,6 +899,8 @@ Aerial Viking:
   obj_id: 2413
   sizeTag: memoryLarge
   type: enemy
+  tags:
+  - large # TODO not exactly large, but can cause crashes when replacing shadows
   variations:
     Aerial Viking:
       vars:
@@ -928,6 +930,8 @@ Air Pirate:
   enmp_index: 3
   hp: 100
   level: 99
+  tags:
+  - large
   limiter: 13
   model: M_EX210
   obj_id: 74
