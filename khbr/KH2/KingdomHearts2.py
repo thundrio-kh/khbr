@@ -250,11 +250,12 @@ class KingdomHearts2:
                                         # still need to update msn mapping for mickey rules
                                         rand_seed.update_msn_mapping(old_boss_object, old_boss_object)
 
-                                        # When GR II replaces itself need to remove the medals that start on the ground
-                                        if not old_boss_object["name"] == "Grim Reaper II":
+                                        if old_boss_object["name"] == "Grim Reaper II":
+                                            # hack to support both one gr2 placed in world and both. ideally the ai mod should just use a different number of medals based on being in gr2's room or not
+                                            rand_seed.update_aimod(old_boss_object, new_boss_object)
+                                        else:
+                                            # When GR II replaces itself need to remove the medals that start on the ground
                                             continue
-
-
 
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_boss_object)
                                     rand_seed.update_seed(old_boss_object, new_boss_object, w, r, sp, i)
@@ -292,6 +293,7 @@ class KingdomHearts2:
                                         argument = varargs[2]
                                         enemy = created_enemies[index]
                                         if not enemy:
+                                            createmod=False
                                             continue # Likely means it's vanilla
                                         aimod["vars"][var] = enemy[argument]
                             

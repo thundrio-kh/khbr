@@ -2336,6 +2336,7 @@ Final Xemnas:
   - Yuffie
   - Tifa
   - Cloud
+  - Riku # report of Softlock after fight ends
   can_be_enemy: false
   tags:
   - solo
@@ -4316,6 +4317,7 @@ Riku:
   enmp_index: 0x82
   tags:
   - solo
+  - needs_invuln
   hp: 100
   level: 99
   limiter: 0

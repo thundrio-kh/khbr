@@ -320,6 +320,8 @@ class Tests(unittest.TestCase):
 # struggle room should only have the ai mod applied, not a copy msn too
 # test other actually spawns enemies as expected works
 # test behavior mods are working properly
+# verify ai_mods get filled out right for all kinds of ai mods
+# add ability to pass in specific boss/enemy mappings, and use those to test things like vanilla gr2 working
 
 # Uncomment to run a single test through ipython
 ut = Tests()
