@@ -20,6 +20,7 @@ Major Improvements
 * Hydra fight has been reenabled on PC and no longer softlocks
 * An AI edit has been made to prevent the disappearing HP bar and Armor Xemnas 2 has been restored rather than being a copy of Armor Xemnas 1
 * Jafar has been added into the randomization pool as a misc boss. The Roll UP RC is disabled when Jafar is randomized, due to causing crashes when the carpet is not around
+* Shadow Stalker has been added into the randomization pool as a misc boss.
 * Oogie Boogie has been added into the randomization pool as a misc boss with a completely custom AI. Currently it uses Shadow Roxas AI and is very trivial to beat, expect changes to come.
 * The timeless river version of Pete (with the scene changes) has been added into the randomization pool (Pete as a whole is now in the "misc" category)
 * MCP has been added into the randomization pool as a misc boss, and Tron will appear as an extra party member wherever he shows up in order to accomadate the RC
@@ -68,6 +69,8 @@ Known Issues
 * MCP Health is not halved, as GOA intends
 * I have heard reports of softlocks in the Ambush fight, even though no enemies are randomized there. I cannot reproduce, so if this happens please submit a bug report with the seedstring
 * The Olympus Stone may not work to unlock Drives as the GOA mod intends
+* There has been a report that Riku causes crashes in Party Member rando, but I have not reproduced, so currently just gathering data on how often this occurs
+* 
 
 
 2.1
