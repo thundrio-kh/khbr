@@ -6,9 +6,6 @@
         ],
         "name": "Bees ETC PO",
         "enabled": false,
-        "tags": [
-            "other"
-        ],
         "variationof": "Bees TT PO",
         "enmp_index": 999,
         "model": "F_PO090_ETC",
@@ -21,7 +18,8 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "other",
+        "tags": [],
+        "category": "",
         "level": 0,
         "isnightmare": false,
         "parent": "Bees TT PO",
@@ -62,9 +60,6 @@
         ],
         "name": "Bees TT PO",
         "enabled": false,
-        "tags": [
-            "other"
-        ],
         "enmp_index": 999,
         "model": "F_PO090_TT",
         "obj_id": 2138,
@@ -76,7 +71,8 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "other",
+        "tags": [],
+        "category": "",
         "level": 0,
         "isnightmare": false,
         "parent": "Bees TT PO",
@@ -692,9 +688,6 @@
         "model": "M_EX590",
         "obj_id": 75,
         "size": 0,
-        "tags": [
-            "other"
-        ],
         "type": "enemy",
         "variations": [
             "Bulky Vendor (Disappears)",
@@ -703,7 +696,8 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "other",
+        "tags": [],
+        "category": "",
         "level": 0,
         "isnightmare": false,
         "parent": "Bulky Vendor",
@@ -749,9 +743,6 @@
         "model": "M_EX590",
         "obj_id": 75,
         "size": 0,
-        "tags": [
-            "other"
-        ],
         "type": "enemy",
         "variations": [
             "Bulky Vendor (Disappears)",
@@ -760,7 +751,8 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "other",
+        "tags": [],
+        "category": "",
         "level": 0,
         "isnightmare": false,
         "parent": "Bulky Vendor",
@@ -805,9 +797,6 @@
         ],
         "name": "Bulky Vendor (NM) (Disappears)",
         "enabled": false,
-        "tags": [
-            "other"
-        ],
         "enmp_index": 999,
         "model": "M_EX590_NM",
         "obj_id": 2509,
@@ -821,7 +810,8 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "other",
+        "tags": [],
+        "category": "",
         "level": 0,
         "isnightmare": false,
         "parent": "Bulky Vendor",
@@ -862,9 +852,6 @@
         ],
         "name": "Bulky Vendor (NM)",
         "enabled": false,
-        "tags": [
-            "other"
-        ],
         "enmp_index": 999,
         "model": "M_EX590_NM",
         "obj_id": 2509,
@@ -878,7 +865,8 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "other",
+        "tags": [],
+        "category": "",
         "level": 0,
         "isnightmare": false,
         "parent": "Bulky Vendor",
@@ -7528,9 +7516,6 @@
         ],
         "name": "Bees (Disappearing)",
         "enabled": false,
-        "tags": [
-            "other"
-        ],
         "hp": 100,
         "level": 99,
         "limiter": 12,
@@ -7545,7 +7530,8 @@
         ],
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "other",
+        "tags": [],
+        "category": "",
         "isnightmare": false,
         "parent": "Bees TT PO",
         "children": [],

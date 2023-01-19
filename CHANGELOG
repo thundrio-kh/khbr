@@ -1,4 +1,5 @@
 3.0.0
+* Fix for logic issue that would sometimes cause the data version of a boss to be completely unrelated to the story version of the boss
 * Fix crash that was preventing FF bosses from being randomized on PC (the mission complete camera will look different from normal)
 * Updated allowed replacements for reducing known softlocks/crashes
 * Prevent bosses from spawning in Encampment, when bosses as enemies mode is enabled
@@ -37,6 +38,7 @@
 * When collecting medals in Pirates 2, the coins should now properly disappear if not collected before the timer runs out
 * Invincible hades fights have now been added back into the randomization pool (whoever is set to randomize Hades will be the boss in each location, and they should have an HP floor to not die)
 * Minute bombs have been added back into the randomization pool after a hopeful fix to prevent softlocks in fights such as the first HT fight
+* Aerial Vikings have been tagged as large enemies because they can cause crashes when replacing shadows
 
 2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)

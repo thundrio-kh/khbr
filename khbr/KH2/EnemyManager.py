@@ -37,8 +37,8 @@ class EnemyManager:
                 if use_nightmare_enemies and not e_obj["isnightmare"]:
                     continue
 
-            if "pirate" in e_obj["tags"] and not (use_other_enemies or "pirate" in options.get("selected_enemy", "").lower()):
-                e_obj["aimods"] = []
+            # if "pirate" in e_obj["tags"] and not (use_other_enemies or "pirate" in options.get("selected_enemy", "").lower()):
+            #     e_obj["aimods"] = []
         
             enabled_enemies.append(e_obj)
 
@@ -290,13 +290,22 @@ class EnemyManager:
                 return True
         # Adding needsRC, RCblocked, needsTeleport, TeleportBlocked tags
         # if the dest boss has a behavior mod
-        behavior_mods = {
+        dest_behavior_mods = {
             "needs_rc": "rc_blocked",
-            "needs_teleport": "teleport_blocked"
+            "needs_teleport": "teleport_blocked",
+            "needs_invuln": "cant_invuln"
         }
-        dest_boss_behavior_mods = set(behavior_mods).intersection(dest_boss["tags"])
+        dest_boss_behavior_mods = set(dest_behavior_mods).intersection(dest_boss["tags"])
         for k in dest_boss_behavior_mods:
-            if behavior_mods[k] in source_boss["tags"]:
+            if dest_behavior_mods[k] in source_boss["tags"]:
+                return True
+        # Sometimes the src boss has a behavior mod
+        source_behavior_mods = {
+            "needs_invuln": "cant_invuln"
+        }
+        source_boss_behavior_mods = set(source_behavior_mods).intersection(source_boss["tags"])
+        for k in source_boss_behavior_mods:
+            if source_behavior_mods[k] in dest_boss["tags"]:
                 return True
         return False
 

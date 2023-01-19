@@ -163,6 +163,22 @@ class Tests(unittest.TestCase):
             "Program 0xBF",
             "Bgm 120 120",
             "AreaSettings 7 10",
+            "\tSetProgressFlag 0x1841"
+        ]
+        lines = [
+            "Program 0xBF",
+            "Bgm 120 120",
+            "AreaSettings 7 10",
+            "\tSetProgressFlag 0x1841",
+            "\tSetJump Type 04 World BB Area 01 Entrance 05 LocalSet 02 FadeType 03"
+        ]
+        adp = AreaDataProgram(lines)
+        adp.set_jump(world="AA", room="01", program="02", fadetype="03", jumptype="04", entrance="05")
+        output = adp.make_program()
+        assert output.split("\n") == [
+            "Program 0xBF",
+            "Bgm 120 120",
+            "AreaSettings 7 10",
             "\tSetProgressFlag 0x1841",
             "\tSetJump Type 04 World AA Area 01 Entrance 05 LocalSet 02 FadeType 03"
         ]
@@ -182,7 +198,8 @@ class Tests(unittest.TestCase):
             "Bgm 120 120",
             "AreaSettings 7 10",
             "\tSetProgressFlag 0x1841",
-            "\tSetPartyMenu 1"
+            "\tSetPartyMenu 1",
+            "\tSetMember 3"
         ]
         adp.set_open_menu(False)
         output = adp.make_program()
@@ -191,7 +208,8 @@ class Tests(unittest.TestCase):
             "Bgm 120 120",
             "AreaSettings 7 10",
             "\tSetProgressFlag 0x1841",
-            "\tSetPartyMenu 0"
+            "\tSetPartyMenu 0",
+            "\tSetMember 3"
         ]
     def test_remove_event(self):
         lines = [
@@ -239,8 +257,8 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_set_flags()
-ut.test_get_mission()
+#ut.test_set_jump()
+ut.test_set_open_menu()
 
 
 # Uncomment to run the actual tests

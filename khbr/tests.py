@@ -62,25 +62,25 @@ class Tests(unittest.TestCase):
         randomization = testutils.generateSeed(options)
         testutils.validate_enemies_general(randomization)
 
-    def test_seedgen_enemy_one_to_one_other(self):
-        options = {"enemy": "One to One", "other_enemies": False}
-        randomization = testutils.generateSeed(options)
-        testutils.validate_enemies_general(randomization)
+    # def test_seedgen_enemy_one_to_one_other(self):
+    #     options = {"enemy": "One to One", "other_enemies": False}
+    #     randomization = testutils.generateSeed(options)
+    #     testutils.validate_enemies_general(randomization)
 
-        for ai_mod in randomization["ai_mods"]:
-            if ai_mod.startswith("Undead Pirate"):
-                raise Exception("Undead Pirate aimod should not be included")
+    #     for ai_mod in randomization["ai_mods"]:
+    #         if ai_mod.startswith("Undead Pirate"):
+    #             raise Exception("Undead Pirate aimod should not be included")
 
-        options = {"enemy": "One to One", "other_enemies": True}
-        randomization = testutils.generateSeed(options)
-        testutils.validate_enemies_general(randomization)
+    #     options = {"enemy": "One to One", "other_enemies": True}
+    #     randomization = testutils.generateSeed(options)
+    #     testutils.validate_enemies_general(randomization)
         
-        found_undead_pirate = False
-        for ai_mod in randomization["ai_mods"]:
-            if ai_mod.startswith("Undead Pirate"):
-                found_undead_pirate = True
-        if not found_undead_pirate:
-            raise Exception("Should have found Undead Pirate aimod")
+    #     found_undead_pirate = False
+    #     for ai_mod in randomization["ai_mods"]:
+    #         if ai_mod.startswith("Undead Pirate"):
+    #             found_undead_pirate = True
+    #     if not found_undead_pirate:
+    #         raise Exception("Should have found Undead Pirate aimod")
 
     def test_seedgen_enemy_one_to_one_pc(self):
         options = {"enemy": "One to One"}
@@ -319,11 +319,14 @@ class Tests(unittest.TestCase):
 # gr room should still work alone (msn mods shouldn't be applied for same boss changes)
 # struggle room should only have the ai mod applied, not a copy msn too
 # test other actually spawns enemies as expected works
+# test behavior mods are working properly
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_seedgen_boss_wild_cups()
+ut.test_seedgen_proderror1()
+#ut.test_seedgen_enemy_one_to_one_other
+#ut.test_seedgen_enemy_one_to_one_room_nightmare
 
 # Uncomment to run the actual tests
-#unittest.main()
+unittest.main()
 

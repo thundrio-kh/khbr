@@ -9,7 +9,7 @@ class Tests(unittest.TestCase):
     def test_one_to_one_long(self):
         print("One to One long")
         N = 100
-        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "lua_bosses": True}
+        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "gimmick_bosses": True, "sephiroth": True, "terra": True}
         randomizations = []
         for _ in range(N):
             print("{}\{}".format(_,N))
@@ -23,7 +23,7 @@ class Tests(unittest.TestCase):
     def test_wild_long(self):
         print("Wild long")
         N = 100
-        options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "lua_bosses": True}
+        options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "gimmick_bosses": True, "sephiroth": True, "terra": True}
         randomizations = []
         for _ in range(N):
             print("{}\{}".format(_,N))
@@ -36,7 +36,7 @@ class Tests(unittest.TestCase):
     def test_one_to_one_long_pc(self):
         print("One to One long pc")
         N = 100
-        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "memory_expansion": True, "lua_bosses": True}
+        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "gimmick_bosses": True, "sephiroth": True, "terra": True, "memory_expansion": True}
         randomizations = []
         for _ in range(N):
             print("{}\{}".format(_,N))
@@ -46,18 +46,18 @@ class Tests(unittest.TestCase):
         testutils.check_for_hyena_replacement(randomizations)
         testutils.calculate_luxord_replacement_variety(randomizations, 0.25, pc=True)
 
-    # def test_wild_long_pc(self):
-    #     print("Wild long pc")
-    #     N = 100
-    #     options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "memory_expansion": True}
-    #     randomizations = []
-    #     for _ in range(N):
-    #         print("{}\{}".format(_,N))
-    #         randomization = testutils.generateSeed(options, str(_))
-    #         randomizations.append(randomization)
-    #     testutils.calculate_boss_percentages(randomizations, requireSourceReplace=False, pc=True)
-    #     testutils.calculate_luxord_replacement_variety(randomizations, 0.4, pc=True)
-    #     testutils.check_for_hyena_replacement(randomizations)
+    def test_wild_long_pc(self):
+        print("Wild long pc")
+        N = 100
+        options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "gimmick_bosses": True, "sephiroth": True, "terra": True, "memory_expansion": True}
+        randomizations = []
+        for _ in range(N):
+            print("{}\{}".format(_,N))
+            randomization = testutils.generateSeed(options, str(_))
+            randomizations.append(randomization)
+        testutils.calculate_boss_percentages(randomizations, requireSourceReplace=False, pc=True)
+        testutils.calculate_luxord_replacement_variety(randomizations, 0.4, pc=True)
+        testutils.check_for_hyena_replacement(randomizations)
 
 
 # Uncomment to run a single test through ipython
