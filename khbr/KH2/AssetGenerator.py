@@ -189,7 +189,6 @@ class AssetGenerator:
                 if worldvalue:
                     worldfriend = party_member_map[worldvalue]
                 entry["World Character"] = random.choice(memt.party_members[replacements[worldfriend]])
-            print(replacements) # TODO remove debug
 
         asset = self.modwriter.writeMemt(memt.dump_bin())
         existingasset = self.find_asset("03system.bin")

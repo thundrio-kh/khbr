@@ -232,6 +232,7 @@ class SpawnManager:
 
     @staticmethod
     def get_new_boss(old_boss_object, old_boss_parent, config, rand_seed, enemy_records):
+
         # TODO SEIFER Can't be replaced here normally because it wants an enemy, so just put shadow roxas here
         if  old_boss_object["name"] == "Seifer (2)":
             return "Shadow Roxas"
@@ -249,7 +250,6 @@ class SpawnManager:
             else:
                 bosspicklist = old_boss_parent["available"]
             new_boss = pick_boss_to_replace(enemy_records, bosspicklist)
-
             if old_boss_object["name"] == "Luxord" and new_boss == "Luxord (Data)":
                 return "Luxord" # There is a strange crash on Luxord Datas DM in original Luxords arena
 

@@ -242,6 +242,9 @@ class KingdomHearts2:
                                     if not new_boss:
                                         continue
                                     self.spoilers["boss"][entity["name"]] = new_boss
+
+                                    # gotta get new boss object first because the data_replacements still needs to be set if it's a same replacement
+                                    new_boss_object = self.enemy_manager.get_new_boss_object(old_boss_object, new_boss, rand_seed)
                                     # same replacement
                                     if new_boss == old_boss_object["name"]:
                                         # still need to update msn mapping for mickey rules
@@ -251,7 +254,7 @@ class KingdomHearts2:
                                         if not old_boss_object["name"] == "Grim Reaper II":
                                             continue
 
-                                    new_boss_object = self.enemy_manager.get_new_boss_object(old_boss_object, new_boss, rand_seed)
+
 
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_boss_object)
                                     rand_seed.update_seed(old_boss_object, new_boss_object, w, r, sp, i)

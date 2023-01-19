@@ -9,14 +9,34 @@
 * Struggle fights will now prevent the placed boss from dying, so the struggle fight is actually a full struggle
 * The Illuminator will no longer move from the spot where Barbossa spawns it, to prevent issues where it moves to a unreachable location
 * Now generating a custom moveset (thanks to DA) for Sora that will allow Twilight Thorn to work without major AI modifications
-* Jafar has been added into the randomization pool for Wild boss replacement mode
-* Demyx OC has been added into the randomization pool
+* Jafar has been added into the randomization pool. The Roll UP RC is disabled when Jafar is randomized, due to causing crashes when the carpet is not around
 * Randomize superbosses option has been split into 3 options, for terra, sephiroth, and the datas
 * Cutscene Remover option has been added, with 3 different options (PUT MORE DESCRIPTION HERE)
 * Enabled randomizing the two single dusk fights in STT where the enemy is invulnerable
 * When bosses as enemies is enabled, do not allow more than one boss per spawnpoint, which will hopefully help with stability
 * HT Presents fight is reenabled
 * Riku is now enabled in one to one
+* Axel Data no longer requires performing his RC in order to be killed
+* After gaining a better understanding of the spawn system, nobady_call attack has been reenabled for Armor Xemnas 1, which used to cause crashing on PC
+* Data Demyx has had an AI edit so that the timer for the form minigames is 40 seconds instead of 30 seconds. This should allow Data Demyx to be reasonably beaten by solo Sora
+* Ai mod for Scar to prevent the T-Posing that can occur when Sora is 'caught'
+* Hydra fight has been reenabled on PC and no longer softlocks
+* Bosses are now given an HP floor during the Struggle fights, so that they should not be able to die. There might still be issues with some bosses that normally have an HP floor, such as the Experiment or similar. Please file a bug report if any issues are encountered.
+* Misc bosses option has been added, and contains bosses such as Jafar, MCP, and other bosses that are more like ggimmicks than not. MORE DETAILS In other news, Groundshaker is the only boss that can not be randomized at all. This should currently be treated as an unstable option
+* Revenge Limit Randomizer has been added as an option. This performs an AI edit on every enemy/boss in the game, even if enemy/boss randomizer is off. Note that all enemies have a base revenge limit cap of 100, which is what gets randomized. Some enemies however don't have any code to do anything when the revenge limit is hit, so in those cases no change will be seen. This is an exciting but beta feature, please give feedback on how it works and how it could be improved.
+* An AI edit has been made to prevent the disappearing HP bar and Armor Xemnas 2 has been restored rather than being a copy of Armor Xemnas 1
+* Oogie Boogie has been added into the randomization pool with a completely custom AI. Currently it uses Shadow Roxas AI and is very trivial to beat, this will change as time goes on.
+* The timeless river version of Pete (with the scene changes) has been added into the randomization pool (Pete as a whole is now in the "misc" category)
+* MCP has been added into the randomization pool as a misc boss, and Tron will appear as an extra party member wherever he shows up in order to accomadate the RC
+* Party member rando has been added. Currently Donald/Goofy are not randomized because the game throws a hissy fit when you have more than one world character in your party at once
+* Costume rando has been added. Pretty simple but it was trivial to add at the same time as Party Member rando
+* There is now a Scale Boss Stats option. Turning it off will have the same effect as the Better Boss Scaling mod
+* An AI mod for Lexaeus, Larxene, and Zexion has been done to prevent teleport attacks sending Sora OOB. These bosses were the easiest to fix due to the removal of a "reset_pos" function that set positions to 0,0,0. Fixes are planned for other bosses with teleport related issues, but will take more time due to the exact teleport coordinates being hardcoded.
+* Nightmare mode has had a couple adjustments, namely the addition of the Gambler that summons darkness on spawn
+* Various bosses that can cause softlocks as Mickey now don't allow summoning Mickey
+* When collecting medals in Pirates 2, the coins should now properly disappear if not collected before the timer runs out
+* Invincible hades fights have now been added back into the randomization pool (whoever is set to randomize Hades will be the boss in each location, and they should have an HP floor to not die)
+* Minute bombs have been added back into the randomization pool after a hopeful fix to prevent softlocks in fights such as the first HT fight
 
 2.3.0
 * Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)
