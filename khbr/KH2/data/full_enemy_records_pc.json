@@ -4066,12 +4066,6 @@
             0
         ],
         "name": "Undead Pirate A",
-        "aimods": [
-            {
-                "name": "B_CA020/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4107,6 +4101,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4137,12 +4132,6 @@
             0
         ],
         "name": "Undead Pirate A (Jumps up)",
-        "aimods": [
-            {
-                "name": "B_CA020/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4176,6 +4165,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4206,12 +4196,6 @@
             0
         ],
         "name": "Undead Pirate A (Jumps Forward)",
-        "aimods": [
-            {
-                "name": "B_CA020/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4245,6 +4229,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4275,12 +4260,6 @@
             0
         ],
         "name": "Undead Pirate A (90 0)",
-        "aimods": [
-            {
-                "name": "B_CA020/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4314,6 +4293,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4344,12 +4324,6 @@
             0
         ],
         "name": "Undead Pirate A (93 0)",
-        "aimods": [
-            {
-                "name": "B_CA020/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4383,6 +4357,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4413,12 +4388,6 @@
             0
         ],
         "name": "Undead Pirate A (22 0)",
-        "aimods": [
-            {
-                "name": "B_CA020/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4452,6 +4421,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4482,12 +4452,6 @@
             0
         ],
         "name": "Undead Pirate A (24 0)",
-        "aimods": [
-            {
-                "name": "B_CA020/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4521,6 +4485,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4551,12 +4516,6 @@
             0
         ],
         "name": "Undead Pirate A (20 0)",
-        "aimods": [
-            {
-                "name": "B_CA020/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4590,6 +4549,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4620,12 +4580,6 @@
             0
         ],
         "name": "Undead Pirate A (91 0)",
-        "aimods": [
-            {
-                "name": "B_CA020/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4659,6 +4613,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4689,12 +4644,6 @@
             0
         ],
         "name": "Undead Pirate B",
-        "aimods": [
-            {
-                "name": "B_CA030/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "isnightmare": true,
@@ -4725,6 +4674,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4755,12 +4705,6 @@
             0
         ],
         "name": "Undead Pirate B (90 0)",
-        "aimods": [
-            {
-                "name": "B_CA030/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "isnightmare": true,
@@ -4789,6 +4733,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4819,12 +4764,6 @@
             0
         ],
         "name": "Undead Pirate B (93 0)",
-        "aimods": [
-            {
-                "name": "B_CA030/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "isnightmare": true,
@@ -4853,6 +4792,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4883,12 +4823,6 @@
             0
         ],
         "name": "Undead Pirate B (92 0)",
-        "aimods": [
-            {
-                "name": "B_CA030/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "isnightmare": true,
@@ -4917,6 +4851,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4947,12 +4882,6 @@
             0
         ],
         "name": "Undead Pirate C",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -4993,6 +4922,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5023,12 +4953,6 @@
             0
         ],
         "name": "Undead Pirate C (Jumps Down)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5067,6 +4991,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5097,12 +5022,6 @@
             0
         ],
         "name": "Undead Pirate C (28 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5141,6 +5060,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5171,12 +5091,6 @@
             0
         ],
         "name": "Undead Pirate C (91 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5215,6 +5129,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5245,12 +5160,6 @@
             0
         ],
         "name": "Undead Pirate C (Jumps Up)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5289,6 +5198,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5319,12 +5229,6 @@
             0
         ],
         "name": "Undead Pirate C (90 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5363,6 +5267,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5393,12 +5298,6 @@
             0
         ],
         "name": "Undead Pirate C (13 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5437,6 +5336,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5467,12 +5367,6 @@
             0
         ],
         "name": "Undead Pirate C (92 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5511,6 +5405,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5541,12 +5436,6 @@
             0
         ],
         "name": "Undead Pirate C (93 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5585,6 +5474,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5615,12 +5505,6 @@
             0
         ],
         "name": "Undead Pirate C (12 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5659,6 +5543,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5689,12 +5574,6 @@
             0
         ],
         "name": "Undead Pirate C (6 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5733,6 +5612,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5763,12 +5643,6 @@
             0
         ],
         "name": "Undead Pirate C (2 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5807,6 +5681,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5837,12 +5712,6 @@
             0
         ],
         "name": "Undead Pirate C (8 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5881,6 +5750,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5911,12 +5781,6 @@
             0
         ],
         "name": "Undead Pirate C (26 0)",
-        "aimods": [
-            {
-                "name": "B_CA040/b_ca.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5955,6 +5819,7 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -8433,6 +8298,7 @@
         },
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "msn_replace_allowed": false,
@@ -8446,7 +8312,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "isnightmare": false,
         "parent": "Cloud",
         "variationof": null,
@@ -8487,7 +8353,6 @@
             "MCP",
             "Grim Reaper I",
             "Hades II",
-            "Hayner",
             "Hercules",
             "Jafar",
             "Larxene",
@@ -8497,13 +8362,10 @@
             "Past Pete",
             "Pete TR",
             "Prison Keeper",
-            "Riku",
             "Roxas",
             "Sark",
             "Scar",
-            "Seifer",
             "Sephiroth",
-            "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
             "Terra",
@@ -8512,7 +8374,6 @@
             "Thresholder",
             "Tifa",
             "Twilight Thorn",
-            "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
@@ -8548,6 +8409,7 @@
         },
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "msn_replace_allowed": false,
@@ -8561,7 +8423,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "isnightmare": false,
         "parent": "Cloud",
         "variationof": null,
@@ -8617,6 +8479,7 @@
         },
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "msn_replace_allowed": false,
@@ -8630,7 +8493,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "isnightmare": false,
         "parent": "Cloud",
         "variationof": null,
@@ -9679,7 +9542,8 @@
             "Leon",
             "Yuffie",
             "Tifa",
-            "Cloud"
+            "Cloud",
+            "Riku"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -11323,7 +11187,8 @@
             "Leon",
             "Yuffie",
             "Tifa",
-            "Cloud"
+            "Cloud",
+            "Riku"
         ],
         "can_be_enemy": false,
         "tags": [
@@ -11460,7 +11325,8 @@
             "Leon",
             "Yuffie",
             "Tifa",
-            "Cloud"
+            "Cloud",
+            "Riku"
         ],
         "can_be_enemy": false,
         "tags": [
@@ -12590,7 +12456,8 @@
         "tags": [
             "cups",
             "rc_blocked",
-            "needs_teleport"
+            "needs_teleport",
+            "needs_invuln"
         ],
         "enmp_index": 177,
         "hp": 100,
@@ -12608,7 +12475,7 @@
         ],
         "replace_as": "Hades Cups",
         "source_replace_allowed": true,
-        "category": "cups-needs_teleport-rc_blocked",
+        "category": "cups-needs_invuln-needs_teleport-rc_blocked",
         "isnightmare": false,
         "parent": "Hades II",
         "children": [],
@@ -12662,6 +12529,9 @@
                 }
             }
         ],
+        "tags": [
+            "needs_invuln"
+        ],
         "enabled": true,
         "enmp_index": 18,
         "hp": 100,
@@ -12681,11 +12551,7 @@
             "Hades Escape"
         ],
         "source_replace_allowed": true,
-        "tags": [
-            "rc_blocked",
-            "teleport_blocked"
-        ],
-        "category": "",
+        "category": "needs_invuln",
         "isnightmare": false,
         "parent": "Hades II",
         "children": [],
@@ -12734,6 +12600,9 @@
                 }
             }
         ],
+        "tags": [
+            "needs_invuln"
+        ],
         "variationof": "Hades II",
         "enabled": true,
         "enmp_index": 18,
@@ -12750,11 +12619,7 @@
         ],
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [
-            "rc_blocked",
-            "teleport_blocked"
-        ],
-        "category": "",
+        "category": "needs_invuln",
         "isnightmare": false,
         "parent": "Hades II",
         "children": [],
@@ -12814,16 +12679,16 @@
                 }
             }
         ],
+        "tags": [
+            "rc_blocked",
+            "teleport_blocked"
+        ],
         "enabled": true,
         "enmp_index": 18,
         "hp": 100,
         "level": 99,
         "limiter": 0,
         "model": "B_HE030",
-        "tags": [
-            "rc_blocked",
-            "teleport_blocked"
-        ],
         "blacklist_source": [
             "Axel II"
         ],
@@ -12932,15 +12797,15 @@
                 }
             }
         ],
+        "tags": [
+            "rc_blocked",
+            "teleport_blocked"
+        ],
         "enmp_index": 18,
         "hp": 100,
         "level": 99,
         "limiter": 0,
         "model": "B_HE030",
-        "tags": [
-            "rc_blocked",
-            "teleport_blocked"
-        ],
         "blacklist_source": [
             "Axel II"
         ],
@@ -13060,6 +12925,7 @@
         ],
         "enabled": true,
         "tags": [
+            "needs_invuln",
             "roxas",
             "sourcemaxhp",
             "onetooneonly",
@@ -13086,7 +12952,6 @@
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
-            "Hayner",
             "Hercules",
             "Leon",
             "Past Pete",
@@ -13095,10 +12960,8 @@
             "Pete OC II",
             "Sark",
             "Seifer",
-            "Setzer",
             "Tifa",
             "Twilight Thorn",
-            "Vivi",
             "Volcano Lord",
             "Yuffie"
         ],
@@ -13107,7 +12970,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "onetooneonly-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-onetooneonly-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Hayner",
         "variationof": null,
@@ -13137,21 +13000,15 @@
         "available": [
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Sark",
             "Seifer",
-            "Setzer",
-            "Tifa",
-            "Vivi",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Hercules": {
@@ -15833,6 +15690,7 @@
         "type": "boss",
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "variations": [
@@ -15843,7 +15701,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "isnightmare": false,
         "parent": "Leon",
         "variationof": null,
@@ -15884,7 +15742,6 @@
             "MCP",
             "Grim Reaper I",
             "Hades II",
-            "Hayner",
             "Hercules",
             "Jafar",
             "Larxene",
@@ -15894,13 +15751,10 @@
             "Past Pete",
             "Pete TR",
             "Prison Keeper",
-            "Riku",
             "Roxas",
             "Sark",
             "Scar",
-            "Seifer",
             "Sephiroth",
-            "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
             "Terra",
@@ -15909,7 +15763,6 @@
             "Thresholder",
             "Tifa",
             "Twilight Thorn",
-            "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
@@ -15949,6 +15802,7 @@
         "type": "boss",
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "variations": [
@@ -15959,7 +15813,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "isnightmare": false,
         "parent": "Leon",
         "variationof": null,
@@ -16019,6 +15873,7 @@
         "type": "boss",
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "variations": [
@@ -16029,7 +15884,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "isnightmare": false,
         "parent": "Leon",
         "variationof": null,
@@ -16089,6 +15944,7 @@
         "type": "boss",
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "variations": [
@@ -16099,7 +15955,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "isnightmare": false,
         "parent": "Leon",
         "variationof": null,
@@ -21086,7 +20942,8 @@
         "enabled": true,
         "enmp_index": 130,
         "tags": [
-            "solo"
+            "solo",
+            "needs_invuln"
         ],
         "hp": 100,
         "level": 99,
@@ -21104,7 +20961,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "solo",
+        "category": "needs_invuln-solo",
         "isnightmare": false,
         "parent": "Riku",
         "variationof": null,
@@ -21139,9 +20996,7 @@
             "Barbossa",
             "Blizzard Lord",
             "Cerberus",
-            "Cloud",
             "Dark Thorn",
-            "Final Xemnas",
             "MCP",
             "Grim Reaper I",
             "Hades II",
@@ -21149,7 +21004,6 @@
             "Hercules",
             "Jafar",
             "Larxene",
-            "Leon",
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
@@ -21168,14 +21022,12 @@
             "The Beast",
             "The Experiment",
             "Thresholder",
-            "Tifa",
             "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Xigbar",
-            "Yuffie"
+            "Xigbar"
         ]
     },
     "Roxas": {
@@ -21896,6 +21748,7 @@
         "enabled": true,
         "enmp_index": 135,
         "tags": [
+            "needs_invuln",
             "roxas",
             "sourcemaxhp",
             "teleport_blocked"
@@ -21942,7 +21795,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -21972,21 +21825,17 @@
         "available": [
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Sark",
             "Seifer",
             "Setzer",
-            "Tifa",
             "Vivi",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Seifer (1)": {
@@ -22021,6 +21870,7 @@
         "enabled": true,
         "enmp_index": 135,
         "tags": [
+            "needs_invuln",
             "roxas",
             "sourcemaxhp",
             "teleport_blocked"
@@ -22065,7 +21915,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -22123,6 +21973,7 @@
         "enabled": true,
         "enmp_index": 135,
         "tags": [
+            "needs_invuln",
             "roxas",
             "sourcemaxhp",
             "teleport_blocked"
@@ -22166,7 +22017,7 @@
             "Seifer (3)",
             "Seifer (4)"
         ],
-        "category": "roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -22222,6 +22073,7 @@
         "enabled": true,
         "enmp_index": 135,
         "tags": [
+            "needs_invuln",
             "roxas",
             "sourcemaxhp",
             "teleport_blocked"
@@ -22267,7 +22119,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -22323,6 +22175,7 @@
         "enabled": true,
         "enmp_index": 135,
         "tags": [
+            "needs_invuln",
             "roxas",
             "sourcemaxhp",
             "teleport_blocked"
@@ -22368,7 +22221,7 @@
             "Seifer (4)"
         ],
         "source_replace_allowed": true,
-        "category": "roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Seifer",
         "variationof": null,
@@ -22545,6 +22398,7 @@
         "enabled": true,
         "enmp_index": 158,
         "tags": [
+            "needs_invuln",
             "roxas",
             "sourcemaxhp",
             "onetooneonly",
@@ -22570,7 +22424,6 @@
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
-            "Hayner",
             "Hercules",
             "Leon",
             "Past Pete",
@@ -22579,10 +22432,8 @@
             "Pete OC II",
             "Sark",
             "Seifer",
-            "Setzer",
             "Tifa",
             "Twilight Thorn",
-            "Vivi",
             "Volcano Lord",
             "Yuffie"
         ],
@@ -22591,7 +22442,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "onetooneonly-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-onetooneonly-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Setzer",
         "variationof": null,
@@ -22621,21 +22472,15 @@
         "available": [
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
-            "Hayner",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Sark",
             "Seifer",
             "Setzer",
-            "Tifa",
-            "Vivi",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Shadow": {
@@ -24776,6 +24621,7 @@
         },
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "size": 1.32,
@@ -24787,7 +24633,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "isnightmare": false,
         "parent": "Tifa",
         "variationof": null,
@@ -24827,7 +24673,6 @@
             "MCP",
             "Grim Reaper I",
             "Hades II",
-            "Hayner",
             "Hercules",
             "Jafar",
             "Larxene",
@@ -24837,13 +24682,10 @@
             "Past Pete",
             "Pete TR",
             "Prison Keeper",
-            "Riku",
             "Roxas",
             "Sark",
             "Scar",
-            "Seifer",
             "Sephiroth",
-            "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
             "Terra",
@@ -24852,7 +24694,6 @@
             "Thresholder",
             "Tifa",
             "Twilight Thorn",
-            "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
@@ -24891,6 +24732,7 @@
         },
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "size": 1.32,
@@ -24902,7 +24744,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "isnightmare": false,
         "parent": "Tifa",
         "variationof": null,
@@ -24960,6 +24802,7 @@
         },
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "size": 1.32,
@@ -24971,7 +24814,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "isnightmare": false,
         "parent": "Tifa",
         "variationof": null,
@@ -25486,6 +25329,7 @@
             "roxas",
             "sourcemaxhp",
             "onetooneonly",
+            "needs_invuln",
             "teleport_blocked"
         ],
         "hp": 100,
@@ -25511,7 +25355,6 @@
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
-            "Hayner",
             "Hercules",
             "Leon",
             "Past Pete",
@@ -25520,10 +25363,8 @@
             "Pete OC II",
             "Sark",
             "Seifer",
-            "Setzer",
             "Tifa",
             "Twilight Thorn",
-            "Vivi",
             "Volcano Lord",
             "Yuffie"
         ],
@@ -25532,7 +25373,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "onetooneonly-roxas-sourcemaxhp-teleport_blocked",
+        "category": "needs_invuln-onetooneonly-roxas-sourcemaxhp-teleport_blocked",
         "isnightmare": false,
         "parent": "Vivi",
         "variationof": null,
@@ -25561,21 +25402,15 @@
         "available": [
             "Barbossa",
             "Blizzard Lord",
-            "Cloud",
             "Dark Thorn",
             "Grim Reaper I",
             "Hades II",
-            "Hayner",
             "Hercules",
-            "Leon",
             "Past Pete",
             "Sark",
             "Seifer",
-            "Setzer",
-            "Tifa",
             "Vivi",
-            "Volcano Lord",
-            "Yuffie"
+            "Volcano Lord"
         ]
     },
     "Volcano Lord": {
@@ -26199,6 +26034,7 @@
         },
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "size": 0.95,
@@ -26211,7 +26047,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "parent": "Yuffie",
         "variationof": null,
         "children": [
@@ -26251,7 +26087,6 @@
             "MCP",
             "Grim Reaper I",
             "Hades II",
-            "Hayner",
             "Hercules",
             "Jafar",
             "Larxene",
@@ -26261,13 +26096,10 @@
             "Past Pete",
             "Pete TR",
             "Prison Keeper",
-            "Riku",
             "Roxas",
             "Sark",
             "Scar",
-            "Seifer",
             "Sephiroth",
-            "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
             "Terra",
@@ -26276,7 +26108,6 @@
             "Thresholder",
             "Tifa",
             "Twilight Thorn",
-            "Vivi",
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
@@ -26316,6 +26147,7 @@
         },
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "type": "boss",
@@ -26327,7 +26159,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "parent": "Yuffie",
         "variationof": null,
         "children": [],
@@ -26385,6 +26217,7 @@
         },
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "size": 0.95,
@@ -26397,7 +26230,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "parent": "Yuffie",
         "variationof": null,
         "children": [],
@@ -26455,6 +26288,7 @@
         },
         "tags": [
             "cups",
+            "cant_invuln",
             "disablecamera"
         ],
         "size": 0.95,
@@ -26467,7 +26301,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "cups-disablecamera",
+        "category": "cant_invuln-cups-disablecamera",
         "parent": "Yuffie",
         "variationof": null,
         "children": [],
