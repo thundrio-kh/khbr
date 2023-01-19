@@ -1,63 +1,81 @@
 3.0.0
-* Fix for logic issue that would sometimes cause the data version of a boss to be completely unrelated to the story version of the boss
-* Fix crash that was preventing FF bosses from being randomized on PC (the mission complete camera will look different from normal)
-* Updated allowed replacements for reducing known softlocks/crashes
-* Prevent bosses from spawning in Encampment, when bosses as enemies mode is enabled
-* Added an AllocEnemy line to event scripts on PC, which should help prevent crashes due to going out of memory on PC (IE limit form against Lexaeus was a common one)
-* Refactoring of some internals to allow for additional features
-* Final Xemnas now works regardless of if Lua support is being used
-* Struggle bosses have all been reenabled on PC
-* Struggle fights will now prevent the placed boss from dying, so the struggle fight is actually a full struggle
-* The Illuminator will no longer move from the spot where Barbossa spawns it, to prevent issues where it moves to a unreachable location
-* Now generating a custom moveset (thanks to DA) for Sora that will allow Twilight Thorn to work without major AI modifications
-* Jafar has been added into the randomization pool. The Roll UP RC is disabled when Jafar is randomized, due to causing crashes when the carpet is not around
+
+
+New Features
+* Misc bosses option has been added, and contains bosses such as Jafar, MCP, and other bosses that are more like gimmicks than not. In other news, Groundshaker is the only boss that can not be randomized at all. This should currently be treated as an unstable and experimental option
 * Randomize superbosses option has been split into 3 options, for terra, sephiroth, and the datas
-* Cutscene Remover option has been added, with 3 different options (PUT MORE DESCRIPTION HERE)
-* Enabled randomizing the two single dusk fights in STT where the enemy is invulnerable
-* When bosses as enemies is enabled, do not allow more than one boss per spawnpoint, which will hopefully help with stability
-* HT Presents fight is reenabled
-* Riku is now enabled in one to one
-* Axel Data no longer requires performing his RC in order to be killed
-* After gaining a better understanding of the spawn system, nobady_call attack has been reenabled for Armor Xemnas 1, which used to cause crashing on PC
-* Data Demyx has had an AI edit so that the timer for the form minigames is 40 seconds instead of 30 seconds. This should allow Data Demyx to be reasonably beaten by solo Sora
-* Ai mod for Scar to prevent the T-Posing that can occur when Sora is 'caught'
-* Hydra fight has been reenabled on PC and no longer softlocks
-* Bosses are now given an HP floor during the Struggle fights, so that they should not be able to die. There might still be issues with some bosses that normally have an HP floor, such as the Experiment or similar. Please file a bug report if any issues are encountered.
-* Misc bosses option has been added, and contains bosses such as Jafar, MCP, and other bosses that are more like ggimmicks than not. MORE DETAILS In other news, Groundshaker is the only boss that can not be randomized at all. This should currently be treated as an unstable option
-* Revenge Limit Randomizer has been added as an option. This performs an AI edit on every enemy/boss in the game, even if enemy/boss randomizer is off. Note that all enemies have a base revenge limit cap of 100, which is what gets randomized. Some enemies however don't have any code to do anything when the revenge limit is hit, so in those cases no change will be seen. This is an exciting but beta feature, please give feedback on how it works and how it could be improved.
-* An AI edit has been made to prevent the disappearing HP bar and Armor Xemnas 2 has been restored rather than being a copy of Armor Xemnas 1
-* Oogie Boogie has been added into the randomization pool with a completely custom AI. Currently it uses Shadow Roxas AI and is very trivial to beat, this will change as time goes on.
-* The timeless river version of Pete (with the scene changes) has been added into the randomization pool (Pete as a whole is now in the "misc" category)
-* MCP has been added into the randomization pool as a misc boss, and Tron will appear as an extra party member wherever he shows up in order to accomadate the RC
+* There is now a Scale Boss Stats option. Turning it off will have close to the same effect as the Better Boss Scaling mod (however datas/terra will be forced to level 99 still)
+* Added an option to treat Nobodys as a separate type of enemy, depending on the other options enabled this can cause some enemies to randomize very predictably
 * Party member rando has been added. Currently Donald/Goofy are not randomized because the game throws a hissy fit when you have more than one world character in your party at once
 * Costume rando has been added. Pretty simple but it was trivial to add at the same time as Party Member rando
-* There is now a Scale Boss Stats option. Turning it off will have the same effect as the Better Boss Scaling mod
+* Revenge Limit Randomizer has been added as an option. This performs an AI edit on every enemy/boss in the game, even if enemy/boss randomizer is off. Note that all enemies have a base revenge limit cap of 100, which is what gets randomized. Some enemies however don't have any code to do anything when the revenge limit is hit, so in those cases no change will be seen. This is an exciting but beta feature, please give feedback on how it works and how it could be improved.
+* Remove Most Cutscenes option has been added, with 3 different options. Minimal removes all cutscenes that it can without causing any issues. Non-Reward will additionally remove all cutscenes that appear before Missions, however there is a known issue where if you Game Over during a mission, hitting continue will put you right back into that fight (so you are effectively softlocked unless you can beat the fight). Maximum will additionally remove all cutscenes that appear before full screen popup rewards, the downside is that the popups no longer occur (but you do still get the reward, and in my experience the tracker still shows if you got something important). This should be considered beta, and please report any issues you find
+
+
+
+
+
+
+
+Major Improvements
+* Added an AllocEnemy line to event scripts on PC, which should help prevent crashes due to going out of memory on PC (IE limit form against Lexaeus was a common one that should now be fixed). There is a small possibility this will cause crashes in situations that would not crash on the old version, let me know if you think this is the case!
 * An AI mod for Lexaeus, Larxene, and Zexion has been done to prevent teleport attacks sending Sora OOB. These bosses were the easiest to fix due to the removal of a "reset_pos" function that set positions to 0,0,0. Fixes are planned for other bosses with teleport related issues, but will take more time due to the exact teleport coordinates being hardcoded.
+* Added Final Xemnas (and data) into the randomization pool. He will never perform dome or the attack to take sora's heart
+* Fix crash that was preventing FF bosses from being randomized on PC (the mission complete camera will look different from normal)
+* Struggle bosses have all been reenabled on PC
+* Riku is now enabled in one to one
+* Hydra fight has been reenabled on PC and no longer softlocks
+* An AI edit has been made to prevent the disappearing HP bar and Armor Xemnas 2 has been restored rather than being a copy of Armor Xemnas 1
+* Jafar has been added into the randomization pool as a misc boss. The Roll UP RC is disabled when Jafar is randomized, due to causing crashes when the carpet is not around
+* Oogie Boogie has been added into the randomization pool as a misc boss with a completely custom AI. Currently it uses Shadow Roxas AI and is very trivial to beat, expect changes to come.
+* The timeless river version of Pete (with the scene changes) has been added into the randomization pool (Pete as a whole is now in the "misc" category)
+* MCP has been added into the randomization pool as a misc boss, and Tron will appear as an extra party member wherever he shows up in order to accomadate the RC
+* Minute bombs have been added back into the randomization pool after a hopeful fix to prevent softlocks in fights such as the first HT fight. If you still see softlocks related to Minute bombs dying, please let me know
+* Axel Data no longer requires performing his RC in order to be killed
+* The Illuminator will no longer move from the spot where Barbossa spawns it, to prevent issues where it moves to a unreachable location
+* Now generating a custom moveset (thanks to DA) for Sora that will allow Twilight Thorn to work without major AI modifications
+* Fully disable Xemnas I's DM, so Sora's HP is no longer locked into always draining during the fight
+* Struggle fights will now prevent the placed boss from dying, so the struggle fight is actually a full struggle
+* Enabled randomizing the two single dusk fights in STT where the enemy is invulnerable
+* HT Presents fight is reenabled
+* Invincible hades fights have now been added back into the randomization pool (whoever is set to randomize Hades will be the boss in each location, and they should have an HP floor to not die)
+* Moved Spawn locations in Armor Xemnas 1 fight to prevent bosses getting softlocked by landing strangely on the throne
+
+Minor Fixes
+* Fixed Issue where Grim Reaper II in it's vanilla location in Wild mode could result in a softlock
+* When HP is scaled, bosses HP is capped at Terras Base HP, to not cause crashes on using scan against higher HP values
+* Aerial Vikings have been tagged as large enemies because they can cause crashes when replacing shadows
 * Nightmare mode has had a couple adjustments, namely the addition of the Gambler that summons darkness on spawn
+* Fix for logic issue that would sometimes cause the data version of a boss to be completely unrelated to the story version of the boss
+* Updated allowed replacements for reducing known softlocks/crashes (common ones involving Grim Reaper 2 and Demyx)
+* Prevent bosses from spawning in Encampment, when bosses as enemies mode is enabled
+* Refactoring of some internals to allow for additional features
+* After gaining a better understanding of the spawn system, nobady_call attack has been reenabled for Armor Xemnas 1, which used to cause crashing on PC
+* When bosses as enemies is enabled, do not allow more than one boss per spawnpoint, which will hopefully help with stability
+* Data Demyx has had an AI edit so that the timer for the form minigames is 40 seconds instead of 30 seconds. This should allow Data Demyx to be reasonably beaten by solo Sora
+* Ai mod for Scar to prevent the T-Posing that can occur when Sora is 'caught'
 * Various bosses that can cause softlocks as Mickey now don't allow summoning Mickey
 * When collecting medals in Pirates 2, the coins should now properly disappear if not collected before the timer runs out
-* Invincible hades fights have now been added back into the randomization pool (whoever is set to randomize Hades will be the boss in each location, and they should have an HP floor to not die)
-* Minute bombs have been added back into the randomization pool after a hopeful fix to prevent softlocks in fights such as the first HT fight
-* Aerial Vikings have been tagged as large enemies because they can cause crashes when replacing shadows
-* When HP is scaled, bosses HP is capped at Terras Base HP, to not cause crashes on using scan against higher HP values
-
-2.3.0
-* Added an option to enable randomizing Final Xemnas (and data), which requires the newest version of Model Manager to be used (which supports LUA scripts)
-* Added an option to treat Nobodys as a separate type of enemy, depending on the other options enabled this can cause some enemies to randomize very predictably
-* Updated several bosses allowed replacements to reduce the possibility of known softlocks/crashes (common ones involving Barbossa, Grim Reaper 2, Demyx)
 * Remove Scar Ghost from being able to appear as a boss enemy
-* Fixed MSN files getting created without the .bar extension
 * Fixed cases where some bosses were not getting properly changed when a specific boss was selected
 * Prevent any attempt at randomizing Battle of 1K, to prevent crashes
+* Move Spawn location for Groundshaker in front of Sora and to ground level
 * Prevent bosses from spawning in The Ravine or Checkpoint rooms, when bosses as enemies mode is enabled.
-* Fixed Issue where Grim Reaper II in it's vanilla location in Wild mode could result in a softlock
-* Due to an RC Related softlock, Axel Data will never replace Xaldin, it will always be Axel II
 * Due to a crash during DM, if Luxord Data is supposed to replace Luxord, the fight will stay vanilla Luxord
 * Fixed issue where Hydra's MSN was not being properly replaced, causing bosses like Luxord or Demyx to softlock
-* Moved Spawn locations in Armor Xemnas 1 fight to prevent bosses getting softlocked by landing strangely on the throne
-* Move Spawn location for Groundshaker in front of Sora and to ground level
-* Fully disable Xemnas I's DM, so Sora's HP is no longer locked into always draining during the fight
 * Prevent the option for Mickey appearing in STT boss fights, due to Roxas missing animations for summoning mickey causing T-Poses
+
+Known Issues
+* Jumping against Jafar while you are in a form can cause T-Poses due to being able to infinitely jump
+* Bosses replacing Jafar are spawning lower than would be ideal
+* In Party Member rando if Tron is replaced to himself, then the MCP fight will probably have two copies of Tron
+* In Party Member rando, using Simba's limit when you are human Sora will cause a tpose/softlock
+* In Party Member rando, using other party member limits as lion sora can tpose/softlock
+* The Twilight Thorn RC is as fast as it is in the vanilla game, instead of being sped up like the GOA mod intends
+* MCP Health is not halved, as GOA intends
+* I have heard reports of softlocks in the Ambush fight, even though no enemies are randomized there. I cannot reproduce, so if this happens please submit a bug report with the seedstring
+* The Olympus Stone may not work to unlock Drives as the GOA mod intends
+
 
 2.1
 * Redesigned "Wild" enemies to now only put up to 5 different kinds of enemies in any one room (between all spawns in that room), which should make it mostly playable. This number will be reduced if necessary, and Wild is still only possible for PC. Due to the way the randomization is currently implemented, some enemies will be very likely to be vanilla (for example, the Bolt Towers in the first part of the Minnie Escort fight)
