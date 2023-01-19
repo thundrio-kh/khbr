@@ -16,6 +16,7 @@ def pickbossmapping(enemy_records, parent_bossdict):
 
 def pickenemymapping(enemy_records, categorized_enemies, spoilers=None, nightmare=None):
     # Create separate lists for each set of tags used by enemies
+    # Every category needs some enemies, when nightmare is on this can sometimes fail during unit tests after changing categories
     mapping = {}
     for c in categorized_enemies:
         og = list(categorized_enemies[c].values()) # Remove duplicate parent entries

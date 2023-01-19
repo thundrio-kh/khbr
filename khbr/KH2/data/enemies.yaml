@@ -1,5 +1,5 @@
 Bees ETC PO:
-  enabled: true
+  enabled: false
   tags:
   - other
   variationof: Bees TT PO
@@ -14,7 +14,7 @@ Bees ETC PO:
       - 0
       - 3
 Bees TT PO:
-  enabled: true
+  enabled: false
   tags:
   - other
   enmp_index: 999
@@ -161,7 +161,7 @@ Bookmaster (TR):
       - 0
       - 0
 Bulky Vendor:
-  enabled: true
+  enabled: false
   enmp_index: 999
   model: M_EX590
   obj_id: 75
@@ -179,7 +179,7 @@ Bulky Vendor:
       - 0
       - 0
 Bulky Vendor (NM):
-  enabled: true
+  enabled: false
   tags:
   - other
   enmp_index: 999
@@ -1410,7 +1410,7 @@ Barrel:
       - 0
       - 0
 Bees (Disappearing):
-  enabled: true
+  enabled: false
   tags:
   - other
   hp: 100
@@ -3181,7 +3181,7 @@ Jafar:
   msn: AL05_MS203
   program: 62
   size: 1.86
-  room_size: 11.19
+  room_size: 8.19 # Setting down from 11.19 to make Final Xemnas spawn here on PS2, which while untested hopefully works because you lack party members...
   obj_id: 348
   type: boss
   variations:

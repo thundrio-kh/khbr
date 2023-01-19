@@ -120,28 +120,29 @@ class Tests(unittest.TestCase):
 
 
     def test_seedgen_boss_mickey_rule(self):
-        options = {"boss": "One to One", "mickey_rule": "all"}
+        # Selected boss should be one that doesn't disallow mickey
+        options = {"selected_boss": "Past Pete", "mickey_rule": "all"}
         randomization = testutils.generateSeed(options)
         assert randomization["msn_map"]["BB05_MS104B"]["setmickey"] == True # Dark Thorn
         assert randomization["msn_map"]["CA01_MS204"]["setmickey"] == True # GR 2
         assert randomization["msn_map"]["CA18_MS202"]["setmickey"] == True # GR 1
         assert randomization["msn_map"]["TT34_MS304"]["setmickey"] == False # Twilight Thorn, mickey is always off for Roxas
-        options = {"boss": "One to One", "mickey_rule": "none"}
+        options = {"selected_boss": "Past Pete", "mickey_rule": "none"}
         randomization = testutils.generateSeed(options)
         for key, value in randomization["msn_map"].items():
             assert value["setmickey"] == False
-        options = {"boss": "One to One", "mickey_rule": "stay"}
+        options = {"selected_boss": "Past Pete", "mickey_rule": "stay"}
         randomization = testutils.generateSeed(options)
         assert randomization["msn_map"]["BB05_MS104B"]["setmickey"] == True # Dark Thorn
         assert randomization["msn_map"]["CA01_MS204"]["setmickey"] == False # GR 2
         assert randomization["msn_map"]["CA18_MS202"]["setmickey"] == True # GR 1
-        options = {"boss": "One to One", "mickey_rule": "follow"}
+        options = {"selected_boss": "Past Pete", "mickey_rule": "follow"}
         randomization = testutils.generateSeed(options)
         # Technically should still test if the old locations get mickey disabled properly
         # But it requires knowing if the boss thats there would have mickey or not
         for old, new_object in randomization["msn_map"].items():
             if new_object["name"] == "BB05_MS104B":
-                assert new_object["setmickey"] == True     
+                assert new_object["setmickey"] == True
             if new_object["name"] == "CA01_MS204":
                 assert new_object["setmickey"] == False
             if new_object["name"] == "CA18_MS202":
@@ -196,7 +197,6 @@ class Tests(unittest.TestCase):
         print(randomization)
         testutils.validate_bosses_general(randomization)
         assert True == testutils.get_randomized(randomization, "Final Xemnas")
-        assert False == testutils.get_randomized(randomization, "Jafar")
         assert False == testutils.get_found(randomization, tags=["data", "cups"])
 
     def test_seedgen_boss_wild_cups(self):
@@ -312,10 +312,18 @@ class Tests(unittest.TestCase):
         dest["tags"] = ["needs_rc"]
         assert kh2.enemy_manager.isReplacementBlocked(source, dest)
 
+# Unit test cases to write
+# blizzard lord needs to work in gr with ai edit
+# TT msns should not be being placed without enemies
+# gr room should still work for luxord
+# gr room should still work alone (msn mods shouldn't be applied for same boss changes)
+# struggle room should only have the ai mod applied, not a copy msn too
+# test other actually spawns enemies as expected works
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_seedgen_enemy_one_to_one_other()
+ut.test_seedgen_boss_wild_cups()
 
 # Uncomment to run the actual tests
 #unittest.main()
+

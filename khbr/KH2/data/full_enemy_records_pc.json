@@ -5,7 +5,7 @@
             3
         ],
         "name": "Bees ETC PO",
-        "enabled": true,
+        "enabled": false,
         "tags": [
             "other"
         ],
@@ -61,7 +61,7 @@
             0
         ],
         "name": "Bees TT PO",
-        "enabled": true,
+        "enabled": false,
         "tags": [
             "other"
         ],
@@ -687,7 +687,7 @@
             0
         ],
         "name": "Bulky Vendor (Disappears)",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 999,
         "model": "M_EX590",
         "obj_id": 75,
@@ -744,7 +744,7 @@
             0
         ],
         "name": "Bulky Vendor",
-        "enabled": true,
+        "enabled": false,
         "enmp_index": 999,
         "model": "M_EX590",
         "obj_id": 75,
@@ -804,7 +804,7 @@
             0
         ],
         "name": "Bulky Vendor (NM) (Disappears)",
-        "enabled": true,
+        "enabled": false,
         "tags": [
             "other"
         ],
@@ -861,7 +861,7 @@
             0
         ],
         "name": "Bulky Vendor (NM)",
-        "enabled": true,
+        "enabled": false,
         "tags": [
             "other"
         ],
@@ -7588,7 +7588,7 @@
             0
         ],
         "name": "Bees (Disappearing)",
-        "enabled": true,
+        "enabled": false,
         "tags": [
             "other"
         ],
@@ -15411,7 +15411,7 @@
         "msn": "AL05_MS203",
         "program": 62,
         "size": 1.86,
-        "room_size": 11.19,
+        "room_size": 8.19,
         "obj_id": 348,
         "type": "boss",
         "variations": [

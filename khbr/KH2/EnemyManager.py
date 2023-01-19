@@ -20,28 +20,30 @@ class EnemyManager:
             self.enemy_records = json.load(f)
             
     def get_enemies(self, options):
+        #TODO other enemies aren't being disabled properly
         enemies = self.get_valid_enemies()
 
         use_other_enemies = options.get("other_enemies")
+        use_nightmare_enemies = options.get("nightmare_enemies")
 
         enabled_enemies = []
         for e in enemies:
             e_obj = self.enemy_records[e]
-            if not e_obj["enabled"]: 
-                if use_other_enemies and "other" in e_obj["tags"]:
-                    pass
-                elif options.get("nightmare_enemies") and e_obj["isnightmare"]:
-                    pass
-                else:
+
+            if e_obj["enabled"]:
+                if "other" in e_obj["tags"] and not use_other_enemies:
+                    self.enemy_records[e]["enabled"] = False # they should stay vanilla when other is off
                     continue
-            
-            if not (use_other_enemies or options.get("selected_enemy")) and "pirate" in e_obj["tags"]:
+                if use_nightmare_enemies and not e_obj["isnightmare"]:
+                    continue
+
+            if "pirate" in e_obj["tags"] and not (use_other_enemies or "pirate" in options.get("selected_enemy", "").lower()):
                 e_obj["aimods"] = []
         
             enabled_enemies.append(e_obj)
 
-        self.remove_tag(enabled_enemies, "pirate")
-
+        if use_other_enemies:
+            self.remove_tag(enabled_enemies, "pirate")
         return enabled_enemies
 
     @staticmethod
@@ -234,7 +236,7 @@ class EnemyManager:
             if v.get("luamod") and not use_lua_bosses:
                 continue
             bosses[k] = v
-
+        
         # Need to adjust the children and variation and availablelists to not contain bosses which should be excluded
         # have to look at every source boss too so adjusting those sources, not just the ones that are available
         for boss_name in self.enemy_records:

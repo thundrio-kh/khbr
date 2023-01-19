@@ -263,7 +263,7 @@ class SpawnManager:
             new_enemy = pick_enemy_to_replace(old_enemy_object, rand_seed.config.enemies, rand_seed.wild_enemy_set, max_enemies=5)
         elif rand_seed.enemymapping:
             if old_enemy_object["name"] not in rand_seed.enemymapping:
-                return None # if it's not in mapping it's not enabled
+                return old_enemy_object["name"] # if it's not in mapping it's not enabled so randomize it to itself
             new_enemy = rand_seed.enemymapping[old_enemy_object["name"]]
         if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses and not room.get("bossenemy_ignored"):            
             chance = 0.012

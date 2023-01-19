@@ -35,8 +35,9 @@ class KingdomHearts2:
                                 "type": "enemy", "possible_values": [False, True], "hidden_values": []},
             "separate_nobodys": {"display_name": "Randomize Nobodys separately", "description": "Treats nobodys as a separate type of enemy, so they are only randomized among themselves.", 
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": []},
-            "other_enemies": {"display_name": "Randomize misc enemies as Heartless", "description": "Enables and randomizes the following enemies as if they were heartless: Pirates, Bulky Vendors, Bees",
-                                "type": "enemy", "possible_values": [False, True], "hidden_values": []},  
+            # TODO Need to write and validate this functionality with unit tests before releasing it
+            # "other_enemies": {"display_name": "Randomize misc enemies as Heartless", "description": "Enables and randomizes the following enemies as if they were heartless: Pirates, Bulky Vendors, Bees",
+            #                     "type": "enemy", "possible_values": [False, True], "hidden_values": []},  
             "combine_enemy_sizes": {"display_name": "Combine Enemy Sizes (Unstable/PC Only)", "description": "Normally small enemies are randomized separately from big enemies to prevent crashing. On PC it is less likely to crash, so this option is to combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": [], "experimental": True},
             "combine_melee_ranged": {"display_name": "Combine Melee and Ranged enemies (Unstable/PC Only)", "description": "Normally ranged and melee enemies are randomized separate from each other, both for difficulty and to reduce crashing. On PC it is less likely to crash, so this option will combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
@@ -58,7 +59,7 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},       
             "sephiroth": {"display_name": "Randomize Sephiroth", "description": "Include Sephiroth in the boss randomization pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
-            "terra": {"display_name": "Randomize Terra", "description": "Include Terra in the boss randomization pool",
+            "terra": {"display_name": "Randomize Lingering Will", "description": "Include Lingering Will in the boss randomization pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
             # "lua_bosses": {"display_name": "Advanced Boss Replacements (Must setup LuaBackend hook)", "description": "Takes advantage of Lua scripting and other methods to include bosses that are more difficult to randomize (ex: Final Xemnas). Generates a lua script that must be loaded via ModManager.",
             #                     "type": "boss", "possible_values": [False, True], "hidden_values": []},
@@ -222,12 +223,14 @@ class KingdomHearts2:
                         self.location_manager.update_location(spawnpoint, rand_seed.config)
                         if spawnpoint.get("ignored"):
                             continue
-                        created_enemies = []
+                        created_enemies = [] # This is a little weird it's just for location aimods, ideally they would be done at a different level than the spawnpoint level
                         bosses_as_enemies = 0
                         for i, entities in spawnpoint["sp_ids"].items(): # Fun fact: The internal game code refers to these as "unit"s I believe
                             # TODO might be able to make this just for entity in entities
                             for e in range(len(entities)):
                                 entity = entities[e]
+                                created_entity = {}
+                                created_enemies.append(created_entity)
 
                                 if rand_seed.config.bosses and entity["isboss"]:
                                     old_boss_object = self.enemy_manager.enemy_records[entity["name"]]
@@ -268,7 +271,7 @@ class KingdomHearts2:
                                     new_enemy_object = self.enemy_manager.get_new_enemy_object(new_enemy, rand_seed)
                                     if new_enemy_object["type"] == "boss":
                                         bosses_as_enemies += 1
-                                    created_enemies.append(new_enemy_object)
+                                    created_entity.update(new_enemy_object)
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_enemy_object)
                                     rand_seed.update_seed(old_enemy_object, new_enemy_object, w, r, sp, i)
             
@@ -285,6 +288,8 @@ class KingdomHearts2:
                                         index = int(varargs[1])
                                         argument = varargs[2]
                                         enemy = created_enemies[index]
+                                        if not enemy:
+                                            continue # Likely means it's vanilla
                                         aimod["vars"][var] = enemy[argument]
                             
                             if createmod:
