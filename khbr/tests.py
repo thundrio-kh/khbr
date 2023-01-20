@@ -322,6 +322,7 @@ class Tests(unittest.TestCase):
 # test behavior mods are working properly
 # verify ai_mods get filled out right for all kinds of ai mods
 # add ability to pass in specific boss/enemy mappings, and use those to test things like vanilla gr2 working
+# unit test about ambush program not being changed
 
 # Uncomment to run a single test through ipython
 ut = Tests()

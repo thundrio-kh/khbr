@@ -450,7 +450,7 @@ class AssetGenerator:
                 if (not script.ispc) and (not mission):
                     # It's not a big deal if enemies fail to spawn properly in areas where you don't have a mission going on
                     continue 
-                if mission == "\"MU02_MS103B\"":
+                if mission == "MU02_MS103B":
                     continue # Ambush has some serious issues related to cost
                 prg.update_capacity(HARDCAP)
             if self.ispc:
