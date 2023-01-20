@@ -36,7 +36,8 @@ class EnemyManager:
                     continue
                 if use_nightmare_enemies and not e_obj["isnightmare"]:
                     continue
-
+            else:
+                continue
             # if "pirate" in e_obj["tags"] and not (use_other_enemies or "pirate" in options.get("selected_enemy", "").lower()):
             #     e_obj["aimods"] = []
         
@@ -44,6 +45,7 @@ class EnemyManager:
 
         if use_other_enemies:
             self.remove_tag(enabled_enemies, "pirate")
+
         return enabled_enemies
 
     @staticmethod

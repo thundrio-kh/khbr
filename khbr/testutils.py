@@ -263,7 +263,7 @@ def validate_scale_map(randomization):
                             new_boss_spawns = randomization["spawns"].get(w, {}).get(r, {}).get("spawnpoints", {}).get(spn, {}).get("sp_ids", {}).get(spid, [])
                             new_boss = _find_index(new_boss_spawns, ent["index"])
                             if new_boss:
-                                if new_boss["name"] in ["Hades Cups", "Armor Xemnas I", "Pete Cups", "Shadow Roxas"]:
+                                if new_boss["name"] in ["Hades Cups", "Armor Xemnas I", "Pete Cups", "Shadow Roxas", "Grim Reaper II"]:
                                     continue # These bosses don't get scaled properly for mostly replaceas reasons
                                 # maybe something strange here that needs to be looked at again to ensure scaling done right
                                 scaled_og = randomization["scale_map"][new_boss["name"]]
