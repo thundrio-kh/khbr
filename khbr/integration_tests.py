@@ -1,4 +1,4 @@
-import unittest, os, functools, sys, traceback, pdb
+import unittest, os, functools, sys, traceback, pdb, yaml
 from khbr.randomizer import Randomizer, KingdomHearts2
 from khbr.KH2.ModWriter import ModWriter
 from khbr.randutils import pickbossmapping
@@ -62,25 +62,25 @@ class Tests(unittest.TestCase):
         randomization = testutils.generateSeed(options)
         testutils.validate_enemies_general(randomization)
 
-    # def test_seedgen_enemy_one_to_one_other(self):
-    #     options = {"enemy": "One to One", "other_enemies": False}
-    #     randomization = testutils.generateSeed(options)
-    #     testutils.validate_enemies_general(randomization)
+    def test_seedgen_enemy_one_to_one_other(self):
+        options = {"enemy": "One to One", "other_enemies": False}
+        randomization = testutils.generateSeed(options)
+        testutils.validate_enemies_general(randomization)
 
-    #     for ai_mod in randomization["ai_mods"]:
-    #         if ai_mod.startswith("Undead Pirate"):
-    #             raise Exception("Undead Pirate aimod should not be included")
+        for ai_mod in randomization["ai_mods"]:
+            if ai_mod.startswith("Undead Pirate"):
+                raise Exception("Undead Pirate aimod should not be included")
 
-    #     options = {"enemy": "One to One", "other_enemies": True}
-    #     randomization = testutils.generateSeed(options)
-    #     testutils.validate_enemies_general(randomization)
+        options = {"enemy": "One to One", "other_enemies": True}
+        randomization = testutils.generateSeed(options)
+        testutils.validate_enemies_general(randomization)
         
-    #     found_undead_pirate = False
-    #     for ai_mod in randomization["ai_mods"]:
-    #         if ai_mod.startswith("Undead Pirate"):
-    #             found_undead_pirate = True
-    #     if not found_undead_pirate:
-    #         raise Exception("Should have found Undead Pirate aimod")
+        found_undead_pirate = False
+        for ai_mod in randomization["ai_mods"]:
+            if ai_mod.startswith("Undead Pirate"):
+                found_undead_pirate = True
+        if not found_undead_pirate:
+            raise Exception("Should have found Undead Pirate aimod")
 
     def test_seedgen_enemy_one_to_one_pc(self):
         options = {"enemy": "One to One"}
@@ -117,7 +117,6 @@ class Tests(unittest.TestCase):
         randomization = testutils.generateSeed(options)
         print("Selected Boss")
         testutils.validate_selected(randomization, "Xemnas", isboss=True)
-
 
     def test_seedgen_boss_mickey_rule(self):
         # Selected boss should be one that doesn't disallow mickey
@@ -312,23 +311,151 @@ class Tests(unittest.TestCase):
         dest["tags"] = ["needs_rc"]
         assert kh2.enemy_manager.isReplacementBlocked(source, dest)
 
+    def test_wild_dont_randomize_demyxoc(self):
+        options = {"boss": "Wild"}
+        randomization = testutils.generateSeed(options)
+        assert not testutils.get_randomized(randomization, "Demyx OC")
+
+    def test_vexen_msn_replaced_for_riku(self):
+        options = {"selected_boss": "Riku"}
+        randomization = testutils.generateSeed(options)
+        assert randomization["msn_map"]["HB32_FM_VEX"]["name"] == "WI03_MS104"
+
+    def test_proper_ai_edit_to_setzer(self):
+        # [broken_seed, working_seed]
+        for seed in ["73724", "60025"]:
+            options ={'remove_damage_cap': False, 'cups_give_xp': True, 'retry_data_final_xemnas': True, 'retry_dark_thorn': False, 'remove_cutscenes': 'Disabled', 'party_member_rando': False, 'costume_rando': False, 'revenge_limit_rando': 'Vanilla', 'boss': 'One to One', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': True, 'data_bosses': False, 'gimmick_bosses': False, 'sephiroth': False, 'terra': False, 'mickey_rule': 'follow', 'scale_boss_stats': False, 'enemy': 'One to One', 'nightmare_enemies': False, 'separate_nobodys': False, 'combine_enemy_sizes': False, 'combine_melee_ranged': False, 'memory_expansion': True}
+            tmppath = testutils.get_tmp_path()
+            modpath = os.path.join(tmppath, "setzertest")
+            if os.path.exists(modpath):
+                shutil.rmtree(modpath)
+            rando = Randomizer(tempdir=tmppath, tempfn="setzertest", deletetmp=False)
+            b64 = rando.generate_seed("kh2", seed=seed, options=options)
+            assert os.path.exists(modpath)
+            filepath = os.path.join(modpath, "files", "ai", "TT05_MS405_ms_s.bdscript")
+            replacementfilepath = os.path.join(modpath, "files", "ard", "tt05", "b_44.yml")
+            assert os.path.exists(filepath)
+            assert os.path.exists(replacementfilepath)
+            tt05ard = yaml.load(open(replacementfilepath))
+            repid = tt05ard[0]["Entities"][3]["ObjectId"]
+            bdscript = open(filepath).read().split("\n")
+            assert bdscript[118] == " pushImm {}".format(repid), "{} != {}".format(bdscript[118], repid)
+
+
+
+    def test_dont_replace_enemy_msns_for_boss(self):
+        # TT msns should not be getting placed without enemies
+        options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "terra": True, "sephiroth": True}
+        randomization = testutils.generateSeed(options)
+        pass
+
+    def test_gr_room_uses_luxord_msn_when_replaced(self):
+        # gr room should still work for luxord
+        pass
+
+    def test_gr_2_vanilla_works_one_to_one(self):
+        # gr 2 when vanilla has no customizations applied
+        pass
+
+    def test_gr_2_vanilla_works_wild(self):
+        # gr 2 has the right mods applied to work when vanilla and elsewhere
+        pass
+
+    def test_gr_2_blizzard_lord_own_msn(self):
+        # gr 2 when blizzard lord replaces should not be using gr2 msn
+        pass
+
+    def test_dont_copy_msn_when_ai_mod(self):
+        # test on a struggle room, and an enemy room
+        pass
+
+    def test_no_change_ambush(self):
+        # Ambush is fucked, it should not get changed ever and the area data program should be untouched too
+        pass
+
+
+
+    # Testing enemies.yaml stuff, probably in it's own file
+
+    def test_behavior_mods(self):
+        # test behavior mods are working properly
+        pass
+
+    def test_aimods(self):
+        # Test ai_mods is getting filled out right for all kinds of ai mods
+        # requires a rewrite first to know how they should look
+        pass
+
+    def test_unknown_variable_fails(self):
+        pass
+
+    def test_replace_as(self):
+        pass
+
+    def test_source_replace_allowed(self):
+        pass
+
+    def test_msn_replace_allowed(self):
+        pass
+
+    def test_tags(self):
+        # test all of the different kinds of tags I look at eg organization roxas etc
+        pass
+
+    def test_category(self):
+        pass
+        
+    def test_isnightmare(self):
+        pass
+
+    def test_child_inherits_parent(self):
+        pass
+
+    def test_child_overwrites_parent(self):
+        pass
+
+    def test_variationof_inherits_parent(self):
+        pass # including variationof childs
+
+    def test_variationof_overwrites_parent(self):
+        pass # including variationof childs
+
+    def test_msn_required(self):
+        pass
+
+    def test_msn_source_as(self):
+        pass
+
+    def test_cmdmods(self):
+        pass
+
+    def test_mickey_source(self):
+        pass
+
+    def test_sizetag(self):
+        pass
+
+    def test_roommaxsize_roomsize_roomsizemultiplier(self):
+        pass
+
+    def test_blacklist_whitelist(self):
+        pass # test source/destination for both and when both are used
+
+
+    # Still need to write some good tests for the second half of the generation, and then run coverage to check that everything is covered
+    
+
 # Unit test cases to write
-# blizzard lord needs to work in gr with ai edit
-# TT msns should not be being placed without enemies
-# gr room should still work for luxord
-# gr room should still work alone (msn mods shouldn't be applied for same boss changes)
-# struggle room should only have the ai mod applied, not a copy msn too
-# test other actually spawns enemies as expected works
-# test behavior mods are working properly
-# verify ai_mods get filled out right for all kinds of ai mods
-# add ability to pass in specific boss/enemy mappings, and use those to test things like vanilla gr2 working
-# unit test about ambush program not being changed
+
+# And coverage
 
 # Uncomment to run a single test through ipython
 ut = Tests()
 #ut.test_seedgen_proderror1()
 #ut.test_seedgen_boss_one_to_one_scaled()
-ut.test_seedgen_enemy_one_to_one_room_nightmare()
+#ut.()
+#ut.test_vexen_msn_replaced_for_riku()
+ut.test_proper_ai_edit_to_setzer()
 
 # Uncomment to run the actual tests
 #unittest.main()

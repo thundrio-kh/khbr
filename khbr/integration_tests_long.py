@@ -59,6 +59,7 @@ class Tests(unittest.TestCase):
         testutils.calculate_luxord_replacement_variety(randomizations, 0.4, pc=True)
         testutils.check_for_hyena_replacement(randomizations)
 
+# need to add tests for can be enemy and can be enemy override
 
 # Uncomment to run a single test through ipython
 ut = Tests()
