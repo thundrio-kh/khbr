@@ -5,7 +5,10 @@
             3
         ],
         "name": "Bees ETC PO",
-        "enabled": false,
+        "enabled": true,
+        "tags": [
+            "other"
+        ],
         "variationof": "Bees TT PO",
         "enmp_index": 999,
         "model": "F_PO090_ETC",
@@ -18,8 +21,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
         "parent": "Bees TT PO",
@@ -59,7 +61,10 @@
             0
         ],
         "name": "Bees TT PO",
-        "enabled": false,
+        "enabled": true,
+        "tags": [
+            "other"
+        ],
         "enmp_index": 999,
         "model": "F_PO090_TT",
         "obj_id": 2138,
@@ -71,8 +76,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
         "parent": "Bees TT PO",
@@ -683,11 +687,14 @@
             0
         ],
         "name": "Bulky Vendor (Disappears)",
-        "enabled": false,
+        "enabled": true,
         "enmp_index": 999,
         "model": "M_EX590",
         "obj_id": 75,
         "size": 0,
+        "tags": [
+            "other"
+        ],
         "type": "enemy",
         "variations": [
             "Bulky Vendor (Disappears)",
@@ -696,8 +703,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
         "parent": "Bulky Vendor",
@@ -738,11 +744,14 @@
             0
         ],
         "name": "Bulky Vendor",
-        "enabled": false,
+        "enabled": true,
         "enmp_index": 999,
         "model": "M_EX590",
         "obj_id": 75,
         "size": 0,
+        "tags": [
+            "other"
+        ],
         "type": "enemy",
         "variations": [
             "Bulky Vendor (Disappears)",
@@ -751,8 +760,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
         "parent": "Bulky Vendor",
@@ -796,7 +804,10 @@
             0
         ],
         "name": "Bulky Vendor (NM) (Disappears)",
-        "enabled": false,
+        "enabled": true,
+        "tags": [
+            "other"
+        ],
         "enmp_index": 999,
         "model": "M_EX590_NM",
         "obj_id": 2509,
@@ -810,8 +821,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
         "parent": "Bulky Vendor",
@@ -851,7 +861,10 @@
             0
         ],
         "name": "Bulky Vendor (NM)",
-        "enabled": false,
+        "enabled": true,
+        "tags": [
+            "other"
+        ],
         "enmp_index": 999,
         "model": "M_EX590_NM",
         "obj_id": 2509,
@@ -865,8 +878,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "level": 0,
         "isnightmare": false,
         "parent": "Bulky Vendor",
@@ -4066,6 +4078,12 @@
             0
         ],
         "name": "Undead Pirate A",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4101,7 +4119,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4132,6 +4149,12 @@
             0
         ],
         "name": "Undead Pirate A (Jumps up)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4165,7 +4188,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4196,6 +4218,12 @@
             0
         ],
         "name": "Undead Pirate A (Jumps Forward)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4229,7 +4257,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4260,6 +4287,12 @@
             0
         ],
         "name": "Undead Pirate A (90 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4293,7 +4326,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4324,6 +4356,12 @@
             0
         ],
         "name": "Undead Pirate A (93 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4357,7 +4395,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4388,6 +4425,12 @@
             0
         ],
         "name": "Undead Pirate A (22 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4421,7 +4464,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4452,6 +4494,12 @@
             0
         ],
         "name": "Undead Pirate A (24 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4485,7 +4533,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4516,6 +4563,12 @@
             0
         ],
         "name": "Undead Pirate A (20 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4549,7 +4602,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4580,6 +4632,12 @@
             0
         ],
         "name": "Undead Pirate A (91 0)",
+        "aimods": [
+            {
+                "name": "B_CA020/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA020",
@@ -4613,7 +4671,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4644,6 +4701,12 @@
             0
         ],
         "name": "Undead Pirate B",
+        "aimods": [
+            {
+                "name": "B_CA030/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "isnightmare": true,
@@ -4674,7 +4737,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4705,6 +4767,12 @@
             0
         ],
         "name": "Undead Pirate B (90 0)",
+        "aimods": [
+            {
+                "name": "B_CA030/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "isnightmare": true,
@@ -4733,7 +4801,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4764,6 +4831,12 @@
             0
         ],
         "name": "Undead Pirate B (93 0)",
+        "aimods": [
+            {
+                "name": "B_CA030/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "isnightmare": true,
@@ -4792,7 +4865,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4823,6 +4895,12 @@
             0
         ],
         "name": "Undead Pirate B (92 0)",
+        "aimods": [
+            {
+                "name": "B_CA030/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "isnightmare": true,
@@ -4851,7 +4929,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4882,6 +4959,12 @@
             0
         ],
         "name": "Undead Pirate C",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -4922,7 +5005,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -4953,6 +5035,12 @@
             0
         ],
         "name": "Undead Pirate C (Jumps Down)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -4991,7 +5079,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5022,6 +5109,12 @@
             0
         ],
         "name": "Undead Pirate C (28 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5060,7 +5153,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5091,6 +5183,12 @@
             0
         ],
         "name": "Undead Pirate C (91 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5129,7 +5227,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5160,6 +5257,12 @@
             0
         ],
         "name": "Undead Pirate C (Jumps Up)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5198,7 +5301,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5229,6 +5331,12 @@
             0
         ],
         "name": "Undead Pirate C (90 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5267,7 +5375,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5298,6 +5405,12 @@
             0
         ],
         "name": "Undead Pirate C (13 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5336,7 +5449,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5367,6 +5479,12 @@
             0
         ],
         "name": "Undead Pirate C (92 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5405,7 +5523,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5436,6 +5553,12 @@
             0
         ],
         "name": "Undead Pirate C (93 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5474,7 +5597,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5505,6 +5627,12 @@
             0
         ],
         "name": "Undead Pirate C (12 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5543,7 +5671,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5574,6 +5701,12 @@
             0
         ],
         "name": "Undead Pirate C (6 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5612,7 +5745,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5643,6 +5775,12 @@
             0
         ],
         "name": "Undead Pirate C (2 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5681,7 +5819,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5712,6 +5849,12 @@
             0
         ],
         "name": "Undead Pirate C (8 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5750,7 +5893,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -5781,6 +5923,12 @@
             0
         ],
         "name": "Undead Pirate C (26 0)",
+        "aimods": [
+            {
+                "name": "B_CA040/b_ca.bdscript",
+                "type": "obj"
+            }
+        ],
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5819,7 +5967,6 @@
         "limiter": 1,
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -7383,7 +7530,10 @@
             0
         ],
         "name": "Bees (Disappearing)",
-        "enabled": false,
+        "enabled": true,
+        "tags": [
+            "other"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 12,
@@ -7398,8 +7548,7 @@
         ],
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "other",
         "isnightmare": false,
         "parent": "Bees TT PO",
         "children": [],
@@ -9905,6 +10054,7 @@
         ],
         "name": "Demyx OC",
         "enabled": false,
+        "source_replace_allowed": false,
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -9922,7 +10072,6 @@
             "Demyx OC"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "category": "teleport_blocked",
         "isnightmare": false,
@@ -9956,48 +10105,7 @@
         "luamod": null,
         "roomData": {},
         "available": [
-            "Armor Xemnas I",
-            "Armor Xemnas II",
-            "Barbossa",
-            "Blizzard Lord",
-            "Cerberus",
-            "Cloud",
-            "Dark Thorn",
-            "Demyx",
-            "Demyx OC",
-            "MCP",
-            "Grim Reaper I",
-            "Hades II",
-            "Hayner",
-            "Hercules",
-            "Hostile Program",
-            "Jafar",
-            "Leon",
-            "Lexaeus",
-            "Marluxia",
-            "Oogie Boogie",
-            "Past Pete",
-            "Prison Keeper",
-            "Riku",
-            "Saix",
-            "Sark",
-            "Scar",
-            "Seifer",
-            "Sephiroth",
-            "Setzer",
-            "Shadow Stalker",
-            "Shan-Yu",
-            "Terra",
-            "The Beast",
-            "The Experiment",
-            "Thresholder",
-            "Tifa",
-            "Vivi",
-            "Volcano Lord",
-            "Xaldin",
-            "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Demyx OC"
         ]
     },
     "Demyx's Water Clone": {

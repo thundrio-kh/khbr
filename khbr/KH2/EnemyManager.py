@@ -24,7 +24,6 @@ class EnemyManager:
         enemies = self.get_valid_enemies()
 
         use_other_enemies = options.get("other_enemies")
-        use_nightmare_enemies = options.get("nightmare_enemies")
 
         enabled_enemies = []
         for e in enemies:
@@ -34,17 +33,12 @@ class EnemyManager:
                 if "other" in e_obj["tags"] and not use_other_enemies:
                     self.enemy_records[e]["enabled"] = False # they should stay vanilla when other is off
                     continue
-                if use_nightmare_enemies and not e_obj["isnightmare"]:
-                    continue
             else:
                 continue
-            # if "pirate" in e_obj["tags"] and not (use_other_enemies or "pirate" in options.get("selected_enemy", "").lower()):
-            #     e_obj["aimods"] = []
+            if "pirate" in e_obj["tags"] and not (use_other_enemies or "pirate" in options.get("selected_enemy", "").lower()):
+                e_obj["aimods"] = []
         
             enabled_enemies.append(e_obj)
-
-        if use_other_enemies:
-            self.remove_tag(enabled_enemies, "pirate")
 
         return enabled_enemies
 
@@ -318,7 +312,7 @@ class EnemyManager:
         return '-'.join(categories)
 
 
-    def categorize_enemies(self, included_enemylist, combine_sizes=False, combine_ranged=False, separate_nobodys=True, ispc=False):
+    def categorize_enemies(self, included_enemylist, combine_sizes=False, combine_ranged=False, separate_nobodys=True, other_enemies=False, ispc=False):
         if not self.enemy_records:
             self.set_enemies(ispc)
         categories = {}
@@ -332,6 +326,9 @@ class EnemyManager:
                 category_name = self._remove_category(category_name, "large")
             if combine_ranged:
                 category_name = self._remove_category(category_name, "ranged")
+            if other_enemies:
+                category_name = self._remove_category(category_name, "other")
+                category_name = self._remove_category(category_name, "pirate")
             if category_name not in categories:
                 categories[category_name] = {}
             categories[category_name][parent["name"]] = parent

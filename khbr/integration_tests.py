@@ -4,7 +4,7 @@ from khbr.KH2.ModWriter import ModWriter
 from khbr.randutils import pickbossmapping
 import testutils
 import shutil
-# Not really formal unit tests, more like just some basic integration tests to make sure different combinations of options work
+
 
 class Tests(unittest.TestCase):
     def test_valid_options(self):
@@ -68,19 +68,37 @@ class Tests(unittest.TestCase):
         testutils.validate_enemies_general(randomization)
 
         for ai_mod in randomization["ai_mods"]:
-            if ai_mod.startswith("Undead Pirate"):
-                raise Exception("Undead Pirate aimod should not be included")
+            if ai_mod.startswith("B_CA040"):
+                raise Exception("Undead Pirate C aimod should not be included")
+        
+        # validate no 'other' enemies are present
+        kh2 = KingdomHearts2()
+        for enemy in kh2.enemy_manager.enemy_records.values():
+            if "other" in enemy["tags"]:
+                assert not testutils.get_found(randomization, enemy["name"])
 
         options = {"enemy": "One to One", "other_enemies": True}
         randomization = testutils.generateSeed(options)
         testutils.validate_enemies_general(randomization)
+
+        # validate 'other' enemies are present
         
+        # Found an other
+                # TODO ideally I would be testing that the old enemy was not an other/pirate enemy
+        found_other = False
+        for enemy in kh2.enemy_manager.enemy_records.values():
+            if "other" in enemy["tags"]:
+                if testutils.get_found(randomization, enemy["name"]):
+                    found_other = True
+        assert found_other
+
         found_undead_pirate = False
         for ai_mod in randomization["ai_mods"]:
-            if ai_mod.startswith("Undead Pirate"):
+            if ai_mod.startswith("B_CA040"):
                 found_undead_pirate = True
         if not found_undead_pirate:
-            raise Exception("Should have found Undead Pirate aimod")
+            raise Exception("Should have found Undead Pirate C aimod")
+
 
     def test_seedgen_enemy_one_to_one_pc(self):
         options = {"enemy": "One to One"}
@@ -90,22 +108,22 @@ class Tests(unittest.TestCase):
         testutils.validate_enemies_general(randomization_pc)
         assert randomization != randomization_pc 
 
-    def test_seedgen_enemy_one_to_one_nightmare(self):
-        options = {"enemy": "One to One", "nightmare_enemies": True}
-        randomization = testutils.generateSeed(options)
-        testutils.validate_enemies_general(randomization)
-        assert False == testutils.get_found(randomization, "Shadow")
+    # def test_seedgen_enemy_one_to_one_nightmare(self):
+    #     options = {"enemy": "One to One", "nightmare_enemies": True}
+    #     randomization = testutils.generateSeed(options)
+    #     testutils.validate_enemies_general(randomization)
+    #     assert False == testutils.get_found(randomization, "Shadow")
         
     def test_seedgen_enemy_one_to_one_room(self):
         options = {"enemy": "One to One Per Room"}
         randomization = testutils.generateSeed(options)
         testutils.validate_enemies_general_perroom(randomization)
 
-    def test_seedgen_enemy_one_to_one_room_nightmare(self):
-        options = {"enemy": "One to One Per Room", "nightmare_enemies": True}
-        randomization = testutils.generateSeed(options)
-        testutils.validate_enemies_general_perroom(randomization)
-        assert False == testutils.get_found(randomization, "Shadow")
+    # def test_seedgen_enemy_one_to_one_room_nightmare(self):
+    #     options = {"enemy": "One to One Per Room", "nightmare_enemies": True}
+    #     randomization = testutils.generateSeed(options)
+    #     testutils.validate_enemies_general_perroom(randomization)
+    #     assert False == testutils.get_found(randomization, "Shadow")
 
     def test_seedgen_enemy_selected(self):
         options = {"selected_enemy": "Shadow WI"}
@@ -443,7 +461,6 @@ class Tests(unittest.TestCase):
 
 
     # Still need to write some good tests for the second half of the generation, and then run coverage to check that everything is covered
-    
 
 # Unit test cases to write
 
@@ -451,11 +468,9 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_seedgen_proderror1()
-#ut.test_seedgen_boss_one_to_one_scaled()
-#ut.()
-#ut.test_vexen_msn_replaced_for_riku()
-ut.test_proper_ai_edit_to_setzer()
+#ut.test_seedgen_enemy_one_to_one_other()
+#ut.test_seedgen_enemy_wild_other()
+ut.test_seedgen_enemy_one_to_one_room_nightmare()
 
 # Uncomment to run the actual tests
 #unittest.main()

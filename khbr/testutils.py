@@ -3,6 +3,50 @@ import unittest, os, functools, sys, traceback, pdb
 from randomizer import Randomizer, KingdomHearts2
 import testutils
 import shutil, yaml, json
+from khbr.KH2.schemas.random_config import RandomConfig
+
+
+def get_random_config(
+        memory_expansion=False,
+        utility_mods=[],
+        scale_boss=False,
+        enemymode="Disabled",
+        enemies={},
+        combine_enemy_sizes=False,
+        combine_melee_ranged=False,
+        separate_nobodys=False,
+        nightmare_enemies=False,
+        bossmode="Disabled",
+        nightmare_bosses=False,
+        duplicate_bosses=False,
+        boss_as_enemy_overrides=[],
+        bosses_replace_enemies=False,
+        other_enemies=False,
+        bosses={},
+        mickey_rule="always"):
+    return RandomConfig(
+            memory_expansion = memory_expansion,
+            utility_mods = utility_mods,
+            scale_boss = scale_boss,
+
+            enemymode = enemymode,
+            enemies = enemies,
+            combine_enemy_sizes = combine_enemy_sizes,
+            combine_melee_ranged = combine_melee_ranged,
+            separate_nobodys = separate_nobodys,
+            nightmare_enemies = nightmare_enemies,
+            other_enemies=other_enemies,
+
+            bossmode = bossmode,
+            nightmare_bosses = nightmare_bosses,
+            duplicate_bosses = duplicate_bosses,
+            
+            boss_as_enemy_overrides = boss_as_enemy_overrides,
+            bosses = bosses,
+            bosses_replace_enemies = bosses_replace_enemies,
+
+            mickey_rule = mickey_rule
+        )
 
 def get_boss_list(requireSourceReplace=True, pc=False):
     # Get a list of bosses that the enemies.yaml says is available

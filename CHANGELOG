@@ -1,3 +1,8 @@
+3.0.1
+* Bullet proofed the AI mod logic to fix common 3.0 crashes such as STT struggle fights
+* Added other_enemies as an option, which enabled bulky vendors, bees, and pirates all to be randomized in the "heartless" pool
+* Fix for nightmare_enemies, now it should work as intended
+
 3.0.0
 
 New Features

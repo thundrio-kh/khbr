@@ -36,8 +36,8 @@ class KingdomHearts2:
             "separate_nobodys": {"display_name": "Randomize Nobodys separately", "description": "Treats nobodys as a separate type of enemy, so they are only randomized among themselves.", 
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": []},
             # TODO Need to write and validate this functionality with unit tests before releasing it
-            # "other_enemies": {"display_name": "Randomize misc enemies as Heartless", "description": "Enables and randomizes the following enemies as if they were heartless: Pirates, Bulky Vendors, Bees",
-            #                     "type": "enemy", "possible_values": [False, True], "hidden_values": []},  
+            "other_enemies": {"display_name": "Randomize misc enemies as Heartless", "description": "Enables and randomizes the following enemies as if they were heartless: Pirates, Bulky Vendors, Bees",
+                                "type": "enemy", "possible_values": [False, True], "hidden_values": []},  
             "combine_enemy_sizes": {"display_name": "Combine Enemy Sizes (Unstable/PC Only)", "description": "Normally small enemies are randomized separately from big enemies to prevent crashing. On PC it is less likely to crash, so this option is to combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": [], "experimental": True},
             "combine_melee_ranged": {"display_name": "Combine Melee and Ranged enemies (Unstable/PC Only)", "description": "Normally ranged and melee enemies are randomized separate from each other, both for difficulty and to reduce crashing. On PC it is less likely to crash, so this option will combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
@@ -143,6 +143,7 @@ class KingdomHearts2:
             combine_enemy_sizes = options.get("combine_enemy_sizes"),
             combine_melee_ranged = options.get("combine_melee_ranged"),
             separate_nobodys = options.get("separate_nobodys"),
+            other_enemies = options.get("other_enemies"),
             nightmare_enemies = options.get("nightmare_enemies"),
 
             bossmode = bossmode,
@@ -152,7 +153,6 @@ class KingdomHearts2:
             boss_as_enemy_overrides = self.enemy_manager.get_boss_as_enemy_list() if options.get("bosses_replace_enemies") else [],
             bosses = self.enemy_manager.get_boss_list(options) if bossmode != 'Disabled' else {},
             bosses_replace_enemies = options.get("bosses_replace_enemies"),
-
 
             mickey_rule = options.get("mickey_rule")
         )
@@ -205,8 +205,12 @@ class KingdomHearts2:
     def create_seed(self, rand_seed: EnemySeed):
             rand_seed.bossmapping = pickbossmapping(self.enemy_manager.enemy_records, rand_seed.config.bosses) if not rand_seed.config.duplicate_bosses else None
             if rand_seed.config.enemies and rand_seed.config.enemymode != "Selected Enemy":
-                categorized_enemies = self.enemy_manager.categorize_enemies(rand_seed.config.enemies, combine_sizes=rand_seed.config.combine_enemy_sizes, combine_ranged=rand_seed.config.combine_melee_ranged, separate_nobodys=rand_seed.config.separate_nobodys, ispc=rand_seed.config.memory_expansion)
+                categorized_enemies = self.enemy_manager.categorize_enemies(rand_seed.config.enemies, combine_sizes=rand_seed.config.combine_enemy_sizes, combine_ranged=rand_seed.config.combine_melee_ranged, separate_nobodys=rand_seed.config.separate_nobodys, other_enemies=rand_seed.config.other_enemies, ispc=rand_seed.config.memory_expansion)
                 rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemy"], nightmare=rand_seed.config.nightmare_enemies)
+
+                # Debug print out the enemy mapping
+                for enemy in rand_seed.enemymapping:
+                    print(enemy+"->"+rand_seed.enemymapping[enemy])
             
             self.location_manager.set_locations()
             spawns = self.location_manager.locations
