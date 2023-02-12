@@ -1374,6 +1374,8 @@ Barbossa:
     aimods:
     - name: B_CA000/b_ca.bdscript
       type: obj
+  tags:
+  - needs_teleport
   enabled: true
   enmp_index: 0x63
   hp: 100
@@ -1888,6 +1890,7 @@ Final Xemnas (Data):
   - data
   - organization
   - solo
+  - needs_teleport # Mostly just the data version that gets softlocked due to needing teleport
   enabled: true
   aimods: 
   - name: B_EX170_LAST_LV99/b_ex.bdscript
@@ -2460,6 +2463,7 @@ MCP:
   enabled: true
   tags:
   - gimmick
+  - needs_teleport
   enmp_index: 0x8d
   hp: 100
   level: 99
@@ -3564,6 +3568,7 @@ Marluxia:
   tags:
   - organization
   - broken_mickey
+  - needs_teleport
   enabled: true
   enmp_index: 0xD7
   hp: 100
@@ -4747,6 +4752,7 @@ Shadow Stalker:
   - teleport_blocked
   - needs_rc
   - gimmick
+  - neesd_teleport
   hp: 100
   level: 99
   limiter: 0
@@ -5255,6 +5261,8 @@ The Experiment:
   size: 1.82
   room_size: 11.7
   program: 64
+  tags:
+  - needs_teleport
   blacklist_destination:
   - Shadow Stalker # memory
   - Dark Thorn # memory
@@ -5693,9 +5701,7 @@ Xigbar:
     bossY: 0
     bossZ: 200
   blacklist_destination:
-  - Grim Reaper 1
   - Twilight Thorn
-  - Past Pete
   - Scar
   - Armor Xemnas I
   - Pete OC II
@@ -5704,10 +5710,6 @@ Xigbar:
   - Roxas (Data)
   - Prison Keeper
   - The Beast
-  - Marluxia # Can teleport you out of bounds causing a softlock if he chooses to warp to the long room - Kayya
-  - Larxene # Can teleport you out of bounds causing a softlock if he chooses to warp to the long room - Kayya
-  - Lexaeus # Can teleport you out of bounds causing a softlock if he chooses to warp to the long room - Kayya
-  - Xaldin # Can teleport you out of bounds causing a softlock, unsure which room transition casues this though - Kayya
   enabled: true
   tags:
   - organization
@@ -5811,6 +5813,7 @@ Zexion:
   tags:
   - organization
   - needs_rc
+  - needs_teleport
   enabled: true
   hp: 100
   level: 99

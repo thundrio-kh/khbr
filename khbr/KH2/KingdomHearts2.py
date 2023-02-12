@@ -35,7 +35,6 @@ class KingdomHearts2:
                                 "type": "enemy", "possible_values": [False, True], "hidden_values": []},
             "separate_nobodys": {"display_name": "Randomize Nobodys separately", "description": "Treats nobodys as a separate type of enemy, so they are only randomized among themselves.", 
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": []},
-            # TODO Need to write and validate this functionality with unit tests before releasing it
             "other_enemies": {"display_name": "Randomize misc enemies as Heartless", "description": "Enables and randomizes the following enemies as if they were heartless: Pirates, Bulky Vendors, Bees",
                                 "type": "enemy", "possible_values": [False, True], "hidden_values": []},  
             "combine_enemy_sizes": {"display_name": "Combine Enemy Sizes (Unstable/PC Only)", "description": "Normally small enemies are randomized separately from big enemies to prevent crashing. On PC it is less likely to crash, so this option is to combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
@@ -55,7 +54,7 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Data Bosses", "description": "Include the Data versions of organization members in the pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},      
-            "gimmick_bosses": {"display_name": "Randomize Misc Bosses (Beta)", "description": "Include in the pool bosses that are mostly gimmicks or otherwise don't yet randomize cleanly (MCP, Jafar, Shadow Stalker, Groundshaker)",
+            "gimmick_bosses": {"display_name": "Randomize Misc Bosses (Beta)", "description": "Include in the pool bosses that are mostly gimmicks or otherwise don't yet randomize cleanly (MCP, Jafar, Shadow Stalker)",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},       
             "sephiroth": {"display_name": "Randomize Sephiroth", "description": "Include Sephiroth in the boss randomization pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},

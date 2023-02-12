@@ -6763,14 +6763,12 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -6780,7 +6778,6 @@
             "Jafar",
             "Leon",
             "Lexaeus",
-            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -6794,7 +6791,6 @@
             "Storm Rider",
             "Terra",
             "The Beast",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vexen",
@@ -6802,8 +6798,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Armored Knight": {
@@ -7130,7 +7125,6 @@
         "luamod": null,
         "available": [
             "Axel I",
-            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -7245,7 +7239,6 @@
         "luamod": null,
         "available": [
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -7429,6 +7422,9 @@
                 ]
             }
         ],
+        "tags": [
+            "needs_teleport"
+        ],
         "enabled": true,
         "enmp_index": 99,
         "hp": 100,
@@ -7449,8 +7445,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "needs_teleport",
         "isnightmare": false,
         "parent": "Barbossa",
         "variationof": null,
@@ -9565,7 +9560,8 @@
         "tags": [
             "data",
             "organization",
-            "solo"
+            "solo",
+            "needs_teleport"
         ],
         "aimods": [
             {
@@ -9600,7 +9596,7 @@
             "Final Xemnas (Data)"
         ],
         "replace_as": null,
-        "category": "data-organization-solo",
+        "category": "data-needs_teleport-organization-solo",
         "isnightmare": false,
         "parent": "Final Xemnas",
         "children": [],
@@ -9641,7 +9637,8 @@
         "tags": [
             "data",
             "organization",
-            "solo"
+            "solo",
+            "needs_teleport"
         ],
         "enabled": true,
         "aimods": [
@@ -9678,7 +9675,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "data-organization-solo",
+        "category": "data-needs_teleport-organization-solo",
         "isnightmare": true,
         "parent": "Final Xemnas",
         "children": [],
@@ -10024,9 +10021,7 @@
         "sizeTag": null,
         "blacklist_source": [],
         "blacklist_destination": [
-            "Grim Reaper 1",
             "Twilight Thorn",
-            "Past Pete",
             "Scar",
             "Armor Xemnas I",
             "Pete OC II",
@@ -10034,11 +10029,7 @@
             "Roxas",
             "Roxas (Data)",
             "Prison Keeper",
-            "The Beast",
-            "Marluxia",
-            "Larxene",
-            "Lexaeus",
-            "Xaldin"
+            "The Beast"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -11988,7 +11979,8 @@
         "name": "MCP",
         "enabled": true,
         "tags": [
-            "gimmick"
+            "gimmick",
+            "needs_teleport"
         ],
         "enmp_index": 141,
         "hp": 100,
@@ -12025,7 +12017,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "gimmick",
+        "category": "gimmick-needs_teleport",
         "isnightmare": false,
         "parent": "MCP",
         "variationof": null,
@@ -12233,14 +12225,12 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -12249,7 +12239,6 @@
             "Jafar",
             "Leon",
             "Lexaeus",
-            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -12264,7 +12253,6 @@
             "Shan-Yu",
             "Terra",
             "The Beast",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vexen",
@@ -12272,8 +12260,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Grim Reaper II": {
@@ -12506,14 +12493,12 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Groundshaker",
             "Hades II",
@@ -12524,7 +12509,6 @@
             "Jafar",
             "Leon",
             "Lexaeus",
-            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -12536,7 +12520,6 @@
             "Setzer",
             "Storm Rider",
             "Terra",
-            "The Experiment",
             "Tifa",
             "Vexen",
             "Vivi",
@@ -12852,14 +12835,12 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -12868,7 +12849,6 @@
             "Jafar",
             "Leon",
             "Lexaeus",
-            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -12880,7 +12860,6 @@
             "Setzer",
             "Shan-Yu",
             "Terra",
-            "The Experiment",
             "Tifa",
             "Vexen",
             "Vivi",
@@ -13113,7 +13092,6 @@
         "unchanged_file_size": false,
         "luamod": null,
         "available": [
-            "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
             "Grim Reaper I",
@@ -15702,6 +15680,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
+            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -16225,6 +16204,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
+            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -16955,7 +16935,8 @@
         },
         "tags": [
             "organization",
-            "broken_mickey"
+            "broken_mickey",
+            "needs_teleport"
         ],
         "enabled": true,
         "enmp_index": 215,
@@ -16985,7 +16966,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "broken_mickey-organization",
+        "category": "broken_mickey-needs_teleport-organization",
         "parent": "Marluxia",
         "variationof": null,
         "children": [
@@ -17060,6 +17041,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
+            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -17708,13 +17690,11 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -17723,7 +17703,6 @@
             "Jafar",
             "Leon",
             "Lexaeus",
-            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -17739,7 +17718,6 @@
             "Storm Rider",
             "Terra",
             "The Beast",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vexen",
@@ -17747,8 +17725,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Past Pete": {
@@ -17815,14 +17792,12 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -17845,7 +17820,6 @@
             "Shan-Yu",
             "Terra",
             "The Beast",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vexen",
@@ -17853,8 +17827,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Pete Cups": {
@@ -19198,14 +19171,12 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -19214,7 +19185,6 @@
             "Jafar",
             "Leon",
             "Lexaeus",
-            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -19229,7 +19199,6 @@
             "Shan-Yu",
             "Terra",
             "The Beast",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vexen",
@@ -19237,8 +19206,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Rapid Thruster (Zipliner)": {
@@ -21683,13 +21651,11 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -21698,7 +21664,6 @@
             "Jafar",
             "Leon",
             "Lexaeus",
-            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -21713,7 +21678,6 @@
             "Shan-Yu",
             "Terra",
             "The Beast",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vexen",
@@ -21721,8 +21685,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Scar": {
@@ -21934,7 +21897,6 @@
         "luamod": null,
         "roomData": {},
         "available": [
-            "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
             "Grim Reaper I",
@@ -22572,7 +22534,6 @@
         "luamod": null,
         "roomData": {},
         "available": [
-            "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
             "Grim Reaper I",
@@ -22775,7 +22736,8 @@
         "tags": [
             "teleport_blocked",
             "needs_rc",
-            "gimmick"
+            "gimmick",
+            "neesd_teleport"
         ],
         "hp": 100,
         "level": 99,
@@ -22817,7 +22779,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "gimmick-needs_rc-teleport_blocked",
+        "category": "gimmick-needs_rc-neesd_teleport-teleport_blocked",
         "isnightmare": false,
         "parent": "Shadow Stalker",
         "variationof": null,
@@ -22845,13 +22807,11 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -22861,7 +22821,6 @@
             "Jafar",
             "Leon",
             "Lexaeus",
-            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -22883,8 +22842,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Shadow WI": {
@@ -24467,6 +24425,9 @@
         "size": 1.82,
         "room_size": 11.7,
         "program": 64,
+        "tags": [
+            "needs_teleport"
+        ],
         "blacklist_destination": [
             "Shadow Stalker",
             "Dark Thorn",
@@ -24492,8 +24453,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "tags": [],
-        "category": "",
+        "category": "needs_teleport",
         "isnightmare": false,
         "parent": "The Experiment",
         "variationof": null,
@@ -25212,7 +25172,6 @@
         "obj_edits": {},
         "luamod": null,
         "available": [
-            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
@@ -25367,14 +25326,12 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -25397,7 +25354,6 @@
             "Shan-Yu",
             "Terra",
             "The Beast",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vexen",
@@ -25405,8 +25361,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Vivi": {
@@ -25509,7 +25464,6 @@
         "unchanged_file_size": false,
         "luamod": null,
         "available": [
-            "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
             "Grim Reaper I",
@@ -25864,6 +25818,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
+            "Xigbar",
             "Yuffie",
             "Zexion"
         ]
@@ -25940,14 +25895,12 @@
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
-            "Barbossa",
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -25956,7 +25909,6 @@
             "Jafar",
             "Leon",
             "Lexaeus",
-            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -25971,7 +25923,6 @@
             "Shan-Yu",
             "Terra",
             "The Beast",
-            "The Experiment",
             "Thresholder",
             "Tifa",
             "Vexen",
@@ -25979,8 +25930,7 @@
             "Volcano Lord",
             "Xaldin",
             "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Xigbar": {
@@ -25995,9 +25945,7 @@
             "bossZ": 200
         },
         "blacklist_destination": [
-            "Grim Reaper 1",
             "Twilight Thorn",
-            "Past Pete",
             "Scar",
             "Armor Xemnas I",
             "Pete OC II",
@@ -26005,11 +25953,7 @@
             "Roxas",
             "Roxas (Data)",
             "Prison Keeper",
-            "The Beast",
-            "Marluxia",
-            "Larxene",
-            "Lexaeus",
-            "Xaldin"
+            "The Beast"
         ],
         "enabled": true,
         "tags": [
@@ -26467,7 +26411,8 @@
         },
         "tags": [
             "organization",
-            "needs_rc"
+            "needs_rc",
+            "needs_teleport"
         ],
         "enabled": true,
         "hp": 100,
@@ -26490,7 +26435,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "needs_rc-organization",
+        "category": "needs_rc-needs_teleport-organization",
         "isnightmare": false,
         "parent": "Zexion",
         "variationof": null,
