@@ -143,20 +143,41 @@ class EnemySeed:
         if new_boss_object["obj_edits"]:
             self.object_map[new_boss_object["obj_id"]] = new_boss_object["obj_edits"]
 
-    def _add_ai(self, ai_to_mod, data_for_mod):
-        #print("modding {} ai with {}".format(ai_to_mod, data_for_mod))
-        self.ai_mods[ai_to_mod] = data_for_mod
+    def add_ai(self, mod):
+        modname = mod["name"]
+        if not modname in self.ai_mods:
+            self.ai_mods[modname] = [mod]
+        else:
+            for ex_mod in self.ai_mods[modname]:
+                if ex_mod == mod:
+                    return # Don't add the same mod, but if it's different, add it
 
     def update_aimod(self, old_boss_object, new_boss_object):
-        # this is a wordy way of adding the old boss if it's a source old or new boss if it's a source new
-        if len([m for m in new_boss_object.get("aimods",[]) if m.get("source", "new") == "new"]) > 0:
-            self._add_ai(new_boss_object["name"], old_boss_object["name"])
-        if len([m for m in old_boss_object.get("aimods",[]) if m.get("source", "new") == "old"]) > 0:
-            self._add_ai(old_boss_object["name"], new_boss_object["name"])
 
+        keys_to_check = {
+            "old_boss": old_boss_object,
+            "new_boss": new_boss_object
+        }
+
+        mods = [mod for mod in new_boss_object.get("aimods", []) if mod.get("source", "new") == "new"]
+        mods += [mod for mod in old_boss_object.get("aimods", []) if mod.get("source", "new") == "old"]
         for add in new_boss_object["adds"]:
-            if add.get("aimods"):
-                self._add_ai(add["name"], old_boss_object["name"])
+            mods += [mod for mod in add.get("aimods",[]) if mod.get("source", "new") == "new"]
+            mods += [mod for mod in add.get("aimods",[]) if mod.get("source", "old") == "new"]
+
+        for mod in mods:
+            vars = mod.get("vars", {})
+            for k,v in mod.get("replacements",{}).items():
+                if v not in vars:
+                    vars[v] = None # This should get filled in next
+            for var in vars:
+                for ktc in keys_to_check:
+                    if var.startswith(ktc):
+                        key = var.split(".")[1]
+                        value = keys_to_check[ktc].get(key)
+                        vars[var] = value
+            mod["vars"] = vars
+            self.add_ai(mod)
 
     def update_luamod(self, new_boss_object):
         if new_boss_object.get("luamod"):

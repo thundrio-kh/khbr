@@ -202,41 +202,28 @@ class AssetGenerator:
             self.assets.append(asset)
 
     def generateAiMods(self, ai_mods, rvlrando=None):
-        # Sort of a known issue but this will apply all the old and new mods for an ai, may cause issues someday
-        # ie vivi
         created_mods = {}
-        for ai in ai_mods:
-            aimod = ai_mods[ai]
-
-            if type(aimod) == type({}):
-                mods = [aimod]
-            else:
-                # This logic is a little messy
-                replaced_enemy_object = self.enemy_manager.enemy_records[ai_mods[ai]] # sometimes this is the new enemy, sometimes it's the old
-                ai_to_modify_object = self.enemy_manager.enemy_records[ai]
-                modelname = ai_to_modify_object["model"]
-                mods = ai_to_modify_object["aimods"]
-                for mod in mods:
-                    mod["vars"] = replaced_enemy_object
-
+        for name,mods in ai_mods.items():
+            print(name,mods)
             for mod in mods:
-                modelname = mod["name"].split("/")[0]
-                modbasename = os.path.basename(mod["name"])
-                modfilename = os.path.join(os.path.dirname(__file__), "data", "bdscript", mod["type"], mod["name"])
-                if modelname in created_mods: # Sometimes for instance Seifer the same mod is attempted to be made multiple times
-                    continue
-                with open(modfilename) as f:
-                    ai_manager = AiManager(ai, f.read())
-                    
-                    for orig,new in mod.get("replacements", {}).items():
-                        ai_manager.replace(orig, mod["vars"][new])
+                modelname = name.split("/")[0]
+                modbasename = os.path.basename(name)
+                modfilename = os.path.join(os.path.dirname(__file__), "data", "bdscript", mod["type"], name)
+                if not modelname in created_mods:
+                    with open(modfilename) as f:
+                        ai_manager = AiManager(modelname, f.read())
+                else:
+                    ai_manager = created_mods[ai_manager]            
+        
+                for orig,new in mod.get("replacements", {}).items():
+                    ai_manager.replace(orig, mod["vars"][new])
 
-                    created_mods[modelname] = {
-                        "name": modbasename,
-                        "model": modelname,
-                        "type": mod["type"],
-                        "manager": ai_manager
-                    }
+                created_mods[modelname] = {
+                    "name": modbasename,
+                    "model": modelname,
+                    "type": mod["type"],
+                    "manager": ai_manager
+                }
 
         if rvlrando:
             rando_type = rvlrando.replace("revenge_limit_rando", "")

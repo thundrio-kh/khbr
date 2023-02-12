@@ -45,6 +45,7 @@ class Randomizer:
             # Realistically this should never happen
             raise Exception("TMP dir already exists, try again")
         os.mkdir(fn)
+        print("Made",fn)
         rmdir = lambda : shutil.rmtree(fn)
         return fn, rmdir
 

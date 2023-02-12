@@ -2670,7 +2670,7 @@ Hades Escape:
     type: msn
     source: old
     replacements:
-      obj_id: obj_id
+      obj_id: new_boss.obj_id
   tags:
   - needs_invuln
   enabled: true
@@ -2699,7 +2699,7 @@ Hades I:
     type: msn
     source: old
     replacements:
-      obj_id: obj_id
+      obj_id: new_boss.obj_id
   tags: 
   - needs_invuln
   variationof: Hades II
@@ -2724,7 +2724,7 @@ Hades II:
     type: msn
     source: old
     replacements:
-      obj_id: obj_id
+      obj_id: new_boss.obj_id
   tags:
   - needs_invuln
   enabled: true
@@ -2799,7 +2799,7 @@ Hayner:
     type: msn
     source: old
     replacements:
-      obj_id: obj_id
+      obj_id: new_boss.obj_id
   - name: N_EX500_BTL/n_ex.bdscript
     type: obj
   enabled: true
@@ -4312,7 +4312,7 @@ Riku:
     type: msn
     source: old
     replacements:
-      obj_id: obj_id
+      obj_id: new_boss.obj_id
   enabled: true
   enmp_index: 0x82
   tags:
@@ -4516,7 +4516,7 @@ Seifer:
     source: old
     type: msn
     replacements:
-      obj_id: obj_id
+      obj_id: new_boss.obj_id
   enabled: true
   enmp_index: 0x87
   tags:
@@ -4658,7 +4658,7 @@ Setzer:
     type: msn
     source: old
     replacements:
-      obj_id: obj_id
+      obj_id: new_boss.obj_id
   enabled: true
   enmp_index: 0x9E
   tags:
@@ -5515,7 +5515,7 @@ Vivi:
     type: msn
     source: old
     replacements:
-      obj_id: obj_id
+      obj_id: new_boss.obj_id
   enabled: true
   enmp_index: 0x9D
   tags:
