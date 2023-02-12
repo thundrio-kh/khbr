@@ -27,13 +27,13 @@ class KingdomHearts2:
     def get_options(self):
         # Might want to define valid predicates at some point, as certain combinations can't be selected together
         return {
-            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all shadows become dusks. One-to-One per room: One-to-One but every room is rerandomized (so shadows in Parlor might be ice cubes, but in LOD Cave they might be fire cubes). Wild: every enemy entity in the game is completely randomized, but due to memory constraints no room can have more than 13 unique enemy types. If a selected enemy is filled in this setting is ignored and every enemy (almost) will become that enemy.",
+            "enemy": {"display_name": "Enemy Randomization Mode", "description": "Select if and how the enemies should be randomized. Available choices: One-to-One replacement ie all Shadows become Dusks. One-to-One per room: One-to-One but every room is rerandomized (so Shadows in BC Parlor might be Icy Cubes, but in LOD Cave they might be Firey Globes). Wild: every enemy entity in the game is completely randomized, but due to memory constraints no room can have more than 13 unique enemy types. If a selected enemy is filled in this setting is ignored and (almost) every enemy will become that enemy.",
                                     "type": "enemy", "possible_values": ["Disabled", "One to One", "One to One Per Room", "Wild"], "hidden_values": []},
-            "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
+            "selected_enemy": {"display_name": "Selected Enemy", "description": "Replaces every enemy with the selected enemy. Depending on the enemy this may not generate a completable seed. This value is ignored if enemy randomization mode is not 'Selected Enemy'",
                                 "type": "enemy", "possible_values": [None] + sorted(self.get_valid_enemies()), "hidden_values": []},
             "nightmare_enemies": {"display_name": "Nightmare Enemies", "description": "Replaces enemies using only the most difficult enemies in the game.",
                                 "type": "enemy", "possible_values": [False, True], "hidden_values": []},
-            "separate_nobodys": {"display_name": "Randomize Nobodys separately", "description": "Treats nobodys as a separate type of enemy, so they are only randomized among themselves.", 
+            "separate_nobodys": {"display_name": "Randomize Nobodies separately", "description": "Treats Nobodies as a separate type of enemy, so they are only randomized among themselves.", 
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": []},
             "other_enemies": {"display_name": "Randomize misc enemies as Heartless", "description": "Enables and randomizes the following enemies as if they were heartless: Pirates, Bulky Vendors, Bees",
                                 "type": "enemy", "possible_values": [False, True], "hidden_values": []},  
@@ -42,15 +42,15 @@ class KingdomHearts2:
             "combine_melee_ranged": {"display_name": "Combine Melee and Ranged enemies (Unstable/PC Only)", "description": "Normally ranged and melee enemies are randomized separate from each other, both for difficulty and to reduce crashing. On PC it is less likely to crash, so this option will combine them (EXPERIMENTAL MAY CAUSE BAD CRASHES)",
                                  "type": "enemy", "possible_values": [False, True], "hidden_values": [], "experimental": True},
 
-            "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. If a selected boss is filled in this setting is ignored and every boss (almost) will become that boss.",
+            "boss": {"display_name": "Boss Randomization Mode", "description": "Select if and how the bosses should be randomized. Available choices: One-to-One replacement just shuffles around where the bosses are located, but each boss is still present (some bosses may be excluded from the randomization). Wild will randomly pick an available boss for every location, meaning some bosses can be seen more than once, and some may never be seen. If a selected boss is filled in this setting is ignored and (almost) every boss will become that boss.",
                                 "type": "boss", "possible_values": ["Disabled", "One to One", "Wild"], "hidden_values": []},
-            "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
+            "selected_boss": {"display_name": "Selected Boss", "description": "Replaces every boss possible with the selected boss. Depending on the boss this may not generate a completable seed. This value is ignored if boss mode is not 'Selected Boss'",
                                 "type": "boss", "possible_values": [None] + sorted(self.get_valid_bosses()), "hidden_values": []},
             "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game. Forces Boss Randomization Mode to be 'Wild'",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "bosses_replace_enemies": {"display_name": "Bosses Can Replace Enemies (Unstable/PC only)", "description": "Replaces 0.5 percent of enemies in the game with a random boss. Should not put more than one boss as enemy in a single room, due to memory concerns. This option is intended for PC use only.",
                     "type": "boss", "possible_values": [False, True], "hidden_values": [], "experimental": True},
-            "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool'.",
+            "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool",
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Data Bosses", "description": "Include the Data versions of organization members in the pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},      
@@ -62,7 +62,7 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
             # "lua_bosses": {"display_name": "Advanced Boss Replacements (Must setup LuaBackend hook)", "description": "Takes advantage of Lua scripting and other methods to include bosses that are more difficult to randomize (ex: Final Xemnas). Generates a lua script that must be loaded via ModManager.",
             #                     "type": "boss", "possible_values": [False, True], "hidden_values": []},
-            "mickey_rule": {"display_name": "Mickey Appearance Settings", "description": "Choose when Mickey appears. Options are 'follow', where mickey appears for the same bosses as in the vanilla game, regardless of their location. 'stay', where mickey appears in the same locations as in the vanilla game, regardless of the location. 'all', mickey will appear for every boss in the game, regardless of if mickey normally apepars there. 'none', mickey will never appear. Might make PS2 boss fights less stable",
+            "mickey_rule": {"display_name": "Mickey Appearance Settings", "description": "Choose when Mickey appears. Options are 'follow', where Mickey appears for the same bosses as in the vanilla game, regardless of their location. 'stay', where Mickey appears in the same locations as in the vanilla game, regardless of the location. 'all', Mickey will appear for every boss in the game, regardless of if Mickey normally apepars there. 'none', Mickey will never appear. Might make PS2 boss fights less stable",
                                 "type": "boss", "possible_values": ["follow", "stay", "all", 'none'], "hidden_values": []},
             "scale_boss_stats": {"display_name": "Scale HP to Original Boss", "description": "Attempts to force bosses level/HP to the scale of the boss it is replacing. When turned off uses the games scaling which is partially based on the battle level of the world except for Datas/Terra which are always level 99.",
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
@@ -75,7 +75,7 @@ class KingdomHearts2:
             # utility mod options
             "remove_damage_cap": {"display_name": "Remove Damage Cap", "description": "Removes the damage cap for all enemies in the game.",
                                 "possible_values": [], "hidden_values": [False, True]},
-            "cups_give_xp": {"display_name": "Cups give XP", "description": "You will now gain XP and Form XP for killing enemies in the Olympus cups",
+            "cups_give_xp": {"display_name": "Cups give XP", "description": "You will now gain XP and Form XP for killing enemies in the Olympus cups.",
                                 "possible_values": [], "hidden_values": [False, True]},
             "retry_data_final_xemnas": {"display_name": "Retry Data Final Xemnas", "description": "If you die to Data Final Xemnas, continue will put you right back into the fight, instead of having to fight Data Xemnas I again (warning will be a softlock if you are unable to beat Final Xemnas)",
                                 "possible_values": [], "hidden_values": [False, True]},
@@ -208,8 +208,8 @@ class KingdomHearts2:
                 rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemy"], nightmare=rand_seed.config.nightmare_enemies)
 
                 # Debug print out the enemy mapping
-                for enemy in rand_seed.enemymapping:
-                    print(enemy+"->"+rand_seed.enemymapping[enemy])
+                # for enemy in rand_seed.enemymapping:
+                #     print(enemy+"->"+rand_seed.enemymapping[enemy])
             
             self.location_manager.set_locations()
             spawns = self.location_manager.locations
@@ -350,3 +350,4 @@ class KingdomHearts2:
 
     def generate_mod_basics(self, newname=None):
         return {"title": "KH2 Boss/Enemy Rando" if not newname else newname}
+    

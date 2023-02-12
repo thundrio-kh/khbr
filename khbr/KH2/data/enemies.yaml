@@ -1364,6 +1364,8 @@ Barbossa:
   blacklist_destination:
   - Xigbar # You are put in boxed in space
   - Riku # Allegedly doesn't finish the fight if you kill him - Kayya
+  - Blizzard Lord # Illuminator doesn't have a fun time here, causing Barbossa to disappear forever - Kayya
+  - Volcano Lord # Illuminator doesn't have a fun time here, causing Barbossa to disappear forever - Kayya
   blacklist_source:
   - Thresholder # report of fight not ending
   - Larxene # report of fight not ending
@@ -1633,6 +1635,9 @@ Cloud:
   enmp_index: 0xBD
   hp: 100
   level: 99
+  blacklist_source:
+  - Terra # Too hard in multi-fight arenas - Kayya
+  - Sephiroth # Too hard in multi-fight arenas - Kayya
   limiter: 0
   model: N_HB550_BTL2
   pc: 
@@ -3300,6 +3305,9 @@ Leon:
   enmp_index: 0xB4
   hp: 100
   level: 99
+  blacklist_source:
+  - Terra # Too hard in multi-fight arenas - Kayya
+  - Sephiroth # Too hard in multi-fight arenas - Kayya
   limiter: 0
   pc: 
     tags: 
@@ -3879,6 +3887,7 @@ Pete TR:
   pc: 
     source_replace_allowed: true # TODO supposedly demyx super crashes here on ps2 and most bosses cause crashes here
   source_replace_allowed: false
+  msn_replace_allowed: false # This is due soley to Pete OC II
   hp: 100
   level: 99
   limiter: 20
@@ -5317,6 +5326,9 @@ Tifa:
   enmp_index: 0xB6
   hp: 100
   level: 99
+  blacklist_source:
+  - Terra # Too hard in multi-fight arenas - Kayya
+  - Sephiroth # Too hard in multi-fight arenas - Kayya
   limiter: 0
   model: N_HB570_BTL2
   msn_replace_allowed: false
@@ -5739,6 +5751,9 @@ Yuffie:
   enmp_index: 0xB7
   hp: 100
   level: 99
+  blacklist_source:
+  - Terra # Too hard in multi-fight arenas - Kayya
+  - Sephiroth # Too hard in multi-fight arenas - Kayya
   limiter: 0
   model: N_HB580_BTL2
   msn_replace_allowed: false

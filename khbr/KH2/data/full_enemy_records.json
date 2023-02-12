@@ -7366,7 +7366,9 @@
         },
         "blacklist_destination": [
             "Xigbar",
-            "Riku"
+            "Riku",
+            "Blizzard Lord",
+            "Volcano Lord"
         ],
         "blacklist_source": [
             "Thresholder",
@@ -8349,6 +8351,10 @@
         "enmp_index": 189,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "model": "N_HB550_BTL2",
         "pc": {
@@ -8387,7 +8393,6 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -8427,11 +8432,9 @@
             "Sark",
             "Scar",
             "Seifer",
-            "Sephiroth",
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
-            "Terra",
             "The Beast",
             "The Experiment",
             "Thresholder",
@@ -8464,6 +8467,10 @@
         "enmp_index": 189,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "model": "N_HB550_BTL2",
         "pc": {
@@ -8501,7 +8508,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -8533,6 +8539,10 @@
         "enmp_index": 189,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "model": "N_HB550_BTL2",
         "pc": {
@@ -8570,7 +8580,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -15527,6 +15536,10 @@
         "enmp_index": 180,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "pc": {
             "tags": [
@@ -15566,7 +15579,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -15606,11 +15618,9 @@
             "Sark",
             "Scar",
             "Seifer",
-            "Sephiroth",
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
-            "Terra",
             "The Beast",
             "The Experiment",
             "Thresholder",
@@ -15643,6 +15653,10 @@
         "enmp_index": 180,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "pc": {
             "tags": [
@@ -15681,7 +15695,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -15713,6 +15726,10 @@
         "enmp_index": 180,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "pc": {
             "tags": [
@@ -15751,7 +15768,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -15783,6 +15799,10 @@
         "enmp_index": 180,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "pc": {
             "tags": [
@@ -15821,7 +15841,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -18382,6 +18401,7 @@
             "source_replace_allowed": true
         },
         "source_replace_allowed": false,
+        "msn_replace_allowed": false,
         "hp": 100,
         "level": 99,
         "limiter": 20,
@@ -18716,7 +18736,6 @@
             "Pete TR"
         ],
         "replace_as": null,
-        "msn_replace_allowed": true,
         "category": "needs_teleport",
         "isnightmare": false,
         "parent": "Pete TR",
@@ -24189,6 +24208,10 @@
         "enmp_index": 182,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
@@ -24227,7 +24250,6 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -24267,11 +24289,9 @@
             "Sark",
             "Scar",
             "Seifer",
-            "Sephiroth",
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
-            "Terra",
             "The Beast",
             "The Experiment",
             "Thresholder",
@@ -24304,6 +24324,10 @@
         "enmp_index": 182,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
@@ -24341,7 +24365,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -24373,6 +24396,10 @@
         "enmp_index": 182,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "model": "N_HB570_BTL2",
         "msn_replace_allowed": false,
@@ -24410,7 +24437,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -25552,6 +25578,10 @@
         "enmp_index": 183,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
@@ -25590,7 +25620,6 @@
         "can_be_enemy": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -25630,11 +25659,9 @@
             "Sark",
             "Scar",
             "Seifer",
-            "Sephiroth",
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
-            "Terra",
             "The Beast",
             "The Experiment",
             "Thresholder",
@@ -25669,6 +25696,10 @@
         "enmp_index": 183,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
@@ -25705,7 +25736,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -25738,6 +25768,10 @@
         "enmp_index": 183,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
@@ -25775,7 +25809,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -25808,6 +25841,10 @@
         "enmp_index": 183,
         "hp": 100,
         "level": 99,
+        "blacklist_source": [
+            "Terra",
+            "Sephiroth"
+        ],
         "limiter": 0,
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
@@ -25845,7 +25882,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
