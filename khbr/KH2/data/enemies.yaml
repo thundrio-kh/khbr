@@ -2424,6 +2424,7 @@ Gambler:
       - 0
       - 0
     Gambler (Summons Darkness):
+      #TODO I would like these randomized in nightmare mode, but not in normal mode...
       enabled: false
       isnightmare: true
       vars:

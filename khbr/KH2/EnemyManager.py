@@ -39,7 +39,6 @@ class EnemyManager:
                 e_obj["aimods"] = []
         
             enabled_enemies.append(e_obj)
-
         return enabled_enemies
 
     @staticmethod
