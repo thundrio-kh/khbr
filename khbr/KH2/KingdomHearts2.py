@@ -184,9 +184,10 @@ class KingdomHearts2:
         if party_rando:
             tron = {'ObjectId': 863, 'Serial': 13, 'index': 'new'}
             rand_seed.add_spawn("Space Paranoids", "Central Computer Core", "b_61", "69", "new", tron)
-            if not "Final Xemnas" in rand_seed.ai_mods:
-                rand_seed.ai_mods["Final Xemnas"] = "Final Xemnas"
-                rand_seed.ai_mods["Final Xemnas (Data)"] = "Final Xemnas (Data)"
+            if not "B_EX170_LAST/b_ex.bdscript" in rand_seed.ai_mods:
+                rand_seed.ai_mods["B_EX170_LAST/b_ex.bdscript"] = [{'name': 'B_EX170_LAST/b_ex.bdscript', 'type': 'obj', 'vars': {}}]
+            if not "B_EX170_LAST_LV99/b_ex.bdscript" in rand_seed.ai_mods:
+                rand_seed.ai_mods["B_EX170_LAST_LV99/b_ex.bdscript"] = [{'name': 'B_EX170_LAST_LV99/b_ex.bdscript', 'type': 'obj', 'vars': {}}]
 
         rand_seed_json= rand_seed.toJson()
         if not rand_seed_json:

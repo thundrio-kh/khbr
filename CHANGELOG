@@ -1,4 +1,7 @@
-3.0.1
+3.0.3
+* Hotfix for Party Member Rando. Also prevent Final Battle Riku object from being used in party member rando (When Riku shows up it will always be world TNTNW Riku)
+
+3.0.2
 * Bullet proofed the AI mod logic to fix common 3.0 crashes such as STT struggle fights
 * Added other_enemies as an option, which enabled bulky vendors, bees, and pirates all to be randomized in the "heartless" pool
 * Fix for nightmare_enemies, now it should work as intended

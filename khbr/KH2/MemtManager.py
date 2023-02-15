@@ -181,7 +181,7 @@ class MemtManager:
             "mulan": [99, 100],
             "auron": [101],
             "simba": [97], # Test because limit with human sora might break
-            "riku": [2073, 2257],
+            "riku": [2073], #2257],
             "tron": [724],
             "beast": [94],
             "jack_sparrow": [2077, 2078]

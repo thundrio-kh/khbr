@@ -191,9 +191,11 @@ class AssetGenerator:
                 #     entry["Friend 1 (Goofy)"] = random.choice(party_members[replacements["goofy"]])
                 worldvalue = entry["World Character"]
                 if worldvalue:
+                    if worldvalue == 2257: # Riku final battle -> normal riku
+                        worldvalue = 2073
                     worldfriend = party_member_map[worldvalue]
                 entry["World Character"] = random.choice(memt.party_members[replacements[worldfriend]])
-
+            #print(replacements) # DEBUG ONLY KEEP COMMENTED
         asset = self.modwriter.writeMemt(memt.dump_bin())
         existingasset = self.find_asset("03system.bin")
         if existingasset:
