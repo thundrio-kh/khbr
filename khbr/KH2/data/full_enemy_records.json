@@ -6642,7 +6642,6 @@
             "Armor Xemnas I",
             "Armor Xemnas II",
             "Cloud",
-            "MCP",
             "Hayner",
             "Jafar",
             "Leon",
@@ -6744,6 +6743,7 @@
             "Jafar",
             "Leon",
             "Lexaeus",
+            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -7440,7 +7440,6 @@
             "Barbossa",
             "Blizzard Lord",
             "Cloud",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -7765,7 +7764,6 @@
             "Axel I",
             "Blizzard Lord",
             "Cloud",
-            "MCP",
             "Grim Reaper I",
             "Hayner",
             "Hercules",
@@ -8221,7 +8219,6 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
-            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -8414,7 +8411,6 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -9255,7 +9251,6 @@
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",
-            "MCP",
             "Grim Reaper I",
             "Hayner",
             "Hercules",
@@ -10015,7 +10010,6 @@
             "Cloud",
             "Dark Thorn",
             "Demyx",
-            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -11254,7 +11248,6 @@
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -11861,7 +11854,8 @@
             0
         ],
         "name": "MCP",
-        "enabled": true,
+        "enabled": false,
+        "source_replace_allowed": false,
         "tags": [
             "gimmick",
             "needs_teleport"
@@ -11899,7 +11893,6 @@
             "MCP"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "category": "gimmick-needs_teleport",
         "isnightmare": false,
@@ -11931,50 +11924,7 @@
         "luamod": null,
         "roomData": {},
         "available": [
-            "Armor Xemnas I",
-            "Armor Xemnas II",
-            "Axel I",
-            "Axel II",
-            "Barbossa",
-            "Blizzard Lord",
-            "Cerberus",
-            "Cloud",
-            "Dark Thorn",
-            "Demyx",
-            "MCP",
-            "Grim Reaper I",
-            "Hades II",
-            "Hayner",
-            "Hercules",
-            "Hostile Program",
-            "Jafar",
-            "Leon",
-            "Lexaeus",
-            "Marluxia",
-            "Past Pete",
-            "Pete TR",
-            "Prison Keeper",
-            "Riku",
-            "Saix",
-            "Sark",
-            "Scar",
-            "Seifer",
-            "Sephiroth",
-            "Setzer",
-            "Shadow Stalker",
-            "Shan-Yu",
-            "Storm Rider",
-            "The Beast",
-            "The Experiment",
-            "Thresholder",
-            "Tifa",
-            "Vivi",
-            "Volcano Lord",
-            "Xaldin",
-            "Xemnas",
-            "Xigbar",
-            "Yuffie",
-            "Zexion"
+            "MCP"
         ]
     },
     "Graveyard NM": {
@@ -12217,7 +12167,6 @@
             "Armor Xemnas II",
             "Blizzard Lord",
             "Cloud",
-            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hayner",
@@ -12447,16 +12396,6 @@
             0
         ],
         "name": "Hades Escape",
-        "aimods": [
-            {
-                "name": "HE05_MS102/he05.bdscript",
-                "type": "msn",
-                "source": "old",
-                "replacements": {
-                    "obj_id": "new_boss.obj_id"
-                }
-            }
-        ],
         "tags": [
             "needs_invuln"
         ],
@@ -12485,6 +12424,16 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [
+            {
+                "name": "HE19_MS204/he19.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "new_boss.obj_id"
+                }
+            }
+        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -12518,19 +12467,10 @@
             0
         ],
         "name": "Hades I",
-        "aimods": [
-            {
-                "name": "HE06_MS101/he06.bdscript",
-                "type": "msn",
-                "source": "old",
-                "replacements": {
-                    "obj_id": "new_boss.obj_id"
-                }
-            }
-        ],
         "tags": [
             "needs_invuln"
         ],
+        "source_replace_allowed": false,
         "variationof": "Hades II",
         "enabled": true,
         "enmp_index": 18,
@@ -12545,7 +12485,6 @@
         "variations": [
             "Hades I"
         ],
-        "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "category": "needs_invuln",
         "isnightmare": false,
@@ -12553,6 +12492,16 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
+        "aimods": [
+            {
+                "name": "HE19_MS204/he19.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "new_boss.obj_id"
+                }
+            }
+        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -13004,7 +12953,6 @@
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -14637,7 +14585,6 @@
             "Cloud",
             "Dark Thorn",
             "Demyx",
-            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -15600,7 +15547,6 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -16468,7 +16414,6 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -16686,6 +16631,12 @@
             0
         ],
         "name": "Marluxia",
+        "aimods": [
+            {
+                "name": "N_CM000_BTL/n_cm.bdscript",
+                "type": "obj"
+            }
+        ],
         "roomData": {
             "bossX": -127.84259796142578,
             "bossY": 0,
@@ -16694,7 +16645,7 @@
         "tags": [
             "organization",
             "broken_mickey",
-            "needs_teleport"
+            "needs_rc"
         ],
         "enabled": true,
         "enmp_index": 215,
@@ -16713,10 +16664,7 @@
         "pc": {
             "unchanged_file_size": false
         },
-        "blacklist_destination": [
-            "Vexen",
-            "Past Pete"
-        ],
+        "blacklist_destination": null,
         "variations": [
             "Marluxia",
             "Marluxia (Data)"
@@ -16724,7 +16672,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "broken_mickey-needs_teleport-organization",
+        "category": "broken_mickey-needs_rc-organization",
         "parent": "Marluxia",
         "variationof": null,
         "children": [
@@ -16732,7 +16680,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -16803,6 +16750,12 @@
             1
         ],
         "name": "Marluxia (Data)",
+        "aimods": [
+            {
+                "name": "N_CM000_BTL/n_cm.bdscript",
+                "type": "obj"
+            }
+        ],
         "roomData": {
             "bossX": -127.84259796142578,
             "bossY": 0,
@@ -16822,10 +16775,7 @@
         "pc": {
             "unchanged_file_size": false
         },
-        "blacklist_destination": [
-            "Vexen",
-            "Past Pete"
-        ],
+        "blacklist_destination": null,
         "variations": [
             "Marluxia",
             "Marluxia (Data)"
@@ -16839,7 +16789,6 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -18847,6 +18796,7 @@
             "Jafar",
             "Leon",
             "Lexaeus",
+            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -20741,7 +20691,6 @@
             "Blizzard Lord",
             "Cerberus",
             "Dark Thorn",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -20850,7 +20799,6 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -21086,7 +21034,6 @@
             "Cloud",
             "Dark Thorn",
             "Demyx",
-            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -21253,7 +21200,8 @@
         "can_be_enemy": true,
         "enabled": true,
         "blacklist_source": [
-            "Cloud"
+            "Cloud",
+            "Lexaeus"
         ],
         "tags": [
             "teleport_blocked"
@@ -21316,7 +21264,7 @@
             "Hostile Program",
             "Jafar",
             "Leon",
-            "Lexaeus",
+            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -21418,7 +21366,6 @@
             "Cloud",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -21428,7 +21375,6 @@
             "Larxene",
             "Leon",
             "Lexaeus",
-            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Pete TR",
@@ -22045,7 +21991,6 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -23557,7 +23502,6 @@
             "Cloud",
             "Dark Thorn",
             "Demyx",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -23843,7 +23787,6 @@
             "Dark Thorn",
             "Demyx",
             "Final Xemnas",
-            "MCP",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
@@ -23966,7 +23909,6 @@
             "Axel I",
             "Blizzard Lord",
             "Cloud",
-            "MCP",
             "Grim Reaper I",
             "Hayner",
             "Hercules",
@@ -24071,7 +24013,6 @@
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -24166,7 +24107,6 @@
             "Armor Xemnas II",
             "Blizzard Lord",
             "Cloud",
-            "MCP",
             "Grim Reaper I",
             "Hayner",
             "Hercules",
@@ -24271,7 +24211,6 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -24874,6 +24813,7 @@
             "Jafar",
             "Leon",
             "Lexaeus",
+            "Marluxia",
             "Past Pete",
             "Prison Keeper",
             "Riku",
@@ -25074,7 +25014,6 @@
             "Axel I",
             "Blizzard Lord",
             "Cloud",
-            "MCP",
             "Grim Reaper I",
             "Hayner",
             "Hercules",
@@ -25294,7 +25233,6 @@
             "Cloud",
             "Dark Thorn",
             "Demyx",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -25420,6 +25358,7 @@
             "Jafar",
             "Leon",
             "Lexaeus",
+            "Marluxia",
             "Oogie Boogie",
             "Past Pete",
             "Prison Keeper",
@@ -25527,7 +25466,6 @@
             "Cerberus",
             "Cloud",
             "Demyx",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -25641,7 +25579,6 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",
@@ -25977,7 +25914,6 @@
             "Cloud",
             "Dark Thorn",
             "Demyx",
-            "MCP",
             "Grim Reaper I",
             "Hades II",
             "Hayner",

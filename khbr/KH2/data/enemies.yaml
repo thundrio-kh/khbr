@@ -1930,6 +1930,9 @@ Final Xemnas (Data):
       - 1
       - 0
 Luxord (Data):
+  # aimods:
+  # - name: B_EX150_LV99/b_ex.bdscript
+  #   type: obj
   roomData:
     bossX: 0
     bossY: 0
@@ -2466,7 +2469,8 @@ MCP:
   # aimods:
   # - name: B_TR020/b_tr.bdscript
   #   type: obj
-  enabled: true
+  enabled: false
+  source_replace_allowed: false
   tags:
   - gimmick
   - needs_teleport
@@ -2676,12 +2680,13 @@ Hades Cups:
       - 0
       - 0
 Hades Escape:
-  aimods:
-  - name: HE05_MS102/he05.bdscript
-    type: msn
-    source: old
-    replacements:
-      obj_id: new_boss.obj_id
+  # aimods:
+  # - name: HE05_MS102/he05.bdscript
+  #   type: msn
+  #   source: old
+  #   replacements:
+  #     obj_id: new_boss.obj_id
+  # source_replace_allowed: false
   tags:
   - needs_invuln
   enabled: true
@@ -2705,14 +2710,15 @@ Hades Escape:
       - 0
       - 0
 Hades I:
-  aimods:
-  - name: HE06_MS101/he06.bdscript
-    type: msn
-    source: old
-    replacements:
-      obj_id: new_boss.obj_id
+  # aimods:
+  # - name: HE06_MS101/he06.bdscript
+  #   type: msn
+  #   source: old
+  #   replacements:
+  #     obj_id: new_boss.obj_id
   tags: 
   - needs_invuln
+  source_replace_allowed: false
   variationof: Hades II
   enabled: true
   enmp_index: 18
@@ -3261,6 +3267,9 @@ Large Body:
       - 0
       - 0
 Larxene:
+  # aimods:
+  # - name: B_EX400/b_ex.bdscript
+  #   type: obj
   roomData:
     bossX: -137.8426971435547
     bossY: 0
@@ -3488,6 +3497,9 @@ Luna Bandit:
       - 1
       - 0
 Luxord:
+  # aimods:
+  # - name: B_EX150/b_ex.bdscript
+  #   type: obj
   roomData:
     bossX: 0
     bossY: 0
@@ -3570,6 +3582,9 @@ Magnum Loader:
       - 0
       - 0
 Marluxia:
+  aimods:
+  - name: N_CM000_BTL/n_cm.bdscript
+    type: obj
   roomData:
     bossX: -127.84259796142578
     bossY: 0
@@ -3577,7 +3592,7 @@ Marluxia:
   tags:
   - organization
   - broken_mickey
-  - needs_teleport
+  - needs_rc
   enabled: true
   enmp_index: 0xD7
   hp: 100
@@ -3595,8 +3610,6 @@ Marluxia:
   pc:
     unchanged_file_size: false
   blacklist_destination:
-  - Vexen # restore count puts you OOB
-  - Past Pete # restore count can put OOB
   variations:
     Marluxia:
       vars:
@@ -4351,6 +4364,9 @@ Riku:
       - 0
       - 0
 Roxas:
+  # aimods:
+  # - name: B_EX390/b_ex.bdscript
+  #   type: obj
   roomData:
     bossX: 0.0001049073034664616
     bossY: 0.028669970110058784
@@ -4473,6 +4489,7 @@ Sark:
   enabled: true
   blacklist_source:
   - Cloud # report of crash when cloud takes damage
+  - Lexaeus # Report of boss getting stuck after meteor attack
   tags:
   - teleport_blocked
   isnightmare: true
@@ -5194,6 +5211,9 @@ Surveillance Robot:
       - 0
       - 0
 Terra:
+  # aimods:
+  # - name: B_EX420/b_ex.bdscript
+  #   type: obj
   roomData:
     bossX: 0
     bossY: 0
@@ -5293,6 +5313,9 @@ The Experiment:
       - 0
       - 0
 Thresholder:
+  # aimods:
+  # - name: B_BB130/b_bb.bdscript
+  #   type: obj
   enabled: true
   enmp_index: 0x4A
   hp: 100
@@ -5822,6 +5845,10 @@ Zexion:
   aimods: 
   - name: B_EX370/b_ex.bdscript
     type: obj
+  # - name: B_EX380/b_ex.bdscript
+  #   type: obj
+  # - name: B_EX410/b_ex.bdscript
+  #   type: obj
   roomData:
     bossX: 150
     bossY: 0

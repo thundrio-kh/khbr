@@ -54,7 +54,7 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Data Bosses", "description": "Include the Data versions of organization members in the pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},      
-            "gimmick_bosses": {"display_name": "Randomize Misc Bosses (Beta)", "description": "Include in the pool bosses that are mostly gimmicks or otherwise don't yet randomize cleanly (MCP, Jafar, Shadow Stalker)",
+            "gimmick_bosses": {"display_name": "Randomize Misc Bosses (Beta)", "description": "Include in the pool bosses that are mostly gimmicks or otherwise don't yet randomize cleanly (Jafar, Shadow Stalker)",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},       
             "sephiroth": {"display_name": "Randomize Sephiroth", "description": "Include Sephiroth in the boss randomization pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},

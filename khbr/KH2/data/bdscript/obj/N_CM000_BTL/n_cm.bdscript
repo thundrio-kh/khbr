@@ -319,9 +319,6 @@ L480:
  pushImmf 1
  gosub 12, L675
  pushFromFSp 4
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
- pushFromFSp 4
  fetchValue 4
  pushImm 0
  pushImmf 0
