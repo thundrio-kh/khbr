@@ -180,6 +180,18 @@ class ModWriter:
             "source": [{"name": fn}],
             "type": "AreaDataScript"
         }
+    
+    def writeEvent(self, ardname, eventnumber, event):
+        filename = ardname+"_"+str(eventnumber)+".event"
+        outfn = os.path.join(self.outdir, "files", "ard", ardname, filename)
+        fn = os.path.join("files", "ard", ardname, filename)
+        self.write_method(outfn, fn, event)
+        return {
+            "method": "copy",
+            "name": str(eventnumber),
+            "source": [{"name": fn}],
+            "type": "Event"
+        }
 
     def writeAi(self, aifn, modelname, tpe, data):
         relfn = os.path.join("files", "ai", modelname+"_"+aifn)

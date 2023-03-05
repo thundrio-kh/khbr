@@ -3,6 +3,9 @@ class AreaDataProgram:
     def __init__(self, lines, ispc=False):
         self.lines = lines
         self.ispc = ispc
+        num_settings = len(''.join(lines).split("AreaSettings"))
+        # if num_settings > 2:
+        #     print(lines)
         self.map = self.map_program()
     def make_program(self):
         return '\n'.join(self.lines)
