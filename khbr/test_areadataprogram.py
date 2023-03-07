@@ -254,12 +254,54 @@ class Tests(unittest.TestCase):
             "\tSetEvent abc",
             "\tSetProgressFlag 0x2 0x1"
         ]
+    def test_get_multi_settings_program(self):
+        prg = """Program 0x4C
+Bgm 119 119
+AreaSettings 9 -1
+	SetProgressFlag 0x821
+	SetUnk05 0x3
+	SetEvent "110a" Type 129
+	SetPartyMenu 0
 
+AreaSettings 10 -1
+	SetProgressFlag 0x821
+	SetUnk05 0x3
+	SetEvent "110b" Type 129
+	SetPartyMenu 0
+
+AreaSettings 11 -1
+	SetProgressFlag 0x821
+	SetUnk05 0x3
+	SetEvent "110c" Type 129
+	SetPartyMenu 0
+
+AreaSettings 76 -1
+	SetEvent "110" Type 1
+	SetJump Type 2 World TT Area 0 Entrance 0 LocalSet 77 FadeType 1
+	SetPartyMenu 0"""
+         
+        adp = AreaDataProgram(prg.split("\n"))
+        output = adp.make_program()
+        assert output == prg
+        events_list = adp.get_command("SetEvent", return_all=True)
+        events_list_copy = list(events_list)
+        assert len(events_list) == 4
+        found = 0
+        for l in ['"110a"', '"110b"', '"110c"', '"110"']:
+            for e in range(len(events_list_copy)):
+                if l in events_list_copy[e]:
+                    found += 1
+        assert found == 4
+
+# There are a few programs with more than one area settings (I wonder how many?), and I'm not parsing those correctly
+
+# TODO in order to support "chain logic" of removing cutscenes, I'll need to implement additions to add_command
 # Uncomment to run a single test through ipython
 ut = Tests()
+ut.test_get_multi_settings_program()
 #ut.test_set_jump()
-ut.test_set_open_menu()
+#ut.test_set_open_menu()
 
 
 # Uncomment to run the actual tests
-unittest.main()
+#unittest.main()

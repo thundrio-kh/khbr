@@ -39,6 +39,14 @@ class Tests(unittest.TestCase):
         # Make sure it's valid base64
         base64.decodebytes(b64)
 
+    def test_generate_party_rando(self):
+        options = {"party_member_rando": True}
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        # Make sure it's valid base64
+        base64.decodebytes(b64)
+
     def test_generate_one_one(self):
         options = {"boss": "One to One"}
         rando = Randomizer(tempdir=testutils.get_tmp_path())
@@ -359,20 +367,34 @@ class Tests(unittest.TestCase):
             bdscript = open(filepath).read().split("\n")
             assert bdscript[118] == " pushImm {}".format(repid), "{} != {}".format(bdscript[118], repid)
 
-
-
     def test_dont_replace_enemy_msns_for_boss(self):
         # TT msns should not be getting placed without enemies
         options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "terra": True, "sephiroth": True}
         randomization = testutils.generateSeed(options)
+        msns_to_test = [
+            "CA09_MEDAL/ca_m.bdscript",
+            "TT14_MS109/tt_d.bdscript",
+            "TT04_MS301/tt04.bdscript",
+        ]
+        for msn in msns_to_test:
+            assert msn not in randomization.get("ai_mods")
+        options["enemy"] =  "One to One"
+        randomization2 = testutils.generateSeed(options)
+        for msn in msns_to_test:
+            assert msn in randomization2.get("ai_mods")
         pass
 
     def test_gr_room_uses_luxord_msn_when_replaced(self):
         # gr room should still work for luxord
+        options = {"selected_boss": "Luxord"}
+        randomization = testutils.generateSeed(options)
+        assert randomization["msn_map"]["CA01_MS204"]["name"] == "EH14_MS103"
+        0/0
         pass
 
     def test_gr_2_vanilla_works_one_to_one(self):
         # gr 2 when vanilla has no customizations applied
+        # Needs the ability to pass in a custom One to One boss replacements list
         pass
 
     def test_gr_2_vanilla_works_wild(self):
@@ -470,7 +492,7 @@ class Tests(unittest.TestCase):
 ut = Tests()
 #ut.test_seedgen_enemy_one_to_one_other()
 #ut.test_seedgen_enemy_wild_other()
-ut.test_seedgen_enemy_one_to_one_room_nightmare()
+ut.test_gr_room_uses_luxord_msn_when_replaced()
 
 # Uncomment to run the actual tests
 #unittest.main()

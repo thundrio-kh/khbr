@@ -21,10 +21,14 @@ class AreaDataProgram:
         return smap
     def has_command(self, command):
         return command in self.map
-    def get_command(self, command):
+    def get_command(self, command, return_all=False):
+        values = []
         if self.has_command(command):
-            return self.lines[self.map[command][0]].replace(command, "").strip()
-        return ""
+            for l in self.map[command]:
+                values.append(self.lines[l].replace(command, "").strip())
+        if return_all:
+            return values
+        return values[0] if values else ""
     def add_command(self, command, parameters):
         '''command is a word, parameters is a string'''
         '''adds not SetX comma'''

@@ -6,8 +6,8 @@ class CutsceneRemover:
         self.assetgenerator = assetgenerator
         self.location_manager = assetgenerator.location_manager
         self.level = {
-            "Disabled": 0,
-            "Maximum": 1
+            'False': 0,
+            'True': 1
         }[mode]
         self.cutscenes = {
             "0frame": open(os.path.join(os.path.dirname(__file__), "data", "bin", "0frame.event"), "rb").read(), # For everything else
@@ -55,17 +55,18 @@ class CutsceneRemover:
             if program in self.always_remove[ard]:
                 return True
         return True
-    def get_cutscene_name(self, program, eventnum):
+    def get_cutscene_name(self, program, eventnum, eventtype):
         if eventnum in self.set_cutscene_for_event:
             return self.set_cutscene_for_event[eventnum]
         if program.has_command("SetInventory"):
             return "10frame"
         if program.has_command("SetMember"):
             return "6frame"
-        if "Type 67" in program.get_command("SetEvent"):
+        if int(eventtype) == 67:
             return "6frame"
-        if "FadeType 16386" in program.get_command("SetJump"):
-            return "6frame" # TODO I think changing the fadetype would be key to stopping the random flashes and also making everything a 0 frame, something to mess with at a later time
+        for jump in program.get_command("SetJump", return_all=True):
+            if "FadeType 16386" in jump:
+                return "6frame" # TODO I think changing the fadetype would be key to stopping the random flashes and also making everything a 0 frame, something to mess with at a later time
         return "0frame"
     # Another TODO: Write logic to main a list to reference of all the chains of cutscenes, and if they were going to be rewritten what flags/etc would be used
     def removeCutscenes(self):
@@ -97,25 +98,27 @@ class CutsceneRemover:
                 hascs = evtprogram.has_command("SetEvent")
                 if not hascs:
                     continue
-                eventinfo = evtprogram.get_command("SetEvent").split(" ")
-                eventtype = eventinfo[-1]
-                eventnum = eventinfo[0].replace('"', '')
-                if eventnum not in mapping:
-                    mapping[eventnum] = set()
-                mapping[eventnum].add(eventtype)
-                if hasbattle:
-                    btlprogram = btlscript.get_program(num)
-                    ismission = bool(btlprogram.get_mission()) if btlprogram else False
-                else:
-                    ismission = False
-                removecs = self.shouldRemove(ardname, num, ismission, eventnum, eventtype)
-                if removecs:
-                    new_cutscene_name = self.get_cutscene_name(evtprogram, eventnum)
-                    new_cutscene = self.cutscenes[new_cutscene_name]
-                    print(ardname,eventnum,new_cutscene_name)
-                    # TODO should not be creating hundreds of duplicate event files
-                    eventasset = self.assetgenerator.modwriter.writeEvent(ardname, str(eventnum), new_cutscene)
-                    ardasset["source"].append(eventasset)
+                events_list = evtprogram.get_command("SetEvent", return_all=True)
+                for eventinfo in events_list:
+                    eventinfo = evtprogram.get_command("SetEvent").split(" ")
+                    eventtype = eventinfo[-1]
+                    eventnum = eventinfo[0].replace('"', '')
+                    if eventnum not in mapping:
+                        mapping[eventnum] = set()
+                    mapping[eventnum].add(eventtype)
+                    if hasbattle:
+                        btlprogram = btlscript.get_program(num)
+                        ismission = bool(btlprogram.get_mission()) if btlprogram else False
+                    else:
+                        ismission = False
+                    removecs = self.shouldRemove(ardname, num, ismission, eventnum, eventtype)
+                    if removecs:
+                        new_cutscene_name = self.get_cutscene_name(evtprogram, eventnum, eventtype)
+                        new_cutscene = self.cutscenes[new_cutscene_name]
+                        #print(ardname,eventnum,new_cutscene_name)
+                        # TODO should not be creating hundreds of duplicate event files
+                        eventasset = self.assetgenerator.modwriter.writeEvent(ardname, str(eventnum), new_cutscene)
+                        ardasset["source"].append(eventasset)
             # This isn't getting picked up atm because my areadataprogram parser only parses the first areadatasettings in a program
             # so hack with a TODO to fix
             if "tt04" in ardasset["name"]:
@@ -123,11 +126,11 @@ class CutsceneRemover:
                 ardasset["source"].append(eventasset)
                 eventasset = self.assetgenerator.modwriter.writeEvent("tt04", str(111), self.cutscenes["0frame"])
                 ardasset["source"].append(eventasset)
-        l = []
-        for k,v in mapping.items():
-            if v == {'66'}:
-                l.append(k)
-        print(l)
+        # l = []
+        # for k,v in mapping.items():
+        #     if v == {'66'}:
+        #         l.append(k)
+        #print(l)
 
 # 2 issues
 # ard.ard
