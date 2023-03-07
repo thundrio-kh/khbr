@@ -34,7 +34,7 @@ class CutsceneRemover:
         self.always_remove = {
         }
         self.unskippable = []
-    def shouldRemove(self, ard, program, ismission, eventnum, eventtype):
+    def shouldRemove(self, ard, program, ismission, eventnum, eventtype, full_event_list):
         if ard[:2] in self.ignore_worlds:
             return False
         if ard in self.ignore_ards:
@@ -49,8 +49,13 @@ class CutsceneRemover:
             return False
         if eventnum in self.only_type_66_cutscenes:
             return True
-        if eventtype == "66": # Is theater cutscene can ignore
-            return False
+        if eventtype == "66":
+            # if found this is theater cutscene can ignore
+            for evinfo in full_event_list:
+                ev_num = evinfo[-1]
+                ev_type = evinfo[0].replace('"', '')
+                if ev_num == eventnum and int(ev_type) != 66:
+                    return False
         if ard in self.always_remove:
             if program in self.always_remove[ard]:
                 return True
@@ -62,6 +67,8 @@ class CutsceneRemover:
             return "10frame"
         if program.has_command("SetMember"):
             return "6frame"
+        if int(eventtype) == 66:
+            return "6frame" # I think this would also be fixed with a fadetype change
         if int(eventtype) == 67:
             return "6frame"
         for jump in program.get_command("SetJump", return_all=True):
@@ -100,7 +107,7 @@ class CutsceneRemover:
                     continue
                 events_list = evtprogram.get_command("SetEvent", return_all=True)
                 for eventinfo in events_list:
-                    eventinfo = evtprogram.get_command("SetEvent").split(" ")
+                    eventinfo = eventinfo.split(" ")
                     eventtype = eventinfo[-1]
                     eventnum = eventinfo[0].replace('"', '')
                     if eventnum not in mapping:
@@ -111,11 +118,11 @@ class CutsceneRemover:
                         ismission = bool(btlprogram.get_mission()) if btlprogram else False
                     else:
                         ismission = False
-                    removecs = self.shouldRemove(ardname, num, ismission, eventnum, eventtype)
+                    removecs = self.shouldRemove(ardname, num, ismission, eventnum, eventtype, events_list)
                     if removecs:
                         new_cutscene_name = self.get_cutscene_name(evtprogram, eventnum, eventtype)
                         new_cutscene = self.cutscenes[new_cutscene_name]
-                        #print(ardname,eventnum,new_cutscene_name)
+                        print(ardname,eventnum,new_cutscene_name)
                         # TODO should not be creating hundreds of duplicate event files
                         eventasset = self.assetgenerator.modwriter.writeEvent(ardname, str(eventnum), new_cutscene)
                         ardasset["source"].append(eventasset)
