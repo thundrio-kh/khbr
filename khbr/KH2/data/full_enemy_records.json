@@ -11507,7 +11507,6 @@
         ],
         "variations": [
             "Gambler",
-            "Gambler (Summons Darkness)",
             "Gambler (5 0)",
             "Gambler (90 0)",
             "Gambler (99 0)"
@@ -11522,66 +11521,6 @@
         "children": [
             "Gambler"
         ],
-        "msn_required": false,
-        "msn_source_as": null,
-        "aimods": [],
-        "cmdmods": [],
-        "mickey_source": false,
-        "final_fight": false,
-        "can_be_enemy": false,
-        "can_be_enemy_override": false,
-        "msn": null,
-        "size": 0,
-        "room_size": 0,
-        "roommaxsize": null,
-        "blacklist_source": [],
-        "blacklist_destination": [],
-        "whitelist_source": [],
-        "whitelist_destination": [],
-        "adds": [],
-        "sp_ids": [],
-        "subtracts": [],
-        "msn_list": [],
-        "program": null,
-        "roomsizemultiplier": 1,
-        "unchanged_file_size": false,
-        "obj_edits": {},
-        "luamod": null,
-        "roomData": {}
-    },
-    "Gambler (Summons Darkness)": {
-        "enabled": false,
-        "isnightmare": true,
-        "vars": [
-            1,
-            0
-        ],
-        "name": "Gambler (Summons Darkness)",
-        "enmp_index": 49,
-        "hp": 100,
-        "level": 99,
-        "limiter": 17,
-        "model": "M_EX950",
-        "obj_id": 314,
-        "sizeTag": "memoryLarge",
-        "type": "enemy",
-        "tags": [
-            "nobody"
-        ],
-        "variations": [
-            "Gambler",
-            "Gambler (Summons Darkness)",
-            "Gambler (5 0)",
-            "Gambler (90 0)",
-            "Gambler (99 0)"
-        ],
-        "replace_as": null,
-        "source_replace_allowed": true,
-        "msn_replace_allowed": true,
-        "category": "nobody-memoryLarge",
-        "parent": "Gambler",
-        "variationof": null,
-        "children": [],
         "msn_required": false,
         "msn_source_as": null,
         "aimods": [],
@@ -11629,7 +11568,6 @@
         ],
         "variations": [
             "Gambler",
-            "Gambler (Summons Darkness)",
             "Gambler (5 0)",
             "Gambler (90 0)",
             "Gambler (99 0)"
@@ -11689,7 +11627,6 @@
         ],
         "variations": [
             "Gambler",
-            "Gambler (Summons Darkness)",
             "Gambler (5 0)",
             "Gambler (90 0)",
             "Gambler (99 0)"
@@ -11749,7 +11686,6 @@
         ],
         "variations": [
             "Gambler",
-            "Gambler (Summons Darkness)",
             "Gambler (5 0)",
             "Gambler (90 0)",
             "Gambler (99 0)"
@@ -20635,6 +20571,9 @@
             }
         ],
         "enabled": true,
+        "blacklist_source": [
+            "Roxas"
+        ],
         "enmp_index": 130,
         "tags": [
             "solo",
@@ -20671,7 +20610,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -20703,7 +20641,6 @@
             "Pete TR",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Sark",
             "Scar",
             "Seifer",
@@ -21436,10 +21373,8 @@
         "whitelist_source": [
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
-            "Grim Reaper I",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21452,7 +21387,6 @@
             "Seifer",
             "Setzer",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Yuffie"
@@ -21496,7 +21430,6 @@
         "available": [
             "Blizzard Lord",
             "Dark Thorn",
-            "Grim Reaper I",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21554,10 +21487,8 @@
         "whitelist_source": [
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
-            "Grim Reaper I",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21570,7 +21501,6 @@
             "Seifer",
             "Setzer",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Yuffie"
@@ -21655,10 +21585,8 @@
         "whitelist_source": [
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
-            "Grim Reaper I",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21671,7 +21599,6 @@
             "Seifer",
             "Setzer",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Yuffie"
@@ -21754,10 +21681,8 @@
         "whitelist_source": [
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
-            "Grim Reaper I",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21770,7 +21695,6 @@
             "Seifer",
             "Setzer",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Yuffie"
@@ -21854,10 +21778,8 @@
         "whitelist_source": [
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Dark Thorn",
-            "Grim Reaper I",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -21870,7 +21792,6 @@
             "Seifer",
             "Setzer",
             "Tifa",
-            "Twilight Thorn",
             "Vivi",
             "Volcano Lord",
             "Yuffie"

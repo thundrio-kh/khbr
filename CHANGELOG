@@ -3,6 +3,7 @@
 * Removed MCP from being able to be randomized, for the moment
 * Limited the number of locations Jafar can show up in
 * Hades I is no longer randomized, due to a bug where the fight can get stuck in infinite loading
+* Fixed issue with Pirates not being damageable when misc enemies is on
 
 3.0.3
 * Hotfix for Party Member Rando. Also prevent Final Battle Riku object from being used in party member rando (When Riku shows up it will always be world TNTNW Riku)

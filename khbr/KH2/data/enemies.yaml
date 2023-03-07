@@ -2426,13 +2426,13 @@ Gambler:
       vars:
       - 0
       - 0
-    Gambler (Summons Darkness):
-      #TODO I would like these randomized in nightmare mode, but not in normal mode...
-      enabled: false
-      isnightmare: true
-      vars:
-      - 1
-      - 0
+    # Gambler (Summons Darkness):
+    #   #TODO I would like these randomized in nightmare mode, but not in normal mode...
+    #   enabled: false
+    #   isnightmare: true
+    #   vars:
+    #   - 1
+    #   - 0
     Gambler (5 0):
       vars:
       - 5
@@ -4343,6 +4343,8 @@ Riku:
     replacements:
       obj_id: new_boss.obj_id
   enabled: true
+  blacklist_source:
+  - Roxas # Report of softlock here
   enmp_index: 0x82
   tags:
   - solo
@@ -4568,10 +4570,8 @@ Seifer:
   whitelist_source:
   - Axel I
   - Axel II
-  - Barbossa
   - Blizzard Lord
   - Dark Thorn
-  - Grim Reaper I
   - Hades II
   - Hayner
   - Hercules
@@ -4584,7 +4584,6 @@ Seifer:
   - Seifer
   - Setzer
   - Tifa
-  - Twilight Thorn
   - Vivi
   - Volcano Lord
   - Yuffie

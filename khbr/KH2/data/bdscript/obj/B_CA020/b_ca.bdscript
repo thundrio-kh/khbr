@@ -560,11 +560,11 @@ L989:
  pushFromFSp 0
  syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
  pushImm 6
- pushImm 0
+ pushImm 100
  syscall 1, 311 ; trap_sheet_set_element_rate (3 in, 0 out)
  pushFromFSp 0
  pushImm 9
- syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
+ syscall 1, 212 ; trap_obj_pattern_enable (2 in, 0 out)
  jmp L1035
 L1016:
  pushFromFSp 0
