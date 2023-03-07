@@ -247,6 +247,9 @@ class AssetGenerator:
 
             objdir = os.path.join(os.path.dirname(__file__), "data", "bdscript", "obj")
             for modelname in os.listdir(objdir):
+                # ignoring these things that are not enemies (ie sora book or thresholders heartless)
+                if modelname in ["B_BB130", "B_CA000", "B_EX380", "B_EX390", "B_EX410"]:
+                    continue
                 aifiles = [f for f in os.listdir(os.path.join(objdir, modelname)) if "original" not in f]
                 if len(aifiles) != 1:
                     raise Exception("Wrong number of files for {}: {}".format(modelname, len(aifiles)))
