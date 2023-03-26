@@ -444,6 +444,8 @@ class AssetGenerator:
                     continue 
                 if mission == "MU02_MS103B":
                     continue # Ambush has some serious issues related to cost
+                if mission == "HE06_MS101":
+                    continue # Even when hades is vanilla, altering the memory for this can cause some weird infinite load problems that only happen sometimes
                 prg.update_capacity(HARDCAP)
             if self.ispc:
                 prg.add_packet_spec()
