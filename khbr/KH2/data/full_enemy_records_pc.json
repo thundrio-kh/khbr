@@ -7404,6 +7404,7 @@
             "Riku",
             "Blizzard Lord",
             "Volcano Lord",
+            "The Beast",
             "Luxord",
             "Terra"
         ],
@@ -10149,7 +10150,6 @@
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
-            "Storm Rider",
             "Terra",
             "The Beast",
             "The Experiment",
@@ -11918,7 +11918,14 @@
         "source_replace_allowed": false,
         "tags": [
             "gimmick",
-            "needs_teleport"
+            "needs_teleport",
+            "needs_rc"
+        ],
+        "whitelist_destination": [
+            "Armor Xemnas II",
+            "Groundshaker",
+            "Final Xemnas",
+            "Storm Rider"
         ],
         "enmp_index": 141,
         "hp": 100,
@@ -11954,7 +11961,7 @@
         ],
         "replace_as": null,
         "msn_replace_allowed": true,
-        "category": "gimmick-needs_teleport",
+        "category": "gimmick-needs_rc-needs_teleport",
         "isnightmare": false,
         "parent": "MCP",
         "variationof": null,
@@ -11974,7 +11981,6 @@
         "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
-        "whitelist_destination": [],
         "sp_ids": [],
         "subtracts": [],
         "msn_list": [],
@@ -22288,7 +22294,6 @@
             "Setzer",
             "Shadow Stalker",
             "Shan-Yu",
-            "Storm Rider",
             "Terra",
             "The Beast",
             "The Experiment",
@@ -23763,8 +23768,6 @@
             "Dark Thorn",
             "Oogie Boogie",
             "MCP",
-            "Demyx",
-            "Sephiroth",
             "Shadow Stalker",
             "Jafar",
             "Storm Rider",
@@ -24221,7 +24224,6 @@
             "Armor Xemnas II",
             "Axel I",
             "Axel II",
-            "Barbossa",
             "Blizzard Lord",
             "Cloud",
             "Dark Thorn",

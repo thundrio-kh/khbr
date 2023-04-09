@@ -1366,6 +1366,7 @@ Barbossa:
   - Riku # Allegedly doesn't finish the fight if you kill him - Kayya
   - Blizzard Lord # Illuminator doesn't have a fun time here, causing Barbossa to disappear forever - Kayya
   - Volcano Lord # Illuminator doesn't have a fun time here, causing Barbossa to disappear forever - Kayya
+  - The Beast
   blacklist_source:
   - Thresholder # report of fight not ending
   - Larxene # report of fight not ending
@@ -2474,6 +2475,12 @@ MCP:
   tags:
   - gimmick
   - needs_teleport
+  - needs_rc
+  whitelist_destination:
+  - Armor Xemnas II
+  - Groundshaker
+  - Final Xemnas
+  - Storm Rider
   enmp_index: 0x8d
   hp: 100
   level: 99
@@ -5165,8 +5172,6 @@ Storm Rider:
   - Dark Thorn
   - Oogie Boogie
   - MCP
-  - Demyx
-  - Sephiroth
   - Shadow Stalker
   - Jafar
   - Storm Rider
