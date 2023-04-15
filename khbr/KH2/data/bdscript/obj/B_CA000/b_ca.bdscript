@@ -37,7 +37,6 @@ TR1:
  pushFromPWp W4
  gosub 4, L55
  ret 
-
 L55:
  popToSp 0
  pushFromFSp 0
@@ -356,70 +355,53 @@ L192:
  add 
  pushImm 0
  memcpy 0
+ ; this looks like a table of possible positions
  pushFromPWp W4224
- pushImmf 184
- pushImmf -370
- pushImmf 285
+ {setFunction StartPosition}
+ pushImmf {roomData.bossX}
+ pushImmf {roomData.bossY}
+ pushImmf {roomData.bossZ}
+ {endFunction}
  pushImmf 1
  gosub 4, L156
  pushFromPWp W4240
- pushImmf -570
- pushImmf -110
- pushImmf -765
+ gosub 4, FindStartPosition
  pushImmf 1
  gosub 4, L156
  pushFromPWp W4256
- pushImmf -960
- pushImmf -360
- pushImmf 950
+ gosub 4, FindStartPosition
  pushImmf 1
  gosub 4, L156
  pushFromPWp W4272
- pushImmf 1365
- pushImmf -120
- pushImmf 280
+ gosub 4, FindStartPosition
  pushImmf 1
  gosub 4, L156
  pushFromPWp W4288
- pushImmf 1090
- pushImmf -90
- pushImmf -560
+ gosub 4, FindStartPosition
  pushImmf 1
  gosub 4, L156
  pushFromPWp W4304
- pushImmf 370
- pushImmf -140
- pushImmf 1440
+ gosub 4, FindStartPosition
  pushImmf 1
  gosub 4, L156
  pushFromPWp W4320
- pushImmf -340
- pushImmf -270
- pushImmf 1520
+ gosub 4, FindStartPosition
  pushImmf 1
  gosub 4, L156
  pushFromPWp W4336
- pushImmf 440
- pushImmf -460
- pushImmf -1190
+ gosub 4, FindStartPosition
  pushImmf 1
  gosub 4, L156
  pushFromPWp W4352
- pushImmf -80
- pushImmf -670
- pushImmf -1310
+ gosub 4, FindStartPosition
  pushImmf 1
  gosub 4, L156
  pushFromPWp W4368
- pushImmf -1240
- pushImmf -570
- pushImmf -160
+ gosub 4, FindStartPosition
  pushImmf 1
  gosub 4, L156
  pushFromPWp W4384
- pushImmf 920
- pushImmf -390
- pushImmf 1020
+ gosub 4, FindStartPosition
  pushImmf 1
  gosub 4, L156
  pushImmf 0.872665
@@ -1166,7 +1148,7 @@ L2328:
  popToSp 0
  pushFromFSp 0
  pushFromPWp W4448
- syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
+ syscall 1, 148 ; trap obj_set_pos
  pushFromFSp 0
  pushFromFWp W4464
  syscall 1, 1 ; trap_obj_set_rot (2 in, 0 out)
