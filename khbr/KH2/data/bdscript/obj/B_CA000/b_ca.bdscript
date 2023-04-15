@@ -37,6 +37,7 @@ TR1:
  pushFromPWp W4
  gosub 4, L55
  ret 
+
 L55:
  popToSp 0
  pushFromFSp 0
@@ -1165,6 +1166,7 @@ L2328:
  popToSp 0
  pushFromFSp 0
  pushFromPWp W4448
+ syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
  pushFromFSp 0
  pushFromFWp W4464
  syscall 1, 1 ; trap_obj_set_rot (2 in, 0 out)
