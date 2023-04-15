@@ -2725,7 +2725,6 @@ Hades I:
   #     obj_id: new_boss.obj_id
   tags: 
   - needs_invuln
-  source_replace_allowed: false
   variationof: Hades II
   enabled: true
   enmp_index: 18

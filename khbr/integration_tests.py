@@ -384,17 +384,6 @@ class Tests(unittest.TestCase):
             assert msn in randomization2.get("ai_mods")
         pass
 
-    def test_he06_btl_122_should_not_be_edited(self):
-        options ={"enemy": "One to One", "boss": "One to One"}
-        tmppath = testutils.get_tmp_path()
-        modpath = os.path.join(tmppath, "he06test")
-        if os.path.exists(modpath):
-            shutil.rmtree(modpath)
-        rando = Randomizer(tempdir=tmppath, tempfn="he06test", deletetmp=False)
-        b64 = rando.generate_seed("kh2", options=options)
-        assert os.path.exists(modpath)
-        filepath = os.path.join(modpath, "files", "ard", "he06", "btl_112.areadataprogram")
-        assert not os.path.exists(filepath)
 
     def test_gr_room_uses_luxord_msn_when_replaced(self):
         # gr room should still work for luxord
