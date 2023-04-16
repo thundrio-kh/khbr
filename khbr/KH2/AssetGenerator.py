@@ -453,6 +453,7 @@ class AssetGenerator:
             roomsource.append(programasset)
 
     def generateEvt(self, world, room, programnumber, roomsource, options=None):
+        print("DEBUG: making {} {} evt program {} to {}".format(world,room,programnumber,options.get("jump_to")))
         if not options:
             print("Warning: generate_evt not generating anything")
         ardname = world.lower()+room.lower()
@@ -461,16 +462,20 @@ class AssetGenerator:
             script = AreaDataScript(f.read())
         programs_to_edit = script.programs if programnumber=="all" else {programnumber: script.programs[programnumber]}
         for currentprogramnumber, program in programs_to_edit.items():
-            if "jump_to" in options:
-                program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"])
-            if "open_menu" in options:
-                program.set_open_menu(options["open_menu"])
-            if "remove_event" in options:
-                program.remove_event()
-            if "remove_excess_flags"in options:
-                program.remove_command("SetProgressFlag")
-            if "flags" in options:
-                program.set_flags(options["flags"])
-            programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
-            roomsource.append(programasset)
-        
+            try:
+                if not program.has_command("AreaSettings"):
+                    continue
+                if "jump_to" in options:
+                    program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"])
+                if "open_menu" in options:
+                    program.set_open_menu(options["open_menu"])
+                if "remove_event" in options:
+                    program.remove_event()
+                if "remove_excess_flags" in options:
+                    program.remove_command("SetProgressFlag")
+                if "flags" in options:
+                    program.set_flags(options["flags"])
+                programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
+                roomsource.append(programasset)
+            except:
+                print("WARNING: Failed making evt {} for {} {}".format(currentprogramnumber, world, room))        

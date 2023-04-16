@@ -6394,7 +6394,6 @@
         "mickey_source": true,
         "final_fight": true,
         "program": 71,
-        "outprogram": 87,
         "size": 3.82,
         "room_size": 12.98,
         "adds": [
@@ -6664,7 +6663,6 @@
         },
         "msn": "EH23_MS112",
         "program": 73,
-        "outprogram": 84,
         "final_fight": true,
         "size": 1.7,
         "room_size": 9.23,
@@ -7025,7 +7023,7 @@
         "msn": "TT05_MS404",
         "enmp_index": 148,
         "program": 87,
-        "outprogram": 5,
+        "outprogram": 87,
         "room_size": 9.43,
         "size": 2.92,
         "obj_id": 2229,
@@ -7134,7 +7132,6 @@
         "model": "B_EX110",
         "msn": "TT20_MS603",
         "program": 137,
-        "outprogram": 212,
         "room_size": 3.68,
         "size": 3.74,
         "obj_id": 81,
@@ -7400,7 +7397,6 @@
         "msn": "CA10_MS107",
         "msn_source_as": "WI01_MS101",
         "program": 60,
-        "outprogram": 2,
         "size": 3.95,
         "room_size": 11.84,
         "obj_id": 1015,
@@ -7694,7 +7690,6 @@
         "msn": "AL03_MS103",
         "mickey_source": true,
         "program": 59,
-        "outprogram": 3,
         "room_size": 10.32,
         "roommaxsize": 13.36,
         "vars": [
@@ -8155,7 +8150,6 @@
         "msn": "HE07_MS103",
         "mickey_source": true,
         "program": 114,
-        "outprogram": 10,
         "room_size": 10.54,
         "vars": [
             0,
@@ -9197,7 +9191,6 @@
         "model": "B_BB110",
         "msn": "BB05_MS104B",
         "program": 78,
-        "outprogram": 79,
         "size": 4.19,
         "room_size": 14.0,
         "roommaxsize": 17.03,
@@ -9363,8 +9356,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null,
-        "outprogram": 212
+        "luamod": null
     },
     "Demyx (Data)": {
         "vars": [
@@ -12706,6 +12698,8 @@
     },
     "Hayner": {
         "msn": "TT05_MS401",
+        "program": 84,
+        "outprogram": 84,
         "room_size": 11.57,
         "vars": [
             0,
@@ -12796,7 +12790,6 @@
         "sp_ids": [],
         "subtracts": [],
         "msn_list": [],
-        "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "luamod": null,
