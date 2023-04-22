@@ -144,6 +144,7 @@ L252:
  popToSp 4
  popToSp 0
  pushFromFSp 0
+ ; Vector for when repositioning axel after rc is done
  pushImmf 0
  pushImmf 0
  pushImmf 0
@@ -6605,6 +6606,7 @@ L12435:
  pushImm 11
  pushImm 0
  pushImm 0
+ ; fire floor spawned here at least at start
  syscall 1, 21 ; trap_obj_effect_start (4 in, 1 out)
  popToSpVal 76
  pushFromPSpVal 0
@@ -7054,6 +7056,7 @@ L13211:
  jmp L13265
 L13249:
  pushFromPSp 32
+ ; this is designating where the appearing fire pillars go
  pushImmf 0
  pushImmf 0
  pushImmf 0
@@ -7065,6 +7068,7 @@ L13265:
  gosub 16, L13390
  jz L13384
  pushFromPSp 16
+ ; this is designating where the appearing fire pillars go
  pushImmf 0
  pushImmf 0
  pushImmf 0
