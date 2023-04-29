@@ -7417,7 +7417,10 @@
                 "aimods": [
                     {
                         "name": "B_CA000/b_ca.bdscript",
-                        "type": "obj"
+                        "type": "obj",
+                        "replacements": {
+                            "roomData": "old_boss.roomData"
+                        }
                     }
                 ]
             }
@@ -11907,7 +11910,7 @@
         ],
         "name": "MCP",
         "enabled": false,
-        "source_replace_allowed": false,
+        "source_replace_allowed": true,
         "tags": [
             "gimmick",
             "needs_teleport",
@@ -11982,7 +11985,58 @@
         "luamod": null,
         "roomData": {},
         "available": [
-            "MCP"
+            "Armor Xemnas I",
+            "Armor Xemnas II",
+            "Axel I",
+            "Axel II",
+            "Barbossa",
+            "Blizzard Lord",
+            "Cerberus",
+            "Cloud",
+            "Dark Thorn",
+            "Demyx",
+            "Final Xemnas",
+            "MCP",
+            "Grim Reaper I",
+            "Hades II",
+            "Hayner",
+            "Hercules",
+            "Hostile Program",
+            "Jafar",
+            "Larxene",
+            "Leon",
+            "Lexaeus",
+            "Luxord",
+            "Marluxia",
+            "Oogie Boogie",
+            "Past Pete",
+            "Pete TR",
+            "Prison Keeper",
+            "Riku",
+            "Roxas",
+            "Saix",
+            "Sark",
+            "Scar",
+            "Seifer",
+            "Sephiroth",
+            "Setzer",
+            "Shadow Stalker",
+            "Shan-Yu",
+            "Storm Rider",
+            "Terra",
+            "The Beast",
+            "The Experiment",
+            "Thresholder",
+            "Tifa",
+            "Twilight Thorn",
+            "Vexen",
+            "Vivi",
+            "Volcano Lord",
+            "Xaldin",
+            "Xemnas",
+            "Xigbar",
+            "Yuffie",
+            "Zexion"
         ]
     },
     "Graveyard NM": {

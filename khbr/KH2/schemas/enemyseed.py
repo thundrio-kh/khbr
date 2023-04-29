@@ -1,9 +1,10 @@
 from dataclasses import dataclass
+from khbr.KH2.LocationManager import LocationManager
 from khbr.randutils import create_new_entity
 from khbr.KH2.schemas.random_config import RandomConfig
 
 class EnemySeed:
-    def __init__(self, config: RandomConfig):
+    def __init__(self, config: RandomConfig, location_manager: LocationManager):
         self.spawns = {}
         self.subtract_map = {}
         self.spawn_limiters = {}
@@ -16,6 +17,7 @@ class EnemySeed:
         self.cmd_mods = {}
         self.data_replacements = {}
         self.config = config
+        self.location_manager = location_manager
 
         # Temporary option needed during generating wild enemies to track enemies already used per room
         self.wild_enemy_set = set()
@@ -65,7 +67,7 @@ class EnemySeed:
             return # Nothing to do in this case
         self.update_extras(old_boss_object, new_boss_object, world, room, spawnpoint, spid)
         self.update_objentry(new_boss_object)
-        self.update_aimod(old_boss_object, new_boss_object)
+        self.update_aimod(old_boss_object, new_boss_object, worldnum=self.location_manager.get_world_num(room), roomnum=self.location_manager.get_room_num(room))
         self.update_luamod(new_boss_object)
         self.add_cmdmod(new_boss_object)
         if old_boss_object["type"] == "boss":
@@ -148,24 +150,26 @@ class EnemySeed:
     def add_ai(self, mod):
         modname = mod["name"]
         if not modname in self.ai_mods:
-            self.ai_mods[modname] = [mod]
+            self.ai_mods[modname] = [dict(mod)]
         else:
+           
             for ex_mod in self.ai_mods[modname]:
                 if ex_mod == mod:
                     return # Don't add the same mod, but if it's different, add it
+            self.ai_mods[modname].append(dict(mod))
 
-    def update_aimod(self, old_boss_object, new_boss_object):
-
+    def update_aimod(self, old_boss_object, new_boss_object, worldnum=0, roomnum=0):
+        print("Updating:{}".format(self.ai_mods.get('B_CA000/b_ca.bdscript')))
         keys_to_check = {
             "old_boss": old_boss_object,
             "new_boss": new_boss_object
         }
 
-        mods = [mod for mod in new_boss_object.get("aimods", []) if mod.get("source", "new") == "new"]
-        mods += [mod for mod in old_boss_object.get("aimods", []) if mod.get("source", "new") == "old"]
+        mods = [dict(mod) for mod in new_boss_object.get("aimods", []) if mod.get("source", "new") == "new"]
+        mods += [dict(mod) for mod in old_boss_object.get("aimods", []) if mod.get("source", "new") == "old"]
         for add in new_boss_object["adds"]:
-            mods += [mod for mod in add.get("aimods",[]) if mod.get("source", "new") == "new"]
-            mods += [mod for mod in add.get("aimods",[]) if mod.get("source", "old") == "new"]
+            mods += [dict(mod) for mod in add.get("aimods",[]) if mod.get("source", "new") == "new"]
+            mods += [dict(mod) for mod in add.get("aimods",[]) if mod.get("source", "old") == "new"]
 
         for mod in mods:
             vars = mod.get("vars", {})
@@ -178,7 +182,12 @@ class EnemySeed:
                         key = var.split(".")[1]
                         value = keys_to_check[ktc].get(key)
                         vars[var] = value
+
+            vars["world"] = worldnum
+            vars["room"] = roomnum
+
             mod["vars"] = vars
+
             self.add_ai(mod)
 
     def update_luamod(self, new_boss_object):

@@ -205,6 +205,8 @@ class AssetGenerator:
 
     def generateAiMods(self, ai_mods, rvlrando=None):
         created_mods = {}
+
+        # For some reason ai_mods is having multiple entries for aimods that I think should only be filled in once?????
         for name,mods in ai_mods.items():
             print(name,mods)
             for mod in mods:

@@ -1374,6 +1374,8 @@ Barbossa:
     aimods:
     - name: B_CA000/b_ca.bdscript
       type: obj
+      replacements:
+        roomData: old_boss.roomData
   tags:
   - needs_teleport
   enabled: true

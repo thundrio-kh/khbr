@@ -358,9 +358,9 @@ L192:
  ; this looks like a table of possible positions
  pushFromPWp W4224
  {setFunction StartPosition}
- pushImmf {roomData.bossX}
- pushImmf {roomData.bossY}
- pushImmf {roomData.bossZ}
+ pushImmf {roomData.bossX | 0}
+ pushImmf {roomData.bossY - 200 | 0}
+ pushImmf {roomData.bossZ | 0}
  {endFunction}
  pushImmf 1
  gosub 4, L156

@@ -160,7 +160,7 @@ class KingdomHearts2:
         if options.get("selected_boss"):
             config.selected_boss = options["selected_boss"]
 
-        rand_seed = EnemySeed(config=config)
+        rand_seed = EnemySeed(config=config, location_manager=self.location_manager)
         if bossmode or enemymode:
             self.create_seed(rand_seed)
 

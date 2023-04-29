@@ -32,3 +32,33 @@ class LocationManager:
         if "pc" in location and memory_expansion:
             for k in location["pc"]:
                 location[k] = location["pc"][k]
+
+    def get_world_num(self, roomname):
+        ardname = self.locmap[roomname]
+        world = ardname[:2]
+        return {
+            "ES": "01",
+            "TT": "02",
+            "DI": "03",
+            "HB": "04",
+            "BB": "05",
+            "HE": "06",
+            "AL": "07",
+            "MU": "08",
+            "PO": "09",
+            "LK": "10",
+            "LM": "11",
+            "DC": "12",
+            "WI": "13",
+            "NM": "14",
+            "WM": "15",
+            "CA": "16",
+            "TR": "17",
+            "EH": "18"
+        }[world.upper()]
+
+
+    def get_room_num(self, roomname):
+        ardname = self.locmap[roomname]
+        room = ardname[2:]
+        return room
