@@ -29,16 +29,20 @@ class AreaDataProgram:
         if return_all:
             return values
         return values[0] if values else ""
-    def add_command(self, command, parameters):
+    def add_command(self, command, parameters, set_for_settings=None):
         '''command is a word, parameters is a string'''
         '''adds not SetX comma'''
         newline = "{} {}".format(command, parameters)
         if command.startswith("Set"):
             newline = "\t"+newline
         if self.has_command(command):
-            if len(self.map[command]) > 1:
-                raise Exception ("Updating AreaDataPrograms with 2 or more of a command is not implemented")
-            self.lines[self.map[command][0]] = newline
+            change_lines = self.map[command]
+            if set_for_settings:
+                change_lines = []
+                for i in set_for_settings:
+                    change_lines.append(self.map[command][i])
+            for l in change_lines:
+                self.lines[l] = newline
         else:
             if not command.startswith("Set"):
                 # There might be something here where you need to find the first empty line and add before that
@@ -73,11 +77,11 @@ class AreaDataProgram:
             self.remove_command("Capacity")
         elif capacity:
             self.add_command("Capacity", str(capacity))
-    def set_jump(self, world, room, program, fadetype="16386", jumptype="2", entrance="0"):
+    def set_jump(self, world, room, program, fadetype="16386", jumptype="2", entrance="0", set_for_settings=None):
         # TODO make this print a warning and not do anything if there is no existing jump
         parameters = "Type {} World {} Area {} Entrance {} LocalSet {} FadeType {}".format(jumptype, world, room, entrance, program, fadetype)
         if self.has_command("SetJump"):
-            self.add_command("SetJump", parameters)
+            self.add_command("SetJump", parameters, set_for_settings)
         else:
             print("Trying to SetJump on a program that does not have one is not allowed")
     def set_open_menu(self, open_menu):

@@ -292,16 +292,95 @@ AreaSettings 76 -1
                 if l in events_list_copy[e]:
                     found += 1
         assert found == 4
+    def test_setup_multiple_jumps(self):
+        prg = """Program 0x54
+Bgm 119 119
+AreaSettings 8 -1
+	SetProgressFlag 0x85A
+	SetUnk05 0x3
+	SetJump Type 1 World TT Area 5 Entrance 51 LocalSet 0 FadeType 1
+	SetPartyMenu 0
+
+AreaSettings 7 -1
+	SetProgressFlag 0x85B
+	SetUnk05 0x3
+	SetEvent "406" Type 19
+	SetJump Type 1 World TT Area 5 Entrance 52 LocalSet 0 FadeType 1
+	SetPartyMenu 0"""
+        
+        adp = AreaDataProgram(prg.split("\n"))
+        output = adp.make_program()
+        assert output == prg
+        adp.set_jump(world="AA", room="01", program="02", fadetype="03", jumptype="04", entrance="05")
+        output = adp.make_program()
+        assert output.split("\n") == [
+            "Program 0x54",
+            "Bgm 119 119",
+            "AreaSettings 8 -1",
+            "\tSetProgressFlag 0x85A",
+            "\tSetUnk05 0x3",
+            "\tSetJump Type 04 World AA Area 01 Entrance 05 LocalSet 02 FadeType 03",
+            "\tSetPartyMenu 0",
+            "",
+            "AreaSettings 7 -1",
+            "\tSetProgressFlag 0x85B",
+            "\tSetUnk05 0x3",
+            "\tSetEvent \"406\" Type 19",
+            "\tSetJump Type 04 World AA Area 01 Entrance 05 LocalSet 02 FadeType 03",
+            "\tSetPartyMenu 0"
+        ]
+        
+        adp = AreaDataProgram(prg.split("\n"))
+        adp.set_jump(world="AA", room="01", program="02", fadetype="03", jumptype="04", entrance="05", set_for_settings=[0])
+        
+        output = adp.make_program()
+        assert output.split("\n") == [
+            "Program 0x54",
+            "Bgm 119 119",
+            "AreaSettings 8 -1",
+            "\tSetProgressFlag 0x85A",
+            "\tSetUnk05 0x3",
+            "\tSetJump Type 04 World AA Area 01 Entrance 05 LocalSet 02 FadeType 03",
+            "\tSetPartyMenu 0",
+            "",
+            "AreaSettings 7 -1",
+            "\tSetProgressFlag 0x85B",
+            "\tSetUnk05 0x3",
+            "\tSetEvent \"406\" Type 19",
+            "\tSetJump Type 1 World TT Area 5 Entrance 52 LocalSet 0 FadeType 1",
+            "\tSetPartyMenu 0"
+        ]
+
+        adp = AreaDataProgram(prg.split("\n"))
+        adp.set_jump(world="AA", room="01", program="02", fadetype="03", jumptype="04", entrance="05", set_for_settings=[1])
+        
+        output = adp.make_program()
+        assert output.split("\n") == [
+            "Program 0x54",
+            "Bgm 119 119",
+            "AreaSettings 8 -1",
+            "\tSetProgressFlag 0x85A",
+            "\tSetUnk05 0x3",
+            "\tSetJump Type 1 World TT Area 5 Entrance 51 LocalSet 0 FadeType 1",
+            "\tSetPartyMenu 0",
+            "",
+            "AreaSettings 7 -1",
+            "\tSetProgressFlag 0x85B",
+            "\tSetUnk05 0x3",
+            "\tSetEvent \"406\" Type 19",
+            "\tSetJump Type 04 World AA Area 01 Entrance 05 LocalSet 02 FadeType 03",
+            "\tSetPartyMenu 0"
+        ]
 
 # There are a few programs with more than one area settings (I wonder how many?), and I'm not parsing those correctly
 
 # TODO in order to support "chain logic" of removing cutscenes, I'll need to implement additions to add_command
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_get_multi_settings_program()
+#ut.test_setup_multiple_jumps()
 #ut.test_set_jump()
 #ut.test_set_open_menu()
 
 
 # Uncomment to run the actual tests
-#unittest.main()
+unittest.main()
