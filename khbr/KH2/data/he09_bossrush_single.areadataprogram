@@ -1,0 +1,8 @@
+Program 0xC4
+Party DEFAULT
+MapVisibility 0x00000085 0x20000000
+BarrierFlag 0x0 0x20000000
+BattleLevel 30
+Spawn "b_z1"
+Spawn "b_b0"
+Mission 0x192 "HE_COL_2_10"

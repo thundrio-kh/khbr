@@ -1611,16 +1611,19 @@ Cerberus:
       # tags:
       # - cups
       enabled: true
-      msn_list:
-      - program: 194
-        msn: HE_COL_2_10
-        room_size: 6.19
-      - program: 196
-        msn: HE_COLOSSEUM_8_ONLY
-        room_size: 9.14
-      - program: 190
-        msn: HE_COL_2_10
-        room_size: 6.19
+      program: 190
+      # TODO This was working so maybe commenting the msn_list broke something but cups haven't had too much testing
+      msn: HE_COL_2_10
+      # msn_list:
+      # - program: 194
+      #   msn: HE_COL_2_10
+      #   room_size: 6.19
+      # - program: 196
+      #   msn: HE_COLOSSEUM_8_ONLY
+      #   room_size: 9.14
+      # - program: 190
+      #   msn: HE_COL_2_10
+      #   room_size: 6.19
       msn_replace_allowed: false
       vars:
       - 1
@@ -2098,7 +2101,6 @@ Demyx:
       - 0
 Demyx OC:
   enabled: false
-  source_replace_allowed: false # softlock on fade to white
   hp: 100
   level: 99
   limiter: 0
@@ -2719,6 +2721,7 @@ Hades I:
   tags: 
   - needs_invuln
   variationof: Hades II
+  msn_replace_allowed: false
   enabled: true
   enmp_index: 18
   hp: 100
@@ -2726,6 +2729,7 @@ Hades I:
   limiter: 34
   model: B_HE030_PART
   msn: HE06_MS101
+  program: 112
   obj_id: 349
   replace_as: Hades Cups
   type: boss
@@ -2778,6 +2782,7 @@ Hades II:
         bossZ: -800
       enabled: true
       msn_replace_allowed: true
+      program: 202
       msn: HE19_MS205
       # msn_list:
       # - program: 201

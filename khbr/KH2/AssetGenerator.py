@@ -453,7 +453,7 @@ class AssetGenerator:
             roomsource.append(programasset)
 
     def generateEvt(self, world, room, programnumber, roomsource, options=None):
-        print("DEBUG: making {} {} evt program {} to {}".format(world,room,programnumber,options.get("jump_to")))
+        #print("DEBUG: making {} {} evt program {} to {}".format(world,room,programnumber,options.get("jump_to")))
         if not options:
             print("Warning: generate_evt not generating anything")
         ardname = world.lower()+room.lower()
@@ -466,7 +466,7 @@ class AssetGenerator:
                 if not program.has_command("AreaSettings"):
                     continue
                 if "jump_to" in options:
-                    program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"])
+                    program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"], set_for_settings=options["jump_to"].get("set_for_settings", None))
                 if "open_menu" in options:
                     program.set_open_menu(options["open_menu"])
                 if "remove_event" in options:

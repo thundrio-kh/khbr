@@ -1,5 +1,6 @@
 import shutil
 import time, json, os, random, yaml
+from khbr.KH2.AreaDataScript import AreaDataScript
 from khbr.KH2.AssetGenerator import AssetGenerator
 from khbr.KH2.KingdomHearts2 import KingdomHearts2
 from khbr.KH2.ModWriter import ModWriter
@@ -12,11 +13,10 @@ IGNORE_BOSSES = ["Scar Ghost", "Lock", "Shock", "Barrel", "Shadow Roxas", "Shenz
 "Cerberus (Cups)", "Blizzard Lord (Cups)", "Volcano Lord (Cups)", "Leon", "Leon (1)", "Leon (2)", "Leon (3)",
 "Cloud", "Cloud (1)", "Cloud (2)", "Cloud (3)", "Yuffie", "Yuffie (1)", "Yuffie (2)", "Yuffie (3)",
 "Tifa", "Tifa (1)", "Tifa (2)", "Tifa (3)",
-"Hades II", "Hades", # Not sure but uggg
 "Hades Cups", "Pete Cups", "Cerberus Cups", "Blizzard Lord Cups", "Volcano Lord Cups",
 
 # Missing Program
-"Hades I", "Hades II (1)", "Hercules", "Illuminator", "Setzer",
+"Hercules", "Illuminator", "Setzer",
 
 # Also for now get rid of the TT04 and TT05 bosses it's confusing
 "Seifer", "Seifer (2)", "Seifer (3)", "Seifer (4)", "Vivi",
@@ -30,47 +30,47 @@ ITEMS = {'Potion': '1', 'Hi-Potion': '2', 'Ether': '3', 'Elixir': '4', 'Mega-Pot
 # need to apply better STT
 # starting abilities should be able to be equipped
 # need 9 drives
+# blank out all the get bonuses
 # all levels need the same stat values
-# Need to be able to properly parse programs with multiple areadatasettings
 
 ROUTES = {
     "compatability-test": [
         "Armor Xemnas I",
         "Armor Xemnas II",
-        "Axel I", # Sent me to  Hostile Program
+        "Axel I",
         "Axel II",
         "Barbossa", 
-        #"Cerberus", # crash on unpause
-        #"Cerberus (Cups)", # Not in list....
+        "Cerberus",
+        "Cerberus (Cups)",
         "Dark Thorn",
         "Demyx",
-        "Demyx OC", # Not replaced by pete
+        "Demyx OC", # Infinite load end of fight
         "Final Xemnas",
         "Grim Reaper I",
         "Grim Reaper II",
-        "Groundshaker", # NOW NO LONGER LOADING Pete is slightly in the ground, took me to a empty cup room
-        #"Hades I", # Not in the list
-        #"Hades Escape", # crashes in menu
-        #"Hades II", # not in list
-        #"Hayner", Need to properly parse a program with 2 areadatasettings in order to work (1 is for winning 1 is for losing I'm positive)
-        "Hostile Program",
+        "Groundshaker", # Pete is slightly in the ground
+        "Hades I", 
+        "Hades Escape", # Pete can die
+        "Hades II (1)",
+        "Hayner",
+        "Hostile Program", 
         "Hydra",
         "Jafar", # pete falls forever
         "Larxene",
         "Luxord",
         "Marluxia",
-        "MCP", # MCP not replaced
+        "MCP", # MCP object is still in the room
         "Oogie Boogie",
         "Past Pete",
         "Pete OC II",
-        "Pete TR", # Pete ally didn't do anything
+        "Pete TR",
         "Prison Keeper",
         "Riku",
         "Roxas",
         "Saix",
         "Sark",
         "Scar",
-        "Seifer (1)", # doesn't jump
+        "Seifer (1)",
         "Sephiroth",
         "Shan-Yu",
         "Storm Rider",
@@ -321,7 +321,8 @@ def main(cli_args: list=[]):
             print("Warning setting program to 0 for {}".format(current_boss))
         asset = findRoomSource(modyml["assets"], world, room)
         print("Making evt to jump to {}".format(new_boss["name"]))
-        assetgenerator.generateEvt(world, room, current_boss.get("outprogram") or "all", asset["source"], options={"remove_event": True, "jump_to":{"world": newworld, "room": newroom, "program": newprogram}, "open_menu":open_menu_before_each_fight, "remove_event":True})
+        set_for_settings = [1] if current_boss.get("name") in ["Hayner", "Vivi", "Setzer"] else None
+        assetgenerator.generateEvt(world, room, current_boss.get("outprogram") or "all", asset["source"], options={"remove_event": True, "jump_to":{"world": newworld, "room": newroom, "program": newprogram, "set_for_settings": set_for_settings}, "open_menu":open_menu_before_each_fight, "remove_event":True})
         world = newworld
         room = newroom
         program = newprogram
@@ -329,6 +330,19 @@ def main(cli_args: list=[]):
     
     asset = findRoomSource(modyml["assets"], world, room)
     assetgenerator.generateEvt(world, room, "all", asset["source"], options={"remove_event": True, "jump_to":{"world": "ES", "room": "00", "program": 69}})
+
+    # Need a special battle to make a colloseum boss rush battle work
+    # TODO this won't work super well for generic boss rush, only for compatability testing
+    asset = findRoomSource(modyml["assets"], "HE", "09")
+    asset["source"] = [s for s in asset["source"] if not s["method"] == "copy"]
+    new_program_text = open(os.path.join(os.path.dirname(__file__), "KH2", "data", "he09_bossrush_single.areadataprogram")).read()
+    he_script = AreaDataScript(new_program_text, ispc=args.platform == "pc")
+    he_prg = he_script.programs[0xc4]
+    if args.platform == "pc":
+        he_prg.add_packet_spec()
+        he_prg.add_enemy_spec()
+    programasset = assetgenerator.modwriter.writeAreaDataProgram("he09", "btl", 0xc4, he_prg.make_program())
+    asset["source"].append(programasset)
 
     yaml.dump(modyml, open(modyml_fn, "w"))
 
