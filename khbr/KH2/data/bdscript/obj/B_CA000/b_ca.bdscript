@@ -1,5 +1,5 @@
 ---
-WorkSize: 4496
+WorkSize: 4512
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -15,6 +15,22 @@ Name: b_ca000
 ; codeLabels: 
 ; codeRevealer: -l 100 -l 1208 -l 1289 -l 1290 -l 1307 -l 1312 -l 1327 -l 1435 -l 1501 -l 1567 -l 1626 -l 1659 -l 1669 -l 2423 -l 2455 -l 2469 -l 2550 -l 2747 -l 2754 -l 3290 -l 3305 -l 3402
  section .text
+GETRANDOMAIR:
+ pushFromPWp WBARBOSSA
+ pushImm 358
+ syscall 1, 114
+ pushFromPWp WBARBOSSA
+ syscall 1, 147 ; get pos
+ memcpyToSp 16, 48
+ pushFromPSp 48
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ pushImmf 1000 ; near
+ pushImmf 1000 ; far
+ pushImmf 0 ; low
+ pushImmf 300 ; high
+ syscall 1, 248 ; trap_bg_get_random_pos_air
+ ret
 TR6:
  popToSp 0
  pushFromPWp W4
@@ -37,6 +53,7 @@ TR1:
  pushFromPWp W4
  gosub 4, L55
  ret 
+
 L55:
  popToSp 0
  pushFromFSp 0
@@ -77,7 +94,7 @@ L101:
  pushImmf 0
  pushImmf 0
  pushImmf 1
- gosub 16, L156
+ gosub 16, MAKEVECTOR
  pushFromFSp 0
  pushFromPSp 32
  pushFromFSp 16
@@ -93,7 +110,7 @@ L101:
  pushFromFSp 12
  memcpy 0
  ret 
-L156:
+MAKEVECTOR:
  popToSp 4
  popToSp 8
  popToSp 12
@@ -107,6 +124,14 @@ L156:
  popToSpVal 8
  pushFromFSp 4
  popToSpVal 12
+ ret 
+ ret 
+MAKEVECTORO:
+ ; This is almost working, but I'm getting a blank vector.... I wonder....
+ popToSp 4 ; this is pretty obviously reversing the stack order
+ popToSp 0
+ pushFromFSp 4
+ popToSpVal 0
  ret 
 TR0:
  popToSp 0
@@ -355,56 +380,63 @@ L192:
  add 
  pushImm 0
  memcpy 0
- ; this looks like a table of possible positions
- pushFromPWp W4224
- {setFunction StartPosition}
- pushImmf {roomData.bossX}
- pushImmf {roomData.bossY}
- pushImmf {roomData.bossZ}
- {endFunction}
- pushImmf 1
- gosub 4, L156
- pushFromPWp W4240
- gosub 4, FindStartPosition
- pushImmf 1
- gosub 4, L156
- pushFromPWp W4256
- gosub 4, FindStartPosition
- pushImmf 1
- gosub 4, L156
- pushFromPWp W4272
- gosub 4, FindStartPosition
- pushImmf 1
- gosub 4, L156
- pushFromPWp W4288
- gosub 4, FindStartPosition
- pushImmf 1
- gosub 4, L156
- pushFromPWp W4304
- gosub 4, FindStartPosition
- pushImmf 1
- gosub 4, L156
- pushFromPWp W4320
- gosub 4, FindStartPosition
- pushImmf 1
- gosub 4, L156
- pushFromPWp W4336
- gosub 4, FindStartPosition
- pushImmf 1
- gosub 4, L156
- pushFromPWp W4352
- gosub 4, FindStartPosition
- pushImmf 1
- gosub 4, L156
- pushFromPWp W4368
- gosub 4, FindStartPosition
- pushImmf 1
- gosub 4, L156
- pushFromPWp W4384
- gosub 4, FindStartPosition
- pushImmf 1
- gosub 4, L156
+ pushFromPWp WPOS1
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS1
+ pushFromPWp WPOS2
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS2
+ pushFromPWp WPOS3
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS3
+ pushFromPWp WPOS4
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS4
+ pushFromPWp WPOS5
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS5
+ pushFromPWp WPOS6
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS6
+ pushFromPWp WPOS7
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS7
+ pushFromPWp WPOS8
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS8
+ pushFromPWp WPOS9
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS9
+ pushFromPWp WPOS10
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS10
+ pushFromPWp WPOS11
+ gosub 4, GETRANDOMAIR
+ memcpyToSp 16, 16
+ pushFromPSp 16
+ memcpyToWp 16, WPOS11
  pushImmf 0.872665
+
  popToWp W4400
  pushImmf 2.321288
  popToWp W4404
@@ -848,7 +880,7 @@ L1792:
  jz L1807
  jmp L1818
 L1807:
- pushFromPWp W4240
+ pushFromPWp WPOS2
  memcpyToWp 16, W4448
  pushFromFWp W4400
  popToWp W4464
@@ -860,7 +892,7 @@ L1818:
  jz L1827
  jmp L1838
 L1827:
- pushFromPWp W4256
+ pushFromPWp WPOS3
  memcpyToWp 16, W4448
  pushFromFWp W4404
  popToWp W4464
@@ -872,7 +904,7 @@ L1838:
  jz L1847
  jmp L1858
 L1847:
- pushFromPWp W4272
+ pushFromPWp WPOS4
  memcpyToWp 16, W4448
  pushFromFWp W4408
  popToWp W4464
@@ -884,7 +916,7 @@ L1858:
  jz L1867
  jmp L1878
 L1867:
- pushFromPWp W4288
+ pushFromPWp WPOS5
  memcpyToWp 16, W4448
  pushFromFWp W4412
  popToWp W4464
@@ -896,7 +928,7 @@ L1878:
  jz L1887
  jmp L1898
 L1887:
- pushFromPWp W4304
+ pushFromPWp WPOS6
  memcpyToWp 16, W4448
  pushFromFWp W4416
  popToWp W4464
@@ -908,7 +940,7 @@ L1898:
  jz L1907
  jmp L1918
 L1907:
- pushFromPWp W4320
+ pushFromPWp WPOS7
  memcpyToWp 16, W4448
  pushFromFWp W4420
  popToWp W4464
@@ -920,7 +952,7 @@ L1918:
  jz L1927
  jmp L1938
 L1927:
- pushFromPWp W4336
+ pushFromPWp WPOS8
  memcpyToWp 16, W4448
  pushFromFWp W4424
  popToWp W4464
@@ -932,7 +964,7 @@ L1938:
  jz L1947
  jmp L1958
 L1947:
- pushFromPWp W4352
+ pushFromPWp WPOS9
  memcpyToWp 16, W4448
  pushFromFWp W4428
  popToWp W4464
@@ -944,7 +976,7 @@ L1958:
  jz L1967
  jmp L1978
 L1967:
- pushFromPWp W4368
+ pushFromPWp WPOS10
  memcpyToWp 16, W4448
  pushFromFWp W4432
  popToWp W4464
@@ -956,7 +988,7 @@ L1978:
  jz L1987
  jmp L1998
 L1987:
- pushFromPWp W4384
+ pushFromPWp WPOS11
  memcpyToWp 16, W4448
  pushFromFWp W4436
  popToWp W4464
@@ -981,7 +1013,7 @@ L2000:
  syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
  memcpyToSp 16, 64
  pushFromPSp 64
- pushFromPWp W4224
+ pushFromPWp WPOS1
  syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
  memcpyToSp 16, 80
  pushFromPSp 80
@@ -992,7 +1024,7 @@ L2000:
  pushImmf 0
  memcpy 0
  pushFromPWp W4448
- pushFromPWp W4224
+ pushFromPWp WPOS1
  syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
  memcpyToSp 16, 64
  pushFromPSp 64
@@ -1148,7 +1180,7 @@ L2328:
  popToSp 0
  pushFromFSp 0
  pushFromPWp W4448
- syscall 1, 148 ; trap obj_set_pos
+ syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
  pushFromFSp 0
  pushFromFWp W4464
  syscall 1, 1 ; trap_obj_set_rot (2 in, 0 out)
@@ -1390,7 +1422,10 @@ L2747: ;___callback for action pushFromPAi L3688 ; ___ai footwork
 L2754: ;___label for action pushFromPAi L3718 ; ___ai appear
  popToSp 0
  pushFromFSp 0
- pushFromPWp W4224
+ pushFromPWp WPOS1
+ dup
+ pushFromPAi SAMDEBUG
+ syscall 0, 8
  syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
  pushFromFSp 0
  fetchValue 4
@@ -1984,6 +2019,8 @@ L3867:
 TXT3873:
 L3873:
  db 'rst_hard',0,0
+SAMDEBUG:
+ db 'samdebug',0,0
 
  section .bss
 W0:
@@ -1992,27 +2029,27 @@ W4:
  resb 112
 W116:
  resb 4108
-W4224:
+WPOS1:
  resb 16
-W4240:
+WPOS2:
  resb 16
-W4256:
+WPOS3:
  resb 16
-W4272:
+WPOS4:
  resb 16
-W4288:
+WPOS5:
  resb 16
-W4304:
+WPOS6:
  resb 16
-W4320:
+WPOS7:
  resb 16
-W4336:
+WPOS8:
  resb 16
-W4352:
+WPOS9:
  resb 16
-W4368:
+WPOS10:
  resb 16
-W4384:
+WPOS11:
  resb 16
 W4400:
  resb 4
@@ -2046,3 +2083,5 @@ W4472:
  resb 4
 W4476:
  resb 20
+WBARBOSSA:
+ resb 16
