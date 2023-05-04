@@ -32,6 +32,7 @@ ITEMS = {'Potion': '1', 'Hi-Potion': '2', 'Ether': '3', 'Elixir': '4', 'Mega-Pot
 # need 9 drives
 # blank out all the get bonuses
 # all levels need the same stat values
+# debug infinite HP option
 
 ROUTES = {
     "compatability-test": [
@@ -62,7 +63,7 @@ ROUTES = {
         "MCP", # MCP object is still in the room
         "Oogie Boogie",
         "Past Pete",
-        "Pete OC II",
+        "Pete OC II", # just double check the timer starts here
         "Pete TR",
         "Prison Keeper",
         "Riku",
@@ -331,6 +332,8 @@ def main(cli_args: list=[]):
     asset = findRoomSource(modyml["assets"], world, room)
     assetgenerator.generateEvt(world, room, "all", asset["source"], options={"remove_event": True, "jump_to":{"world": "ES", "room": "00", "program": 69}})
 
+    data_folder = os.path.join(os.path.dirname(__file__), "KH2", "data")
+
     # Need a special battle to make a colloseum boss rush battle work
     # TODO this won't work super well for generic boss rush, only for compatability testing
     asset = findRoomSource(modyml["assets"], "HE", "09")
@@ -343,6 +346,11 @@ def main(cli_args: list=[]):
         he_prg.add_enemy_spec()
     programasset = assetgenerator.modwriter.writeAreaDataProgram("he09", "btl", 0xc4, he_prg.make_program())
     asset["source"].append(programasset)
+
+    lua_content = open(os.path.join(data_folder, "bossrush.lua")).read()
+    luaasset = assetgenerator.modwriter.writeLua("F266B00B GoA ROM.lua", lua_content)
+
+    modyml["assets"].append(luaasset)
 
     yaml.dump(modyml, open(modyml_fn, "w"))
 
