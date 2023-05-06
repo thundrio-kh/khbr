@@ -57,6 +57,9 @@ class AreaDataProgram:
                         f = l
                 self.lines.insert(f+1, newline)
         self.map = self.map_program()
+    def add_line(self, line):
+        self.lines.append(line)
+        self.map = self.map_program()
     def remove_command(self, command):
         if not self.has_command(command):
             return

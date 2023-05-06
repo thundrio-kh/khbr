@@ -63,7 +63,7 @@ ROUTES = {
         "MCP", # MCP object is still in the room
         "Oogie Boogie",
         "Past Pete",
-        "Pete OC II", # just double check the timer starts here
+        "Pete OC II",
         "Pete TR",
         "Prison Keeper",
         "Riku",
@@ -83,7 +83,7 @@ ROUTES = {
         "Vexen",
         "Xaldin", 
         "Xemnas",
-        "Xigbar", # barriers by doors/walkways gone, can go OOB... going into abilities in menu is crashing the game...
+        "Xigbar",
         "Zexion"
     ]
 }

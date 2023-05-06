@@ -341,7 +341,8 @@ class AssetGenerator:
 
         for w, world in replacement_spawns.items():
             for r, room in world.items():
-                ardname = self.location_manager.locmap[r]
+                ardname = self.location_manager.get_ardname(r)
+                
                 roomasset = self.getDefaultRoomAsset(ardname)
 
                 basespawns = original_spawns[w][r]
@@ -421,14 +422,15 @@ class AssetGenerator:
                     programasset = self.modwriter.writeCopiedSubfile(ardname, "btl", "AreaDataScript", assetpath)
                     roomasset["source"].append(programasset)
                 else:
-                    self.update_area_data_programs(ardname, roomasset["source"])
+                    battlemods = {"adds": basespawns.get("battlescriptadds", {}) }
+                    self.update_area_data_programs(ardname, roomasset["source"], battlemods)
             
                 self.assets.append(roomasset)
         if text_spoilers["final_fights"]:
             textasset = self.modwriter.writeMSG("eh", text_spoilers["final_fights"])
             self.assets.append(textasset)
 
-    def update_area_data_programs(self, ardname, roomsource):
+    def update_area_data_programs(self, ardname, roomsource, battlemods={}):
         btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
         with open(btlfn) as f:
             script = AreaDataScript(f.read(), ispc=self.ispc)
@@ -449,6 +451,9 @@ class AssetGenerator:
                 if prg.has_command("Spawn"):
                     prg.add_packet_spec()
                     prg.add_enemy_spec()
+            if p in battlemods.get("adds",{}):
+                for l in battlemods["adds"][p]:
+                    prg.add_line(l)
             programasset = self.modwriter.writeAreaDataProgram(ardname, "btl", p, prg.make_program())
             roomsource.append(programasset)
 

@@ -26,6 +26,10 @@ class LocationManager:
             locations_f = newlocations
         self.locations = locations_f
 
+    def get_ardname(self, room):
+        return self.locmap[room]
+
+
     @staticmethod
     def update_location(location, config: RandomConfig):
         memory_expansion = config.memory_expansion
