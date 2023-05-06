@@ -21,10 +21,6 @@ GETRANDOMAIR:
  syscall 1, 114
  pushFromPWp WBARBOSSA
  syscall 1, 147 ; get pos
- memcpyToSp 16, 48
- pushFromPSp 48
- memcpyToSp 16, 16
- pushFromPSp 16
  pushImmf 1000 ; near
  pushImmf 1000 ; far
  pushImmf 0 ; low
@@ -124,14 +120,6 @@ MAKEVECTOR:
  popToSpVal 8
  pushFromFSp 4
  popToSpVal 12
- ret 
- ret 
-MAKEVECTORO:
- ; This is almost working, but I'm getting a blank vector.... I wonder....
- popToSp 4 ; this is pretty obviously reversing the stack order
- popToSp 0
- pushFromFSp 4
- popToSpVal 0
  ret 
 TR0:
  popToSp 0
@@ -382,61 +370,38 @@ L192:
  memcpy 0
  pushFromPWp WPOS1
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS1
  pushFromPWp WPOS2
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS2
  pushFromPWp WPOS3
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS3
  pushFromPWp WPOS4
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS4
  pushFromPWp WPOS5
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS5
  pushFromPWp WPOS6
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS6
  pushFromPWp WPOS7
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS7
  pushFromPWp WPOS8
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS8
  pushFromPWp WPOS9
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS9
  pushFromPWp WPOS10
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS10
  pushFromPWp WPOS11
  gosub 4, GETRANDOMAIR
- memcpyToSp 16, 16
- pushFromPSp 16
  memcpyToWp 16, WPOS11
  pushImmf 0.872665
-
  popToWp W4400
  pushImmf 2.321288
  popToWp W4404
@@ -1423,9 +1388,6 @@ L2754: ;___label for action pushFromPAi L3718 ; ___ai appear
  popToSp 0
  pushFromFSp 0
  pushFromPWp WPOS1
- dup
- pushFromPAi SAMDEBUG
- syscall 0, 8
  syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
  pushFromFSp 0
  fetchValue 4
@@ -2019,8 +1981,6 @@ L3867:
 TXT3873:
 L3873:
  db 'rst_hard',0,0
-SAMDEBUG:
- db 'samdebug',0,0
 
  section .bss
 W0:
