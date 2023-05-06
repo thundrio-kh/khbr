@@ -60,7 +60,7 @@ ROUTES = {
         "Larxene",
         "Luxord",
         "Marluxia",
-        "MCP", # MCP object is still in the room
+        "MCP",
         "Oogie Boogie",
         "Past Pete",
         "Pete OC II",

@@ -17773,7 +17773,7 @@ Space Paranoids:
         size: 0
         sp_ids:
           '69':
-          - index: 3
+          - index: 4
             isboss: true
             name: MCP
           - index: 5
