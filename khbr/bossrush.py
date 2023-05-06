@@ -32,7 +32,6 @@ ITEMS = {'Potion': '1', 'Hi-Potion': '2', 'Ether': '3', 'Elixir': '4', 'Mega-Pot
 # need 9 drives
 # blank out all the get bonuses
 # all levels need the same stat values
-# debug infinite HP option
 
 ROUTES = {
     "compatability-test": [
@@ -113,7 +112,8 @@ def main(cli_args: list=[]):
         "randomize_starting_stuff": False,
         "platform": "pc",
         "open_menu_before_each_fight": False,
-        "seed": ""
+        "seed": "",
+        "debug_inf_hp": False
     }
     default_config = {
         "openkh_dir": ""
@@ -150,6 +150,7 @@ def main(cli_args: list=[]):
     options.add_argument("-open_menu_before_each_fight", action="store_true", default=last_settings.get("open_menu_before_each_fight"))
     options.add_argument("-platform", choices=["ps2", "pc"], default=last_settings.get("platform"))
     options.add_argument("-seed", default=last_settings.get("seed"))
+    options.add_argument("-debug_inf_hp", default=last_settings.get("debug_inf_hp"), action="store_true")
 
     options.add_argument("-openkh_dir", help="Path to OpenKH folder.", default=default_config.get("openkh_dir"), widget='DirChooser')
 
@@ -169,6 +170,7 @@ def main(cli_args: list=[]):
         "randomize_starting_stuff": args.randomize_starting_stuff,
         "open_menu_before_each_fight": args.open_menu_before_each_fight,
         "platform": args.platform,
+        "debug_inf_hp": args.debug_inf_hp,
         "seed": args.seed
     }
     config_to_write = {
@@ -203,6 +205,7 @@ def main(cli_args: list=[]):
     randomize_starting_stuff = args.randomize_starting_stuff
     open_menu_before_each_fight = args.open_menu_before_each_fight
     openkh_dir = args.openkh_dir
+    debug_inf_hp = args.debug_inf_hp
     
     print(args.abilities_start_equipped)
 
@@ -348,9 +351,14 @@ def main(cli_args: list=[]):
     asset["source"].append(programasset)
 
     lua_content = open(os.path.join(data_folder, "bossrush.lua")).read()
-    luaasset = assetgenerator.modwriter.writeLua("F266B00B GoA ROM.lua", lua_content)
+    luaasset = assetgenerator.modwriter.writeLua("bossrush.lua", lua_content)
 
     modyml["assets"].append(luaasset)
+
+    if debug_inf_hp:
+        hp_lua = open(os.path.join(data_folder, "inf_hp.lua")).read()
+        luaasset = assetgenerator.modwriter.writeLua("inf_hp.lua", hp_lua)
+        modyml["assets"].append(luaasset)
 
     yaml.dump(modyml, open(modyml_fn, "w"))
 
