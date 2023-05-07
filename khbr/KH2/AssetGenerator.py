@@ -58,15 +58,21 @@ class AssetGenerator:
         else:
             self.assets.append(asset)
 
-    def generateObjEntry(self, object_map):
-        if not object_map:
+    def generateObjEntry(self, object_map, apply_better_stt=False):
+        if not object_map or apply_better_stt:
             return
         new_object_map = {}
         with open(os.path.join(os.path.dirname(__file__), "data", "objVanilla.yml")) as f:
             obj_data = yaml.load(f, Loader=yaml.SafeLoader)
+        stt_data = None
+        if apply_better_stt:
+            with open(os.path.join(os.dirname(__file__), "data", "bin", "better_stt", "ObjList_Better_STT")) as f:
+                stt_data = yaml.load(f, Loader=yaml.SafeLoader)
         for oid in object_map:
             for k in object_map[oid]:
                 obj_data[oid][k] = object_map[oid][k]
+            if oid in stt_data:
+                obj_data[oid] = stt_data[oid]
             new_object_map[oid] = obj_data[oid]
         asset = self.modwriter.writeObj(new_object_map)
         self.assets.append(asset)
@@ -115,12 +121,66 @@ class AssetGenerator:
         asset = self.modwriter.writeEnmp(enmp_data_modified)
         self.assets.append(asset)
 
-    def generateCustomMoveset(self):
+    def generateCustomMovesets(self, apply_form_movement=False, apply_better_stt=False):
         # sora moveset
         with open(os.path.join(os.path.dirname(__file__), "data", "bin", "B_EX100.mset"), "rb") as f:
             mset_data = f.read()
         asset = self.modwriter.writeMset("B_EX100.mset", mset_data)
         self.assets.append(asset)
+        if apply_form_movement:
+            # valor
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "shananas_form_movement", "P_EX100_BTLF.mset"), "rb") as f:
+                mset_data = f.read()
+                asset = self.modwriter.writeMset("P_EX100_BTLF.mset", mset_data)
+                self.assets.append(asset)
+            # anti
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "shananas_form_movement", "P_EX100_HTLF.mset"), "rb") as f:
+                mset_data = f.read()
+                asset = self.modwriter.writeMset("P_EX100_HTLF.mset", mset_data)
+                self.assets.append(asset)
+            # limit
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "shananas_form_movement", "P_EX100_KH1F.mset"), "rb") as f:
+                mset_data = f.read()
+                asset = self.modwriter.writeMset("P_EX100_KH1F.mset", mset_data)
+                self.assets.append(asset)
+            # wisdom
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "shananas_form_movement", "P_EX100_MAGF.mset"), "rb") as f:
+                mset_data = f.read()
+                asset = self.modwriter.writeMset("P_EX100_MAGF.mset", mset_data)
+                self.assets.append(asset)
+            # master
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "shananas_form_movement", "P_EX100_TRIF.mset"), "rb") as f:
+                mset_data = f.read()
+                asset = self.modwriter.writeMset("P_EX100_TRIF.mset", mset_data)
+                self.assets.append(asset)
+            # final
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "shananas_form_movement", "P_EX100_ULTF.mset"), "rb") as f:
+                mset_data = f.read()
+                asset = self.modwriter.writeMset("P_EX100_ULTF.mset", mset_data)
+                self.assets.append(asset)
+        if apply_better_stt:
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "better_stt", "B_EX100_SR.mset"), "rb") as f:
+                mset_data = f.read()
+                asset = self.modwriter.writeMset("B_EX100_SR.mset", mset_data)
+                self.assets.append(asset)
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "better_stt", "F_TT010.mset"), "rb") as f:
+                mset_data = f.read()
+                asset = self.modwriter.writeMset("F_TT010.mset", mset_data)
+                self.assets.append(asset)
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "better_stt", "P_EX110.mset"), "rb") as f:
+                mset_data = f.read()
+                asset = self.modwriter.writeMset("P_EX110.mset", mset_data)
+                self.assets.append(asset)
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "better_stt", "W_EX010_RX.mset"), "rb") as f:
+                mset_data = f.read()
+                asset = self.modwriter.writeMset("W_EX010_RX.mset", mset_data)
+                self.assets.append(asset)
+            
+    def generateBetterSTT(self):
+        with open(os.path.join(os.path.dirname(__file__), "data", "bin", "better_stt", "trinity_zz.bar"), "rb") as f:
+            trinity_data = f.read()
+            asset = self.modwriter.writeBin(trinity_data, "trinity_zz.bar", os.path.join("limit", "fm", "trinity_zz.bar")) # this might not work on pc
+            self.assets.append(asset)
 
     def generateCustomCmd(self, cmd_mods):
         cmd = CommandManager(os.path.join(os.path.dirname(__file__), "data", "bin", "cmd.bin"))
@@ -303,7 +363,6 @@ class AssetGenerator:
 
             if "disablecamera" in new_msn_mapping:
                 mission.set_camera_complete_byte()
-
             if "setmickey" in new_msn_mapping:
                 mission.set_mickey_bit(new_msn_mapping["setmickey"])
             if "setxp" in new_msn_mapping:
@@ -341,7 +400,8 @@ class AssetGenerator:
 
         for w, world in replacement_spawns.items():
             for r, room in world.items():
-                ardname = self.location_manager.locmap[r]
+                ardname = self.location_manager.get_ardname(r)
+                
                 roomasset = self.getDefaultRoomAsset(ardname)
 
                 basespawns = original_spawns[w][r]
@@ -377,6 +437,7 @@ class AssetGenerator:
 
                                 if old_spawn["ObjectId"] == 1543 and new_entity["name"] == "Grim Reaper II" and old_spawn["Argument1"] == 0: # Grim Reaper II is replacing itself
                                     gr2_self_replace = True
+
 
                                 final_txt = final_fight_text(old_spawn, new_entity["name"])
                                 if final_txt:
@@ -421,14 +482,15 @@ class AssetGenerator:
                     programasset = self.modwriter.writeCopiedSubfile(ardname, "btl", "AreaDataScript", assetpath)
                     roomasset["source"].append(programasset)
                 else:
-                    self.update_area_data_programs(ardname, roomasset["source"])
+                    battlemods = {"adds": basespawns.get("battlescriptadds", {}) }
+                    self.update_area_data_programs(ardname, roomasset["source"], battlemods)
             
                 self.assets.append(roomasset)
         if text_spoilers["final_fights"]:
             textasset = self.modwriter.writeMSG("eh", text_spoilers["final_fights"])
             self.assets.append(textasset)
 
-    def update_area_data_programs(self, ardname, roomsource):
+    def update_area_data_programs(self, ardname, roomsource, battlemods={}):
         btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
         with open(btlfn) as f:
             script = AreaDataScript(f.read(), ispc=self.ispc)
@@ -449,11 +511,14 @@ class AssetGenerator:
                 if prg.has_command("Spawn"):
                     prg.add_packet_spec()
                     prg.add_enemy_spec()
+            if p in battlemods.get("adds",{}):
+                for l in battlemods["adds"][p]:
+                    prg.add_line(l)
             programasset = self.modwriter.writeAreaDataProgram(ardname, "btl", p, prg.make_program())
             roomsource.append(programasset)
 
     def generateEvt(self, world, room, programnumber, roomsource, options=None):
-        print("DEBUG: making {} {} evt program {} to {}".format(world,room,programnumber,options.get("jump_to")))
+        #print("DEBUG: making {} {} evt program {} to {}".format(world,room,programnumber,options.get("jump_to")))
         if not options:
             print("Warning: generate_evt not generating anything")
         ardname = world.lower()+room.lower()
@@ -466,7 +531,7 @@ class AssetGenerator:
                 if not program.has_command("AreaSettings"):
                     continue
                 if "jump_to" in options:
-                    program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"])
+                    program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"], set_for_settings=options["jump_to"].get("set_for_settings", None))
                 if "open_menu" in options:
                     program.set_open_menu(options["open_menu"])
                 if "remove_event" in options:
@@ -475,6 +540,8 @@ class AssetGenerator:
                     program.remove_command("SetProgressFlag")
                 if "flags" in options:
                     program.set_flags(options["flags"])
+                if options.get("fix_source_area_settings"):
+                    program.set_area_settings(16, -1)
                 programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
                 roomsource.append(programasset)
             except:

@@ -491,10 +491,10 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_he06_btl_122_should_not_be_edited()
+#ut.test_he06_btl_122_should_not_be_edited()
 #ut.test_seedgen_enemy_wild_other()
 #ut.test_gr_room_uses_luxord_msn_when_replaced()
 
 # Uncomment to run the actual tests
-#unittest.main()
+unittest.main()
 

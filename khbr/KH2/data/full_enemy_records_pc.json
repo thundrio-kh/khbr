@@ -8336,23 +8336,8 @@
             "bossZ": -150
         },
         "enabled": true,
-        "msn_list": [
-            {
-                "program": 194,
-                "msn": "HE_COL_2_10",
-                "room_size": 6.19
-            },
-            {
-                "program": 196,
-                "msn": "HE_COLOSSEUM_8_ONLY",
-                "room_size": 9.14
-            },
-            {
-                "program": 190,
-                "msn": "HE_COL_2_10",
-                "room_size": 6.19
-            }
-        ],
+        "program": 190,
+        "msn": "HE_COL_2_10",
         "msn_replace_allowed": false,
         "vars": [
             1,
@@ -8391,7 +8376,6 @@
         "final_fight": false,
         "can_be_enemy": false,
         "can_be_enemy_override": false,
-        "msn": null,
         "sizeTag": null,
         "room_size": 0,
         "roommaxsize": null,
@@ -8401,7 +8385,7 @@
         "adds": [],
         "sp_ids": [],
         "subtracts": [],
-        "program": null,
+        "msn_list": [],
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
@@ -10164,13 +10148,13 @@
         ],
         "name": "Demyx OC",
         "enabled": false,
-        "source_replace_allowed": false,
         "hp": 100,
         "level": 99,
         "limiter": 0,
         "model": "B_EX120",
         "tags": [
-            "teleport_blocked"
+            "teleport_blocked",
+            "fix_source_area_settings"
         ],
         "msn": "HE17_MS105",
         "obj_id": 795,
@@ -10182,8 +10166,9 @@
             "Demyx OC"
         ],
         "replace_as": null,
+        "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "teleport_blocked",
+        "category": "fix_source_area_settings-teleport_blocked",
         "isnightmare": false,
         "parent": "Demyx OC",
         "variationof": null,
@@ -10215,7 +10200,46 @@
         "luamod": null,
         "roomData": {},
         "available": [
-            "Demyx OC"
+            "Armor Xemnas I",
+            "Armor Xemnas II",
+            "Blizzard Lord",
+            "Cerberus",
+            "Cloud",
+            "Dark Thorn",
+            "Demyx",
+            "Demyx OC",
+            "Final Xemnas",
+            "Grim Reaper I",
+            "Hades II",
+            "Hayner",
+            "Hercules",
+            "Hostile Program",
+            "Jafar",
+            "Leon",
+            "Lexaeus",
+            "Marluxia",
+            "Oogie Boogie",
+            "Past Pete",
+            "Prison Keeper",
+            "Riku",
+            "Saix",
+            "Sark",
+            "Scar",
+            "Seifer",
+            "Sephiroth",
+            "Setzer",
+            "Shadow Stalker",
+            "Shan-Yu",
+            "Terra",
+            "The Beast",
+            "Thresholder",
+            "Tifa",
+            "Vexen",
+            "Vivi",
+            "Volcano Lord",
+            "Xaldin",
+            "Xemnas",
+            "Yuffie"
         ]
     },
     "Demyx's Water Clone": {
@@ -11907,7 +11931,7 @@
         ],
         "name": "MCP",
         "enabled": false,
-        "source_replace_allowed": false,
+        "source_replace_allowed": true,
         "tags": [
             "gimmick",
             "needs_teleport",
@@ -11982,7 +12006,58 @@
         "luamod": null,
         "roomData": {},
         "available": [
-            "MCP"
+            "Armor Xemnas I",
+            "Armor Xemnas II",
+            "Axel I",
+            "Axel II",
+            "Barbossa",
+            "Blizzard Lord",
+            "Cerberus",
+            "Cloud",
+            "Dark Thorn",
+            "Demyx",
+            "Final Xemnas",
+            "MCP",
+            "Grim Reaper I",
+            "Hades II",
+            "Hayner",
+            "Hercules",
+            "Hostile Program",
+            "Jafar",
+            "Larxene",
+            "Leon",
+            "Lexaeus",
+            "Luxord",
+            "Marluxia",
+            "Oogie Boogie",
+            "Past Pete",
+            "Pete TR",
+            "Prison Keeper",
+            "Riku",
+            "Roxas",
+            "Saix",
+            "Sark",
+            "Scar",
+            "Seifer",
+            "Sephiroth",
+            "Setzer",
+            "Shadow Stalker",
+            "Shan-Yu",
+            "Storm Rider",
+            "Terra",
+            "The Beast",
+            "The Experiment",
+            "Thresholder",
+            "Tifa",
+            "Twilight Thorn",
+            "Vexen",
+            "Vivi",
+            "Volcano Lord",
+            "Xaldin",
+            "Xemnas",
+            "Xigbar",
+            "Yuffie",
+            "Zexion"
         ]
     },
     "Graveyard NM": {
@@ -12503,6 +12578,16 @@
             0
         ],
         "name": "Hades Escape",
+        "aimods": [
+            {
+                "name": "HE05_MS102/he05.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "new_boss.obj_id"
+                }
+            }
+        ],
         "tags": [
             "needs_invuln"
         ],
@@ -12531,16 +12616,6 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [
-            {
-                "name": "HE19_MS204/he19.bdscript",
-                "type": "msn",
-                "source": "old",
-                "replacements": {
-                    "obj_id": "new_boss.obj_id"
-                }
-            }
-        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -12574,34 +12649,9 @@
             0
         ],
         "name": "Hades I",
-        "tags": [
-            "needs_invuln"
-        ],
-        "variationof": "Hades II",
-        "enabled": true,
-        "enmp_index": 18,
-        "hp": 100,
-        "level": 99,
-        "limiter": 34,
-        "model": "B_HE030_PART",
-        "msn": "HE06_MS101",
-        "obj_id": 349,
-        "replace_as": "Hades Cups",
-        "type": "boss",
-        "variations": [
-            "Hades I"
-        ],
-        "source_replace_allowed": true,
-        "msn_replace_allowed": true,
-        "category": "needs_invuln",
-        "isnightmare": false,
-        "parent": "Hades II",
-        "children": [],
-        "msn_required": false,
-        "msn_source_as": null,
         "aimods": [
             {
-                "name": "HE19_MS204/he19.bdscript",
+                "name": "HE06_MS101/ms_a.bdscript",
                 "type": "msn",
                 "source": "old",
                 "replacements": {
@@ -12609,6 +12659,32 @@
                 }
             }
         ],
+        "tags": [
+            "needs_invuln"
+        ],
+        "variationof": "Hades II",
+        "msn_replace_allowed": false,
+        "enabled": true,
+        "enmp_index": 18,
+        "hp": 100,
+        "level": 99,
+        "limiter": 34,
+        "model": "B_HE030_PART",
+        "msn": "HE06_MS101",
+        "program": 112,
+        "obj_id": 349,
+        "replace_as": "Hades Cups",
+        "type": "boss",
+        "variations": [
+            "Hades I"
+        ],
+        "source_replace_allowed": true,
+        "category": "needs_invuln",
+        "isnightmare": false,
+        "parent": "Hades II",
+        "children": [],
+        "msn_required": false,
+        "msn_source_as": null,
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -12628,7 +12704,6 @@
         "sp_ids": [],
         "subtracts": [],
         "msn_list": [],
-        "program": 196,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
@@ -12760,6 +12835,7 @@
         },
         "enabled": true,
         "msn_replace_allowed": true,
+        "program": 202,
         "msn": "HE19_MS205",
         "vars": [
             0,
@@ -12819,7 +12895,6 @@
         "sp_ids": [],
         "subtracts": [],
         "msn_list": [],
-        "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},

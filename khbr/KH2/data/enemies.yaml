@@ -1615,16 +1615,19 @@ Cerberus:
       # tags:
       # - cups
       enabled: true
-      msn_list:
-      - program: 194
-        msn: HE_COL_2_10
-        room_size: 6.19
-      - program: 196
-        msn: HE_COLOSSEUM_8_ONLY
-        room_size: 9.14
-      - program: 190
-        msn: HE_COL_2_10
-        room_size: 6.19
+      program: 190
+      # TODO This was working so maybe commenting the msn_list broke something but cups haven't had too much testing
+      msn: HE_COL_2_10
+      # msn_list:
+      # - program: 194
+      #   msn: HE_COL_2_10
+      #   room_size: 6.19
+      # - program: 196
+      #   msn: HE_COLOSSEUM_8_ONLY
+      #   room_size: 9.14
+      # - program: 190
+      #   msn: HE_COL_2_10
+      #   room_size: 6.19
       msn_replace_allowed: false
       vars:
       - 1
@@ -2102,13 +2105,13 @@ Demyx:
       - 0
 Demyx OC:
   enabled: false
-  source_replace_allowed: false # softlock on fade to white
   hp: 100
   level: 99
   limiter: 0
   model: B_EX120
   tags:
   - teleport_blocked
+  - fix_source_area_settings
   msn: HE17_MS105
   obj_id: 795
   size: 2.74
@@ -2684,12 +2687,12 @@ Hades Cups:
       - 0
       - 0
 Hades Escape:
-  # aimods:
-  # - name: HE05_MS102/he05.bdscript
-  #   type: msn
-  #   source: old
-  #   replacements:
-  #     obj_id: new_boss.obj_id
+  aimods:
+  - name: HE05_MS102/he05.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: new_boss.obj_id
   # source_replace_allowed: false
   tags:
   - needs_invuln
@@ -2714,15 +2717,16 @@ Hades Escape:
       - 0
       - 0
 Hades I:
-  # aimods:
-  # - name: HE06_MS101/he06.bdscript
-  #   type: msn
-  #   source: old
-  #   replacements:
-  #     obj_id: new_boss.obj_id
+  aimods:
+  - name: HE06_MS101/ms_a.bdscript
+    type: msn
+    source: old
+    replacements:
+      obj_id: new_boss.obj_id
   tags: 
   - needs_invuln
   variationof: Hades II
+  msn_replace_allowed: false
   enabled: true
   enmp_index: 18
   hp: 100
@@ -2730,6 +2734,7 @@ Hades I:
   limiter: 34
   model: B_HE030_PART
   msn: HE06_MS101
+  program: 112
   obj_id: 349
   replace_as: Hades Cups
   type: boss
@@ -2782,6 +2787,7 @@ Hades II:
         bossZ: -800
       enabled: true
       msn_replace_allowed: true
+      program: 202
       msn: HE19_MS205
       # msn_list:
       # - program: 201

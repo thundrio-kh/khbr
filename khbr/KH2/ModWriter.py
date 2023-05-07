@@ -63,6 +63,72 @@ class ModWriter:
                 }
             ]
         }
+    
+    def writeBons(self, bons):
+        outfn = os.path.join(self.outdir, "files", "root", "bons.list")
+        fn = os.path.join("files", "root", "bons.list")
+        self.write_method(outfn, fn, yaml.dump(bons))
+        return {
+            "name": "00battle.bin",
+            "method": "binarc",
+            "source": [
+                {
+                    "name": "bons",
+                    "method": "listpatch",
+                    "source": [
+                        {
+                            "name": fn,
+                            "type": "bons"
+                        }
+                    ],
+                    "type": "List"
+                }
+            ]
+        }
+    
+    def writeLvup(self, lvup):
+        outfn = os.path.join(self.outdir, "files", "root", "lvup.list")
+        fn = os.path.join("files", "root", "lvup.list")
+        self.write_method(outfn, fn, yaml.dump(lvup))
+        return {
+            "name": "00battle.bin",
+            "method": "binarc",
+            "source": [
+                {
+                    "name": "lvup",
+                    "method": "listpatch",
+                    "source": [
+                        {
+                            "name": fn,
+                            "type": "lvup"
+                        }
+                    ],
+                    "type": "List"
+                }
+            ]
+        }
+    
+    def writeFmlv(self, fmlv):
+        outfn = os.path.join(self.outdir, "files", "root", "fmlv.list")
+        fn = os.path.join("files", "root", "fmlv.list")
+        self.write_method(outfn, fn, yaml.dump(fmlv))
+        return {
+            "name": "00battle.bin",
+            "method": "binarc",
+            "source": [
+                {
+                    "name": "fmlv",
+                    "method": "listpatch",
+                    "source": [
+                        {
+                            "name": fn,
+                            "type": "fmlv"
+                        }
+                    ],
+                    "type": "List"
+                }
+            ]
+        }
 
     def writeEnmp(self, enmp):
         outfn = os.path.join(self.outdir, "files", "root", "enmp.list")
@@ -191,6 +257,16 @@ class ModWriter:
             "name": str(eventnumber),
             "source": [{"name": fn}],
             "type": "Event"
+        }
+
+    def writeBin(self, bincontent, binname, gamepath):
+        outfn = os.path.join(self.outdir, "files", gamepath)
+        fn = os.path.join("files", gamepath)
+        self.write_method(outfn, fn, bincontent)
+        return {
+            "method": "copy",
+            "name": binname,
+            "source": [{"name": fn}]
         }
 
     def writeAi(self, aifn, modelname, tpe, data):

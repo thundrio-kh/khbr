@@ -17773,7 +17773,7 @@ Space Paranoids:
         size: 0
         sp_ids:
           '69':
-          - index: 3
+          - index: 4
             isboss: true
             name: MCP
           - index: 5
@@ -20769,6 +20769,11 @@ The World That Never Was:
             name: Shadow (RAW)
   Hall of Empty Melodies 10:
     size: 5000000
+    battlescriptadds:
+      0x39:
+      - MapVisibility 0x00000807 0x00000000
+      0x64:
+      - MapVisibility 0x00000807 0x00000000
     spawnpoints:
       b_00:
         size: 0

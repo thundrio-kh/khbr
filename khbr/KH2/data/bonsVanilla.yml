@@ -1,0 +1,1128 @@
+2:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 417
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 2
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 491
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 2
+3:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 36
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 1
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 3
+4:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 422
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 4
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 328
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 1
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 4
+5:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 580
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 5
+6:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 596
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 6
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 123
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 6
+7:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 330
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 7
+8:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 489
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 8
+9:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 423
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 9
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 1
+    BonusItem1: 0
+    BonusItem2: 231
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 9
+10:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 414
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 10
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 480
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 10
+12:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 413
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 12
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 10
+    Padding: 0
+    RewardId: 12
+15:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 24
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 15
+16:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 412
+    BonusItem2: 419
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 16
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 327
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 16
+17:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 416
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 17
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 279
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 17
+18:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 422
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 18
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 79
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 10
+    Padding: 0
+    RewardId: 18
+19:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 411
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 19
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 1
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 19
+20:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 166
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 20
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 20
+21:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 542
+    BonusItem2: 596
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 21
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 560
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 21
+22:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 409
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 22
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 334
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 22
+23:
+  Sora:
+    AccessorySlotUpgrade: 1
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 23
+24:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 567
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 24
+25:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 10
+    Padding: 0
+    RewardId: 25
+26:
+  Sora:
+    AccessorySlotUpgrade: 1
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 26
+28:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 421
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 28
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 53
+    CharacterId: 1
+    DriveGaugeUpgrade: 1
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 28
+29:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 199
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 29
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 1
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 29
+30:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 65
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 30
+31:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 421
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 31
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 494
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 31
+32:
+  Sora:
+    AccessorySlotUpgrade: 1
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 250
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 32
+33:
+  Roxas:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 294
+    BonusItem2: 0
+    CharacterId: 14
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 33
+34:
+  Roxas:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 14
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 34
+35:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 1
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 35
+37:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 532
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 37
+38:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 361
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 10
+    Padding: 0
+    RewardId: 38
+39:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 542
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 39
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 1
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 39
+40:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 419
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 40
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 1
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 40
+42:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 168
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 42
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 485
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 42
+43:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 236
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 43
+45:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 200
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 45
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 45
+46:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 598
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 46
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 46
+47:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 336
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 47
+49:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 406
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 49
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 49
+50:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 418
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 50
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 50
+54:
+  Roxas:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 276
+    BonusItem2: 0
+    CharacterId: 14
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 54
+56:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 413
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 56
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 1
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 56
+57:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 350
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 57
+58:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 410
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 58
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 1
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 58
+59:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 422
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 59
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 251
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 59
+60:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 54
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 60
+61:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 412
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 61
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 493
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 61
+62:
+  Donald:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 409
+    BonusItem2: 0
+    CharacterId: 2
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 62
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 450
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 62
+63:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 592
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 63
+64:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 1
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 64
+65:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 65
+66:
+  Goofy:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 415
+    BonusItem2: 0
+    CharacterId: 3
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 66
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 1
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 66
+67:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 67
+68:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 1
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 68
+69:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 361
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 69
+70:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 70
+71:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 71
+72:
+  Sora:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 0
+    BonusItem2: 0
+    CharacterId: 1
+    DriveGaugeUpgrade: 0
+    HpIncrease: 5
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 72
+73:
+  Roxas:
+    AccessorySlotUpgrade: 0
+    ArmorSlotUpgrade: 0
+    BonusItem1: 516
+    BonusItem2: 0
+    CharacterId: 14
+    DriveGaugeUpgrade: 0
+    HpIncrease: 0
+    ItemSlotUpgrade: 0
+    MpIncrease: 0
+    Padding: 0
+    RewardId: 73

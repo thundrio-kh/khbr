@@ -22,6 +22,7 @@ class RandomConfig:
     boss_enemies: list=field(default_factory=list)
 
     mickey_rule: str='follow'
+    always_set_retry: bool=False
 
     selected_enemy: str = ''
     selected_boss: str = ''

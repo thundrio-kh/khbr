@@ -45,3 +45,6 @@ config.json
 last_settings.json
 
 tmp
+
+custom.route
+custom.stuff
