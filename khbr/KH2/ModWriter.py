@@ -259,6 +259,17 @@ class ModWriter:
             "type": "Event"
         }
 
+    def writeBin(self, bincontent, binname, filetype, gamepath):
+        outfn = os.path.join(self.outdir, "files", gamepath)
+        fn = os.path.join("files", "ard", gamepath)
+        self.write_method(outfn, fn, bincontent)
+        return {
+            "method": "copy",
+            "name": binname,
+            "source": [{"name": fn}],
+            "type": filetype
+        }
+
     def writeAi(self, aifn, modelname, tpe, data):
         relfn = os.path.join("files", "ai", modelname+"_"+aifn)
         outfn = os.path.join(self.outdir, relfn)

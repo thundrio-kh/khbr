@@ -29,11 +29,10 @@ ITEMS = {'Potion': '1', 'Hi-Potion': '2', 'Ether': '3', 'Elixir': '4', 'Mega-Pot
 # need to apply better STT
 # ideally also apply the other fixes from that mod
 
-# need 9 drives
 # no keyblades for valor/etc (detection saber)
 
 # Find my original plan for this and add in the actual routes
-# check that failed missions are restarting properly
+
 
 # reorder mcp/jafar/etc to the bottom
 
@@ -242,11 +241,10 @@ def main(cli_args: list=[]):
         boss_order = boss_order[:num_bosses]
 
     if not randomize_starting_stuff:
-        stuff = ["Scan","Guard Break", "Explosion",
+        stuff = ["Scan","Explosion",
         "Guard",
         "Horizontal Slash", "Berserk Charge"] + \
-        ["Combo Boost" for _ in range(1)] + \
-        ["Air Combo Boost" for _ in range(1)] + \
+        ["Aerial Recovery"] + \
         ["Finishing Plus" for _ in range(2)] + \
         ["Negative Combo" for _ in range(2)] + \
         ["Second Chance", "Once More"] + \
@@ -254,7 +252,7 @@ def main(cli_args: list=[]):
         ["Magnet Element" for _ in range(2)] + \
         ["Reflect Element" for _ in range(2)] + \
         ["Thunder Element" for _ in range(2)] + \
-        ["Final Form", "Limit Form"] + \
+        ["Final Form", "Limit Form", "Valor Form", "Master Form"] + \
         ["Decisive Pumpkin"] + \
         ["High Jump LV3", "Quick Run LV3", "Aerial Dodge LV3", "Glide LV3", "Dodge Roll LV3"] + \
         ["Wisdom Form", "Flash Step"]
@@ -422,6 +420,11 @@ def main(cli_args: list=[]):
         hp_lua = open(os.path.join(data_folder, "inf_hp.lua")).read()
         luaasset = assetgenerator.modwriter.writeLua("inf_hp.lua", hp_lua)
         modyml["assets"].append(luaasset)
+
+    # starting weapons
+    bincontent = open(os.path.join(os.path.dirname(__file__), "KH2", "data", "bin", "00common.bin"), "rb").read()
+    commonasset = assetgenerator.modwriter.writeBin(bincontent, "00common.bdx", "Bdx", "00common.bin")
+    modyml["assets"].append(commonasset)
 
     yaml.dump(modyml, open(modyml_fn, "w"))
 

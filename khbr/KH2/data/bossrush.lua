@@ -104,8 +104,9 @@ Menu3  = Menu2 + NextMenu
 pi     = math.pi
 end
 
-NewGame()
-function NewGame()
+setdrive=false
+
+function _OnFrame()
     --Before New Game
     if OnPC and ReadByte(Sys3+0x116DB) == 0x19 then --Change Form's Icons in PC from Analog Stick
         WriteByte(Sys3+0x116DB,0xCE) --Valor
@@ -116,11 +117,11 @@ function NewGame()
         WriteByte(Sys3+0x11753,0xCE) --Anti
     end
     --Start New Game
-    if Place == 0x2002 and Events(0x01,Null,0x01) then --Station of Serenity Weapons
-        --Starting Stats
-        WriteByte(Slot1+0x1B0,100) --Starting Drive %
-        WriteByte(Slot1+0x1B1,5)   --Starting Drive Current
-        WriteByte(Slot1+0x1B2,5)   --Starting Drive Max
-        BitNot(Save+0x41A5,0x06)   --Default No Summon Animations
-    end
+	--Starting Stats
+	if ReadByte(Slot1+0x1B2) == 3 and setdrive == false then
+		WriteByte(Slot1+0x1B0,100) --Starting Drive %
+		WriteByte(Slot1+0x1B1,9)   --Starting Drive Current
+		WriteByte(Slot1+0x1B2,9)   --Starting Drive Max
+		setdrive = true
+	end
 end
