@@ -950,6 +950,10 @@ Armor Xemnas I:
   # aimods: 
   # - name: B_EX260/b_ex.bdscript
   #   type: obj
+  # - name: B_EX320/b_ex.bdscript
+  #   type: obj
+  # - name: M_EX880_DANCER_EH/m_ex.bdscript
+  #   type: obj
   roomData:
     bossX: 0
     bossY: 0
