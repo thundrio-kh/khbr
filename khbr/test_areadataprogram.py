@@ -107,6 +107,22 @@ class Tests(unittest.TestCase):
             "AreaSettings 7 10",
             "\tSetProgressFlag 0x1841"
         ]
+    def test_set_area_settings(self):
+        lines = [
+            "Program 0xBF",
+            "Bgm 120 120",
+            "AreaSettings 7 10",
+            "\tSetProgressFlag 0x1841"
+        ]
+        adp = AreaDataProgram(lines)
+        adp.set_area_settings(16, -1)
+        output = adp.make_program()
+        assert output.split("\n") == [
+            "Program 0xBF",
+            "Bgm 120 120",
+            "AreaSettings 16 -1",
+            "\tSetProgressFlag 0x1841"
+        ]
     def test_get_mission(self):
         lines = [
             "Program 0x3B",

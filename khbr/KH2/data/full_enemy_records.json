@@ -8252,7 +8252,7 @@
             "bossZ": -150
         },
         "enabled": true,
-        "program": 196,
+        "program": 190,
         "msn": "HE_COL_2_10",
         "msn_replace_allowed": false,
         "vars": [
@@ -10029,7 +10029,8 @@
         "limiter": 0,
         "model": "B_EX120",
         "tags": [
-            "teleport_blocked"
+            "teleport_blocked",
+            "fix_area_settings"
         ],
         "msn": "HE17_MS105",
         "obj_id": 795,
@@ -10043,7 +10044,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "teleport_blocked",
+        "category": "fix_area_settings-teleport_blocked",
         "isnightmare": false,
         "parent": "Demyx OC",
         "variationof": null,

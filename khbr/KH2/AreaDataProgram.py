@@ -103,3 +103,5 @@ class AreaDataProgram:
             flags += existingflags.split(" ")
         parameters = " ".join([f for f in flags])
         self.add_command("SetProgressFlag", parameters)
+    def set_area_settings(self, x, y):
+        self.add_command("AreaSettings", "{} {}".format(x,y))

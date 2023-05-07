@@ -361,7 +361,7 @@ class AssetGenerator:
             bonus_byte = new_msn_mapping.get("setbonus", msninfo[oldmsn]["bonus"])
             mission.set_bonus_byte(bonus_byte)
 
-            if "disablecamera" in new_msn_mapping:
+            if True or "disablecamera" in new_msn_mapping:
                 mission.set_camera_complete_byte()
 
             if "setmickey" in new_msn_mapping:
@@ -438,6 +438,7 @@ class AssetGenerator:
 
                                 if old_spawn["ObjectId"] == 1543 and new_entity["name"] == "Grim Reaper II" and old_spawn["Argument1"] == 0: # Grim Reaper II is replacing itself
                                     gr2_self_replace = True
+
 
                                 final_txt = final_fight_text(old_spawn, new_entity["name"])
                                 if final_txt:
@@ -540,6 +541,8 @@ class AssetGenerator:
                     program.remove_command("SetProgressFlag")
                 if "flags" in options:
                     program.set_flags(options["flags"])
+                if "fix_area_settings" in options:
+                    program.set_area_settings(16, -1)
                 programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
                 roomsource.append(programasset)
             except:

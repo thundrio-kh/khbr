@@ -77,7 +77,7 @@ ROUTES = {
         "Xemnas",
         "Xigbar",
         "Zexion",
-        "Jafar", # pete falls forever
+        "Jafar",
         "MCP",
     ]
 }
@@ -338,14 +338,14 @@ def main(cli_args: list=[]):
         asset = findRoomSource(modyml["assets"], world, room)
         print("Making evt to jump to {}".format(new_boss["name"]))
         set_for_settings = [1] if current_boss.get("name") in ["Hayner", "Vivi", "Setzer"] else None
-        assetgenerator.generateEvt(world, room, current_boss.get("outprogram") or "all", asset["source"], options={"remove_event": True, "jump_to":{"world": newworld, "room": newroom, "program": newprogram, "set_for_settings": set_for_settings}, "open_menu":open_menu_before_each_fight, "remove_event":True})
+        assetgenerator.generateEvt(world, room, current_boss.get("outprogram") or "all", asset["source"], options={"remove_event": True, "jump_to":{"world": newworld, "room": newroom, "program": newprogram, "set_for_settings": set_for_settings}, "fix_area_settings": "fix_area_settings" in current_boss.get("tags"), "open_menu": open_menu_before_each_fight, "remove_event":True})
         world = newworld
         room = newroom
         program = newprogram
         current_boss = new_boss
     
     asset = findRoomSource(modyml["assets"], world, room)
-    assetgenerator.generateEvt(world, room, "all", asset["source"], options={"remove_event": True, "jump_to":{"world": "ES", "room": "00", "program": 69}})
+    assetgenerator.generateEvt(world, room, "all", asset["source"], options={"remove_event": True, "jump_to":{"world": "ES", "room": "00", "program": 69}, "fix_area_settings": "fix_area_settings" in current_boss.get("tags")})
 
     data_folder = os.path.join(os.path.dirname(__file__), "KH2", "data")
 
