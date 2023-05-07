@@ -91,6 +91,11 @@ class KingdomHearts2:
             "costume_rando": {"display_name": "Costume Randomizer (Beta)", "description": "Randomizes the different costumes that Sora/Donald/Goofy switch between in the different worlds (IE Space Paranoids could now be default sora, while anywhere default sora is used could be Christmas Town Sora",
                                 "possible_values": [], "hidden_values": [False, True]},
             "party_member_rando": {"display_name": "Revenge Limit Randomizer (Beta)", "description": "Randomizes the World Character party member in each world.",
+                                "possible_values": [], "hidden_values": [False, True]},
+
+            "apply_form_movement": {"display_name": "Apply Shans form movement", "description": "Apply Shans form movement msets to allow forms to jump infinitely without tposing",
+                                "possible_values": [], "hidden_values": [True, True]},
+            "apply_better_stt": {"display_name": "Apply Better STT", "description": "Applies Better STT mod.",
                                 "possible_values": [], "hidden_values": [False, True]}
         }
 
@@ -114,6 +119,10 @@ class KingdomHearts2:
             utility_mods.append("costume_rando")
         if options.get("party_member_rando"):
             utility_mods.append("party_member_rando")
+        if True or options.get("apply_form_movement"): # For now at least this is always going to be true
+            utility_mods.append("apply_form_movement")
+        if options.get("apply_better_stt"):
+            utility_mods.append("apply_better_stt")
         rmcs = options.get("remove_cutscenes", "Disabled")
         if rmcs and rmcs != "Disabled":
             utility_mods.append("remove_cutscenes{}".format(options.get("remove_cutscenes")))
@@ -328,7 +337,7 @@ class KingdomHearts2:
             if mod.startswith("revenge_limit_rando"):
                 rvlrando = mod.replace("revenge_limit_rando", "")
 
-        assetgenerator.generateObjEntry(randomization.get("object_map", {}))
+        assetgenerator.generateObjEntry(randomization.get("object_map", {}), "apply_better_stt" in utility_mods)
         assetgenerator.generateEnmp(randomization.get("scale_map",{}), remove_damage_cap="remove_damage_cap" in utility_mods)
         rmcs = [u for u in utility_mods if u.startswith("remove_cutscenes")]
         if len(rmcs):
@@ -340,7 +349,9 @@ class KingdomHearts2:
         # self.set_spawns() # TODO is this needed?
         self.location_manager.set_locations() # TODO this might be unneeded time waste????
         assetgenerator.generateSpawns(randomization.get("spawns", ""), randomization.get("subtract_map"))
-        assetgenerator.generateCustomMoveset()
+        assetgenerator.generateCustomMovesets("apply_form_movement" in utility_mods, "apply_better_stt" in utility_mods)
+        if "apply_better_stt" in utility_mods:
+            assetgenerator.generateBetterSTT()
         assetgenerator.generateCustomCmd(randomization.get("cmd_mods", {}))
         randomize_party = "party_member_rando" in utility_mods
         randomize_costumes = "costume_rando" in utility_mods
