@@ -79,7 +79,7 @@ ROUTES = {
         "Xigbar",
         "Zexion",
         "Jafar",
-        "MCP",
+        "MCP"
     ]
 }
 
@@ -346,7 +346,7 @@ def main(cli_args: list=[]):
         current_boss = new_boss
     
     asset = findRoomSource(modyml["assets"], world, room)
-    assetgenerator.generateEvt(world, room, "all", asset["source"], options={"remove_event": True, "jump_to":{"world": "ES", "room": "00", "program": 69}, "fix_source_area_settings": "fix_source_area_settings" in current_boss.get("tags")})
+    assetgenerator.generateEvt(world, room, current_boss.get("outprogram") or "all", asset["source"], options={"remove_event": True, "jump_to":{"world": "ES", "room": "00", "program": 69}, "fix_source_area_settings": "fix_source_area_settings" in current_boss.get("tags")})
 
     data_folder = os.path.join(os.path.dirname(__file__), "KH2", "data")
 
@@ -426,7 +426,7 @@ def main(cli_args: list=[]):
 
 if __name__ == "__main__":
     import sys
-    main()
+    main_ui()
     # if "cmd" in sys.argv:
     #     main()
     # else:

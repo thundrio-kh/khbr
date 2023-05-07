@@ -1615,7 +1615,7 @@ Cerberus:
       # tags:
       # - cups
       enabled: true
-      program: 190
+      program: 196
       # TODO This was working so maybe commenting the msn_list broke something but cups haven't had too much testing
       msn: HE_COL_2_10
       # msn_list:
@@ -2489,6 +2489,7 @@ MCP:
   msn: TR09_MS205
   size: 1.41
   program: 59
+  outprogram: 59
   room_size: 10.35
   obj_id: 1762
   type: boss
@@ -4516,6 +4517,7 @@ Sark:
   size: 1.22
   room_size: 9.9
   program: 58
+  outprogram: 58
   type: boss
   variations:
     Sark:
