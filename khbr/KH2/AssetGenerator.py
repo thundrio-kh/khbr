@@ -361,7 +361,7 @@ class AssetGenerator:
             bonus_byte = new_msn_mapping.get("setbonus", msninfo[oldmsn]["bonus"])
             mission.set_bonus_byte(bonus_byte)
 
-            if True or "disablecamera" in new_msn_mapping:
+            if "disablecamera" in new_msn_mapping:
                 mission.set_camera_complete_byte()
 
             if "setmickey" in new_msn_mapping:

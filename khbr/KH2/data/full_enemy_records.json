@@ -12395,6 +12395,16 @@
             0
         ],
         "name": "Hades Escape",
+        "aimods": [
+            {
+                "name": "HE05_MS102/he05.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "new_boss.obj_id"
+                }
+            }
+        ],
         "tags": [
             "needs_invuln"
         ],
@@ -12423,16 +12433,6 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [
-            {
-                "name": "HE19_MS204/he19.bdscript",
-                "type": "msn",
-                "source": "old",
-                "replacements": {
-                    "obj_id": "new_boss.obj_id"
-                }
-            }
-        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -12466,6 +12466,16 @@
             0
         ],
         "name": "Hades I",
+        "aimods": [
+            {
+                "name": "HE06_MS101/he06.bdscript",
+                "type": "msn",
+                "source": "old",
+                "replacements": {
+                    "obj_id": "new_boss.obj_id"
+                }
+            }
+        ],
         "tags": [
             "needs_invuln"
         ],
@@ -12492,16 +12502,6 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [
-            {
-                "name": "HE19_MS204/he19.bdscript",
-                "type": "msn",
-                "source": "old",
-                "replacements": {
-                    "obj_id": "new_boss.obj_id"
-                }
-            }
-        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
