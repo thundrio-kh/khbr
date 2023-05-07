@@ -541,7 +541,7 @@ class AssetGenerator:
                     program.remove_command("SetProgressFlag")
                 if "flags" in options:
                     program.set_flags(options["flags"])
-                if "fix_area_settings" in options:
+                if "fix_source_area_settings" in options:
                     program.set_area_settings(16, -1)
                 programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
                 roomsource.append(programasset)

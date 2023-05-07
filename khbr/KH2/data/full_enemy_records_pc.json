@@ -10154,7 +10154,7 @@
         "model": "B_EX120",
         "tags": [
             "teleport_blocked",
-            "fix_area_settings"
+            "fix_source_area_settings"
         ],
         "msn": "HE17_MS105",
         "obj_id": 795,
@@ -10168,7 +10168,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "fix_area_settings-teleport_blocked",
+        "category": "fix_source_area_settings-teleport_blocked",
         "isnightmare": false,
         "parent": "Demyx OC",
         "variationof": null,

@@ -2107,7 +2107,7 @@ Demyx OC:
   model: B_EX120
   tags:
   - teleport_blocked
-  - fix_area_settings
+  - fix_source_area_settings
   msn: HE17_MS105
   obj_id: 795
   size: 2.74
