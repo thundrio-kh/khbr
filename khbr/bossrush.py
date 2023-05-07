@@ -27,14 +27,9 @@ IGNORE_BOSSES = ["Scar Ghost", "Lock", "Shock", "Barrel", "Shadow Roxas", "Shenz
 ITEMS = {'Potion': '1', 'Hi-Potion': '2', 'Ether': '3', 'Elixir': '4', 'Mega-Potion': '5', 'Mega-Ether': '6', 'Megalixir': '7', 'Ability Ring': '8', "Engineer's Ring": '9', "Technician's Ring": '10', "Expert's Ring": '11', 'Sardonyx Ring': '12', 'Tourmaline Ring': '13', 'Aquamarine Ring': '14', 'Garnet Ring': '15', 'Diamond Ring': '16', 'Silver Ring': '17', 'Gold Ring': '18', 'Platinum Ring': '19', 'Mythril Ring': '20', 'Fire Element': '21', 'Blizzard Element': '22', 'Thunder Element': '23', 'Cure Element': '24', 'Ukulele Charm (Summon Stitch)': '25', 'Valor Form': '26', 'Wisdom Form': '27', 'Orichalcum Ring': '28', 'Final Form': '29', 'Anti-Form': '30', 'Master Form': '31', 'Torn Pages': '32', "Master's Ring": '34', 'Moon Amulet': '35', 'Star Charm': '36', 'Skill Ring': '38', 'Skillful Ring': '39', 'Soldier Earring': '40', 'Kingdom Key': '41', 'Oathkeeper': '42', 'Oblivion': '43', 'Detection Saber': '44', 'Edge of Ultima': '45', 'Fencer Earring': '46', 'Mage Earring': '47', 'Slayer Earring': '48', "Knight's Shield": '49', 'Detection Shield': '50', 'Test The King (Shield)': '51', 'Cosmic Ring': '52', 'Medal': '53', 'Battlefields of War': '54', 'Sword of Ancestors': '55', 'Cosmic Arts': '56', 'Shadow Archive': '57', 'Shadow Archive+': '58', 'Lucky Ring': '63', 'Full Bloom': '64', 'Draw Ring': '65', 'Full Bloom+': '66', 'Elven Bandanna': '67', 'Divine Bandanna': '68', 'Power Band': '69', 'Buster Band': '70', 'Protect Belt': '78', 'Gaia Belt': '79', 'FAKE (looks like Sword of the Ancestors)': '80', 'FAKE (Keyblade,looks like Kingdom Key)': '81', 'Guard': '82', 'Magnet Element': '87', 'Reflect Element': '88', 'High Jump LV1': '94', 'High Jump LV2': '95', 'High Jump LV3': '96', 'High Jump MAX': '97', 'Quick Run LV1': '98', 'Quick Run LV2': '99', 'Quick Run LV3': '100', 'Quick Run MAX': '101', 'Aerial Dodge LV1': '102', 'Aerial Dodge LV2': '103', 'Aerial Dodge LV3': '104', 'Aerial Dodge MAX': '105', 'Glide LV1': '106', 'Glide LV2': '107', 'Glide LV3': '108', 'Glide MAX': '109', 'Cosmic Belt': '111', 'Tent': '131', 'Shock Charm': '132', 'Shock Charm+': '133', 'Upper Slash': '137', 'Scan': '138', 'Grand Ribbon': '157', 'Aerial Recovery': '158', 'Lamp Charm (Summon Genie)': '159', 'Feather Charm (Summon Peter Pan)': '160', 'Combo Plus': '162', 'Air Combo Plus': '163', 'Fire Bangle': '173', 'Fira Bangle': '174', 'Firaga Bangle': '197', 'Trinity Limit': '198', 'Slapshot': '262', 'Dodge Slash': '263', 'Slide Dash': '264', 'Guard Break': '265', 'Explosion': '266', 'Finishing Leap': '267', 'Counterguard': '268', 'Aerial Sweep': '269', 'Aerial Spiral': '270', 'Horizontal Slash': '271', 'Aerial Finish': '272', 'Retaliating Slash': '273', 'Drive Recovery': '274', 'High Drive Recovery': '275', 'Power Boost': '276', 'Magic Boost': '277', 'Defense Boost': '278', 'AP Boost': '279', 'Dark Shard': '280', 'Dark Stone': '281', 'Dark Gem': '282', 'Dark Crystal': '283', 'Firagun Bangle': '284', 'Blizzard Armlet': '286', 'Blizzara Armlet': '287', 'Blizzaga Armlet': '288', 'Blizzagun Armlet': '289', 'Thunder Trinket': '291', 'Thundara Trinket': '292', 'Thundaga Trinket': '293', 'Thundagun Trinket': '294', 'Shadow Anklet': '296', 'Dark Anklet': '297', 'Midnight Anklet': '298', 'Chaos Anklet': '299', 'Abas Chain': '301', 'Aegis Chain': '302', 'Acrisius': '303', 'Ribbon': '304', 'Champion Belt': '305', 'Petit Ribbon': '306', 'Acrisius+': '307', 'Cosmic Chain': '308', 'Baseball Charm (Summon Chicken Little)': '383', 'Struggle Sword': '384', 'Auto Valor': '385', 'Auto Wisdom': '386', 'Auto Master': '387', 'Auto Final': '388', 'Auto Summon': '389', 'Combo Boost': '390', 'Air Combo Boost': '391', 'Reaction Boost': '392', 'Finishing Plus': '393', 'Negative Combo': '394', 'Berserk Charge': '395', 'Damage Drive': '396', 'Drive Boost': '397', 'Form Boost': '398', 'Summon Boost': '399', 'Combination Boost': '400', 'Experience Boost': '401', 'Leaf Bracer': '402', 'Magic Lock-On': '403', 'No Experience': '404', 'Draw': '405', 'Jackpot': '406', 'Lucky Lucky': '407', 'Fire Boost': '408', 'Blizzard Boost': '409', 'Thunder Boost': '410', 'Item Boost': '411', 'MP Rage': '412', 'MP Haste': '413', 'Defender': '414', 'Second Chance': '415', 'Once More': '416', 'Auto Limit (I)': '417', 'Auto Change': '418', 'Hyper Healing': '419', 'Auto Healing': '420', 'MP Hastera': '421', 'MP Hastega': '422', 'Star Seeker': '480', 'Hidden Dragon': '481', 'Save the Queen': '482', 'Save The King': '483', "Hero's Crest": '484', 'Monochrome': '485', 'Follow the Wind': '486', 'Circle of Life': '487', 'Photon Debugger': '488', 'Gull Wing': '489', 'Rumbling Rose': '490', 'Guardian Soul': '491', 'Wishing Lamp': '492', 'Decisive Pumpkin': '493', 'Sleeping Lion': '494', 'Sweet Memories': '495', 'Mysterious Abyss': '496', 'Fatal Crest': '497', 'Bond of Flame': '498', 'Fenrir': '499', 'Ultima Weapon': '500', 'Struggle Wand': '501', 'Struggle Hammer': '502', 'Combo Master': '539', 'Drive Converter': '540', 'Light & Darkness': '541', 'Damage Control': '542', 'Two Become One': '543', "Winner's Proof": '544', 'Flash Step': '559', 'Aerial Dive': '560', 'Magnet Burst': '561', 'Vicinity Break': '562', 'Limit Form': '563', 'Dodge Roll LV1': '564', 'Dodge Roll LV2': '565', 'Dodge Roll LV3': '566', 'Dodge Roll MAX': '567', "Executive's Ring": '599'}
 
 # need to apply better STT
-# ideally also apply the other fixes from that mod
-
-# no keyblades for valor/etc (detection saber)
+# and shans boss movement fixes
 
 # Find my original plan for this and add in the actual routes
-
-
-# reorder mcp/jafar/etc to the bottom
 
 ROUTES = {
     "compatability-test": [
@@ -58,11 +53,9 @@ ROUTES = {
         "Hayner",
         "Hostile Program", 
         "Hydra",
-        "Jafar", # pete falls forever
         "Larxene",
         "Luxord",
         "Marluxia",
-        "MCP",
         "Oogie Boogie",
         "Past Pete",
         "Pete OC II",
@@ -86,7 +79,9 @@ ROUTES = {
         "Xaldin", 
         "Xemnas",
         "Xigbar",
-        "Zexion"
+        "Zexion",
+        "Jafar", # pete falls forever
+        "MCP",
     ]
 }
 
@@ -423,7 +418,7 @@ def main(cli_args: list=[]):
 
     # starting weapons
     bincontent = open(os.path.join(os.path.dirname(__file__), "KH2", "data", "bin", "00common.bin"), "rb").read()
-    commonasset = assetgenerator.modwriter.writeBin(bincontent, "00common.bdx", "Bdx", "00common.bin")
+    commonasset = assetgenerator.modwriter.writeBin(bincontent, "00common.bdx", "00common.bin")
     modyml["assets"].append(commonasset)
 
     yaml.dump(modyml, open(modyml_fn, "w"))
