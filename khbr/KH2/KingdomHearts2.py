@@ -72,6 +72,9 @@ class KingdomHearts2:
         return {
             "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game has more limited enemy randomization capabilities. Turn this option on if playing on PC to remove these constraints.",
                                 "possible_values": [False, True], "hidden_values": []},
+            # used by boss rush
+            "always_set_retry": {"display_name": "Always Set Retry", "description": "Sets the MSN byte to always retry failed mission.",
+                                "possible_values": [False, True], "hidden_values": []},
             # utility mod options
             "remove_damage_cap": {"display_name": "Remove Damage Cap", "description": "Removes the damage cap for all enemies in the game.",
                                 "possible_values": [], "hidden_values": [False, True]},
@@ -88,15 +91,14 @@ class KingdomHearts2:
             "costume_rando": {"display_name": "Costume Randomizer (Beta)", "description": "Randomizes the different costumes that Sora/Donald/Goofy switch between in the different worlds (IE Space Paranoids could now be default sora, while anywhere default sora is used could be Christmas Town Sora",
                                 "possible_values": [], "hidden_values": [False, True]},
             "party_member_rando": {"display_name": "Revenge Limit Randomizer (Beta)", "description": "Randomizes the World Character party member in each world.",
-                                "possible_values": [], "hidden_values": [False, True]},
-
+                                "possible_values": [], "hidden_values": [False, True]}
         }
 
     def get_valid_enemies(self):
         return self.enemy_manager.get_valid_enemies()
     def get_valid_bosses(self):
         return self.enemy_manager.get_valid_bosses()
-        
+
     @staticmethod
     def get_utility_mods(options):
         utility_mods = []
@@ -153,7 +155,8 @@ class KingdomHearts2:
             bosses = self.enemy_manager.get_boss_list(options) if bossmode != 'Disabled' else {},
             bosses_replace_enemies = options.get("bosses_replace_enemies"),
 
-            mickey_rule = options.get("mickey_rule")
+            mickey_rule = options.get("mickey_rule"),
+            always_set_retry = options.get("always_set_retry")
         )
         if options.get("selected_enemy"):
             config.selected_enemy = options["selected_enemy"]

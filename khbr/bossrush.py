@@ -32,9 +32,10 @@ ITEMS = {'Potion': '1', 'Hi-Potion': '2', 'Ether': '3', 'Elixir': '4', 'Mega-Pot
 # need 9 drives
 # no keyblades for valor/etc (detection saber)
 
-
 # Find my original plan for this and add in the actual routes
 # check that failed missions are restarting properly
+
+# reorder mcp/jafar/etc to the bottom
 
 ROUTES = {
     "compatability-test": [
@@ -168,9 +169,9 @@ def main(cli_args: list=[]):
 
 
     def _translate_bool(value):
-        if value == 'True':
+        if value in ['True', True]:
             return True
-        if value == 'False':
+        if value in ['False', False]:
             return False
 
     settings_to_write = {
@@ -193,7 +194,8 @@ def main(cli_args: list=[]):
     json.dump(settings_to_write, open("last_settings.json", "w"))
 
     seed_options = {
-        "memory_expansion": True if args.platform == "pc" else False
+        "memory_expansion": True if args.platform == "pc" else False,
+        "always_set_retry": True
     }
     if args.boss_in_room != "vanilla":
         if args.boss_in_room == "random":

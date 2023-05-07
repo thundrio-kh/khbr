@@ -107,6 +107,8 @@ class EnemySeed:
             msn_object["setmickey"] = False # Fights as roxas will tpose when summoning mickey
         if "disablecamera" in new_boss_object.get("tags"):
             msn_object["disablecamera"] = True
+        if self.config.always_set_retry:
+            msn_object["setretry"] = True
         if old_boss_object["final_fight"]:
             msn_object["setretry"] = True
         elif new_boss_object["final_fight"]:
