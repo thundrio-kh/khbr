@@ -2714,7 +2714,7 @@ Hades Escape:
       - 0
 Hades I:
   aimods:
-  - name: HE06_MS101/he06.bdscript
+  - name: HE06_MS101/ms_a.bdscript
     type: msn
     source: old
     replacements:

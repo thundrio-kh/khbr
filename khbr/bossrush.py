@@ -46,7 +46,7 @@ ROUTES = {
         "Grim Reaper II",
         "Groundshaker",
         "Hades I", 
-        "Hades Escape", # Pete can die
+        "Hades Escape",
         "Hades II (1)",
         "Hayner",
         "Hostile Program", 
@@ -346,7 +346,7 @@ def main(cli_args: list=[]):
         current_boss = new_boss
     
     asset = findRoomSource(modyml["assets"], world, room)
-    assetgenerator.generateEvt(world, room, "all", asset["source"], options={"remove_event": True, "jump_to":{"world": "ES", "room": "00", "program": 69}, "fix_source_area_settings": "fix_source_jjjjjjjjjjarea_settings" in current_boss.get("tags")})
+    assetgenerator.generateEvt(world, room, "all", asset["source"], options={"remove_event": True, "jump_to":{"world": "ES", "room": "00", "program": 69}, "fix_source_area_settings": "fix_source_area_settings" in current_boss.get("tags")})
 
     data_folder = os.path.join(os.path.dirname(__file__), "KH2", "data")
 

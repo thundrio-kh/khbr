@@ -363,7 +363,6 @@ class AssetGenerator:
 
             if "disablecamera" in new_msn_mapping:
                 mission.set_camera_complete_byte()
-
             if "setmickey" in new_msn_mapping:
                 mission.set_mickey_bit(new_msn_mapping["setmickey"])
             if "setxp" in new_msn_mapping:
@@ -541,7 +540,7 @@ class AssetGenerator:
                     program.remove_command("SetProgressFlag")
                 if "flags" in options:
                     program.set_flags(options["flags"])
-                if "fix_source_area_settings" in options:
+                if options.get("fix_source_area_settings"):
                     program.set_area_settings(16, -1)
                 programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
                 roomsource.append(programasset)
