@@ -80,6 +80,46 @@ ROUTES = {
         "Zexion",
         "Jafar",
         "MCP"
+    ],
+    "introductory": [
+        "Axel II",
+        "Pete TR",
+        "Xaldin",
+        "Roxas",
+        "Final Xemnas"
+    ],
+    "disney-villains": [
+        "Barbossa",
+        "Cerberus",
+        "Hades II",
+        "Hydra",
+        "Jafar",
+        "Oogie Boogie",
+        "Pete TR",
+        "Sark",
+        "Scar",
+        "Shan-Yu",
+        "Past Pete",
+        "MCP",
+        "The Beast"
+    ],
+    "superbosses": [
+        "Sephiroth",
+        "Larxene (Data)",
+        "Luxord (Data)",
+        "Marluxia (Data)",
+        "Saix (Data)",
+        "Xemnas (Data)",
+        "Final Xemnas"
+        "Xigbar (Data)",
+        "Zexion (Data)",
+        "Xaldin (Data)",
+        "Vexen (Data)",
+        "Lexaeus (Data)",
+        "Roxas (Data)",
+        "Demyx (Data)",
+        "Axel (Data)",
+        "Terra",
     ]
 }
 
@@ -188,7 +228,8 @@ def main(cli_args: list=[]):
     seed_options = {
         "memory_expansion": True if args.platform == "pc" else False,
         "always_set_retry": True,
-        "apply_better_stt": True
+        "apply_better_stt": True,
+        "force_boss_story_levels": True
     }
     if args.boss_in_room != "vanilla":
         if args.boss_in_room == "random":
