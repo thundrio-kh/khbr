@@ -43,5 +43,6 @@ def get_schema():
         "unchanged_file_size": False,
         "obj_edits": {},
         "luamod": None,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     }

@@ -971,6 +971,7 @@ Armor Xemnas I:
   variations:
     Armor Xemnas I:
       msn: EH24_MS110
+      story_level: 50
       mickey_source: true
       final_fight: true
       program: 71
@@ -1144,6 +1145,7 @@ Armor Xemnas II:
         bossY: 14940
         bossZ: 4511.38818359375
       msn: EH23_MS112
+      story_level: 50
       program: 73
       #replace_as: Armor Xemnas I
       final_fight: true
@@ -1236,6 +1238,7 @@ Axel I:
   size: 2.92
   obj_id: 2229
   type: boss
+  story_level: 2
   whitelist_source:
   - Axel I
   - Axel II
@@ -1291,6 +1294,7 @@ Axel II:
   - Scar
   - Luxord #Falls through arena during RC - Kayya
   type: boss
+  story_level: 3
   whitelist_source:
   - Axel I
   - Axel II
@@ -1395,6 +1399,7 @@ Barbossa:
   type: boss
   variations:
     Barbossa:
+      story_level: 20
       vars:
       - 0
       - 0
@@ -1499,6 +1504,7 @@ Blizzard Lord:
   variations:
     Blizzard Lord:
       msn: AL03_MS103
+      story_level: 22
       mickey_source: true
       program: 59
       room_size: 10.32
@@ -1603,6 +1609,7 @@ Cerberus:
       msn: HE07_MS103
       mickey_source: true
       program: 114
+      story_level: 16
       room_size: 10.54
       vars:
       - 0
@@ -1825,6 +1832,7 @@ Dark Thorn:
   type: boss
   variations:
     Dark Thorn:
+      story_level: 13
       mickey_source: true
       vars:
       - 0
@@ -2100,6 +2108,7 @@ Demyx:
   - Cerberus # he might be starting in the sky causing it not to load the fight properly
   variations:
     Demyx:
+      story_level: 30
       vars:
       - 1
       - 0
@@ -2120,6 +2129,7 @@ Demyx OC:
   type: boss
   variations:
     Demyx OC:
+      story_level: 16
       vars:
       - 0
       - 0
@@ -2378,6 +2388,7 @@ Final Xemnas:
   type: boss
   variations:
     Final Xemnas:
+      story_level: 50
       final_fight: true
       vars:
       - 1
@@ -2505,6 +2516,7 @@ MCP:
       Id: 80
   variations:
     MCP:
+      story_level: 45
       vars:
       - 0
       - 0
@@ -2545,6 +2557,7 @@ Grim Reaper I:
   type: boss
   variations:
     Grim Reaper I:
+      story_level: 37
       mickey_source: true
       can_be_enemy: true
       msn: CA18_MS202
@@ -2596,6 +2609,7 @@ Grim Reaper II:
   type: boss
   variations:
     Grim Reaper II:
+      story_level: 37
       enabled: true
       msn: CA01_MS204
       program: 54
@@ -2647,6 +2661,7 @@ Groundshaker:
   type: boss
   variations:
     Groundshaker:
+      story_level: 43
       vars:
       - 0
       - 0
@@ -2714,6 +2729,7 @@ Hades Escape:
   type: boss
   variations:
     Hades Escape:
+      story_level: 16
       vars:
       - 0
       - 0
@@ -2741,6 +2757,7 @@ Hades I:
   type: boss
   variations:
     Hades I:
+      story_level: 16
       vars:
       - 0
       - 0
@@ -2771,6 +2788,7 @@ Hades II:
   type: boss
   variations:
     Hades II:
+      story_level: 39
       roomData:
         bossX: 0
         bossY: -0.0001509865978732705
@@ -2847,6 +2865,7 @@ Hayner:
   obj_id: 1239
   size: 0.84
   type: boss
+  story_level: 2
   whitelist_source:
   - Axel I
   - Axel II
@@ -3046,6 +3065,7 @@ Hostile Program:
   adds:
   - ObjectId: 1867 # tr prize
   type: boss
+  story_level: 28
   variations:
     Hostile Program:
       vars:
@@ -3116,6 +3136,7 @@ Hydra:
   type: boss
   variations:
     Hydra:
+      story_level: 16
       mickey_source: true
       vars:
       - 0
@@ -3223,6 +3244,7 @@ Jafar:
   room_size: 8.19 # Setting down from 11.19 to make Final Xemnas spawn here on PS2, which while untested hopefully works because you lack party members...
   obj_id: 348
   type: boss
+  story_level: 40
   variations:
     Jafar:
       vars:
@@ -3538,6 +3560,7 @@ Luxord:
   type: boss
   variations:
     Luxord:
+      story_level: 50
       vars:
       - 0
       - 0
@@ -3798,6 +3821,7 @@ Oogie Boogie:
   - ObjectId: 928 # ???
     Serial: 36
   type: boss
+  story_level: 24
   variations:
     Oogie Boogie:
       vars:
@@ -3825,6 +3849,7 @@ Past Pete:
   type: boss
   variations:
     Past Pete:
+      story_level: 19
       vars:
       - 1
       - 0
@@ -3896,6 +3921,7 @@ Pete OC II:
   roommaxsize: 16.11
   variations:
     Pete OC II:
+      story_level: 16
       vars:
       - 0
       - 0
@@ -4176,6 +4202,7 @@ Pete TR:
   type: boss
   variations:
     Pete TR:
+      story_level: 19
       vars:
       - 4
       - 0
@@ -4201,6 +4228,7 @@ Prison Keeper:
   type: boss
   variations:
     Prison Keeper:
+      story_level: 24
       vars:
       - 0
       - 0
@@ -4374,6 +4402,7 @@ Riku:
   type: boss
   variations:
     Riku:
+      story_level: 35
       vars:
       - 0
       - 0
@@ -4410,6 +4439,7 @@ Roxas:
       - 0
       - 0
     Roxas (Data):
+      story_level: 50
       roomData:
         bossX: 0.0001049073034664616
         bossY: 0.028669970110058784
@@ -4469,6 +4499,7 @@ Saix:
   type: boss
   variations:
     Saix:
+      story_level: 50
       vars:
       - 0
       - 0
@@ -4521,6 +4552,7 @@ Sark:
   type: boss
   variations:
     Sark:
+      story_level: 45
       vars:
       - 0
       - 0
@@ -4553,6 +4585,7 @@ Scar:
   type: boss
   variations:
     Scar:
+      story_level: 43
       vars:
       - 0
       - 0
@@ -4580,6 +4613,7 @@ Seifer:
   msn_replace_allowed: false
   size: 0.98
   type: boss
+  story_level: 1
   whitelist_source:
   - Axel I
   - Axel II
@@ -4722,6 +4756,7 @@ Setzer:
   msn_replace_allowed: false
   size: 1.35
   type: boss
+  story_level: 2
   whitelist_source:
   - Axel I
   - Axel II
@@ -4817,6 +4852,7 @@ Shadow Stalker:
   type: boss
   variations:
     Shadow Stalker:
+      story_level: 13
       mickey_source: true
       vars:
       - 0
@@ -4866,6 +4902,7 @@ Shan-Yu:
   type: boss
   variations:
     Shan-Yu:
+      story_level: 10
       mickey_source: true
       vars:
       - 0
@@ -5166,6 +5203,7 @@ Storm Rider:
   variations:
     Storm Rider:
       mickey_source: true
+      story_level: 35
       vars:
       - 0
       - 0
@@ -5282,6 +5320,7 @@ The Beast:
   type: boss
   variations:
     The Beast:
+      story_level: 13
       vars:
       - 0
       - 0
@@ -5319,6 +5358,7 @@ The Experiment:
   - ObjectId: 1810 # Right Hand
   variations:
     The Experiment:
+      story_level: 41
       vars:
       - 0
       - 0
@@ -5351,6 +5391,7 @@ Thresholder:
   type: boss
   variations:
     Thresholder:
+      story_level: 13
       mickey_source: true
       vars:
       - 0
@@ -5489,6 +5530,7 @@ Twilight Thorn:
   room_size: 3.93
   program: 157
   type: boss
+  story_level: 2
   whitelist_source:
   - Axel I
   - Axel II
@@ -5592,6 +5634,7 @@ Vivi:
   room_size: 11.57
   program: 85
   type: boss
+  story_level: 2
   whitelist_source:
   - Axel I
   - Axel II
@@ -5642,6 +5685,7 @@ Volcano Lord:
   variations:
     Volcano Lord:
       msn: AL03_MS103
+      story_level: 22
       mickey_source: true
       program: 59
       room_size: 10.32
@@ -5707,6 +5751,7 @@ Xaldin:
   variations:
     Xaldin:
       mickey_source: true
+      story_level: 36
       vars:
       - 0
       - 0
@@ -5738,6 +5783,7 @@ Xemnas:
   type: boss
   variations:
     Xemnas:
+      story_level: 50
       vars:
       - 0
       - 0
@@ -5776,6 +5822,7 @@ Xigbar:
   type: boss
   variations:
     Xigbar:
+      story_level: 50
       vars:
       - 0
       - 0

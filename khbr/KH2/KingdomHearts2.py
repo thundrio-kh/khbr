@@ -96,6 +96,8 @@ class KingdomHearts2:
             "apply_form_movement": {"display_name": "Apply Shans form movement", "description": "Apply Shans form movement msets to allow forms to jump infinitely without tposing",
                                 "possible_values": [], "hidden_values": [True, True]},
             "apply_better_stt": {"display_name": "Apply Better STT", "description": "Applies Better STT mod.",
+                                "possible_values": [], "hidden_values": [False, True]},
+            "force_boss_story_levels": {"display_name": "Force Boss Story Levels", "description": "Forces battle levels for boss rooms to be the same as the game. Used primarily by Boss Rush.",
                                 "possible_values": [], "hidden_values": [False, True]}
         }
 
@@ -123,6 +125,8 @@ class KingdomHearts2:
             utility_mods.append("apply_form_movement")
         if options.get("apply_better_stt"):
             utility_mods.append("apply_better_stt")
+        if options.get("force_boss_story_levels"):
+            utility_mods.append("force_boss_story_levels")
         rmcs = options.get("remove_cutscenes", "Disabled")
         if rmcs and rmcs != "Disabled":
             utility_mods.append("remove_cutscenes{}".format(options.get("remove_cutscenes")))

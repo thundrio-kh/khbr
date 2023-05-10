@@ -405,6 +405,8 @@ class AssetGenerator:
                 roomasset = self.getDefaultRoomAsset(ardname)
 
                 basespawns = original_spawns[w][r]
+                battlemods = {"adds": basespawns.get("battlescriptadds", {}) }
+
                 roommods = self.spawn_manager.apply_room_mods(basespawns, ardname)
                 
                 for spn, spawnpoint in room["spawnpoints"].items():
@@ -431,13 +433,16 @@ class AssetGenerator:
                                 self.spawn_manager.set_object_by_id(old_spid["Entities"][old_spawn_index], new_entity)
                             else:
                                 obj = self.enemy_manager.lookup_object(new_entity["name"])
+
                                 if old_spawn_index >= len(old_spid["Entities"]):
                                     continue # Case like AX1 room where AX1 was replaced subtracting the spawns that got replaced by the icy cube... Smelly way to fix this
                                 old_spawn = old_spid["Entities"][old_spawn_index]
+                                old_obj = self.enemy_manager.lookup_object_by_id(old_spawn["ObjectId"])
+                                if old_obj.get("story_level", 0) > 0:
+                                    battlemods["adds"].append("BattleLevel {}".format(old_obj["story_level"]))
 
                                 if old_spawn["ObjectId"] == 1543 and new_entity["name"] == "Grim Reaper II" and old_spawn["Argument1"] == 0: # Grim Reaper II is replacing itself
                                     gr2_self_replace = True
-
 
                                 final_txt = final_fight_text(old_spawn, new_entity["name"])
                                 if final_txt:
@@ -482,7 +487,6 @@ class AssetGenerator:
                     programasset = self.modwriter.writeCopiedSubfile(ardname, "btl", "AreaDataScript", assetpath)
                     roomasset["source"].append(programasset)
                 else:
-                    battlemods = {"adds": basespawns.get("battlescriptadds", {}) }
                     self.update_area_data_programs(ardname, roomasset["source"], battlemods)
             
                 self.assets.append(roomasset)
