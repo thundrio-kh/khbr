@@ -142,7 +142,7 @@ def main(cli_args: list=[]):
     options.add_argument("-boss_in_room", choices=["vanilla", "random"] + bosses, default=last_settings.get("boss_in_room"))
     options.add_argument("-starting_room", choices=["default", "random"] + source_bosses, default=last_settings.get("starting_room"))
     options.add_argument("-num_bosses", choices=["random"] + [str(l) for l in range(1,len(bosses))], default=last_settings.get("num_bosses"))
-    options.add_argument("-level", choices=["random"] + [str(l) for l in range(1,99)], default=last_settings.get("level"))
+    options.add_argument("-level", choices=["random"] + [str(l) for l in range(1,100)], default=last_settings.get("level"))
     options.add_argument("-route", choices=["random"] + list(ROUTES.keys()), default=last_settings.get("route"))
     options.add_argument("-randomize_starting_stuff", choices=['True', 'False'], default=last_settings.get("randomize_starting_stuff"))
     options.add_argument("-abilities_start_equipped", choices=['True', 'False'], default=last_settings.get("abilities_start_equipped"))

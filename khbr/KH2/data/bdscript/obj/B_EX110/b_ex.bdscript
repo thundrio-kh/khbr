@@ -1,5 +1,5 @@
 ---
-WorkSize: 4576
+WorkSize: 4592
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -23,6 +23,13 @@ Name: b_ex110
 ; codeLabels: 
 ; codeRevealer: -l 303 -l 563 -l 1239 -l 1433 -l 1536 -l 1659 -l 1728 -l 1964 -l 2135 -l 2419 -l 2599 -l 2883 -l 3544 -l 5137 -l 5389 -l 5448 -l 5449 -l 5466 -l 5471 -l 5486 -l 5672 -l 5777 -l 5790 -l 5935 -l 6001 -l 6067 -l 6179 -l 6246 -l 6917 -l 6927 -l 6961 -l 6975 -l 6985 -l 7763 -l 8122 -l 8165 -l 8176 -l 8217 -l 8264 -l 8275 -l 8285 -l 8826 -l 8914 -l 8929 -l 9071 -l 9408 -l 9423 -l 9505 -l 9667 -l 9846 -l 9923 -l 9931 -l 10000 -l 10029 -l 10064 -l 10166 -l 10229 -l 10329 -l 10534 -l 10615 -l 11019 -l 11053 -l 11326 -l 11389 -l 11398 -l 11548 -l 11734 -l 12313 -l 12512 -l 13075 -l 13526
  section .text
+SAVEAXELSTARTPOS:
+ pushFromPWp WAXELOBJ
+ pushImm 81
+ syscall 1, 114
+ pushFromPWp WAXELOBJ
+ syscall 1, 147 ; get pos
+ memcpyToWp 16, WAXELSTARTPOS
 TR11:
  popToSp 0
  popToSp 4
@@ -2022,6 +2029,7 @@ L3554:
  pushFromFSp 0
  pushFromPWp W436
  gosub 8, L5097
+ gosub 4, SAVEAXELSTARTPOS
  pushFromFSp 0
  pushFromPWp W436
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
@@ -6603,11 +6611,12 @@ L12435:
  pushImmf 30
  gosub 12, L328
  pushFromPSpVal 0
+ pushFromFWp WAXELSTARTPOS
  pushImm 11
  pushImm 0
  pushImm 0
  ; fire floor spawned here at least at start
- syscall 1, 21 ; trap_obj_effect_start (4 in, 1 out)
+ syscall 1, 22 ; trap_obj_effect_start_pos (5 in, 1 out)
  popToSpVal 76
  pushFromPSpVal 0
  pushImm 12
@@ -7485,3 +7494,6 @@ W4564:
  resb 4
 W4568:
  resb 8
+
+WAXELSTARTPOS:
+ resb 16
