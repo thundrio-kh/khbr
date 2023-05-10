@@ -95,6 +95,12 @@ class EnemyManager:
 
     def lookup_object(self, name):
         return self.enemy_records[name]
+    
+    def lookup_object_by_id(self, id):
+        for name in self.enemy_records:
+            if self.enemy_records[name]["obj_id"] == id:
+                return self.enemy_records[name]
+        return None
 
     def get_parent(self, name):
         child = self.enemy_records.get(name)

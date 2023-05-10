@@ -53,7 +53,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bees TT PO": {
         "vars": [
@@ -113,7 +114,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Aerial Knocker": {
         "vars": [
@@ -171,7 +173,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Aerial Knocker (1 0)": {
         "vars": [
@@ -226,7 +229,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Aeriel Champ": {
         "vars": [
@@ -280,7 +284,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Aeroplane": {
         "vars": [
@@ -339,7 +344,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Armored Knight (NM)": {
         "vars": [
@@ -393,7 +399,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Armored Knight (1K Battle, Disappears)": {
         "vars": [
@@ -449,7 +456,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bolt Tower (MU)": {
         "vars": [
@@ -505,7 +513,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bolt Tower (RAW)": {
         "vars": [
@@ -561,7 +570,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bookmaster": {
         "vars": [
@@ -622,7 +632,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bookmaster (TR)": {
         "vars": [
@@ -679,7 +690,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bulky Vendor (Disappears)": {
         "vars": [
@@ -736,7 +748,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bulky Vendor": {
         "vars": [
@@ -796,7 +809,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bulky Vendor (NM) (Disappears)": {
         "vars": [
@@ -853,7 +867,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bulky Vendor (NM)": {
         "vars": [
@@ -910,7 +925,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Camo Cannon": {
         "vars": [
@@ -966,7 +982,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Cannon Gun WI": {
         "vars": [
@@ -1022,7 +1039,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Creeper Plant": {
         "vars": [
@@ -1081,7 +1099,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Creeper Plant (NM)": {
         "vars": [
@@ -1137,7 +1156,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Demyx's water form (EH)": {
         "vars": [
@@ -1195,7 +1215,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Emerald Blues": {
         "vars": [
@@ -1256,7 +1277,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Emerald Blues (TR)": {
         "vars": [
@@ -1312,7 +1334,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fortuneteller (AL)": {
         "vars": [
@@ -1379,7 +1402,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fortuneteller (AL) (14 20)": {
         "vars": [
@@ -1444,7 +1468,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fortuneteller (AL) (13 0)": {
         "vars": [
@@ -1509,7 +1534,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fortuneteller (AL) (10 32)": {
         "vars": [
@@ -1574,7 +1600,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fortuneteller (AL) (13 32)": {
         "vars": [
@@ -1639,7 +1666,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fortuneteller (AL) (1 30)": {
         "vars": [
@@ -1704,7 +1732,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fortuneteller (AL) (6 30)": {
         "vars": [
@@ -1769,7 +1798,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fortuneteller (AL) (7 0)": {
         "vars": [
@@ -1834,7 +1864,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fortuneteller (AL) (10 0)": {
         "vars": [
@@ -1899,7 +1930,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gargoyle Knight (30 0)": {
         "vars": [
@@ -1957,7 +1989,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gargoyle Knight (32 0)": {
         "vars": [
@@ -2015,7 +2048,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gargoyle Knight (34 0)": {
         "vars": [
@@ -2073,7 +2107,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gargoyle Knight (36 0)": {
         "vars": [
@@ -2131,7 +2166,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gargoyle Knight": {
         "vars": [
@@ -2191,7 +2227,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gargoyle Warrior (40 0)": {
         "vars": [
@@ -2249,7 +2286,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gargoyle Warrior (42 0)": {
         "vars": [
@@ -2307,7 +2345,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gargoyle Warrior (44 0)": {
         "vars": [
@@ -2365,7 +2404,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gargoyle Warrior (46 0)": {
         "vars": [
@@ -2423,7 +2463,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gargoyle Warrior": {
         "vars": [
@@ -2483,7 +2524,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hammer Frame": {
         "vars": [
@@ -2542,7 +2584,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hammer Frame (99 0)": {
         "vars": [
@@ -2597,7 +2640,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hot Rod": {
         "vars": [
@@ -2657,7 +2701,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Large Body WI": {
         "vars": [
@@ -2713,7 +2758,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Neoshadow": {
         "vars": [
@@ -2773,7 +2819,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Neoshadow (1 0)": {
         "vars": [
@@ -2830,7 +2877,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Neoshadow (44 0)": {
         "vars": [
@@ -2887,7 +2935,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Neoshadow (99 0)": {
         "vars": [
@@ -2944,7 +2993,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Neoshadow (NM)": {
         "vars": [
@@ -2998,7 +3048,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rabid Dog": {
         "vars": [
@@ -3054,7 +3105,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster (RAW)": {
         "vars": [
@@ -3109,7 +3161,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster (RAW) (1 0)": {
         "vars": [
@@ -3164,7 +3217,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Reckless": {
         "vars": [
@@ -3221,7 +3275,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Scar Ghost": {
         "vars": [
@@ -3277,7 +3332,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shadow (NM)": {
         "vars": [
@@ -3331,7 +3387,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shadow (RAW)": {
         "vars": [
@@ -3386,7 +3443,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shadow (RAW) (99 0)": {
         "vars": [
@@ -3441,7 +3499,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shaman": {
         "vars": [
@@ -3501,7 +3560,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shaman (1 0)": {
         "vars": [
@@ -3558,7 +3618,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Soldier (TR)": {
         "vars": [
@@ -3612,7 +3673,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Soldier (WI)": {
         "vars": [
@@ -3666,7 +3728,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Strafer": {
         "vars": [
@@ -3723,7 +3786,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Surveillance Robot (1K Battle) (Disappears)": {
         "vars": [
@@ -3781,7 +3845,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Surveillance Robot (TR)": {
         "vars": [
@@ -3838,7 +3903,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Surveillance Robot (TR) (2 0)": {
         "vars": [
@@ -3895,7 +3961,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Toy Soldier": {
         "vars": [
@@ -3956,7 +4023,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Toy Soldier (2 0)": {
         "vars": [
@@ -4014,7 +4082,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Trick Ghost (NM)": {
         "vars": [
@@ -4070,7 +4139,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate A": {
         "vars": [
@@ -4141,7 +4211,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate A (Jumps up)": {
         "vars": [
@@ -4210,7 +4281,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate A (Jumps Forward)": {
         "vars": [
@@ -4279,7 +4351,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate A (90 0)": {
         "vars": [
@@ -4348,7 +4421,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate A (93 0)": {
         "vars": [
@@ -4417,7 +4491,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate A (22 0)": {
         "vars": [
@@ -4486,7 +4561,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate A (24 0)": {
         "vars": [
@@ -4555,7 +4631,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate A (20 0)": {
         "vars": [
@@ -4624,7 +4701,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate A (91 0)": {
         "vars": [
@@ -4693,7 +4771,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate B": {
         "vars": [
@@ -4759,7 +4838,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate B (90 0)": {
         "vars": [
@@ -4823,7 +4903,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate B (93 0)": {
         "vars": [
@@ -4887,7 +4968,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate B (92 0)": {
         "vars": [
@@ -4951,7 +5033,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C": {
         "vars": [
@@ -5027,7 +5110,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (Jumps Down)": {
         "vars": [
@@ -5101,7 +5185,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (28 0)": {
         "vars": [
@@ -5175,7 +5260,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (91 0)": {
         "vars": [
@@ -5249,7 +5335,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (Jumps Up)": {
         "vars": [
@@ -5323,7 +5410,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (90 0)": {
         "vars": [
@@ -5397,7 +5485,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (13 0)": {
         "vars": [
@@ -5471,7 +5560,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (92 0)": {
         "vars": [
@@ -5545,7 +5635,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (93 0)": {
         "vars": [
@@ -5619,7 +5710,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (12 0)": {
         "vars": [
@@ -5693,7 +5785,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (6 0)": {
         "vars": [
@@ -5767,7 +5860,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (2 0)": {
         "vars": [
@@ -5841,7 +5935,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (8 0)": {
         "vars": [
@@ -5915,7 +6010,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Undead Pirate C (26 0)": {
         "vars": [
@@ -5989,7 +6085,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Wight Knight": {
         "vars": [
@@ -6046,7 +6143,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Vivi (clones)": {
         "vars": [
@@ -6102,7 +6200,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shadow Roxas": {
         "vars": [
@@ -6158,7 +6257,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Aerial Viking": {
         "vars": [
@@ -6217,7 +6317,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Aeroplane WI": {
         "vars": [
@@ -6273,7 +6374,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Air Pirate": {
         "vars": [
@@ -6330,7 +6432,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Air Pirate (1 0)": {
         "vars": [
@@ -6387,10 +6490,12 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Armor Xemnas I": {
         "msn": "EH24_MS110",
+        "story_level": 50,
         "mickey_source": true,
         "final_fight": true,
         "program": 71,
@@ -6662,6 +6767,7 @@
             "bossZ": 4511.38818359375
         },
         "msn": "EH23_MS112",
+        "story_level": 50,
         "program": 73,
         "final_fight": true,
         "size": 1.7,
@@ -6820,7 +6926,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Armored Knight (90 0)": {
         "vars": [
@@ -6875,7 +6982,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Assassin": {
         "vars": [
@@ -6938,7 +7046,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Assault Rider": {
         "vars": [
@@ -6996,7 +7105,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Axel I": {
         "vars": [
@@ -7028,6 +7138,7 @@
         "size": 2.92,
         "obj_id": 2229,
         "type": "boss",
+        "story_level": 2,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -7112,6 +7223,12 @@
             0
         ],
         "name": "Axel II",
+        "aimods": [
+            {
+                "name": "B_EX110/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "roomData": {
             "bossX": 0,
             "bossY": 0,
@@ -7140,6 +7257,7 @@
             "Luxord"
         ],
         "type": "boss",
+        "story_level": 3,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -7181,7 +7299,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -7277,6 +7394,7 @@
         "obj_edits": {},
         "luamod": null,
         "roomData": {},
+        "story_level": 0,
         "available": [
             "Banzai"
         ]
@@ -7336,9 +7454,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Barbossa": {
+        "story_level": 20,
         "vars": [
             0,
             0
@@ -7513,6 +7633,7 @@
         "obj_edits": {},
         "luamod": null,
         "roomData": {},
+        "story_level": 0,
         "available": [
             "Barrel"
         ]
@@ -7571,7 +7692,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Beffudler": {
         "vars": [
@@ -7625,7 +7747,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Berserker": {
         "vars": [
@@ -7684,10 +7807,12 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Blizzard Lord": {
         "msn": "AL03_MS103",
+        "story_level": 22,
         "mickey_source": true,
         "program": 59,
         "room_size": 10.32,
@@ -7846,7 +7971,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Bolt Tower": {
         "vars": [
@@ -7908,7 +8034,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bolt Tower (1)": {
         "vars": [
@@ -7965,7 +8092,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bolt Tower DC": {
         "vars": [
@@ -8021,7 +8149,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Cannon Gun": {
         "vars": [
@@ -8082,7 +8211,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Cannon Gun (1)": {
         "vars": [
@@ -8139,7 +8269,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Cerberus": {
         "roomData": {
@@ -8150,6 +8281,7 @@
         "msn": "HE07_MS103",
         "mickey_source": true,
         "program": 114,
+        "story_level": 16,
         "room_size": 10.54,
         "vars": [
             0,
@@ -8305,7 +8437,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Cloud": {
         "roomData": {
@@ -8380,6 +8513,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -8493,7 +8627,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Cloud (2)": {
         "roomData": {
@@ -8565,7 +8700,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Creeper": {
         "vars": [
@@ -8623,7 +8759,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Crescendo": {
         "vars": [
@@ -8679,7 +8816,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Crimson Jazz": {
         "vars": [
@@ -8740,7 +8878,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Crimson Jazz (1 0)": {
         "vars": [
@@ -8799,7 +8938,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Crimson Jazz (Zipliner)": {
         "vars": [
@@ -8858,7 +8998,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Crimson Jazz AL (8 1)": {
         "vars": [
@@ -8917,7 +9058,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Crimson Jazz AL (12 0)": {
         "vars": [
@@ -8976,7 +9118,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Crimson Jazz AL": {
         "vars": [
@@ -9037,7 +9180,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Dancer": {
         "vars": [
@@ -9096,7 +9240,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Dancer (99 0)": {
         "vars": [
@@ -9153,9 +9298,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Dark Thorn": {
+        "story_level": 13,
         "mickey_source": true,
         "vars": [
             0,
@@ -9340,7 +9487,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 3
     },
     "Demyx (Data)": {
         "vars": [
@@ -9410,7 +9558,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 30
     },
     "Final Xemnas (Clone) (Data)": {
         "source_replace_allowed": false,
@@ -9488,7 +9637,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Final Xemnas (Data)": {
         "final_fight": true,
@@ -9580,7 +9730,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 50
     },
     "Luxord (Data)": {
         "vars": [
@@ -9646,7 +9797,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 50
     },
     "Saix (Data)": {
         "vars": [
@@ -9707,7 +9859,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 50
     },
     "Xaldin (Data)": {
         "vars": [
@@ -9770,7 +9923,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 36
     },
     "Xemnas (Data)": {
         "vars": [
@@ -9836,7 +9990,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 50
     },
     "Xigbar (Data)": {
         "vars": [
@@ -9908,9 +10063,11 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 50
     },
     "Demyx": {
+        "story_level": 30,
         "vars": [
             1,
             0
@@ -10018,6 +10175,7 @@
         ]
     },
     "Demyx OC": {
+        "story_level": 16,
         "vars": [
             0,
             0
@@ -10170,7 +10328,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Devastator": {
         "vars": [
@@ -10232,7 +10391,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Devastator (Ranged Start)": {
         "vars": [
@@ -10291,7 +10451,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Devastator (Ranged)": {
         "vars": [
@@ -10350,7 +10511,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Dragoon": {
         "vars": [
@@ -10410,7 +10572,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Dragoon (99 0)": {
         "vars": [
@@ -10468,7 +10631,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Driller Mole": {
         "vars": [
@@ -10525,7 +10689,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Driller Mole NM": {
         "vars": [
@@ -10579,7 +10744,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Dusk": {
         "vars": [
@@ -10638,7 +10804,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Dusk (99 0)": {
         "vars": [
@@ -10695,7 +10862,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Ed": {
         "program": 51,
@@ -10756,6 +10924,7 @@
         "obj_edits": {},
         "luamod": null,
         "roomData": {},
+        "story_level": 0,
         "available": [
             "Ed"
         ]
@@ -10816,7 +10985,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Emerald Blues NM": {
         "vars": [
@@ -10872,7 +11042,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fat Bandit": {
         "vars": [
@@ -10933,7 +11104,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fat Bandit (1 0)": {
         "vars": [
@@ -10992,7 +11164,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fat Bandit (Passive)": {
         "vars": [
@@ -11051,7 +11224,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fiery Globe": {
         "vars": [
@@ -11108,7 +11282,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fiery Globe Treasure Room": {
         "vars": [
@@ -11162,9 +11337,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Final Xemnas": {
+        "story_level": 50,
         "final_fight": true,
         "vars": [
             1,
@@ -11383,7 +11560,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Fortuneteller": {
         "vars": [
@@ -11442,7 +11620,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Fortuneteller (Zipliner)": {
         "vars": [
@@ -11499,7 +11678,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gambler": {
         "vars": [
@@ -11560,7 +11740,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gambler (5 0)": {
         "vars": [
@@ -11619,7 +11800,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gambler (90 0)": {
         "vars": [
@@ -11678,7 +11860,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Gambler (99 0)": {
         "vars": [
@@ -11737,7 +11920,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Giant Sark": {
         "vars": [
@@ -11794,11 +11978,13 @@
         "obj_edits": {},
         "luamod": null,
         "roomData": {},
+        "story_level": 0,
         "available": [
             "Giant Sark"
         ]
     },
     "MCP": {
+        "story_level": 45,
         "vars": [
             0,
             0
@@ -11984,9 +12170,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Grim Reaper I": {
+        "story_level": 37,
         "mickey_source": true,
         "can_be_enemy": true,
         "msn": "CA18_MS202",
@@ -12070,6 +12258,7 @@
         ]
     },
     "Grim Reaper II": {
+        "story_level": 37,
         "enabled": true,
         "msn": "CA01_MS204",
         "program": 54,
@@ -12190,6 +12379,7 @@
         ]
     },
     "Groundshaker": {
+        "story_level": 43,
         "vars": [
             0,
             0
@@ -12388,9 +12578,11 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 39
     },
     "Hades Escape": {
+        "story_level": 16,
         "vars": [
             0,
             0
@@ -12462,6 +12654,7 @@
         }
     },
     "Hades I": {
+        "story_level": 16,
         "vars": [
             0,
             0
@@ -12533,6 +12726,7 @@
         }
     },
     "Hades II": {
+        "story_level": 39,
         "roomData": {
             "bossX": 0,
             "bossY": -0.0001509865978732705,
@@ -12706,7 +12900,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Hammer Frame WI": {
         "vars": [
@@ -12760,7 +12955,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hayner": {
         "msn": "TT05_MS401",
@@ -12806,6 +13002,7 @@
         "obj_id": 1239,
         "size": 0.84,
         "type": "boss",
+        "story_level": 2,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -12943,6 +13140,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -13042,7 +13240,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat": {
         "vars": [
@@ -13100,7 +13299,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (3 0)": {
         "vars": [
@@ -13174,7 +13374,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (9 0)": {
         "vars": [
@@ -13248,7 +13449,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL": {
         "vars": [
@@ -13324,7 +13526,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (15 30)": {
         "vars": [
@@ -13398,7 +13601,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (1 31)": {
         "vars": [
@@ -13472,7 +13676,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (3 30)": {
         "vars": [
@@ -13546,7 +13751,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (8 32)": {
         "vars": [
@@ -13620,7 +13826,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (13 31)": {
         "vars": [
@@ -13694,7 +13901,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (2 0)": {
         "vars": [
@@ -13768,7 +13976,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (5 0)": {
         "vars": [
@@ -13842,7 +14051,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (6 0)": {
         "vars": [
@@ -13916,7 +14126,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (11 0)": {
         "vars": [
@@ -13990,7 +14201,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (1 0)": {
         "vars": [
@@ -14064,7 +14276,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (10 0)": {
         "vars": [
@@ -14138,7 +14351,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (14 0)": {
         "vars": [
@@ -14212,7 +14426,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (12 0)": {
         "vars": [
@@ -14286,7 +14501,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (13 0)": {
         "vars": [
@@ -14360,7 +14576,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (7 0)": {
         "vars": [
@@ -14434,7 +14651,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hook Bat AL (3 20)": {
         "vars": [
@@ -14508,7 +14726,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hostile Program": {
         "vars": [
@@ -14543,6 +14762,7 @@
             }
         ],
         "type": "boss",
+        "story_level": 28,
         "variations": [
             "Hostile Program"
         ],
@@ -14679,9 +14899,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Hydra": {
+        "story_level": 16,
         "mickey_source": true,
         "vars": [
             0,
@@ -14850,7 +15072,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Icy Cube Treasure Room": {
         "vars": [
@@ -14904,7 +15127,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Illuminator": {
         "vars": [
@@ -14966,6 +15190,7 @@
         "obj_edits": {},
         "luamod": null,
         "roomData": {},
+        "story_level": 0,
         "available": [
             "Illuminator"
         ]
@@ -15022,7 +15247,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Jafar": {
         "vars": [
@@ -15077,6 +15303,7 @@
         "room_size": 8.19,
         "obj_id": 348,
         "type": "boss",
+        "story_level": 40,
         "variations": [
             "Jafar"
         ],
@@ -15177,7 +15404,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Lance Warrior": {
         "vars": [
@@ -15231,7 +15459,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Large Body": {
         "vars": [
@@ -15290,7 +15519,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Larxene": {
         "vars": [
@@ -15358,6 +15588,7 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas II",
             "Axel I",
@@ -15462,7 +15693,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Leon": {
         "roomData": {
@@ -15538,6 +15770,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -15652,7 +15885,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Leon (2)": {
         "roomData": {
@@ -15725,7 +15959,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Leon (3)": {
         "roomData": {
@@ -15798,7 +16033,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Lexaeus": {
         "vars": [
@@ -15873,6 +16109,7 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas II",
             "Axel I",
@@ -15984,7 +16221,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Living Bone": {
         "vars": [
@@ -16044,7 +16282,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Living Bone (Headless with Necromancer)": {
         "tags": [
@@ -16103,7 +16342,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Living Bone (Necromancer)": {
         "tags": [
@@ -16162,7 +16402,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Lock": {
         "vars": [
@@ -16219,6 +16460,7 @@
         "obj_edits": {},
         "luamod": null,
         "roomData": {},
+        "story_level": 0,
         "available": [
             "Lock"
         ]
@@ -16278,7 +16520,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Luna Bandit (1 0)": {
         "vars": [
@@ -16333,9 +16576,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Luxord": {
+        "story_level": 50,
         "vars": [
             0,
             0
@@ -16510,7 +16755,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Magic Phantom": {
         "vars": [
@@ -16568,7 +16814,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Magnum Loader": {
         "vars": [
@@ -16624,7 +16871,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Marluxia": {
         "vars": [
@@ -16698,6 +16946,7 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas II",
             "Axel I",
@@ -16806,7 +17055,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Minute Bomb": {
         "vars": [
@@ -16869,7 +17119,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Minute Bomb (99 0)": {
         "vars": [
@@ -16929,7 +17180,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Minute Bomb WI": {
         "vars": [
@@ -16988,7 +17240,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Morning Star": {
         "vars": [
@@ -17047,7 +17300,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Morning Star (99 0)": {
         "vars": [
@@ -17104,7 +17358,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Necromancer": {
         "vars": [
@@ -17160,7 +17415,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Nightwalker": {
         "vars": [
@@ -17216,7 +17472,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Bomb Bell A": {
         "vars": [
@@ -17274,7 +17531,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Oogie Boogie": {
         "vars": [
@@ -17349,6 +17607,7 @@
             }
         ],
         "type": "boss",
+        "story_level": 24,
         "variations": [
             "Oogie Boogie"
         ],
@@ -17404,6 +17663,7 @@
         ]
     },
     "Past Pete": {
+        "story_level": 19,
         "vars": [
             1,
             0
@@ -17876,6 +18136,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 19,
         "pc": {
             "source_replace_allowed": true
         }
@@ -17935,11 +18196,13 @@
         "obj_edits": {},
         "luamod": null,
         "roomData": {},
+        "story_level": 0,
         "available": [
             "Pete OC I"
         ]
     },
     "Pete OC II": {
+        "story_level": 16,
         "vars": [
             0,
             0
@@ -18327,6 +18590,7 @@
         }
     },
     "Pete TR": {
+        "story_level": 19,
         "vars": [
             4,
             0
@@ -18721,6 +18985,7 @@
         ]
     },
     "Prison Keeper": {
+        "story_level": 24,
         "vars": [
             0,
             0
@@ -18876,7 +19141,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster": {
         "vars": [
@@ -18937,7 +19203,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster (90 0)": {
         "vars": [
@@ -18994,7 +19261,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster (1 0)": {
         "vars": [
@@ -19051,7 +19319,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (12 0)": {
         "vars": [
@@ -19126,7 +19395,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (13 0)": {
         "vars": [
@@ -19201,7 +19471,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL": {
         "vars": [
@@ -19278,7 +19549,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (9 0)": {
         "vars": [
@@ -19353,7 +19625,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (14 30)": {
         "vars": [
@@ -19428,7 +19701,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (8 30)": {
         "vars": [
@@ -19503,7 +19777,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (4 30)": {
         "vars": [
@@ -19578,7 +19853,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (12 32)": {
         "vars": [
@@ -19653,7 +19929,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (6 31)": {
         "vars": [
@@ -19728,7 +20005,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (10 31)": {
         "vars": [
@@ -19803,7 +20081,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (2 32)": {
         "vars": [
@@ -19878,7 +20157,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (2 0)": {
         "vars": [
@@ -19953,7 +20233,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (7 0)": {
         "vars": [
@@ -20028,7 +20309,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (14 0)": {
         "vars": [
@@ -20103,7 +20385,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (11 0)": {
         "vars": [
@@ -20178,7 +20461,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (5 0)": {
         "vars": [
@@ -20253,7 +20537,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (6 0)": {
         "vars": [
@@ -20328,7 +20613,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (12 17)": {
         "vars": [
@@ -20403,7 +20689,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (1 0)": {
         "vars": [
@@ -20478,7 +20765,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster AL (3 0)": {
         "vars": [
@@ -20553,7 +20841,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Rapid Thruster WI": {
         "vars": [
@@ -20607,9 +20896,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Riku": {
+        "story_level": 35,
         "vars": [
             0,
             0
@@ -20789,6 +21080,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -20842,6 +21134,7 @@
         ]
     },
     "Roxas (Data)": {
+        "story_level": 50,
         "roomData": {
             "bossX": 0.0001049073034664616,
             "bossY": 0.028669970110058784,
@@ -20960,9 +21253,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Saix": {
+        "story_level": 50,
         "vars": [
             0,
             0
@@ -21129,7 +21424,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Samurai (99 0)": {
         "vars": [
@@ -21186,9 +21482,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Sark": {
+        "story_level": 45,
         "vars": [
             0,
             0
@@ -21291,6 +21589,7 @@
         ]
     },
     "Scar": {
+        "story_level": 43,
         "vars": [
             0,
             0
@@ -21436,6 +21735,7 @@
         "msn_replace_allowed": false,
         "size": 0.98,
         "type": "boss",
+        "story_level": 1,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -21550,6 +21850,7 @@
         "obj_id": 1656,
         "size": 0.98,
         "type": "boss",
+        "story_level": 1,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -21648,6 +21949,7 @@
         "obj_id": 1656,
         "size": 0.98,
         "type": "boss",
+        "story_level": 1,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -21744,6 +22046,7 @@
         "msn_replace_allowed": false,
         "size": 0.98,
         "type": "boss",
+        "story_level": 1,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -21841,6 +22144,7 @@
         "msn_replace_allowed": false,
         "size": 0.98,
         "type": "boss",
+        "story_level": 1,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -21966,6 +22270,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -22062,6 +22367,7 @@
         "msn_replace_allowed": false,
         "size": 1.35,
         "type": "boss",
+        "story_level": 2,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -22187,7 +22493,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shadow (1 0)": {
         "vars": [
@@ -22243,7 +22550,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shadow (Aggressive)": {
         "vars": [
@@ -22299,9 +22607,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shadow Stalker": {
+        "story_level": 13,
         "mickey_source": true,
         "vars": [
             0,
@@ -22462,9 +22772,11 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shan-Yu": {
+        "story_level": 10,
         "mickey_source": true,
         "vars": [
             0,
@@ -22629,6 +22941,7 @@
         "obj_edits": {},
         "luamod": null,
         "roomData": {},
+        "story_level": 0,
         "available": [
             "Shenzie"
         ]
@@ -22689,7 +23002,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Shock": {
         "vars": [
@@ -22746,6 +23060,7 @@
         "obj_edits": {},
         "luamod": null,
         "roomData": {},
+        "story_level": 0,
         "available": [
             "Shock"
         ]
@@ -22807,7 +23122,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Silver Rock (1 0)": {
         "vars": [
@@ -22864,7 +23180,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Sniper": {
         "vars": [
@@ -22924,7 +23241,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Soldier": {
         "vars": [
@@ -22985,7 +23303,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Soldier (1 0)": {
         "vars": [
@@ -23041,7 +23360,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Soldier (99 0)": {
         "vars": [
@@ -23097,7 +23417,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Soldier NM": {
         "vars": [
@@ -23151,7 +23472,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Sorcerer": {
         "vars": [
@@ -23211,7 +23533,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Spring Metal": {
         "vars": [
@@ -23267,10 +23590,12 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Storm Rider": {
         "mickey_source": true,
+        "story_level": 35,
         "vars": [
             0,
             0
@@ -23580,7 +23905,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Strafer RAW": {
         "vars": [
@@ -23635,7 +23961,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Surveillance Robot": {
         "vars": [
@@ -23694,7 +24021,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Terra": {
         "vars": [
@@ -23759,6 +24087,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -23815,6 +24144,7 @@
         ]
     },
     "The Beast": {
+        "story_level": 13,
         "vars": [
             0,
             0
@@ -23915,6 +24245,7 @@
         ]
     },
     "The Experiment": {
+        "story_level": 41,
         "vars": [
             0,
             0
@@ -24021,6 +24352,7 @@
         ]
     },
     "Thresholder": {
+        "story_level": 13,
         "mickey_source": true,
         "vars": [
             0,
@@ -24185,6 +24517,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -24298,7 +24631,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Tifa (2)": {
         "roomData": {
@@ -24370,7 +24704,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Tornado Step": {
         "vars": [
@@ -24426,7 +24761,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Toy Soldier NM": {
         "vars": [
@@ -24483,7 +24819,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Trick Ghost": {
         "vars": [
@@ -24542,7 +24879,8 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Twilight Thorn": {
         "vars": [
@@ -24573,6 +24911,7 @@
         "room_size": 3.93,
         "program": 157,
         "type": "boss",
+        "story_level": 2,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -24716,7 +25055,8 @@
         "msn_list": [],
         "roomsizemultiplier": 1,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Vexen": {
         "program": 115,
@@ -24784,6 +25124,7 @@
         "roomsizemultiplier": 1,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas II",
             "Blizzard Lord",
@@ -24864,6 +25205,7 @@
         "room_size": 11.57,
         "program": 85,
         "type": "boss",
+        "story_level": 2,
         "whitelist_source": [
             "Axel I",
             "Axel II",
@@ -24930,6 +25272,7 @@
     },
     "Volcano Lord": {
         "msn": "AL03_MS103",
+        "story_level": 22,
         "mickey_source": true,
         "program": 59,
         "room_size": 10.32,
@@ -25084,7 +25427,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Wight Knight NM": {
         "vars": [
@@ -25138,10 +25482,12 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "roomData": {}
+        "roomData": {},
+        "story_level": 0
     },
     "Xaldin": {
         "mickey_source": true,
+        "story_level": 36,
         "vars": [
             0,
             0
@@ -25257,6 +25603,7 @@
         ]
     },
     "Xemnas": {
+        "story_level": 50,
         "vars": [
             0,
             0
@@ -25368,6 +25715,7 @@
         ]
     },
     "Xigbar": {
+        "story_level": 50,
         "vars": [
             0,
             0
@@ -25553,6 +25901,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -25667,7 +26016,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Yuffie (2)": {
         "roomData": {
@@ -25740,7 +26090,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Yuffie (3)": {
         "roomData": {
@@ -25813,7 +26164,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Zexion": {
         "program": 151,
@@ -25887,6 +26239,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -26008,6 +26361,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     }
 }

@@ -439,7 +439,11 @@ class AssetGenerator:
                                 old_spawn = old_spid["Entities"][old_spawn_index]
                                 old_obj = self.enemy_manager.lookup_object_by_id(old_spawn["ObjectId"])
                                 if old_obj.get("story_level", 0) > 0:
-                                    battlemods["adds"].append("BattleLevel {}".format(old_obj["story_level"]))
+                                    prg = old_obj["program"]
+                                    if old_obj["program"] in battlemods["adds"]:
+                                        battlemods["adds"][prg].append("BattleLevel {}".format(old_obj["story_level"]))
+                                    else:
+                                        battlemods["adds"][prg] = ["BattleLevel {}".format(old_obj["story_level"])]
 
                                 if old_spawn["ObjectId"] == 1543 and new_entity["name"] == "Grim Reaper II" and old_spawn["Argument1"] == 0: # Grim Reaper II is replacing itself
                                     gr2_self_replace = True

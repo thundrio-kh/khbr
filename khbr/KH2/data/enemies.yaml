@@ -1270,7 +1270,7 @@ Axel I:
       - 0
 Axel II:
   aimods: 
-  - name: B_EX110/m_ex.bdscript
+  - name: B_EX110/b_ex.bdscript
     type: obj
   roomData:
     bossX: 0
