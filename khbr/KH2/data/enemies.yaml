@@ -1907,6 +1907,7 @@ Final Xemnas (Data):
   - data
   - organization
   - solo
+  - fix_source_area_settings
   - needs_teleport # Mostly just the data version that gets softlocked due to needing teleport
   enabled: true
   aimods: 
@@ -2370,6 +2371,7 @@ Final Xemnas:
   tags:
   - solo
   - organization
+  - fix_source_area_settings
   enabled: true
   hp: 100
   isnightmare: true
@@ -2386,7 +2388,6 @@ Final Xemnas:
   - ObjectId: 2079 # clone 
     Argument1: 0
     Argument2: 0
-  msn_replace_allowed: false
   obj_id: 2079
   type: boss
   variations:

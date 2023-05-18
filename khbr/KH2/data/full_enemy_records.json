@@ -9578,6 +9578,7 @@
             "data",
             "organization",
             "solo",
+            "fix_source_area_settings",
             "needs_teleport"
         ],
         "aimods": [
@@ -9613,7 +9614,7 @@
             "Final Xemnas (Data)"
         ],
         "replace_as": null,
-        "category": "data-needs_teleport-organization-solo",
+        "category": "data-fix_source_area_settings-needs_teleport-organization-solo",
         "isnightmare": false,
         "parent": "Final Xemnas",
         "children": [],
@@ -9656,6 +9657,7 @@
             "data",
             "organization",
             "solo",
+            "fix_source_area_settings",
             "needs_teleport"
         ],
         "enabled": true,
@@ -9693,7 +9695,7 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "data-needs_teleport-organization-solo",
+        "category": "data-fix_source_area_settings-needs_teleport-organization-solo",
         "isnightmare": true,
         "parent": "Final Xemnas",
         "children": [],
@@ -11371,7 +11373,8 @@
         "can_be_enemy": false,
         "tags": [
             "solo",
-            "organization"
+            "organization",
+            "fix_source_area_settings"
         ],
         "enabled": true,
         "hp": 100,
@@ -11395,7 +11398,6 @@
                 "Argument2": 0
             }
         ],
-        "msn_replace_allowed": false,
         "obj_id": 2079,
         "type": "boss",
         "variations": [
@@ -11404,7 +11406,8 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "category": "organization-solo",
+        "msn_replace_allowed": true,
+        "category": "fix_source_area_settings-organization-solo",
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [
@@ -11438,16 +11441,20 @@
             "Cerberus",
             "Cloud",
             "Dark Thorn",
+            "Demyx",
             "Final Xemnas",
             "Grim Reaper I",
             "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
+            "Hostile Program",
             "Hydra",
             "Jafar",
             "Larxene",
             "Leon",
+            "Lexaeus",
+            "Luxord",
             "Marluxia",
             "Oogie Boogie",
             "Past Pete",
@@ -11455,6 +11462,7 @@
             "Prison Keeper",
             "Riku",
             "Roxas",
+            "Saix",
             "Sark",
             "Scar",
             "Seifer",
@@ -11474,7 +11482,8 @@
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie"
+            "Yuffie",
+            "Zexion"
         ]
     },
     "Final Xemnas (Clone)": {
@@ -11508,7 +11517,8 @@
         "can_be_enemy": false,
         "tags": [
             "solo",
-            "organization"
+            "organization",
+            "fix_source_area_settings"
         ],
         "hp": 100,
         "isnightmare": true,
@@ -11531,7 +11541,6 @@
                 "Argument2": 0
             }
         ],
-        "msn_replace_allowed": false,
         "obj_id": 2079,
         "type": "boss",
         "variations": [
@@ -11539,7 +11548,8 @@
             "Final Xemnas (Clone)"
         ],
         "replace_as": null,
-        "category": "organization-solo",
+        "msn_replace_allowed": true,
+        "category": "fix_source_area_settings-organization-solo",
         "parent": "Final Xemnas",
         "variationof": null,
         "children": [],
