@@ -499,21 +499,33 @@ class AssetGenerator:
             self.assets.append(textasset)
 
     def update_area_data_programs(self, ardname, roomsource, battlemods={}):
+        # TODO FIXME THIS HACKY
+        if ardname == "eh23":
+            battlemods = {'adds': {73: ['BattleLevel 50']}}
+        elif ardname == "ca01":
+            battlemods = {'adds': {54: ['BattleLevel 37']}}
+        elif ardname == "he19":
+            battlemods = {'adds': {202: ['BattleLevel 39']}}
+        def _can_update_capacity(ispc, prg):
+            if not prg.has_command("Capacity"):
+                return False
+            if ardname in ["mu07", "mu09"]:
+                # Summit will crash when capacity is infinite, and shan yu's summons can sometimes crash the game
+                return False
+            mission = prg.get_mission()
+            if (not ispc) and (not mission):
+                # It's not a big deal if enemies fail to spawn properly in areas where you don't have a mission going on
+                return False             
+            if mission == "MU02_MS103B":
+                return False # Ambush has some serious issues related to cost
+            return True
+
         btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
         with open(btlfn) as f:
             script = AreaDataScript(f.read(), ispc=self.ispc)
         for p in script.programs:
             prg = script.programs[p]
-            if prg.has_command("Capacity"):
-                if ardname in ["mu07", "mu09"]:
-                    # Summit will crash when capacity is infinite, and shan yu's summons can sometimes crash the game
-                    continue
-                mission = prg.get_mission()
-                if (not script.ispc) and (not mission):
-                    # It's not a big deal if enemies fail to spawn properly in areas where you don't have a mission going on
-                    continue 
-                if mission == "MU02_MS103B":
-                    continue # Ambush has some serious issues related to cost
+            if _can_update_capacity(script.ispc, prg):
                 prg.update_capacity(HARDCAP)
             if self.ispc:
                 if prg.has_command("Spawn"):
