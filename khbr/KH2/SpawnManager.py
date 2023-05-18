@@ -114,8 +114,9 @@ class SpawnManager:
         # move enemies height to the sora
         sora = spawnpoint[0]["Entities"][0]
 
-        boss = spawnpoint[0]["Entities"][1]
-        boss["PositionY"] = sora["PositionZ"]
+        boss = spawnpoint[0]["Entities"][2]
+        boss["PositionY"] = -22300
+        sora["PositionY"] = -22300
 
     def apply_room_mods(self, basespawns, ardname):
         roommods = {}
