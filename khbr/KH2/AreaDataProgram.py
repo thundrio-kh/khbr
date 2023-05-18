@@ -17,7 +17,7 @@ class AreaDataProgram:
             if not word in smap:
                 smap[word] = [l]
             else:
-                smap[word].append(l) # I THINK this only happens with If statements and really only the colloseum so don't really have to worry about this case
+                smap[word].append(l) # I THINK this only happens with if statements and really only the colloseum so we don't really have to worry about this case
         return smap
     def has_command(self, command):
         return command in self.map
@@ -35,6 +35,7 @@ class AreaDataProgram:
         newline = "{} {}".format(command, parameters)
         if command.startswith("Set"):
             newline = "\t"+newline
+        print(newline)
         if self.has_command(command):
             change_lines = self.map[command]
             if set_for_settings:

@@ -1,7 +1,6 @@
 
 import unittest, os, functools, sys, traceback, pdb
-from randomizer import Randomizer, KingdomHearts2
-import testutils
+from khbr.randomizer import Randomizer, KingdomHearts2
 import shutil, yaml, json
 from khbr.KH2.schemas.random_config import RandomConfig
 

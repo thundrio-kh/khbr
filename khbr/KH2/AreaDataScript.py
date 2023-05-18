@@ -18,7 +18,7 @@ class AreaDataScript:
                 lines_program = [line]
             else:
                 lines_program.append(line)
-        if currentProgram:
+        if currentProgram is not None:
             programs[currentProgram] = AreaDataProgram(lines_program, ispc=self.ispc)
         return programs
     def get_program(self, number):
