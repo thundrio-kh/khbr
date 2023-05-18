@@ -6,3 +6,4 @@ BattleLevel 30
 Spawn "b_z1"
 Spawn "b_b0"
 Mission 0x192 "HE_COL_2_10"
+BattleLevel 39

@@ -467,7 +467,7 @@ def main(cli_args: list=[]):
 
 if __name__ == "__main__":
     import sys
-    main()
+    main_ui()
     # if "cmd" in sys.argv:
     #     main()
     # else:

@@ -12,7 +12,7 @@ Run generate_randomizations.py to pre generate the randomizations for when boss 
 
 Instructions to build boss rush alpha exe
 * cd to khbr
-* pyinstaller bossrush.py
+* pyinstaller bossrush.py --collect-data KH2
 * in the dist folder create a khbr folder, then copy the KH2/data folder there
-* copy extracted_data from KH2Randomizer folder into the dist folder
+* copy extracted_data from dist folder into the dist/bossrush folder
 * zip up the folder, and upload to gdrive
