@@ -88,4 +88,11 @@ Spawn "e_50"
     sc = AreaDataScript(script)
     assert len(sc.programs) == 4
 
-test_complex_program_script()
+def test_get_program():
+    script = """Program 0xCD
+Spawn "d53_"
+Spawn "e53_"
+Spawn "f53_" """
+    sc = AreaDataScript(script)
+    assert sc.get_program(0xCD) == list(sc.programs.values())[0]
+    assert sc.get_program(9999) == None
