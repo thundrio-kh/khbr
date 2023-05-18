@@ -1,5 +1,5 @@
 ---
-WorkSize: 20832
+WorkSize: 20848
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -1007,6 +1007,9 @@ L1833:
  pushFromPWp W16732
  gosub32 8, L4020
  pushFromFSp 0
+ dup
+ syscall 1, 147 ; trap_obj_pos
+ memcpyToWp 16, WSTARTPOS
  pushFromPWp W16732
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W16732
@@ -3015,9 +3018,12 @@ L6336:
  popToSp 4
  popToSp 0
  pushFromFSp 0
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushFromFSp 4
  gosub32 4, L6357
  ret 
@@ -20991,6 +20997,8 @@ TXT42059:
 L42072:
 TXT42072:
  db 'atk_charge_revenge',0,0
+SAMDEBUG:
+ db 'samdebug',0,0
 
  section .bss
 W0:
@@ -21015,3 +21023,6 @@ W16560:
  resb 172
 W16732:
  resb 4100
+
+WSTARTPOS:
+ resb 16
