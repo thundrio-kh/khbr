@@ -12290,6 +12290,10 @@
             {
                 "name": "B_CA050/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "F_CA690_BTL/f_ca.bdscript",
+                "type": "obj"
             }
         ],
         "msn_source_as": "WI03_MS104",
@@ -12579,7 +12583,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "story_level": 39
+        "story_level": 0
     },
     "Hades Escape": {
         "story_level": 16,
@@ -12726,7 +12730,6 @@
         }
     },
     "Hades II": {
-        "story_level": 39,
         "roomData": {
             "bossX": 0,
             "bossY": -0.0001509865978732705,
@@ -12803,6 +12806,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
+        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -12836,6 +12840,7 @@
             "bossZ": -800
         },
         "enabled": true,
+        "story_level": 39,
         "msn_replace_allowed": true,
         "program": 202,
         "msn": "HE19_MS205",
@@ -12900,8 +12905,7 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null,
-        "story_level": 0
+        "luamod": null
     },
     "Hammer Frame WI": {
         "vars": [
@@ -21017,12 +21021,19 @@
         ]
     },
     "Roxas": {
+        "story_level": 50,
         "msn": "EH21_MS101",
         "vars": [
             0,
             0
         ],
         "name": "Roxas",
+        "aimods": [
+            {
+                "name": "B_EX390/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "roomData": {
             "bossX": 0.0001049073034664616,
             "bossY": 0.028669970110058784,
@@ -21061,7 +21072,6 @@
         ],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -21080,7 +21090,6 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "story_level": 0,
         "available": [
             "Armor Xemnas I",
             "Armor Xemnas II",
@@ -21134,7 +21143,6 @@
         ]
     },
     "Roxas (Data)": {
-        "story_level": 50,
         "roomData": {
             "bossX": 0.0001049073034664616,
             "bossY": 0.028669970110058784,
@@ -21154,6 +21162,12 @@
             1
         ],
         "name": "Roxas (Data)",
+        "aimods": [
+            {
+                "name": "B_EX390/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "can_be_enemy": false,
         "enmp_index": 213,
         "hp": 100,
@@ -21178,7 +21192,6 @@
         "children": [],
         "msn_required": false,
         "msn_source_as": null,
-        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -21196,7 +21209,8 @@
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
         "obj_edits": {},
-        "luamod": null
+        "luamod": null,
+        "story_level": 0
     },
     "Runemaster": {
         "vars": [
