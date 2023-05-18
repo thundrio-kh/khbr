@@ -4424,6 +4424,7 @@ Roxas:
   - organization
   - solo
   - needs_teleport
+  - fix_source_area_settings
   can_be_enemy: false #expensive
   enabled: true
   enmp_index: 0xD5

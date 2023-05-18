@@ -21403,7 +21403,8 @@
         "tags": [
             "organization",
             "solo",
-            "needs_teleport"
+            "needs_teleport",
+            "fix_source_area_settings"
         ],
         "can_be_enemy": false,
         "enabled": true,
@@ -21425,7 +21426,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "needs_teleport-organization-solo",
+        "category": "fix_source_area_settings-needs_teleport-organization-solo",
         "parent": "Roxas",
         "variationof": null,
         "children": [

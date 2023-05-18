@@ -34,7 +34,6 @@ ROUTES = {
         "Armor Xemnas I",
         "Armor Xemnas II",
         "Axel I",
-        "Axel II",
         "Barbossa", 
         "Cerberus",
         "Cerberus (Cups)",
@@ -64,7 +63,6 @@ ROUTES = {
         "Saix",
         "Sark",
         "Scar",
-        "Seifer (1)",
         "Sephiroth",
         "Shan-Yu",
         "Storm Rider",
@@ -73,13 +71,13 @@ ROUTES = {
         "The Experiment",
         "Thresholder",
         "Twilight Thorn",
-        "Vexen",
         "Xaldin", 
         "Xemnas",
         "Xigbar",
         "Zexion",
         "Jafar",
-        "MCP"
+        "Seifer (1)",
+        "Axel II",
     ],
     "introductory": [
         "Axel II",
@@ -179,8 +177,8 @@ def main(cli_args: list=[]):
     kh2 = KingdomHearts2()
     source_bosses = kh2.get_valid_bosses()
     bosses = [b for b in source_bosses if b not in IGNORE_BOSSES]
-    options.add_argument("-boss_in_room", choices=["vanilla", "random"] + bosses, default=last_settings.get("boss_in_room"))
-    options.add_argument("-starting_room", choices=["default", "random"] + source_bosses, default=last_settings.get("starting_room"))
+    options.add_argument("-boss_in_room", choices=["vanilla", "random"] + sorted(bosses), default=last_settings.get("boss_in_room"))
+    options.add_argument("-starting_room", choices=["default", "random"] + sorted(source_bosses), default=last_settings.get("starting_room"))
     options.add_argument("-num_bosses", choices=["random"] + [str(l) for l in range(1,len(bosses))], default=last_settings.get("num_bosses"))
     options.add_argument("-level", choices=["random"] + [str(l) for l in range(1,100)], default=last_settings.get("level"))
     options.add_argument("-route", choices=["random"] + list(ROUTES.keys()), default=last_settings.get("route"))
