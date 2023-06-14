@@ -1,6 +1,11 @@
 import random, struct
 
+DEBUG_BOSS_LIST = None
+#DEBUG_BOSS_LIST = {'Xemnas': 'Volcano Lord'}
+
 def pickbossmapping(enemy_records, parent_bossdict):
+    if DEBUG_BOSS_LIST:
+        return DEBUG_BOSS_LIST
     while 1:
         bosslist = [b for b in parent_bossdict if parent_bossdict[b]["name"] == parent_bossdict[b]["parent"]]
         chosen = {}
