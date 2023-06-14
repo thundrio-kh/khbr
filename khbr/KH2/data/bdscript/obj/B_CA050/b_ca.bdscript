@@ -1374,7 +1374,7 @@ L3024:
  pushFromPWp W0
  pushImmf 600
  pushImmf -2
- pushImmf 100
+ pushImmf -1900
  pushImmf 1
  gosub 8, L550
  pushFromPSpVal 288

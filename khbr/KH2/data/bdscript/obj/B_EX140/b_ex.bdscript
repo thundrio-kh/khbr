@@ -1,3 +1,5 @@
+; during his final dm the final lasers are spawning around 000
+; the scope is all messed up I think thats because I changed too many spots
 ---
 WorkSize: 5168
 StackSize: 512
@@ -1222,7 +1224,7 @@ L2297:
  pushFromFSp 0
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushFromFSp 4
  gosub 4, L581
  ret 
@@ -6423,8 +6425,8 @@ L10885:
  gosub 8, L26241
  pushFromFSp 0
  gosub 8, L26556
- pushImm 8
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
+;  pushImm 8
+;  syscall 1, 37 ; trap_bg_show (1 in, 0 out)
  pushFromFSp 0
  pushImm 6
  syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
@@ -8955,7 +8957,7 @@ L17121:
  pushFromPSp 80
  pushImmf 0
  pushImmf 0
- pushImmf 250
+ pushImmf -1890
  pushImmf 1
  gosub 28, L581
  pushFromPSp 64
@@ -9020,13 +9022,13 @@ L17254:
  pushFromPSp 80
  pushImmf -425
  pushImmf 0
- pushImmf 140
+ pushImmf -1890
  pushImmf 1
  gosub 28, L581
  pushFromPSp 64
  pushImmf 425
  pushImmf -200
- pushImmf 140
+ pushImmf -1890
  pushImmf 1
  gosub 28, L581
  pushImm 1
@@ -9094,13 +9096,13 @@ L17404:
  pushFromPSp 80
  pushImmf -1200
  pushImmf 0
- pushImmf 150
+ pushImmf -1890
  pushImmf 1
  gosub 28, L581
  pushFromPSp 64
  pushImmf 1200
  pushImmf -200
- pushImmf 150
+ pushImmf -1890
  pushImmf 1
  gosub 28, L581
  pushImm 1
@@ -9166,13 +9168,13 @@ L17546:
  pushFromPSp 80
  pushImmf 0
  pushImmf 0
- pushImmf 500
+ pushImmf -1890
  pushImmf 1
  gosub 28, L581
  pushFromPSp 64
  pushImmf 0
  pushImmf -200
- pushImmf -500
+ pushImmf -1890
  pushImmf 1
  gosub 28, L581
  pushImm 1
@@ -9238,13 +9240,13 @@ L17688:
  pushFromPSp 80
  pushImmf 0
  pushImmf 0
- pushImmf -500
+ pushImmf -1890
  pushImmf 1
  gosub 28, L581
  pushFromPSp 64
  pushImmf 0
  pushImmf -200
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
  gosub 28, L581
  pushImm 1
@@ -9301,15 +9303,15 @@ L17819:
 L17821:
  drop 
 L17822:
- pushFromFWp W788
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
- pushImm 2
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
+;  pushFromFWp W788
+;  syscall 1, 37 ; trap_bg_show (1 in, 0 out)
+;  pushImm 2
+;  syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
  pushFromFSp 8
  eqz 
  jz L17843
- pushImm 8
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
+;  pushImm 8
+;  syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
  jmp L17843
 L17843:
  gosub 28, L608
@@ -9727,12 +9729,12 @@ L18639:
  halt 
  jmp L18602
 L18642:
- pushImm 2
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
- pushImm 8
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
- pushFromFWp W788
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
+;  pushImm 2
+;  syscall 1, 37 ; trap_bg_show (1 in, 0 out)
+;  pushImm 8
+;  syscall 1, 37 ; trap_bg_show (1 in, 0 out)
+;  pushFromFWp W788
+;  syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
  pushFromFSp 4
  jz L18753
  pushFromPSp 16
@@ -10390,7 +10392,7 @@ L19887:
  pushImmf -400
  pushImmf -50
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
- pushImmf 600
+ pushImmf -1890
  pushImmf 1
  gosub 20, L581
  jmp L20052
@@ -10408,7 +10410,7 @@ L19924:
  pushImmf -400
  pushImmf -50
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
- pushImmf -600
+ pushImmf -1890
  pushImmf 1
  gosub 20, L581
  jmp L20052
@@ -10424,9 +10426,7 @@ L19961:
  pushImmf -400
  pushImmf -50
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
- pushImmf -600
- pushImmf 600
- syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ pushImmf -1890
  pushImmf 1
  gosub 20, L581
  jmp L20052
@@ -10442,9 +10442,7 @@ L19998:
  pushImmf -400
  pushImmf -50
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
- pushImmf -600
- pushImmf 600
- syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ pushImmf -1890
  pushImmf 1
  gosub 20, L581
  jmp L20052
@@ -10454,9 +10452,7 @@ L20026:
  pushImmf 600
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
  pushImmf -500
- pushImmf -600
- pushImmf 600
- syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ pushImmf -1890
  pushImmf 1
  gosub 20, L581
 L20052:
@@ -10698,19 +10694,19 @@ L20492: ;___label for action pushFromPAi L26668 ; ___ai scope_start
  pushFromPSpVal 176
  pushImmf 0
  pushImmf 0
- pushImmf 550
+ pushImmf -1890
  pushImmf 1
  gosub 12, L581
  pushFromPSpVal 192
  pushImmf 0
  pushImmf -800
- pushImmf 1900
+ pushImmf -1890
  pushImmf 1
  gosub 12, L581
  pushFromPSpVal 208
  pushImmf 0
  pushImmf -600
- pushImmf 1000
+ pushImmf -1890
  pushImmf 1
  gosub 12, L581
  pushFromPSp 16
@@ -11332,7 +11328,7 @@ L21737:
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  gosub 12, L581
  pushFromPSp 16
  pushImmf 6.283185
@@ -13779,7 +13775,7 @@ L26186:
  pushFromPSp 32
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
  gosub 16, L581
  pushFromFSp 0

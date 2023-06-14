@@ -1,3 +1,4 @@
+; todo - still a problem where axel is jumping out and jumping back in around the 0/0/0 coordinate
 ---
 WorkSize: 4592
 StackSize: 512
@@ -23,13 +24,6 @@ Name: b_ex110
 ; codeLabels: 
 ; codeRevealer: -l 303 -l 563 -l 1239 -l 1433 -l 1536 -l 1659 -l 1728 -l 1964 -l 2135 -l 2419 -l 2599 -l 2883 -l 3544 -l 5137 -l 5389 -l 5448 -l 5449 -l 5466 -l 5471 -l 5486 -l 5672 -l 5777 -l 5790 -l 5935 -l 6001 -l 6067 -l 6179 -l 6246 -l 6917 -l 6927 -l 6961 -l 6975 -l 6985 -l 7763 -l 8122 -l 8165 -l 8176 -l 8217 -l 8264 -l 8275 -l 8285 -l 8826 -l 8914 -l 8929 -l 9071 -l 9408 -l 9423 -l 9505 -l 9667 -l 9846 -l 9923 -l 9931 -l 10000 -l 10029 -l 10064 -l 10166 -l 10229 -l 10329 -l 10534 -l 10615 -l 11019 -l 11053 -l 11326 -l 11389 -l 11398 -l 11548 -l 11734 -l 12313 -l 12512 -l 13075 -l 13526
  section .text
-SAVEAXELSTARTPOS:
- pushFromPWp WAXELOBJ
- pushImm 81
- syscall 1, 114
- pushFromPWp WAXELOBJ
- syscall 1, 147 ; get pos
- memcpyToWp 16, WAXELSTARTPOS
 TR11:
  popToSp 0
  popToSp 4
@@ -98,9 +92,9 @@ L140:
  pushFromPSp 16
  pushImmf 0
  pushImmf 0
- pushImmf -1
+ pushImmf -1890
  pushImmf 1
- gosub 12, L225
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 4
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
@@ -132,7 +126,7 @@ L140:
  syscall 2, 20 ; trap_magic_start_thread (2 in, 1 out)
  drop 
  ret 
-L225:
+FLOATS_TO_VECTOR:
  popToSp 4
  popToSp 8
  popToSp 12
@@ -152,11 +146,12 @@ L252:
  popToSp 0
  pushFromFSp 0
  ; Vector for when repositioning axel after rc is done
+ ;pushFromPWp WSTARTPOS
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushFromFSp 4
- gosub 4, L225
+ gosub 4, FLOATS_TO_VECTOR
  ret 
 L272:
  popToSp 4
@@ -244,9 +239,9 @@ L409:
  pushFromPSp 16
  pushImmf 0
  pushImmf 0
- pushImmf -1
+ pushImmf -1890
  pushImmf 1
- gosub 12, L225
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 4
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
@@ -1345,9 +1340,9 @@ L2346:
  pushFromPSp 16
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
- gosub 12, L225
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 4
  pushFromFSp 0
  pushFromPSp 16
@@ -1742,6 +1737,7 @@ L3066:
  syscall 0, 38 ; trap_effect_set_pos (2 in, 0 out)
  jmp L3092
 L3092:
+ ; check here
  pushFromFSpVal 68
  pushImm 0
  sub 
@@ -2029,8 +2025,10 @@ L3554:
  pushFromFSp 0
  pushFromPWp W436
  gosub 8, L5097
- gosub 4, SAVEAXELSTARTPOS
  pushFromFSp 0
+ dup
+ syscall 1, 147 ; trap_obj_pos
+ memcpyToWp 16, WSTARTPOS
  pushFromPWp W436
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W436
@@ -2549,9 +2547,9 @@ L4930:
  pushFromPWp W4544
  pushImmf 0
  pushImmf -90
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
- gosub 8, L225
+ gosub 8, FLOATS_TO_VECTOR
  jmp L4969
 L4969:
  pushFromFSp 0
@@ -3737,9 +3735,9 @@ L7085:
  pushFromPSp 32
  pushImmf 0
  pushImmf 150
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
- gosub 32, L225
+ gosub 32, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushFromPSp 32
  pushImm 208
@@ -3897,9 +3895,9 @@ L7394:
  pushFromPSp 16
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
- gosub 32, L225
+ gosub 32, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushFromPSp 16
  gosub 32, L6890
@@ -3980,9 +3978,13 @@ L7584:
  pushImm 21
  popToSp 104
 L7604:
+ ; check here
+ pushImm 2
+ pushFromPAi SAMDEBUG
+ syscall 0,0
  pushFromFSp 0
  pushFromPSp 16
- syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
+ syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out) ; this is where he is jumping around
  pushFromFSp 0
  gosub 32, L7910
  pushFromFSp 0
@@ -4095,6 +4097,11 @@ L7806:
  syscall 1, 12 ; trap_sysobj_motion_change (3 in, 0 out)
  ret 
 L7819:
+ ; check here
+ ret
+ pushImm 3
+ pushFromPAi SAMDEBUG
+ syscall 0,0
  popToSp 0
  pushFromFSp 0
  syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
@@ -6205,9 +6212,9 @@ L11679:
  pushFromPSp 32
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
- gosub 16, L225
+ gosub 16, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushFromPSp 32
  pushFromFSp 16
@@ -6611,8 +6618,8 @@ L12435:
  pushImmf 30
  gosub 12, L328
  pushFromPSpVal 0
- pushFromFWp WAXELSTARTPOS
  pushImm 11
+ pushFromPWp WSTARTPOS
  pushImm 0
  pushImm 0
  ; fire floor spawned here at least at start
@@ -6998,9 +7005,9 @@ L13114:
  pushFromPSp 32
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
- gosub 16, L225
+ gosub 16, FLOATS_TO_VECTOR
  pushImm 1
  popToSpVal 72
  pushImmf 0
@@ -7066,11 +7073,12 @@ L13211:
 L13249:
  pushFromPSp 32
  ; this is designating where the appearing fire pillars go
+ ;pushFromPWp WSTARTPOS
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
- gosub 16, L225
+ gosub 16, FLOATS_TO_VECTOR
 L13265:
  pushFromFSp 0
  pushFromPSp 32
@@ -7078,11 +7086,12 @@ L13265:
  jz L13384
  pushFromPSp 16
  ; this is designating where the appearing fire pillars go
+ ;pushFromPWp WSTARTPOS
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
- gosub 16, L225
+ gosub 16, FLOATS_TO_VECTOR
  pushFromPSp 32
  pushFromPSp 16
  syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
@@ -7147,9 +7156,9 @@ L13390:
  pushFromPSp 128
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
- gosub 40, L225
+ gosub 40, FLOATS_TO_VECTOR
  pushFromPSp 128
  pushFromFSp 4
  syscall 0, 5 ; trap_vector_sub (2 in, 1 out)
@@ -7474,6 +7483,8 @@ TXT14012:
 L14015:
 TXT14015:
  db 'atk_burst',0
+SAMDEBUG:
+ db 'samdebug',0
 
  section .bss
 W0:
@@ -7495,5 +7506,7 @@ W4564:
 W4568:
  resb 8
 
-WAXELSTARTPOS:
+WSTARTPOS:
+ resb 16
+WAXELOBJ:
  resb 16

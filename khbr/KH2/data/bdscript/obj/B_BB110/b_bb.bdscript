@@ -393,7 +393,7 @@ L712:
  pushFromPSp 32
  pushImmf 0
  pushImmf -2050
- pushImmf 0
+ pushImmf -2450
  pushImmf 1
  gosub 20, L934
  pushFromPSp 32

@@ -20,7 +20,7 @@ Triggers:
 - Key: 0
   Addr: TR0
 Name: b_ex400
-
+; I think I want to try changing all the rest pos's to set specific pos's using the calculated center
 ---
 ; codeLabels: 
 ; codeRevealer: -l 87 -l 991 -l 1116 -l 1723 -l 1916 -l 2252 -l 3667 -l 3668 -l 3713 -l 7888 -l 8140 -l 8199 -l 8200 -l 8217 -l 8222 -l 8237 -l 8423 -l 8500 -l 8567 -l 8672 -l 8685 -l 8830 -l 8885 -l 8941 -l 9017 -l 9029 -l 9047 -l 9108 -l 9121 -l 9134 -l 9147 -l 9160 -l 9173 -l 9186 -l 9199 -l 9212 -l 9225 -l 9238 -l 9251 -l 9264 -l 9563 -l 9633 -l 9646 -l 9659 -l 9832 -l 9861 -l 9871 -l 9963 -l 9969 -l 10066 -l 10150 -l 10191 -l 10275 -l 10316 -l 10406 -l 10447 -l 10543 -l 10584 -l 10668 -l 10709 -l 10817 -l 10858 -l 10960 -l 11418 -l 11544 -l 11764 -l 11774 -l 11801 -l 11873 -l 11882 -l 11909 -l 11987 -l 12014 -l 12104 -l 12142 -l 12152 -l 12242 -l 12280 -l 12290 -l 12392 -l 12581 -l 12627 -l 12637 -l 12672 -l 12805 -l 12851 -l 12861 -l 12896 -l 13149 -l 13156 -l 13265 -l 13404 -l 13421 -l 13485 -l 14105 -l 14129 -l 14364 -l 14381 -l 14458 -l 14724 -l 14807 -l 14819 -l 14839 -l 14859 -l 14869 -l 14876 -l 14886 -l 14960 -l 14970 -l 15076 -l 15086 -l 15197 -l 15233 -l 15303 -l 15339 -l 15533 -l 15560 -l 15567 -l 15574 -l 15874 -l 16079 -l 16116 -l 16127 -l 16134 -l 16263 -l 16280 -l 16344 -l 16409 -l 16676 -l 16723 -l 16730 -l 16799 -l 17122 -l 17212 -l 17282 -l 17576 -l 17593 -l 17644 -l 17721 -l 17970 -l 18029 -l 18036 -l 18101 -l 18172 -l 18185 -l 18198 -l 18367 -l 18546 -l 18623 -l 18631 -l 18928 -l 18962 -l 19031 -l 19044 -l 19071 -l 19098 -l 19237 -l 19374 -l 19408 -l 19541 -l 19592 -l 19829 -l 20059 -l 20072 -l 20085 -l 20098 -l 20173 -l 20183 -l 20461 -l 20682 -l 20700 -l 20701 -l 20754 -l 20772 -l 20833 -l 20905 -l 21003 -l 21020 -l 21032 -l 21043 -l 21060 -l 21072 -l 21083 -l 22353 -l 22611 -l 24847 -l 25131 -l 27246 -l 27470 -l 27730 -l 28199 -l 28276 -l 28391 -l 28506 -l 28515
@@ -1463,9 +1463,6 @@ L2589:
  memcpyToSp 16, 48
  pushFromPSp 48
  gosub 20, L2743
- pushFromFSp 4
- pushFromPSp 32
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromPWp W0
  pushFromPAi L29667 ; ___ai 00 (L29667)
  pushFromFSp 0
@@ -4501,9 +4498,6 @@ L9334:
  pushFromPSp 32
  memcpyToSp 16, 16
  pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
- pushFromFSp 0
  syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
  syscall 1, 120 ; trap_target_pos (1 in, 1 out)
  memcpyToSp 16, 32
@@ -4718,9 +4712,6 @@ L9741:
  memcpyToSp 16, 32
  pushFromPSp 32
  memcpyToSp 16, 16
- pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromFSp 0
  pushFromFSp 0
  syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
@@ -5429,9 +5420,6 @@ L11025:
  memcpyToSp 16, 32
  pushFromPSp 32
  memcpyToSp 16, 16
- pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromFSp 0
  pushFromFSp 0
  syscall 2, 23 ; trap_btlobj_target (1 in, 1 out)
@@ -6180,9 +6168,6 @@ L12402:
  pushFromPSp 64
  memcpyToSp 16, 16
  pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
- pushFromFSp 0
  syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
  pushFromFSp 0
  gosub 12, L11556
@@ -6319,9 +6304,6 @@ L12682:
  memcpyToSp 16, 64
  pushFromPSp 64
  memcpyToSp 16, 16
- pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromFSp 0
  syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
  pushFromFSp 0
@@ -6795,9 +6777,6 @@ L13485: ;___label for action pushFromPAi L29473 ; ___ai atk_fdash_a
  pushFromFSp 0
  pushImmf 0
  gosub 12, L8844
- pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromFSp 0
  gosub 12, L10059
  dup 
@@ -7328,9 +7307,6 @@ L14576:
  pushImmf 0
  gosub 12, L8844
  pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
- pushFromFSp 0
  pushFromFSpVal 124
  pushImmf 20
  pushImmf 100
@@ -7747,9 +7723,6 @@ L15339: ;___label for action pushFromPAi L29720 ; ___ai atk_jinrai
  pushFromPSp 64
  memcpyToSp 16, 16
  pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
- pushFromFSp 0
  gosub 12, L11556
  pushFromFSp 0
  fetchValue 4
@@ -7890,9 +7863,6 @@ L15574: ;___label for action pushFromPAi L29750 ; ___ai atk_jinrai_fin
  pushImmf 0
  subf 
  memcpy 0
- pushFromFSp 0
- pushFromPSp 64
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromPSp 64
  pushImmf 0
  pushImmf 0
@@ -8044,9 +8014,6 @@ L15890:
  pushImmf -500
  addf 
  memcpy 0
- pushFromFSp 0
- pushFromPSp 64
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromFSp 0
  fetchValue 4
  pushImm 205
@@ -8312,9 +8279,6 @@ L16409: ;___label for action pushFromPAi L29875 ; ___ai atk_raijin_dash
  pushFromFSp 0
  pushImmf 0
  gosub 12, L8844
- pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromFSp 0
  pushFromFSpVal 124
  pushImmf 20
@@ -8977,9 +8941,6 @@ L17721: ;___label for action pushFromPAi L29947 ; ___ai atk_raigou_dash
  pushFromFSp 0
  pushImmf 0
  gosub 12, L8844
- pushFromFSp 0
- pushFromPSp 16
- syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
  pushFromFSp 0
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)

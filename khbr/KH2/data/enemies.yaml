@@ -1809,6 +1809,11 @@ Dancer:
       - 99
       - 0
 Dark Thorn:
+  aimods: 
+  - name: B_BB110/b_bb.bdscript
+    type: obj
+  - name: F_BB050/f_bb.bdscript
+    type: obj
   roomData:
     bossX: 0
     bossY: 0
@@ -1920,6 +1925,7 @@ Final Xemnas (Data):
   limiter: 0
   model: B_EX170_LAST_LV99
   msn: EH20_MS113_RE
+  msn_dest_as: WI03_MS104
   program: 98
   size: 6.28
   room_size: 8.94
@@ -2058,6 +2064,9 @@ Xemnas (Data):
       - 0
       - 0
 Xigbar (Data):
+  aimods:
+  - name: B_EX140_LV99/b_ex.bdscript
+    type: obj
   roomData:
     bossX: 0
     bossY: 0
@@ -2117,6 +2126,9 @@ Demyx:
       - 1
       - 0
 Demyx OC:
+  aimods:
+  - name: HE17_MS105/he17.bdscript
+    type: msn
   enabled: false
   hp: 100
   level: 99
@@ -2379,6 +2391,7 @@ Final Xemnas:
   limiter: 0
   model: B_EX170_LAST
   msn: EH20_MS113
+  msn_dest_as: WI03_MS104
   program: 74
   size: 6.29
   room_size: 8.92
@@ -3049,6 +3062,9 @@ Hook Bat AL:
       - 3
       - 20
 Hostile Program:
+  aimods:
+  - name: B_TR000/b_tr.bdscript
+    type: obj
   roomData:
     bossX: 0
     bossY: 0
@@ -3097,6 +3113,11 @@ Hot Rod WI:
       - 0
 Hydra:
   enabled: true
+  aimods: 
+  - name: B_HE100/b_he.bdscript
+    type: obj
+  - name: B_HE110/b_he.bdscript
+    type: obj
   whitelist_destination:
   - Armor Xemnas II
   - Groundshaker
@@ -3307,9 +3328,9 @@ Large Body:
       - 0
       - 0
 Larxene:
-  # aimods:
-  # - name: B_EX400/b_ex.bdscript
-  #   type: obj
+  aimods:
+  - name: B_EX400/b_ex.bdscript
+    type: obj
   roomData:
     bossX: -137.8426971435547
     bossY: 0
@@ -3537,9 +3558,11 @@ Luna Bandit:
       - 1
       - 0
 Luxord:
-  # aimods:
-  # - name: B_EX150/b_ex.bdscript
-  #   type: obj
+  aimods:
+  - name: B_EX150/b_ex.bdscript
+    type: obj
+  - name: B_EX210/b_ex.bdscript
+    type: obj
   roomData:
     bossX: 0
     bossY: 0
@@ -3905,6 +3928,9 @@ Pete OC I:
       - 0
       - 0
 Pete OC II:
+  aimods:
+  - name: N_EX760_BTL_HERCULES/n_ex.bdscript
+    type: obj
   roomData:
     bossX: 0
     bossY: 0
@@ -3916,7 +3942,7 @@ Pete OC II:
   limiter: 20
   model: N_EX760_BTL_HERCULES
   msn: HE08_MS107
-  replace_as: Pete Cups # Causes crash when Pete does a finger gun to the sky (directing nonexistent enemies?)
+  #replace_as: Pete Cups # Causes crash when Pete does a finger gun to the sky (directing nonexistent enemies?)
   msn_replace_allowed: false
   obj_id: 1724
   size: 1.57
@@ -3925,6 +3951,23 @@ Pete OC II:
   program: 116
   type: boss
   roommaxsize: 16.11
+  adds:
+  - ObjectId: 1878 # Empty Unit 1
+    PositionX: -100
+    PositionY: -1000
+    PositionZ: -250
+    Serial: 52
+    customUnit:
+      Type: 5
+      Flag: 1
+      Id: 70
+      Teleport:
+        Place: 0
+        Door: 0
+        World: 0
+        Unknown: 0
+      EventActivators: []
+      ReturnParameters: []
   variations:
     Pete OC II:
       story_level: 16
@@ -4893,6 +4936,7 @@ Shan-Yu:
   limiter: 34
   model: B_MU100
   msn: MU09_MS108
+  msn_dest_as: WI03_MS104 # to remove the door gui
   unchanged_file_size: true
   pc:
     unchanged_file_size: false
@@ -5086,6 +5130,9 @@ Spring Metal:
       - 0
 Storm Rider:
   # TODO when radius is a thing figure out how to stop him wandering OOB
+  # aimods:
+  # - name: B_MU120/b_mu.bdscript
+  #   type: obj
   enabled: true
   enmp_index: 0x19
   hp: 100
@@ -5332,6 +5379,13 @@ The Beast:
       - 0
       - 0
 The Experiment:
+  aimods:
+  - name: B_NM110_HEAD/b_nm.bdscript
+    type: obj
+  - name: B_NM110_L_ARM/b_nm.bdscript
+    type: obj
+  - name: B_NM110_R_ARM/b_nm.bdscript
+    type: obj
   roomData:
     bossX: -810.4044189453125
     bossY: 4.720623016357422
@@ -5370,9 +5424,9 @@ The Experiment:
       - 0
       - 0
 Thresholder:
-  # aimods:
-  # - name: B_BB130/b_bb.bdscript
-  #   type: obj
+  aimods:
+  - name: B_BB130/b_bb.bdscript
+    type: obj
   enabled: true
   enmp_index: 0x4A
   hp: 100
@@ -5795,6 +5849,9 @@ Xemnas:
       - 0
       - 0
 Xigbar:
+  aimods:
+  - name: B_EX140/b_ex.bdscript
+    type: obj
   roomData:
     bossX: 0
     bossY: 0

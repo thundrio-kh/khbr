@@ -174,7 +174,7 @@ L293:
  pushImmf -198
  pushImmf -126
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushImm 16384
  pushFromPSp 16
@@ -182,7 +182,7 @@ L293:
  memcpyToSp 16, 32
  pushFromPSp 32
  ret 
-L326:
+FLOATS_TO_VECTOR:
  popToSp 4
  popToSp 8
  popToSp 12
@@ -327,7 +327,7 @@ L516:
  pushImmf 500
  divf 
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromPSpVal 64
  pushFromPSp 16
  gosub 12, L773
@@ -339,7 +339,7 @@ L596:
  pushImmf -198
  pushImmf -126
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushImm 16384
  pushFromPSp 16
@@ -402,7 +402,7 @@ L719:
  pushImmf 0
  pushImmf 0
  pushFromFSp 4
- gosub 4, L326
+ gosub 4, FLOATS_TO_VECTOR
  ret 
 L739:
  pushFromPSp 0
@@ -713,7 +713,7 @@ L1248:
  pushImmf 0
  pushImmf -1
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 4
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
@@ -1278,7 +1278,7 @@ L2297:
  pushImmf 0
  pushImmf 0
  pushImmf 1
- gosub 24, L326
+ gosub 24, FLOATS_TO_VECTOR
  pushFromPSpVal 144
  pushImm 52
  pushFromPSp 32
@@ -1486,7 +1486,7 @@ L2690:
  pushImmf 0
  pushImmf 0
  pushImmf 1
- gosub 24, L326
+ gosub 24, FLOATS_TO_VECTOR
  jmp L2762
 L2710:
  pushFromFSp 20
@@ -1507,7 +1507,7 @@ L2726:
  pushImmf 1
  pushImmf 0
  pushImmf 1
- gosub 24, L326
+ gosub 24, FLOATS_TO_VECTOR
  jmp L2762
 L2746:
  pushFromPSp 48
@@ -1515,7 +1515,7 @@ L2746:
  pushImmf 0
  pushImmf 1
  pushImmf 1
- gosub 24, L326
+ gosub 24, FLOATS_TO_VECTOR
 L2762:
  pushFromFSp 0
  pushFromPSp 48
@@ -2652,7 +2652,7 @@ L4836:
  pushImmf 0
  pushImmf 0
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushImm 16385
  pushFromPSp 16
@@ -2740,7 +2740,7 @@ L4998:
  pushImmf 0
  pushImmf 1
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromPSp 16
  pushImmf -1.047198
  syscall 0, 68 ; trap_vector_rotx (2 in, 1 out)
@@ -2766,7 +2766,7 @@ L4998:
  pushImmf 0
  pushImmf 1
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromPSp 16
  pushImmf 1.047198
  syscall 0, 68 ; trap_vector_rotx (2 in, 1 out)
@@ -3073,7 +3073,7 @@ L5644:
  pushImmf 0
  pushImmf 0
  pushImmf 0
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromPSp 16
  pushImmf 6.283185
  syscall 0, 17 ; trap_random_getf (1 in, 1 out)
@@ -3290,7 +3290,7 @@ L6043:
  pushImmf 0
  pushImmf 0
  pushImmf 0
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromPSpVal 0
  pushImm 127
  pushFromPSp 16
@@ -4051,7 +4051,7 @@ L7396:
  pushImmf 0
  pushImmf -1
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 4
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
@@ -4137,7 +4137,7 @@ L7548:
  pushImmf 0
  pushImmf -1
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
@@ -4171,7 +4171,7 @@ L7631:
  pushImmf 0
  pushImmf -1
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
@@ -7709,7 +7709,7 @@ L14931:
  pushImmf 0
  pushImmf 0
  pushImmf 1
- gosub 16, L326
+ gosub 16, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushFromPSp 32
  pushFromFSp 16
@@ -7777,7 +7777,7 @@ L15070: ;___label for action pushFromPAi L29529 ; ___ai rc_crowd_laser
  pushImmf 0
  pushImmf -1
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
@@ -8174,7 +8174,7 @@ L15824:
  pushImmf 0
  pushImmf -1
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 8
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)
@@ -8269,7 +8269,7 @@ L16033:
  pushImmf 0
  pushImmf 100
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushImm 0
  popToSp 32
  pushImm 4
@@ -8634,7 +8634,7 @@ L16730:
  pushImmf 500
  divf 
  pushImmf 1
- gosub 16, L326
+ gosub 16, FLOATS_TO_VECTOR
  pushFromPSpVal 64
  pushFromPSp 16
  gosub 16, L773
@@ -9142,7 +9142,7 @@ L17752:
  pushImmf 0
  pushImmf 0
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromPSp 16
  pushImmf 6.283185
  syscall 0, 17 ; trap_random_getf (1 in, 1 out)
@@ -9693,7 +9693,7 @@ L18838:
  pushImmf 1
  pushImmf 0
  pushImmf 1
- gosub 16, L326
+ gosub 16, FLOATS_TO_VECTOR
  pushFromPSp 32
  pushImmf 6.283185
  syscall 0, 17 ; trap_random_getf (1 in, 1 out)
@@ -9951,7 +9951,7 @@ L19345:
  pushImmf 0
  pushImmf 1
  pushImmf 1
- gosub 20, L326
+ gosub 20, FLOATS_TO_VECTOR
  pushFromPSp 16
  pushFromFSp 0
  syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
@@ -9991,7 +9991,7 @@ L19438:
  pushImmf 0
  pushFromFSp 40
  pushImmf 1
- gosub 20, L326
+ gosub 20, FLOATS_TO_VECTOR
  pushFromFSp 32
  pushFromFSp 36
  syscall 0, 3 ; trap_frametime (0 in, 1 out)
@@ -10563,7 +10563,7 @@ L20519:
  pushImmf 0
  pushImmf 1
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromPSpVal 80
  pushImmf 0
  pushImmf 0
@@ -11427,7 +11427,7 @@ L22220:
  pushImmf 0
  pushImmf 0
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 0
  pushImm 265
  pushFromPSp 16
@@ -11939,7 +11939,7 @@ L23188:
  pushImmf 0
  pushImmf 1
  pushImmf 1
- gosub 20, L326
+ gosub 20, FLOATS_TO_VECTOR
  pushFromPSp 16
  pushFromFSp 0
  syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
@@ -11979,7 +11979,7 @@ L23281:
  pushImmf 0
  pushFromFSp 40
  pushImmf 1
- gosub 20, L326
+ gosub 20, FLOATS_TO_VECTOR
  pushFromFSp 32
  pushFromFSp 36
  syscall 0, 3 ; trap_frametime (0 in, 1 out)
@@ -13207,7 +13207,7 @@ L25628:
  memcpyToSp 16, 32
  pushFromPSp 32
  pushFromPSp 16
- syscall 0, 4 ; trap_vector_add (2 in, 1 out)
+ syscall 0, 4 ; trap_vector_add (2 in, 1 out) ; I think this is the vector to replace
  memcpyToSp 16, 48
  pushFromPSp 48
  syscall 1, 217 ; trap_obj_set_pos_trans (2 in, 0 out)
@@ -13389,7 +13389,7 @@ L25934:
  pushImmf 0
  pushImmf -1
  pushImmf 1
- gosub 12, L326
+ gosub 12, FLOATS_TO_VECTOR
  pushFromFSp 8
  pushFromPSp 16
  syscall 1, 79 ; trap_obj_set_dir (2 in, 0 out)

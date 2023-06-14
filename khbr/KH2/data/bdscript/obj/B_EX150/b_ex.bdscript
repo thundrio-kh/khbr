@@ -151,7 +151,7 @@ L278:
  pushFromFSp 0
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -2200
  pushFromFSp 4
  gosub 4, L298
  ret 
@@ -4173,7 +4173,7 @@ L8297:
  pushFromPSp 32
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -2200
  pushImmf 1
  gosub 16, L298
  pushFromFSp 0
@@ -4634,7 +4634,7 @@ L9281:
  popToSp 0
  pushFromFSp 0
  syscall 1, 147 ; trap_obj_pos (1 in, 1 out)
- memcpyToSp 16, 48
+ memcpyToSp 16, 48 ; pretty sure it will be somewhere around here, with vector_roty's
  pushFromPSp 48
  memcpyToSp 16, 16
  pushFromPSp 16
@@ -6028,7 +6028,7 @@ L12122:
  pushFromPSpVal 16
  pushImmf 963.3407
  pushImmf 213.5683
- pushImmf 691.5469
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6036,7 +6036,7 @@ L12122:
  add 
  pushImmf 631.2332
  pushImmf 220.4466
- pushImmf 763.1688
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6044,7 +6044,7 @@ L12122:
  add 
  pushImmf 294.9341
  pushImmf 194.7507
- pushImmf 659.9113
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6052,7 +6052,7 @@ L12122:
  add 
  pushImmf 32.27211
  pushImmf 214.2728
- pushImmf 773.5937
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6060,7 +6060,7 @@ L12122:
  add 
  pushImmf -330.6361
  pushImmf 226.5574
- pushImmf 816.8408
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6068,7 +6068,7 @@ L12122:
  add 
  pushImmf -645.5654
  pushImmf 220.7791
- pushImmf 777.0355
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6076,7 +6076,7 @@ L12122:
  add 
  pushImmf -985.5488
  pushImmf 223.0952
- pushImmf 736.9601
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6084,7 +6084,7 @@ L12122:
  add 
  pushImmf 1108.96
  pushImmf 155.6323
- pushImmf 390.8578
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6092,7 +6092,7 @@ L12122:
  add 
  pushImmf 817.9
  pushImmf 154.0516
- pushImmf 418.8677
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6100,7 +6100,7 @@ L12122:
  add 
  pushImmf 432.1985
  pushImmf 139.3749
- pushImmf 395.701
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6108,7 +6108,7 @@ L12122:
  add 
  pushImmf 85.87587
  pushImmf 154.8654
- pushImmf 483.6243
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6116,7 +6116,7 @@ L12122:
  add 
  pushImmf -348.9743
  pushImmf 149.8396
- pushImmf 442.2012
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6124,7 +6124,7 @@ L12122:
  add 
  pushImmf -695.2999
  pushImmf 143.895
- pushImmf 415.628
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6132,7 +6132,7 @@ L12122:
  add 
  pushImmf -1112.539
  pushImmf 163.3749
- pushImmf 433.4611
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6140,7 +6140,7 @@ L12122:
  add 
  pushImmf 1157.165
  pushImmf 100.5135
- pushImmf 108.7894
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6148,7 +6148,7 @@ L12122:
  add 
  pushImmf 865.7702
  pushImmf 86.33154
- pushImmf 87.93774
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6156,7 +6156,7 @@ L12122:
  add 
  pushImmf 570.593
  pushImmf 79.10045
- pushImmf 76.25402
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6164,7 +6164,7 @@ L12122:
  add 
  pushImmf 272.7036
  pushImmf 83.73643
- pushImmf 118.2833
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6172,7 +6172,7 @@ L12122:
  add 
  pushImmf -142.0933
  pushImmf 94.96216
- pushImmf 180.5388
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6180,7 +6180,7 @@ L12122:
  add 
  pushImmf -449.4702
  pushImmf 78.48727
- pushImmf 76.04037
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6188,7 +6188,7 @@ L12122:
  add 
  pushImmf -817.3701
  pushImmf 88.52554
- pushImmf 91.79525
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6196,7 +6196,7 @@ L12122:
  add 
  pushImmf -1174.81
  pushImmf 103.2445
- pushImmf 115.1653
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6204,7 +6204,7 @@ L12122:
  add 
  pushImmf 1333.729
  pushImmf 33.90696
- pushImmf -246.5815
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6212,7 +6212,7 @@ L12122:
  add 
  pushImmf 1020.216
  pushImmf 45.757874
- pushImmf -147.5469
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6220,7 +6220,7 @@ L12122:
  add 
  pushImmf 718.9385
  pushImmf 24.131721
- pushImmf -219.4239
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6228,7 +6228,7 @@ L12122:
  add 
  pushImmf 318.3521
  pushImmf 22.661888
- pushImmf -190.2909
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6236,7 +6236,7 @@ L12122:
  add 
  pushImmf -148.2451
  pushImmf 30.54937
- pushImmf -143.2463
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6244,7 +6244,7 @@ L12122:
  add 
  pushImmf -505.3208
  pushImmf 17.44162
- pushImmf -229.6978
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6252,7 +6252,7 @@ L12122:
  add 
  pushImmf -898.6199
  pushImmf 25.711243
- pushImmf -228.7023
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6260,7 +6260,7 @@ L12122:
  add 
  pushImmf -1264.387
  pushImmf 36.93779
- pushImmf -233.4497
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6268,7 +6268,7 @@ L12122:
  add 
  pushImmf 964.53
  pushImmf -1.685966
- pushImmf -519.4618
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6276,7 +6276,7 @@ L12122:
  add 
  pushImmf 580.2255
  pushImmf -1.685966
- pushImmf -482.6453
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6284,7 +6284,7 @@ L12122:
  add 
  pushImmf 113.72867
  pushImmf -1.685966
- pushImmf -455.94516
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6292,7 +6292,7 @@ L12122:
  add 
  pushImmf -340.3062
  pushImmf -1.685966
- pushImmf -520.0928
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6300,7 +6300,7 @@ L12122:
  add 
  pushImmf -739.5068
  pushImmf -1.685966
- pushImmf -566.1672
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6308,7 +6308,7 @@ L12122:
  add 
  pushImmf -1187.406
  pushImmf -1.685966
- pushImmf -622.6056
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6316,7 +6316,7 @@ L12122:
  add 
  pushImmf 1175.302
  pushImmf -1.685966
- pushImmf -715.4087
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6324,7 +6324,7 @@ L12122:
  add 
  pushImmf 765.3063
  pushImmf -1.685966
- pushImmf -783.9603
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6332,7 +6332,7 @@ L12122:
  add 
  pushImmf 271.0694
  pushImmf -1.685966
- pushImmf -706.941
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6340,7 +6340,7 @@ L12122:
  add 
  pushImmf -65.20677
  pushImmf -1.685966
- pushImmf -715.1755
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6348,7 +6348,7 @@ L12122:
  add 
  pushImmf -513.4949
  pushImmf -1.685966
- pushImmf -807.3127
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6356,7 +6356,7 @@ L12122:
  add 
  pushImmf -905.3658
  pushImmf -1.685966
- pushImmf -865.3527
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6364,7 +6364,7 @@ L12122:
  add 
  pushImmf 826.4665
  pushImmf -1.685966
- pushImmf -1063.123
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6372,7 +6372,7 @@ L12122:
  add 
  pushImmf 512.7865
  pushImmf -1.685966
- pushImmf -905.631
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6380,7 +6380,7 @@ L12122:
  add 
  pushImmf 177.6493
  pushImmf -1.685966
- pushImmf -1010.793
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6388,7 +6388,7 @@ L12122:
  add 
  pushImmf -262.6286
  pushImmf -1.685966
- pushImmf -998.1017
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6396,7 +6396,7 @@ L12122:
  add 
  pushImmf -690.1516
  pushImmf -1.685966
- pushImmf -1112.101
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6404,7 +6404,7 @@ L12122:
  add 
  pushImmf 463.0754
  pushImmf -1.685966
- pushImmf -1264.875
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6412,7 +6412,7 @@ L12122:
  add 
  pushImmf -381.564
  pushImmf -1.685966
- pushImmf -1283.204
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 16
@@ -6420,7 +6420,7 @@ L12122:
  add 
  pushImmf -3.222909
  pushImmf -1.685966
- pushImmf -1251.172
+ pushImmf -2200
  pushImmf 1
  gosub 4, L298
  pushFromPSpVal 0
@@ -6908,7 +6908,7 @@ L13973:
  pushFromPSp 16
  pushImmf 0
  pushImmf 0
- pushImmf 60
+ pushImmf -2200
  pushImmf 1
  gosub 20, L298
  pushFromPSp 16

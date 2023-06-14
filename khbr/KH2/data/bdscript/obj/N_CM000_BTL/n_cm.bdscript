@@ -394,7 +394,7 @@ L675:
  pushFromFSp 0
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushFromFSp 4
  gosub 4, L648
  ret 
@@ -6009,8 +6009,8 @@ L11734:
  pushFromPSp 16
  pushImmf 530
  pushImmf 0
- pushImmf 0
- pushImmf 1
+ pushImmf 0 ; so this function is placing the first portal, then rotating around X degrees for the rest, 
+ pushImmf 1 ; what we need to do for fixing is either randomly place the portals, or add a start vector to them
  gosub 12, L648
  pushFromFSp 0
  pushFromPSp 16
@@ -9885,7 +9885,7 @@ L18975:
  pushFromPSp 32
  pushImmf 0
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushImmf 1
  gosub 16, L648
  pushFromFSp 0

@@ -9140,7 +9140,7 @@ L18124:
  pushFromPWp W7488
  pushImmf -300
  pushImmf 0
- pushImmf 500
+ pushImmf -1890
  pushImm 6
  gosub 4, L18181
  pushFromPWp W7488
@@ -9148,7 +9148,7 @@ L18124:
  add 
  pushImmf -300
  pushImmf 0
- pushImmf -500
+ pushImmf -1890
  pushImm 7
  gosub 4, L18181
  pushFromPWp W7488
@@ -9156,7 +9156,7 @@ L18124:
  add 
  pushImmf 600
  pushImmf 0
- pushImmf 0
+ pushImmf -1890
  pushImm 8
  gosub 4, L18181
  ret 
