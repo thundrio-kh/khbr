@@ -1,5 +1,5 @@
 ---
-WorkSize: 4384
+WorkSize: 4400
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -15,6 +15,14 @@ Name: f_ca690_btl
 ; codeLabels: 
 ; codeRevealer: -l 177 -l 216 -l 410 -l 1259 -l 1521 -l 1580 -l 1581 -l 1675 -l 1692 -l 1878 -l 1955 -l 2022 -l 2127 -l 2140 -l 2285 -l 2327 -l 2393 -l 2459 -l 2518 -l 2535 -l 2540 -l 2547 -l 3427 -l 3444 -l 3445 -l 3460 -l 3475 -l 3492 -l 3493 -l 3508 -l 3523 -l 3587 -l 3602
  section .text
+GETRANDOMPOS:
+ pushFromPWp WSTARTPOS 
+ pushImmf 1000 ; near
+ pushImmf 1000 ; far
+ pushImmf 0 ; low make this 100-200 to spawn in air
+ pushImmf 0 ; high make this 100-200 to spawn in air
+ syscall 1, 248 ; trap_bg_get_random_pos_air
+ ret
 TR11:
  popToSp 0
  popToSp 4
@@ -267,6 +275,9 @@ L432:
  pushFromPWp W276
  gosub 4, L1219
  pushFromFSp 0
+ dup
+ syscall 1, 147 ; trap_obj_pos
+ memcpyToWp 16, WSTARTPOS
  pushFromPWp W276
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W276
@@ -503,11 +514,8 @@ L432:
  pushImm 2
  syscall 1, 109 ; trap_obj_hide_part (2 in, 0 out)
  pushFromPWp W144
- pushImmf 0
- pushImmf 0
- pushImmf -1890
- pushImmf 1
- gosub 4, L3617
+ gosub 4, GETRANDOMPOS
+ memcpyToWp 16, W144
  pushFromFSp 0
  pushFromPWp W144
  syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
@@ -2086,3 +2094,5 @@ W168:
  resb 108
 W276:
  resb 4108
+WSTARTPOS:
+ resb 16

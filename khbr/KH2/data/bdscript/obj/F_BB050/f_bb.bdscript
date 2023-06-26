@@ -1,6 +1,5 @@
-; Need to get soras position on init and then have the changed spots use that vector added to the height vector
 ---
-WorkSize: 4576
+WorkSize: 4608
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -498,7 +497,7 @@ L861:
  pushFromPSp 32
  pushImmf 0
  pushImmf 0
- pushImmf -2450
+ pushImmf 0
  pushImmf 1
  gosub 16, L916
  pushFromFSp 0
@@ -556,6 +555,13 @@ L967:
  pushFromPWp W456
  gosub 4, L2376
  pushFromFSp 0
+ dup
+ pushFromPWp WTHORN
+ pushImm 354
+ syscall 1, 114
+ pushFromPWp WTHORN
+ syscall 1, 147
+ memcpy 16, WTHORNPOS
  pushFromPWp W456
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W456
@@ -1755,9 +1761,14 @@ L3463:
  fetchValue 4
  gosub 12, L353
  pushFromPSp 16
- pushImmf 0
+ pushFromPWp WTHORNPOS
+ fetchValue 0
  pushImmf -1500
- pushImmf -2450
+ pushFromPWp WTHORNPOS
+ fetchValue 4
+ addf
+ pushFromPWp WTHORNPOS
+ fetchValue 8
  pushImmf 1
  gosub 12, L916
  pushFromFSp 0
@@ -2439,9 +2450,12 @@ L4835: ;___label for action pushFromPAi L5674 ; ___ai atk_self_ref
  pushFromPAi L5649 ; ___ai ref? (L5649)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  pushFromPSp 16
- pushImmf 0
- pushImmf 0
- pushImmf -2450
+ pushFromPWp WTHORNPOS
+ fetchValue 0
+ pushFromPWp WTHORNPOS
+ fetchValue 4
+ pushFromPWp WTHORNPOS
+ fetchValue 8
  pushImmf 1
  gosub 12, L916
  pushFromFSp 0
@@ -3070,3 +3084,7 @@ W4564:
  resb 4
 W4568:
  resb 8
+WTHORN:
+ resb 16
+WTHORNPOS:
+ resb 16
