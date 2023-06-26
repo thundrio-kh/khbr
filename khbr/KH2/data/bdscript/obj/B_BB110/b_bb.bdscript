@@ -1,5 +1,5 @@
 ---
-WorkSize: 4528
+WorkSize: 4544
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -391,9 +391,14 @@ L681:
 L712:
  popToSp 0
  pushFromPSp 32
- pushImmf 0
+ pushFromPWp WTHISPOS
+ fetchValue 0
+ pushFromPWp WTHISPOS
+ fetchValue 4
  pushImmf -2050
- pushImmf -2450
+ addf
+ pushFromPWp WTHISPOS
+ fetchValue 8
  pushImmf 1
  gosub 20, L934
  pushFromPSp 32
@@ -854,6 +859,13 @@ L1546:
  pushFromPWp W408
  gosub 4, L3089
  pushFromFSp 0
+ pushFromPAi THORNEXISTS
+ syscall 0, 2
+
+ dup
+ syscall 1, 147
+ memcpyToWp 16, WTHISPOS
+
  pushFromPWp W408
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W408
@@ -5796,6 +5808,7 @@ L11123: ;___label for action pushFromPAi L12256 ; ___ai rc_step_jump
  syscall 1, 13 ; trap_sysobj_motion_push (3 in, 0 out)
  ret 
 L11160: ;___label for action pushFromPAi L12696 ; ___ai stealth
+ ret
  popToSp 0
  pushFromFSp 0
  gosub 4, L11167
@@ -5826,9 +5839,6 @@ L11203:
  halt 
  jmp L11203
 L11216:
- pushFromFSp 0
- pushImm -1
- syscall 1, 194 ; trap_obj_set_stealth (2 in, 0 out)
  pushFromFSp 0
  fetchValue 4
  gosub 4, L5355
@@ -6701,6 +6711,8 @@ TXT12779:
 L12784:
 TXT12784:
  db 'turn_revenge',0,0
+THORNEXISTS:
+ db 'thorn_exists',0,0
 
  section .bss
 W0:
@@ -6727,3 +6739,5 @@ W4520:
  resb 4
 W4524:
  resb 4
+WTHISPOS:
+ resb 16
