@@ -6,11 +6,49 @@ from khbr.KH2.KingdomHearts2 import KingdomHearts2
 from khbr.KH2.ModWriter import ModWriter
 from khbr.randomizer import Randomizer
 
+import os, subprocess
+#### Mostly for debug purposes
+class openKH:
+    def __init__(self, workdir):
+        self.workdir = workdir
+    def _check_binary(self, binary):
+        if not os.path.isfile(os.path.join(self.workdir, binary)):
+            raise Exception("{} not found".format(binary))
+    def _run_binary(self, binary, args=[], inp='', debug=True):
+        self._check_binary(binary)
+        if debug:
+            print(args)
+            import sys; sys.stdout.flush()
+        proc = subprocess.Popen([binary] + args, cwd=self.workdir, shell=True)
+        output = proc.communicate(inp)
+        if debug:
+            print(output)
+        return output[0]
+    def bar_list(self, bar):
+        # given a bar file, list the contents
+        print(self._run_binary('OpenKh.Command.Bar.exe', args=['list', bar]).decode('utf-8'))
+    def bar_extract(self, bar, outdir):
+        # extract bar file to a directory (directory must exist prior to running this)
+        self._run_binary('OpenKh.Command.Bar.exe', args=['unpack', '-o', outdir, bar])
+    def bar_build(self, projectfn, outputfn):
+        self._run_binary('OpenKh.Command.Bar.exe', args=['pack', '-o', outputfn, projectfn])
+    def spawnscript_extract(self, pth, outfn):
+        self._run_binary('OpenKh.Command.SpawnScript.exe', args=['decompile', '-o', outfn, pth], debug=True)
+    def spawnscript_compile(self, pth, outfn):
+        self._run_binary('OpenKh.Command.SpawnScript.exe', args=['compile', '-o', outfn, pth])
+    def spawnpoint_extract(self, pth, outfn):
+        self._run_binary('OpenKh.Command.SpawnScript.exe', args=['unpoint', '-o', outfn, pth])
+    def spawnpoint_build(self, pth, outfn):
+        self._run_binary('OpenKh.Command.SpawnScript.exe', args=['repoint', '-o', outfn, pth])
+                
+
+
+
 supported_games = ["kh2"]
 
 #TODO the ignore bosses should be allowed for boss_in_room selection just not starting_room stuff
 IGNORE_BOSSES = ["Scar Ghost", "Lock", "Shock", "Barrel", "Shadow Roxas", "Shenzie", "Shenzie (1)", "Banzai", "Banzai (1)", "Ed", "Ed (1)", "Hades (Cups)", "Pete (Cups)",
-"Cerberus (Cups)", "Blizzard Lord (Cups)", "Volcano Lord (Cups)", "Leon", "Leon (1)", "Leon (2)", "Leon (3)",
+"Blizzard Lord (Cups)", "Volcano Lord (Cups)", "Leon", "Leon (1)", "Leon (2)", "Leon (3)",
 "Cloud", "Cloud (1)", "Cloud (2)", "Cloud (3)", "Yuffie", "Yuffie (1)", "Yuffie (2)", "Yuffie (3)",
 "Tifa", "Tifa (1)", "Tifa (2)", "Tifa (3)",
 "Hades Cups", "Pete Cups", "Cerberus Cups", "Blizzard Lord Cups", "Volcano Lord Cups",
@@ -28,6 +66,8 @@ ITEMS = {'Potion': '1', 'Hi-Potion': '2', 'Ether': '3', 'Elixir': '4', 'Mega-Pot
 
 # trinity isn't in the right location
 # Find my original plan for this and add in the actual routes
+
+# Make a hack to super quickly change the start room
 
 ROUTES = {
     "compatability-test": [
@@ -150,7 +190,10 @@ def main(cli_args: list=[]):
         "platform": "pc",
         "open_menu_before_each_fight": False,
         "seed": "",
-        "debug_inf_hp": False
+        "debug_inf_hp": False,
+        "debug_change_starting_room": False,
+        "debug_no_damage_cap": False,
+        "debug_minimum_boss_health": False
     }
     default_config = {
         "openkh_dir": ""
@@ -177,8 +220,9 @@ def main(cli_args: list=[]):
     kh2 = KingdomHearts2()
     source_bosses = kh2.get_valid_bosses()
     bosses = [b for b in source_bosses if b not in IGNORE_BOSSES]
-    options.add_argument("-boss_in_room", choices=["vanilla", "random"] + sorted(bosses), default=last_settings.get("boss_in_room"))
+    options.add_argument("-boss_in_room", choices=["vanilla", "random"] + sorted(source_bosses), default=last_settings.get("boss_in_room"))
     options.add_argument("-starting_room", choices=["default", "random"] + sorted(source_bosses), default=last_settings.get("starting_room"))
+    options.add_argument("-debug_change_starting_room", default=last_settings.get("debug_change_starting_room"), choices=['True', 'False'])
     options.add_argument("-num_bosses", choices=["random"] + [str(l) for l in range(1,len(bosses))], default=last_settings.get("num_bosses"))
     options.add_argument("-level", choices=["random"] + [str(l) for l in range(1,100)], default=last_settings.get("level"))
     options.add_argument("-route", choices=["random"] + list(ROUTES.keys()), default=last_settings.get("route"))
@@ -188,6 +232,8 @@ def main(cli_args: list=[]):
     options.add_argument("-platform", choices=["ps2", "pc"], default=last_settings.get("platform"))
     options.add_argument("-seed", default=last_settings.get("seed"))
     options.add_argument("-debug_inf_hp", default=last_settings.get("debug_inf_hp"), choices=['True', 'False'])
+    options.add_argument("-debug_no_damage_cap", default=last_settings.get("debug_no_damage_cap"), choices=['True', 'False'])
+    options.add_argument("-debug_minimum_boss_health", default=last_settings.get("debug_minimum_boss_health"), choices=['True', 'False'])
 
     options.add_argument("-openkh_dir", help="Path to OpenKH folder.", default=default_config.get("openkh_dir"), widget='DirChooser')
 
@@ -215,6 +261,9 @@ def main(cli_args: list=[]):
         "open_menu_before_each_fight": _translate_bool(args.open_menu_before_each_fight),
         "platform": args.platform,
         "debug_inf_hp": _translate_bool(args.debug_inf_hp),
+        "debug_change_starting_room": _translate_bool(args.debug_change_starting_room),
+        "debug_no_damage_cap": _translate_bool(args.debug_no_damage_cap),
+        "debug_minimum_boss_health": _translate_bool(args.debug_minimum_boss_health),
         "seed": args.seed
     }
     config_to_write = {
@@ -223,11 +272,16 @@ def main(cli_args: list=[]):
     json.dump(config_to_write, open("config.json", "w"))
     json.dump(settings_to_write, open("last_settings.json", "w"))
 
+    openkh_dir = args.openkh_dir
+    moddir = os.path.join(openkh_dir, "mods", "kh2")
+
     seed_options = {
         "memory_expansion": True if args.platform == "pc" else False,
         "always_set_retry": True,
         "apply_better_stt": True,
-        "force_boss_story_levels": True
+        "force_boss_story_levels": True if not _translate_bool(args.debug_minimum_boss_health) else False,
+        "scale_boss_stats": True if _translate_bool(args.debug_minimum_boss_health) else False,
+        "remove_damage_cap": True if _translate_bool(args.debug_no_damage_cap) else False,
     }
     if args.boss_in_room != "vanilla":
         if args.boss_in_room == "random":
@@ -235,13 +289,52 @@ def main(cli_args: list=[]):
         else:
             seed_options["selected_boss"] = args.boss_in_room
     
+
+    kh2 = KingdomHearts2()
+    modwriter = ModWriter(os.path.join(moddir, "bossrush"))
+    assetgenerator = AssetGenerator(modwriter, spawn_manager=kh2.spawn_manager, location_manager=kh2.location_manager, enemy_manager=kh2.enemy_manager, ispc=seed_options["memory_expansion"])
+
+
+
+    starting_room = args.starting_room if args.starting_room != "random" else random.choice(bosses)
+
+    first_boss = kh2.enemy_manager.enemy_records[starting_room]
+    
+
+    def getworld(b):
+        if b.get("msn"):
+            return b["msn"][:2]
+        # msn list is HE
+        return "HE"
+    def getroom(b):
+        if b.get("msn"):
+            r = b["msn"][2:4]
+            if r.lower() != "_c":
+                return r
+        return "09" # Assume colosseum
+    world = getworld(first_boss)
+    room = getroom(first_boss)
+    program = first_boss["program"]
+    current_boss = first_boss
+
+    
+
+    if _translate_bool(args.debug_change_starting_room):
+        # redo the logic to get the evt for the starting room
+        assetgenerator.generateEvt("TT", "01", 0x34, {}, options={"jump_to":{"world":world, "room":room, "program":program}, "open_menu":True, "remove_event":True, "flags": ['0x84A'], "remove_excess_flags": True})      
+        # else just update the file in the mods folder
+        # then exit
+        print("WARNING: debug_change_starting_room is on, nothing else changed")
+        exit(0)
+
+
     seed = args.seed or str(int(time.time()))
     print("Using Seed {}".format(seed))
     random.seed(seed)
     
 
  
-    starting_room = args.starting_room if args.starting_room != "random" else random.choice(bosses)
+    
     set_level = int(args.level) if args.level != "random" else random.randint(1,99)
     if set_level < 1 or set_level > 99:
         raise Exception("level setting must be within 1-99")
@@ -255,7 +348,7 @@ def main(cli_args: list=[]):
     randomize_starting_stuff = _translate_bool(args.randomize_starting_stuff)
 
     open_menu_before_each_fight = _translate_bool(args.open_menu_before_each_fight)
-    openkh_dir = args.openkh_dir
+    
     debug_inf_hp = _translate_bool(args.debug_inf_hp)
     
 
@@ -275,11 +368,9 @@ def main(cli_args: list=[]):
 
     if not randomize_starting_stuff:
         stuff = ["Scan","Explosion",
-        "Guard",
-        "Horizontal Slash", "Berserk Charge"] + \
+        "Guard", "Horizontal Slash"] + \
         ["Aerial Recovery"] + \
         ["Finishing Plus" for _ in range(2)] + \
-        ["Negative Combo" for _ in range(2)] + \
         ["Second Chance", "Once More"] + \
         ["Fire Element" for _ in range(2)] + \
         ["Magnet Element" for _ in range(2)] + \
@@ -308,7 +399,7 @@ def main(cli_args: list=[]):
             stuff.append(str(itemvalue))
 
 
-    moddir = os.path.join(openkh_dir, "mods", "kh2")
+    
     # TODO TEMP FOR FASTER TESTING
     if os.path.exists(os.path.join(moddir, "bossrush")):
         shutil.rmtree(os.path.join(moddir, "bossrush"))
@@ -321,9 +412,7 @@ def main(cli_args: list=[]):
     modyml["title"] = "Boss Rush {}".format(seed)
     modyml["description"] = json.dumps(settings_to_write, indent=2)
 
-    kh2 = KingdomHearts2()
-    modwriter = ModWriter(os.path.join(moddir, "bossrush"))
-    assetgenerator = AssetGenerator(modwriter, spawn_manager=kh2.spawn_manager, location_manager=kh2.location_manager, enemy_manager=kh2.enemy_manager, ispc=seed_options["memory_expansion"])
+
     assetgenerator.assets = modyml["assets"]
 
     assetgenerator.generatePlrp(hp=20, mp=100, ap=50, accessoryslt=3, armorslt=3, itemslt=3, items=stuff)
@@ -343,23 +432,7 @@ def main(cli_args: list=[]):
         assets.append(newasset)
         return newasset
 
-    first_boss = kh2.enemy_manager.enemy_records[starting_room]
 
-    def getworld(b):
-        if b.get("msn"):
-            return b["msn"][:2]
-        # msn list is HE
-        return "HE"
-    def getroom(b):
-        if b.get("msn"):
-            r = b["msn"][2:4]
-            if r.lower() != "_c":
-                return r
-        return "09" # Assume colosseum
-    world = getworld(first_boss)
-    room = getroom(first_boss)
-    program = first_boss["program"]
-    current_boss = first_boss
     # Have to lookup the world/rooms that the first boss is in
     asset = findRoomSource(modyml["assets"], "TT", "01")
     assetgenerator.generateEvt("TT", "01", 0x34, asset["source"], options={"jump_to":{"world":world, "room":room, "program":program}, "open_menu":True, "remove_event":True, "flags": ['0x84A'], "remove_excess_flags": True})
