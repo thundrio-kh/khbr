@@ -1,5 +1,5 @@
 ---
-WorkSize: 5808
+WorkSize: 5840
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -23,6 +23,30 @@ Name: b_ex150_lv99
 ; codeLabels: 
 ; codeRevealer: -l 609 -l 1001 -l 1762 -l 2745 -l 3482 -l 3483 -l 6399 -l 6661 -l 6720 -l 6721 -l 6738 -l 6743 -l 6758 -l 6835 -l 7032 -l 7088 -l 7104 -l 7170 -l 7236 -l 7480 -l 7573 -l 7632 -l 7651 -l 7750 -l 7751 -l 8125 -l 8238 -l 8416 -l 8428 -l 8440 -l 8452 -l 8514 -l 8536 -l 10160 -l 10191 -l 10222 -l 10297 -l 10323 -l 10360 -l 10374 -l 10377 -l 10414 -l 10426 -l 10578 -l 10583 -l 10595 -l 11316 -l 11327 -l 11576 -l 11873 -l 12192 -l 13316 -l 13331 -l 13361 -l 13626 -l 13637 -l 13676 -l 13681 -l 13745 -l 13764 -l 13860 -l 14559 -l 14595 -l 14617 -l 14662 -l 14701 -l 14752 -l 14757 -l 15107 -l 15157 -l 15174 -l 15179 -l 15268 -l 15271 -l 15282 -l 15481 -l 15491 -l 15494 -l 15548 -l 15551 -l 15567 -l 15593 -l 15614 -l 15774 -l 15843 -l 16022 -l 16099 -l 16107 -l 16136 -l 16318 -l 16500 -l 16935 -l 16945 -l 16961 -l 17229 -l 17477 -l 17577 -l 17688 -l 17703 -l 17718 -l 17755 -l 17929 -l 17951 -l 17966 -l 17975 -l 18068 -l 18498 -l 18628 -l 18651 -l 18781
  section .text
+FIND_CENTER:
+ ; find center pos
+ ; this object on top of stack
+ dup
+ syscall 1, 147 ; trap_obj_pos
+ pushFromPWp WPLAYER
+ pushImm 566
+ syscall 1, 114 ; trap_obj_search_by_entry
+ pushFromPWp WPLAYER
+ syscall 1, 147 ; trap_obj_pos
+ syscall 0, 4 ; trap_vector add
+ pushImmf 2
+ syscall 0, 37 ; divide
+ memcpyToWp 16, WCENTERPOS
+ ; end find center pos
+ ret
+GETRANDOMPOS:
+ pushFromPWp WCENTERPOS 
+ pushImmf 1000 ; near
+ pushImmf 1000 ; far
+ pushImmf 0 ; low make this 100-200 to spawn in air
+ pushImmf 0 ; high make this 100-200 to spawn in air
+ syscall 1, 248 ; trap_bg_get_random_pos_air
+ ret
 TR11:
  popToSp 0
  popToSp 4
@@ -154,9 +178,12 @@ L286:
  popToSp 4
  popToSp 0
  pushFromFSp 0
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushFromFSp 4
  gosub 4, L306
  ret 
@@ -2215,6 +2242,7 @@ L3965:
  pushFromPWp W668
  gosub 4, L6359
  pushFromFSp 0
+ gosub 4, FIND_CENTER
  pushFromPWp W668
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W668
@@ -4209,9 +4237,12 @@ L8361:
  pushFromFSp 4
  popToSp 16
  pushFromPSp 32
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 1
  gosub 16, L306
  pushFromFSp 0
@@ -6086,401 +6117,851 @@ L12203:
 L12211:
  popToSp 0
  pushFromPSpVal 16
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 963.3407
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 213.5683
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 691.5469
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 16
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 631.2332
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 220.4466
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 763.1688
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 32
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 294.9341
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 194.7507
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 659.9113
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 48
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 32.27211
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 214.2728
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 773.5937
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 64
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -330.6361
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 226.5574
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 816.8408
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 80
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -645.5654
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 220.7791
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 777.0355
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 96
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -985.5488
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 223.0952
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 736.9601
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 112
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 1108.96
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 155.6323
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 390.8578
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 128
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 817.9
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 154.0516
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 418.8677
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 144
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 432.1985
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 139.3749
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 395.701
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 160
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 85.87587
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 154.8654
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 483.6243
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 176
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -348.9743
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 149.8396
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 442.2012
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 192
- add 
+ add
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -695.2999
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 143.895
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 415.628
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 208
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -1112.539
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 163.3749
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 433.4611
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 224
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 1157.165
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 100.5135
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 108.7894
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 240
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 865.7702
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 86.33154
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 87.93774
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 256
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 570.593
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 79.10045
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 76.25402
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 272
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 272.7036
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 83.73643
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 118.2833
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 288
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -142.0933
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 94.96216
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 180.5388
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 304
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -449.4702
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 78.48727
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 76.04037
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 320
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -817.3701
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 88.52554
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 91.79525
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 336
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -1174.81
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 103.2445
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 115.1653
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 352
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 1333.729
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 33.90696
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -246.5815
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 368
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 1020.216
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 45.757874
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -147.5469
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 384
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 718.9385
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 24.131721
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -219.4239
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 400
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 318.3521
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 22.661888
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -190.2909
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 416
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -148.2451
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 30.54937
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -143.2463
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 432
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -505.3208
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 17.44162
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -229.6978
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 448
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -898.6199
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 25.711243
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -228.7023
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 464
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -1264.387
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf 36.93779
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -233.4497
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 480
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 964.53
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -519.4618
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 496
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 580.2255
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -482.6453
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 512
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 113.72867
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -455.94516
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 528
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -340.3062
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -520.0928
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 544
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -739.5068
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -566.1672
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 560
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -1187.406
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -622.6056
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 576
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 1175.302
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -715.4087
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 592
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 765.3063
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -783.9603
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 608
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 271.0694
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -706.941
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 624
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -65.20677
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -715.1755
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 640
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -513.4949
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -807.3127
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 656
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -905.3658
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -865.3527
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 672
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 826.4665
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -1063.123
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 688
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 512.7865
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -905.631
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 704
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 177.6493
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -1010.793
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 720
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -262.6286
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -998.1017
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 736
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -690.1516
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -1112.101
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 752
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 463.0754
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -1264.875
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 768
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -381.564
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -1283.204
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 16
  pushImm 784
  add 
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -3.222909
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -1.685966
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -1251.172
+ addf
  pushImmf 1
  gosub 4, L306
  pushFromPSpVal 0
@@ -6946,9 +7427,14 @@ L14032:
  syscall 1, 21 ; trap_obj_effect_start (4 in, 1 out)
  popToSp 32
  pushFromPSp 16
- pushImmf 0
- pushImmf 0
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 60
+ addf
  pushImmf 1
  gosub 20, L306
  pushFromPSp 16
@@ -9878,3 +10364,7 @@ W668:
  resb 4116
 W4784:
  resb 1024
+WCENTERPOS:
+ resb 16
+WPLAYER:
+ resb 16
