@@ -9454,10 +9454,6 @@
             {
                 "name": "B_BB110/b_bb.bdscript",
                 "type": "obj"
-            },
-            {
-                "name": "F_BB050/f_bb.bdscript",
-                "type": "obj"
             }
         ],
         "roomData": {
@@ -9480,12 +9476,6 @@
             "Storm Rider",
             "Vexen",
             "Lexaeus"
-        ],
-        "adds": [
-            {
-                "ObjectId": 644,
-                "modPositionY": -1500
-            }
         ],
         "obj_id": 354,
         "type": "boss",
@@ -9514,6 +9504,7 @@
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
+        "adds": [],
         "sp_ids": [],
         "subtracts": [],
         "msn_list": [],
@@ -9896,6 +9887,16 @@
             0
         ],
         "name": "Luxord (Data)",
+        "aimods": [
+            {
+                "name": "B_EX150_LV99/b_ex.bdscript",
+                "type": "obj"
+            },
+            {
+                "name": "B_EX210/b_ex.bdscript",
+                "type": "obj"
+            }
+        ],
         "roomData": {
             "bossX": 0,
             "bossY": 0,
@@ -9932,16 +9933,6 @@
         "children": [],
         "msn_source_as": null,
         "msn_dest_as": null,
-        "aimods": [
-            {
-                "name": "B_EX150/b_ex.bdscript",
-                "type": "obj"
-            },
-            {
-                "name": "B_EX210/b_ex.bdscript",
-                "type": "obj"
-            }
-        ],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -15176,10 +15167,6 @@
         "enabled": true,
         "aimods": [
             {
-                "name": "B_HE100/b_he.bdscript",
-                "type": "obj"
-            },
-            {
                 "name": "B_HE110/b_he.bdscript",
                 "type": "obj"
             }
@@ -15809,12 +15796,6 @@
             0
         ],
         "name": "Larxene",
-        "aimods": [
-            {
-                "name": "B_EX400/b_ex.bdscript",
-                "type": "obj"
-            }
-        ],
         "roomData": {
             "bossX": -137.8426971435547,
             "bossY": 0,
@@ -15858,6 +15839,7 @@
         "msn_required": false,
         "msn_source_as": null,
         "msn_dest_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -15883,6 +15865,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
+            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -15930,12 +15913,6 @@
             1
         ],
         "name": "Larxene (Data)",
-        "aimods": [
-            {
-                "name": "B_EX400/b_ex.bdscript",
-                "type": "obj"
-            }
-        ],
         "roomData": {
             "bossX": -137.8426971435547,
             "bossY": 0,
@@ -15970,6 +15947,7 @@
         "msn_required": false,
         "msn_source_as": null,
         "msn_dest_as": null,
+        "aimods": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -16415,6 +16393,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
+            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -17273,6 +17252,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
+            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -22951,6 +22931,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
+            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
@@ -25272,6 +25253,7 @@
             "Blizzard Lord",
             "Cerberus",
             "Cloud",
+            "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
             "Hades II",
