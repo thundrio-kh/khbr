@@ -1,5 +1,5 @@
 ---
-WorkSize: 4416
+WorkSize: 4448
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -13,6 +13,30 @@ Name: b_nm110_r_arm
 ; codeLabels: 
 ; codeRevealer: -l 228 -l 1274 -l 1514 -l 1573 -l 1574 -l 1668 -l 1685 -l 1690 -l 1705 -l 1891 -l 1968 -l 2035 -l 2140 -l 2153 -l 2298 -l 2340 -l 2406 -l 2472 -l 2531 -l 2650 -l 2704 -l 2768 -l 2785 -l 2812 -l 2829 -l 2875 -l 2883 -l 2949 -l 2955 -l 2963
  section .text
+FIND_CENTER:
+ ; find center pos
+ ; this object on top of stack
+ dup
+ syscall 1, 147 ; trap_obj_pos
+ pushFromPWp WPLAYER
+ pushImm 566
+ syscall 1, 114 ; trap_obj_search_by_entry
+ pushFromPWp WPLAYER
+ syscall 1, 147 ; trap_obj_pos
+ syscall 0, 4 ; trap_vector add
+ pushImmf 2
+ syscall 0, 37 ; divide
+ memcpyToWp 16, WCENTERPOS
+ ; end find center pos
+ ret
+GETRANDOMPOS:
+ pushFromPWp WCENTERPOS 
+ pushImmf 1000 ; near
+ pushImmf 1000 ; far
+ pushImmf 0 ; low make this 100-200 to spawn in air
+ pushImmf 0 ; high make this 100-200 to spawn in air
+ syscall 1, 248 ; trap_bg_get_random_pos_air
+ ret
 TR1:
  pushFromPWp W48
  gosub 4, L23
@@ -213,6 +237,7 @@ L334:
  pushFromPWp W304
  gosub 4, L1234
  pushFromFSp 0
+ gosub 4, FIND_CENTER
  pushFromPWp W304
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W304
@@ -490,11 +515,8 @@ L334:
  pushImm 6
  syscall 1, 109 ; trap_obj_hide_part (2 in, 0 out)
  pushFromPWp W16
- pushImmf -1106.5
- pushImmf 0
- pushImmf -2400
- pushImmf 1
- gosub 4, L3064
+ gosub 4, GETRANDOMPOS
+ memcpyToWp 16, W16
  gosub 4, L3091
  pushImm 1
  popToWp W4
@@ -1758,3 +1780,7 @@ W48:
  resb 256
 W304:
  resb 4112
+WPLAYER:
+ resb 16
+WCENTERPOS:
+ resb 16
