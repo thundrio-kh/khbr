@@ -1,5 +1,5 @@
 ---
-WorkSize: 4368
+WorkSize: 4384
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -19,6 +19,14 @@ Name: b_ex210
 ; codeLabels: 
 ; codeRevealer: -l 302 -l 308 -l 1830 -l 2104 -l 2121 -l 2126 -l 2141 -l 2218 -l 2415 -l 2471 -l 2487 -l 2568 -l 2634 -l 2693 -l 2937 -l 3030 -l 3089 -l 3108 -l 3207 -l 3208 -l 3759 -l 3847 -l 3958 -l 3963 -l 3972 -l 3983 -l 3986 -l 4002 -l 4075 -l 4129 -l 4140 -l 4147 -l 4215 -l 4247 -l 4258 -l 4265 -l 4356 -l 4367 -l 4374 -l 4565 -l 4591 -l 4634 -l 4645 -l 4936 -l 5037 -l 5049 -l 5075 -l 5086 -l 5105 -l 5108 -l 5118 -l 5149 -l 5152 -l 5174 -l 5618 -l 5757 -l 5760 -l 5771 -l 5774 -l 5805 -l 6097 -l 6106 -l 6115 -l 6186 -l 6307
  section .text
+GETRANDOMPOS:
+ pushFromPWp WSTARTPOS 
+ pushImmf 1000 ; near
+ pushImmf 1000 ; far
+ pushImmf 0 ; low make this 100-200 to spawn in air
+ pushImmf 0 ; high make this 100-200 to spawn in air
+ syscall 1, 248 ; trap_bg_get_random_pos_air
+ ret
 TR11:
  popToSp 0
  popToSp 4
@@ -631,6 +639,9 @@ L318:
  pushImm 0
  syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
  pushFromFSp 0
+ dup
+ syscall 1,147
+ memcpyToWp 16, WSTARTPOS
  pushFromPWp W264
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromFSp 0
@@ -2937,11 +2948,8 @@ L5722:
  popToSp 4
  popToSp 0
  pushFromFSp 0
- pushImmf 0
- pushImmf 0
- pushImmf -1890 ; this might not do anything
- pushFromFSp 4
- gosub 4, L4848
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 0
  ret 
 L5742:
  popToSp 0
@@ -3247,11 +3255,8 @@ L6252:
  pushFromFSp 4
  popToSp 16
  pushFromPSp 32
- pushImmf 0
- pushImmf 0
- pushImmf -1890
- pushImmf 1
- gosub 16, L4848
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 32
  pushFromFSp 0
  pushFromPSp 32
  pushFromFSp 16
@@ -3470,3 +3475,5 @@ W144:
  resb 120
 W264:
  resb 4104
+WSTARTPOS:
+ resb 16
