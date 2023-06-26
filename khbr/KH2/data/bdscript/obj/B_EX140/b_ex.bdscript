@@ -37,6 +37,14 @@ FIND_CENTER:
  memcpyToWp 16, WCENTERPOS
  ; end find center pos
  ret
+GETRANDOMPOS:
+ pushFromPWp WCENTERPOS
+ pushImmf 1000 ; near
+ pushImmf 1000 ; far
+ pushImmf 120 ; low
+ pushImmf 200 ; high
+ syscall 1, 248 ; trap_bg_get_random_pos_air
+ ret
 TR17:
  popToSp 0
  popToSp 4
@@ -9039,33 +9047,11 @@ L17254:
  pushImm 5
  popToWp W788
  pushFromPSp 80
- pushFromPWp WCENTERPOS
- fetchValue 0
- pushImmf -425
- addf
- pushFromPWp WCENTERPOS
- fetchValue 4
- pushFromPWp WCENTERPOS
- fetchValue 8
- addf
- pushImmf 140
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 80
  pushFromPSp 64
- pushFromPWp WCENTERPOS
- fetchValue 0
- pushImmf 425
- addf
- pushFromPWp WCENTERPOS
- fetchValue 4
- pushImmf -200
- addf
- pushFromPWp WCENTERPOS
- fetchValue 8
- pushImmf 140
- addf
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 64
  pushImm 1
  gosub 28, L18402
  memcpyToSp 16, 112
@@ -9129,33 +9115,11 @@ L17404:
  pushImm 3
  popToWp W788
  pushFromPSp 80
- pushFromPWp WCENTERPOS
- fetchValue 0
- pushImmf -1200
- addf
- pushFromPWp WCENTERPOS
- fetchValue 4
- pushFromPWp WCENTERPOS
- fetchValue 8
- pushImmf 150
- addf
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 80
  pushFromPSp 64
- pushFromPWp WCENTERPOS
- fetchValue 0
- pushImmf 1200
- addf
- pushImmf -200
- pushFromPWp WCENTERPOS
- fetchValue 4
- pushImmf 150
- addf
- pushFromPWp WCENTERPOS
- fetchValue 8
- pushImmf 1
- addf
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 64
  pushImm 1
  gosub 28, L18402
  memcpyToSp 16, 112
@@ -9217,29 +9181,11 @@ L17546:
  pushImm 4
  popToWp W788
  pushFromPSp 80
- pushFromPWp WCENTERPOS
- fetchValue 0
- pushFromPWp WCENTERPOS
- fetchValue 4
- pushFromPWp WCENTERPOS
- fetchValue 8
- pushImmf 500
- addf
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 80
  pushFromPSp 64
- pushFromPWp WCENTERPOS
- fetchValue 0
- pushFromPWp WCENTERPOS
- fetchValue 4
- pushImmf -200
- addf
- pushFromPWp WCENTERPOS
- fetchValue 8
- pushImmf -500
- addf
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 64
  pushImm 1
  gosub 28, L18402
  memcpyToSp 16, 112
@@ -9301,26 +9247,11 @@ L17688:
  pushImm 7
  popToWp W788
  pushFromPSp 80
- pushFromPWp WCENTERPOS
- fetchValue 0
- pushFromPWp WCENTERPOS
- fetchValue 4
- pushFromPWp WCENTERPOS
- fetchValue 8
- pushImmf -500
- addf
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 80
  pushFromPSp 64
- pushFromPWp WCENTERPOS
- fetchValue 0
- pushFromPWp WCENTERPOS
- fetchValue 4
- pushImmf -200
- addf
- pushFromPWp WCENTERPOS
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 64
  pushImm 1
  gosub 28, L18402
  memcpyToSp 16, 112

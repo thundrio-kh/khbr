@@ -1,5 +1,5 @@
 ---
-WorkSize: 5184
+WorkSize: 5216
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -21,6 +21,30 @@ Name: b_ex140_lv99
 ; codeLabels: 
 ; codeRevealer: -l 1179 -l 1586 -l 2240 -l 2536 -l 2861 -l 3128 -l 3138 -l 3454 -l 3721 -l 3731 -l 4280 -l 4381 -l 4889 -l 5023 -l 5250 -l 6002 -l 6426 -l 6586 -l 7218 -l 7348 -l 7514 -l 7524 -l 7731 -l 8023 -l 8254 -l 8269 -l 8377 -l 8396 -l 8432 -l 8510 -l 8844 -l 9399 -l 9541 -l 10732 -l 10760 -l 12639 -l 12879 -l 12935 -l 12952 -l 12957 -l 12972 -l 13049 -l 13246 -l 13351 -l 13364 -l 13509 -l 13575 -l 13641 -l 14019 -l 14196 -l 14343 -l 14355 -l 14432 -l 14492 -l 14855 -l 14896 -l 15165 -l 15344 -l 15533 -l 15604 -l 15632 -l 15898 -l 16086 -l 16114 -l 16142 -l 16167 -l 16192 -l 17621 -l 17863 -l 17980 -l 18038 -l 18249 -l 19013 -l 19176 -l 19535 -l 19661 -l 19803 -l 19891 -l 20168 -l 21590 -l 21886 -l 22522 -l 22818 -l 23323 -l 23543 -l 23691 -l 23739 -l 23780 -l 23790 -l 23831 -l 24505 -l 24727 -l 24754 -l 25107 -l 25153 -l 25638 -l 25690 -l 25699 -l 25724 -l 25769
  section .text
+FIND_CENTER:
+ ; find center pos
+ ; this object on top of stack
+ dup
+ syscall 1, 147 ; trap_obj_pos
+ pushFromPWp WPLAYER
+ pushImm 566
+ syscall 1, 114 ; trap_obj_search_by_entry
+ pushFromPWp WPLAYER
+ syscall 1, 147 ; trap_obj_pos
+ syscall 0, 4 ; trap_vector add
+ pushImmf 2
+ syscall 0, 37 ; divide
+ memcpyToWp 16, WCENTERPOS
+ ; end find center pos
+ ret
+GETRANDOMPOS:
+ pushFromPWp WCENTERPOS
+ pushImmf 1000 ; near
+ pushImmf 1000 ; far
+ pushImmf 120 ; low
+ pushImmf 200 ; high
+ syscall 1, 248 ; trap_bg_get_random_pos_air
+ ret
 TR17:
  popToSp 0
  popToSp 4
@@ -1139,9 +1163,12 @@ L2148:
  popToSp 4
  popToSp 0
  pushFromFSp 0
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushFromFSp 4
  gosub 4, L581
  ret 
@@ -5833,6 +5860,7 @@ L10770:
  pushFromPWp W1072
  gosub 8, L12599
  pushFromFSp 0
+ gosub 4, FIND_CENTER
  pushFromPWp W1072
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W1072
@@ -6341,8 +6369,6 @@ L10770:
  gosub 8, L25913
  pushFromFSp 0
  gosub 8, L26228
- pushImm 8
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
  pushFromFSp 0
  pushImm 6
  syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
@@ -8641,9 +8667,12 @@ L16519:
  pushImm 6
  popToWp W788
  pushFromPSp 80
- pushImmf 0
- pushImmf 0
- pushImmf 250
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 1
  gosub 28, L581
  pushFromPSp 64
@@ -8706,17 +8735,10 @@ L16652:
  pushImm 5
  popToWp W788
  pushFromPSp 80
- pushImmf -425
- pushImmf 0
- pushImmf 140
- pushImmf 1
- gosub 28, L581
- pushFromPSp 64
- pushImmf 425
- pushImmf -200
- pushImmf 140
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 80
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 64
  pushImm 1
  gosub 28, L17808
  memcpyToSp 16, 112
@@ -8780,17 +8802,10 @@ L16802:
  pushImm 3
  popToWp W788
  pushFromPSp 80
- pushImmf -1200
- pushImmf 0
- pushImmf 150
- pushImmf 1
- gosub 28, L581
- pushFromPSp 64
- pushImmf 1200
- pushImmf -200
- pushImmf 150
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 80
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 64
  pushImm 1
  gosub 28, L17808
  memcpyToSp 16, 112
@@ -8852,17 +8867,10 @@ L16944:
  pushImm 4
  popToWp W788
  pushFromPSp 80
- pushImmf 0
- pushImmf 0
- pushImmf 500
- pushImmf 1
- gosub 28, L581
- pushFromPSp 64
- pushImmf 0
- pushImmf -200
- pushImmf -500
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 80
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 64
  pushImm 1
  gosub 28, L17808
  memcpyToSp 16, 112
@@ -8924,17 +8932,10 @@ L17086:
  pushImm 7
  popToWp W788
  pushFromPSp 80
- pushImmf 0
- pushImmf 0
- pushImmf -500
- pushImmf 1
- gosub 28, L581
- pushFromPSp 64
- pushImmf 0
- pushImmf -200
- pushImmf 0
- pushImmf 1
- gosub 28, L581
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 80
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 64
  pushImm 1
  gosub 28, L17808
  memcpyToSp 16, 112
@@ -8989,21 +8990,9 @@ L17217:
 L17219:
  drop 
 L17220:
- pushImm 2
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushImm 3
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushImm 4
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushImm 7
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushFromFWp W788
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
  pushFromFSp 8
  eqz 
  jz L17256
- pushImm 8
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
  jmp L17256
 L17256:
  gosub 28, L608
@@ -9413,12 +9402,6 @@ L18040:
  halt 
  jmp L18003
 L18043:
- pushImm 2
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
- pushImm 8
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
- pushFromFWp W788
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
  pushFromFSp 4
  jz L18154
  pushFromPSp 16
@@ -10073,13 +10056,22 @@ L19267:
  jmp L19314
 L19286:
  pushFromPSp 48
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -600
  pushImmf 600
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -400
  pushImmf -50
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 600
+ addf
  pushImmf 1
  gosub 20, L581
  jmp L19451
@@ -10091,13 +10083,22 @@ L19314:
  jmp L19351
 L19323:
  pushFromPSp 48
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -600
  pushImmf 600
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -400
  pushImmf -50
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -600
+ addf
  pushImmf 1
  gosub 20, L581
  jmp L19451
@@ -10109,13 +10110,22 @@ L19351:
  jmp L19388
 L19360:
  pushFromPSp 48
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf 600
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -400
  pushImmf -50
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -600
  pushImmf 600
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ addf
  pushImmf 1
  gosub 20, L581
  jmp L19451
@@ -10127,25 +10137,43 @@ L19388:
  jmp L19425
 L19397:
  pushFromPSp 48
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -600
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -400
  pushImmf -50
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -600
  pushImmf 600
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ addf
  pushImmf 1
  gosub 20, L581
  jmp L19451
 L19425:
  pushFromPSp 48
+ pushFromPWp WCENTERPOS
+ fetchValue 0
  pushImmf -600
  pushImmf 600
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -500
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf -600
  pushImmf 600
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
+ addf
  pushImmf 1
  gosub 20, L581
 L19451:
@@ -10385,21 +10413,40 @@ L19890:
 L19891: ;___label for action pushFromPAi L26659 ; ___ai scope_start
  popToSp 0
  pushFromPSpVal 176
- pushImmf 0
- pushImmf 0
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 550
+ addf
  pushImmf 1
  gosub 12, L581
  pushFromPSpVal 192
- pushImmf 0
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -800
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 1900
+ addf
  pushImmf 1
  gosub 12, L581
  pushFromPSpVal 208
- pushImmf 0
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
  pushImmf -600
+ addf
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 1000
+ addf
  pushImmf 1
  gosub 12, L581
  pushFromPSp 16
@@ -11012,9 +11059,12 @@ L21121:
  pushFromFSp 4
  pushFromFSp 0
  syscall 0, 18 ; trap_random_range (2 in, 1 out)
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  gosub 12, L581
  pushFromPSp 16
  pushImmf 6.283185
@@ -13600,9 +13650,12 @@ L25858:
  pushFromFSp 4
  popToSp 16
  pushFromPSp 32
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushImmf 1
  gosub 16, L581
  pushFromFSp 0
@@ -14097,3 +14150,7 @@ W5172:
  resb 4
 W5176:
  resb 8
+WPLAYER:
+ resb 16
+WCENTERPOS:
+ resb 16
