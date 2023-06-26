@@ -1,5 +1,5 @@
 ---
-WorkSize: 4288
+WorkSize: 4304
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -23,8 +23,8 @@ Name: b_he110
  syscall 1, 114
  pushFromPWp WHYDRA
  syscall 1, 147 ; get pos
- pushImmf 100 ; near
- pushImmf 100 ; far
+ pushImmf 1000 ; near
+ pushImmf 1000 ; far
  pushImmf 0 ; low
  pushImmf 0 ; high
  syscall 1, 248 ; trap_bg_get_random_pos_air
@@ -220,6 +220,13 @@ L376:
  syscall 1, 71 ; trap_obj_reset_flag (2 in, 0 out)
  pushFromFSp 0
  syscall 1, 74 ; trap_obj_idle (1 in, 0 out)
+  
+ pushFromPWp WPLAYER
+ pushImm 566
+ syscall 1, 114
+ pushFromPWp WPLAYER
+ gosub 4, GETRANDOMPOS
+ syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
  ret 
 L395:
  popToSp 4
@@ -2200,14 +2207,6 @@ L4338: ;___label for action pushFromPAi L5042 ; ___ai guillotine_damage
  pushImmf 0
  syscall 1, 90 ; trap_obj_act_shout (3 in, 0 out)
 
- pushImm 84
- syscall 1, 114 ; get player obj
- gosub 4, GETRANDOMPOS
- drop
- pushFromPAi SAMDEBUG
- syscall 0, 8
- ;syscall 1, 148 ; trap_obj_set_pos
-
  pushFromFSp 0
  gosub 4, L3525
  pushFromFSp 0
@@ -2594,4 +2593,6 @@ W4260:
 W4264:
  resb 8
 WHYDRA:
+ resb 16
+WPLAYER:
  resb 16
