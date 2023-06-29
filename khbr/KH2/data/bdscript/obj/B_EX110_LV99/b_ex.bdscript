@@ -7862,7 +7862,7 @@ TXT14540:
  db 'revenge',0
 TXT14544:
  db 'rst_super_hard',0,0
-L14552:0
+L14552:
 TXT14552:
  db 'battle_start',0,0
 TXT14559:
