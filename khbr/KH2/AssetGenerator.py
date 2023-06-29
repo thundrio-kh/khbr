@@ -58,21 +58,23 @@ class AssetGenerator:
         else:
             self.assets.append(asset)
 
+    
     def generateObjEntry(self, object_map, apply_better_stt=False):
-        if not object_map or apply_better_stt:
+        if not (object_map or apply_better_stt):
             return
         new_object_map = {}
-        with open(os.path.join(os.path.dirname(__file__), "data", "objVanilla.yml")) as f:
+        with open(os.path.join(os.path.dirname(__file__), "data", "objVanilla.yml")) as f:#
             obj_data = yaml.load(f, Loader=yaml.SafeLoader)
         stt_data = None
         if apply_better_stt:
-            with open(os.path.join(os.dirname(__file__), "data", "bin", "better_stt", "ObjList_Better_STT")) as f:
+            with open(os.path.join(os.path.dirname(__file__), "data", "bin", "better_stt", "ObjList_Better_STT.yml")) as f:
                 stt_data = yaml.load(f, Loader=yaml.SafeLoader)
+            # smell because objVanilla has a Flag attribute, whereas ObjList_Better_STT has all of the Flag attributes as their own keys. Might not matter for what we are doing but if issues crop up look here
+            for key in stt_data:
+                obj_data[key] = stt_data[key]
         for oid in object_map:
             for k in object_map[oid]:
                 obj_data[oid][k] = object_map[oid][k]
-            if oid in stt_data:
-                obj_data[oid] = stt_data[oid]
             new_object_map[oid] = obj_data[oid]
         asset = self.modwriter.writeObj(new_object_map)
         self.assets.append(asset)

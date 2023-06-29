@@ -1,7 +1,7 @@
 import random, struct
 
 DEBUG_BOSS_LIST = None
-#DEBUG_BOSS_LIST = {'Xemnas': 'Volcano Lord'}
+#DEBUG_BOSS_LIST = {'Volcano Lord': 'Hydra', 'Blizzard Lord': 'The Experiment'}
 
 def pickbossmapping(enemy_records, parent_bossdict):
     if DEBUG_BOSS_LIST:
