@@ -86,11 +86,11 @@ class KingdomHearts2:
                                 "possible_values": [], "hidden_values": [False, True]},
             "remove_cutscenes": {"display_name": "Remove Cutscenes", "description": "Removes almost all cutscenes from the game.",
                                 "possible_values": [], "hidden_values": [False, True]},
-            "revenge_limit_rando": {"display_name": "Revenge Limit Randomizer", "description": "Randomizes the revenge value limit of each enemy/boss in the game. Can be either set to 0, set to basically infinity, randomly swapped, or set to a random value between 0 and 200",
+            "revenge_limit_rando": {"display_name": "Revenge Limit Randomizer", "description": "Randomizes the revenge value limit of each enemy/boss in the game that has a revenge limit set. Can be either set to 0, set to basically infinity, randomly swapped, or set to a random value between 0 and 200",
                                 "possible_values": [], "hidden_values": ["Vanilla", "Set 0", "Set Infinity", "Random Swap", "Random Values"]},
             "costume_rando": {"display_name": "Costume Randomizer (Beta)", "description": "Randomizes the different costumes that Sora/Donald/Goofy switch between in the different worlds (IE Space Paranoids could now be default sora, while anywhere default sora is used could be Christmas Town Sora",
                                 "possible_values": [], "hidden_values": [False, True]},
-            "party_member_rando": {"display_name": "Revenge Limit Randomizer (Beta)", "description": "Randomizes the World Character party member in each world.",
+            "party_member_rando": {"display_name": "Party Member Randomizer (Beta)", "description": "Randomizes the World Character party member in each world.",
                                 "possible_values": [], "hidden_values": [False, True]},
 
             "apply_form_movement": {"display_name": "Apply Shans form movement", "description": "Apply Shans form movement msets to allow forms to jump infinitely without tposing",
