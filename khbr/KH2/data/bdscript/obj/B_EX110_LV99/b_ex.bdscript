@@ -1,5 +1,5 @@
 ---
-WorkSize: 4576
+WorkSize: 4592
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -23,6 +23,14 @@ Name: b_ex110_lv99
 ; codeLabels: 
 ; codeRevealer: -l 303 -l 563 -l 1239 -l 1433 -l 1536 -l 1659 -l 1728 -l 1964 -l 2135 -l 2419 -l 2599 -l 2883 -l 3575 -l 5035 -l 5287 -l 5346 -l 5347 -l 5364 -l 5369 -l 5384 -l 5570 -l 5675 -l 5688 -l 5833 -l 5899 -l 5956 -l 6005 -l 6220 -l 6226 -l 6280 -l 6338 -l 6344 -l 6426 -l 6579 -l 6649 -l 6700 -l 6720 -l 6734 -l 6744 -l 7705 -l 8253 -l 8522 -l 8679 -l 8757 -l 8772 -l 8819 -l 8860 -l 8924 -l 8975 -l 8986 -l 8996 -l 9079 -l 9386 -l 9506 -l 9571 -l 9586 -l 9677 -l 9698 -l 9708 -l 9955 -l 10060 -l 10075 -l 10080 -l 10230 -l 10409 -l 10486 -l 10494 -l 10589 -l 10597 -l 10650 -l 10698 -l 10778 -l 10784 -l 10847 -l 10947 -l 11144 -l 11192 -l 11502 -l 11550 -l 11983 -l 12060 -l 12133 -l 12149 -l 12242 -l 12386 -l 12493 -l 12891 -l 13090 -l 13653 -l 14104
  section .text
+GETRANDOMPOS:
+ pushFromPWp WSTARTPOS
+ pushImmf 100; near
+ pushImmf 100 ; far
+ pushImmf 0 ; low make this 100-200 to spawn in air
+ pushImmf 0 ; high make this 100-200 to spawn in air
+ syscall 1, 248 ; trap_bg_get_random_pos_air
+ ret
 TR11:
  popToSp 0
  popToSp 4
@@ -89,9 +97,12 @@ L140:
  popToSp 4
  popToSp 0
  pushFromPSp 16
- pushImmf 0
- pushImmf 0
- pushImmf -1
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushImmf 1
  gosub 12, L225
  pushFromFSp 4
@@ -144,9 +155,13 @@ L252:
  popToSp 4
  popToSp 0
  pushFromFSp 0
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ ; Vector for when repositioning axel after rc is done
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushFromFSp 4
  gosub 4, L225
  ret 
@@ -234,9 +249,12 @@ L409:
  popToSp 4
  popToSp 0
  pushFromPSp 16
- pushImmf 0
- pushImmf 0
- pushImmf -1
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushImmf 1
  gosub 12, L225
  pushFromFSp 4
@@ -1335,9 +1353,12 @@ L2346:
  popToSp 0
  popToSp 4
  pushFromPSp 16
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushImmf 1
  gosub 12, L225
  pushFromFSp 4
@@ -2037,6 +2058,9 @@ L3585:
  pushFromPWp W440
  gosub 4, L4995
  pushFromFSp 0
+ dup
+ syscall 1, 147 ; trap_obj_pos
+ memcpyToWp 16, WSTARTPOS
  pushFromPWp W440
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W440
@@ -3620,9 +3644,14 @@ L6844:
  pushFromPWp W4544
  memcpyToSp 16, 48
  pushFromPSp 32
- pushImmf 0
- pushImmf 150
- pushImmf 0
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushImm 150
+ addf
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushImmf 1
  gosub 32, L225
  pushFromFSp 0
@@ -3780,9 +3809,12 @@ L7163:
  pushImmf 10
  gosub 32, L328
  pushFromPSp 16
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushImmf 1
  gosub 32, L225
  pushFromFSp 0
@@ -3929,7 +3961,7 @@ L7448:
  jmp L7491
 L7491:
  pushFromFSp 0
- pushFromPSp 16
+ gosub 4, GETRANDOMPOS
  syscall 1, 148 ; trap_obj_set_pos (2 in, 0 out)
  pushFromFSp 0
  gosub 32, L7802
@@ -6987,9 +7019,10 @@ L13013:
  gosub 12, L328
  pushFromPSpVal 0
  pushImm 11
+ pushFromPWp WSTARTPOS
  pushImm 0
  pushImm 0
- syscall 1, 21 ; trap_obj_effect_start (4 in, 1 out)
+ syscall 1, 22 ; trap_obj_effect_start_pos (5 in, 1 out)
  popToSpVal 76
  pushFromPSpVal 0
  pushImm 12
@@ -7369,9 +7402,12 @@ L13684:
 L13692:
  popToSp 0
  pushFromPSp 32
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushImmf 1
  gosub 16, L225
  pushImm 1
@@ -7438,9 +7474,13 @@ L13789:
  jmp L13843
 L13827:
  pushFromPSp 32
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ ; this is designating where the appearing fire pillars go
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushImmf 1
  gosub 16, L225
 L13843:
@@ -7449,9 +7489,13 @@ L13843:
  gosub 16, L13968
  jz L13962
  pushFromPSp 16
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ ; this is designating where the appearing fire pillars go
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushImmf 1
  gosub 16, L225
  pushFromPSp 32
@@ -7516,9 +7560,12 @@ L13968:
  pushFromFSpVal 72
  jz L14047
  pushFromPSp 128
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WSTARTPOS
+ fetchValue 0
+ pushFromPWp WSTARTPOS
+ fetchValue 4
+ pushFromPWp WSTARTPOS
+ fetchValue 8
  pushImmf 1
  gosub 40, L225
  pushFromPSp 128
@@ -7865,3 +7912,5 @@ W4564:
  resb 4
 W4568:
  resb 8
+WSTARTPOS:
+ resb 16

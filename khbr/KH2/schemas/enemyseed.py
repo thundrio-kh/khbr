@@ -92,7 +92,7 @@ class EnemySeed:
             if not new_boss_object["msn"]:
                 if new_boss_object["msn_list"]:
                     return
-            msn_object = {"name": new_boss_object["msn"]}
+            msn_object = {"name": new_boss_object["msn"] if not new_boss_object["msn_dest_as"] else new_boss_object["msn_dest_as"]}
         elif old_boss_object["msn_replace_allowed"] and not new_boss_object["msn_replace_allowed"]:
             msn_object = {"name": "WI03_MS104"}
         elif old_boss_object["msn_source_as"]:

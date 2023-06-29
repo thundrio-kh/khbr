@@ -21,6 +21,30 @@ Name: n_cm000_btl
 ; codeLabels: 
 ; codeRevealer: -l 695 -l 1124 -l 1508 -l 3744 -l 3984 -l 4043 -l 4044 -l 4061 -l 4066 -l 4081 -l 4267 -l 4344 -l 4411 -l 4516 -l 4529 -l 4674 -l 4918 -l 5011 -l 5070 -l 5089 -l 5188 -l 5189 -l 5210 -l 5799 -l 5846 -l 6066 -l 6107 -l 6303 -l 7014 -l 7228 -l 7588 -l 7625 -l 7788 -l 8410 -l 8546 -l 8553 -l 8564 -l 8701 -l 8790 -l 8797 -l 8808 -l 8974 -l 9109 -l 9116 -l 9374 -l 9450 -l 9464 -l 10306 -l 10332 -l 10376 -l 10922 -l 10948 -l 10992 -l 11115 -l 11329 -l 11339 -l 11541 -l 11644 -l 11663 -l 11845 -l 11870 -l 11889 -l 11928 -l 12036 -l 12358 -l 12692 -l 13100 -l 13122 -l 13260 -l 13338 -l 13394 -l 13525 -l 13563 -l 13600 -l 13691 -l 13740 -l 14370 -l 14437 -l 14450 -l 14617 -l 14712 -l 14814 -l 14928 -l 14936 -l 14948 -l 14958 -l 15048 -l 15060 -l 15070 -l 15078 -l 15398 -l 15456 -l 16099 -l 16192 -l 16578 -l 16648 -l 16683 -l 16905 -l 17335 -l 18689 -l 18783 -l 18877 -l 18886
  section .text
+FIND_CENTER:
+ ; find center pos
+ ; this object on top of stack
+ dup
+ syscall 1, 147 ; trap_obj_pos
+ pushFromPWp WPLAYER
+ pushImm 566
+ syscall 1, 114 ; trap_obj_search_by_entry
+ pushFromPWp WPLAYER
+ syscall 1, 147 ; trap_obj_pos
+ syscall 0, 4 ; trap_vector add
+ pushImmf 2
+ syscall 0, 37 ; divide
+ memcpyToWp 16, WCENTERPOS
+ ; end find center pos
+ ret
+GETRANDOMPOS:
+ pushFromPWp WCENTERPOS 
+ pushImmf 1000 ; near
+ pushImmf 1000 ; far
+ pushImmf 0 ; low make this 100-200 to spawn in air
+ pushImmf 0 ; high make this 100-200 to spawn in air
+ syscall 1, 248 ; trap_bg_get_random_pos_air
+ ret
 TR15:
  popToSp 0
  popToSp 4
@@ -319,6 +343,9 @@ L480:
  pushImmf 1
  gosub 12, L675
  pushFromFSp 4
+ pushFromPSp 16
+ syscall 1, 153 ; trap_obj_reset_pos (2 in, 0 out)
+ pushFromFSp 4
  fetchValue 4
  pushImm 0
  pushImmf 0
@@ -392,9 +419,12 @@ L675:
  popToSp 4
  popToSp 0
  pushFromFSp 0
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
+ pushFromPWp WCENTERPOS
+ fetchValue 8
  pushFromFSp 4
  gosub 4, L648
  ret 
@@ -896,6 +926,7 @@ L1518:
  pushFromPWp W348
  gosub 4, L3704
  pushFromFSp 0
+ gosub 4, FIND_CENTER
  pushFromPWp W348
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W348
@@ -6007,26 +6038,19 @@ L11734:
  syscall 1, 151 ; trap_obj_motion_check_trigger (2 in, 1 out)
  jz L11819
  pushFromPSp 16
- pushImmf 530
- pushImmf 0
- pushImmf 0
- pushImmf 1
- gosub 12, L648
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 16
  pushFromFSp 0
  pushFromPSp 16
  gosub 12, L5815
- pushFromPSp 16
- pushImmf 2.094395
- syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ gosub 4, GETRANDOMPOS
  memcpyToSp 16, 32
  pushFromPSp 32
  memcpyToSp 16, 16
  pushFromFSp 0
  pushFromPSp 16
  gosub 12, L5815
- pushFromPSp 16
- pushImmf 2.094395
- syscall 0, 13 ; trap_vector_roty (2 in, 1 out)
+ gosub 4, GETRANDOMPOS
  memcpyToSp 16, 32
  pushFromPSp 32
  memcpyToSp 16, 16
@@ -10418,3 +10442,7 @@ W4452:
  resb 148
 W4600:
  resb 8
+WPLAYER:
+ resb 16
+WCENTERPOS:
+ resb 16

@@ -1,5 +1,5 @@
 ---
-WorkSize: 4608
+WorkSize: 4624
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -742,6 +742,9 @@ L1326:
  pushFromFSp 0
  pushFromPWp W496
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
+ pushFromPWp WCHEST
+ pushImm 1740
+ syscall 1, 114
  pushFromPWp W496
  pushFromPAi L11157 ; ___ai appear (L11157)
  pushImm 100
@@ -1372,11 +1375,9 @@ L3024:
  pushImm 14
  syscall 1, 211 ; trap_obj_pattern_enable (2 in, 0 out)
  pushFromPWp W0
- pushImmf 600
- pushImmf -2
- pushImmf 100
- pushImmf 1
- gosub 8, L550
+ pushFromPWp WCHEST
+ syscall 1, 147
+ memcpyToWp 16, W0
  pushFromPSpVal 288
  gosub 8, L11024
  pushFromFSp 0
@@ -5908,3 +5909,5 @@ W352:
  resb 144
 W496:
  resb 4112
+WCHEST:
+ resb 16

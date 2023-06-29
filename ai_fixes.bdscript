@@ -1,0 +1,145 @@
+SIMPLE STARTING COORDINATES FIX
+
+...
+TRINIT
+ ...
+ pushFromFSp 0
+ ; add this
+ dup
+ syscall 1, 147 ; pos
+ memcpyToWp 16, WTHISPOS
+ ; done with add
+ pushFromPWp WTABLE
+ syscall 1, 7 ; trap_obj_set_act_table
+...
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+>>>>>>>>
+ pushFromPWp WTHISPOS
+ fetchValue 0
+ pushFromPWp WTHISPOS
+ fetchValue 4
+ pushFromPWp WTHISPOS
+ fetchValue 8
+
+
+SAVE CENTER COORDINATE AS FIX
+
+WorkSize: 100 
+>>>
+WorkSize: 132
+...
+...
+FIND_CENTER:
+ ; find center pos
+ ; this object on top of stack
+ dup
+ syscall 1, 147 ; trap_obj_pos
+ pushFromPWp WPLAYER
+ pushImm 566
+ syscall 1, 114 ; trap_obj_search_by_entry
+ pushFromPWp WPLAYER
+ syscall 1, 147 ; trap_obj_pos
+ syscall 0, 4 ; trap_vector add
+ pushImmf 2
+ syscall 0, 37 ; divide
+ memcpyToWp 16, WCENTERPOS
+ ; end find center pos
+ ret
+...
+gosub 4, FIND_CENTER
+...
+ pushImmf 0
+ pushImmf 0
+ pushImmf 0
+>>>>>>>>
+ pushFromPWp WCENTERPOS
+ fetchValue 0
+ pushFromPWp WCENTERPOS
+ fetchValue 4
+ pushFromPWp WCENTERPOS
+ fetchValue 8
+...
+...
+TRINIT:
+ ...
+ pushFromFSp 0
+ ++++++
+ gosub 4, FIND_CENTER
+ ++++++
+ pushFromPWp ACTTABLE
+ syscall 1, 7 ; act_table
+...
+...
+++++
+WPLAYER:
+ resb 16
+WCENTERPOS:
+ resb 16
+
+
+REPLACE WITH RANDOM OPEN COORDINATES
+WorkSize: 100
+>>>
+WorkSize: 132
+...
+...
+FIND_CENTER:
+ ; find center pos
+ ; this object on top of stack
+ dup
+ syscall 1, 147 ; trap_obj_pos
+ pushFromPWp WPLAYER
+ pushImm 566
+ syscall 1, 114 ; trap_obj_search_by_entry
+ pushFromPWp WPLAYER
+ syscall 1, 147 ; trap_obj_pos
+ syscall 0, 4 ; trap_vector add
+ pushImmf 2
+ syscall 0, 37 ; divide
+ memcpyToWp 16, WCENTERPOS
+ ; end find center pos
+ ret
+GETRANDOMPOS:
+ pushFromPWp WCENTERPOS 
+ pushImmf 1000 ; near
+ pushImmf 1000 ; far
+ pushImmf 0 ; low make this 100-200 to spawn in air
+ pushImmf 0 ; high make this 100-200 to spawn in air
+ syscall 1, 248 ; trap_bg_get_random_pos_air
+ ret
+...
+TRINIT:
+ ...
+ pushFromFSp 0
+ ++++++
+ gosub 4, FIND_CENTER
+ ++++++
+ pushFromPWp ACTTABLE
+ syscall 1, 7 ; act_table
+...
+ pushFromPSp 32
+ pushImmf 0
+ pushImmf 0
+ pushImmf -900
+ gosub 16, L395
+>>>
+ pushFromPSp 32
+ gosub 4, GETRANDOMPOS
+ memcpyToSp 16, 32
+...
+...
+++++
+WPLAYER:
+ resb 16
+WCENTERPOS:
+ resb 16
+
+; get pos of other object
+ pushFromPWp WHYDRA
+ pushImm 352
+ syscall 1, 114
+ pushFromPWp WHYDRA
+ syscall 1, 147
+
