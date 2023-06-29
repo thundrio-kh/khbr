@@ -16,6 +16,7 @@ class CutsceneRemover:
             "20frame": open(os.path.join(os.path.dirname(__file__), "data", "bin", "20frame.event"), "rb").read() # For cutscenes before popups
         }
         self.ignore_worlds = [
+            "lm"
         ]
         self.ignore_ards = [
         ]
@@ -45,8 +46,9 @@ class CutsceneRemover:
         if ard in self.ignore_programs:
             if program in self.ignore_programs[ard]:
                 return False
-        if ard[:2] == "lm" and ismission:
-            return False
+        if ard[:2] == "lm":
+            if ismission:
+                return False
         if eventnum in self.only_type_66_cutscenes:
             return True
         if eventtype == "66":
