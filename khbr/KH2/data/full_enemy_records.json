@@ -5129,8 +5129,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5192,7 +5199,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5207,8 +5213,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5268,7 +5281,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5283,8 +5295,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5344,7 +5363,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5359,8 +5377,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5420,7 +5445,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5435,8 +5459,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5496,7 +5527,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5511,8 +5541,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5572,7 +5609,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5587,8 +5623,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5648,7 +5691,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5663,8 +5705,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5724,7 +5773,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5739,8 +5787,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5800,7 +5855,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5815,8 +5869,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5876,7 +5937,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5891,8 +5951,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -5952,7 +6019,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -5967,8 +6033,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -6028,7 +6101,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -6043,8 +6115,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -6104,7 +6183,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
@@ -6119,8 +6197,15 @@
             {
                 "name": "B_CA040/b_ca.bdscript",
                 "type": "obj"
+            },
+            {
+                "name": "B_CA040_PUB/b_ca.bdscript",
+                "type": "obj"
             }
         ],
+        "obj_edits": {
+            "Flag": 0
+        },
         "enabled": true,
         "enmp_index": 999,
         "model": "B_CA040",
@@ -6180,7 +6265,6 @@
         "program": null,
         "roomsizemultiplier": 1,
         "unchanged_file_size": false,
-        "obj_edits": {},
         "luamod": null,
         "roomData": {},
         "story_level": 0
