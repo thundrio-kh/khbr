@@ -6200,16 +6200,6 @@ L12412:
  ret 
 L12421:
  popToSp 0
- pushImm 1
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushImm 2
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushImm 3
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushImm 4
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
- pushImm 5
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
  pushFromPSp 16
  pushImmf 1
  gosub 12, L1093
@@ -6525,22 +6515,6 @@ L13094:
  popToSp 0
  pushFromFSp 0
  gosub 12, L13180
- pushImm 1
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
- pushImm 2
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
- pushImm 3
- syscall 1, 37 ; trap_bg_show (1 in, 0 out)
- pushImm 4
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushImm 5
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushImm 6
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushImm 7
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
- pushImm 8
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
  pushFromPSp 16
  pushImmf 1
  gosub 12, L1093
@@ -9471,7 +9445,7 @@ L18622:
  pushFromFSp 0
  pushImm 0
  gosub 12, L20671
- syscall 1, 36 ; trap_bg_hide (1 in, 0 out)
+ syscall 1, 37 ; trap_bg_show (1 in, 0 out)
  pushFromPSp 8
  gosub 12, L13187
  pushImmf 20
