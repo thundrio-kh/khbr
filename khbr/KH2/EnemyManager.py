@@ -111,12 +111,21 @@ class EnemyManager:
         return self.enemy_records[old_name]
 
     def get_new_boss_object(self, old_boss_object, new_boss_name, rand_seed):
+        ardname = None
+        # forced_variations won't work if the msn isn't in the old record
+        if old_boss_object["msn"]:
+            ardname = old_boss_object["msn"][:4]
         new_boss_object = self.enemy_records[new_boss_name]
         # Due to how they use the same MSN in a lot of cases, org replacements should be the same between nobody + data versions
         if "organization" in old_boss_object["tags"]:
             new_parent = new_boss_object["parent"]
             old_parent = self.get_parent(old_boss_object["name"])
             rand_seed.data_replacements[old_parent["name"]] = new_parent
+
+        for ard in new_boss_object["forced_variations"]:
+            if ardname and ard == ardname:
+                new_boss_object = self.enemy_records[new_boss_object["forced_variations"][ard]]
+                print("Forcing specific variation")
         if new_boss_object["replace_as"] and not rand_seed.config.selected_boss:
             new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
         return new_boss_object
@@ -228,8 +237,6 @@ class EnemyManager:
                 continue
             if "data" in v["tags"] and not use_data_bosses:
                 continue
-            if "gimmick" in v["tags"] and not use_gimmick_bosses:
-                continue
             if "terra" in v["tags"] and not use_terra:
                 continue
             if "sephiroth" in v["tags"] and not use_sephiroth:
@@ -247,6 +254,8 @@ class EnemyManager:
             if boss["name"] == boss["parent"]:
                 boss["children"] = [b for b in boss["children"] if b in bosses]
                 boss["available"] = [b for b in boss["available"] if b in bosses]
+                if use_gimmick_bosses:
+                    boss["available"] += [b for b in boss["gimmick_source"] if b in bosses and b not in boss["available"]]
                 for child_name in boss["children"]:
                     child = self.enemy_records[child_name]
                     # This is involved in ommitting children that are excluded via tag
