@@ -18,6 +18,8 @@ def get_schema():
         "msn_source_as": None,
         "msn_dest_as": None,
         "aimods": [],
+        "forced_variations": [],
+        "gimmick_source": [],
         "cmdmods": [],
         "mickey_source": False,
         "final_fight": False,
