@@ -13227,6 +13227,9 @@
         "enmp_index": 177,
         "hp": 100,
         "level": 99,
+        "forced_variations": {
+            "HE06": "Hades I"
+        },
         "variationof": "Hades II",
         "limiter": 34,
         "model": "B_HE030_CLSM",
@@ -13257,7 +13260,6 @@
                 }
             }
         ],
-        "forced_variations": [],
         "gimmick_source": [
             "Final Xemnas",
             "Xaldin"
@@ -13329,7 +13331,9 @@
         "msn_required": false,
         "msn_source_as": null,
         "msn_dest_as": null,
-        "forced_variations": [],
+        "forced_variations": {
+            "HE06": "Hades I"
+        },
         "gimmick_source": [
             "Final Xemnas",
             "Xaldin"
@@ -13386,6 +13390,9 @@
         "hp": 100,
         "level": 99,
         "limiter": 34,
+        "forced_variations": {
+            "HE06": "Hades I"
+        },
         "model": "B_HE030_PART",
         "msn": "HE06_MS101",
         "program": 112,
@@ -13403,7 +13410,6 @@
         "msn_required": false,
         "msn_source_as": null,
         "msn_dest_as": null,
-        "forced_variations": [],
         "gimmick_source": [
             "Final Xemnas",
             "Xaldin"
@@ -13459,6 +13465,9 @@
                 }
             }
         ],
+        "forced_variations": {
+            "HE06": "Hades I"
+        },
         "gimmick_source": [
             "Final Xemnas",
             "Xaldin"
@@ -13498,7 +13507,6 @@
         "msn_required": false,
         "msn_source_as": null,
         "msn_dest_as": null,
-        "forced_variations": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -13568,6 +13576,9 @@
                 }
             }
         ],
+        "forced_variations": {
+            "HE06": "Hades I"
+        },
         "gimmick_source": [
             "Final Xemnas",
             "Xaldin"
@@ -13600,7 +13611,6 @@
         "msn_required": false,
         "msn_source_as": null,
         "msn_dest_as": null,
-        "forced_variations": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,

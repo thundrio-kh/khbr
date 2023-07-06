@@ -5,7 +5,7 @@ import shutil, yaml
 # Not really formal unit tests, more like just some basic integration tests to make sure different combinations of options work
 N = 100
 
-
+#TODO calculate_luxord_replacement variety should change to calculate the variety of each based on the possible availables, and come up with a acceptable range for each
 class Tests(unittest.TestCase):
 
     def test_one_to_one_long(self):

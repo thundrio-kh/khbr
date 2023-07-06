@@ -122,12 +122,14 @@ class EnemyManager:
             old_parent = self.get_parent(old_boss_object["name"])
             rand_seed.data_replacements[old_parent["name"]] = new_parent
 
+
+
+        if new_boss_object["replace_as"] and not rand_seed.config.selected_boss:
+            new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
         for ard in new_boss_object["forced_variations"]:
             if ardname and ard == ardname:
                 new_boss_object = self.enemy_records[new_boss_object["forced_variations"][ard]]
                 print("Forcing specific variation")
-        if new_boss_object["replace_as"] and not rand_seed.config.selected_boss:
-            new_boss_object = self.enemy_records[new_boss_object["replace_as"]]
         return new_boss_object
 
     def get_new_enemy_object(self, new_enemy_name, rand_seed):

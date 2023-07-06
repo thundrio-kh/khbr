@@ -2722,6 +2722,8 @@ Hades Cups:
   enmp_index: 0xB1
   hp: 100
   level: 99
+  forced_variations:
+    HE06: Hades I
   variationof: Hades II
   limiter: 34
   model: B_HE030_CLSM
@@ -2795,6 +2797,8 @@ Hades I:
   hp: 100
   level: 99
   limiter: 34
+  forced_variations:
+    HE06: Hades I
   model: B_HE030_PART
   msn: HE06_MS101
   program: 112
@@ -2814,6 +2818,8 @@ Hades II:
     source: old
     replacements:
       obj_id: new_boss.obj_id
+  forced_variations:
+    HE06: Hades I
   gimmick_source:
   - Final Xemnas
   - Xaldin

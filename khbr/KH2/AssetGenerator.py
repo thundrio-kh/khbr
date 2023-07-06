@@ -541,7 +541,7 @@ class AssetGenerator:
                 return False # Ambush has some serious issues related to cost
             return True
 
-        btlmods = {} # TODO This is hacky but I don't know why this is happening outside boss rush
+        #btlmods = {} 
         btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
         with open(btlfn) as f:
             script = AreaDataScript(f.read(), ispc=self.ispc)
@@ -555,6 +555,8 @@ class AssetGenerator:
                     prg.add_enemy_spec()
             if p in btlmods.get("adds",{}):
                 for l in btlmods["adds"][p]:
+                    if "BattleLevel" in l: # TODO This is hacky but I don't know why this is happening outside boss rush
+                        continue
                     prg.add_line(l)
             programasset = self.modwriter.writeAreaDataProgram(ardname, "btl", p, prg.make_program())
             roomsource.append(programasset)
