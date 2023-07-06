@@ -967,10 +967,10 @@ Armor Xemnas I:
   enmp_index: 0xA0
   hp: 100
   level: 99
-  blacklist_source:
-  - The Experiment
   limiter: 0
   model: B_EX260
+  gimmick_source:
+  - Final Xemnas
   obj_id: 2140
   type: boss
   variations:
@@ -1131,8 +1131,11 @@ Armor Xemnas II:
   # - name: EH23_MS112/ms_b.bdscript
   #   type: msn
     # source: old
+  gimmick_source:
+  - Final Xemnas
+  - Terra
+  - Zexion
   blacklist_source:
-  - Axel I
   - Saix # Report of crash
   enmp_index: 0xA0
   tags:
@@ -1230,10 +1233,19 @@ Axel I:
   hp: 100
   level: 99
   limiter: 0
+  gimmick_source:
+  - Demyx
+  - Final Xemnas
+  - Luxord
+  - Marluxia
+  - Roxas
+  - Sephiroth
+  - Vexen
+  - Xemnas
+  - Zexion
   tags:
   - roxas
   - teleport_blocked
-  - needs_teleport
   model: B_EX110_SKIRMISH
   msn: TT05_MS404
   enmp_index: 0x94
@@ -1244,30 +1256,6 @@ Axel I:
   obj_id: 2229
   type: boss
   story_level: 2
-  whitelist_source:
-  - Axel I
-  - Axel II
-  - Barbossa
-  - Blizzard Lord
-  - Cloud
-  - Dark Thorn
-  - Grim Reaper I
-  - Hades II
-  - Hayner
-  - Hercules
-  - Leon
-  - Past Pete
-  - Pete Cups
-  - Pete TR
-  - Pete OC II
-  - Sark
-  - Seifer
-  - Setzer
-  - Tifa
-  - Twilight Thorn
-  - Vivi
-  - Volcano Lord
-  - Yuffie
   variations:
     Axel I:
       vars:
@@ -1285,8 +1273,44 @@ Axel II:
   - organization
   - roxas
   - teleport_blocked
-  - needs_teleport
   - needs_rc
+  gimmick_source:
+  - Cerberus
+  - Grim Reaper I
+  - Scar
+  - Twilight Thorn
+  blacklist_destination:
+  - Jafar
+  blacklist_source:
+  - Demyx
+  - Demyx OC
+  - Final Xemnas
+  - Cerberus
+  - Grim Reaper I
+  - Grim Reaper II
+  - Groundshaker
+  - Hydra
+  - Lexaeus
+  - Luxord
+  - Marluxia
+  - Prison Keeper
+  - Roxas
+  - Saix
+  - Scar
+  - Sephiroth
+  - Shan-Yu
+  - Terra
+  - The Beast
+  - The Experiment
+  - Thresholder
+  - Twilight Thorn
+  - Vexen
+  - Xaldin
+  - Xemnas
+  - Xigbar
+  forced_variations:
+    HE19: Axel II
+    TT20: Axel II
   enabled: true
   enmp_index: 0x4E
   hp: 100
@@ -1298,35 +1322,8 @@ Axel II:
   room_size: 3.68
   size: 3.74
   obj_id: 81
-  blacklist_destination:
-  - Scar
-  - Luxord #Falls through arena during RC - Kayya
   type: boss
   story_level: 3
-  whitelist_source:
-  - Axel I
-  - Axel II
-  - Barbossa
-  - Blizzard Lord
-  - Cloud
-  - Dark Thorn
-  - Grim Reaper I
-  - Hades II
-  - Hayner
-  - Hercules
-  - Leon
-  - Past Pete
-  - Pete Cups
-  - Pete TR
-  - Pete OC II
-  - Sark
-  - Seifer
-  - Setzer
-  - Tifa
-  - Twilight Thorn
-  - Vivi
-  - Volcano Lord
-  - Yuffie
   variations:
     Axel II:
       vars:
@@ -1370,28 +1367,20 @@ Barbossa:
   aimods: 
   - name: B_CA010/b_ca.bdscript
     type: obj
-  pc:
-    blacklist_destination:
-    - Luxord # report of crash after cutscene
-    - Terra # report of crash at cutscene
+  gimmick_source:
+  - Hydra
+  - Twilight Thorn
   blacklist_destination:
-  - Xigbar # You are put in boxed in space
-  - Riku # Allegedly doesn't finish the fight if you kill him - Kayya
-  - Blizzard Lord # Illuminator doesn't have a fun time here, causing Barbossa to disappear forever - Kayya
-  - Volcano Lord # Illuminator doesn't have a fun time here, causing Barbossa to disappear forever - Kayya
-  - The Beast
-  blacklist_source:
-  - Thresholder # report of fight not ending
-  - Larxene # report of fight not ending
-  - Axel II # Can only SOMETIMES complete the Overtaker RC which can cause a softlock if you can't complete it - Kayya
+  - Groundshaker
+  - Scar
+  - Xigbar
+  - Zexion
   adds:
   - ObjectId: 358 #Illuminator
     name: Illuminator
     aimods:
     - name: B_CA000/b_ca.bdscript
       type: obj
-  tags:
-  - needs_teleport
   enabled: true
   enmp_index: 0x63
   hp: 100
@@ -1498,14 +1487,19 @@ Blizzard Lord:
   msn_replace_allowed: false
   obj_id: 1036
   size: 2.58
+  gimmick_source:
+  - Sephiroth
+  - Hostile Program
+  - Marluxia
   blacklist_source:
   - Sephiroth # Too hard in multi boss fights
   - Terra # Too hard in multi boss fights
-  - Armor Xemnas I
-  - Armor Xemnas II
   - Twilight Thorn
-  - Xigbar
   - Roxas # crashes a lot
+  - Grim Reaper II
+  - Hydra
+  - Larxene
+  - Marluxia
   tags:
   - large
   type: boss
@@ -1605,6 +1599,8 @@ Cerberus:
   obj_id: 351
   size: 3.2
   type: boss
+  gimmick_source:
+  - Terra
   blacklist_destination:
   - Oogie Boogie
   - The Beast
@@ -1652,9 +1648,35 @@ Cloud:
   enmp_index: 0xBD
   hp: 100
   level: 99
+  gimmick_source:
+  - Axel II
+  - Hostile Program
+  - Jafar
+  - The Beast
+  - Xemnas
+  blacklist_destination:
+  - Hades II
   blacklist_source:
   - Terra # Too hard in multi-fight arenas - Kayya
   - Sephiroth # Too hard in multi-fight arenas - Kayya
+  - Armor Xemnas I
+  - Axel II
+  - Barbossa
+  - Cerberus
+  - Grim Reaper II
+  - Hades II
+  - Hydra
+  - Jafar
+  - Larxene
+  - Marluxia
+  - Prison Keeper
+  - Roxas
+  - The Beast
+  - The Experiment
+  - Twilight Thorn
+  - Xaldin
+  - Xemnas
+  - Xigbar
   limiter: 0
   model: N_HB550_BTL2
   pc: 
@@ -1830,12 +1852,10 @@ Dark Thorn:
   msn: BB05_MS104B
   program: 78
   size: 4.19
-  room_size: 14.00
+  room_size: 12.00
   roommaxsize: 17.03
   blacklist_source:
   - Storm Rider # Gets stuck on edges of map
-  - Vexen # memory in forms
-  - Lexaeus
   obj_id: 354
   type: boss
   variations:
@@ -1913,7 +1933,6 @@ Final Xemnas (Data):
   - organization
   - solo
   - fix_source_area_settings
-  - needs_teleport # Mostly just the data version that gets softlocked due to needing teleport
   enabled: true
   aimods: 
   - name: B_EX170_LAST_LV99/b_ex.bdscript
@@ -1961,7 +1980,6 @@ Luxord (Data):
   tags:
   - data
   - organization
-  - needs_teleport
   variationof: Luxord
   enabled: true
   enmp_index: 0xF3
@@ -2103,8 +2121,13 @@ Demyx:
     bossZ: 300
   tags:
   - organization
-  blacklist_source:
-  - Xigbar
+  - no_roxas
+  blacklist_destination:
+  - Axel I
+  - Groundshaker
+  - Scar
+  - Twilight Thorn
+  - Cerberus # he might be starting in the sky causing it not to load the fight properly
   enabled: true
   enmp_index: 0x58
   hp: 100
@@ -2119,8 +2142,6 @@ Demyx:
   roommaxsize: 14.90
   program: 55
   type: boss
-  blacklist_destination:
-  - Cerberus # he might be starting in the sky causing it not to load the fight properly
   variations:
     Demyx:
       story_level: 30
@@ -2380,12 +2401,25 @@ Final Xemnas:
   - Yuffie
   - Tifa
   - Cloud
+  - Pete OC II
   - Riku # report of Softlock after fight ends
+  - Armor Xemnas I # Dome crash
+  - Armor Xemnas II # Dome crash
+  - Dark Thorn # Memory
+  - Shadow Stalker # Memory
+  - Pete TR # 
+  - Shan-Yu # Memory - ending in limit form
+  - Jafar
+  - Axel I
+  - Hades II
+  - Seifer
+  - Twilight Thorn
   can_be_enemy: false
   tags:
   - solo
   - organization
   - fix_source_area_settings
+  - no_roxas
   enabled: true
   hp: 100
   isnightmare: true
@@ -2503,7 +2537,6 @@ MCP:
   enabled: false
   source_replace_allowed: true
   tags:
-  - gimmick
   - needs_teleport
   - needs_rc
   whitelist_destination:
@@ -2605,25 +2638,15 @@ Grim Reaper II:
   hp: 100
   tags:
   - needs_rc
+  - no_roxas
   level: 99
   blacklist_destination:
   - Dark Thorn # medals get lost on ground
   - Shadow Stalker # medals get lost on ground
-  whitelist_destination: # Just a conservative list just in case, eventually do a all check
-  - Cerberus
-  - Demyx
-  - Final Xemnas
-  - Grim Reaper II
-  - Hades II
-  - Hostile Program
-  - Hydra
-  # - Luxord # RC doesn't work in this arena making the fight more tedious than it should be - Kayya
-  - Pete Cups
-  - Roxas
-  - Saix
-  - Sephiroth
-  - Shan-Yu
-  - Terra
+  - Axel I
+  - Hercules
+  - Seifer
+  - Twilight Thorn
   limiter: 0
   model: B_CA050
   obj_id: 1543
@@ -2658,6 +2681,9 @@ Groundshaker:
   enmp_index: 0x5F
   hp: 100
   level: 99
+  gimmick_source:
+  - Marluxia
+  - Sephiroth
   blacklist_source:
   - Demyx # Weird fall through floor doesn't start
   whitelist_destination:
@@ -2668,7 +2694,6 @@ Groundshaker:
   tags:
   - rc_blocked
   - teleport_blocked
-  - gimmick
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
   model: B_LK120
@@ -2691,7 +2716,6 @@ Hades Cups:
   tags:
   - cups
   - rc_blocked # Technically just Hades II but idk
-  - needs_teleport
   - needs_invuln
   enabled: true
   enmp_index: 0xB1
@@ -2789,19 +2813,19 @@ Hades II:
     source: old
     replacements:
       obj_id: new_boss.obj_id
+  gimmick_source:
+  - Final Xemnas
+  - Xaldin
   tags:
   - needs_invuln
+  - rc_blocked
+  - teleport_blocked # Due to Hades Escape
   enabled: true
   enmp_index: 18
   hp: 100
   level: 99
   limiter: 0
   model: B_HE030
-  tags:
-  - rc_blocked
-  - teleport_blocked # Due to Hades Escape
-  blacklist_source:
-    - Axel II # Hercules makes the RC hard to do
   roommaxsize: 13 # just a random guess
   obj_id: 350
   replace_as: Hades Cups
@@ -2869,12 +2893,25 @@ Hayner:
   - name: N_EX500_BTL/n_ex.bdscript
     type: obj
   enabled: true
+  gimmick_source:
+  - Hostile Program
+  - Jafar
+  - Luxord
+  - Xaldin
+  - Xemnas
   tags:
   - needs_invuln
   - roxas
   #- sourcemaxhp
   - onetooneonly
   - teleport_blocked
+  blacklist_source:
+  - Final Xemnas
+  - Grim Reaper I
+  - Grim Reaper II
+  - Shan-Yu
+  - Xaldin
+  - Xemnas
   enmp_index: 0x96
   hp: 100
   level: 99
@@ -2887,27 +2924,6 @@ Hayner:
   size: 0.84
   type: boss
   story_level: 2
-  whitelist_source:
-  - Axel I
-  - Axel II
-  - Barbossa
-  - Blizzard Lord
-  - Cloud
-  - Dark Thorn
-  - Grim Reaper I
-  - Hades II
-  - Hercules
-  - Leon
-  - Past Pete
-  - Pete Cups
-  - Pete TR
-  - Pete OC II
-  - Sark
-  - Seifer
-  - Tifa
-  - Twilight Thorn
-  - Volcano Lord
-  - Yuffie
   variations:
     Hayner:
       # msn_list:
@@ -2936,8 +2952,13 @@ Hercules:
   obj_id: 2320
   size: 2.48
   type: boss
+  gimmick_source:
+  - Hostile Program
+  blacklist_destination:
+  - Hades II
   tags:
   - cups
+  - cant_invuln
   variations:
     Hercules:
       roomData:
@@ -3071,9 +3092,21 @@ Hostile Program:
     bossX: 0
     bossY: 0
     bossZ: 0
+  blacklist_destination:
+  - Oogie Boogie
+  - The Beast
+  - Blizzard Lord
+  - Cloud
+  - Hayner
+  - Hercules
+  - Pete TR
+  - Riku
+  - Setzer
+  - Tifa
+  - Vivi
+  - Volcano Lord
+  - Yuffie
   enabled: true
-  blacklist_source:
-  - Axel I
   enmp_index: 0x6A
   hp: 100
   level: 99
@@ -3082,7 +3115,6 @@ Hostile Program:
   msn: TR04_MS104
   program: 55
   world: tr
-  msn_required: true
   obj_id: 1208
   size: 2.37
   room_size: 9.16
@@ -3118,16 +3150,23 @@ Hydra:
   aimods: 
   - name: B_HE110/b_he.bdscript
     type: obj
-  whitelist_destination:
-  - Armor Xemnas II
-  - Groundshaker
-  - Final Xemnas
-  - Dark Thorn
-  - Shadow Stalker
-  - Storm Rider
-  #- Terra # Crash report on PS2
+  blacklist_destination:
+  - Xigbar # softlock possible
+  - Axel I
+  - Barbossa
+  - Hayner
+  - Oogie Boogie
+  - Seifer
+  - Setzer
+  - The Beast
+  - Twilight Thorn
+  - Vivi
+  - Hydra
   enmp_index: 20
   hp: 100
+  tags:
+  - needs_rc
+  - no_roxas
   level: 99
   limiter: 0
   model: B_HE100
@@ -3239,23 +3278,36 @@ Jafar:
     bossY: -21450
     bossZ: 500
   enabled: true
-  source_replace_allowed: true
-  whitelist_source:
-  - Armor Xemnas I
-  - Blizzard Lord
+  blacklist_destination:
+  - Groundshaker # Lion sora can't jump infinitely
+  - Scar
+  gimmick_source:
+  - Lexaeus
+  - Terra
+  - Zexion
+  whitelist_destination:
+  - Armor Xemnas II
+  - Cerberus
+  - Cloud
+  - Dark Thorn
   - Final Xemnas
-  - Grim Reaper I
-  - Hostile Program
-  - Prison Keeper
+  - Hades II
+  - Hercules
+  - Hydra
+  - Jafar
+  - Leon
+  - Riku
+  - Roxas
+  - Saix
   - Shadow Stalker
   - Storm Rider
-  - The Experiment
-  - Volcano Lord
+  - Tifa
+  - Xemnas
+  - Yuffie
+  source_replace_allowed: true
   aimods: 
   - name: B_AL020/b_al.bdscript
     type: obj
-  tags:
-  - gimmick # Only because it's unstable with the infinite jumps... TODO
   cmdmods:
   - value: 604
     changes:
@@ -3338,6 +3390,10 @@ Larxene:
   tags:
   - organization
   - needs_teleport
+  - no_roxas
+  blacklist_destination:
+  - Barbossa
+  - Scar
   can_be_enemy: false #expensive
   enabled: true
   enmp_index: 0xD8
@@ -3376,9 +3432,36 @@ Leon:
   enmp_index: 0xB4
   hp: 100
   level: 99
+  gimmick_source:
+  - Axel II
+  - Jafar
+  - The Beast
+  - Xemnas
+  - Hostile Program
+  blacklist_destination:
+  - Hades II
   blacklist_source:
+  - Hostile Program
   - Terra # Too hard in multi-fight arenas - Kayya
   - Sephiroth # Too hard in multi-fight arenas - Kayya
+  - Armor Xemnas I
+  - Axel II
+  - Barbossa
+  - Cerberus
+  - Grim Reaper II
+  - Hades II
+  - Hydra
+  - Jafar
+  - Larxene
+  - Marluxia
+  - Prison Keeper
+  - Roxas
+  - The Beast
+  - The Experiment
+  - Twilight Thorn
+  - Xaldin
+  - Xemnas
+  - Xigbar
   limiter: 0
   pc: 
     tags: 
@@ -3451,6 +3534,7 @@ Lexaeus:
     type: obj
   tags:
   - organization
+  - no_roxas
   enabled: true
   enmp_index: 0xD6
   hp: 100
@@ -3463,14 +3547,19 @@ Lexaeus:
   isnightmare: true
   msn_required: true
   obj_id: 2357
-  size: 3.9
+  size: 5
   type: boss
   unchanged_file_size: true
   pc:
     unchanged_file_size: false
   blacklist_destination:
   - Axel II
-  - Cerberus # Phase 3 can result in pcsx2 crashes
+  - Pete TR
+  - Cerberus
+  - Hades II
+  - Jafar
+  - Oogie Boogie
+  - The Beast
   variations:
     Lexaeus:
       vars:
@@ -3567,11 +3656,16 @@ Luxord:
     bossX: 0
     bossY: 0
     bossZ: -400
+  gimmick_source:
+  - Zexion
+  blacklist_destination:
+  - Axel I
+  - Twilight Thorn
   tags:
   - organization
   - solo
-  - needs_teleport
   - needs_rc
+  - no_roxas
   enabled: true
   enmp_index: 0x59
   hp: 100
@@ -3657,6 +3751,10 @@ Marluxia:
   - organization
   - broken_mickey
   - needs_rc
+  - no_roxas
+  blacklist_destination:
+  - Axel I
+  - Twilight Thorn
   enabled: true
   enmp_index: 0xD7
   hp: 100
@@ -3673,7 +3771,6 @@ Marluxia:
   unchanged_file_size: true
   pc:
     unchanged_file_size: false
-  blacklist_destination:
   variations:
     Marluxia:
       vars:
@@ -3808,15 +3905,21 @@ Oogie Boogie:
     bossX: -507.0552062988281
     bossY: -150
     bossZ: -1572.740966796875
-  enabled: true
+  enabled: false
   enmp_index: 0x4B
   aimods: 
   - name: B_NM000/b_nm.bdscript
     type: obj
   tags:
   - teleport_blocked
-  - gimmick
   hp: 100
+  gimmick_source:
+  - Cerberus
+  - Hostile Program
+  - Hydra
+  - Sephiroth
+  - Terra
+  - Zexion
   level: 99
   limiter: 0
   model: B_NM000
@@ -3983,13 +4086,52 @@ Pete TR:
   aimods:
   - name: N_EX760_BTL/n_ex.bdscript
     type: obj
-  tags:
-  - needs_teleport
   pc: 
     source_replace_allowed: true # TODO supposedly demyx super crashes here on ps2 and most bosses cause crashes here
   source_replace_allowed: false
   msn_replace_allowed: false # This is due soley to Pete OC II
   hp: 100
+  gimmick_source:
+  - Hostile Program
+  - Marluxia
+  - Twilight Thorn
+  - Xaldin
+  - Zexion
+  forced_variations:
+    EH24: Pete Cups
+    CA10: Pete Cups
+    EH20: Pete Cups
+    LK15: Pete Cups
+    HE19: Pete Cups # the spreadsheet does not reflect this
+    HE06: Pete Cups
+    HE05: Pete Cups
+    WI01: Pete Cups
+    WI03: Pete Cups
+    EH21: Pete Cups
+    EH15: Pete Cups
+    TR09: Pete Cups
+    LK14: Pete Cups
+    BB11: Pete Cups
+  blacklist_destination:
+  - Cloud
+  - Tifa
+  - Leon
+  - Yuffie
+  blacklist_source:
+  - Cloud
+  - Grim Reaper II
+  - Hercules
+  - Hydra
+  - Larxene
+  - Leon
+  - Marluxia
+  - Roxas
+  - Terra
+  - Tifa
+  - Twilight Thorn
+  - Xaldin
+  - Yuffie
+  - Zexion
   level: 99
   limiter: 20
   model: N_EX760_BTL
@@ -4262,6 +4404,8 @@ Prison Keeper:
     bossZ: -923.3510131835938
   can_be_enemy: true
   enabled: true
+  gimmick_source:
+  - Jafar
   tags:
   - teleport_blocked
   enmp_index: 0x77
@@ -4432,9 +4576,13 @@ Riku:
     replacements:
       obj_id: new_boss.obj_id
   enabled: true
-  blacklist_source:
-  - Roxas # Report of softlock here
   enmp_index: 0x82
+  blacklist_source:
+  - Zexion
+  gimmick_source:
+  - Hostile Program
+  - Xemnas
+  - Zexion
   tags:
   - solo
   - needs_invuln
@@ -4466,8 +4614,14 @@ Roxas:
   tags:
   - organization
   - solo
-  - needs_teleport
   - fix_source_area_settings
+  - no_roxas
+  gimmick_source:
+  - Zexion
+  blacklist_destination:
+  - Axel I
+  - Hades II
+  - Twilight Thorn
   can_be_enemy: false #expensive
   enabled: true
   enmp_index: 0xD5
@@ -4498,7 +4652,6 @@ Roxas:
       - data
       - organization
       - solo
-      - needs_teleport
       enabled: true
       msn: EH21_MS101
       program: 99
@@ -4533,6 +4686,10 @@ Saix:
   tags:
   - organization
   - needs_rc
+  - no_roxas
+  blacklist_destination:
+  - Axel I
+  - Twilight Thorn
   can_be_enemy: false
   enabled: true
   enmp_index: 0x86
@@ -4582,9 +4739,6 @@ Sark:
     bossZ: -2353.952880859375
   can_be_enemy: true
   enabled: true
-  blacklist_source:
-  - Cloud # report of crash when cloud takes damage
-  - Lexaeus # Report of boss getting stuck after meteor attack
   tags:
   - teleport_blocked
   isnightmare: true
@@ -4620,9 +4774,12 @@ Scar:
   enmp_index: 0x5E
   tags:
   - rc_blocked
+  gimmick_source:
+  - Demyx
+  - Marluxia
+  - Sephiroth
   blacklist_source:
   - Shan-Yu # Reports of tpose from RC causing softlock
-  - Dark Thorn # Reports of tpose from grab causing softlock
   hp: 100
   level: 99
   limiter: 0
@@ -4650,6 +4807,12 @@ Seifer:
       obj_id: new_boss.obj_id
   enabled: true
   enmp_index: 0x87
+  gimmick_source:
+  - Demyx
+  - Final Xemnas
+  - Luxord
+  - Vexen
+  - Xaldin
   tags:
   - needs_invuln
   - roxas
@@ -4664,26 +4827,6 @@ Seifer:
   size: 0.98
   type: boss
   story_level: 1
-  whitelist_source:
-  - Axel I
-  - Axel II
-  - Blizzard Lord
-  - Dark Thorn
-  - Hades II
-  - Hayner
-  - Hercules
-  - Leon
-  - Past Pete
-  - Pete Cups
-  - Pete TR
-  - Pete OC II
-  - Sark
-  - Seifer
-  - Setzer
-  - Tifa
-  - Vivi
-  - Volcano Lord
-  - Yuffie
   variations:
     Seifer:
       program: 180
@@ -4750,7 +4893,8 @@ Sephiroth:
     bossZ: 1533.1300048828125
   tags:
   - sephiroth
-  - solo
+  - solo 
+  - no_roxas
   can_be_enemy: true
   enabled: true
   enmp_index: 0x8C
@@ -4765,15 +4909,17 @@ Sephiroth:
   program: 75
   room_size: 6.57
   type: boss
+  gimmick_source:
+  - Zexion
   blacklist_destination:
-  - Seifer
   - Twilight Thorn
-  - Vivi
-  - Hayner
   - Axel I
-  - Setzer
   - Axel II
   - Armor Xemnas II # TELEPORTING
+  - Groundshaker
+  - Oogie Boogie
+  - Scar
+  - The Beast
   variations:
     Sephiroth:
       vars:
@@ -4790,12 +4936,25 @@ Setzer:
       obj_id: new_boss.obj_id
   enabled: true
   enmp_index: 0x9E
+  gimmick_source:
+  - Hostile Program
+  - Jafar
+  - Luxord
+  - Xaldin
+  - Xemnas
   tags:
   - needs_invuln
   - roxas
   #- sourcemaxhp
   - onetooneonly
   - teleport_blocked
+  blacklist_source:
+  - Final Xemnas
+  - Grim Reaper I
+  - Grim Reaper II
+  - Shan-Yu
+  - Xaldin
+  - Xemnas
   hp: 100
   level: 99
   limiter: 0
@@ -4807,26 +4966,6 @@ Setzer:
   size: 1.35
   type: boss
   story_level: 2
-  whitelist_source:
-  - Axel I
-  - Axel II
-  - Barbossa
-  - Blizzard Lord
-  - Dark Thorn
-  - Grim Reaper I
-  - Hades II
-  - Hercules
-  - Leon
-  - Past Pete
-  - Pete Cups
-  - Pete TR
-  - Pete OC II
-  - Sark
-  - Seifer
-  - Tifa
-  - Twilight Thorn
-  - Volcano Lord
-  - Yuffie
   variations:
     Setzer:
       # msn_list:
@@ -4870,18 +5009,14 @@ Shadow Stalker:
     bossX: 0
     bossY: 0
     bossZ: -800
-  enabled: true
+  enabled: false
   enmp_index: 0x17
   tags:
   - teleport_blocked
   - needs_rc
-  - gimmick
-  - neesd_teleport
   hp: 100
   level: 99
   limiter: 0
-  blacklist_source:
-  - Demyx # Battle doesn't start properly
   model: B_BB120
   msn: BB05_MS104A
   obj_id: 355
@@ -4932,6 +5067,12 @@ Shan-Yu:
   enabled: true
   enmp_index: 0x47
   hp: 100
+  tags:
+  - no_roxas
+  blacklist_destination:
+  - Axel I
+  - Seifer
+  - Twilight Thorn
   level: 99
   limiter: 34
   model: B_MU100
@@ -5133,7 +5274,14 @@ Storm Rider:
   # aimods:
   # - name: B_MU120/b_mu.bdscript
   #   type: obj
-  enabled: true
+  blacklist_destination:
+  - Demyx
+  - Jafar
+  - Luxord
+  - Cerberus
+  enabled: false
+  tags:
+  - needs_teleport
   enmp_index: 0x19
   hp: 100
   level: 99
@@ -5274,7 +5422,7 @@ Storm Rider:
   - Jafar
   - Storm Rider
   # - Cerberus #Room is way too small for Storm Rider, which can potentially cause it to fall through the floor
-  - Terra
+  # - Terra
 Strafer RAW:
   enabled: true
   variationof: Strafer
@@ -5323,6 +5471,7 @@ Terra:
   can_be_enemy: false #expensive
   tags:
   - terra
+  - no_roxas
   enabled: true
   enmp_index: 0xF4
   hp: 100
@@ -5338,6 +5487,16 @@ Terra:
   type: boss
   blacklist_destination:
   - Hostile Program # Report of getting stuck in bike loop
+  - Armor Xemnas II
+  - Axel I
+  - Cerberus
+  - Groundshaker
+  - Hades II
+  - Jafar
+  - Oogie Boogie
+  - Scar
+  - The Beast
+  - Twilight Thorn
   variations:
     Terra:
       vars:
@@ -5351,13 +5510,20 @@ The Beast:
   aimods: 
   - name: P_BB000_BTL/p_bb.bdscript
     type: obj
+  gimmick_source:
+  - Cerberus
+  - Hostile Program
+  - Hydra
+  - Lexaeus
+  - Sephiroth
+  - Terra
+  - Twilight Thorn
+  - Zexion
   tags: 
   - needs_rc
-  - gimmick
+  - no_roxas
   enabled: true
   enmp_index: 0x49
-  blacklist_source:
-  - Grim Reaper II # remove once GR2 is phase 3 only
   hp: 100
   level: 99
   limiter: 0
@@ -5390,6 +5556,8 @@ The Experiment:
     bossX: -810.4044189453125
     bossY: 4.720623016357422
     bossZ: 894.3668212890625
+  tags:
+  - no_roxas
   enabled: true
   enmp_index: 0x78
   hp: 100
@@ -5398,17 +5566,11 @@ The Experiment:
   model: B_NM110
   msn: NM07_MS204
   obj_id: 1488
-  size: 1.82
+  size: 3.82
   room_size: 11.7
   program: 64
-  tags:
-  - needs_teleport
   blacklist_destination:
-  - Shadow Stalker # memory
-  - Dark Thorn # memory
-  - Blizzard Lord
-  - Volcano Lord
-  - Pete OC II
+  - Pete OC II # takes too much time and memory?
   type: boss
   # these might need to be adds or something different
   # I'm also not including them in the size calculation, which might be wrong
@@ -5436,12 +5598,11 @@ Thresholder:
   msn: BB11_MS102
   tags:
   - needs_rc
+  - no_roxas
   blacklist_destination:
   - Blizzard Lord # These all spawn above ground causing issues
   - Volcano Lord
   - Shadow Stalker
-  blacklist_source:
-  - Xigbar # Room transition sometimes sends you OOB
   obj_id: 353
   size: 2.17
   room_size: 12.13
@@ -5462,9 +5623,35 @@ Tifa:
   enmp_index: 0xB6
   hp: 100
   level: 99
+  gimmick_source:
+  - Axel II
+  - Jafar
+  - The Beast
+  - Xemnas
+  - Hostile Program
+  blacklist_destination:
+  - Hades II
   blacklist_source:
   - Terra # Too hard in multi-fight arenas - Kayya
   - Sephiroth # Too hard in multi-fight arenas - Kayya
+  - Armor Xemnas I
+  - Axel II
+  - Barbossa
+  - Cerberus
+  - Grim Reaper II
+  - Hades II
+  - Hydra
+  - Jafar
+  - Larxene
+  - Marluxia
+  - Prison Keeper
+  - Roxas
+  - The Beast
+  - The Experiment
+  - Twilight Thorn
+  - Xaldin
+  - Xemnas
+  - Xigbar
   limiter: 0
   model: N_HB570_BTL2
   msn_replace_allowed: false
@@ -5576,11 +5763,24 @@ Twilight Thorn:
   #   type: obj
   enabled: true
   enmp_index: 0x56
+  gimmick_source:
+  - Demyx
+  - Final Xemnas
+  - Luxord
+  - Marluxia
+  - Roxas
+  - Sephiroth
+  - Vexen
+  - Xemnas
   tags:
   - roxas
   - teleport_blocked
   - needs_teleport # TODO complicated aimod to fix, I'm halfway there
   - needs_rc
+  blacklist_destination:
+  - Barbossa
+  - The Beast
+  - Twilight Thorn
   hp: 100
   level: 99
   limiter: 0
@@ -5592,30 +5792,6 @@ Twilight Thorn:
   program: 157
   type: boss
   story_level: 2
-  whitelist_source:
-  - Axel I
-  - Axel II
-  - Barbossa
-  - Blizzard Lord
-  - Cloud
-  - Dark Thorn
-  - Grim Reaper I
-  - Hades II
-  - Hayner
-  - Hercules
-  - Leon
-  - Past Pete
-  - Pete Cups
-  - Pete TR
-  - Pete OC II
-  - Sark
-  - Seifer
-  - Setzer
-  - Tifa
-  - Twilight Thorn
-  - Vivi
-  - Volcano Lord
-  - Yuffie
   variations:
     Twilight Thorn:
       vars:
@@ -5629,6 +5805,10 @@ Vexen:
   tags:
   - organization
   - teleport_blocked
+  blacklist_destination:
+  - Axel I
+  - Hades II
+  - Twilight Thorn
   enabled: true
   enmp_index: 0xC8
   hp: 100
@@ -5682,6 +5862,19 @@ Vivi:
   - onetooneonly
   - needs_invuln
   - teleport_blocked
+  gimmick_source:
+  - Hostile Program
+  - Jafar
+  - Luxord
+  - Xaldin
+  - Xemnas
+  blacklist_source:
+  - Final Xemnas
+  - Grim Reaper I
+  - Grim Reaper II
+  - Shan-Yu
+  - Xaldin
+  - Xemnas
   hp: 100
   level: 99
   limiter: 1
@@ -5696,26 +5889,6 @@ Vivi:
   program: 85
   type: boss
   story_level: 2
-  whitelist_source:
-  - Axel I
-  - Axel II
-  - Barbossa
-  - Blizzard Lord
-  - Dark Thorn
-  - Grim Reaper I
-  - Hades II
-  - Hercules
-  - Leon
-  - Past Pete
-  - Pete Cups
-  - Pete TR
-  - Pete OC II
-  - Sark
-  - Seifer
-  - Tifa
-  - Twilight Thorn
-  - Volcano Lord
-  - Yuffie
   variations:
     Vivi:
       vars:
@@ -5732,14 +5905,19 @@ Volcano Lord:
   msn_replace_allowed: false
   obj_id: 1035
   size: 2.23
+  gimmick_source: 
+  - Hostile Program
+  - Marluxia
+  - Sephiroth
   blacklist_source:
   - Sephiroth # Too hard in multi boss fights
   - Terra # Too hard in multi boss fights
-  - Armor Xemnas I
-  - Armor Xemnas II
   - Twilight Thorn
-  - Xigbar
   - Roxas # crashes a lot
+  - Grim Reaper II
+  - Hydra
+  - Larxene
+  - Marluxia
   tags:
   - large
   type: boss
@@ -5797,6 +5975,10 @@ Xaldin:
   enabled: true
   blacklist_source:
   - xigbar
+  blacklist_destination:
+  - Axel I
+  - Seifer
+  - Twilight Thorn
   enmp_index: 0x57
   hp: 100
   level: 99
@@ -5825,9 +6007,16 @@ Xemnas:
   - organization
   - solo
   - teleport_blocked
+  - no_roxas
   aimods:
   - name: B_EX170/b_ex.bdscript
     type: obj
+  gimmick_source:
+  - Zexion
+  blacklist_destination:
+  - Axel I
+  - Riku
+  - Twilight Thorn
   can_be_enemy: false
   enabled: true
   #enmp_index: 0x5A  Final Xemnas has same ENMP index so it's problematic to scale Xemnas
@@ -5856,21 +6045,25 @@ Xigbar:
     bossX: 0
     bossY: 0
     bossZ: 200
+  gimmick_source:
+  - Hydra
+  - Barbossa
   blacklist_destination:
-  - Twilight Thorn
-  - Scar
-  - Armor Xemnas I
   - Pete OC II
-  - Sark
-  - Roxas
-  - Roxas (Data)
-  - Prison Keeper
   - The Beast
+  - Armor Xemnas II
+  - Demyx OC
+  - Grim Reaper I
+  - Jafar
+  - Seifer
+  - Axel I
+  - Twilight Thorn
   enabled: true
   tags:
   - organization
-  - needs_teleport
   - broken_mickey
+  - cant_invuln
+  - no_roxas
   enmp_index: 0x85
   hp: 100
   level: 99
@@ -5896,9 +6089,35 @@ Yuffie:
   enmp_index: 0xB7
   hp: 100
   level: 99
+  gimmick_source:
+  - Axel II
+  - Jafar
+  - The Beast
+  - Xemnas
+  - Hostile Program
   blacklist_source:
   - Terra # Too hard in multi-fight arenas - Kayya
   - Sephiroth # Too hard in multi-fight arenas - Kayya
+  - Armor Xemnas I
+  - Axel II
+  - Barbossa
+  - Cerberus
+  - Grim Reaper II
+  - Hades II
+  - Hydra
+  - Jafar
+  - Larxene
+  - Marluxia
+  - Prison Keeper
+  - Roxas
+  - The Beast
+  - The Experiment
+  - Twilight Thorn
+  - Xaldin
+  - Xemnas
+  - Xigbar
+  blacklist_destination:
+  - Hades II
   limiter: 0
   model: N_HB580_BTL2
   msn_replace_allowed: false
@@ -5977,20 +6196,36 @@ Zexion:
   tags:
   - organization
   - needs_rc
-  - needs_teleport
+  - no_roxas
   enabled: true
   hp: 100
   level: 99
   limiter: 0
   model: B_EX370
-  msn_required: true
   obj_id: 2427
   size: 4.44
   room_size: 9.14
   type: boss
+  gimmick_source:
+  - Barbossa
   blacklist_destination:
-  - Roxas # Room becomes no ground
+  - Roxas
   - Xigbar # Transition to small square is a softlock
+  - Armor Xemnas II
+  - Jafar
+  - Luxord
+  - Oogie Boogie
+  - Sephiroth
+  - The Beast
+  - Xemnas
+  - Axel II
+  - Blizzard Lord
+  - Cloud
+  - Hercules
+  - Leon
+  - Tifa
+  - Volcano Lord
+  - Yuffie
   variations:
     Zexion:
       program: 151
@@ -6002,7 +6237,6 @@ Zexion:
       tags:
       - data
       - organization
-      - needs_teleport
       - needs_rc
       enabled: true
       program: 152
