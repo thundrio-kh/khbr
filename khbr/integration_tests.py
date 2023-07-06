@@ -414,7 +414,7 @@ class Tests(unittest.TestCase):
         # Ambush is fucked, it should not get changed ever and the area data program should be untouched too
         pass
 
-
+    # should write a test for gimmick_source and forced_variations working as intended
 
     # Testing enemies.yaml stuff, probably in it's own file
 
@@ -491,9 +491,18 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_he06_btl_122_should_not_be_edited()
-#ut.test_seedgen_enemy_wild_other()
-#ut.test_gr_room_uses_luxord_msn_when_replaced()
+ut.test_dont_replace_enemy_msns_for_boss()
+ut.test_gr_room_uses_luxord_msn_when_replaced()
+ut.test_proper_ai_edit_to_setzer()
+ut.test_seedgen_boss_wild()
+ut.test_seedgen_boss_wild_cups()
+ut.test_seedgen_boss_wild_cups_datas()
+ut.test_seedgen_boss_wild_datas()
+ut.test_seedgen_boss_wild_nightmare()
+ut.test_seedgen_enemy_one_to_one_other()
+ut.test_seedgen_error3()
+ut.test_seedgen_proderror1()
+ut.test_wild_dont_randomize_demyxoc()
 
 # Uncomment to run the actual tests
 unittest.main()

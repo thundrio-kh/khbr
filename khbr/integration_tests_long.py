@@ -3,13 +3,14 @@ from randomizer import Randomizer, KingdomHearts2
 import testutils
 import shutil, yaml
 # Not really formal unit tests, more like just some basic integration tests to make sure different combinations of options work
+N = 100
+
 
 class Tests(unittest.TestCase):
 
     def test_one_to_one_long(self):
         print("One to One long")
-        N = 100
-        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "gimmick_bosses": True, "sephiroth": True, "terra": True}
+        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "sephiroth": True, "terra": True}
         randomizations = []
         for _ in range(N):
             print("{}\{}".format(_,N))
@@ -22,8 +23,7 @@ class Tests(unittest.TestCase):
 
     def test_wild_long(self):
         print("Wild long")
-        N = 100
-        options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "gimmick_bosses": True, "sephiroth": True, "terra": True}
+        options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "sephiroth": True, "terra": True}
         randomizations = []
         for _ in range(N):
             print("{}\{}".format(_,N))
@@ -35,8 +35,7 @@ class Tests(unittest.TestCase):
 
     def test_one_to_one_long_pc(self):
         print("One to One long pc")
-        N = 100
-        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "gimmick_bosses": True, "sephiroth": True, "terra": True, "memory_expansion": True}
+        options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "sephiroth": True, "terra": True, "memory_expansion": True}
         randomizations = []
         for _ in range(N):
             print("{}\{}".format(_,N))
@@ -48,8 +47,7 @@ class Tests(unittest.TestCase):
 
     def test_wild_long_pc(self):
         print("Wild long pc")
-        N = 100
-        options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "gimmick_bosses": True, "sephiroth": True, "terra": True, "memory_expansion": True}
+        options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "sephiroth": True, "terra": True, "memory_expansion": True}
         randomizations = []
         for _ in range(N):
             print("{}\{}".format(_,N))
