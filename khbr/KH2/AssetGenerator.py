@@ -400,6 +400,18 @@ class AssetGenerator:
             "final_fights": []
         }
 
+        def getworld(b):
+            if b.get("msn"):
+                return b["msn"][:2]
+            # msn list is HE
+            return "HE"
+        def getroom(b):
+            if b.get("msn"):
+                r = b["msn"][2:4]
+                if r.lower() != "_c":
+                    return r
+            return "09" # Assume colosseum
+
         for w, world in replacement_spawns.items():
             for r, room in world.items():
                 ardname = self.location_manager.get_ardname(r)
@@ -407,7 +419,8 @@ class AssetGenerator:
                 roomasset = self.getDefaultRoomAsset(ardname)
 
                 basespawns = original_spawns[w][r]
-                battlemods = {"adds": basespawns.get("battlescriptadds", {}) }
+                btlmods = {"adds": basespawns.get("battlescriptadds", {}) }
+                evtmods = {"fix_settings": []}
 
                 roommods = self.spawn_manager.apply_room_mods(basespawns, ardname)
                 
@@ -442,10 +455,12 @@ class AssetGenerator:
                                 old_obj = self.enemy_manager.lookup_object_by_id(old_spawn["ObjectId"])
                                 if old_obj.get("story_level", 0) > 0:
                                     prg = old_obj["program"]
-                                    if old_obj["program"] in battlemods["adds"]:
-                                        battlemods["adds"][prg].append("BattleLevel {}".format(old_obj["story_level"]))
+                                    if old_obj["program"] in btlmods["adds"]:
+                                        btlmods["adds"][prg].append("BattleLevel {}".format(old_obj["story_level"]))
                                     else:
-                                        battlemods["adds"][prg] = ["BattleLevel {}".format(old_obj["story_level"])]
+                                        btlmods["adds"][prg] = ["BattleLevel {}".format(old_obj["story_level"])]
+                                if "fix_source_area_settings" in old_obj["tags"]:
+                                    evtmods["fix_settings"].append({"world": getworld(old_obj), "room": getroom(old_obj), "program": old_obj["program"], "options": {"fix_source_area_settings": True} })
 
                                 if old_spawn["ObjectId"] == 1543 and new_entity["name"] == "Grim Reaper II" and old_spawn["Argument1"] == 0: # Grim Reaper II is replacing itself
                                     gr2_self_replace = True
@@ -493,21 +508,25 @@ class AssetGenerator:
                     programasset = self.modwriter.writeCopiedSubfile(ardname, "btl", "AreaDataScript", assetpath)
                     roomasset["source"].append(programasset)
                 else:
-                    self.update_area_data_programs(ardname, roomasset["source"], battlemods)
+                    self.update_area_data_programs(ardname, roomasset["source"], btlmods)
+
+                for evt_mod in evtmods["fix_settings"]:
+                    #self.generateEvt(evt_mod["world"], evt_mod["room"], evt_mod["program"], roomasset["source"], options=evt_mod["options"])
+                    pass
             
                 self.assets.append(roomasset)
         if text_spoilers["final_fights"]:
             textasset = self.modwriter.writeMSG("eh", text_spoilers["final_fights"])
             self.assets.append(textasset)
 
-    def update_area_data_programs(self, ardname, roomsource, battlemods={}):
-        # TODO FIXME THIS HACKY
-        if ardname == "eh23":
-            battlemods = {'adds': {73: ['BattleLevel 50']}}
-        elif ardname == "ca01":
-            battlemods = {'adds': {54: ['BattleLevel 37']}}
-        elif ardname == "he19":
-            battlemods = {'adds': {202: ['BattleLevel 39']}}
+    def update_area_data_programs(self, ardname, roomsource, btlmods={}):
+        # TODO FIXME THIS HACKY but for now just comment out when building on pypi, since these are just for boss rush
+        # if ardname == "eh23":
+        #     btlmods = {'adds': {73: ['BattleLevel 50']}}
+        # elif ardname == "ca01":
+        #     btlmods = {'adds': {54: ['BattleLevel 37']}}
+        # elif ardname == "he19":
+        #     btlmods = {'adds': {202: ['BattleLevel 39']}}
         def _can_update_capacity(ispc, prg):
             if not prg.has_command("Capacity"):
                 return False
@@ -522,6 +541,7 @@ class AssetGenerator:
                 return False # Ambush has some serious issues related to cost
             return True
 
+        btlmods = {} # TODO This is hacky but I don't know why this is happening outside boss rush
         btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
         with open(btlfn) as f:
             script = AreaDataScript(f.read(), ispc=self.ispc)
@@ -533,14 +553,14 @@ class AssetGenerator:
                 if prg.has_command("Spawn"):
                     prg.add_packet_spec()
                     prg.add_enemy_spec()
-            if p in battlemods.get("adds",{}):
-                for l in battlemods["adds"][p]:
+            if p in btlmods.get("adds",{}):
+                for l in btlmods["adds"][p]:
                     prg.add_line(l)
             programasset = self.modwriter.writeAreaDataProgram(ardname, "btl", p, prg.make_program())
             roomsource.append(programasset)
 
     def generateEvt(self, world, room, programnumber, roomsource, options=None):
-        #print("DEBUG: making {} {} evt program {} to {}".format(world,room,programnumber,options.get("jump_to")))
+        print("DEBUG: making {} {} evt program {}, {}".format(world,room,programnumber,options))
         if not options:
             print("Warning: generate_evt not generating anything")
         ardname = world.lower()+room.lower()
@@ -549,22 +569,19 @@ class AssetGenerator:
             script = AreaDataScript(f.read())
         programs_to_edit = script.programs if programnumber=="all" else {programnumber: script.programs[programnumber]}
         for currentprogramnumber, program in programs_to_edit.items():
-            try:
-                if not program.has_command("AreaSettings"):
-                    continue
-                if "jump_to" in options:
-                    program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"], set_for_settings=options["jump_to"].get("set_for_settings", None))
-                if "open_menu" in options:
-                    program.set_open_menu(options["open_menu"])
-                if "remove_event" in options:
-                    program.remove_event()
-                if "remove_excess_flags" in options:
-                    program.remove_command("SetProgressFlag")
-                if "flags" in options:
-                    program.set_flags(options["flags"])
-                if options.get("fix_source_area_settings"):
-                    program.set_area_settings(16, -1)
-                programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
-                roomsource.append(programasset)
-            except:
-                print("WARNING: Failed making evt {} for {} {}".format(currentprogramnumber, world, room))        
+            if not program.has_command("AreaSettings"):
+                continue
+            if "jump_to" in options:
+                program.set_jump(options["jump_to"]["world"], options["jump_to"]["room"], options["jump_to"]["program"], set_for_settings=options["jump_to"].get("set_for_settings", None))
+            if "open_menu" in options:
+                program.set_open_menu(options["open_menu"])
+            if "remove_event" in options:
+                program.remove_event()
+            if "remove_excess_flags" in options:
+                program.remove_command("SetProgressFlag")
+            if "flags" in options:
+                program.set_flags(options["flags"])
+            if options.get("fix_source_area_settings"):
+                program.set_area_settings(16, -1)
+            programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
+            roomsource.append(programasset)

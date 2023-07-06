@@ -2427,6 +2427,7 @@ Final Xemnas:
   limiter: 0
   model: B_EX170_LAST
   msn: EH20_MS113
+  msn_replace_allowed: false
   msn_dest_as: WI03_MS104
   program: 74
   size: 6.29
@@ -5507,9 +5508,9 @@ The Beast:
     bossX: 0
     bossY: 0
     bossZ: -600
-  aimods: 
-  - name: P_BB000_BTL/p_bb.bdscript
-    type: obj
+  # aimods: 
+  # - name: P_BB000_BTL/p_bb.bdscript
+  #   type: obj
   gimmick_source:
   - Cerberus
   - Hostile Program

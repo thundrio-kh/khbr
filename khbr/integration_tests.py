@@ -485,6 +485,7 @@ class Tests(unittest.TestCase):
 
     # Still need to write some good tests for the second half of the generation, and then run coverage to check that everything is covered
 
+    # need a test about the source area settings especially when cutscene remover is going too
 # Unit test cases to write
 
 # And coverage
