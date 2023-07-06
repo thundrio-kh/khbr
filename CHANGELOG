@@ -1,3 +1,45 @@
+4.0.1
+
+Fixes
+* Made improvements to Revenge Limit Rando to only randomize the revenge limit of enemies/bosses that specifically have a Karma limit set in their AI.
+* Issue of infinite loading on entering Hades I fight has been fixed.
+* Undead Pirate (Rifle) should now be damageable when other enemies are randomized.
+* Atlantica cutscenes are no longer removed when cutscene removal is turned on.
+* The Jafar spawn locations have been fixed so that bosses walk on invisible ground instead of falling infinitely.
+
+New things
+* Forced variations are possible, so in some locations Pete will always be the cups version of Pete, due to the Timeless River version not working in that location.
+* Misc bosses option has been removed, and MCP/Shadow Stalker/Oogie boogie have been removed from the pool completely, and there are no plans to ever randomize these "gimmick/minigame" bosses.
+* Storm Rider has been temporarily removed from the pool, until the proper AI edits can be made.
+* More locations option has been added, to allow placing bosses in locations that are deemed tedious/unfair for whatever reason, or that have softlocks which can be avoided with skillful play (IE Sephiroth as a Lord replacement falls in this category).
+* The OC Demyx fight has been added as a source location when "Wild" mode is on.
+* A massive amount of logic changes have been made, as each location has been hand chosen to be allowed or disallowed. Previously on PC 2189/3025 replacements were allowed by the logic. Now 2364/3025 are allowed.
+* UP to date Boss Compatability CSV files are now present in the KHBR repository, to show where bosses are allowed to spawn. There is also a _ideal.odt open office spreadsheet that is color coded which may be easier to see (this is the file I hand edit when deciding what should be allowed). A empty/green cell is an allowed replacement. A X/red cell is not allowed. A F/purple cell is allowed but it is forced to one specific version of that boss (IE Pete Cups instead of Pete TR). A G/Blue cell is a replacement that is only allowed when the "More Locations" option is chosen.
+* A KNOWN_ISSUES page has been added to the khbr repository listing known issues for bosses. Currently there are no major issues that cannot be worked around on this list.
+
+AI Changes
+
+* Barbossa AI has been fixed to no longer rely on hardcoded coordinates. The Illuminator will spawn in a random location somewhere in the arena (not necessarily on a wall).
+* Axel AI has been fixed to no longer rely on hardcoded coordinates. When he does his jump into the fire, he will spawn in the middle of the fire circle and lunge in a random direction.
+* Roxas AI has been fixed to no longer rely on hardcoded coordinates. It becomes relatively easy to avoid his DM in large arenas.
+* Final Xemnas Data AI has been fixed to no longer rely on hardcoded coordinates. Previously the initial attack spawning blue orbs could lock Xemnas OOB
+* Xigbar AI has been fixed to no longer rely on hardcoded coordinates. 
+* Dark Thorn has had the chandelier removed due to potential for crashes, and he starts the fight visible instead of invisible.
+* Thresholder AI has had some modifications but doesn't always work right yet (should still be beatable everywhere)
+* Grim Reaper II AI has been fixed to no longer rely on hardcoded coordinates. When he sucks in the coins from the chest he can be positioned father away from the chest than normal, but the RC should still work normally
+* Luxord AI has been fixed to no longer rely on hardcoded coordinates. Sometimes when Luxord transforms into a bunch of cards it can spawn OOB, but they should come to you eventually or transform back
+* Marluxia AI has been fixed to no longer rely on hardcoded coordinates. The pools he spawns are now placed randomly in the available space in the arena (sometimes they can be on top of each other)
+* Hydra AI has been fixed to no longer rely on hardcoded coordinates. The 3 Hydra heads that spawn are no placed randomly within the available space in the arena, they can be on top/near each other or spawn on top of the main hydra body
+* Hostile Program AI has been fixed so that it should properly circle around the halfway point between Sora and Hostile Program's initial spawn locations.
+* Pete TR AI has been fixed to no longer rely on hardcoded coordinates.
+* Zexion AI has been fixed to no longer rely on hardcoded coordinates. The 3 Miracle Circle's he can spawn may spawn anywhere on the map, and may be on top of each other
+* The Experiment AI has been fixed to no longer rely on hardcoded coordinates. When it splits into the 3 parts of it's body, those parts tend to all spawn on top of each other.
+* Pete OC II AI has been fixed so that it no longer crashes on the attack where he summons a boulder to fall on top of Sora.
+
+
+
+* known issues page
+
 3.1.0
 * Cutscene remover option has been revamped, and now only has a true/false option because all of the major problems have been fixed. Only real issues at the moment are a small handful of cutscenes do not get removed
 * Removed MCP from being able to be randomized, for the moment

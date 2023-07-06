@@ -1,0 +1,31 @@
+## Armor Xemnas I 
+* Chakrams/Water Clones can spawn OOB
+
+## Armor Xemnas II 
+* When he pushes you to the edge you can get stuck for a few seconds while the push completes
+
+## Final Xemnas
+* Getting his HP to "Dome Skip" phase causes his AI to turn off. So if he is very high in the air or out of bounds when this happens, it can be possible to be unable to finish the fight without Thunder/etc 
+* Can sometimes randomly turn invisible and invulnerable, making the fight unbeatable | 
+* Can potentially crash when the fight is ended while in Limit Form, may only happen in some rooms
+
+## Hydra
+* After doing a initial vanquish on the Hydra, it is possible to end up out of bounds but you are high in the air so just move to be back in bounds as soon as possible
+* If you do the Phil One-Two Reaction Command twice, the game will crash
+
+## Luxord
+* Phases where he transforms into a bunch of cards the cards can sometimes start OOB
+
+## Roxas
+* Keyblades when stolen may not hit/deal damage
+* Can be stuck on white screen if DM HP gate is hit by party member while in keyblade steal cutscene
+
+## Thresholder
+* Heartless Spirit can sometimes spawn a bit OOB but it will float to you given time
+
+## Xemnas
+* If you don't DM skip Xemnas will start the HP drain on Sora and it will be stuck that way until the end of the fight
+
+## Zexion
+* If a world party member is out, they cannot be turned into a book, which can prevent book phase
+* During the Miracle Circle attack, the circles will clip in/out of the ground constantly
