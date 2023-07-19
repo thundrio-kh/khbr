@@ -1,4 +1,4 @@
-4.0.1
+4.0.2
 
 Fixes
 * Made improvements to Revenge Limit Rando to only randomize the revenge limit of enemies/bosses that specifically have a Karma limit set in their AI.
@@ -6,6 +6,8 @@ Fixes
 * Undead Pirate (Rifle) should now be damageable when other enemies are randomized.
 * Atlantica cutscenes are no longer removed when cutscene removal is turned on.
 * The Jafar spawn locations have been fixed so that bosses walk on invisible ground instead of falling infinitely.
+* Fixed issue with Timeless River variant of Minute Bombs not having explosion properly disabled
+* When HP Scaling is turned off, Sephiroth and Prison Keepers base HP is set to 1878 in order to not crash when viewing with Scan on a high battle level
 
 New things
 * Forced variations are possible, so in some locations Pete will always be the cups version of Pete, due to the Timeless River version not working in that location.
@@ -35,10 +37,6 @@ AI Changes
 * Zexion AI has been fixed to no longer rely on hardcoded coordinates. The 3 Miracle Circle's he can spawn may spawn anywhere on the map, and may be on top of each other
 * The Experiment AI has been fixed to no longer rely on hardcoded coordinates. When it splits into the 3 parts of it's body, those parts tend to all spawn on top of each other.
 * Pete OC II AI has been fixed so that it no longer crashes on the attack where he summons a boulder to fall on top of Sora.
-
-
-
-* known issues page
 
 3.1.0
 * Cutscene remover option has been revamped, and now only has a true/false option because all of the major problems have been fixed. Only real issues at the moment are a small handful of cutscenes do not get removed

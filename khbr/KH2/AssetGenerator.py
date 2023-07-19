@@ -80,8 +80,8 @@ class AssetGenerator:
         self.assets.append(asset)
 
     def generateEnmp(self, scale_map, remove_damage_cap):
-        if not (scale_map or remove_damage_cap):
-            return
+        if not scale_map:
+            scale_map = {"Sephiroth": "Sephiroth", "Prison Keeper": "Prison Keeper"}
 
         with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
             enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)

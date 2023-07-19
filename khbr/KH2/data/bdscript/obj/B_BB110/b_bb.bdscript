@@ -1,5 +1,5 @@
 ---
-WorkSize: 4544
+WorkSize: 4528
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -22,6 +22,7 @@ Name: b_bb110
 ; codeRevealer: -l 149 -l 310 -l 369 -l 1142 -l 1328 -l 1370 -l 1536 -l 3129 -l 3391 -l 3450 -l 3451 -l 3468 -l 3473 -l 3488 -l 3565 -l 3762 -l 3778 -l 3859 -l 3925 -l 4031 -l 4068 -l 4218 -l 4448 -l 4525 -l 4533 -l 4956 -l 5224 -l 5299 -l 5368 -l 5472 -l 5613 -l 5643 -l 5695 -l 5746 -l 5882 -l 6085 -l 6469 -l 6558 -l 6726 -l 6960 -l 7052 -l 7362 -l 7524 -l 7643 -l 8451 -l 8554 -l 8672 -l 8736 -l 8797 -l 8897 -l 8950 -l 8976 -l 8987 -l 9609 -l 9713 -l 9890 -l 9922 -l 10096 -l 10355 -l 10372 -l 10754 -l 10809 -l 10936 -l 11042 -l 11123 -l 11160 -l 11242 -l 11253 -l 11270 -l 11330 -l 11710 -l 11788 -l 11830 -l 11894 -l 11975 -l 12116
  section .text
 TR11:
+ ret
  popToSp 0
  popToSp 4
  popToSp 8
@@ -391,14 +392,9 @@ L681:
 L712:
  popToSp 0
  pushFromPSp 32
- pushFromPWp WTHISPOS
- fetchValue 0
- pushFromPWp WTHISPOS
- fetchValue 4
+ pushImmf 0
  pushImmf -2050
- addf
- pushFromPWp WTHISPOS
- fetchValue 8
+ pushImmf 0
  pushImmf 1
  gosub 20, L934
  pushFromPSp 32
@@ -695,9 +691,6 @@ L1144:
  pushImm 1
  popToWp W4512
  pushFromFSp 0
- pushImm -1
- syscall 1, 195 ; trap_obj_reset_stealth (2 in, 0 out)
- pushFromFSp 0
  pushImm 9
  syscall 1, 70 ; trap_obj_set_flag (2 in, 0 out)
  jmp L1315
@@ -859,13 +852,6 @@ L1546:
  pushFromPWp W408
  gosub 4, L3089
  pushFromFSp 0
- pushFromPAi THORNEXISTS
- syscall 0, 2
-
- dup
- syscall 1, 147
- memcpyToWp 16, WTHISPOS
-
  pushFromPWp W408
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W408
@@ -4692,6 +4678,7 @@ L8976: ;___callback for action pushFromPAi L12734 ; ___ai atk_rip
  syscall 1, 66 ; trap_obj_exec_land (1 in, 0 out)
  ret 
 L8987: ;___label for action pushFromPAi L12642 ; ___ai down_shock_start
+ ret
  popToSp 0
  gosub 4, L1485
  eqz 
@@ -4893,6 +4880,7 @@ L9378:
  halt 
  jmp L9378
 L9397:
+ ret
  pushFromPAi L12449 ; ___ai fadeout? (L12449)
  syscall 0, 2 ; trap_puts (1 in, 0 out)
  pushFromFSp 0
@@ -5335,9 +5323,6 @@ L10096: ;___label for action pushFromPAi L12300 ; ___ai chandelier_ref
  pushImm 0
  syscall 1, 87 ; trap_obj_effect_start_bind (4 in, 1 out)
  drop 
- pushFromFSp 0
- pushImm -1
- syscall 1, 195 ; trap_obj_reset_stealth (2 in, 0 out)
  jmp L10262
 L10262:
  pushImm 1
@@ -5517,9 +5502,6 @@ L10372: ;___label for action pushFromPAi L12779 ; ___ai spin_hit
  drop 
  pushImm 1
  popToWp W4512
- pushFromFSp 0
- pushImm -1
- syscall 1, 195 ; trap_obj_reset_stealth (2 in, 0 out)
  pushFromFSp 0
  pushImm 9
  syscall 1, 70 ; trap_obj_set_flag (2 in, 0 out)
@@ -5808,7 +5790,6 @@ L11123: ;___label for action pushFromPAi L12256 ; ___ai rc_step_jump
  syscall 1, 13 ; trap_sysobj_motion_push (3 in, 0 out)
  ret 
 L11160: ;___label for action pushFromPAi L12696 ; ___ai stealth
- ret
  popToSp 0
  pushFromFSp 0
  gosub 4, L11167
@@ -6275,9 +6256,6 @@ L11968:
 L11975: ;___label for action pushFromPAi L12703 ; ___ai dead
  popToSp 0
  pushFromFSp 0
- pushImm -1
- syscall 1, 195 ; trap_obj_reset_stealth (2 in, 0 out)
- pushFromFSp 0
  pushImm 0
  pushImm 0
  gosub 4, L11995
@@ -6637,7 +6615,7 @@ L12634:
  db 'rvg_super_hard',0,0
 L12642:
 TXT12642:
- db 'down_shock_start',0,0
+ db '',0,0
 TXT12651:
 L12651:
  db 'act_revenge',0
@@ -6711,8 +6689,6 @@ TXT12779:
 L12784:
 TXT12784:
  db 'turn_revenge',0,0
-THORNEXISTS:
- db 'thorn_exists',0,0
 
  section .bss
 W0:
@@ -6739,5 +6715,3 @@ W4520:
  resb 4
 W4524:
  resb 4
-WTHISPOS:
- resb 16

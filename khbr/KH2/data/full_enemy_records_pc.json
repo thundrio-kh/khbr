@@ -7314,12 +7314,6 @@
             0
         ],
         "name": "Assassin",
-        "aimods": [
-            {
-                "name": "M_EX900/m_ex.bdscript",
-                "type": "obj"
-            }
-        ],
         "enabled": true,
         "enmp_index": 44,
         "hp": 100,
@@ -7348,6 +7342,7 @@
         "msn_required": false,
         "msn_source_as": null,
         "msn_dest_as": null,
+        "aimods": [],
         "forced_variations": [],
         "gimmick_source": [],
         "cmdmods": [],
@@ -18557,7 +18552,7 @@
         "name": "Minute Bomb WI",
         "aimods": [
             {
-                "name": "M_EX550/m_ex.bdscript",
+                "name": "M_EX550_WI/m_ex.bdscript",
                 "type": "obj"
             }
         ],

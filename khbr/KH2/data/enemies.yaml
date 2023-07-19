@@ -1185,9 +1185,9 @@ Armored Knight:
       - 90
       - 0
 Assassin:
-  aimods: 
-  - name: M_EX900/m_ex.bdscript
-    type: obj
+  # aimods: 
+  # - name: M_EX900/m_ex.bdscript
+  #   type: obj
   enabled: true
   enmp_index: 44
   hp: 100
@@ -3817,7 +3817,7 @@ Minute Bomb:
       - 0
 Minute Bomb WI:
   aimods:
-  - name: M_EX550/m_ex.bdscript # Can use the OG Minute Bomb ai mod instead of making 2
+  - name: M_EX550_WI/m_ex.bdscript # Can use the OG Minute Bomb ai mod instead of making 2
     type: obj
   enabled: true
   variationof: Minute Bomb
