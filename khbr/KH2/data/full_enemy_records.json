@@ -16150,7 +16150,7 @@
             {
                 "value": 604,
                 "changes": {
-                    "Flags": 4294967295
+                    "Flags": "Cursor, Land, NoCombo, DisableSkateboard, DisableSora"
                 }
             }
         ],

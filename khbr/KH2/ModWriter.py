@@ -152,10 +152,10 @@ class ModWriter:
             ]
         }
 
-    def writeCmd(self, data):
+    def writeCmd(self, obj):
         outfn = os.path.join(self.outdir, "files", "root", "cmd.list")
         fn = os.path.join("files", "root", "cmd.list")
-        self.write_method(outfn, fn, data)
+        self.write_method(outfn, fn, yaml.dump(obj))
         return {
             "name": "03system.bin",
             "method": "binarc",
@@ -163,16 +163,17 @@ class ModWriter:
                 {
                     "name": "cmd",
                     "type": "list",
-                    "method": "copy",
+                    "method": "listpatch",
                     "source": [
                         {
-                            "name": fn
+                            "name": fn,
+                            "type": "cmd"
                         }
                     ]
                 }
             ]
         }
-
+    
     def writeMemt(self, data):
         outfn = os.path.join(self.outdir, "files", "root", "memt.list")
         fn = os.path.join("files", "root", "memt.list")

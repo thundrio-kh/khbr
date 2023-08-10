@@ -3318,7 +3318,7 @@ Jafar:
   cmdmods:
   - value: 604
     changes:
-      Flags: 4294967295
+      Flags: Cursor, Land, NoCombo, DisableSkateboard, DisableSora
   enmp_index: 0x8A
   hp: 100
   level: 99

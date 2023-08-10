@@ -185,11 +185,18 @@ class AssetGenerator:
             self.assets.append(asset)
 
     def generateCustomCmd(self, cmd_mods):
-        cmd = CommandManager(os.path.join(os.path.dirname(__file__), "data", "bin", "cmd.bin"))
+        vanilla_cmd = yaml.load(open(os.path.join(os.path.dirname(__file__), "data", "cmdVanilla.yml"), "r"))
+        def _get_entry(index):
+            for i in vanilla_cmd:
+                if i["Id"] == index:
+                    return i
+        cmd_to_apply = []
         for index, changes in cmd_mods.items():
-            cmd.update_entry(index, changes)
-            print(cmd)
-        asset = self.modwriter.writeCmd(cmd.dump_bin())
+            vanilla_cmd_entry = dict(vanilla_cmd[index]) #_get_entry(index)
+            for change in changes:
+                vanilla_cmd_entry[change] = changes[change]
+            cmd_to_apply.append(vanilla_cmd_entry)
+        asset = self.modwriter.writeCmd(cmd_to_apply)
         self.assets.append(asset)
 
     def generateCustomMemt(self, randomize_party, randomize_costumes):

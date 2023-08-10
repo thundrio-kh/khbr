@@ -1,4 +1,4 @@
-4.0.2
+4.0.3
 
 Fixes
 * Made improvements to Revenge Limit Rando to only randomize the revenge limit of enemies/bosses that specifically have a Karma limit set in their AI.
