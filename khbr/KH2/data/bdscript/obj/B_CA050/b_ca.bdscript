@@ -735,6 +735,7 @@ FAKE_CHEST:
  pushFromPWp WCHEST
  pushImm 566
  syscall 1, 114
+ ret
 FIND_CHEST:
  ; top of stack is 0 for GR 2
  jnz FAKE_CHEST ; return
