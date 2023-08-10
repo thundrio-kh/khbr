@@ -730,6 +730,18 @@ TR0:
  pushFromFSp 0
  gosub 4, L1326
  ret 
+FAKE_CHEST:
+ ; GR1 has no chest spawned so can just fill in Sora Coordinates
+ pushFromPWp WCHEST
+ pushImm 566
+ syscall 1, 114
+FIND_CHEST:
+ ; top of stack is 0 for GR 2
+ jnz FAKE_CHEST ; return
+ pushFromPWp WCHEST
+ pushImm 1740
+ syscall 1, 114
+ ret
 L1326:
  popToSp 4
  popToSp 0
@@ -740,11 +752,12 @@ L1326:
  pushFromPWp W496
  gosub 8, L3377
  pushFromFSp 0
+ dup
+ pushImm 1
+ syscall 1, 39 ; trap_obj_unit_arg (2 in, 1 out)
+ gosub 4, FIND_CHEST
  pushFromPWp W496
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
- pushFromPWp WCHEST
- pushImm 1740
- syscall 1, 114
  pushFromPWp W496
  pushFromPAi L11157 ; ___ai appear (L11157)
  pushImm 100
