@@ -13755,7 +13755,6 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Beast",
             "Thresholder",
             "Vivi",
             "Volcano Lord"
@@ -23490,7 +23489,6 @@
             "Sephiroth",
             "Setzer",
             "Terra",
-            "The Beast",
             "The Experiment",
             "Thresholder",
             "Vivi",
@@ -25302,6 +25300,11 @@
             "bossY": 0,
             "bossZ": -600
         },
+        "blacklist_destination": [
+            "Hayner",
+            "Vivi",
+            "Setzer"
+        ],
         "gimmick_source": [
             "Cerberus",
             "Hostile Program",
@@ -25360,7 +25363,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "blacklist_source": [],
-        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "sp_ids": [],
@@ -26541,7 +26543,6 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Beast",
             "Thresholder",
             "Vivi",
             "Volcano Lord"

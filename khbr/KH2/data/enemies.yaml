@@ -5536,6 +5536,10 @@ The Beast:
   # aimods: 
   # - name: P_BB000_BTL/p_bb.bdscript
   #   type: obj
+  blacklist_destination:
+  - Hayner
+  - Vivi
+  - Setzer # orbs only drop from RC - limit required
   gimmick_source:
   - Cerberus
   - Hostile Program
