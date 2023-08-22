@@ -2160,6 +2160,7 @@ Demyx OC:
   tags:
   - teleport_blocked
   - fix_source_area_settings
+  source_replace_allowed: false
   msn: HE17_MS105
   obj_id: 795
   size: 2.74
@@ -2648,6 +2649,15 @@ Grim Reaper II:
   - Hercules
   - Seifer
   - Twilight Thorn
+  - Armored Xemnas I # medals can get lost
+  - Barbossa # medals can get lost
+  - Grim Reaper I
+  - Oogie Boogie
+  - Pete OC II
+  - Pete TR
+  - Shan-Yu
+  - Jafar
+  - Seifer
   limiter: 0
   model: B_CA050
   obj_id: 1543
@@ -2906,6 +2916,7 @@ Hayner:
   - Luxord
   - Xaldin
   - Xemnas
+  - Hydra
   tags:
   - needs_invuln
   - roxas
@@ -3169,6 +3180,12 @@ Hydra:
   - Twilight Thorn
   - Vivi
   - Hydra
+  - Hayner
+  - Vivi
+  - Setzer
+  - Pete OC II
+  - Pete TR
+  - Jafar
   enmp_index: 20
   hp: 100
   tags:
@@ -3292,6 +3309,7 @@ Jafar:
   - Lexaeus
   - Terra
   - Zexion
+  - Saix
   whitelist_destination:
   - Armor Xemnas II
   - Cerberus
@@ -3305,7 +3323,6 @@ Jafar:
   - Leon
   - Riku
   - Roxas
-  - Saix
   - Shadow Stalker
   - Storm Rider
   - Tifa
@@ -4814,8 +4831,9 @@ Seifer:
       obj_id: new_boss.obj_id
   enabled: true
   enmp_index: 0x87
+  blacklist_source:
+  - The Beast
   gimmick_source:
-  - Demyx
   - Final Xemnas
   - Luxord
   - Vexen
@@ -4949,6 +4967,7 @@ Setzer:
   - Luxord
   - Xaldin
   - Xemnas
+  - Hydra
   tags:
   - needs_invuln
   - roxas
@@ -5610,6 +5629,7 @@ Thresholder:
   - Blizzard Lord # These all spawn above ground causing issues
   - Volcano Lord
   - Shadow Stalker
+  - Hostile Program # for some reason possessor gets stuck in movement
   obj_id: 353
   size: 2.17
   room_size: 12.13
@@ -5875,6 +5895,7 @@ Vivi:
   - Luxord
   - Xaldin
   - Xemnas
+  - Hydra
   blacklist_source:
   - Final Xemnas
   - Grim Reaper I

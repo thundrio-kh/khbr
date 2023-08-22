@@ -11,6 +11,7 @@ Run generate_randomizations.py to pre generate the randomizations for when boss 
     
 
 Instructions to build boss rush alpha exe
+* There is some hacky code here, make sure to uncomment for the build (Asset Generator -> TODO FIXME THIS HACKY but for now ju..)
 * cd to khbr
 * pyinstaller bossrush.py --collect-data KH2
 * in the dist folder create a khbr folder, then copy the KH2/data folder there

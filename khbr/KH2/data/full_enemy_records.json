@@ -7866,7 +7866,6 @@
             "Blizzard Lord",
             "Cloud",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -10764,6 +10763,7 @@
             "teleport_blocked",
             "fix_source_area_settings"
         ],
+        "source_replace_allowed": false,
         "msn": "HE17_MS105",
         "obj_id": 795,
         "size": 2.74,
@@ -10774,7 +10774,6 @@
             "Demyx OC"
         ],
         "replace_as": null,
-        "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "category": "fix_source_area_settings-teleport_blocked",
         "isnightmare": false,
@@ -10810,51 +10809,7 @@
         "luamod": null,
         "roomData": {},
         "available": [
-            "Armor Xemnas I",
-            "Armor Xemnas II",
-            "Axel I",
-            "Axel II",
-            "Barbossa",
-            "Blizzard Lord",
-            "Cerberus",
-            "Cloud",
-            "Dark Thorn",
-            "Demyx",
-            "Demyx OC",
-            "Grim Reaper I",
-            "Grim Reaper II",
-            "Hades II",
-            "Hayner",
-            "Hercules",
-            "Hostile Program",
-            "Hydra",
-            "Leon",
-            "Lexaeus",
-            "Luxord",
-            "Marluxia",
-            "Past Pete",
-            "Pete TR",
-            "Prison Keeper",
-            "Riku",
-            "Roxas",
-            "Saix",
-            "Sark",
-            "Scar",
-            "Seifer",
-            "Sephiroth",
-            "Setzer",
-            "Shan-Yu",
-            "Terra",
-            "The Beast",
-            "The Experiment",
-            "Thresholder",
-            "Tifa",
-            "Vivi",
-            "Volcano Lord",
-            "Xaldin",
-            "Xemnas",
-            "Yuffie",
-            "Zexion"
+            "Demyx OC"
         ]
     },
     "Demyx's Water Clone": {
@@ -13005,7 +12960,16 @@
             "Axel I",
             "Hercules",
             "Seifer",
-            "Twilight Thorn"
+            "Twilight Thorn",
+            "Armored Xemnas I",
+            "Barbossa",
+            "Grim Reaper I",
+            "Oogie Boogie",
+            "Pete OC II",
+            "Pete TR",
+            "Shan-Yu",
+            "Jafar",
+            "Seifer"
         ],
         "limiter": 0,
         "model": "B_CA050",
@@ -13715,7 +13679,8 @@
             "Jafar",
             "Luxord",
             "Xaldin",
-            "Xemnas"
+            "Xemnas",
+            "Hydra"
         ],
         "tags": [
             "needs_invuln",
@@ -15650,7 +15615,6 @@
             "Shan-Yu",
             "The Beast",
             "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vivi",
@@ -15748,7 +15712,13 @@
             "The Beast",
             "Twilight Thorn",
             "Vivi",
-            "Hydra"
+            "Hydra",
+            "Hayner",
+            "Vivi",
+            "Setzer",
+            "Pete OC II",
+            "Pete TR",
+            "Jafar"
         ],
         "enmp_index": 20,
         "hp": 100,
@@ -16117,7 +16087,8 @@
         "gimmick_source": [
             "Lexaeus",
             "Terra",
-            "Zexion"
+            "Zexion",
+            "Saix"
         ],
         "whitelist_destination": [
             "Armor Xemnas II",
@@ -16132,7 +16103,6 @@
             "Leon",
             "Riku",
             "Roxas",
-            "Saix",
             "Shadow Stalker",
             "Storm Rider",
             "Tifa",
@@ -16210,12 +16180,10 @@
             "Dark Thorn",
             "Demyx",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
             "Hostile Program",
-            "Hydra",
             "Jafar",
             "Larxene",
             "Leon",
@@ -22434,7 +22402,6 @@
             "Hayner",
             "Hercules",
             "Hostile Program",
-            "Jafar",
             "Leon",
             "Luxord",
             "Marluxia",
@@ -22832,8 +22799,10 @@
         ],
         "enabled": true,
         "enmp_index": 135,
+        "blacklist_source": [
+            "The Beast"
+        ],
         "gimmick_source": [
-            "Demyx",
             "Final Xemnas",
             "Luxord",
             "Vexen",
@@ -22880,7 +22849,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -22917,7 +22885,6 @@
             "Sephiroth",
             "Setzer",
             "Terra",
-            "The Beast",
             "The Experiment",
             "Thresholder",
             "Vivi",
@@ -22957,8 +22924,10 @@
         ],
         "enabled": true,
         "enmp_index": 135,
+        "blacklist_source": [
+            "The Beast"
+        ],
         "gimmick_source": [
-            "Demyx",
             "Final Xemnas",
             "Luxord",
             "Vexen",
@@ -23001,7 +22970,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -23045,8 +23013,10 @@
         ],
         "enabled": true,
         "enmp_index": 135,
+        "blacklist_source": [
+            "The Beast"
+        ],
         "gimmick_source": [
-            "Demyx",
             "Final Xemnas",
             "Luxord",
             "Vexen",
@@ -23088,7 +23058,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -23130,8 +23099,10 @@
         ],
         "enabled": true,
         "enmp_index": 135,
+        "blacklist_source": [
+            "The Beast"
+        ],
         "gimmick_source": [
-            "Demyx",
             "Final Xemnas",
             "Luxord",
             "Vexen",
@@ -23175,7 +23146,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -23217,8 +23187,10 @@
         ],
         "enabled": true,
         "enmp_index": 135,
+        "blacklist_source": [
+            "The Beast"
+        ],
         "gimmick_source": [
-            "Demyx",
             "Final Xemnas",
             "Luxord",
             "Vexen",
@@ -23262,7 +23234,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -23433,7 +23404,8 @@
             "Jafar",
             "Luxord",
             "Xaldin",
-            "Xemnas"
+            "Xemnas",
+            "Hydra"
         ],
         "tags": [
             "needs_invuln",
@@ -25569,7 +25541,8 @@
         "blacklist_destination": [
             "Blizzard Lord",
             "Volcano Lord",
-            "Shadow Stalker"
+            "Shadow Stalker",
+            "Hostile Program"
         ],
         "obj_id": 353,
         "size": 2.17,
@@ -26496,7 +26469,8 @@
             "Jafar",
             "Luxord",
             "Xaldin",
-            "Xemnas"
+            "Xemnas",
+            "Hydra"
         ],
         "blacklist_source": [
             "Final Xemnas",

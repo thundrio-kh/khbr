@@ -54,7 +54,7 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Data Bosses", "description": "Include the Data versions of organization members in the pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},      
-            "gimmick_bosses": {"display_name": "Include more locations (PC Only)", "description": "Allow bosses to be placed in more locations that may be exceedingly difficult/tedious, or that can softlock in certain cases. Example: Allows Sephiroth to replace Blizzard or Volcano Lord.",
+            "gimmick_bosses": {"display_name": "Allow more annoying replacements (PC Only)", "description": "Allow a set of banned replacements that may be end up being exceedingly difficult/tedious, or that can softlock in certain cases. Example: Allows Sephiroth to replace Blizzard or Volcano Lord.",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},       
             "sephiroth": {"display_name": "Randomize Sephiroth", "description": "Include Sephiroth in the boss randomization pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
@@ -333,7 +333,6 @@ class KingdomHearts2:
             modwriter = ModWriter(outdir)
 
         assetgenerator = AssetGenerator(modwriter, spawn_manager=self.spawn_manager, location_manager=self.location_manager, enemy_manager=self.enemy_manager, ispc=randomization.get("memory_expansion", False))
-
         utility_mods = randomization.get("utility_mods", [])
 
         rvlrando = None

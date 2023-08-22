@@ -1,3 +1,9 @@
+4.0.4
+Fixes
+* Updated locations to ignore some boss spawns that don't get used (b_99) but end up causing problems in Wild mode
+* Minor logic adjustments for softlock prevention purposes
+* Changed name of "Include more locations" option to "Allow more annoying replacements" to be more obvious about what the option does
+
 4.0.3
 
 Fixes

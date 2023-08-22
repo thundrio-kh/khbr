@@ -11271,6 +11271,7 @@ Olympus Coliseum:
             isboss: false
             name: Dusk
       b_99:
+        ignored: true
         size: 0
         sp_ids:
           '27':
