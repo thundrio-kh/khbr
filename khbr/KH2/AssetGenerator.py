@@ -5,9 +5,9 @@ from khbr.textutils import final_fight_text
 from khbr.KH2.Mission import Mission
 from khbr.KH2.AiManager import AiManager
 from khbr.KH2.LuaManager import LuaManager
-from khbr.utils import print_debug
 from khbr._config import KH2_DIR, HARDCAP, DEBUG_HEALTH
 from khbr.KH2.AreaDataScript import AreaDataScript
+from khbr.randutils import log_output
 import os, yaml
 import random
 
@@ -92,7 +92,7 @@ class AssetGenerator:
 
             new_enmp_index = self.enemy_manager.enemy_records[new_enemy]["enmp_index"] # really its the id not the index anymore
             if not new_enmp_index:
-                print_debug("WARNING: Can't scale {}, no ENMP index found".format(new_enemy))
+                log_output("WARNING: Can't scale {}, no ENMP index found".format(new_enemy), log_level=1)
                 continue
             def _get_index(source, idnum):
                 for i in range(len(source)):
@@ -107,13 +107,13 @@ class AssetGenerator:
                 original_enmp_index = self.enemy_manager.enemy_records[original_enemy]["enmp_index"]
             
                 if not original_enmp_index:
-                    print_debug("WARNING: Can't scale {}, no ENMP index found".format(original_enemy))
+                    log_output("WARNING: Can't scale {}, no ENMP index found".format(original_enemy), log_level=0)
                     continue
                 original_enmp_data = enmp_data_vanilla[_get_index(enmp_data_vanilla, original_enmp_index)]
                 new_enmp_data["health"] = original_enmp_data["health"]
             if DEBUG_HEALTH:
                 new_enmp_data["health"] = [DEBUG_HEALTH for _ in original_enmp_data["health"]]
-                print(new_enemy)
+                log_output(new_enemy)
             # Health value should be capped at Terras due to HP visibility issue
             new_enmp_data["health"][0] = min(new_enmp_data["health"][0], 1878)
             new_enmp_data["level"] = 0 # All bosses are level 0 to take the worlds battle level EXCEPT for datas/terra, which are 99
@@ -185,7 +185,7 @@ class AssetGenerator:
             self.assets.append(asset)
 
     def generateCustomCmd(self, cmd_mods):
-        vanilla_cmd = yaml.load(open(os.path.join(os.path.dirname(__file__), "data", "cmdVanilla.yml"), "r"))
+        vanilla_cmd = yaml.load(open(os.path.join(os.path.dirname(__file__), "data", "cmdVanilla.yml"), "r"), Loader=yaml.SafeLoader)
         def _get_entry(index):
             for i in vanilla_cmd:
                 if i["Id"] == index:
@@ -264,7 +264,7 @@ class AssetGenerator:
                         worldvalue = 2073
                     worldfriend = party_member_map[worldvalue]
                 entry["World Character"] = random.choice(memt.party_members[replacements[worldfriend]])
-            #print(replacements) # DEBUG ONLY KEEP COMMENTED
+            #log_output(replacements) # DEBUG ONLY KEEP COMMENTED
         asset = self.modwriter.writeMemt(memt.dump_bin())
         existingasset = self.find_asset("03system.bin")
         if existingasset:
@@ -275,7 +275,7 @@ class AssetGenerator:
     def generateAiMods(self, ai_mods, rvlrando=None):
         created_mods = {}
         for name,mods in ai_mods.items():
-            print(name,mods)
+            log_output(str(name)+","+str(mods) )
             for mod in mods:
                 modelname = name.split("/")[0]
                 modbasename = os.path.basename(name)
@@ -362,7 +362,7 @@ class AssetGenerator:
 
             # This might cause some issues with bosses like the FF bosses because the camera complete won't work, and of course it prevents mickey in some fights, which is most likely fine
             if self.find_asset(oldmsn+".bar"):
-                print("Old MSN {} has an ai edit, so can't copy over {}".format(oldmsn, new_msn_name))
+                log_output("Old MSN {} has an ai edit, so can't copy over {}".format(oldmsn, new_msn_name), log_level=1)
                 continue
             info = msninfo[new_msn_name]
             mission = Mission(new_msn_name, info)
@@ -494,7 +494,7 @@ class AssetGenerator:
                         _update_spid(i, spid, custom_unit_list)
                     for cid, unit in custom_unit_list.items():
                         if cid in [s["Id"] for s in existing_spawnpoint]:
-                            print("Warning: spid already exists in spawnpoint, test for problems. {} {}".format(cid, ardname)) # DEBUG ONLY
+                            log_output("Warning: spid already exists in spawnpoint, test for problems. {} {}".format(cid, ardname), log_level=1) # DEBUG ONLY
                         existing_spawnpoint.append(unit)
                     
                     spasset = self.modwriter.writeSpawnpoint(ardname, spn, existing_spawnpoint)
@@ -569,9 +569,9 @@ class AssetGenerator:
             roomsource.append(programasset)
 
     def generateEvt(self, world, room, programnumber, roomsource, options=None):
-        print("DEBUG: making {} {} evt program {}, {}".format(world,room,programnumber,options))
+        log_output("DEBUG: making {} {} evt program {}, {}".format(world,room,programnumber,options))
         if not options:
-            print("Warning: generate_evt not generating anything")
+            log_output("Warning: generate_evt not generating anything", log_level=0)
         ardname = world.lower()+room.lower()
         evtfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "evt.script")
         with open(evtfn) as f:

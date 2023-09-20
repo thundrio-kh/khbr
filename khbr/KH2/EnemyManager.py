@@ -1,6 +1,7 @@
 import json, os, yaml
 from khbr._config import LIMITED_SIZE
 from khbr.KH2.schemas.enemy_records import get_schema
+from khbr.randutils import log_output
 class EnemyManager:
     def __init__(self, basepath):
         self.basepath = basepath
@@ -129,7 +130,7 @@ class EnemyManager:
         for ard in new_boss_object["forced_variations"]:
             if ardname and ard == ardname:
                 new_boss_object = self.enemy_records[new_boss_object["forced_variations"][ard]]
-                print("Forcing specific variation")
+                log_output("Forcing specific variation")
         return new_boss_object
 
     def get_new_enemy_object(self, new_enemy_name, rand_seed):
@@ -269,7 +270,7 @@ class EnemyManager:
     def source_room_has_space(source_boss, dest_boss, ispc=False):
         if ispc:
             return True
-        #print_debug("{} > {}: {} + {} >= {}".format(source_boss["name"], dest_boss["name"], source_boss["size"], dest_boss["room_size"], maxsize))
+        #log_output("{} > {}: {} + {} >= {}".format(source_boss["name"], dest_boss["name"], source_boss["size"], dest_boss["room_size"], maxsize))
         roommaxsize = source_boss["roommaxsize"] or LIMITED_SIZE
         availablespace = (roommaxsize - source_boss["room_size"]) * source_boss["roomsizemultiplier"]
         if availablespace - dest_boss["size"] < 0:

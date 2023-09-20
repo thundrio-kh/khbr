@@ -1,10 +1,17 @@
-import random, struct
+import random, struct, os
 
 DEBUG_BOSS_LIST = None
 #DEBUG_BOSS_LIST = {'Armor Xemnas I': 'Past Pete', 'Armor Xemnas II': 'Past Pete', "Final Xemnas": "The Beast", "Roxas": "Sark"}
 
+def log_output(msg, log_level = 2):
+    use_log_level = os.environ.get("KHBR_LOG_LEVEL", 0)
+    if log_level > use_log_level:
+        return
+    print(msg)
+
 def pickbossmapping(enemy_records, parent_bossdict):
     if DEBUG_BOSS_LIST:
+        log_output("WARNING: DEBUG_BOSS_LIST is enabled, this should only be enabled in development!!!!", log_level=0)
         return DEBUG_BOSS_LIST
     while 1:
         bosslist = [b for b in parent_bossdict if parent_bossdict[b]["name"] == parent_bossdict[b]["parent"]]
@@ -144,7 +151,7 @@ class BinaryWriter:
             self.fp.write(b)
         self.bytes += b
         self.nwrites += len(b)
-        #print([hex(bt) for bt in b])
+        #log_output([hex(bt) for bt in b], log_level=0)
     def writeArray(self, arr):
         for b in arr:
             self.writeBytes(bytes(b))

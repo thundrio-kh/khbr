@@ -19784,6 +19784,7 @@
             0
         ],
         "name": "Pete TR",
+        "enmp_index": 128,
         "roomData": {
             "bossX": -272.6265869140625,
             "bossY": 0,
@@ -20200,7 +20201,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "enmp_index": null,
         "whitelist_source": [],
         "whitelist_destination": [],
         "sp_ids": [],
@@ -27438,6 +27438,7 @@
         ],
         "can_be_enemy": false,
         "enabled": true,
+        "enmp_index": 90,
         "hp": 100,
         "isnightmare": true,
         "level": 99,
@@ -27472,7 +27473,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "enmp_index": null,
         "blacklist_source": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -28119,6 +28119,7 @@
             0
         ],
         "name": "Zexion",
+        "enmp_index": 217,
         "aimods": [
             {
                 "name": "B_EX370/b_ex.bdscript",
@@ -28191,7 +28192,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "enmp_index": null,
         "blacklist_source": [],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -28269,6 +28269,7 @@
             1
         ],
         "name": "Zexion (Data)",
+        "enmp_index": 217,
         "aimods": [
             {
                 "name": "B_EX370/b_ex.bdscript",
@@ -28333,7 +28334,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "enmp_index": null,
         "blacklist_source": [],
         "whitelist_source": [],
         "whitelist_destination": [],

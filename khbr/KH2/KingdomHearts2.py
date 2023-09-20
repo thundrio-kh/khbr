@@ -3,9 +3,8 @@ from khbr.KH2.CutsceneRemover import CutsceneRemover
 from khbr.KH2.ModWriter import ModWriter
 from khbr.KH2.schemas.enemyseed import EnemySeed
 from khbr.textutils import create_spoiler_text
-from khbr.utils import print_debug
 from khbr._config import DIAGNOSTICS
-from khbr.randutils import pickbossmapping, pickenemymapping
+from khbr.randutils import pickbossmapping, pickenemymapping, log_output
 from khbr.KH2.EnemyManager import EnemyManager
 from khbr.KH2.LocationManager import LocationManager
 from khbr.KH2.MissionManager import MissionManager
@@ -136,10 +135,10 @@ class KingdomHearts2:
         return utility_mods
 
     def perform_randomization(self, options, seed=None):
-        print_debug("Enemy Seed: {}".format(seed), override=False)
+        log_output("Enemy Seed: {}".format(seed), log_level=0)
         if DIAGNOSTICS:
             start_time = time.time()
-            print_debug("Starting Randomization: {}".format(options), override=True)
+            log_output("Starting Randomization: {}".format(options), log_level=0)
 
         enemymode = options.get("enemy", 'Disabled') if not options.get("selected_enemy") else options.get("selected_enemy")
         bossmode = options.get("boss", "Disabled") if not options.get("selected_boss") else options.get("selected_boss")
@@ -214,7 +213,7 @@ class KingdomHearts2:
 
         if DIAGNOSTICS:
             end_time = time.time()
-            print_debug("Enemy Randomization Complete: {}s".format(end_time-start_time))
+            log_output("Enemy Randomization Complete: {}s".format(end_time-start_time), log_level=0)
 
         return rand_seed_json
 
@@ -226,7 +225,7 @@ class KingdomHearts2:
 
                 # Debug print out the enemy mapping
                 # for enemy in rand_seed.enemymapping:
-                #     print(enemy+"->"+rand_seed.enemymapping[enemy])
+                #     log_output(enemy+"->"+rand_seed.enemymapping[enemy])
             
             self.location_manager.set_locations()
             spawns = self.location_manager.locations
@@ -323,7 +322,7 @@ class KingdomHearts2:
     def generate_files(self, outdir='', randomization={}, outzip=None):
         if DIAGNOSTICS:
             start_time = time.time()
-            print_debug("Starting generation of files")
+            log_output("Starting generation of files", log_level=0)
 
         if outzip:
             def _writeMethod(outfn, relfn, data):
@@ -363,7 +362,7 @@ class KingdomHearts2:
 
         if DIAGNOSTICS:
             end_time = time.time()
-            print_debug("Files Generated: {}s".format(end_time-start_time))
+            log_output("Files Generated: {}s".format(end_time-start_time), log_level=0)
         return assetgenerator.assets
 
     def generate_mod_basics(self, newname=None):

@@ -5,6 +5,7 @@ from khbr.KH2.AssetGenerator import AssetGenerator
 from khbr.KH2.KingdomHearts2 import KingdomHearts2
 from khbr.KH2.ModWriter import ModWriter
 from khbr.randomizer import Randomizer
+from khbr.randutils import log_output
 
 import os, subprocess
 #### Mostly for debug purposes
@@ -17,16 +18,16 @@ class openKH:
     def _run_binary(self, binary, args=[], inp='', debug=True):
         self._check_binary(binary)
         if debug:
-            print(args)
+            log_output(args)
             import sys; sys.stdout.flush()
         proc = subprocess.Popen([binary] + args, cwd=self.workdir, shell=True)
         output = proc.communicate(inp)
         if debug:
-            print(output)
+            log_output(output)
         return output[0]
     def bar_list(self, bar):
         # given a bar file, list the contents
-        print(self._run_binary('OpenKh.Command.Bar.exe', args=['list', bar]).decode('utf-8'))
+        log_output(self._run_binary('OpenKh.Command.Bar.exe', args=['list', bar]).decode('utf-8'))
     def bar_extract(self, bar, outdir):
         # extract bar file to a directory (directory must exist prior to running this)
         self._run_binary('OpenKh.Command.Bar.exe', args=['unpack', '-o', outdir, bar])
@@ -215,7 +216,7 @@ def main(cli_args: list=[]):
     """
     )
 
-    print(last_settings)
+    log_output(last_settings, log_level=0)
 
     kh2 = KingdomHearts2()
     source_bosses = kh2.get_valid_bosses()
@@ -324,12 +325,12 @@ def main(cli_args: list=[]):
         assetgenerator.generateEvt("TT", "01", 0x34, {}, options={"jump_to":{"world":world, "room":room, "program":program}, "open_menu":True, "remove_event":True, "flags": ['0x84A'], "remove_excess_flags": True})      
         # else just update the file in the mods folder
         # then exit
-        print("WARNING: debug_change_starting_room is on, nothing else changed")
+        log_output("WARNING: debug_change_starting_room is on, nothing else changed", log_level=0)
         exit(0)
 
 
     seed = args.seed or str(int(time.time()))
-    print("Using Seed {}".format(seed))
+    log_output("Using Seed {}".format(seed), log_level=0)
     random.seed(seed)
     
 
@@ -343,7 +344,7 @@ def main(cli_args: list=[]):
         num_bosses = int(args.num_bosses) if args.num_bosses != "random" else random.randint(1,len(bosses))
     else:
         num_bosses = len(ROUTES[route])
-    print("Picked Route: "+ route)
+    log_output("Picked Route: "+ route, log_level=0)
     abilities_start_equipped = _translate_bool(args.abilities_start_equipped)
     randomize_starting_stuff = _translate_bool(args.randomize_starting_stuff)
 
@@ -407,7 +408,7 @@ def main(cli_args: list=[]):
     b64 = rando.generate_seed("kh2", seed_options, seed=seed)
 
     modyml_fn = os.path.join(moddir, "bossrush", "mod.yml")
-    modyml = yaml.load(open(modyml_fn))
+    modyml = yaml.load(open(modyml_fn), Loader=yaml.SafeLoader)
 
     modyml["title"] = "Boss Rush {}".format(seed)
     modyml["description"] = json.dumps(settings_to_write, indent=2)
@@ -437,7 +438,7 @@ def main(cli_args: list=[]):
     asset = findRoomSource(modyml["assets"], "TT", "01")
     assetgenerator.generateEvt("TT", "01", 0x34, asset["source"], options={"jump_to":{"world":world, "room":room, "program":program}, "open_menu":True, "remove_event":True, "flags": ['0x84A'], "remove_excess_flags": True})
 
-    print("DEBUG boss_order {}".format(boss_order))
+    log_output("DEBUG boss_order {}".format(boss_order))
     boss_order.pop(0)
 
     for new_boss_name in boss_order:
@@ -447,9 +448,9 @@ def main(cli_args: list=[]):
         newprogram = new_boss["program"] 
         if newprogram == None:
             newprogram = 0
-            print("Warning setting program to 0 for {}".format(current_boss))
+            log_output("Warning setting program to 0 for {}".format(current_boss), log_level=1)
         asset = findRoomSource(modyml["assets"], world, room)
-        print("Making evt to jump to {}".format(new_boss["name"]))
+        log_output("Making evt to jump to {}".format(new_boss["name"]))
         set_for_settings = [1] if current_boss.get("name") in ["Hayner", "Vivi", "Setzer"] else None
         assetgenerator.generateEvt(world, room, current_boss.get("outprogram") or "all", asset["source"], options={"remove_event": True, "jump_to":{"world": newworld, "room": newroom, "program": newprogram, "set_for_settings": set_for_settings}, "fix_source_area_settings": "fix_source_area_settings" in current_boss.get("tags"), "open_menu": open_menu_before_each_fight, "remove_event":True})
         world = newworld
@@ -484,7 +485,7 @@ def main(cli_args: list=[]):
         if asset["name"].endswith("00battle.bin"):
 
             # Prevent form levelups
-            fmlv = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", "fmlvVanilla.yml")))
+            fmlv = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", "fmlvVanilla.yml")), Loader=yaml.SafeLoader)
             for form in fmlv:
                 for level in fmlv[form]:
                     level["Experience"] = 9999
@@ -493,7 +494,7 @@ def main(cli_args: list=[]):
             asset["source"].append(fmlv_asset["source"][0])
 
             # Prevent get bonuses
-            bons = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", "bonsVanilla.yml")))
+            bons = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", "bonsVanilla.yml")), Loader=yaml.SafeLoader)
             for l,bon in bons.items():
                 for c,char in bon.items():
                     char["AccessorySlotUpgrade"] = 0
@@ -508,8 +509,8 @@ def main(cli_args: list=[]):
             asset["source"].append(bons_asset["source"][0])
 
             # effectively set level to choice
-            lvup = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", "lvupVanilla.yml")))
-            print("Setting all level stats to that of level {}".format(set_level))
+            lvup = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", "lvupVanilla.yml")), Loader=yaml.SafeLoader)
+            log_output("Setting all level stats to that of level {}".format(set_level))
             for c, char in lvup.items():
                 lvl_stats = char[set_level]
                 for l, level in char.items():
@@ -534,7 +535,7 @@ def main(cli_args: list=[]):
 
     yaml.dump(modyml, open(modyml_fn, "w"))
 
-    print("All Done!")
+    log_output("All Done!", log_level=0)
 
 if __name__ == "__main__":
     import sys

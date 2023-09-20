@@ -1,6 +1,6 @@
 # Really at the same time you make party member rando you should make costume rando, it's just as easy
 import random
-from khbr.randutils import BinaryReader, BinaryWriter
+from khbr.randutils import BinaryReader, BinaryWriter, log_output
 import os
 
 class MemtManager:
@@ -285,6 +285,6 @@ if __name__ == "__main__":
         if worldvalue:
             worldfriend = party_member_map[worldvalue]
         entry["World Character"] = random.choice(party_members[replacements[worldfriend]])
-    print(replacements)
+    log_output(replacements)
 
     memt.write_bin("C:\\Users\\12sam\\Desktop\\openkh\\mods\\kh2\\thundrio-kh\\devmod\\files\\root\\memt.list")

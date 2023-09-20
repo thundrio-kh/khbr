@@ -4102,6 +4102,7 @@ Pete OC II:
       - 0
       - 0
 Pete TR:
+  enmp_index: 128
   roomData:
     bossX: -272.6265869140625
     bossY: 0
@@ -6051,7 +6052,7 @@ Xemnas:
   - Twilight Thorn
   can_be_enemy: false
   enabled: true
-  #enmp_index: 0x5A  Final Xemnas has same ENMP index so it's problematic to scale Xemnas
+  enmp_index: 90 #  Final Xemnas has same ENMP index so it's problematic to scale Xemnas
   hp: 100
   isnightmare: true
   level: 99
@@ -6214,6 +6215,7 @@ Yuffie:
       - 2
       - 0
 Zexion:
+  enmp_index: 217
   aimods: 
   - name: B_EX370/b_ex.bdscript
     type: obj

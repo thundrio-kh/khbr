@@ -1,10 +1,10 @@
 from khbr.KH2.KingdomHearts2 import KingdomHearts2
 from khbr.textutils import create_spoiler_text
-from khbr.utils import print_debug
 import time, json, random, os, shutil, yaml, base64, sys
 from zipfile import ZipFile
 import random
 from khbr._config import *
+from khbr.randutils import log_output
 
 supported_games = ["kh2"]
 
@@ -41,11 +41,11 @@ class Randomizer:
         else:
             fn = os.path.join(self.tempdir, ''.join(list(str(random.randint(0,10)) for _ in range(7))))
         if os.path.exists(fn):
-            print_debug(fn)
+            log_output(fn)
             # Realistically this should never happen
             raise Exception("TMP dir already exists, try again")
         os.mkdir(fn)
-        print("Made",fn)
+        log_output("Made tmpdir {}".format(fn), log_level=0)
         rmdir = lambda : shutil.rmtree(fn)
         return fn, rmdir
 
@@ -187,7 +187,7 @@ class Randomizer:
         # for both enemies and bosses
         # replacements are either decided beforehand, or at the time of replacement
         random.seed(seed)
-        print("Using seed: {}".format(seed))
+        log_output("Using seed: {}".format(seed), log_level=0)
         randomization = game.perform_randomization(options, seed=seed)
         
         return randomization
@@ -231,10 +231,10 @@ if __name__ == '__main__':
     else:
         options = {}
         for arg in sys.argv:
-            print_debug(arg)
+            log_output(arg, log_level=0)
             if "=" in arg:
                 opt = arg.split("=")
-                print_debug(opt)
+                log_output(opt, log_level=0)
                 options[opt[0]] = opt[1]
 
     if "randomization_only" in sys.argv:
@@ -257,11 +257,11 @@ if __name__ == '__main__':
 
     rando = Randomizer(tempdir=moddir, tempfn=fn, deletetmp=False)
     if mode == "read":
-        print(options)
+        log_output(options, log_level=0)
         b64 = rando.read_seed("kh2", seedfn=options["seed"], outfn=fn)
     else:
         # while True:
         b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=randomization_only)
             # if b64["spawns"]["Olympus Coliseum"]["Coliseum Gates"]['spawnpoints']['b_40']['sp_ids']['41'][0]["name"] == "Luxord":
             #     0/0
-    print("Total thing took {}s".format(time.time()-t))
+    log_output("Total thing took {}s".format(time.time()-t), log_level=0)

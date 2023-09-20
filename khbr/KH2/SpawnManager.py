@@ -3,7 +3,7 @@
 import os
 
 import yaml
-from khbr.randutils import pick_boss_to_replace, pick_enemy_to_replace
+from khbr.randutils import pick_boss_to_replace, pick_enemy_to_replace, log_output
 from khbr._config import KH2_DIR
 import random
 class SpawnManager:
@@ -30,7 +30,7 @@ class SpawnManager:
 
     def modify_spawn(self, editname, spawnpoint):
         if editname not in self.roommodedits:
-            print("Warning: could not find {} method for editing spawn, leaving unmodified".format(editname))
+            log_output("Warning: could not find {} method for editing spawn, leaving unmodified".format(editname), log_level=0)
             return
         self.roommodedits(spawnpoint)
 

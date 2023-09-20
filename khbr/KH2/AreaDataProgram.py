@@ -1,3 +1,4 @@
+from khbr.randutils import log_output
 
 class AreaDataProgram:
     def __init__(self, lines, ispc=False):
@@ -5,7 +6,7 @@ class AreaDataProgram:
         self.ispc = ispc
         num_settings = len(''.join(lines).split("AreaSettings"))
         # if num_settings > 2:
-        #     print(lines)
+        #     log_output(lines)
         self.map = self.map_program()
     def make_program(self):
         return '\n'.join(self.lines)
@@ -53,7 +54,7 @@ class AreaDataProgram:
                 for l in range(len(self.lines)):
                     line = self.lines[l]
                     if line.strip().startswith("Set"):
-                        print(line)
+                        log_output(line)
                         f = l
                 self.lines.insert(f+1, newline)
         self.map = self.map_program()
@@ -86,7 +87,7 @@ class AreaDataProgram:
         if self.has_command("SetJump"):
             self.add_command("SetJump", parameters, set_for_settings)
         else:
-            print("Trying to SetJump on a program that does not have one is not allowed")
+            log_output("Trying to SetJump on a program that does not have one is not allowed")
     def set_open_menu(self, open_menu):
         if open_menu:
             self.add_command("SetPartyMenu", "1")

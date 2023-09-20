@@ -5,7 +5,6 @@ class LuaManager:
         self.luamod = name
 
     def create_file(self):
-        print("hit")
         if self.luamod == "final_xemnas":
             self.create_final_xemnas()
         

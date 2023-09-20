@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from khbr.randutils import create_new_entity
+from khbr.randutils import create_new_entity, log_output
 from khbr.KH2.schemas.random_config import RandomConfig
 
 class EnemySeed:
@@ -190,7 +190,7 @@ class EnemySeed:
     def add_cmdmod(self, new_boss_object):
         for cmd_mod in new_boss_object["cmdmods"]:
             if cmd_mod["value"] in self.cmd_mods:
-                print("Warning: cmd mod {} getting overwritten by {}".format(cmd_mod["value"], new_boss_object["name"]))
+                log_output("Warning: cmd mod {} getting overwritten by {}".format(cmd_mod["value"], new_boss_object["name"]), log_level=1)
             self.cmd_mods[cmd_mod["value"]] = cmd_mod["changes"]
 
     def set_data_final_xemnas_retry(self, shouldretry):

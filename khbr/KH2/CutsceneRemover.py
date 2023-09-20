@@ -1,6 +1,8 @@
 import os
 from khbr.KH2.AreaDataScript import AreaDataScript
 from khbr._config import KH2_DIR
+from khbr.randutils import log_output
+
 class CutsceneRemover:
     def __init__(self, assetgenerator, mode):
         self.assetgenerator = assetgenerator
@@ -124,7 +126,7 @@ class CutsceneRemover:
                     if removecs:
                         new_cutscene_name = self.get_cutscene_name(evtprogram, eventnum, eventtype)
                         new_cutscene = self.cutscenes[new_cutscene_name]
-                        #print(ardname,eventnum,new_cutscene_name)
+                        #log_output(ardname,eventnum,new_cutscene_name)
                         # TODO should not be creating hundreds of duplicate event files
                         eventasset = self.assetgenerator.modwriter.writeEvent(ardname, str(eventnum), new_cutscene)
                         ardasset["source"].append(eventasset)
@@ -139,7 +141,7 @@ class CutsceneRemover:
         # for k,v in mapping.items():
         #     if v == {'66'}:
         #         l.append(k)
-        #print(l)
+        #log_output(l)
 
 # 2 issues
 # ard.ard

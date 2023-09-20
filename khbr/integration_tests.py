@@ -362,7 +362,7 @@ class Tests(unittest.TestCase):
             replacementfilepath = os.path.join(modpath, "files", "ard", "tt05", "b_44.yml")
             assert os.path.exists(filepath)
             assert os.path.exists(replacementfilepath)
-            tt05ard = yaml.load(open(replacementfilepath))
+            tt05ard = yaml.load(open(replacementfilepath), Loader=yaml.SafeLoader)
             repid = tt05ard[0]["Entities"][3]["ObjectId"]
             bdscript = open(filepath).read().split("\n")
             assert bdscript[118] == " pushImm {}".format(repid), "{} != {}".format(bdscript[118], repid)
@@ -390,7 +390,6 @@ class Tests(unittest.TestCase):
         options = {"selected_boss": "Luxord"}
         randomization = testutils.generateSeed(options)
         assert randomization["msn_map"]["CA01_MS204"]["name"] == "EH14_MS103"
-        0/0
         pass
 
     def test_gr_2_vanilla_works_one_to_one(self):
@@ -491,19 +490,8 @@ class Tests(unittest.TestCase):
 # And coverage
 
 # Uncomment to run a single test through ipython
-ut = Tests()
-ut.test_dont_replace_enemy_msns_for_boss()
-ut.test_gr_room_uses_luxord_msn_when_replaced()
-ut.test_proper_ai_edit_to_setzer()
-ut.test_seedgen_boss_wild()
-ut.test_seedgen_boss_wild_cups()
-ut.test_seedgen_boss_wild_cups_datas()
-ut.test_seedgen_boss_wild_datas()
-ut.test_seedgen_boss_wild_nightmare()
-ut.test_seedgen_enemy_one_to_one_other()
-ut.test_seedgen_error3()
-ut.test_seedgen_proderror1()
-ut.test_wild_dont_randomize_demyxoc()
+#ut = Tests()
+#ut.test_wild_dont_randomize_demyxoc()
 
 # Uncomment to run the actual tests
 unittest.main()
