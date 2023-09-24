@@ -21,6 +21,7 @@ class EnemySeed:
         self.wild_enemy_set = set()
 
     def toJson(self):
+        # scale map should only be present if bosses are randomized
         return {
             "utility_mods": self.utility_mods,
             "spawns": self.spawns, 
@@ -29,7 +30,7 @@ class EnemySeed:
             "lua_mods": list(set(self.lua_mods)),
             "cmd_mods": self.cmd_mods,
             "object_map": self.object_map, 
-            "scale_map": self.set_scaling, 
+            "scale_map": self.set_scaling or {"Sephiroth": "Sephiroth", "Prison Keeper": "Prison Keeper"} if self.config.bosses else {}, 
             "limiter_map": self.spawn_limiters, 
             "subtract_map": self.subtract_map,
             "memory_expansion": self.config.memory_expansion

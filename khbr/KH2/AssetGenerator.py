@@ -80,8 +80,8 @@ class AssetGenerator:
         self.assets.append(asset)
 
     def generateEnmp(self, scale_map, remove_damage_cap):
-        if not scale_map:
-            scale_map = {"Sephiroth": "Sephiroth", "Prison Keeper": "Prison Keeper"}
+        if not (scale_map or remove_damage_cap):
+            return
 
         with open(os.path.join(os.path.dirname(__file__), "data", "enmpVanilla.yml")) as f:
             enmp_data_vanilla = yaml.load(f, Loader=yaml.SafeLoader)
@@ -120,10 +120,13 @@ class AssetGenerator:
         if remove_damage_cap:
             for en in enmp_data_modified:
                 en["maxDamage"] = 0xFFFF
+        for enemy in enmp_data_modified:
+            if enemy["id"] == 141:
+                enemy["health"][0] = 500 # MCP health needs to be halved
         asset = self.modwriter.writeEnmp(enmp_data_modified)
         self.assets.append(asset)
 
-    def generateCustomMovesets(self, apply_form_movement=False, apply_better_stt=False):
+    def generateCustomMovesets(self, apply_form_movement=False, apply_better_stt=False):        
         # sora moveset
         with open(os.path.join(os.path.dirname(__file__), "data", "bin", "B_EX100.mset"), "rb") as f:
             mset_data = f.read()
