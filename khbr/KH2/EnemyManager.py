@@ -36,7 +36,7 @@ class EnemyManager:
                     continue
             else:
                 continue
-            if "pirate" in e_obj["tags"] and not (use_other_enemies or "pirate" in options.get("selected_enemy", "").lower()):
+            if "pirate" in e_obj["tags"] and not (use_other_enemies or "pirate" in str(options.get("selected_enemy", "")).lower()):
                 e_obj["aimods"] = []
         
             enabled_enemies.append(e_obj)

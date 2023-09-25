@@ -7534,9 +7534,6 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Beast",
-            "The Experiment",
-            "Thresholder",
             "Tifa",
             "Vivi",
             "Volcano Lord",
@@ -8792,7 +8789,6 @@
             "Roxas",
             "Saix",
             "Sark",
-            "Scar",
             "Seifer",
             "Sephiroth",
             "Setzer",
@@ -10401,7 +10397,8 @@
         "blacklist_source": [],
         "blacklist_destination": [
             "Axel I",
-            "Twilight Thorn"
+            "Twilight Thorn",
+            "Jafar"
         ],
         "whitelist_source": [],
         "whitelist_destination": [],
@@ -12151,7 +12148,6 @@
             "Dark Thorn",
             "Final Xemnas",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
@@ -13108,7 +13104,9 @@
             "Pete TR",
             "Shan-Yu",
             "Jafar",
-            "Seifer"
+            "Seifer",
+            "Thresholder",
+            "Final Xemnas"
         ],
         "limiter": 0,
         "model": "B_CA050",
@@ -13852,8 +13850,7 @@
             "Jafar",
             "Luxord",
             "Xaldin",
-            "Xemnas",
-            "Hydra"
+            "Xemnas"
         ],
         "tags": [
             "needs_invuln",
@@ -13931,7 +13928,6 @@
             "Pete TR",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Sark",
             "Scar",
             "Seifer",
@@ -15899,7 +15895,6 @@
             "The Beast",
             "Twilight Thorn",
             "Vivi",
-            "Hydra",
             "Hayner",
             "Vivi",
             "Setzer",
@@ -16405,7 +16400,6 @@
             "Jafar",
             "Larxene",
             "Leon",
-            "Luxord",
             "Marluxia",
             "Past Pete",
             "Pete TR",
@@ -16632,7 +16626,9 @@
         ],
         "blacklist_destination": [
             "Barbossa",
-            "Scar"
+            "Scar",
+            "Riku",
+            "Thresholder"
         ],
         "can_be_enemy": false,
         "enabled": true,
@@ -16761,7 +16757,9 @@
         },
         "blacklist_destination": [
             "Barbossa",
-            "Scar"
+            "Scar",
+            "Riku",
+            "Thresholder"
         ],
         "can_be_enemy": false,
         "enmp_index": 216,
@@ -17875,7 +17873,8 @@
         ],
         "blacklist_destination": [
             "Axel I",
-            "Twilight Thorn"
+            "Twilight Thorn",
+            "Jafar"
         ],
         "tags": [
             "organization",
@@ -19210,7 +19209,8 @@
             "EH15": "Pete Cups",
             "TR09": "Pete Cups",
             "LK14": "Pete Cups",
-            "BB11": "Pete Cups"
+            "BB11": "Pete Cups",
+            "TT34": "Pete Cups"
         },
         "gimmick_source": [
             "Hostile Program",
@@ -19727,7 +19727,8 @@
             "EH15": "Pete Cups",
             "TR09": "Pete Cups",
             "LK14": "Pete Cups",
-            "BB11": "Pete Cups"
+            "BB11": "Pete Cups",
+            "TT34": "Pete Cups"
         },
         "gimmick_source": [
             "Hostile Program",
@@ -19824,7 +19825,8 @@
             "EH15": "Pete Cups",
             "TR09": "Pete Cups",
             "LK14": "Pete Cups",
-            "BB11": "Pete Cups"
+            "BB11": "Pete Cups",
+            "TT34": "Pete Cups"
         },
         "blacklist_destination": [
             "Cloud",
@@ -22346,7 +22348,6 @@
             "Hayner",
             "Hydra",
             "Jafar",
-            "Larxene",
             "Marluxia",
             "Past Pete",
             "Pete TR",
@@ -22400,7 +22401,10 @@
         "blacklist_destination": [
             "Axel I",
             "Hades II",
-            "Twilight Thorn"
+            "Twilight Thorn",
+            "Hayner",
+            "Setzer",
+            "Vivi"
         ],
         "can_be_enemy": false,
         "enabled": true,
@@ -22532,7 +22536,10 @@
         "blacklist_destination": [
             "Axel I",
             "Hades II",
-            "Twilight Thorn"
+            "Twilight Thorn",
+            "Hayner",
+            "Setzer",
+            "Vivi"
         ],
         "can_be_enemy": false,
         "enmp_index": 213,
@@ -23036,6 +23043,9 @@
         "blacklist_source": [
             "Shan-Yu"
         ],
+        "blacklist_destination": [
+            "Cerberus"
+        ],
         "hp": 100,
         "level": 99,
         "limiter": 0,
@@ -23068,7 +23078,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_destination": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [],
@@ -23743,8 +23752,7 @@
             "Jafar",
             "Luxord",
             "Xaldin",
-            "Xemnas",
-            "Hydra"
+            "Xemnas"
         ],
         "tags": [
             "needs_invuln",
@@ -23822,7 +23830,6 @@
             "Pete TR",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Sark",
             "Scar",
             "Seifer",
@@ -25689,7 +25696,9 @@
         "blacklist_destination": [
             "Hayner",
             "Vivi",
-            "Setzer"
+            "Setzer",
+            "Axel I",
+            "Twilight Thorn"
         ],
         "gimmick_source": [
             "Cerberus",
@@ -25842,7 +25851,8 @@
         "room_size": 11.7,
         "program": 64,
         "blacklist_destination": [
-            "Pete OC II"
+            "Pete OC II",
+            "Axel I"
         ],
         "type": "boss",
         "subtracts": [
@@ -25972,7 +25982,9 @@
             "Blizzard Lord",
             "Volcano Lord",
             "Shadow Stalker",
-            "Hostile Program"
+            "Hostile Program",
+            "Axel I",
+            "Twilight Thorn"
         ],
         "obj_id": 353,
         "size": 2.17,
@@ -26032,13 +26044,11 @@
             "Demyx",
             "Final Xemnas",
             "Grim Reaper I",
-            "Grim Reaper II",
             "Hades II",
             "Hayner",
             "Hercules",
             "Hostile Program",
             "Hydra",
-            "Larxene",
             "Leon",
             "Lexaeus",
             "Luxord",
@@ -26695,9 +26705,7 @@
             "Scar",
             "Seifer",
             "Setzer",
-            "The Beast",
             "The Experiment",
-            "Thresholder",
             "Tifa",
             "Twilight Thorn",
             "Vivi",
@@ -26942,8 +26950,7 @@
             "Jafar",
             "Luxord",
             "Xaldin",
-            "Xemnas",
-            "Hydra"
+            "Xemnas"
         ],
         "blacklist_source": [
             "Final Xemnas",
@@ -27017,7 +27024,6 @@
             "Pete TR",
             "Prison Keeper",
             "Riku",
-            "Roxas",
             "Sark",
             "Scar",
             "Seifer",

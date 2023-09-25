@@ -71,6 +71,8 @@ def pick_boss_to_replace(enemy_records, bossparentlist):
 
 def pick_enemy_to_replace(old_enemy, enabled_enemies, enemy_set={}, max_enemies=0):
     new_options = [e["name"] for e in enabled_enemies if e["category"] == old_enemy["category"]]
+    if len(new_options) == 0:
+        return old_enemy["name"] # return og option in this case
     pick = random.choice(new_options)
     if max_enemies > 0:
         if len(enemy_set) < max_enemies:

@@ -102,10 +102,14 @@ class Tests(unittest.TestCase):
 
         found_undead_pirate = False
         for ai_mod in randomization["ai_mods"]:
-            if ai_mod.startswith("B_CA040"):
+            if ai_mod.startswith("B_CA030"):
                 found_undead_pirate = True
         if not found_undead_pirate:
-            raise Exception("Should have found Undead Pirate C aimod")
+            raise Exception("Should have found Undead Pirate B aimod")
+        if not 1109 in randomization["object_map"]:
+            raise Exception("Should have found Undead Pirate C object mod")
+        else:
+            assert randomization["object_map"][1109]["Flag"] == 0
 
 
     def test_seedgen_enemy_one_to_one_pc(self):
@@ -350,7 +354,7 @@ class Tests(unittest.TestCase):
     def test_proper_ai_edit_to_setzer(self):
         # [broken_seed, working_seed]
         for seed in ["73724", "60025"]:
-            options ={'remove_damage_cap': False, 'cups_give_xp': True, 'retry_data_final_xemnas': True, 'retry_dark_thorn': False, 'remove_cutscenes': 'Disabled', 'party_member_rando': False, 'costume_rando': False, 'revenge_limit_rando': 'Vanilla', 'boss': 'One to One', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': True, 'data_bosses': False, 'gimmick_bosses': False, 'sephiroth': False, 'terra': False, 'mickey_rule': 'follow', 'scale_boss_stats': False, 'enemy': 'One to One', 'nightmare_enemies': False, 'separate_nobodys': False, 'combine_enemy_sizes': False, 'combine_melee_ranged': False, 'memory_expansion': True}
+            options ={'remove_damage_cap': False, 'cups_give_xp': True, 'retry_data_final_xemnas': True, 'retry_dark_thorn': False, 'remove_cutscenes': False, 'party_member_rando': False, 'costume_rando': False, 'revenge_limit_rando': 'Vanilla', 'boss': 'One to One', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': True, 'data_bosses': False, 'gimmick_bosses': False, 'sephiroth': False, 'terra': False, 'mickey_rule': 'follow', 'scale_boss_stats': False, 'enemy': 'One to One', 'nightmare_enemies': False, 'separate_nobodys': False, 'combine_enemy_sizes': False, 'combine_melee_ranged': False, 'memory_expansion': True}
             tmppath = testutils.get_tmp_path()
             modpath = os.path.join(tmppath, "setzertest")
             if os.path.exists(modpath):
