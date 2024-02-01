@@ -286,15 +286,13 @@ class EnemyManager:
             return True
         if source_boss["unchanged_file_size"] and (dest_boss["adds"] or dest_boss["subtracts"]):
             return True
-        if dest_boss["blacklist_destination"]:
-            if source_boss["name"] in dest_boss["blacklist_destination"]:
-                return True
+        if source_boss["name"] in dest_boss.get("blacklist_destination", []):
+            return True
         if dest_boss["whitelist_destination"]:
             if source_boss["name"] not in dest_boss["whitelist_destination"]:
                 return True
-        if source_boss["blacklist_source"]:
-            if dest_boss["name"] in source_boss["blacklist_source"]:
-                return True
+        if dest_boss["name"] in source_boss.get("blacklist_source", [])+source_boss.get("gimmick_source", []):
+            return True
         if source_boss["whitelist_source"]:
             if dest_boss["name"] not in source_boss["whitelist_source"]:
                 return True
@@ -308,6 +306,7 @@ class EnemyManager:
             "needs_teleport": "teleport_blocked",
         }
         dest_boss_behavior_mods = set(dest_behavior_mods).intersection(dest_boss["tags"])
+
         for k in dest_boss_behavior_mods:
             if dest_behavior_mods[k] in source_boss["tags"]:
                 return True

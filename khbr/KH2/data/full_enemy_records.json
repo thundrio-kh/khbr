@@ -730,6 +730,7 @@
         "story_level": 0
     },
     "Bulky Vendor (Disappears)": {
+        "replace_as": "Bulky Vendor",
         "vars": [
             1,
             0
@@ -748,7 +749,6 @@
             "Bulky Vendor (Disappears)",
             "Bulky Vendor"
         ],
-        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "category": "other",
@@ -855,6 +855,7 @@
         "story_level": 0
     },
     "Bulky Vendor (NM) (Disappears)": {
+        "replace_as": "Bulky Vendor (NM)",
         "vars": [
             1,
             0
@@ -874,7 +875,6 @@
             "Bulky Vendor (NM) (Disappears)",
             "Bulky Vendor (NM)"
         ],
-        "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
         "category": "other",
@@ -7501,8 +7501,7 @@
             "Tifa",
             "Vivi",
             "Volcano Lord",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Axel II": {
@@ -8641,6 +8640,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_HE020",
+        "msn_replace_allowed": false,
         "obj_id": 351,
         "size": 3.2,
         "type": "boss",
@@ -8657,7 +8657,6 @@
         ],
         "replace_as": null,
         "source_replace_allowed": true,
-        "msn_replace_allowed": true,
         "tags": [],
         "category": "",
         "isnightmare": false,
@@ -10196,7 +10195,9 @@
         "msn_required": false,
         "msn_source_as": null,
         "forced_variations": [],
-        "gimmick_source": [],
+        "gimmick_source": [
+            "Zexion"
+        ],
         "cmdmods": [],
         "mickey_source": false,
         "can_be_enemy": false,
@@ -10204,7 +10205,10 @@
         "sizeTag": null,
         "roommaxsize": null,
         "enmp_index": null,
-        "blacklist_source": [],
+        "blacklist_source": [
+            "Cerberus",
+            "Zexion"
+        ],
         "blacklist_destination": [
             "Volcano Lord",
             "Blizzard Lord",
@@ -10563,7 +10567,8 @@
         "tags": [
             "data",
             "organization",
-            "broken_mickey"
+            "broken_mickey",
+            "needs_rc"
         ],
         "variationof": "Xigbar",
         "enmp_index": 252,
@@ -10584,7 +10589,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "broken_mickey-data-organization",
+        "category": "broken_mickey-data-needs_rc-organization",
         "isnightmare": true,
         "parent": "Xigbar",
         "children": [],
@@ -11942,6 +11947,13 @@
             "bossY": 0,
             "bossZ": 1200
         },
+        "gimmick_source": [
+            "Zexion"
+        ],
+        "blacklist_source": [
+            "Cerberus",
+            "Zexion"
+        ],
         "aimods": [
             {
                 "name": "B_EX170_LAST/b_ex.bdscript",
@@ -12018,14 +12030,12 @@
         "msn_required": false,
         "msn_source_as": null,
         "forced_variations": [],
-        "gimmick_source": [],
         "cmdmods": [],
         "mickey_source": false,
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
         "enmp_index": null,
-        "blacklist_source": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "sp_ids": [],
@@ -12041,7 +12051,6 @@
             "Axel II",
             "Barbossa",
             "Blizzard Lord",
-            "Cerberus",
             "Cloud",
             "Dark Thorn",
             "Final Xemnas",
@@ -12077,8 +12086,7 @@
             "Xaldin",
             "Xemnas",
             "Xigbar",
-            "Yuffie",
-            "Zexion"
+            "Yuffie"
         ]
     },
     "Final Xemnas (Clone)": {
@@ -12094,6 +12102,13 @@
             "bossY": 0,
             "bossZ": 1200
         },
+        "gimmick_source": [
+            "Zexion"
+        ],
+        "blacklist_source": [
+            "Cerberus",
+            "Zexion"
+        ],
         "aimods": [
             {
                 "name": "B_EX170_LAST/b_ex.bdscript",
@@ -12165,7 +12180,6 @@
         "msn_required": false,
         "msn_source_as": null,
         "forced_variations": [],
-        "gimmick_source": [],
         "cmdmods": [],
         "mickey_source": false,
         "final_fight": false,
@@ -12173,7 +12187,6 @@
         "sizeTag": null,
         "roommaxsize": null,
         "enmp_index": null,
-        "blacklist_source": [],
         "whitelist_source": [],
         "whitelist_destination": [],
         "sp_ids": [],
@@ -12957,7 +12970,7 @@
             "Hercules",
             "Seifer",
             "Twilight Thorn",
-            "Armored Xemnas I",
+            "Armor Xemnas I",
             "Barbossa",
             "Grim Reaper I",
             "Oogie Boogie",
@@ -13147,7 +13160,6 @@
             "Vivi",
             "Volcano Lord",
             "Xemnas",
-            "Xigbar",
             "Yuffie"
         ]
     },
@@ -13440,6 +13452,7 @@
         "level": 99,
         "limiter": 0,
         "model": "B_HE030",
+        "msn_replace_allowed": false,
         "roommaxsize": 13,
         "obj_id": 350,
         "replace_as": "Hades Cups",
@@ -13450,7 +13463,6 @@
             "Hades II (1)"
         ],
         "source_replace_allowed": true,
-        "msn_replace_allowed": true,
         "category": "needs_invuln-rc_blocked-teleport_blocked",
         "isnightmare": false,
         "parent": "Hades II",
@@ -13515,7 +13527,7 @@
         },
         "enabled": true,
         "story_level": 39,
-        "msn_replace_allowed": true,
+        "msn_replace_allowed": false,
         "program": 202,
         "msn": "HE19_MS205",
         "vars": [
@@ -13677,7 +13689,8 @@
             "Jafar",
             "Luxord",
             "Xaldin",
-            "Xemnas"
+            "Xemnas",
+            "The Experiment"
         ],
         "tags": [
             "needs_invuln",
@@ -16075,6 +16088,10 @@
             "bossZ": 500
         },
         "enabled": true,
+        "blacklist_source": [
+            "Zexion",
+            "Twilight Thorn"
+        ],
         "blacklist_destination": [
             "Groundshaker",
             "Scar"
@@ -16082,8 +16099,8 @@
         "gimmick_source": [
             "Lexaeus",
             "Terra",
-            "Zexion",
-            "Saix"
+            "Saix",
+            "Marluxia"
         ],
         "whitelist_destination": [
             "Armor Xemnas II",
@@ -16154,7 +16171,6 @@
         "can_be_enemy_override": false,
         "sizeTag": null,
         "roommaxsize": null,
-        "blacklist_source": [],
         "whitelist_source": [],
         "adds": [],
         "sp_ids": [],
@@ -16182,13 +16198,11 @@
             "Jafar",
             "Larxene",
             "Leon",
-            "Marluxia",
             "Past Pete",
             "Pete TR",
             "Prison Keeper",
             "Riku",
             "Roxas",
-            "Saix",
             "Sark",
             "Scar",
             "Seifer",
@@ -16199,7 +16213,6 @@
             "The Experiment",
             "Thresholder",
             "Tifa",
-            "Twilight Thorn",
             "Vexen",
             "Vivi",
             "Volcano Lord",
@@ -17946,7 +17959,8 @@
         ],
         "blacklist_destination": [
             "Axel I",
-            "Twilight Thorn"
+            "Twilight Thorn",
+            "Jafar"
         ],
         "enabled": true,
         "enmp_index": 215,
@@ -18067,7 +18081,8 @@
         },
         "blacklist_destination": [
             "Axel I",
-            "Twilight Thorn"
+            "Twilight Thorn",
+            "Jafar"
         ],
         "enmp_index": 215,
         "hp": 100,
@@ -18914,7 +18929,8 @@
             "TR09": "Pete Cups",
             "LK14": "Pete Cups",
             "BB11": "Pete Cups",
-            "TT34": "Pete Cups"
+            "TT34": "Pete Cups",
+            "TT20": "Pete Cups"
         },
         "gimmick_source": [
             "Hostile Program",
@@ -19432,7 +19448,8 @@
             "TR09": "Pete Cups",
             "LK14": "Pete Cups",
             "BB11": "Pete Cups",
-            "TT34": "Pete Cups"
+            "TT34": "Pete Cups",
+            "TT20": "Pete Cups"
         },
         "gimmick_source": [
             "Hostile Program",
@@ -19530,7 +19547,8 @@
             "TR09": "Pete Cups",
             "LK14": "Pete Cups",
             "BB11": "Pete Cups",
-            "TT34": "Pete Cups"
+            "TT34": "Pete Cups",
+            "TT20": "Pete Cups"
         },
         "blacklist_destination": [
             "Cloud",
@@ -22078,7 +22096,8 @@
             "Twilight Thorn",
             "Hayner",
             "Setzer",
-            "Vivi"
+            "Vivi",
+            "Sark"
         ],
         "can_be_enemy": false,
         "enabled": true,
@@ -22213,7 +22232,8 @@
             "Twilight Thorn",
             "Hayner",
             "Setzer",
-            "Vivi"
+            "Vivi",
+            "Sark"
         ],
         "can_be_enemy": false,
         "enmp_index": 213,
@@ -22780,7 +22800,6 @@
             "Vivi",
             "Volcano Lord",
             "Xemnas",
-            "Xigbar",
             "Yuffie"
         ]
     },
@@ -23413,7 +23432,8 @@
             "Jafar",
             "Luxord",
             "Xaldin",
-            "Xemnas"
+            "Xemnas",
+            "The Experiment"
         ],
         "tags": [
             "needs_invuln",
@@ -23497,7 +23517,6 @@
             "Sephiroth",
             "Setzer",
             "Terra",
-            "The Experiment",
             "Thresholder",
             "Vivi",
             "Volcano Lord",
@@ -26481,7 +26500,8 @@
             "Jafar",
             "Luxord",
             "Xaldin",
-            "Xemnas"
+            "Xemnas",
+            "The Experiment"
         ],
         "blacklist_source": [
             "Final Xemnas",
@@ -27078,6 +27098,7 @@
         ],
         "enabled": true,
         "tags": [
+            "needs_rc",
             "organization",
             "broken_mickey",
             "cant_invuln",
@@ -27102,7 +27123,7 @@
         "replace_as": null,
         "source_replace_allowed": true,
         "msn_replace_allowed": true,
-        "category": "broken_mickey-cant_invuln-no_roxas-organization",
+        "category": "broken_mickey-cant_invuln-needs_rc-no_roxas-organization",
         "parent": "Xigbar",
         "variationof": null,
         "children": [

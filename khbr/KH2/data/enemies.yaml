@@ -171,6 +171,7 @@ Bulky Vendor:
   type: enemy
   variations:
     Bulky Vendor (Disappears):
+      replace_as: Bulky Vendor
       vars:
       - 1
       - 0
@@ -190,6 +191,7 @@ Bulky Vendor (NM):
   variationof: Bulky Vendor
   variations:
     Bulky Vendor (NM) (Disappears):
+      replace_as: Bulky Vendor (NM)
       vars:
       - 1
       - 0
@@ -1596,6 +1598,7 @@ Cerberus:
   level: 99
   limiter: 0
   model: B_HE020
+  msn_replace_allowed: false
   obj_id: 351
   size: 3.2
   type: boss
@@ -2096,6 +2099,7 @@ Xigbar (Data):
   - data
   - organization
   - broken_mickey
+  - needs_rc
   variationof: Xigbar
   enmp_index: 0xFC
   hp: 100
@@ -2392,6 +2396,11 @@ Final Xemnas:
     bossX: 0
     bossY: 0
     bossZ: 1200
+  gimmick_source:
+  - Zexion
+  blacklist_source:
+  - Cerberus
+  - Zexion
   aimods: 
   - name: B_EX170_LAST/b_ex.bdscript
     type: obj
@@ -2649,7 +2658,7 @@ Grim Reaper II:
   - Hercules
   - Seifer
   - Twilight Thorn
-  - Armored Xemnas I # medals can get lost
+  - Armor Xemnas I # medals can get lost
   - Barbossa # medals can get lost
   - Grim Reaper I
   - Oogie Boogie
@@ -2845,6 +2854,7 @@ Hades II:
   level: 99
   limiter: 0
   model: B_HE030
+  msn_replace_allowed: false # Because of cups....
   roommaxsize: 13 # just a random guess
   obj_id: 350
   replace_as: Hades Cups
@@ -2918,6 +2928,7 @@ Hayner:
   - Luxord
   - Xaldin
   - Xemnas
+  - The Experiment
   tags:
   - needs_invuln
   - roxas
@@ -3302,14 +3313,17 @@ Jafar:
     bossY: -21450
     bossZ: 500
   enabled: true
+  blacklist_source:
+  - Zexion
+  - Twilight Thorn
   blacklist_destination:
   - Groundshaker # Lion sora can't jump infinitely
   - Scar
   gimmick_source:
   - Lexaeus
   - Terra
-  - Zexion
   - Saix
+  - Marluxia
   whitelist_destination:
   - Armor Xemnas II
   - Cerberus
@@ -3782,6 +3796,7 @@ Marluxia:
   blacklist_destination:
   - Axel I
   - Twilight Thorn
+  - Jafar
   enabled: true
   enmp_index: 0xD7
   hp: 100
@@ -4141,6 +4156,7 @@ Pete TR:
     LK14: Pete Cups
     BB11: Pete Cups
     TT34: Pete Cups
+    TT20: Pete Cups
   blacklist_destination:
   - Cloud
   - Tifa
@@ -4654,6 +4670,7 @@ Roxas:
   - Hayner # crash on win
   - Setzer
   - Vivi
+  - Sark
   can_be_enemy: false #expensive
   enabled: true
   enmp_index: 0xD5
@@ -4977,6 +4994,7 @@ Setzer:
   - Luxord
   - Xaldin
   - Xemnas
+  - The Experiment
   tags:
   - needs_invuln
   - roxas
@@ -5913,6 +5931,7 @@ Vivi:
   - Luxord
   - Xaldin
   - Xemnas
+  - The Experiment
   blacklist_source:
   - Final Xemnas
   - Grim Reaper I
@@ -6105,6 +6124,7 @@ Xigbar:
   - Twilight Thorn
   enabled: true
   tags:
+  - needs_rc
   - organization
   - broken_mickey
   - cant_invuln

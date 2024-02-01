@@ -5,7 +5,7 @@ DEBUG_BOSS_LIST = None
 
 def log_output(msg, log_level = 2):
     use_log_level = os.environ.get("KHBR_LOG_LEVEL", 0)
-    if log_level > use_log_level:
+    if int(log_level) > int(use_log_level):
         return
     print(msg)
 

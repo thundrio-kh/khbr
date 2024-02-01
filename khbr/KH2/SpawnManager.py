@@ -115,8 +115,8 @@ class SpawnManager:
         sora = spawnpoint[0]["Entities"][0]
 
         boss = spawnpoint[0]["Entities"][2]
-        boss["PositionY"] = -22300
-        sora["PositionY"] = -22300
+        boss["PositionY"] = -22300 - 30 # start 30 above ground to handle things like marluxia
+        sora["PositionY"] = -22300 - 30
 
     def apply_room_mods(self, basespawns, ardname):
         roommods = {}

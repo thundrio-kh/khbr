@@ -1,8 +1,11 @@
+* Will no longer place the Bulky Vendors that automatically disappear
+
 4.0.4
 Fixes
 * Updated locations to ignore some boss spawns that don't get used (b_99) but end up causing problems in Wild mode
 * Minor logic adjustments for softlock prevention purposes
 * Changed name of "Include more locations" option to "Allow more annoying replacements" to be more obvious about what the option does
+* Discovered an issue where in some locations and some bosses entering the room while in Limit form will result in a crash. This has been observed for Hydra and The Experiment, and it is unclear how extensive the issue is, and a fix is not obvious. This has been noted on the KNOWN_ISSUES page, and some bosses have been marked as a gimmick in the struggle fights (which is the set of locations where you are most likely to enter while in limit form)
 
 4.0.3
 
