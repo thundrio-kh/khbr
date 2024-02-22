@@ -1,5 +1,6 @@
 ## General
 * Sometimes being in Limit form before entering a boss fight can cause a crash when the boss fight loads.
+* Due to a potential softlock with Assassins in forced fights, Dancers are used instead of Assassins. If the spoiler log says an enemy was replaced by an Assassin, it was replaced by a Dancer instead.
 
 ## Armor Xemnas I 
 * Chakrams/Water Clones can spawn OOB
@@ -9,7 +10,7 @@
 
 ## Final Xemnas
 * Getting his HP to "Dome Skip" phase causes his AI to turn off. So if he is very high in the air or out of bounds when this happens, it can be possible to be unable to finish the fight without Thunder/etc 
-* Can sometimes randomly turn invisible and invulnerable, making the fight unbeatable | 
+* Can sometimes randomly turn invisible and invulnerable, making the fight unbeatable
 * Can potentially crash when the fight is ended while in Limit Form, may only happen in some rooms
 
 ## Hydra

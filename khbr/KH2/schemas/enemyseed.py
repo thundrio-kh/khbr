@@ -170,6 +170,10 @@ class EnemySeed:
             mods += [mod for mod in add.get("aimods",[]) if mod.get("source", "new") == "new"]
             mods += [mod for mod in add.get("aimods",[]) if mod.get("source", "old") == "new"]
 
+        # Hack because when Pirates replace pirates no ai mod needs to be applied
+        if "pirate" in old_boss_object.get("tags") and "pirate" in new_boss_object.get("tags"):
+            mods = []
+
         for mod in mods:
             vars = mod.get("vars", {})
             for k,v in mod.get("replacements",{}).items():

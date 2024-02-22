@@ -53,8 +53,8 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Data Bosses", "description": "Include the Data versions of organization members in the pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},      
-            "gimmick_bosses": {"display_name": "Allow more annoying replacements (PC Only)", "description": "Allow a set of banned replacements that may be end up being exceedingly difficult/tedious, or that can softlock in certain cases. Example: Allows Sephiroth to replace Blizzard or Volcano Lord.",
-                                "type": "boss", "possible_values": [False, True], "hidden_values": []},       
+            "gimmick_bosses": {"display_name": "Allow more risky replacements (PC Only)", "description": "Allow a set of banned replacements that may be end up being exceedingly difficult/tedious, or that can softlock/crash in certain cases.\nExample: Allows Sephiroth to replace Blizzard or Volcano Lord.\nWhen using this option it is useful to be aware of the major known issues (https://github.com/thundrio-kh/khbr/blob/master/KNOWN_ISSUES).",
+                                "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "sephiroth": {"display_name": "Randomize Sephiroth", "description": "Include Sephiroth in the boss randomization pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "terra": {"display_name": "Randomize Lingering Will", "description": "Include Lingering Will in the boss randomization pool",
@@ -63,7 +63,7 @@ class KingdomHearts2:
             #                     "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "mickey_rule": {"display_name": "Mickey Appearance Settings", "description": "Choose when Mickey appears. Options are 'follow', where Mickey appears for the same bosses as in the vanilla game, regardless of their location. 'stay', where Mickey appears in the same locations as in the vanilla game, regardless of the location. 'all', Mickey will appear for every boss in the game, regardless of if Mickey normally apepars there. 'none', Mickey will never appear. 'stay' and 'all' have potential to make boss fights less stable on PS2",
                                 "type": "boss", "possible_values": ["follow", "stay", "all", 'none'], "hidden_values": []},
-            "scale_boss_stats": {"display_name": "Scale HP to Original Boss", "description": "Attempts to force bosses level/HP to the scale of the boss it is replacing. When turned off uses the games scaling which is partially based on the battle level of the world except for Datas/Terra which are always level 99.",
+            "scale_boss_stats": {"display_name": "Scale HP to Original Boss", "description": "Attempts to force bosses level/HP to the scale of the boss it is replacing, if boss mode is wild, this will pick one of the bosses being replaced as the 'source' for stats. When turned off uses the games scaling which is partially based on the battle level of the world except for Datas/Terra which are always level 99.",
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
         }
     def get_hidden_options(self):
@@ -203,6 +203,10 @@ class KingdomHearts2:
                 rand_seed.ai_mods["B_EX170_LAST/b_ex.bdscript"] = [{'name': 'B_EX170_LAST/b_ex.bdscript', 'type': 'obj', 'vars': {}}]
             if not "B_EX170_LAST_LV99/b_ex.bdscript" in rand_seed.ai_mods:
                 rand_seed.ai_mods["B_EX170_LAST_LV99/b_ex.bdscript"] = [{'name': 'B_EX170_LAST_LV99/b_ex.bdscript', 'type': 'obj', 'vars': {}}]
+
+        # Kind of hacky but if Other Enemies is false then the object mod for Pirate C should not be applied
+        if not config.other_enemies and 1109 in rand_seed.object_map:
+            del rand_seed.object_map[1109]
 
         rand_seed_json= rand_seed.toJson()
         if not rand_seed_json:
