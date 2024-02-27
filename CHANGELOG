@@ -11,6 +11,7 @@ Fixes
 * Renamed option to allow annoying replacements to "risky", to make it more obvious this can make crashes more likely
 * Fixed issue where Pirates would still be damageable outside of moonlight if they only replaced other pirates
 * Changed the category for Gargoyles to memoryLarge so that they can't replace shadows on PS2 (which can cause a crash)
+* Fix issue where struggle bosses would not be invulnerable in fights with invulnerable bosses (IE Hades I or other Struggle bosses)
 
 4.0.3
 

@@ -21,6 +21,106 @@ Name: n_ex600_btl
 ; codeLabels: 
 ; codeRevealer: -l 564 -l 2224 -l 2437 -l 2496 -l 2497 -l 2591 -l 2608 -l 2613 -l 2628 -l 2705 -l 2902 -l 2958 -l 3039 -l 3105 -l 3349 -l 3442 -l 3501 -l 3520 -l 3619 -l 3620 -l 3741 -l 3795 -l 3817 -l 3881 -l 3913 -l 3950 -l 3977 -l 4093 -l 4096 -l 4099 -l 4271 -l 4340 -l 4519 -l 4596 -l 4604 -l 4620 -l 4647 -l 4663 -l 5095 -l 5133 -l 5198 -l 5214 -l 5416 -l 5432 -l 5464 -l 5480 -l 5507 -l 5523 -l 5584 -l 5597 -l 5610 -l 5623 -l 5636 -l 5700 -l 5711 -l 5885 -l 6081 -l 6183 -l 6390
  section .text
+SHOULD_REMOVE_INVULN:
+ gosub 4, IS_HADES_1
+ jnz RET_FALSE
+ gosub 4, IS_HADES_ESCAPE
+ jnz RET_FALSE
+ gosub 4, IS_HADES_2_1
+ jnz RET_FALSE
+ gosub 4, IS_STRUGGLE
+ jnz RET_FALSE
+ gosub 4, IS_SEIFER
+ jnz RET_FALSE
+ jmp RET_TRUE
+IS_HADES_1:
+ syscall 1, 23 ; trap_area_world
+ pushImm 6
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 24 ; trap_area_area
+ pushImm 6
+ sub
+ eqz
+ jz RET_FALSE
+ jmp RET_TRUE
+IS_HADES_ESCAPE:
+ syscall 1, 23 ; trap_area_world
+ pushImm 6
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 24 ; trap_area_area
+ pushImm 5
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 26 ; trap_area_battle_set
+ pushImm 111
+ sub
+ eqz
+ jz RET_FALSE
+ jmp RET_TRUE
+IS_HADES_2_1:
+ syscall 1, 23 ; trap_area_world
+ pushImm 6
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 24 ; trap_area_area
+ pushImm 19
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 26 ; trap_area_battle_set
+ pushImm 201
+ sub
+ eqz
+ jz RET_FALSE
+ jmp RET_TRUE
+IS_STRUGGLE:
+ syscall 1, 23 ; trap_area_world
+ pushImm 2
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 24 ; trap_area_area
+ pushImm 5
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 26 ; trap_area_battle_set
+ pushImm 87
+ sub
+ eqz
+ jnz RET_FALSE ; opposite cuz Axel
+ jmp RET_TRUE
+IS_SEIFER:
+ syscall 1, 23 ; trap_area_world
+ pushImm 2
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 24 ; trap_area_area
+ pushImm 4
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 26 ; trap_area_battle_set
+ pushImm 180
+ sub
+ eqz
+ jz RET_FALSE
+ jmp RET_TRUE
+RET_TRUE:
+ pushImm 1
+ ret
+RET_FALSE:
+ pushImm 0
+ ret
+RET:
+ ret
 TR10:
  popToSp 0
  popToSp 4
@@ -904,10 +1004,6 @@ L623:
  pushImm 0
  syscall 2, 9 ; trap_btlobj_set_sheet (3 in, 0 out)
  pushFromFSp 0
- syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
- pushImm 1
- pushImm 0
- pushFromFSp 0
  pushImmf 30
  syscall 2, 76 ; trap_enemy_set_karma_limit (2 in, 0 out)
  pushImm 0
@@ -923,8 +1019,14 @@ L623:
  popToSpVal 120
  pushImm 0
  popToSpVal 124
- ret 
+ gosub 4, SHOULD_REMOVE_INVULN
+ jnz RET
+ pushFromFSp 0
+ syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
+ pushImm 1
+ pushImm 0
  syscall 1, 231 ; trap_sheet_set_min_hp (3 in, 0 out)
+ ret 
 L2097:
  popToSp 4
  popToSp 0

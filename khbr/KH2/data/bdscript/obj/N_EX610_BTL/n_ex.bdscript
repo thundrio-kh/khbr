@@ -21,6 +21,106 @@ Name: n_ex610_btl
 ; codeLabels: 
 ; codeRevealer: -l 552 -l 2398 -l 2457 -l 2458 -l 2475 -l 2480 -l 2495 -l 2572 -l 2769 -l 2825 -l 2841 -l 2922 -l 2988 -l 3232 -l 3325 -l 3384 -l 3403 -l 3502 -l 3503 -l 3681 -l 3735 -l 3757 -l 3821 -l 3895 -l 4006 -l 4009 -l 4012 -l 4235 -l 4304 -l 4483 -l 4560 -l 4568 -l 4747 -l 4757 -l 4767 -l 4937 -l 5035 -l 5157 -l 5170 -l 5268 -l 5328 -l 5341 -l 5372 -l 5388 -l 5415 -l 5431 -l 5556 -l 5572 -l 5615 -l 5692 -l 5729 -l 5742 -l 5755 -l 5768 -l 5832 -l 5902 -l 6111 -l 6159 -l 6216 -l 6268 -l 6320
  section .text
+SHOULD_REMOVE_INVULN:
+ gosub 4, IS_HADES_1
+ jnz RET_FALSE
+ gosub 4, IS_HADES_ESCAPE
+ jnz RET_FALSE
+ gosub 4, IS_HADES_2_1
+ jnz RET_FALSE
+ gosub 4, IS_STRUGGLE
+ jnz RET_FALSE
+ gosub 4, IS_SEIFER
+ jnz RET_FALSE
+ jmp RET_TRUE
+IS_HADES_1:
+ syscall 1, 23 ; trap_area_world
+ pushImm 6
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 24 ; trap_area_area
+ pushImm 6
+ sub
+ eqz
+ jz RET_FALSE
+ jmp RET_TRUE
+IS_HADES_ESCAPE:
+ syscall 1, 23 ; trap_area_world
+ pushImm 6
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 24 ; trap_area_area
+ pushImm 5
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 26 ; trap_area_battle_set
+ pushImm 111
+ sub
+ eqz
+ jz RET_FALSE
+ jmp RET_TRUE
+IS_HADES_2_1:
+ syscall 1, 23 ; trap_area_world
+ pushImm 6
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 24 ; trap_area_area
+ pushImm 19
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 26 ; trap_area_battle_set
+ pushImm 201
+ sub
+ eqz
+ jz RET_FALSE
+ jmp RET_TRUE
+IS_STRUGGLE:
+ syscall 1, 23 ; trap_area_world
+ pushImm 2
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 24 ; trap_area_area
+ pushImm 5
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 26 ; trap_area_battle_set
+ pushImm 87
+ sub
+ eqz
+ jnz RET_FALSE ; opposite cuz Axel
+ jmp RET_TRUE
+IS_SEIFER:
+ syscall 1, 23 ; trap_area_world
+ pushImm 2
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 24 ; trap_area_area
+ pushImm 4
+ sub
+ eqz
+ jz RET_FALSE
+ syscall 1, 26 ; trap_area_battle_set
+ pushImm 180
+ sub
+ eqz
+ jz RET_FALSE
+ jmp RET_TRUE
+RET_TRUE:
+ pushImm 1
+ ret
+RET_FALSE:
+ pushImm 0
+ ret
+RET:
+ ret
 TR10:
  popToSp 0
  popToSp 4
@@ -957,9 +1057,11 @@ L611:
  pushImm 157
  pushImm 0
  syscall 2, 9 ; trap_btlobj_set_sheet (3 in, 0 out)
+ gosub 4, SHOULD_REMOVE_INVULN
+ jnz L2212
  pushFromFSp 0
  syscall 1, 84 ; trap_obj_sheet (1 in, 1 out)
- pushImm 0
+ pushImm 1
  pushImm 0
  syscall 1, 231 ; trap_sheet_set_min_hp (3 in, 0 out)
  jmp L2212
