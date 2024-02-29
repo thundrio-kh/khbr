@@ -12,6 +12,7 @@ Fixes
 * Fixed issue where Pirates would still be damageable outside of moonlight if they only replaced other pirates
 * Changed the category for Gargoyles to memoryLarge so that they can't replace shadows on PS2 (which can cause a crash)
 * Fix issue where struggle bosses would not be invulnerable in fights with invulnerable bosses (IE Hades I or other Struggle bosses)
+* Updated Hydra Head AI so when executing the finisher RC, you are rubberbanded back to where Sora started the RC, instead of a random location in the arena
 
 4.0.3
 

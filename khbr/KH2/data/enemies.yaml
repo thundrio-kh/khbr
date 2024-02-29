@@ -3180,6 +3180,8 @@ Hydra:
   aimods: 
   - name: B_HE110/b_he.bdscript
     type: obj
+  - name: B_HE100/b_he.bdscript
+    type: obj
   blacklist_destination:
   - Xigbar # softlock possible
   - Axel I

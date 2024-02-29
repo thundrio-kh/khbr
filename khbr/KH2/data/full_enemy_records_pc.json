@@ -2039,7 +2039,7 @@
         "enmp_index": 999,
         "model": "M_BB010_SWORD",
         "obj_id": 367,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "isnightmare": true,
         "variations": [
@@ -2101,7 +2101,7 @@
         "enmp_index": 999,
         "model": "M_BB010_SWORD",
         "obj_id": 367,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "isnightmare": true,
         "variations": [
@@ -2163,7 +2163,7 @@
         "enmp_index": 999,
         "model": "M_BB010_SWORD",
         "obj_id": 367,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "isnightmare": true,
         "variations": [
@@ -2225,7 +2225,7 @@
         "enmp_index": 999,
         "model": "M_BB010_SWORD",
         "obj_id": 367,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "isnightmare": true,
         "variations": [
@@ -2287,7 +2287,7 @@
         "enmp_index": 999,
         "model": "M_BB010_SWORD",
         "obj_id": 367,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "isnightmare": true,
         "variations": [
@@ -2352,7 +2352,7 @@
         "model": "M_BB010_AX",
         "obj_id": 368,
         "isnightmare": true,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "variations": [
             "Gargoyle Warrior (40 0)",
@@ -2414,7 +2414,7 @@
         "model": "M_BB010_AX",
         "obj_id": 368,
         "isnightmare": true,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "variations": [
             "Gargoyle Warrior (40 0)",
@@ -2476,7 +2476,7 @@
         "model": "M_BB010_AX",
         "obj_id": 368,
         "isnightmare": true,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "variations": [
             "Gargoyle Warrior (40 0)",
@@ -2538,7 +2538,7 @@
         "model": "M_BB010_AX",
         "obj_id": 368,
         "isnightmare": true,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "variations": [
             "Gargoyle Warrior (40 0)",
@@ -2600,7 +2600,7 @@
         "model": "M_BB010_AX",
         "obj_id": 368,
         "isnightmare": true,
-        "sizeTag": "memorySmall",
+        "sizeTag": "memoryLarge",
         "type": "enemy",
         "variations": [
             "Gargoyle Warrior (40 0)",
@@ -15888,6 +15888,10 @@
         "aimods": [
             {
                 "name": "B_HE110/b_he.bdscript",
+                "type": "obj"
+            },
+            {
+                "name": "B_HE100/b_he.bdscript",
                 "type": "obj"
             }
         ],
