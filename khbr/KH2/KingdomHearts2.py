@@ -97,6 +97,8 @@ class KingdomHearts2:
             "apply_better_stt": {"display_name": "Apply Better STT", "description": "Applies Better STT mod.",
                                 "possible_values": [], "hidden_values": [False, True]},
             "force_boss_story_levels": {"display_name": "Force Boss Story Levels", "description": "Forces battle levels for boss rooms to be the same as the game. Used primarily by Boss Rush.",
+                                "possible_values": [], "hidden_values": [False, True]},
+            "is_boss_rush": {"display_name": "Is Boss Rush", "description": "Flag to set when the randomization is used for boss rush.",
                                 "possible_values": [], "hidden_values": [False, True]}
         }
 
@@ -126,6 +128,8 @@ class KingdomHearts2:
             utility_mods.append("apply_better_stt")
         if options.get("force_boss_story_levels"):
             utility_mods.append("force_boss_story_levels")
+        if options.get("is_boss_rush"):
+            utility_mods.append("is_boss_rush")
         rmcs = options.get("remove_cutscenes", "Disabled")
         if rmcs and rmcs != "Disabled":
             utility_mods.append("remove_cutscenes{}".format(options.get("remove_cutscenes")))
@@ -335,8 +339,12 @@ class KingdomHearts2:
         else:
             modwriter = ModWriter(outdir)
 
-        assetgenerator = AssetGenerator(modwriter, spawn_manager=self.spawn_manager, location_manager=self.location_manager, enemy_manager=self.enemy_manager, ispc=randomization.get("memory_expansion", False))
         utility_mods = randomization.get("utility_mods", [])
+
+        force_story_boss_levels = "force_story_boss_levels" in utility_mods
+        is_boss_rush = "is_boss_rush" in utility_mods
+        assetgenerator = AssetGenerator(modwriter, spawn_manager=self.spawn_manager, location_manager=self.location_manager, enemy_manager=self.enemy_manager, ispc=randomization.get("memory_expansion", False), force_story_boss_levels=force_story_boss_levels, is_boss_rush=is_boss_rush)
+        
 
         rvlrando = None
         for mod in utility_mods:

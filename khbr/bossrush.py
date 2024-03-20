@@ -280,6 +280,7 @@ def main(cli_args: list=[]):
         "memory_expansion": True if args.platform == "pc" else False,
         "always_set_retry": True,
         "apply_better_stt": True,
+        "is_boss_rush": True,
         "force_boss_story_levels": True if not _translate_bool(args.debug_minimum_boss_health) else False,
         "scale_boss_stats": True if _translate_bool(args.debug_minimum_boss_health) else False,
         "remove_damage_cap": True if _translate_bool(args.debug_no_damage_cap) else False,

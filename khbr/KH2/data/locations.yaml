@@ -11338,6 +11338,9 @@ Olympus Coliseum:
             isboss: false
             name: Fiery Globe
   The Underdrome:
+    battlescriptadds_br:
+      202:
+      - BattleLevel 39
     size: 5000000
     spawnpoints:
       b_62:
@@ -14427,6 +14430,9 @@ Olympus Coliseum:
             name: Hook Bat
 Port Royal:
   Harbor 01:
+    battlescriptadds_br:
+      54:
+      - BattleLevel 37
     size: 5000000
     spawnpoints:
       b_00:
@@ -21794,6 +21800,10 @@ The World That Never Was:
             isboss: true
             name: Final Xemnas (Data)
   The World of Nothing 23:
+    battlescriptadds_br:
+      73:
+      - BattleLevel 50
+    extra_btl_mods: []
     roommodedits:
       b_99: ax2_99 # characters
       b_40: ax2_40 # buildings

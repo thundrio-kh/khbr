@@ -55,6 +55,23 @@ class Tests(unittest.TestCase):
         # Make sure it's valid base64
         base64.decodebytes(b64)
 
+    def test_generate_enemies_wild(self):
+        options = {"enemy": "Wild", "memory_expansion": True}
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        # Make sure it's valid base64
+        base64.decodebytes(b64)
+
+    def test_generate_party_rando(self):
+        options = {"party_member_rando": True}
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        # Make sure it's valid base64
+        base64.decodebytes(b64)
+
+
     def test_seedgen_boss_and_enemy_one_to_one(self):
         options = {"enemy": "One to One", "boss": "One to One"}
         randomization1 = testutils.generateSeed(options)
@@ -494,9 +511,10 @@ class Tests(unittest.TestCase):
 # And coverage
 
 # Uncomment to run a single test through ipython
-#ut = Tests()
+ut = Tests()
+ut.test_generate_enemies_wild()
+ut.test_generate_party_rando()
 #ut.test_wild_dont_randomize_demyxoc()
 
 # Uncomment to run the actual tests
-unittest.main()
-
+# unittest.main()

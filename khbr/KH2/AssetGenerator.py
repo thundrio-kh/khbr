@@ -14,13 +14,15 @@ import random
 
 # TODO future refactor could use jsonpath to make looking through the complex spawns dict easier
 class AssetGenerator:
-    def __init__(self, modwriter, spawn_manager = None, location_manager=None, enemy_manager = None, ispc=False, cutscene_remover=False):
+    def __init__(self, modwriter, spawn_manager = None, location_manager=None, enemy_manager = None, ispc=False, is_boss_rush=False, force_story_boss_levels=False):
         self.assets = []
         self.modwriter = modwriter
         self.enemy_manager = enemy_manager
         self.location_manager = location_manager
         self.spawn_manager = spawn_manager
         self.ispc = ispc
+        self.is_boss_rush=is_boss_rush
+        self.force_story_boss_levels=force_story_boss_levels
 
     #TODO this might be super slow
     def find_asset(self, assetname, default=None):
@@ -430,6 +432,9 @@ class AssetGenerator:
 
                 basespawns = original_spawns[w][r]
                 btlmods = {"adds": basespawns.get("battlescriptadds", {}) }
+                if self.is_boss_rush:
+                    for k,v in basespawns.get("battlescriptadds_br", {}).items():
+                        btlmods["adds"][k] = v
                 evtmods = {"fix_settings": []}
 
                 roommods = self.spawn_manager.apply_room_mods(basespawns, ardname)
@@ -463,13 +468,13 @@ class AssetGenerator:
                                     continue # Case like AX1 room where AX1 was replaced subtracting the spawns that got replaced by the icy cube... Smelly way to fix this
                                 old_spawn = old_spid["Entities"][old_spawn_index]
                                 old_obj = self.enemy_manager.lookup_object_by_id(old_spawn["ObjectId"])
-                                if old_obj.get("story_level", 0) > 0:
+                                if old_obj.get("story_level", 0) > 0 and self.force_story_boss_levels:
                                     prg = old_obj["program"]
                                     if old_obj["program"] in btlmods["adds"]:
                                         btlmods["adds"][prg].append("BattleLevel {}".format(old_obj["story_level"]))
                                     else:
                                         btlmods["adds"][prg] = ["BattleLevel {}".format(old_obj["story_level"])]
-                                if "fix_source_area_settings" in old_obj["tags"]:
+                                if "fix_source_area_settings" in old_obj["tags"] and self.is_boss_rush:
                                     evtmods["fix_settings"].append({"world": getworld(old_obj), "room": getroom(old_obj), "program": old_obj["program"], "options": {"fix_source_area_settings": True} })
 
                                 if old_spawn["ObjectId"] == 1543 and new_entity["name"] == "Grim Reaper II" and old_spawn["Argument1"] == 0: # Grim Reaper II is replacing itself
@@ -521,8 +526,7 @@ class AssetGenerator:
                     self.update_area_data_programs(ardname, roomasset["source"], btlmods)
 
                 for evt_mod in evtmods["fix_settings"]:
-                    #self.generateEvt(evt_mod["world"], evt_mod["room"], evt_mod["program"], roomasset["source"], options=evt_mod["options"])
-                    pass
+                    self.generateEvt(evt_mod["world"], evt_mod["room"], evt_mod["program"], roomasset["source"], options=evt_mod["options"])
             
                 self.assets.append(roomasset)
         if text_spoilers["final_fights"]:
@@ -530,13 +534,6 @@ class AssetGenerator:
             self.assets.append(textasset)
 
     def update_area_data_programs(self, ardname, roomsource, btlmods={}):
-        # TODO FIXME THIS HACKY but for now just comment out when building on pypi, since these are just for boss rush
-        # if ardname == "eh23":
-        #     btlmods = {'adds': {73: ['BattleLevel 50']}}
-        # elif ardname == "ca01":
-        #     btlmods = {'adds': {54: ['BattleLevel 37']}}
-        # elif ardname == "he19":
-        #     btlmods = {'adds': {202: ['BattleLevel 39']}}
         def _can_update_capacity(ispc, prg):
             if not prg.has_command("Capacity"):
                 return False
@@ -565,8 +562,6 @@ class AssetGenerator:
                     prg.add_enemy_spec()
             if p in btlmods.get("adds",{}):
                 for l in btlmods["adds"][p]:
-                    if "BattleLevel" in l: # TODO This is hacky but I don't know why this is happening outside boss rush
-                        continue
                     prg.add_line(l)
             programasset = self.modwriter.writeAreaDataProgram(ardname, "btl", p, prg.make_program())
             roomsource.append(programasset)
