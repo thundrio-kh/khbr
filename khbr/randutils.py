@@ -1,7 +1,7 @@
 import random, struct, os
 
 DEBUG_BOSS_LIST = None
-#DEBUG_BOSS_LIST = {'Armor Xemnas I': 'Past Pete', 'Armor Xemnas II': 'Past Pete', "Final Xemnas": "The Beast", "Roxas": "Sark"}
+#DEBUG_BOSS_LIST = {"Volcano Lord": "Cloud", "Blizzard Lord": "Tifa"}
 
 def log_output(msg, log_level = 2):
     use_log_level = os.environ.get("KHBR_LOG_LEVEL", 0)

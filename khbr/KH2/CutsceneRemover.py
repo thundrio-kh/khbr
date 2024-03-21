@@ -37,6 +37,7 @@ class CutsceneRemover:
         self.always_remove = {
         }
         self.unskippable = []
+        self.written_cutscenes = set()
     def shouldRemove(self, ard, program, ismission, eventnum, eventtype, full_event_list):
         if ard[:2] in self.ignore_worlds:
             return False
@@ -81,6 +82,12 @@ class CutsceneRemover:
         return "0frame"
     # Another TODO: Write logic to main a list to reference of all the chains of cutscenes, and if they were going to be rewritten what flags/etc would be used
     def removeCutscenes(self):
+
+        def _writeEventFile(ardasset, new_cutscene_name, eventnum):
+            new_cutscene = self.cutscenes[new_cutscene_name]
+            eventasset = self.assetgenerator.modwriter.writeEvent(eventnum, new_cutscene_name, new_cutscene, write=new_cutscene_name in self.written_cutscenes)
+            self.written_cutscenes.add(new_cutscene_name)
+            ardasset["source"].append(eventasset)
         # TODO to get rid of the type 66 cutscenes in STT that matter, make a mapping of all cutscenes and their type, for ones that only have a type66 and not something else, add to always remove
         mapping = {}
         for ardname in self.location_manager.locmap.values():
@@ -125,18 +132,15 @@ class CutsceneRemover:
                     removecs = self.shouldRemove(ardname, num, ismission, eventnum, eventtype, events_list)
                     if removecs:
                         new_cutscene_name = self.get_cutscene_name(evtprogram, eventnum, eventtype)
-                        new_cutscene = self.cutscenes[new_cutscene_name]
-                        #log_output(ardname,eventnum,new_cutscene_name)
-                        # TODO should not be creating hundreds of duplicate event files
-                        eventasset = self.assetgenerator.modwriter.writeEvent(ardname, str(eventnum), new_cutscene)
-                        ardasset["source"].append(eventasset)
+                        _writeEventFile(ardasset, new_cutscene_name, str(eventnum))
+
             # This isn't getting picked up atm because my areadataprogram parser only parses the first areadatasettings in a program
             # so hack with a TODO to fix
             if "tt04" in ardasset["name"]:
-                eventasset = self.assetgenerator.modwriter.writeEvent("tt04", str(110), self.cutscenes["0frame"])
-                ardasset["source"].append(eventasset)
-                eventasset = self.assetgenerator.modwriter.writeEvent("tt04", str(111), self.cutscenes["0frame"])
-                ardasset["source"].append(eventasset)
+                _writeEventFile(ardasset, "0frame", str(110))
+                _writeEventFile(ardasset, "0frame", str(111))
+
+
         # l = []
         # for k,v in mapping.items():
         #     if v == {'66'}:

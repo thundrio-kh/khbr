@@ -248,11 +248,13 @@ class ModWriter:
             "type": "AreaDataScript"
         }
     
-    def writeEvent(self, ardname, eventnumber, event):
-        filename = ardname+"_"+str(eventnumber)+".event"
-        outfn = os.path.join(self.outdir, "files", "ard", ardname, filename)
-        fn = os.path.join("files", "ard", ardname, filename)
-        self.write_method(outfn, fn, event)
+    
+    def writeEvent(self, eventnumber, eventname, event, write=True):
+        filename = eventname+".event"
+        outfn = os.path.join(self.outdir, "files", "event", filename)
+        fn = os.path.join("files", "event", filename)
+        if write:
+            self.write_method(outfn, fn, event)
         return {
             "method": "copy",
             "name": str(eventnumber),

@@ -13,6 +13,7 @@ Fixes
 * Changed the category for Gargoyles to memoryLarge so that they can't replace shadows on PS2 (which can cause a crash)
 * Fix issue where struggle bosses would not be invulnerable in fights with invulnerable bosses (IE Hades I or other Struggle bosses)
 * Updated Hydra Head AI so when executing the finisher RC, you are rubberbanded back to where Sora started the RC, instead of a random location in the arena
+* Updated Cutscene Remover functionality to only create one copy of each modified event in the mod zip.
 
 4.0.3
 

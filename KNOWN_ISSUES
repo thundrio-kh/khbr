@@ -17,6 +17,9 @@
 * After doing a initial vanquish on the Hydra, it is possible to end up out of bounds but you are high in the air so just move to be back in bounds as soon as possible
 * If you do the Phil One-Two Reaction Command twice, the game will crash
 
+## Lexaeus
+* Using Limit form or other limits during his DM can crash the game
+
 ## Luxord
 * Phases where he transforms into a bunch of cards the cards can sometimes start OOB
 
