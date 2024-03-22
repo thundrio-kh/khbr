@@ -1,5 +1,5 @@
 ---
-WorkSize: 4592
+WorkSize: 4596
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -25,10 +25,10 @@ Name: b_ex110
  section .text
 GETRANDOMPOS:
  pushFromPWp WSTARTPOS
- pushImmf 100; near
- pushImmf 100 ; far
- pushImmf 0 ; low make this 100-200 to spawn in air
- pushImmf 0 ; high make this 100-200 to spawn in air
+ pushImmf 600; near
+ pushImmf 600 ; far
+ pushFromFWp ASSAULT_HEIGHT ; low
+ pushFromFWp ASSAULT_HEIGHT ; high
  syscall 1, 248 ; trap_bg_get_random_pos_air
  ret
 TR11:
@@ -2047,6 +2047,8 @@ L3554:
  dup
  syscall 1, 147 ; trap_obj_pos
  memcpyToWp 16, WSTARTPOS
+ pushImmf 400 ; initial height
+ popToWp ASSAULT_HEIGHT
  pushFromPWp W436
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W436
@@ -3980,6 +3982,8 @@ L7530:
  pushFromPSp 112
  memcpyToSp 16, 16
 L7551:
+ pushImmf 10
+ popToWp ASSAULT_HEIGHT
  pushFromFSp 0
  gosub 32, L6106
  pushImmf 0.5
@@ -3997,6 +4001,8 @@ L7551:
  popToSp 104
  jmp L7604
 L7584:
+ pushImmf 400
+ popToWp ASSAULT_HEIGHT
  pushFromPSp 16
  pushImm 4
  add 
@@ -5850,7 +5856,7 @@ L11019: ;___label for action pushFromPAi L13900 ; ___ai rvg_hard
  infzf 
  jz L11040
  pushFromFSp 0
- pushFromPAi L13747 ; ___ai atk_burst_fast (L13747)
+pushFromPAi L13747 ; ___ai atk_burst_fast (L13747)
  syscall 1, 8 ; trap_obj_act_start (2 in, 0 out)
  jmp L11052
 L11040:
@@ -7536,6 +7542,8 @@ W4564:
  resb 4
 W4568:
  resb 8
+ASSAULT_HEIGHT:
+ resb 4
 
 WSTARTPOS:
  resb 16

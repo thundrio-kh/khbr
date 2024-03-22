@@ -1,5 +1,5 @@
 ---
-WorkSize: 4592
+WorkSize: 4596
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -25,10 +25,10 @@ Name: b_ex110_lv99
  section .text
 GETRANDOMPOS:
  pushFromPWp WSTARTPOS
- pushImmf 100; near
- pushImmf 100 ; far
- pushImmf 0 ; low make this 100-200 to spawn in air
- pushImmf 0 ; high make this 100-200 to spawn in air
+ pushImmf 600; near
+ pushImmf 600 ; far
+ pushFromFWp ASSAULT_HEIGHT
+ pushFromFWp ASSAULT_HEIGHT
  syscall 1, 248 ; trap_bg_get_random_pos_air
  ret
 TR11:
@@ -2061,6 +2061,8 @@ L3585:
  dup
  syscall 1, 147 ; trap_obj_pos
  memcpyToWp 16, WSTARTPOS
+ pushImmf 400 ; initial height
+ popToWp ASSAULT_HEIGHT
  pushFromPWp W440
  syscall 1, 7 ; trap_obj_set_act_table (2 in, 0 out)
  pushFromPWp W440
@@ -3880,6 +3882,8 @@ L7320:
  pushFromFWp W4560
  neqzv 
 L7335:
+ pushImmf 10
+ popToWp ASSAULT_HEIGHT
  jz L7392
  pushFromFSp 0
  gosub 32, L5962
@@ -3898,6 +3902,8 @@ L7335:
  popToSp 104
  jmp L7390
 L7370:
+ pushImmf 400
+ popToWp ASSAULT_HEIGHT
  pushFromPSp 16
  pushImm 4
  add 
@@ -7892,6 +7898,8 @@ TXT14589:
 L14592:
 TXT14592:
  db 'atk_burst',0
+ASSAULT_HEIGHT:
+ resb 4
 
  section .bss
 W0:
