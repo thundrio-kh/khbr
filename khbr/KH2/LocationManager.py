@@ -9,9 +9,18 @@ class LocationManager:
         self.set_locmap()
         self.set_locations()
 
+    def _merge_dicts(self, dict1, dict2):
+        for k, v in dict2.items():
+            if isinstance(v, dict):
+                dict1[k] = self._merge_dicts(dict1.get(k, {}), v)
+            else:
+                dict1[k] = v
+        return dict1
+
     def set_locmap(self):
         with open(os.path.join(self.basepath, "location-ard-map.json")) as f:
             self.locmap = json.load(f)
+
     def set_locations(self):
         with open(os.path.join(os.path.dirname(__file__), "data", "locations.yaml")) as f:
             locations_f = yaml.load(f, Loader=yaml.FullLoader)
@@ -26,9 +35,14 @@ class LocationManager:
             locations_f = newlocations
         self.locations = locations_f
 
+    def update_locations(self, new_locations):
+        self.locations = self._merge_dicts(self.locations, new_locations)
+
+    def update_locmap(self, new_locmap):
+        self.locmap = self._merge_dicts(self.locmap, new_locmap)
+
     def get_ardname(self, room):
         return self.locmap[room]
-
 
     @staticmethod
     def update_location(location, config: RandomConfig):

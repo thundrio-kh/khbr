@@ -1,7 +1,20 @@
-import random, struct, os
+import random, struct, os, yaml, json
+from pathlib import Path
 
 DEBUG_BOSS_LIST = None
 #DEBUG_BOSS_LIST = {"Volcano Lord": "Cloud", "Blizzard Lord": "Tifa"}
+
+def read_override(name):
+    override_fn = 'override_{}'.format(name)
+    override_path = Path(override_fn).absolute()
+    if override_path.is_file():
+        with open(override_path, encoding='utf-8') as f:
+            if name.endswith(".yaml"):
+                return yaml.load(f, Loader=yaml.SafeLoader)
+            elif name.endswith(".json"):
+                return json.load(f)
+            print("Warning: read_override unsupported filetype: {}".format(override_fn))
+    return {}
 
 def log_output(msg, log_level = 2):
     use_log_level = os.environ.get("KHBR_LOG_LEVEL", 0)

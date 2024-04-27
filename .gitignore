@@ -49,4 +49,7 @@ tmp
 custom.route
 custom.stuff
 
+override_locations.yaml
+override_enemies.yaml
+
 khbr/build

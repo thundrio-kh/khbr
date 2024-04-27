@@ -4,7 +4,7 @@ from khbr.KH2.ModWriter import ModWriter
 from khbr.KH2.schemas.enemyseed import EnemySeed
 from khbr.textutils import create_spoiler_text
 from khbr._config import DIAGNOSTICS
-from khbr.randutils import pickbossmapping, pickenemymapping, log_output
+from khbr.randutils import pickbossmapping, pickenemymapping, log_output, read_override
 from khbr.KH2.EnemyManager import EnemyManager
 from khbr.KH2.LocationManager import LocationManager
 from khbr.KH2.MissionManager import MissionManager
@@ -150,6 +150,14 @@ class KingdomHearts2:
         memory_expansion = options.get("memory_expansion")
         if enemymode == "Wild" and not memory_expansion:
             raise Exception("Wild enemy mode only works on PC due to memory constraints on the PS2 version.")
+        
+        override_location_map = read_override("location-ard-map.json")
+        self.location_manager.update_locmap(override_location_map)
+        override_locations = read_override("locations.yaml")
+        self.location_manager.update_locations(override_locations)
+        override_enemies = read_override("enemies.yaml")
+        self.enemy_manager.set_enemies(memory_expansion, override=override_enemies)
+
         config = RandomConfig(
             memory_expansion = memory_expansion,
             utility_mods = self.get_utility_mods(options),
@@ -235,7 +243,6 @@ class KingdomHearts2:
                 # for enemy in rand_seed.enemymapping:
                 #     log_output(enemy+"->"+rand_seed.enemymapping[enemy])
             
-            self.location_manager.set_locations()
             spawns = self.location_manager.locations
             for w, world in spawns.items():
                 for r, room in world.items():
@@ -253,6 +260,7 @@ class KingdomHearts2:
                         created_enemies = [] # This is a little weird it's just for location aimods, ideally they would be done at a different level than the spawnpoint level
                         bosses_as_enemies = 0
                         for i, entities in spawnpoint["sp_ids"].items(): # Fun fact: The internal game code refers to these as "unit"s I believe
+
                             # TODO might be able to make this just for entity in entities
                             for e in range(len(entities)):
                                 entity = entities[e]
@@ -366,7 +374,6 @@ class KingdomHearts2:
         assetgenerator.generateLuaMods(randomization.get("lua_mods"))
         assetgenerator.generateMsns(randomization.get("msn_map", {}), self.mission_manager.msninfo)
         # self.set_spawns() # TODO is this needed?
-        self.location_manager.set_locations() # TODO this might be unneeded time waste????
         assetgenerator.generateSpawns(randomization.get("spawns", ""), randomization.get("subtract_map"))
         
         if "apply_better_stt" in utility_mods:

@@ -13,13 +13,16 @@ class EnemyManager:
         return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "enemy"]
     def get_valid_bosses(self):
         return [b for b in self.enemy_records if self.enemy_records[b]["type"] == "boss"]
-    def set_enemies(self, ispc=False):
-        fn="full_enemy_records.json"
-        if ispc:
-            fn = "full_enemy_records_pc.json"
-        with open(os.path.join(self.basepath, fn)) as f:
-            self.enemy_records = json.load(f)
-            
+    def set_enemies(self, ispc=False, override={}):
+        if not override:
+            fn="full_enemy_records.json"
+            if ispc:
+                fn = "full_enemy_records_pc.json"
+            with open(os.path.join(self.basepath, fn)) as f:
+                self.enemy_records = json.load(f)
+        else:
+            self.enemy_records = self.create_enemy_records(ispc, override=override)
+
     def get_enemies(self, options):
         #TODO other enemies aren't being disabled properly
         enemies = self.get_valid_enemies()
@@ -54,10 +57,21 @@ class EnemyManager:
             enemy["tags"] = [t for t in enemy["tags"] if t != tag]
         return enemylist
 
-    def create_enemy_records(self, ispc=False, getavail=True):
+    def merge_enemies_dicts(self, base, override):
+        for k, v in override.items():
+            if isinstance(v, dict):
+                base[k] = self.merge_enemies_dicts(base.get(k, {}), v)
+            else:
+                base[k] = v
+        return base
+
+    def create_enemy_records(self, ispc=False, getavail=True, override = {}):
         defaults = get_schema()
         with open(os.path.join(self.basepath, "enemies.yaml")) as f:
             enemies_f = yaml.load(f, Loader=yaml.FullLoader)
+        # load overrides
+        enemies_f = self.merge_enemies_dicts(enemies_f, override)
+
         enemies = {}
         parent_children_mapping = {}
 
@@ -217,7 +231,6 @@ class EnemyManager:
     def get_boss_list(self, options):
         nightmare_bosses = options.get("nightmare_bosses", False)
         ispc = options.get("memory_expansion", False)
-        self.set_enemies(ispc)
         
         bosses = {}
 
@@ -329,8 +342,6 @@ class EnemyManager:
 
 
     def categorize_enemies(self, included_enemylist, combine_sizes=False, combine_ranged=False, separate_nobodys=True, other_enemies=False, ispc=False):
-        if not self.enemy_records:
-            self.set_enemies(ispc)
         categories = {}
         for e in included_enemylist:
             parent = self.enemy_records[e["parent"]]
