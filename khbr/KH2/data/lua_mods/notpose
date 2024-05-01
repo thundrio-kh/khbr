@@ -1,0 +1,26 @@
+LUAGUI_NAME = "Disable TPOSE"
+LUAGUI_AUTH = "KSX"
+LUAGUI_DESC = "Disable TPOSE"
+
+local offset = 0x56454E
+local canExecute = false
+
+function _OnInit()
+	if ENGINE_TYPE == "BACKEND" then
+		canExecute = true
+		ConsolePrint("Disable TPOSE")
+	end
+	
+	if ReadByte(0x3C3F15 - offset) == 0x48 then
+		WriteArray(0x3C3F15 - offset, {0x90,0x90,0x90,0x90,0x90,0x90,0x90,0x90})
+		WriteArray(0x3C631E - offset, {0x90,0x90,0x90,0x90})
+	end
+	
+	if ReadByte(0x3C3D85 - offset) == 0x48 then
+		WriteArray(0x3C3D85 - offset, {0x90,0x90,0x90,0x90,0x90,0x90,0x90,0x90})
+		WriteArray(0x3C618E - offset, {0x90,0x90,0x90,0x90})
+	end
+end
+
+function _OnFrame()
+end

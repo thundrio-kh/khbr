@@ -105,6 +105,8 @@ def create_new_entity(old_entity, new_object):
         return entity
     entity = dict(old_entity)
     entity["name"] = new_object["name"]
+    if new_object.get("remove_spawn"):
+        entity["remove_spawn"] = True
     return entity
 
 class BinaryReader:

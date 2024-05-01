@@ -71,6 +71,7 @@ class KingdomHearts2:
         return {
             "memory_expansion": {"display_name": "Use Expanded Memory", "description": "The PS2 version of the game has more limited enemy randomization capabilities. Turn this option on if playing on PC to remove these constraints.",
                                 "possible_values": [False, True], "hidden_values": []},
+           
             # used by boss rush
             "always_set_retry": {"display_name": "Always Set Retry", "description": "Sets the MSN byte to always retry failed mission.",
                                 "possible_values": [False, True], "hidden_values": []},
@@ -110,6 +111,8 @@ class KingdomHearts2:
     @staticmethod
     def get_utility_mods(options):
         utility_mods = []
+        if True: # Really should be based on a hidden option, but not for now
+            utility_mods.append("animation_fix")
         if options.get("remove_damage_cap"):
             utility_mods.append("remove_damage_cap")
         if options.get("cups_give_xp"):
@@ -247,25 +250,37 @@ class KingdomHearts2:
             for w, world in spawns.items():
                 for r, room in world.items():
                     self.location_manager.update_location(room, rand_seed.config)
-                    rand_seed.wild_enemy_set = set()
+
                     if room.get("ignored"):
                         continue
                     if rand_seed.config.enemymode == "One to One Per Room":
                         rand_seed.enemymapping = pickenemymapping(self.enemy_manager.enemy_records, categorized_enemies, spoilers=self.spoilers["enemy"], nightmare=rand_seed.config.nightmare_enemies)
 
                     for sp, spawnpoint in room["spawnpoints"].items():
+                        rand_seed.wild_enemy_set = set()
+
+                        counted_enemies = {} # Counts instances of each enemy in the spawn
+                        # Used only in wild
+                        sp_max_enemy_types = self.location_manager.get_sp_max_enemy_types(r, sp)
+                        sp_for_mission = self.location_manager.get_sp_for_mission(r, sp)
+
                         self.location_manager.update_location(spawnpoint, rand_seed.config)
                         if spawnpoint.get("ignored"):
                             continue
                         created_enemies = [] # This is a little weird it's just for location aimods, ideally they would be done at a different level than the spawnpoint level
                         bosses_as_enemies = 0
-                        for i, entities in spawnpoint["sp_ids"].items(): # Fun fact: The internal game code refers to these as "unit"s I believe
+                        for i, entities in spawnpoint["sp_ids"].items(): # Fun fact: The internal game code refers to these as "unit"s
 
                             # TODO might be able to make this just for entity in entities
                             for e in range(len(entities)):
                                 entity = entities[e]
+
                                 created_entity = {}
                                 created_enemies.append(created_entity)
+
+                                ignore_entity = entity.get('ignored', False)
+                                if ignore_entity:
+                                    continue
 
                                 if rand_seed.config.bosses and entity["isboss"]:
                                     old_boss_object = self.enemy_manager.enemy_records[entity["name"]]
@@ -296,18 +311,32 @@ class KingdomHearts2:
                                     rand_seed.update_seed(old_boss_object, new_boss_object, w, r, sp, i)
 
                                 elif rand_seed.config.enemies and not entity["isboss"]:
+
                                     old_enemy_object = self.enemy_manager.get_enemy_object_from_entity(entity)
 
                                     if not self.spawn_manager.should_replace_enemy(old_enemy_object):
                                         continue
 
-                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object, room, existing_bosses_as_enemies=bosses_as_enemies)
+                                    new_enemy = self.spawn_manager.get_new_enemy(rand_seed, old_enemy_object, room, existing_bosses_as_enemies=bosses_as_enemies, is_mission=sp_for_mission, max_types=sp_max_enemy_types)
                                     if not new_enemy:
                                         continue
                                     if new_enemy == old_enemy_object["name"] and not entity.get("nameForReplace", "") == new_enemy:
                                         continue
 
                                     new_enemy_object = self.enemy_manager.get_new_enemy_object(new_enemy, rand_seed)
+
+
+
+                                    if new_enemy in spawnpoint.get("limited_enemies", {}):
+                                        curr_num = counted_enemies.get(new_enemy, 0)
+                                        limit = spawnpoint.get("limited_enemies", {})[new_enemy]
+                                        if curr_num < limit:
+                                            counted_enemies[new_enemy] = curr_num + 1
+                                        else:
+                                            # Stop adding enemies and then add the ID for the OG to the subtract map
+                                            rand_seed.add_to_subtract_map(w, r, sp, {"ObjectId": old_enemy_object["obj_id"]})
+                                            continue
+
                                     if new_enemy_object["type"] == "boss":
                                         bosses_as_enemies += 1
                                     created_entity.update(new_enemy_object)
@@ -371,7 +400,10 @@ class KingdomHearts2:
             cutsceneremover = CutsceneRemover(assetgenerator, mode=rmcs[0].replace("remove_cutscenes", ""))
             cutsceneremover.removeCutscenes()
         assetgenerator.generateAiMods(randomization.get("ai_mods"), rvlrando)
-        assetgenerator.generateLuaMods(randomization.get("lua_mods"))
+        lua_mods = randomization.get("lua_mods", [])
+        if "animation_fix" in utility_mods and randomization.get("memory_expansion", False):
+            lua_mods = lua_mods + ["notpose"]
+        assetgenerator.generateLuaMods(lua_mods)
         assetgenerator.generateMsns(randomization.get("msn_map", {}), self.mission_manager.msninfo)
         # self.set_spawns() # TODO is this needed?
         assetgenerator.generateSpawns(randomization.get("spawns", ""), randomization.get("subtract_map"))

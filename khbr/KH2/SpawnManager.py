@@ -255,19 +255,19 @@ class SpawnManager:
                 return "Luxord" # There is a strange crash on Luxord Datas DM in original Luxords arena
 
             return new_boss
-    
+
     @staticmethod
-    def get_new_enemy(rand_seed, old_enemy_object, room, existing_bosses_as_enemies=0):
+    def get_new_enemy(rand_seed, old_enemy_object, room, existing_bosses_as_enemies=0, is_mission=False, max_types=0):
         if rand_seed.config.selected_enemy:
             new_enemy = rand_seed.config.selected_enemy
         elif rand_seed.config.enemymode == "Wild":
-            new_enemy = pick_enemy_to_replace(old_enemy_object, rand_seed.config.enemies, rand_seed.wild_enemy_set, max_enemies=5)
+            new_enemy = pick_enemy_to_replace(old_enemy_object, rand_seed.config.enemies, rand_seed.wild_enemy_set, max_enemies=max_types)
         elif rand_seed.enemymapping:
             if old_enemy_object["name"] not in rand_seed.enemymapping:
                 return old_enemy_object["name"] # if it's not in mapping it's not enabled so randomize it to itself
             new_enemy = rand_seed.enemymapping[old_enemy_object["name"]]
-        if rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses and not room.get("bossenemy_ignored"):            
-            chance = 0.012
+        if not is_mission and rand_seed.config.bosses_replace_enemies and rand_seed.config.bosses and not room.get("bossenemy_ignored"):            
+            chance = 0.04
             if existing_bosses_as_enemies < 1 and random.random() < chance:
                 # TODO this list doesn't need to be generated every time
                 if not rand_seed.config.boss_enemies:

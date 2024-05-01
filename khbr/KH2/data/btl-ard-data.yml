@@ -1,0 +1,3171 @@
+al00-b_00:
+  max_variety: 4
+  mission: false
+al00-b_01:
+  max_variety: 4
+  mission: false
+al00-b_20:
+  max_variety: 4
+  mission: false
+al00-b_40:
+  max_variety: 2
+  mission: true
+al00-s_90:
+  max_variety: 0
+  mission: true
+al00-s_99:
+  max_variety: 0
+  mission: true
+al00-z_70:
+  max_variety: 0
+  mission: false
+al01-b_00:
+  max_variety: 3
+  mission: false
+al01-b_01:
+  max_variety: 3
+  mission: false
+al01-b_70:
+  max_variety: 3
+  mission: false
+al03-b_00:
+  max_variety: 3
+  mission: false
+al03-b_01:
+  max_variety: 3
+  mission: false
+al03-b_20:
+  max_variety: 2
+  mission: false
+al03-b_40:
+  max_variety: 2
+  mission: true
+al05-b_60:
+  max_variety: 1
+  mission: true
+al07-b_00:
+  max_variety: 3
+  mission: false
+al07-b_01:
+  max_variety: 2
+  mission: false
+al07-b_20:
+  max_variety: 2
+  mission: false
+al09-b_00:
+  max_variety: 0
+  mission: false
+al09-b_01:
+  max_variety: 0
+  mission: true
+al10-b_00:
+  max_variety: 2
+  mission: false
+al10-b_20:
+  max_variety: 1
+  mission: false
+al10-b_40:
+  max_variety: 4
+  mission: true
+al10-b_80:
+  max_variety: 0
+  mission: true
+al12-b_00:
+  max_variety: 5
+  mission: false
+al12-b_01:
+  max_variety: 4
+  mission: false
+al12-b_20:
+  max_variety: 4
+  mission: false
+al13-b_20:
+  max_variety: 3
+  mission: true
+al13-b_40:
+  max_variety: 4
+  mission: true
+al14-b_20:
+  max_variety: 4
+  mission: false
+al14-b_60:
+  max_variety: 0
+  mission: true
+al14-b_61:
+  max_variety: 3
+  mission: true
+al14-b_62:
+  max_variety: 0
+  mission: true
+al14-b_63:
+  max_variety: 3
+  mission: true
+al14-b_64:
+  max_variety: 3
+  mission: true
+al14-b_65:
+  max_variety: 4
+  mission: true
+al14-b_67:
+  max_variety: 4
+  mission: true
+al14-b_68:
+  max_variety: 4
+  mission: true
+al14-b_69:
+  max_variety: 4
+  mission: true
+al14-b_6a:
+  max_variety: 4
+  mission: true
+al14-b_70:
+  max_variety: 0
+  mission: true
+al14-b_92:
+  max_variety: 0
+  mission: true
+al14-b_93:
+  max_variety: 3
+  mission: true
+al14-b_94:
+  max_variety: 4
+  mission: true
+al14-b_96:
+  max_variety: 0
+  mission: true
+al14-b_97:
+  max_variety: 5
+  mission: true
+al14-b_98:
+  max_variety: 0
+  mission: true
+al14-m_50:
+  max_variety: 0
+  mission: false
+al15-b_80:
+  max_variety: 0
+  mission: false
+bb00-b_00:
+  max_variety: 0
+  mission: false
+bb00-b_01:
+  max_variety: 2
+  mission: false
+bb00-b_02:
+  max_variety: 1
+  mission: false
+bb00-b_20:
+  max_variety: 1
+  mission: false
+bb00-b_21:
+  max_variety: 2
+  mission: false
+bb00-b_30:
+  max_variety: 2
+  mission: false
+bb00-b_60:
+  max_variety: 0
+  mission: true
+bb00-b_80:
+  max_variety: 2
+  mission: false
+bb00-b_81:
+  max_variety: 2
+  mission: false
+bb00-b_82:
+  max_variety: 2
+  mission: false
+bb00-b_83:
+  max_variety: 2
+  mission: false
+bb00-b_84:
+  max_variety: 2
+  mission: false
+bb00-b_85:
+  max_variety: 2
+  mission: false
+bb00-z_70:
+  max_variety: 0
+  mission: true
+bb01-b_40:
+  max_variety: 1
+  mission: true
+bb03-b_40:
+  max_variety: 1
+  mission: true
+bb03-b_80:
+  max_variety: 0
+  mission: false
+bb04-b_00:
+  max_variety: 0
+  mission: false
+bb04-b_01:
+  max_variety: 0
+  mission: false
+bb04-b_20:
+  max_variety: 2
+  mission: false
+bb04-b_30:
+  max_variety: 2
+  mission: false
+bb04-b_60:
+  max_variety: 2
+  mission: true
+bb04-z_70:
+  max_variety: 0
+  mission: false
+bb05-b_40:
+  max_variety: 1
+  mission: true
+bb05-b_41:
+  max_variety: 1
+  mission: true
+bb05-b_99:
+  max_variety: 1
+  mission: true
+bb06-b_00:
+  max_variety: 0
+  mission: false
+bb06-b_01:
+  max_variety: 2
+  mission: false
+bb06-b_80:
+  max_variety: 2
+  mission: false
+bb06-b_81:
+  max_variety: 2
+  mission: false
+bb06-b_82:
+  max_variety: 2
+  mission: false
+bb06-b_83:
+  max_variety: 2
+  mission: false
+bb06-b_84:
+  max_variety: 2
+  mission: false
+bb06-b_85:
+  max_variety: 2
+  mission: false
+bb06-b_86:
+  max_variety: 2
+  mission: false
+bb06-b_87:
+  max_variety: 2
+  mission: false
+bb06-b_89:
+  max_variety: 3
+  mission: false
+bb06-z_70:
+  max_variety: 2
+  mission: false
+bb07-b_00:
+  max_variety: 0
+  mission: false
+bb07-b_01:
+  max_variety: 2
+  mission: false
+bb07-b_02:
+  max_variety: 2
+  mission: false
+bb07-b_20:
+  max_variety: 1
+  mission: false
+bb07-b_30:
+  max_variety: 1
+  mission: false
+bb07-b_80:
+  max_variety: 2
+  mission: false
+bb07-b_81:
+  max_variety: 2
+  mission: false
+bb07-b_82:
+  max_variety: 2
+  mission: false
+bb07-b_83:
+  max_variety: 2
+  mission: false
+bb07-b_84:
+  max_variety: 2
+  mission: false
+bb07-b_85:
+  max_variety: 2
+  mission: false
+bb07-b_86:
+  max_variety: 2
+  mission: false
+bb07-b_87:
+  max_variety: 2
+  mission: false
+bb07-z_70:
+  max_variety: 2
+  mission: false
+bb08-b_00:
+  max_variety: 0
+  mission: false
+bb08-b_01:
+  max_variety: 1
+  mission: false
+bb08-b_02:
+  max_variety: 1
+  mission: false
+bb08-b_10:
+  max_variety: 0
+  mission: true
+bb08-b_20:
+  max_variety: 2
+  mission: false
+bb08-b_21:
+  max_variety: 2
+  mission: false
+bb08-b_70:
+  max_variety: 2
+  mission: false
+bb08-b_71:
+  max_variety: 2
+  mission: false
+bb08-b_80:
+  max_variety: 2
+  mission: false
+bb08-b_81:
+  max_variety: 1
+  mission: false
+bb08-b_82:
+  max_variety: 1
+  mission: false
+bb08-b_83:
+  max_variety: 2
+  mission: false
+bb08-b_86:
+  max_variety: 1
+  mission: false
+bb08-b_87:
+  max_variety: 1
+  mission: false
+bb08-z_70:
+  max_variety: 0
+  mission: false
+bb09-b_00:
+  max_variety: 1
+  mission: false
+bb09-b_20:
+  max_variety: 1
+  mission: false
+bb09-b_21:
+  max_variety: 1
+  mission: false
+bb09-b_80:
+  max_variety: 1
+  mission: false
+bb09-b_81:
+  max_variety: 1
+  mission: false
+bb09-b_85:
+  max_variety: 1
+  mission: false
+bb09-b_86:
+  max_variety: 1
+  mission: false
+bb11-b_00:
+  max_variety: 1
+  mission: false
+bb11-b_01:
+  max_variety: 1
+  mission: false
+bb11-b_20:
+  max_variety: 2
+  mission: false
+bb11-b_21:
+  max_variety: 2
+  mission: false
+bb11-b_40:
+  max_variety: 4
+  mission: true
+bb11-b_80:
+  max_variety: 1
+  mission: false
+bb11-b_81:
+  max_variety: 1
+  mission: false
+bb11-b_82:
+  max_variety: 1
+  mission: false
+bb11-b_99:
+  max_variety: 3
+  mission: true
+bb12-b_00:
+  max_variety: 0
+  mission: false
+bb12-b_10:
+  max_variety: 0
+  mission: true
+bb12-b_20:
+  max_variety: 0
+  mission: false
+bb12-b_50:
+  max_variety: 0
+  mission: true
+bb12-b_52:
+  max_variety: 0
+  mission: false
+bb13-b_80:
+  max_variety: 0
+  mission: true
+bb15-b_60:
+  max_variety: 1
+  mission: true
+bb15-b_80:
+  max_variety: 1
+  mission: true
+ca01-b_00:
+  max_variety: 2
+  mission: false
+ca01-b_01:
+  max_variety: 2
+  mission: false
+ca01-b_21:
+  max_variety: 2
+  mission: false
+ca01-b_30:
+  max_variety: 1
+  mission: false
+ca01-b_40:
+  max_variety: 2
+  mission: true
+ca01-b_41:
+  max_variety: 2
+  mission: true
+ca01-b_60:
+  max_variety: 2
+  mission: true
+ca01-b_61:
+  max_variety: 1
+  mission: true
+ca01-b_99:
+  max_variety: 1
+  mission: false
+ca02-b_00:
+  max_variety: 1
+  mission: false
+ca02-b_01:
+  max_variety: 2
+  mission: false
+ca02-b_20:
+  max_variety: 1
+  mission: false
+ca02-b_21:
+  max_variety: 3
+  mission: false
+ca02-b_40:
+  max_variety: 3
+  mission: true
+ca02-b_80:
+  max_variety: 1
+  mission: false
+ca02-b_86:
+  max_variety: 1
+  mission: false
+ca02-b_87:
+  max_variety: 1
+  mission: false
+ca02-b_88:
+  max_variety: 1
+  mission: false
+ca02-b_99:
+  max_variety: 1
+  mission: false
+ca02-s_90:
+  max_variety: 0
+  mission: true
+ca02-s_99:
+  max_variety: 0
+  mission: true
+ca02-z_99:
+  max_variety: 0
+  mission: false
+ca03-b_40:
+  max_variety: 0
+  mission: true
+ca03-b_50:
+  max_variety: 0
+  mission: true
+ca03-b_98:
+  max_variety: 0
+  mission: false
+ca03-b_99:
+  max_variety: 1
+  mission: false
+ca05-b_98:
+  max_variety: 0
+  mission: false
+ca05-b_99:
+  max_variety: 1
+  mission: false
+ca07-b_40:
+  max_variety: 3
+  mission: true
+ca07-b_98:
+  max_variety: 0
+  mission: false
+ca07-b_99:
+  max_variety: 1
+  mission: false
+ca08-b_80:
+  max_variety: 0
+  mission: false
+ca09-b_00:
+  max_variety: 2
+  mission: false
+ca09-b_01:
+  max_variety: 2
+  mission: false
+ca09-b_02:
+  max_variety: 2
+  mission: false
+ca09-b_20:
+  max_variety: 2
+  mission: false
+ca09-b_30:
+  max_variety: 2
+  mission: false
+ca09-b_40:
+  max_variety: 2
+  mission: true
+ca09-b_70:
+  max_variety: 1
+  mission: true
+ca09-b_71:
+  max_variety: 1
+  mission: false
+ca09-b_80:
+  max_variety: 1
+  mission: false
+ca09-b_81:
+  max_variety: 1
+  mission: false
+ca09-b_82:
+  max_variety: 1
+  mission: false
+ca09-b_99:
+  max_variety: 1
+  mission: false
+ca10-b_00:
+  max_variety: 1
+  mission: false
+ca10-b_20:
+  max_variety: 1
+  mission: false
+ca10-b_30:
+  max_variety: 1
+  mission: false
+ca10-b_40:
+  max_variety: 2
+  mission: true
+ca10-b_70:
+  max_variety: 1
+  mission: true
+ca10-b_80:
+  max_variety: 1
+  mission: false
+ca10-b_82:
+  max_variety: 1
+  mission: false
+ca10-b_83:
+  max_variety: 1
+  mission: false
+ca10-b_84:
+  max_variety: 1
+  mission: false
+ca10-b_85:
+  max_variety: 1
+  mission: false
+ca10-b_99:
+  max_variety: 1
+  mission: false
+ca12-b_00:
+  max_variety: 2
+  mission: false
+ca12-b_01:
+  max_variety: 0
+  mission: false
+ca12-b_10:
+  max_variety: 0
+  mission: false
+ca12-b_20:
+  max_variety: 2
+  mission: false
+ca12-b_30:
+  max_variety: 2
+  mission: false
+ca12-b_70:
+  max_variety: 2
+  mission: true
+ca12-b_71:
+  max_variety: 2
+  mission: false
+ca12-b_97:
+  max_variety: 0
+  mission: false
+ca12-b_99:
+  max_variety: 1
+  mission: false
+ca13-b_00:
+  max_variety: 3
+  mission: false
+ca13-b_01:
+  max_variety: 5
+  mission: false
+ca13-b_70:
+  max_variety: 2
+  mission: true
+ca13-b_71:
+  max_variety: 3
+  mission: false
+ca13-b_80:
+  max_variety: 0
+  mission: true
+ca13-b_99:
+  max_variety: 1
+  mission: false
+ca14-b_20:
+  max_variety: 2
+  mission: false
+ca14-b_30:
+  max_variety: 2
+  mission: false
+ca14-b_60:
+  max_variety: 1
+  mission: true
+ca14-b_70:
+  max_variety: 1
+  mission: true
+ca14-b_71:
+  max_variety: 2
+  mission: false
+ca14-b_80:
+  max_variety: 2
+  mission: false
+ca14-b_81:
+  max_variety: 2
+  mission: false
+ca14-b_82:
+  max_variety: 2
+  mission: false
+ca14-b_83:
+  max_variety: 2
+  mission: false
+ca14-b_90:
+  max_variety: 2
+  mission: false
+ca14-b_99:
+  max_variety: 1
+  mission: false
+ca15-b_10:
+  max_variety: 0
+  mission: false
+ca15-b_20:
+  max_variety: 0
+  mission: false
+ca15-b_21:
+  max_variety: 2
+  mission: false
+ca15-b_30:
+  max_variety: 2
+  mission: false
+ca15-b_70:
+  max_variety: 0
+  mission: true
+ca15-b_72:
+  max_variety: 0
+  mission: true
+ca15-b_80:
+  max_variety: 0
+  mission: false
+ca15-b_99:
+  max_variety: 1
+  mission: false
+ca16-b_80:
+  max_variety: 0
+  mission: false
+ca16-b_99:
+  max_variety: 0
+  mission: false
+ca18-b_00:
+  max_variety: 2
+  mission: true
+ca18-b_01:
+  max_variety: 1
+  mission: true
+ca18-b_03:
+  max_variety: 3
+  mission: true
+ca18-b_30:
+  max_variety: 1
+  mission: true
+ca18-b_60:
+  max_variety: 1
+  mission: true
+ca19-b_03:
+  max_variety: 3
+  mission: true
+ca19-b_20:
+  max_variety: 2
+  mission: true
+ca19-b_21:
+  max_variety: 2
+  mission: true
+ca19-b_22:
+  max_variety: 1
+  mission: true
+ca19-b_30:
+  max_variety: 1
+  mission: true
+ca20-b_00:
+  max_variety: 2
+  mission: true
+ca20-b_01:
+  max_variety: 1
+  mission: true
+ca20-b_30:
+  max_variety: 1
+  mission: true
+ca21-b_00:
+  max_variety: 3
+  mission: true
+ca21-b_01:
+  max_variety: 2
+  mission: true
+ca21-b_02:
+  max_variety: 3
+  mission: true
+ca22-b_00:
+  max_variety: 3
+  mission: true
+ca22-b_01:
+  max_variety: 2
+  mission: true
+ca22-b_02:
+  max_variety: 3
+  mission: true
+dc00-b_00:
+  max_variety: 2
+  mission: false
+dc00-b_40:
+  max_variety: 1
+  mission: true
+dc00-b_41:
+  max_variety: 1
+  mission: true
+dc00-b_94:
+  max_variety: 1
+  mission: true
+dc00-b_97:
+  max_variety: 1
+  mission: true
+dc01-b_00:
+  max_variety: 0
+  mission: false
+dc02-b_00:
+  max_variety: 0
+  mission: true
+dc02-b_01:
+  max_variety: 0
+  mission: true
+dc02-b_11:
+  max_variety: 0
+  mission: true
+dc02-b_12:
+  max_variety: 0
+  mission: true
+dc02-b_13:
+  max_variety: 0
+  mission: true
+dc02-b_14:
+  max_variety: 1
+  mission: false
+dc02-b_98:
+  max_variety: 1
+  mission: false
+dc02-b_99:
+  max_variety: 1
+  mission: false
+dc03-b_00:
+  max_variety: 3
+  mission: false
+dc07-b_80:
+  max_variety: 1
+  mission: true
+eh02-b_00:
+  max_variety: 3
+  mission: false
+eh02-b_01:
+  max_variety: 1
+  mission: false
+eh02-b_10:
+  max_variety: 1
+  mission: false
+eh02-b_11:
+  max_variety: 1
+  mission: false
+eh02-b_13:
+  max_variety: 1
+  mission: false
+eh03-b_00:
+  max_variety: 3
+  mission: false
+eh03-b_01:
+  max_variety: 1
+  mission: false
+eh03-b_10:
+  max_variety: 1
+  mission: false
+eh03-b_11:
+  max_variety: 1
+  mission: false
+eh03-b_80:
+  max_variety: 0
+  mission: true
+eh03-z_70:
+  max_variety: 0
+  mission: false
+eh06-b_00:
+  max_variety: 2
+  mission: false
+eh06-b_01:
+  max_variety: 3
+  mission: false
+eh06-z_00:
+  max_variety: 0
+  mission: false
+eh07-b_00:
+  max_variety: 1
+  mission: false
+eh08-b_00:
+  max_variety: 1
+  mission: false
+eh10-b_00:
+  max_variety: 1
+  mission: false
+eh10-b_01:
+  max_variety: 2
+  mission: false
+eh10-b_40:
+  max_variety: 1
+  mission: true
+eh10-b_80:
+  max_variety: 1
+  mission: true
+eh11-b_00:
+  max_variety: 2
+  mission: false
+eh12-b_00:
+  max_variety: 3
+  mission: false
+eh12-b_01:
+  max_variety: 3
+  mission: false
+eh14-b_00:
+  max_variety: 2
+  mission: false
+eh14-b_40:
+  max_variety: 1
+  mission: true
+eh14-b_80:
+  max_variety: 1
+  mission: true
+eh15-b_00:
+  max_variety: 2
+  mission: false
+eh15-b_40:
+  max_variety: 1
+  mission: true
+eh15-b_80:
+  max_variety: 1
+  mission: true
+eh15-m_50:
+  max_variety: 0
+  mission: false
+eh16-b_00:
+  max_variety: 3
+  mission: false
+eh16-b_01:
+  max_variety: 2
+  mission: false
+eh17-b_00:
+  max_variety: 2
+  mission: false
+eh17-b_01:
+  max_variety: 3
+  mission: false
+eh19-b_40:
+  max_variety: 1
+  mission: true
+eh19-b_80:
+  max_variety: 1
+  mission: true
+eh20-b_40:
+  max_variety: 1
+  mission: true
+eh20-b_80:
+  max_variety: 1
+  mission: true
+eh21-b_40:
+  max_variety: 1
+  mission: true
+eh21-b_80:
+  max_variety: 1
+  mission: true
+eh22-b_40:
+  max_variety: 0
+  mission: true
+eh22-b_41:
+  max_variety: 0
+  mission: true
+eh23-b_40:
+  max_variety: 0
+  mission: true
+eh23-b_97:
+  max_variety: 1
+  mission: false
+eh23-b_99:
+  max_variety: 0
+  mission: true
+eh24-b_40:
+  max_variety: 2
+  mission: true
+eh24-b_99:
+  max_variety: 1
+  mission: false
+eh25-b_40:
+  max_variety: 3
+  mission: true
+eh25-b_99:
+  max_variety: 0
+  mission: false
+eh25-m_50:
+  max_variety: 0
+  mission: false
+eh26-b_99:
+  max_variety: 0
+  mission: true
+eh26-m_50:
+  max_variety: 0
+  mission: true
+eh26-m_51:
+  max_variety: 0
+  mission: true
+eh27-b_99:
+  max_variety: 0
+  mission: true
+eh28-b_99:
+  max_variety: 0
+  mission: true
+eh28-m_51:
+  max_variety: 0
+  mission: false
+hb01-b_00:
+  max_variety: 2
+  mission: false
+hb01-b_20:
+  max_variety: 2
+  mission: false
+hb01-b_21:
+  max_variety: 2
+  mission: false
+hb01-b_60:
+  max_variety: 1
+  mission: true
+hb02-b_00:
+  max_variety: 2
+  mission: false
+hb02-b_20:
+  max_variety: 2
+  mission: false
+hb02-b_21:
+  max_variety: 2
+  mission: false
+hb02-b_80:
+  max_variety: 0
+  mission: true
+hb04-b_20:
+  max_variety: 3
+  mission: false
+hb04-b_40:
+  max_variety: 1
+  mission: true
+hb04-b_80:
+  max_variety: 1
+  mission: true
+hb04-b_81:
+  max_variety: 0
+  mission: true
+hb07-b_00:
+  max_variety: 2
+  mission: false
+hb07-b_10:
+  max_variety: 2
+  mission: false
+hb08-b_00:
+  max_variety: 2
+  mission: false
+hb08-b_01:
+  max_variety: 3
+  mission: false
+hb08-b_10:
+  max_variety: 3
+  mission: false
+hb08-b_40:
+  max_variety: 3
+  mission: true
+hb08-b_99:
+  max_variety: 0
+  mission: true
+hb09-b_00:
+  max_variety: 2
+  mission: false
+hb09-b_01:
+  max_variety: 3
+  mission: false
+hb09-b_02:
+  max_variety: 4
+  mission: false
+hb09-b_03:
+  max_variety: 3
+  mission: false
+hb09-b_10:
+  max_variety: 0
+  mission: true
+hb09-b_11:
+  max_variety: 3
+  mission: false
+hb09-b_12:
+  max_variety: 0
+  mission: true
+hb09-b_20:
+  max_variety: 3
+  mission: false
+hb09-b_21:
+  max_variety: 3
+  mission: false
+hb09-b_40:
+  max_variety: 0
+  mission: true
+hb09-b_41:
+  max_variety: 0
+  mission: true
+hb09-b_42:
+  max_variety: 0
+  mission: true
+hb09-s_99:
+  max_variety: 0
+  mission: true
+hb10-b_99:
+  max_variety: 0
+  mission: false
+hb11-b_00:
+  max_variety: 4
+  mission: false
+hb11-b_01:
+  max_variety: 4
+  mission: false
+hb11-b_02:
+  max_variety: 3
+  mission: false
+hb11-b_10:
+  max_variety: 4
+  mission: false
+hb11-b_11:
+  max_variety: 3
+  mission: false
+hb11-b_12:
+  max_variety: 3
+  mission: false
+hb11-b_20:
+  max_variety: 3
+  mission: false
+hb11-b_21:
+  max_variety: 3
+  mission: false
+hb13-b_40:
+  max_variety: 0
+  mission: true
+hb16-b_00:
+  max_variety: 2
+  mission: false
+hb16-b_20:
+  max_variety: 2
+  mission: false
+hb16-b_21:
+  max_variety: 2
+  mission: false
+hb16-b_40:
+  max_variety: 3
+  mission: true
+hb16-b_41:
+  max_variety: 4
+  mission: true
+hb16-b_42:
+  max_variety: 3
+  mission: true
+hb16-b_43:
+  max_variety: 4
+  mission: true
+hb16-b_45:
+  max_variety: 1
+  mission: true
+hb16-b_46:
+  max_variety: 2
+  mission: true
+hb16-b_47:
+  max_variety: 2
+  mission: true
+hb16-b_48:
+  max_variety: 3
+  mission: true
+hb17-b_40:
+  max_variety: 0
+  mission: true
+hb17-b_99:
+  max_variety: 0
+  mission: true
+hb18-b_01:
+  max_variety: 3
+  mission: false
+hb18-b_02:
+  max_variety: 3
+  mission: false
+hb18-b_10:
+  max_variety: 3
+  mission: false
+hb18-b_11:
+  max_variety: 0
+  mission: true
+hb18-b_12:
+  max_variety: 3
+  mission: false
+hb18-b_20:
+  max_variety: 3
+  mission: false
+hb18-b_21:
+  max_variety: 3
+  mission: false
+hb18-b_40:
+  max_variety: 0
+  mission: true
+hb19-b_02:
+  max_variety: 3
+  mission: false
+hb19-b_03:
+  max_variety: 3
+  mission: false
+hb19-b_10:
+  max_variety: 3
+  mission: false
+hb19-b_11:
+  max_variety: 3
+  mission: false
+hb19-b_12:
+  max_variety: 3
+  mission: false
+hb19-b_20:
+  max_variety: 3
+  mission: false
+hb19-b_21:
+  max_variety: 3
+  mission: false
+hb20-b_11:
+  max_variety: 0
+  mission: true
+hb20-b_40:
+  max_variety: 0
+  mission: true
+hb21-b_80:
+  max_variety: 4
+  mission: false
+hb21-b_81:
+  max_variety: 4
+  mission: false
+hb23-b_80:
+  max_variety: 4
+  mission: false
+hb23-b_81:
+  max_variety: 4
+  mission: false
+hb23-b_82:
+  max_variety: 4
+  mission: false
+hb24-b_81:
+  max_variety: 5
+  mission: true
+hb24-b_82:
+  max_variety: 4
+  mission: true
+hb25-b_81:
+  max_variety: 3
+  mission: true
+hb25-b_82:
+  max_variety: 3
+  mission: true
+hb25-b_83:
+  max_variety: 4
+  mission: true
+hb25-b_84:
+  max_variety: 4
+  mission: false
+hb25-b_85:
+  max_variety: 4
+  mission: false
+hb32-b_80:
+  max_variety: 1
+  mission: true
+hb32-b_81:
+  max_variety: 1
+  mission: true
+hb33-b_80:
+  max_variety: 1
+  mission: true
+hb33-b_81:
+  max_variety: 1
+  mission: true
+hb33-b_82:
+  max_variety: 1
+  mission: true
+hb33-b_83:
+  max_variety: 1
+  mission: true
+hb33-b_84:
+  max_variety: 1
+  mission: true
+hb33-b_85:
+  max_variety: 1
+  mission: true
+hb34-b_80:
+  max_variety: 1
+  mission: true
+hb34-b_81:
+  max_variety: 1
+  mission: true
+hb38-b_80:
+  max_variety: 1
+  mission: true
+hb38-b_81:
+  max_variety: 1
+  mission: true
+he00-b_4a:
+  max_variety: 0
+  mission: true
+he00-b_4b:
+  max_variety: 0
+  mission: true
+he00-b_4d:
+  max_variety: 0
+  mission: true
+he00-b_4e:
+  max_variety: 0
+  mission: true
+he00-b_4z:
+  max_variety: 0
+  mission: true
+he00-b_99:
+  max_variety: 0
+  mission: true
+he00-m_00:
+  max_variety: 0
+  mission: false
+he00-x_00:
+  max_variety: 0
+  mission: false
+he00-x_01:
+  max_variety: 0
+  mission: false
+he02-b_4a:
+  max_variety: 0
+  mission: true
+he02-b_4b:
+  max_variety: 0
+  mission: true
+he02-b_4c:
+  max_variety: 0
+  mission: true
+he02-b_4d:
+  max_variety: 0
+  mission: true
+he02-b_4e:
+  max_variety: 0
+  mission: true
+he05-b_00:
+  max_variety: 0
+  mission: false
+he05-b_01:
+  max_variety: 0
+  mission: false
+he05-b_11:
+  max_variety: 0
+  mission: false
+he05-b_20:
+  max_variety: 0
+  mission: false
+he05-b_21:
+  max_variety: 0
+  mission: false
+he05-b_40:
+  max_variety: 0
+  mission: true
+he05-b_42:
+  max_variety: 0
+  mission: true
+he06-b_40:
+  max_variety: 1
+  mission: true
+he06-b_60:
+  max_variety: 1
+  mission: true
+he06-b_99:
+  max_variety: 1
+  mission: true
+he07-b_00:
+  max_variety: 0
+  mission: false
+he07-b_01:
+  max_variety: 0
+  mission: false
+he07-b_10:
+  max_variety: 0
+  mission: false
+he07-b_11:
+  max_variety: 0
+  mission: false
+he07-b_20:
+  max_variety: 2
+  mission: false
+he07-b_21:
+  max_variety: 2
+  mission: false
+he07-b_40:
+  max_variety: 0
+  mission: true
+he07-b_50:
+  max_variety: 0
+  mission: true
+he07-b_70:
+  max_variety: 2
+  mission: false
+he08-b_20:
+  max_variety: 1
+  mission: false
+he08-b_40:
+  max_variety: 3
+  mission: true
+he08-b_41:
+  max_variety: 0
+  mission: true
+he08-b_80:
+  max_variety: 0
+  mission: true
+he09-b_60:
+  max_variety: 3
+  mission: true
+he09-b_61:
+  max_variety: 3
+  mission: true
+he09-b_69:
+  max_variety: 0
+  mission: true
+he09-b_6a:
+  max_variety: 0
+  mission: true
+he09-b_6b:
+  max_variety: 0
+  mission: true
+he09-b_91:
+  max_variety: 3
+  mission: false
+he09-b_92:
+  max_variety: 3
+  mission: false
+he09-b_93:
+  max_variety: 3
+  mission: false
+he09-b_94:
+  max_variety: 3
+  mission: false
+he09-b_95:
+  max_variety: 3
+  mission: false
+he09-b_96:
+  max_variety: 3
+  mission: false
+he09-b_97:
+  max_variety: 3
+  mission: false
+he09-b_98:
+  max_variety: 3
+  mission: false
+he09-b_99:
+  max_variety: 3
+  mission: false
+he09-b_9a:
+  max_variety: 3
+  mission: false
+he09-b_9b:
+  max_variety: 3
+  mission: false
+he09-b_9c:
+  max_variety: 2
+  mission: false
+he09-b_9d:
+  max_variety: 3
+  mission: false
+he09-b_9e:
+  max_variety: 3
+  mission: false
+he09-b_9f:
+  max_variety: 3
+  mission: false
+he09-b_9g:
+  max_variety: 3
+  mission: false
+he09-b_9h:
+  max_variety: 3
+  mission: false
+he09-b_9i:
+  max_variety: 3
+  mission: false
+he09-b_9j:
+  max_variety: 3
+  mission: false
+he09-b_9k:
+  max_variety: 1
+  mission: false
+he09-b_9l:
+  max_variety: 4
+  mission: false
+he09-b_9m:
+  max_variety: 2
+  mission: false
+he09-b_9n:
+  max_variety: 1
+  mission: false
+he09-b_a0:
+  max_variety: 0
+  mission: false
+he09-b_a1:
+  max_variety: 0
+  mission: false
+he09-b_a2:
+  max_variety: 0
+  mission: false
+he09-b_a3:
+  max_variety: 0
+  mission: false
+he09-b_a4:
+  max_variety: 0
+  mission: false
+he09-b_a5:
+  max_variety: 0
+  mission: false
+he09-b_a6:
+  max_variety: 0
+  mission: false
+he09-b_a7:
+  max_variety: 0
+  mission: false
+he09-b_a8:
+  max_variety: 0
+  mission: false
+he09-b_a9:
+  max_variety: 0
+  mission: false
+he09-b_b0:
+  max_variety: 1
+  mission: false
+he09-b_b1:
+  max_variety: 1
+  mission: false
+he09-b_b2:
+  max_variety: 1
+  mission: false
+he09-b_b3:
+  max_variety: 1
+  mission: false
+he09-b_b4:
+  max_variety: 1
+  mission: false
+he09-b_b5:
+  max_variety: 1
+  mission: false
+he09-b_b6:
+  max_variety: 1
+  mission: false
+he09-b_b7:
+  max_variety: 1
+  mission: false
+he09-b_b8:
+  max_variety: 1
+  mission: false
+he09-b_b9:
+  max_variety: 1
+  mission: false
+he09-b_c0:
+  max_variety: 0
+  mission: false
+he09-b_c1:
+  max_variety: 0
+  mission: false
+he09-b_c2:
+  max_variety: 0
+  mission: false
+he09-b_c3:
+  max_variety: 0
+  mission: false
+he09-b_c4:
+  max_variety: 0
+  mission: false
+he09-b_c5:
+  max_variety: 0
+  mission: false
+he09-b_c6:
+  max_variety: 0
+  mission: false
+he09-b_c7:
+  max_variety: 0
+  mission: false
+he09-b_c8:
+  max_variety: 0
+  mission: false
+he09-b_c9:
+  max_variety: 0
+  mission: false
+he09-b_d0:
+  max_variety: 2
+  mission: false
+he09-b_d1:
+  max_variety: 2
+  mission: false
+he09-b_d2:
+  max_variety: 0
+  mission: false
+he09-b_d3:
+  max_variety: 0
+  mission: false
+he09-b_d4:
+  max_variety: 2
+  mission: false
+he09-b_d5:
+  max_variety: 2
+  mission: false
+he09-b_d6:
+  max_variety: 2
+  mission: false
+he09-b_d7:
+  max_variety: 2
+  mission: false
+he09-b_d8:
+  max_variety: 2
+  mission: false
+he09-b_d9:
+  max_variety: 2
+  mission: false
+he09-b_h0:
+  max_variety: 0
+  mission: false
+he09-b_h1:
+  max_variety: 0
+  mission: false
+he09-b_h2:
+  max_variety: 0
+  mission: false
+he09-b_h3:
+  max_variety: 0
+  mission: false
+he09-b_h4:
+  max_variety: 0
+  mission: false
+he09-b_h5:
+  max_variety: 0
+  mission: false
+he09-b_h6:
+  max_variety: 0
+  mission: false
+he09-b_h7:
+  max_variety: 0
+  mission: false
+he09-b_h8:
+  max_variety: 0
+  mission: false
+he09-b_h9:
+  max_variety: 0
+  mission: false
+he09-b_i0:
+  max_variety: 0
+  mission: false
+he09-b_i1:
+  max_variety: 0
+  mission: false
+he09-b_i2:
+  max_variety: 0
+  mission: false
+he09-b_i3:
+  max_variety: 0
+  mission: false
+he09-b_i4:
+  max_variety: 0
+  mission: false
+he09-b_i5:
+  max_variety: 0
+  mission: false
+he09-b_i6:
+  max_variety: 0
+  mission: false
+he09-b_i7:
+  max_variety: 0
+  mission: false
+he09-b_i8:
+  max_variety: 0
+  mission: false
+he09-b_i9:
+  max_variety: 0
+  mission: false
+he09-b_j0:
+  max_variety: 0
+  mission: false
+he09-b_j1:
+  max_variety: 0
+  mission: false
+he09-b_j2:
+  max_variety: 0
+  mission: false
+he09-b_j3:
+  max_variety: 0
+  mission: false
+he09-b_j4:
+  max_variety: 0
+  mission: false
+he09-b_j5:
+  max_variety: 0
+  mission: false
+he09-b_j6:
+  max_variety: 0
+  mission: false
+he09-b_j7:
+  max_variety: 0
+  mission: false
+he09-b_j8:
+  max_variety: 0
+  mission: false
+he09-b_j9:
+  max_variety: 0
+  mission: false
+he09-b_k0:
+  max_variety: 0
+  mission: false
+he09-b_k1:
+  max_variety: 0
+  mission: false
+he09-b_k2:
+  max_variety: 0
+  mission: false
+he09-b_k3:
+  max_variety: 0
+  mission: false
+he09-b_k4:
+  max_variety: 0
+  mission: false
+he09-b_k5:
+  max_variety: 0
+  mission: false
+he09-b_k6:
+  max_variety: 0
+  mission: false
+he09-b_k7:
+  max_variety: 0
+  mission: false
+he09-b_k8:
+  max_variety: 0
+  mission: false
+he09-b_k9:
+  max_variety: 0
+  mission: false
+he09-b_l0:
+  max_variety: 0
+  mission: false
+he09-b_l1:
+  max_variety: 0
+  mission: false
+he09-b_l2:
+  max_variety: 0
+  mission: false
+he09-b_l3:
+  max_variety: 0
+  mission: false
+he09-b_l4:
+  max_variety: 0
+  mission: false
+he09-b_l5:
+  max_variety: 0
+  mission: false
+he09-b_l6:
+  max_variety: 0
+  mission: false
+he09-b_l7:
+  max_variety: 0
+  mission: false
+he09-b_l8:
+  max_variety: 0
+  mission: false
+he09-b_l9:
+  max_variety: 0
+  mission: false
+he09-b_r0:
+  max_variety: 2
+  mission: false
+he09-b_y0:
+  max_variety: 0
+  mission: false
+he09-b_y1:
+  max_variety: 0
+  mission: false
+he09-b_y2:
+  max_variety: 0
+  mission: false
+he09-b_y3:
+  max_variety: 0
+  mission: false
+he09-b_z0:
+  max_variety: 1
+  mission: false
+he09-b_z1:
+  max_variety: 1
+  mission: false
+he09-b_z3:
+  max_variety: 0
+  mission: false
+he09-b_z5:
+  max_variety: 0
+  mission: false
+he10-b_80:
+  max_variety: 0
+  mission: false
+he10-b_81:
+  max_variety: 0
+  mission: false
+he11-b_00:
+  max_variety: 0
+  mission: false
+he11-b_10:
+  max_variety: 0
+  mission: false
+he11-b_11:
+  max_variety: 0
+  mission: false
+he11-b_20:
+  max_variety: 0
+  mission: false
+he15-b_00:
+  max_variety: 0
+  mission: false
+he15-b_01:
+  max_variety: 0
+  mission: false
+he15-b_10:
+  max_variety: 0
+  mission: false
+he15-b_11:
+  max_variety: 0
+  mission: false
+he15-b_12:
+  max_variety: 0
+  mission: false
+he15-b_20:
+  max_variety: 0
+  mission: false
+he15-b_21:
+  max_variety: 0
+  mission: false
+he15-b_30:
+  max_variety: 0
+  mission: false
+he16-b_00:
+  max_variety: 0
+  mission: false
+he16-b_10:
+  max_variety: 0
+  mission: false
+he16-b_11:
+  max_variety: 0
+  mission: false
+he16-b_20:
+  max_variety: 0
+  mission: false
+he16-b_30:
+  max_variety: 0
+  mission: false
+he17-b_00:
+  max_variety: 0
+  mission: false
+he17-b_10:
+  max_variety: 0
+  mission: false
+he17-b_11:
+  max_variety: 0
+  mission: false
+he17-b_20:
+  max_variety: 0
+  mission: false
+he17-b_40:
+  max_variety: 1
+  mission: true
+he17-b_80:
+  max_variety: 0
+  mission: true
+he18-b_40:
+  max_variety: 1
+  mission: true
+he19-b_62:
+  max_variety: 1
+  mission: true
+he19-b_63:
+  max_variety: 1
+  mission: true
+lk02-b_40:
+  max_variety: 3
+  mission: true
+lk03-b_00:
+  max_variety: 3
+  mission: false
+lk03-b_01:
+  max_variety: 4
+  mission: false
+lk03-b_20:
+  max_variety: 3
+  mission: false
+lk03-b_35:
+  max_variety: 1
+  mission: false
+lk03-b_99:
+  max_variety: 5
+  mission: false
+lk04-b_00:
+  max_variety: 1
+  mission: false
+lk04-b_01:
+  max_variety: 1
+  mission: false
+lk04-b_10:
+  max_variety: 1
+  mission: false
+lk04-b_20:
+  max_variety: 3
+  mission: false
+lk04-b_35:
+  max_variety: 1
+  mission: false
+lk04-b_90:
+  max_variety: 3
+  mission: false
+lk04-b_93:
+  max_variety: 0
+  mission: false
+lk05-b_00:
+  max_variety: 3
+  mission: false
+lk05-b_01:
+  max_variety: 3
+  mission: false
+lk05-b_20:
+  max_variety: 2
+  mission: false
+lk05-b_35:
+  max_variety: 1
+  mission: false
+lk05-b_40:
+  max_variety: 1
+  mission: true
+lk05-b_60:
+  max_variety: 0
+  mission: true
+lk05-b_61:
+  max_variety: 0
+  mission: true
+lk05-b_70:
+  max_variety: 0
+  mission: true
+lk07-b_00:
+  max_variety: 3
+  mission: false
+lk07-b_01:
+  max_variety: 3
+  mission: false
+lk07-b_20:
+  max_variety: 0
+  mission: false
+lk07-b_35:
+  max_variety: 1
+  mission: false
+lk07-b_99:
+  max_variety: 0
+  mission: false
+lk08-b_00:
+  max_variety: 3
+  mission: false
+lk08-b_01:
+  max_variety: 3
+  mission: false
+lk08-b_20:
+  max_variety: 3
+  mission: false
+lk08-b_35:
+  max_variety: 1
+  mission: false
+lk13-b_20:
+  max_variety: 1
+  mission: false
+lk13-b_21:
+  max_variety: 1
+  mission: false
+lk14-b_40:
+  max_variety: 1
+  mission: true
+lk15-b_60:
+  max_variety: 1
+  mission: true
+lm02-b_40:
+  max_variety: 0
+  mission: true
+mu01-b_00:
+  max_variety: 2
+  mission: false
+mu01-b_01:
+  max_variety: 1
+  mission: false
+mu01-b_20:
+  max_variety: 3
+  mission: false
+mu01-b_40:
+  max_variety: 1
+  mission: true
+mu01-b_42:
+  max_variety: 2
+  mission: true
+mu01-b_45:
+  max_variety: 0
+  mission: true
+mu01-b_4a:
+  max_variety: 1
+  mission: true
+mu01-b_4p:
+  max_variety: 1
+  mission: true
+mu01-b_4s:
+  max_variety: 1
+  mission: true
+mu01-b_80:
+  max_variety: 0
+  mission: true
+mu01-b_81:
+  max_variety: 0
+  mission: true
+mu01-b_82:
+  max_variety: 0
+  mission: true
+mu01-b_83:
+  max_variety: 0
+  mission: true
+mu01-z_42:
+  max_variety: 0
+  mission: true
+mu02-b_00:
+  max_variety: 2
+  mission: false
+mu02-b_01:
+  max_variety: 2
+  mission: false
+mu02-b_20:
+  max_variety: 3
+  mission: false
+mu02-b_40:
+  max_variety: 0
+  mission: true
+mu02-b_41:
+  max_variety: 0
+  mission: true
+mu02-b_42:
+  max_variety: 0
+  mission: true
+mu02-b_45:
+  max_variety: 3
+  mission: true
+mu02-b_70:
+  max_variety: 3
+  mission: false
+mu03-b_00:
+  max_variety: 3
+  mission: false
+mu03-b_01:
+  max_variety: 4
+  mission: false
+mu03-b_20:
+  max_variety: 4
+  mission: false
+mu03-b_40:
+  max_variety: 3
+  mission: true
+mu05-b_00:
+  max_variety: 2
+  mission: false
+mu05-b_20:
+  max_variety: 5
+  mission: false
+mu05-b_40:
+  max_variety: 2
+  mission: true
+mu06-b_00:
+  max_variety: 0
+  mission: false
+mu06-b_20:
+  max_variety: 1
+  mission: false
+mu06-b_30:
+  max_variety: 1
+  mission: false
+mu06-b_80:
+  max_variety: 0
+  mission: false
+mu07-b_00:
+  max_variety: 0
+  mission: false
+mu07-b_20:
+  max_variety: 2
+  mission: false
+mu07-b_30:
+  max_variety: 2
+  mission: false
+mu07-b_31:
+  max_variety: 2
+  mission: false
+mu07-b_40:
+  max_variety: 1
+  mission: true
+mu07-b_41:
+  max_variety: 1
+  mission: true
+mu07-b_60:
+  max_variety: 1
+  mission: true
+mu07-b_61:
+  max_variety: 1
+  mission: true
+mu07-b_80:
+  max_variety: 0
+  mission: false
+mu07-b_97:
+  max_variety: 1
+  mission: true
+mu07-b_99:
+  max_variety: 0
+  mission: true
+mu07-c_00:
+  max_variety: 1
+  mission: false
+mu08-b_00:
+  max_variety: 0
+  mission: false
+mu08-b_20:
+  max_variety: 2
+  mission: false
+mu08-b_40:
+  max_variety: 2
+  mission: true
+mu08-b_60:
+  max_variety: 2
+  mission: true
+mu08-b_61:
+  max_variety: 0
+  mission: true
+mu08-b_70:
+  max_variety: 0
+  mission: true
+mu08-b_80:
+  max_variety: 0
+  mission: false
+mu08-z_40:
+  max_variety: 0
+  mission: true
+mu09-b_20:
+  max_variety: 2
+  mission: false
+mu09-b_40:
+  max_variety: 1
+  mission: true
+mu09-b_41:
+  max_variety: 1
+  mission: true
+mu09-b_80:
+  max_variety: 0
+  mission: true
+mu10-b_20:
+  max_variety: 1
+  mission: false
+mu10-b_60:
+  max_variety: 2
+  mission: true
+mu10-b_80:
+  max_variety: 1
+  mission: false
+nm00-b_00:
+  max_variety: 2
+  mission: false
+nm00-b_01:
+  max_variety: 2
+  mission: false
+nm00-b_20:
+  max_variety: 2
+  mission: false
+nm00-b_21:
+  max_variety: 3
+  mission: false
+nm00-b_40:
+  max_variety: 3
+  mission: true
+nm00-b_99:
+  max_variety: 2
+  mission: true
+nm02-b_00:
+  max_variety: 3
+  mission: false
+nm02-b_01:
+  max_variety: 3
+  mission: false
+nm02-b_20:
+  max_variety: 1
+  mission: false
+nm02-b_21:
+  max_variety: 3
+  mission: false
+nm02-b_70:
+  max_variety: 1
+  mission: false
+nm03-b_00:
+  max_variety: 4
+  mission: false
+nm03-b_20:
+  max_variety: 2
+  mission: false
+nm03-b_21:
+  max_variety: 0
+  mission: false
+nm03-b_40:
+  max_variety: 1
+  mission: true
+nm04-b_00:
+  max_variety: 2
+  mission: false
+nm04-b_01:
+  max_variety: 2
+  mission: false
+nm04-b_02:
+  max_variety: 2
+  mission: false
+nm04-b_20:
+  max_variety: 3
+  mission: false
+nm04-b_21:
+  max_variety: 3
+  mission: false
+nm06-b_00:
+  max_variety: 3
+  mission: false
+nm06-b_01:
+  max_variety: 2
+  mission: false
+nm06-b_02:
+  max_variety: 2
+  mission: false
+nm06-b_20:
+  max_variety: 3
+  mission: false
+nm06-b_21:
+  max_variety: 2
+  mission: false
+nm06-b_40:
+  max_variety: 2
+  mission: true
+nm06-b_70:
+  max_variety: 3
+  mission: false
+nm06-b_71:
+  max_variety: 2
+  mission: false
+nm06-z_70:
+  max_variety: 0
+  mission: false
+nm07-b_60:
+  max_variety: 1
+  mission: true
+nm07-b_80:
+  max_variety: 0
+  mission: true
+nm07-b_99:
+  max_variety: 1
+  mission: true
+nm09-b_40:
+  max_variety: 0
+  mission: true
+nm09-b_50:
+  max_variety: 0
+  mission: true
+nm09-b_51:
+  max_variety: 0
+  mission: true
+nm09-b_52:
+  max_variety: 0
+  mission: true
+nm09-s_99:
+  max_variety: 0
+  mission: true
+nm10-b_60:
+  max_variety: 3
+  mission: true
+nm10-b_61:
+  max_variety: 0
+  mission: true
+po01-b_40:
+  max_variety: 0
+  mission: true
+po06-b_40:
+  max_variety: 0
+  mission: true
+po06-m_00:
+  max_variety: 0
+  mission: true
+po06-m_10:
+  max_variety: 0
+  mission: true
+po06-m_11:
+  max_variety: 0
+  mission: true
+po06-m_12:
+  max_variety: 0
+  mission: true
+po06-m_13:
+  max_variety: 0
+  mission: true
+po06-m_14:
+  max_variety: 0
+  mission: true
+po06-m_20:
+  max_variety: 0
+  mission: true
+po07-b_40:
+  max_variety: 0
+  mission: true
+po07-m_00:
+  max_variety: 0
+  mission: true
+po07-m_11:
+  max_variety: 0
+  mission: true
+po07-m_12:
+  max_variety: 0
+  mission: true
+po07-m_13:
+  max_variety: 0
+  mission: true
+po07-m_14:
+  max_variety: 0
+  mission: true
+po07-m_15:
+  max_variety: 0
+  mission: true
+po07-m_30:
+  max_variety: 0
+  mission: true
+po07-m_31:
+  max_variety: 0
+  mission: true
+po07-m_32:
+  max_variety: 0
+  mission: true
+po07-m_33:
+  max_variety: 0
+  mission: true
+po07-m_34:
+  max_variety: 0
+  mission: true
+po07-m_40:
+  max_variety: 0
+  mission: true
+po07-m_41:
+  max_variety: 0
+  mission: true
+po07-m_42:
+  max_variety: 0
+  mission: true
+po07-m_43:
+  max_variety: 0
+  mission: true
+po07-m_70:
+  max_variety: 0
+  mission: true
+po07-m_72:
+  max_variety: 0
+  mission: true
+po07-m_73:
+  max_variety: 0
+  mission: true
+po07-m_74:
+  max_variety: 0
+  mission: true
+po07-m_75:
+  max_variety: 0
+  mission: true
+po08-b_40:
+  max_variety: 0
+  mission: true
+po08-m_00:
+  max_variety: 0
+  mission: true
+po08-m_10:
+  max_variety: 0
+  mission: true
+po08-m_11:
+  max_variety: 0
+  mission: true
+po08-m_12:
+  max_variety: 0
+  mission: true
+po08-m_13:
+  max_variety: 0
+  mission: true
+po08-m_14:
+  max_variety: 0
+  mission: true
+po08-m_15:
+  max_variety: 0
+  mission: true
+po08-m_16:
+  max_variety: 0
+  mission: true
+po08-m_17:
+  max_variety: 0
+  mission: true
+po08-m_18:
+  max_variety: 0
+  mission: true
+po08-m_19:
+  max_variety: 0
+  mission: true
+po08-m_20:
+  max_variety: 0
+  mission: true
+po08-m_21:
+  max_variety: 0
+  mission: true
+po08-m_22:
+  max_variety: 0
+  mission: true
+po08-m_23:
+  max_variety: 0
+  mission: true
+po08-m_24:
+  max_variety: 0
+  mission: true
+po08-m_25:
+  max_variety: 0
+  mission: true
+po08-m_26:
+  max_variety: 0
+  mission: true
+po08-m_27:
+  max_variety: 0
+  mission: true
+po08-m_28:
+  max_variety: 0
+  mission: true
+po08-m_29:
+  max_variety: 0
+  mission: true
+po08-m_30:
+  max_variety: 0
+  mission: true
+po08-m_31:
+  max_variety: 0
+  mission: true
+po08-m_32:
+  max_variety: 0
+  mission: true
+po08-m_33:
+  max_variety: 0
+  mission: true
+po08-m_34:
+  max_variety: 0
+  mission: true
+po08-m_35:
+  max_variety: 0
+  mission: true
+po08-m_36:
+  max_variety: 0
+  mission: true
+po08-m_37:
+  max_variety: 0
+  mission: true
+po08-m_38:
+  max_variety: 0
+  mission: true
+po08-m_39:
+  max_variety: 0
+  mission: true
+po08-m_40:
+  max_variety: 0
+  mission: true
+po08-m_41:
+  max_variety: 0
+  mission: true
+po08-m_42:
+  max_variety: 0
+  mission: true
+po08-m_43:
+  max_variety: 0
+  mission: true
+po08-m_44:
+  max_variety: 0
+  mission: true
+po08-m_45:
+  max_variety: 0
+  mission: true
+po08-m_46:
+  max_variety: 0
+  mission: true
+po08-m_47:
+  max_variety: 0
+  mission: true
+po08-m_48:
+  max_variety: 0
+  mission: true
+po08-m_49:
+  max_variety: 0
+  mission: true
+po08-m_50:
+  max_variety: 0
+  mission: true
+po08-m_51:
+  max_variety: 0
+  mission: true
+po08-m_52:
+  max_variety: 0
+  mission: true
+po08-m_53:
+  max_variety: 0
+  mission: true
+po08-m_54:
+  max_variety: 0
+  mission: true
+po08-m_55:
+  max_variety: 0
+  mission: true
+po08-m_56:
+  max_variety: 0
+  mission: true
+po08-m_57:
+  max_variety: 0
+  mission: true
+po09-b_10:
+  max_variety: 1
+  mission: true
+po09-b_30:
+  max_variety: 1
+  mission: true
+po09-b_40:
+  max_variety: 1
+  mission: false
+po09-b_41:
+  max_variety: 1
+  mission: true
+po09-b_99:
+  max_variety: 1
+  mission: true
+po09-m_10:
+  max_variety: 0
+  mission: true
+po09-m_50:
+  max_variety: 0
+  mission: true
+po09-m_70:
+  max_variety: 0
+  mission: true
+tr00-b_00:
+  max_variety: 0
+  mission: false
+tr00-b_99:
+  max_variety: 0
+  mission: false
+tr01-b_00:
+  max_variety: 3
+  mission: false
+tr01-b_20:
+  max_variety: 3
+  mission: false
+tr01-b_40:
+  max_variety: 0
+  mission: true
+tr01-z_00:
+  max_variety: 0
+  mission: false
+tr01-z_20:
+  max_variety: 0
+  mission: false
+tr02-b_60:
+  max_variety: 2
+  mission: true
+tr02-b_92:
+  max_variety: 0
+  mission: true
+tr02-b_93:
+  max_variety: 0
+  mission: true
+tr02-b_96:
+  max_variety: 0
+  mission: true
+tr02-b_97:
+  max_variety: 0
+  mission: true
+tr02-b_99:
+  max_variety: 0
+  mission: true
+tr02-b_9a:
+  max_variety: 0
+  mission: true
+tr02-b_9b:
+  max_variety: 0
+  mission: true
+tr02-b_9c:
+  max_variety: 0
+  mission: true
+tr02-b_9d:
+  max_variety: 0
+  mission: true
+tr02-b_9f:
+  max_variety: 0
+  mission: true
+tr03-b_00:
+  max_variety: 2
+  mission: false
+tr03-b_20:
+  max_variety: 2
+  mission: false
+tr03-b_40:
+  max_variety: 1
+  mission: true
+tr03-z_00:
+  max_variety: 0
+  mission: false
+tr04-b_00:
+  max_variety: 3
+  mission: false
+tr04-b_01:
+  max_variety: 3
+  mission: false
+tr04-b_20:
+  max_variety: 3
+  mission: false
+tr04-b_21:
+  max_variety: 3
+  mission: false
+tr04-b_40:
+  max_variety: 1
+  mission: true
+tr04-b_60:
+  max_variety: 2
+  mission: true
+tr05-b_00:
+  max_variety: 0
+  mission: false
+tr06-b_00:
+  max_variety: 2
+  mission: false
+tr06-b_20:
+  max_variety: 2
+  mission: false
+tr06-b_21:
+  max_variety: 2
+  mission: false
+tr07-b_60:
+  max_variety: 3
+  mission: true
+tr09-b_60:
+  max_variety: 3
+  mission: true
+tr09-b_61:
+  max_variety: 2
+  mission: true
+tr09-b_98:
+  max_variety: 1
+  mission: false
+tr09-b_99:
+  max_variety: 2
+  mission: true
+tt03-b_00:
+  max_variety: 1
+  mission: false
+tt03-b_21:
+  max_variety: 3
+  mission: false
+tt03-b_40:
+  max_variety: 2
+  mission: true
+tt03-b_41:
+  max_variety: 1
+  mission: true
+tt03-z_70:
+  max_variety: 0
+  mission: false
+tt03-z_71:
+  max_variety: 0
+  mission: false
+tt04-b_00:
+  max_variety: 1
+  mission: false
+tt04-b_21:
+  max_variety: 2
+  mission: false
+tt04-b_40:
+  max_variety: 0
+  mission: true
+tt04-b_41:
+  max_variety: 1
+  mission: true
+tt04-b_42:
+  max_variety: 1
+  mission: true
+tt04-b_43:
+  max_variety: 1
+  mission: true
+tt04-b_44:
+  max_variety: 2
+  mission: true
+tt04-b_45:
+  max_variety: 1
+  mission: true
+tt04-b_50:
+  max_variety: 0
+  mission: true
+tt04-b_51:
+  max_variety: 0
+  mission: true
+tt04-b_52:
+  max_variety: 0
+  mission: true
+tt04-b_60:
+  max_variety: 0
+  mission: true
+tt04-b_80:
+  max_variety: 0
+  mission: false
+tt04-z_70:
+  max_variety: 0
+  mission: false
+tt04-z_71:
+  max_variety: 0
+  mission: false
+tt05-b_10:
+  max_variety: 0
+  mission: true
+tt05-b_11:
+  max_variety: 0
+  mission: true
+tt05-b_40:
+  max_variety: 0
+  mission: true
+tt05-b_41:
+  max_variety: 0
+  mission: true
+tt05-b_42:
+  max_variety: 0
+  mission: true
+tt05-b_43:
+  max_variety: 1
+  mission: true
+tt05-b_44:
+  max_variety: 0
+  mission: true
+tt06-b_00:
+  max_variety: 2
+  mission: false
+tt06-b_21:
+  max_variety: 3
+  mission: false
+tt06-b_40:
+  max_variety: 0
+  mission: true
+tt06-b_41:
+  max_variety: 0
+  mission: true
+tt06-b_42:
+  max_variety: 0
+  mission: true
+tt06-b_43:
+  max_variety: 0
+  mission: true
+tt06-b_50:
+  max_variety: 0
+  mission: true
+tt06-b_80:
+  max_variety: 0
+  mission: false
+tt06-z_70:
+  max_variety: 0
+  mission: false
+tt06-z_71:
+  max_variety: 0
+  mission: false
+tt07-b_00:
+  max_variety: 2
+  mission: false
+tt07-b_21:
+  max_variety: 2
+  mission: false
+tt07-b_40:
+  max_variety: 0
+  mission: true
+tt07-b_42:
+  max_variety: 0
+  mission: true
+tt07-b_44:
+  max_variety: 0
+  mission: true
+tt07-b_45:
+  max_variety: 0
+  mission: true
+tt07-b_47:
+  max_variety: 1
+  mission: true
+tt07-b_48:
+  max_variety: 0
+  mission: true
+tt07-b_49:
+  max_variety: 0
+  mission: true
+tt07-b_80:
+  max_variety: 0
+  mission: false
+tt07-b_81:
+  max_variety: 1
+  mission: false
+tt07-b_85:
+  max_variety: 0
+  mission: true
+tt07-b_99:
+  max_variety: 0
+  mission: false
+tt07-s_99:
+  max_variety: 0
+  mission: true
+tt07-z_70:
+  max_variety: 0
+  mission: false
+tt07-z_71:
+  max_variety: 0
+  mission: false
+tt08-b_21:
+  max_variety: 2
+  mission: false
+tt08-b_40:
+  max_variety: 2
+  mission: true
+tt08-z_70:
+  max_variety: 0
+  mission: false
+tt08-z_71:
+  max_variety: 0
+  mission: false
+tt10-b_21:
+  max_variety: 2
+  mission: false
+tt10-b_41:
+  max_variety: 1
+  mission: true
+tt10-b_42:
+  max_variety: 0
+  mission: true
+tt10-b_80:
+  max_variety: 0
+  mission: false
+tt10-z_70:
+  max_variety: 0
+  mission: false
+tt10-z_71:
+  max_variety: 0
+  mission: false
+tt12-b_21:
+  max_variety: 2
+  mission: false
+tt12-b_40:
+  max_variety: 0
+  mission: true
+tt12-z_70:
+  max_variety: 0
+  mission: false
+tt12-z_71:
+  max_variety: 0
+  mission: false
+tt13-b_00:
+  max_variety: 2
+  mission: false
+tt13-b_10:
+  max_variety: 3
+  mission: false
+tt13-b_20:
+  max_variety: 3
+  mission: false
+tt13-b_21:
+  max_variety: 3
+  mission: false
+tt13-z_70:
+  max_variety: 0
+  mission: false
+tt13-z_71:
+  max_variety: 0
+  mission: false
+tt14-b_00:
+  max_variety: 2
+  mission: false
+tt14-b_10:
+  max_variety: 2
+  mission: false
+tt14-b_20:
+  max_variety: 2
+  mission: false
+tt14-b_21:
+  max_variety: 3
+  mission: false
+tt14-b_41:
+  max_variety: 1
+  mission: true
+tt14-b_42:
+  max_variety: 1
+  mission: true
+tt14-b_80:
+  max_variety: 0
+  mission: true
+tt14-b_99:
+  max_variety: 3
+  mission: true
+tt14-z_70:
+  max_variety: 0
+  mission: false
+tt14-z_71:
+  max_variety: 0
+  mission: false
+tt15-b_00:
+  max_variety: 3
+  mission: false
+tt15-b_20:
+  max_variety: 2
+  mission: false
+tt15-z_70:
+  max_variety: 0
+  mission: false
+tt15-z_71:
+  max_variety: 0
+  mission: false
+tt16-b_00:
+  max_variety: 2
+  mission: false
+tt16-b_21:
+  max_variety: 1
+  mission: false
+tt16-z_70:
+  max_variety: 0
+  mission: false
+tt16-z_71:
+  max_variety: 0
+  mission: false
+tt17-b_21:
+  max_variety: 2
+  mission: false
+tt17-z_70:
+  max_variety: 0
+  mission: false
+tt17-z_71:
+  max_variety: 0
+  mission: false
+tt19-b_00:
+  max_variety: 1
+  mission: false
+tt19-b_21:
+  max_variety: 1
+  mission: false
+tt19-b_40:
+  max_variety: 2
+  mission: true
+tt19-z_70:
+  max_variety: 0
+  mission: false
+tt19-z_71:
+  max_variety: 0
+  mission: false
+tt20-b_40:
+  max_variety: 1
+  mission: true
+tt20-b_80:
+  max_variety: 1
+  mission: true
+tt22-b_21:
+  max_variety: 2
+  mission: false
+tt22-z_70:
+  max_variety: 0
+  mission: false
+tt22-z_71:
+  max_variety: 0
+  mission: false
+tt25-b_00:
+  max_variety: 1
+  mission: false
+tt25-b_10:
+  max_variety: 2
+  mission: false
+tt25-b_20:
+  max_variety: 3
+  mission: false
+tt25-b_40:
+  max_variety: 1
+  mission: true
+tt25-b_80:
+  max_variety: 0
+  mission: true
+tt25-z_70:
+  max_variety: 0
+  mission: false
+tt25-z_71:
+  max_variety: 0
+  mission: false
+tt29-b_00:
+  max_variety: 1
+  mission: false
+tt29-b_10:
+  max_variety: 2
+  mission: false
+tt29-b_20:
+  max_variety: 1
+  mission: false
+tt29-b_21:
+  max_variety: 1
+  mission: false
+tt29-b_40:
+  max_variety: 1
+  mission: true
+tt29-z_70:
+  max_variety: 0
+  mission: false
+tt29-z_71:
+  max_variety: 0
+  mission: false
+tt30-b_00:
+  max_variety: 1
+  mission: false
+tt30-b_10:
+  max_variety: 2
+  mission: false
+tt30-b_20:
+  max_variety: 2
+  mission: false
+tt30-b_21:
+  max_variety: 1
+  mission: false
+tt30-b_40:
+  max_variety: 2
+  mission: true
+tt30-z_70:
+  max_variety: 0
+  mission: false
+tt30-z_71:
+  max_variety: 0
+  mission: false
+tt31-b_00:
+  max_variety: 1
+  mission: false
+tt31-b_10:
+  max_variety: 1
+  mission: false
+tt31-b_20:
+  max_variety: 2
+  mission: false
+tt31-b_21:
+  max_variety: 2
+  mission: false
+tt31-z_70:
+  max_variety: 0
+  mission: false
+tt31-z_71:
+  max_variety: 0
+  mission: false
+tt32-b_40:
+  max_variety: 1
+  mission: true
+tt32-b_41:
+  max_variety: 0
+  mission: true
+tt33-b_00:
+  max_variety: 1
+  mission: false
+tt34-b_40:
+  max_variety: 1
+  mission: true
+tt36-b_10:
+  max_variety: 2
+  mission: false
+tt36-b_20:
+  max_variety: 2
+  mission: false
+tt36-b_21:
+  max_variety: 2
+  mission: false
+tt36-b_40:
+  max_variety: 1
+  mission: true
+tt36-b_80:
+  max_variety: 0
+  mission: true
+tt36-z_70:
+  max_variety: 0
+  mission: false
+tt36-z_71:
+  max_variety: 0
+  mission: false
+tt37-b_10:
+  max_variety: 3
+  mission: false
+tt37-b_20:
+  max_variety: 3
+  mission: false
+tt37-b_21:
+  max_variety: 2
+  mission: false
+tt37-z_70:
+  max_variety: 0
+  mission: false
+tt37-z_71:
+  max_variety: 0
+  mission: false
+tt38-b_00:
+  max_variety: 1
+  mission: false
+tt38-b_10:
+  max_variety: 1
+  mission: false
+tt38-b_20:
+  max_variety: 2
+  mission: false
+tt38-b_21:
+  max_variety: 2
+  mission: false
+tt38-z_70:
+  max_variety: 0
+  mission: false
+tt38-z_71:
+  max_variety: 0
+  mission: false
+tt39-b_00:
+  max_variety: 2
+  mission: false
+tt39-b_10:
+  max_variety: 1
+  mission: false
+tt39-b_20:
+  max_variety: 2
+  mission: false
+tt39-b_21:
+  max_variety: 2
+  mission: false
+tt39-z_70:
+  max_variety: 0
+  mission: false
+tt39-z_71:
+  max_variety: 0
+  mission: false
+tt40-b_40:
+  max_variety: 1
+  mission: true
+tt40-b_41:
+  max_variety: 2
+  mission: true
+tt41-b_80:
+  max_variety: 1
+  mission: false
+tt41-b_99:
+  max_variety: 3
+  mission: true
+wi01-b_00:
+  max_variety: 2
+  mission: false
+wi01-b_20:
+  max_variety: 2
+  mission: false
+wi01-b_40:
+  max_variety: 1
+  mission: true
+wi02-b_00:
+  max_variety: 2
+  mission: false
+wi02-b_40:
+  max_variety: 1
+  mission: true
+wi02-b_80:
+  max_variety: 0
+  mission: true
+wi03-b_00:
+  max_variety: 4
+  mission: false
+wi03-b_20:
+  max_variety: 2
+  mission: false
+wi03-b_40:
+  max_variety: 0
+  mission: true
+wi03-b_41:
+  max_variety: 0
+  mission: true
+wi04-b_00:
+  max_variety: 2
+  mission: false
+wi04-b_20:
+  max_variety: 3
+  mission: false
+wi04-b_40:
+  max_variety: 2
+  mission: true
+wi05-b_00:
+  max_variety: 2
+  mission: false
+wi05-b_20:
+  max_variety: 2
+  mission: false
+wi05-b_40:
+  max_variety: 2
+  mission: true
+wi06-b_00:
+  max_variety: 2
+  mission: false
+wi06-b_20:
+  max_variety: 2
+  mission: false
+wi06-b_40:
+  max_variety: 0
+  mission: true
+wi06-b_41:
+  max_variety: 0
+  mission: true
+wi07-b_00:
+  max_variety: 2
+  mission: false
+wi07-b_10:
+  max_variety: 0
+  mission: true
+wi07-b_20:
+  max_variety: 2
+  mission: false
+wi07-b_40:
+  max_variety: 0
+  mission: true

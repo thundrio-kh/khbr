@@ -134,19 +134,13 @@ class CutsceneRemover:
                         new_cutscene_name = self.get_cutscene_name(evtprogram, eventnum, eventtype)
                         _writeEventFile(ardasset, new_cutscene_name, str(eventnum))
 
-            # This isn't getting picked up atm because my areadataprogram parser only parses the first areadatasettings in a program
-            # so hack with a TODO to fix
-            if "tt04" in ardasset["name"]:
-                _writeEventFile(ardasset, "0frame", str(110))
-                _writeEventFile(ardasset, "0frame", str(111))
+                        # # Not working yet
+                        # world = ardname[:2]
+                        # room = ardname[2:]
+                        # if not os.path.exists(evtfn_goa):
+                        #     self.assetgenerator.generateEvt(world, room, num, ardasset["source"], options={"fix_fadetype": True})
 
 
-        # l = []
-        # for k,v in mapping.items():
-        #     if v == {'66'}:
-        #         l.append(k)
-        #log_output(l)
 
 # 2 issues
-# ard.ard
 # lm only

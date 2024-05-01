@@ -7,6 +7,7 @@ class LocationManager:
         # TODO I think this means I don't need to do this anywhere else
         # TODO but also maybe will make things load really slow initially
         self.set_locmap()
+        self.set_btlmap()
         self.set_locations()
 
     def _merge_dicts(self, dict1, dict2):
@@ -20,6 +21,20 @@ class LocationManager:
     def set_locmap(self):
         with open(os.path.join(self.basepath, "location-ard-map.json")) as f:
             self.locmap = json.load(f)
+
+    def set_btlmap(self):
+        with open(os.path.join(self.basepath, "btl-ard-data.yml")) as f:
+            self.btlmap = yaml.load(f)
+
+    def get_sp_max_enemy_types(self, room, unit):
+        max_types = self.btlmap["{}-{}".format(self.locmap[room], unit)].get("max_variety", "NOT_FOUND")
+        if max_types == "NOT_FOUND":
+            print("WARNING: NOT FOUND max_variety FOR {}".format(room))
+            max_types = 3
+        return max_types
+
+    def get_sp_for_mission(self, room, unit):
+        return self.btlmap["{}-{}".format(self.locmap[room], unit)]["mission"]
 
     def set_locations(self):
         with open(os.path.join(os.path.dirname(__file__), "data", "locations.yaml")) as f:

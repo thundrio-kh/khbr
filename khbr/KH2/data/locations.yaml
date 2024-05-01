@@ -4385,7 +4385,7 @@ Disney Castle:
   Audience Chamber:
     ignored: true
     pc:
-      ignored: true # Enemies with particle effects I think are the main concern here, like living bone shamans and berserkers
+      ignored: false # Enemies with particle effects I think are the main concern here, like living bone shamans and berserkers
     size: 5000000
     spawnpoints:
       b_00:
@@ -4485,6 +4485,14 @@ Disney Castle:
             isboss: false
             name: Minute Bomb
       b_97:
+        limited_enemies:
+          Devastator: 13
+          Crimson Jazz: 10
+          Fortuneteller: 13
+          Sorcerer: 13
+          Shaman: 6 # Gets too hard at higher amounts
+          Fat Bandit: 6 # Gets too hard at higher amounts
+          Bookmaster: 10 # Gets too hard at higher amounts
         size: 0
         sp_ids:
           '127':

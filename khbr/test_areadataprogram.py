@@ -388,15 +388,53 @@ AreaSettings 7 -1
             "\tSetPartyMenu 0"
         ]
 
+        prg = """Program 0x55
+Bgm 119 119
+AreaSettings 8 -1
+	SetProgressFlag 0x85D
+	SetUnk05 0x3
+	SetJump Type 1 World TT Area 5 Entrance 53 LocalSet 0 FadeType 1
+	SetPartyMenu 0
+
+AreaSettings 7 -1
+	SetProgressFlag 0x85E
+	SetUnk05 0x3
+	SetEvent "408" Type 19
+	SetJump Type 2 World TT Area 0 Entrance 0 LocalSet 86 FadeType 1
+	SetPartyMenu 0"""
+        
+        adp = AreaDataProgram(prg.split("\n"))
+        adp.set_jump(world = "TT", room="5", program="0", jumptype="1", entrance="53", fadetype="0", set_for_settings=[0])
+        adp.set_jump(world = "TT", room="0", program="86", jumptype="2", entrance="0", fadetype="0", set_for_settings=[1])
+
+        output = adp.make_program()
+        assert output.split("\n") == [
+            "Program 0x55",
+            "Bgm 119 119",
+            "AreaSettings 8 -1",
+        	"\tSetProgressFlag 0x85D",
+        	"\tSetUnk05 0x3",
+        	"\tSetJump Type 1 World TT Area 5 Entrance 53 LocalSet 0 FadeType 0",
+	        "\tSetPartyMenu 0",
+            "",
+            "AreaSettings 7 -1",
+        	"\tSetProgressFlag 0x85E",
+	        "\tSetUnk05 0x3",
+	        "\tSetEvent \"408\" Type 19",
+	        "\tSetJump Type 2 World TT Area 0 Entrance 0 LocalSet 86 FadeType 0",
+	        "\tSetPartyMenu 0"
+
+        ]
+
 # There are a few programs with more than one area settings (I wonder how many?), and I'm not parsing those correctly
 
 # TODO in order to support "chain logic" of removing cutscenes, I'll need to implement additions to add_command
 # Uncomment to run a single test through ipython
 ut = Tests()
-#ut.test_setup_multiple_jumps()
+ut.test_setup_multiple_jumps()
 #ut.test_set_jump()
 #ut.test_set_open_menu()
 
 
 # Uncomment to run the actual tests
-unittest.main()
+#unittest.main()

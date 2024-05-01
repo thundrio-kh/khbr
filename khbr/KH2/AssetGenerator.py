@@ -462,6 +462,7 @@ class AssetGenerator:
                             elif type(new_entity["name"]) == int:
                                 self.spawn_manager.set_object_by_id(old_spid["Entities"][old_spawn_index], new_entity)
                             else:
+
                                 obj = self.enemy_manager.lookup_object(new_entity["name"])
 
                                 if old_spawn_index >= len(old_spid["Entities"]):
@@ -567,6 +568,17 @@ class AssetGenerator:
             roomsource.append(programasset)
 
     def generateEvt(self, world, room, programnumber, roomsource, options=None):
+        def _ser(j):
+            sp = j.split()
+            return {
+                "Type": sp[1],
+                "World": sp[3],
+                "Area": sp[5],
+                "Entrance": sp[7],
+                "LocalSet": sp[9],
+                "FadeType": sp[11]
+            }
+
         log_output("DEBUG: making {} {} evt program {}, {}".format(world,room,programnumber,options))
         if not options:
             log_output("Warning: generate_evt not generating anything", log_level=0)
@@ -590,5 +602,11 @@ class AssetGenerator:
                 program.set_flags(options["flags"])
             if options.get("fix_source_area_settings"):
                 program.set_area_settings(16, -1)
+            if options.get("fix_fadetypes"):
+                jumps = [_ser(j) for j in prg.get_command("SetJump", return_all=True)]
+                for ji in range(len(jumps)):
+                    j = jumps[ji]
+                    j.set_jump(jumptype=j["Type"], world=j["World"], room=j["Area"], entrance=j["Entrance"], program=j["LocalSet"], fadetype="1", set_for_settings=ji)
             programasset = self.modwriter.writeAreaDataProgram(ardname, "evt", currentprogramnumber, program.make_program())
             roomsource.append(programasset)
+
