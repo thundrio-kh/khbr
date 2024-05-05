@@ -14,8 +14,8 @@
 * Can potentially crash when the fight is ended while in Limit Form, may only happen in some rooms
 
 ## Hydra
-* After doing a initial vanquish on the Hydra, it is possible to end up out of bounds but you are high in the air so just move to be back in bounds as soon as possible
-* If you do the Phil One-Two Reaction Command twice, the game will crash
+* After doing a initial vanquish on the Hydra, it is possible to end up out of bounds but you are high in the air so it is usually possible to move to be back in bounds
+* The Phil One-Two reaction command can only be performed once.
 
 ## Lexaeus
 * Using Limit form or other limits during his DM can crash the game

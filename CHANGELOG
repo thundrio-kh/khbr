@@ -21,7 +21,7 @@ Fixes
 * Changed wild enemies mode to be limited so that it attempts to match the variety of enemies in the original spawn (IE if a spawn has only shadows, it could be only Dancers. But if a spawn has shadows and soldiers, it could be Dancers and Dusks). This was done to try and alleviate memory issues
 * The dataspace mission in Tron is now randomized
 * On PC, adds a lua that should prevent Sora from T-Posing in some instances that were causing softlocks
-
+* Updated Hydra AI to prevent the player from executing the "Phil One-Two" RC more than once, in order to prevent a possible crash
 
 4.0.3
 
