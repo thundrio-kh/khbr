@@ -17852,7 +17852,10 @@ Space Paranoids:
             name: Devastator
       b_40:
         size: 0
-        ignored: true
+        aimods:
+        - name: NA
+          type: enemymod
+          vars: {"modification": "drop_dataspace_orbs"}
         sp_ids:
           '87':
           - index: 3

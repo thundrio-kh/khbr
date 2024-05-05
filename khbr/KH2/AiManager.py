@@ -14,11 +14,39 @@ class AiManager:
             self.script = karma_param.sub(lambda m: "pushImmf {}\n syscall 2, 76 ; trap_enemy_set_karma_limit ".format(str(available_values.pop())),  self.script)
             return
         return
-        # Don't want to do RV rando for enemies that don't normally change karma limit
-        act_table_syscall = re.compile(r'\n.*; trap_act_table_add \(12 in, 0 out\)(\n)')
-        if act_table_syscall.search(self.script):
-            self.script = act_table_syscall.sub(lambda m: "\n syscall 1, 6 ; trap_act_table_add (12 in, 0 out)\n pushFromFSp 0\n pushImmf {}\n syscall 2, 76 ; trap_enemy_set_karma_limit \n".format(str(available_values.pop())), self.script, count=1)
-        return
+    
+    def add_when_dead(self, lines):
+        str_to_add = ': ; dead\n popToSp 0\n'+'\n'.join(lines)
+        dead_param = re.compile(r': ;___label for action pushFromPAi.*? ; ___ai (dead\n popToSp 0)')
+        if dead_param.search(self.script):
+            self.script = dead_param.sub(lambda m: str_to_add, self.script)
+        else:
+            raise Exception("Error: Can not find dead action for {}".format(self.fn))
+
+    def drop_dataspace_orbs(self):
+        self.add_when_dead([
+            ' pushFromFSp 0',
+            ' pushImm 10',
+            ' syscall 1, 278 ; trap_obj_scatter_prize_tr'
+        ])
 
     def get_script(self):
         return self.script
+    
+# IS_HADES_ESCAPE:
+#  syscall 1, 23 ; trap_area_world
+#  pushImm 6
+#  sub
+#  eqz
+#  jz RET_FALSE
+#  syscall 1, 24 ; trap_area_area
+#  pushImm 5
+#  sub
+#  eqz
+#  jz RET_FALSE
+#  syscall 1, 26 ; trap_area_battle_set
+#  pushImm 111
+#  sub
+#  eqz
+#  jz RET_FALSE
+#  jmp RET_TRUE

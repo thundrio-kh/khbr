@@ -285,14 +285,21 @@ class AssetGenerator:
                 modelname = name.split("/")[0]
                 modbasename = os.path.basename(name)
                 modfilename = os.path.join(os.path.dirname(__file__), "data", "bdscript", mod["type"], name)
+                if os.path.isdir(modfilename):
+                    possible_fns = os.listdir(modfilename)
+                    modfilename = os.path.join(modfilename, possible_fns[0].replace(".original",""))
+                    modbasename = os.path.basename(modfilename).split(".")[0]
                 if not modelname in created_mods:
                     with open(modfilename) as f:
                         ai_manager = AiManager(modelname, f.read())
                 else:
                     ai_manager = created_mods[ai_manager]            
-        
-                for orig,new in mod.get("replacements", {}).items():
-                    ai_manager.replace(orig, mod["vars"][new])
+
+                if mod.get("vars").get("modification") == "drop_dataspace_orbs":
+                    ai_manager.drop_dataspace_orbs()
+                else:
+                    for orig,new in mod.get("replacements", {}).items():
+                        ai_manager.replace(orig, mod["vars"][new])
 
                 created_mods[modelname] = {
                     "name": modbasename,

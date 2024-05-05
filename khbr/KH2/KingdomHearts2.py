@@ -342,8 +342,11 @@ class KingdomHearts2:
                                     created_entity.update(new_enemy_object)
                                     rand_seed.add_spawn(w, r, sp, i, entity, new_enemy_object)
                                     rand_seed.update_seed(old_enemy_object, new_enemy_object, w, r, sp, i)
-            
                         for aimod in spawnpoint.get("aimods",[]):
+                            if aimod["type"] == "enemymod":
+                                for m in set(o["model"] for o in created_enemies):
+                                    rand_seed.add_ai({"name": m, "type": "obj", "vars": aimod["vars"]})
+                                continue
                             createmod=True
                             for var in aimod["vars"]:
                                 varvalue = aimod["vars"][var]
