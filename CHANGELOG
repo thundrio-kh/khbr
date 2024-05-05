@@ -20,6 +20,7 @@ Fixes
 * When bosses as enemies is turned on, bosses can no longer replace enemies in missions. Also upped the % for a boss to replace an enemy to 5% (from 1.2). Also bosses can only replace at most one enemy per spawnpoint to alleviate memory concerns.
 * Changed wild enemies mode to be limited so that it attempts to match the variety of enemies in the original spawn (IE if a spawn has only shadows, it could be only Dancers. But if a spawn has shadows and soldiers, it could be Dancers and Dusks). This was done to try and alleviate memory issues
 * The dataspace mission in Tron is now randomized
+* On PC, adds a lua that should prevent Sora from T-Posing in some instances that were causing softlocks
 
 
 4.0.3
