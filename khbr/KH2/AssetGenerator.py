@@ -295,7 +295,7 @@ class AssetGenerator:
                 else:
                     ai_manager = created_mods[ai_manager]            
 
-                if mod.get("vars").get("modification") == "drop_dataspace_orbs":
+                if mod.get("vars", {}).get("modification") == "drop_dataspace_orbs":
                     ai_manager.drop_dataspace_orbs()
                 else:
                     for orig,new in mod.get("replacements", {}).items():

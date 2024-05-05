@@ -1,27 +1,30 @@
 
 
 
-4.0.4
-Fixes
-* Updated locations to ignore some boss spawns that don't get used (b_99) but end up causing problems in Wild mode
-* Minor logic adjustments for softlock prevention purposes
-* Will no longer place the Bulky Vendors that automatically disappear
-* Changed name of "Include more locations" option to "Allow more annoying replacements" to be more obvious about what the option does
-* Discovered an issue where in some locations and some bosses entering the room while in Limit form will result in a crash. This has been observed for Hydra and The Experiment, and it is unclear how extensive the issue is, and a fix is not obvious. This has been noted on the KNOWN_ISSUES page, and some bosses have been marked as risky in the struggle fights (which is the set of locations where you are most likely to enter while in limit form)
-* Renamed option to allow annoying replacements to "risky", to make it more obvious this can make crashes more likely
-* Fixed issue where Pirates would still be damageable outside of moonlight if they only replaced other pirates
-* Changed the category for Gargoyles to memoryLarge so that they can't replace shadows on PS2 (which can cause a crash)
-* Fix issue where struggle bosses would not be invulnerable in fights with invulnerable bosses (IE Hades I or other Struggle bosses)
-* Updated Hydra Head AI so when executing the finisher RC, you are rubberbanded back to where Sora started the RC, instead of a random location in the arena
-* Updated Cutscene Remover functionality to only create one copy of each modified event in the mod zip
-* Fixes for Axel AI so that he properly does the assault attacks from the edge of the fire floor, instead of near the center
+4.1.0
+New Things
 * Added the ability to customize your randomization experience, by providing 'override_enemies.yaml', and 'override_locations.yaml' files in the same directory as the randomizer exe. Documentation is [here](COMING SOON)
+* The dataspace mission in Tron is now randomized
 * Randomized the Audience Chamber Minnie escord mission (PC only). Some of the enemies that fire projectiles are limited to spawn less than the normal 27 entities that are in that room, either due to crashing or difficulty of the fight
 * When bosses as enemies is turned on, bosses can no longer replace enemies in missions. Also upped the % for a boss to replace an enemy to 5% (from 1.2). Also bosses can only replace at most one enemy per spawnpoint to alleviate memory concerns.
 * Changed wild enemies mode to be limited so that it attempts to match the variety of enemies in the original spawn (IE if a spawn has only shadows, it could be only Dancers. But if a spawn has shadows and soldiers, it could be Dancers and Dusks). This was done to try and alleviate memory issues
-* The dataspace mission in Tron is now randomized
 * On PC, adds a lua that should prevent Sora from T-Posing in some instances that were causing softlocks
-* Updated Hydra AI to prevent the player from executing the "Phil One-Two" RC more than once, in order to prevent a possible crash
+
+AI Changes
+* Fix issue where struggle bosses would not be invulnerable in fights with invulnerable bosses (IE Hades I or other Struggle bosses)
+* Updated Hydra Head AI so when executing the finisher RC, you are rubberbanded back to where Sora started the RC, instead of a random location in the arena
+* Fixes for Axel AI so that he properly does the assault attacks from the edge of the fire floor, instead of near the center
+* Updated Hydra AI to prevent the player from executing the "Phil One-Two" RC more than once, in order to prevent a crash
+
+Fixes
+* Discovered an issue where in some locations and some bosses entering the room while in Limit form will result in a crash. This has been observed for Hydra and The Experiment, and it is unclear how extensive the issue is, and a fix is not obvious. This has been noted on the KNOWN_ISSUES page, and some bosses have been marked as risky in the struggle fights (which is the set of locations where you are most likely to enter while in limit form)
+* Will no longer place the Bulky Vendors that automatically disappear
+* Fixed issue where Pirates would still be damageable outside of moonlight if they only replaced other pirates
+* Updated locations to ignore some boss spawns that don't get used (b_99) but end up causing problems in Wild mode
+* Minor logic adjustments for softlock prevention purposes
+* Changed name of "Include more locations" option to "Allow more risky replacements" to be more obvious about what the option does and that it can make crashes more likely
+* Changed the category for Gargoyles to memoryLarge so that they can't replace shadows on PS2 (which can cause a crash)
+* Updated Cutscene Remover functionality to only create one copy of each modified event in the mod zip
 
 4.0.3
 

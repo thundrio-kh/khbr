@@ -1,12 +1,13 @@
-import unittest
-from khbr.KH2.AiManager import AiManager
-import testutils
+import unittest, os
+
 
 class Tests(unittest.TestCase):
     def test_replace(self):
         ai = AiManager("name", "this is a {settest} script")
         ai.replace("settest", 5)
         assert ai.get_script() == "this is a 5 script"
+
+
 
 # Uncomment to run a single test through ipython
 ut = Tests()

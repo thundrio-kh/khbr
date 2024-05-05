@@ -353,7 +353,9 @@ class Tests(unittest.TestCase):
         from khbr.KH2.schemas.enemy_records import get_schema
         source = get_schema()
         source["tags"] = ["rc_blocked"]
+        source["name"] = "source"
         dest = get_schema()
+        dest["name"] = "dest"
         assert not kh2.enemy_manager.isReplacementBlocked(source, dest)
         dest["tags"] = ["needs_rc"]
         assert kh2.enemy_manager.isReplacementBlocked(source, dest)
@@ -405,6 +407,20 @@ class Tests(unittest.TestCase):
             assert msn in randomization2.get("ai_mods")
         pass
 
+    def test_drop_dataspace_orbs(self):
+        from khbr.KH2.AiManager import AiManager
+        from khbr.KH2.EnemyManager import EnemyManager
+        e_man = EnemyManager(os.path.join("KH2", "data"))
+        enemies = e_man.get_valid_enemies()
+        for en in enemies:
+            enemy = e_man.enemy_records[en]
+            modelname = enemy.get("model")
+            aidirname = os.path.join(os.path.dirname(__file__), "kh2", "data", "bdscript", "obj", modelname)
+            possible_fns = os.listdir(aidirname)
+            aifn = os.path.join(aidirname, possible_fns[0].replace(".original",""))
+            with open(aifn) as f:
+                ai_manager = AiManager(modelname, f.read())
+            ai_manager.drop_dataspace_orbs()
 
     def test_gr_room_uses_luxord_msn_when_replaced(self):
         # gr room should still work for luxord
@@ -512,9 +528,12 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
-ut.test_generate_enemies_wild()
-ut.test_generate_party_rando()
+#ut.test_drop_dataspace_orbs()
+#ut.test_is_replacement_blocked()
+#ut.test_read_all_zexion()
+# ut.test_generate_enemies_wild()
+# ut.test_generate_party_rando()
 #ut.test_wild_dont_randomize_demyxoc()
 
 # Uncomment to run the actual tests
-# unittest.main()
+unittest.main()
