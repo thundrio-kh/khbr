@@ -14,7 +14,6 @@ AI Changes
 * Fix issue where struggle bosses would not be invulnerable in fights with invulnerable bosses (IE Hades I or other Struggle bosses)
 * Updated Hydra Head AI so when executing the finisher RC, you are rubberbanded back to where Sora started the RC, instead of a random location in the arena
 * Fixes for Axel AI so that he properly does the assault attacks from the edge of the fire floor, instead of near the center
-* Updated Hydra AI to prevent the player from executing the "Phil One-Two" RC more than once, in order to prevent a crash
 
 Fixes
 * Discovered an issue where in some locations and some bosses entering the room while in Limit form will result in a crash. This has been observed for Hydra and The Experiment, and it is unclear how extensive the issue is, and a fix is not obvious. This has been noted on the KNOWN_ISSUES page, and some bosses have been marked as risky in the struggle fights (which is the set of locations where you are most likely to enter while in limit form)

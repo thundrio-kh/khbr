@@ -1,5 +1,5 @@
 ---
-WorkSize: 4612
+WorkSize: 4608
 StackSize: 512
 TempSize: 512
 Triggers:
@@ -19,8 +19,6 @@ Name: b_he100
 ; codeLabels: 
 ; codeRevealer: -l 198 -l 679 -l 712 -l 1027 -l 1198 -l 1436 -l 1716 -l 1831 -l 1839 -l 2513 -l 2664 -l 4594 -l 4834 -l 4893 -l 4894 -l 4911 -l 4916 -l 4931 -l 5008 -l 5205 -l 5261 -l 5277 -l 5358 -l 5424 -l 5483 -l 5927 -l 5948 -l 6138 -l 6187 -l 6200 -l 6233 -l 6344 -l 6492 -l 6735 -l 6930 -l 7064 -l 7255 -l 7347 -l 7442 -l 7604 -l 7723 -l 8476 -l 8521 -l 8575 -l 8870 -l 9095 -l 9134 -l 9175 -l 9204 -l 9297 -l 9345 -l 9535 -l 9568 -l 9632 -l 9635 -l 9825 -l 9908 -l 9937 -l 9938 -l 9956 -l 9957 -l 10027 -l 10173 -l 10178 -l 10513 -l 10527 -l 11262 -l 11294 -l 11412 -l 11541
  section .text
-RET:
- ret
 TR11:
  popToSp 0
  popToSp 4
@@ -68,11 +66,6 @@ L101:
  gosub 8, L664
  jmp L143
 L109:
- pushFromFWp PHIL_CHECK
- pushImm 1
- sub
- eqz
- jnz RET
  dup 
  pushImm 346
  sub 
@@ -5156,8 +5149,6 @@ L9940:
 L9956:
  ret 
 L9957: ;___label for action pushFromPAi L12079 ; ___ai rc_phil_attack
- pushImm 1
- popToWp PHIL_CHECK
  popToSp 0
  gosub 4, L1350
  memcpyToSp 16, 16
@@ -6421,6 +6412,4 @@ W4596:
 W4600:
  resb 4
 W4604:
- resb 4
-PHIL_CHECK:
  resb 4
