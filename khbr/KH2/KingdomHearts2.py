@@ -323,9 +323,13 @@ class KingdomHearts2:
                                     if new_enemy == old_enemy_object["name"] and not entity.get("nameForReplace", "") == new_enemy:
                                         continue
 
+                                    def _is_dataspace_fight(w,r,sp):
+                                        return w == 'Space Paranoids' and r == 'Dataspace' and sp == 'b_40'      
+                                    # Undead Pirate C script edits don't work for some reason... so in situations where they would be edited just switch them with Undead Pirate A
+                                    if _is_dataspace_fight(w,r,sp) and "Undead Pirate C" in new_enemy:
+                                        new_enemy = "Undead Pirate A"
+
                                     new_enemy_object = self.enemy_manager.get_new_enemy_object(new_enemy, rand_seed)
-
-
 
                                     if new_enemy in spawnpoint.get("limited_enemies", {}):
                                         curr_num = counted_enemies.get(new_enemy, 0)

@@ -293,7 +293,7 @@ class AssetGenerator:
                     with open(modfilename) as f:
                         ai_manager = AiManager(modelname, f.read())
                 else:
-                    ai_manager = created_mods[ai_manager]            
+                    ai_manager = created_mods[modelname]["manager"]            
 
                 if mod.get("vars", {}).get("modification") == "drop_dataspace_orbs":
                     ai_manager.drop_dataspace_orbs()

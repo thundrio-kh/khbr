@@ -3180,8 +3180,8 @@ Hydra:
   aimods: 
   - name: B_HE110/b_he.bdscript
     type: obj
-  - name: B_HE100/b_he.bdscript
-    type: obj
+  # - name: B_HE100/b_he.bdscript TODO fix the fix for doing urnator only once
+  #   type: obj
   blacklist_destination:
   - Xigbar # softlock possible
   - Axel I
@@ -4599,7 +4599,7 @@ Rapid Thruster WI:
   hp: 100
   level: 99
   limiter: 7
-  model: M_EX500_NM
+  model: M_EX660_WI
   obj_id: 1843
   size: 1020248
   type: enemy
@@ -5293,7 +5293,7 @@ Sorcerer:
   hp: 100
   level: 99
   limiter: 34
-  model: M_EX870
+  model: M_EX960
   obj_id: 316
   sizeTag: memoryLarge
   tags:
