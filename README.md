@@ -17,3 +17,16 @@ Instructions to build boss rush alpha exe
 * in the dist folder create a khbr folder, then copy the KH2/data folder there
 * copy extracted_data from dist folder into the dist/bossrush folder
 * zip up the folder, and upload to gdrive
+
+Instructions for building
+* open linux terminal
+* cd /mnt/c/Users/12sam/Desktop/git/khbr
+* rm -rf build dist *.egg_info
+* python setup.py clean --all
+* python setup.py bdist_wheel
+to test
+* cd dist
+* pip uninstall khbr
+* pip install <>
+* cd ~/.local/lib/python3.8/site-packages/khbr/
+* python integration_tests.py

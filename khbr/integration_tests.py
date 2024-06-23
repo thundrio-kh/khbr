@@ -297,14 +297,22 @@ class Tests(unittest.TestCase):
         base64.decodebytes(b64)
 
     def test_seedgen_error4(self):
-        options = {'remove_damage_cap': False, 'cups_give_xp': False, 'retry_data_final_xemnas': True, 'retry_dark_thorn': False, 'boss': 'One to One', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': False, 'data_bosses': True, 'mickey_rule': 'follow', 'enemy': 'One to One', 'nightmare_enemies': False, 'combine_enemy_sizes': False, 'combine_melee_ranged': False, 'memory_expansion': True}
+        for _ in range(10):
+            options = {'remove_damage_cap': False, 'cups_give_xp': False, 'retry_data_final_xemnas': True, 'retry_dark_thorn': False, 'boss': 'One to One', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': False, 'data_bosses': True, 'mickey_rule': 'follow', 'enemy': 'One to One', 'nightmare_enemies': False, 'combine_enemy_sizes': False, 'combine_melee_ranged': False, 'memory_expansion': True}
+            rando = Randomizer(tempdir=testutils.get_tmp_path())
+            b64 = rando.generate_seed("kh2", options=options)
+            import base64
+            base64.decodebytes(b64)
+
+    def test_seedgen_error5(self):
+        options = {'remove_damage_cap': True, 'cups_give_xp': True, 'retry_data_final_xemnas': True, 'retry_dark_thorn': True, 'boss': 'Disabled', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': False, 'data_bosses': False, 'mickey_rule': 'follow', 'enemy': 'One to One', 'nightmare_enemies': False, 'combine_enemy_sizes': False, 'combine_melee_ranged': False, 'memory_expansion': True}
         rando = Randomizer(tempdir=testutils.get_tmp_path())
         b64 = rando.generate_seed("kh2", options=options)
         import base64
         base64.decodebytes(b64)
 
-    def test_seedgen_error5(self):
-        options = {'remove_damage_cap': True, 'cups_give_xp': True, 'retry_data_final_xemnas': True, 'retry_dark_thorn': True, 'boss': 'Disabled', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': False, 'data_bosses': False, 'mickey_rule': 'follow', 'enemy': 'One to One', 'nightmare_enemies': False, 'combine_enemy_sizes': False, 'combine_melee_ranged': False, 'memory_expansion': True}
+    def test_seedgen_error6(self):
+        options = {'remove_damage_cap': False, 'cups_give_xp': False, 'retry_data_final_xemnas': False, 'retry_dark_thorn': False, 'remove_cutscenes': False, 'party_member_rando': False, 'costume_rando': False, 'revenge_limit_rando': 'Vanilla', 'boss': 'One to One', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': False, 'data_bosses': False, 'gimmick_bosses': False, 'sephiroth': False, 'terra': False, 'mickey_rule': 'follow', 'scale_boss_stats': True, 'enemy': 'Disabled', 'nightmare_enemies': False, 'separate_nobodys': False, 'other_enemies': False, 'combine_enemy_sizes': False, 'combine_melee_ranged': False, 'memory_expansion': True}
         rando = Randomizer(tempdir=testutils.get_tmp_path())
         b64 = rando.generate_seed("kh2", options=options)
         import base64
@@ -369,6 +377,64 @@ class Tests(unittest.TestCase):
         options = {"selected_boss": "Riku"}
         randomization = testutils.generateSeed(options)
         assert randomization["msn_map"]["HB32_FM_VEX"]["name"] == "WI03_MS104"
+
+    def test_revenge_limit_rando(self):
+        options = {
+            "boss": "One to One",
+            "enemy": "One to One",
+            "revenge_limit_rando": "Random Swap"
+        }
+        
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        base64.decodebytes(b64)
+
+        options["revenge_limit_rando"] = "Set 0"
+
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        base64.decodebytes(b64)
+
+        options["revenge_limit_rando"] = "Set Infinity"
+
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        base64.decodebytes(b64)
+
+        options["revenge_limit_rando"] = "Random Values"
+
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        base64.decodebytes(b64)
+
+    def test_scale_hp_to_original_on(self):
+        options = {
+            "boss": "One to One",
+            "enemy": "One to One",
+            "scale_boss_stats": True,
+            "memory_expansion": True,
+            'retry_data_final_xemnas': True
+        }
+        options = {'remove_damage_cap': False, 'cups_give_xp': False, 'retry_data_final_xemnas': True, 'retry_dark_thorn': False, 'boss': 'One to One', 'nightmare_bosses': False, 'bosses_replace_enemies': False, 'cups_bosses': False, 'data_bosses': True, 'mickey_rule': 'follow', 'enemy': 'One to One', 'nightmare_enemies': False, 'combine_enemy_sizes': False, 'combine_melee_ranged': False, 'memory_expansion': True}
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        base64.decodebytes(b64)
+
+    def test_scale_hp_to_original_off(self):
+        options = {
+            "boss": "One to One",
+            "enemy": "One to One",
+            "scale_boss_stats": True
+        }
+        rando = Randomizer(tempdir=testutils.get_tmp_path())
+        b64 = rando.generate_seed("kh2", options=options)
+        import base64
+        base64.decodebytes(b64)
 
     def test_proper_ai_edit_to_setzer(self):
         # [broken_seed, working_seed]
@@ -528,6 +594,15 @@ class Tests(unittest.TestCase):
 
 # Uncomment to run a single test through ipython
 ut = Tests()
+#ut.test_revenge_limit_rando()
+#ut.test_scale_hp_to_original_on()
+#ut.test_scale_hp_to_original_off()
+#ut.test_seedgen_error2()
+#ut.test_seedgen_error3()
+ut.test_seedgen_error6()
+#ut.test_seedgen_error5()
+#ut.test_seedgen_error6()
+
 #ut.test_drop_dataspace_orbs()
 #ut.test_is_replacement_blocked()
 #ut.test_read_all_zexion()
@@ -536,4 +611,4 @@ ut = Tests()
 #ut.test_wild_dont_randomize_demyxoc()
 
 # Uncomment to run the actual tests
-unittest.main()
+#unittest.main()

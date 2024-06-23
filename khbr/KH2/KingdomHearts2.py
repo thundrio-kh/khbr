@@ -111,8 +111,9 @@ class KingdomHearts2:
     @staticmethod
     def get_utility_mods(options):
         utility_mods = []
-        if True: # Really should be based on a hidden option, but not for now
-            utility_mods.append("animation_fix")
+        # This lua mod causes some unintentional negative side effects, so it is disabled for now
+        #if True: # Really should be based on a hidden option, but not for now
+        #    utility_mods.append("animation_fix")
         if options.get("remove_damage_cap"):
             utility_mods.append("remove_damage_cap")
         if options.get("cups_give_xp"):
@@ -333,7 +334,7 @@ class KingdomHearts2:
 
                                     if new_enemy in spawnpoint.get("limited_enemies", {}):
                                         curr_num = counted_enemies.get(new_enemy, 0)
-                                        limit = spawnpoint.get("limited_enemies", {})[new_enemy]
+                                        limit = spawnpoint.get("limited_enemies", {}).get(new_enemy, 10) # Reasonable default
                                         if curr_num < limit:
                                             counted_enemies[new_enemy] = curr_num + 1
                                         else:
