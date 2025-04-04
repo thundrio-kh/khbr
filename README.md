@@ -19,6 +19,7 @@ Instructions to build boss rush alpha exe
 * zip up the folder, and upload to gdrive
 
 Instructions for building
+* change the version in setup.py and the log message in kingdomhearts2.py to match
 * open linux terminal
 * cd /mnt/c/Users/12sam/Desktop/git/khbr
 * rm -rf build dist *.egg_info

@@ -10,6 +10,7 @@ from khbr.KH2.LocationManager import LocationManager
 from khbr.KH2.MissionManager import MissionManager
 from khbr.KH2.SpawnManager import SpawnManager
 from khbr.KH2.schemas.random_config import RandomConfig
+import khbr
 import os, time
 class KingdomHearts2:
     def __init__(self):
@@ -143,6 +144,7 @@ class KingdomHearts2:
         return utility_mods
 
     def perform_randomization(self, options, seed=None):
+        log_output("KHBR Version: {}".format('4.1.2'))
         log_output("Enemy Seed: {}".format(seed), log_level=0)
         if DIAGNOSTICS:
             start_time = time.time()

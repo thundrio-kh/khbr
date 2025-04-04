@@ -24,7 +24,7 @@ class LocationManager:
 
     def set_btlmap(self):
         with open(os.path.join(self.basepath, "btl-ard-data.yml")) as f:
-            self.btlmap = yaml.load(f)
+            self.btlmap = yaml.load(f, Loader=yaml.FullLoader)
 
     def get_sp_max_enemy_types(self, room, unit):
         max_types = self.btlmap["{}-{}".format(self.locmap[room], unit)].get("max_variety", "NOT_FOUND")

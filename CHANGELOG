@@ -1,3 +1,6 @@
+5.0.0
+* Now the generated mod will always load properly on PS2 or PC, no matter if the memory expansion option is checked
+
 4.1.1
 * Removed tpose script due to some negative side effects
 

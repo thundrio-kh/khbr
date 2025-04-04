@@ -9,15 +9,15 @@ class AiManager:
         self.script = self.script.replace("{"+str(original)+"}", str(new))
 
     def set_karma_limit(self, available_values):
-        karma_param = re.compile(r'pushImmf (.*)\n.*; trap_enemy_set_karma_limit')
+        karma_param = re.compile(r'push.s (.*)\n.*; trap_enemy_set_karma_limit')
         if karma_param.search(self.script):
-            self.script = karma_param.sub(lambda m: "pushImmf {}\n syscall 2, 76 ; trap_enemy_set_karma_limit ".format(str(available_values.pop())),  self.script)
+            self.script = karma_param.sub(lambda m: "push.s {}\n syscall 2, 76 ; trap_enemy_set_karma_limit ".format(str(available_values.pop())),  self.script)
             return
         return
     
     def add_when_dead(self, lines):
-        str_to_add = ': ; dead\n popToSp 0\n'+'\n'.join(lines)
-        dead_param = re.compile(r': ;___label for action pushFromPAi.*? ; ___ai (dead\n popToSp 0)')
+        str_to_add = ': ; dead\n pop.sp 0\n'+'\n'.join(lines)
+        dead_param = re.compile(r': ;___label for action push.bd.*? ; ___ai (dead\n pop.sp 0)')
         if dead_param.search(self.script):
             self.script = dead_param.sub(lambda m: str_to_add, self.script)
         else:
@@ -25,8 +25,8 @@ class AiManager:
 
     def drop_dataspace_orbs(self):
         self.add_when_dead([
-            ' pushFromFSp 0',
-            ' pushImm 10',
+            ' push.d.sp 0',
+            ' push 10',
             ' syscall 1, 278 ; trap_obj_scatter_prize_tr'
         ])
 
@@ -35,18 +35,18 @@ class AiManager:
     
 # IS_HADES_ESCAPE:
 #  syscall 1, 23 ; trap_area_world
-#  pushImm 6
+#  push 6
 #  sub
-#  eqz
-#  jz RET_FALSE
+#  seqz
+#  beqz RET_FALSE
 #  syscall 1, 24 ; trap_area_area
-#  pushImm 5
+#  push 5
 #  sub
-#  eqz
-#  jz RET_FALSE
+#  seqz
+#  beqz RET_FALSE
 #  syscall 1, 26 ; trap_area_battle_set
-#  pushImm 111
+#  push 111
 #  sub
-#  eqz
-#  jz RET_FALSE
-#  jmp RET_TRUE
+#  seqz
+#  beqz RET_FALSE
+#  b RET_TRUE

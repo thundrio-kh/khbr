@@ -396,17 +396,16 @@ class AssetGenerator:
             self.assets.append(asset)
 
     def getDefaultRoomAsset(self, ardname):
-        region = '' if not self.ispc else 'us/'
         # Ideally this would be 
-        formattedname =  "ard/{}{}.ard".format(region, ardname)
+        formattedname =  "ard/{}.ard".format(ardname)
         roomasset = {
             "method": "binarc",
             "name": formattedname,
             "source": []
         }
-        if region:
-            multi = [{"name": formattedname.replace(region, r)} for r in ["jp/","fr/","gr/","it/","sp/","uk/"]]
-            roomasset["multi"] = multi
+        # if region:
+        multi = [{"name": formattedname.replace("ard/", r)} for r in ["ard/us/", "ard/jp/","ard/fr/","ard/gr/","ard/it/","ard/sp/","ard/uk/"]]
+        roomasset["multi"] = multi
         return roomasset
 
     def generateSpawns(self, replacement_spawns, subtract_map):

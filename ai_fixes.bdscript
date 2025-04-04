@@ -1,27 +1,49 @@
+SIMPLIFY ACT TABLE INSERTS
+
+
+AddActionToTable:
+ push 0
+AddActionToTableWithCallback:
+ push 0
+ push 0
+ push 0
+ push 0
+ push 0
+ push 0
+ syscall 1, 6 ; trap_act_table_add (12 in, 0 out)
+ ret
+>>>>>>>
+ push.d.wb act_table
+ push.bd text_appear
+ push 100
+ push ActionAppear
+ gosub 16, AddActionToTable
+
+
 SIMPLE STARTING COORDINATES FIX
 
 ...
 TRINIT
  ...
- pushFromFSp 0
+ push.d.sp 0
  ; add this
  dup
  syscall 1, 147 ; pos
- memcpyToWp 16, WTHISPOS
+ memcpy.wp 16, WTHISPOS
  ; done with add
- pushFromPWp WTABLE
+ push.d.wp WTABLE
  syscall 1, 7 ; trap_obj_set_act_table
 ...
  pushImmf 0
  pushImmf 0
  pushImmf 0
 >>>>>>>>
- pushFromPWp WTHISPOS
- fetchValue 0
- pushFromPWp WTHISPOS
- fetchValue 4
- pushFromPWp WTHISPOS
- fetchValue 8
+ push.s WTHISPOS
+ push.d.pop 0
+ push.s WTHISPOS
+ push.d.pop 4
+ push.s WTHISPOS
+ push.d.pop 8
 
 
 SAVE CENTER COORDINATE AS FIX
@@ -36,13 +58,13 @@ FIND_CENTER:
  ; this object on top of stack
  dup
  syscall 1, 147 ; trap_obj_pos
- pushFromPWp WPLAYER
- pushImm 566
+ push.d.wp WPLAYER
+ push 566
  syscall 1, 114 ; trap_obj_search_by_entry
- pushFromPWp WPLAYER
+ push.d.wp WPLAYER
  syscall 1, 147 ; trap_obj_pos
  syscall 0, 4 ; trap_vector add
- pushImmf 2
+ push.s 2
  syscall 0, 37 ; divide
  memcpyToWp 16, WCENTERPOS
  ; end find center pos
@@ -50,25 +72,25 @@ FIND_CENTER:
 ...
 gosub 4, FIND_CENTER
 ...
- pushImmf 0
- pushImmf 0
- pushImmf 0
+ push.s 0
+ push.s 0
+ push.s 0
 >>>>>>>>
- pushFromPWp WCENTERPOS
- fetchValue 0
- pushFromPWp WCENTERPOS
- fetchValue 4
- pushFromPWp WCENTERPOS
- fetchValue 8
+ push.wp WCENTERPOS
+ push.d.pop 0
+ push.wp WCENTERPOS
+ push.d.pop 4
+ push.wp WCENTERPOS
+ push.d.pop 8
 ...
 ...
 TRINIT:
  ...
- pushFromFSp 0
+ push.d.sp 0
  ++++++
- gosub 4, FIND_CENTER
+ jal 4, FIND_CENTER
  ++++++
- pushFromPWp ACTTABLE
+ push.d.wp ACTTABLE
  syscall 1, 7 ; act_table
 ...
 ...
@@ -90,44 +112,44 @@ FIND_CENTER:
  ; this object on top of stack
  dup
  syscall 1, 147 ; trap_obj_pos
- pushFromPWp WPLAYER
- pushImm 566
+ push.d.wp WPLAYER
+ push 566
  syscall 1, 114 ; trap_obj_search_by_entry
- pushFromPWp WPLAYER
+ push.d.wp WPLAYER
  syscall 1, 147 ; trap_obj_pos
  syscall 0, 4 ; trap_vector add
- pushImmf 2
+ push.s 2
  syscall 0, 37 ; divide
- memcpyToWp 16, WCENTERPOS
+ push.d.wp 16, WCENTERPOS
  ; end find center pos
  ret
 GETRANDOMPOS:
- pushFromPWp WCENTERPOS 
- pushImmf 1000 ; near
- pushImmf 1000 ; far
- pushImmf 0 ; low make this 100-200 to spawn in air
- pushImmf 0 ; high make this 100-200 to spawn in air
+ push.d.wp WCENTERPOS 
+ push.s 1000 ; near
+ push.s 1000 ; far
+ push.s 0 ; low make this 100-200 to spawn in air
+ push.s 0 ; high make this 100-200 to spawn in air
  syscall 1, 248 ; trap_bg_get_random_pos_air
  ret
 ...
 TRINIT:
  ...
- pushFromFSp 0
+ push.d.sp 0
  ++++++
- gosub 4, FIND_CENTER
+ jal 4, FIND_CENTER
  ++++++
- pushFromPWp ACTTABLE
+ push.wp ACTTABLE
  syscall 1, 7 ; act_table
 ...
- pushFromPSp 32
- pushImmf 0
- pushImmf 0
- pushImmf -900
- gosub 16, L395
+ push.s 32
+ push.s 0
+ push.s 0
+ push.s -900
+ jal 16, L395
 >>>
- pushFromPSp 32
- gosub 4, GETRANDOMPOS
- memcpyToSp 16, 32
+ push.wp 32
+ jal 4, GETRANDOMPOS
+ memcpy.sp 16, 32
 ...
 ...
 ++++
@@ -137,9 +159,9 @@ WCENTERPOS:
  resb 16
 
 ; get pos of other object
- pushFromPWp WHYDRA
- pushImm 352
+ push.sp WHYDRA
+ push 352
  syscall 1, 114
- pushFromPWp WHYDRA
+ push.wp WHYDRA
  syscall 1, 147
 
