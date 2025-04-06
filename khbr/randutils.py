@@ -5,7 +5,7 @@ DEBUG_BOSS_LIST = None
 #DEBUG_BOSS_LIST = {"Volcano Lord": "Cloud", "Blizzard Lord": "Tifa"}
 
 def read_override(name):
-    override_fn = 'override_{}'.format(name)
+    override_fn = f'override_{name}'
     override_path = Path(override_fn).absolute()
     if override_path.is_file():
         with open(override_path, encoding='utf-8') as f:
@@ -13,7 +13,7 @@ def read_override(name):
                 return yaml.load(f, Loader=yaml.SafeLoader)
             elif name.endswith(".json"):
                 return json.load(f)
-            print("Warning: read_override unsupported filetype: {}".format(override_fn))
+            print(f"Warning: read_override unsupported filetype: {override_fn}")
     return {}
 
 def log_output(msg, log_level = 2):
@@ -74,11 +74,11 @@ def pick_boss_to_replace(enemy_records, bossparentlist):
     bossparent = enemy_records[random.choice(enabled_parents)]
     enabled_children = [b for b in bossparent["children"] if enemy_records[b]["enabled"]]
     if len(enabled_children) == 0:
-        raise Exception("{} has no enabled children!".format(bossparent["name"]))
+        raise Exception(f"{bossparent['name']} has no enabled children!")
     bosschild = enemy_records[random.choice(enabled_children)]
     enabled_variations = [b for b in bosschild["variations"] if enemy_records[b]["enabled"]]
     if len(enabled_variations) == 0:
-        raise Exception("{} has no enabled variations!".format(bosschild["name"]))
+        raise Exception(f"{bosschild['name']} has no enabled variations!")
     chosen_boss = random.choice(enabled_variations)
     return chosen_boss
 

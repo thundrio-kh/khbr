@@ -39,7 +39,7 @@ for options in [{"name": "limited", "size": MAXCACHESIZE}, {"name": "unlimited",
         if solution_found:
             length = int(time.time() - start_time)
             start_time = time.time()
-            print(solution_found, len(solutions), "{}s".format(length))
+            print(solution_found, len(solutions), f"{length}s")
             solutions.append({bosses_base[i]:possible_solution[i] for i in range(len(possible_solution))})    
 
     for i in range(len(solutions)):

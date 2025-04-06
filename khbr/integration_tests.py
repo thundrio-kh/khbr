@@ -454,7 +454,7 @@ class Tests(unittest.TestCase):
             tt05ard = yaml.load(open(replacementfilepath), Loader=yaml.SafeLoader)
             repid = tt05ard[0]["Entities"][3]["ObjectId"]
             bdscript = open(filepath).read().split("\n")
-            assert bdscript[118] == " pushImm {}".format(repid), "{} != {}".format(bdscript[118], repid)
+            assert bdscript[118] == f" push {repid}", f"{bdscript[118]} != {repid}"
 
     def test_dont_replace_enemy_msns_for_boss(self):
         # TT msns should not be getting placed without enemies

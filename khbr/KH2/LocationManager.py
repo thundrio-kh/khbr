@@ -27,14 +27,14 @@ class LocationManager:
             self.btlmap = yaml.load(f, Loader=yaml.FullLoader)
 
     def get_sp_max_enemy_types(self, room, unit):
-        max_types = self.btlmap["{}-{}".format(self.locmap[room], unit)].get("max_variety", "NOT_FOUND")
+        max_types = self.btlmap[f"{self.locmap[room]}-{unit}"].get("max_variety", "NOT_FOUND")
         if max_types == "NOT_FOUND":
-            print("WARNING: NOT FOUND max_variety FOR {}".format(room))
+            print(f"WARNING: NOT FOUND max_variety FOR {room}")
             max_types = 3
         return max_types
 
     def get_sp_for_mission(self, room, unit):
-        return self.btlmap["{}-{}".format(self.locmap[room], unit)]["mission"]
+        return self.btlmap[f"{self.locmap[room]}-{unit}"]["mission"]
 
     def set_locations(self):
         with open(os.path.join(os.path.dirname(__file__), "data", "locations.yaml")) as f:

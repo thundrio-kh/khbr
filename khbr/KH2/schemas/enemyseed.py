@@ -195,7 +195,7 @@ class EnemySeed:
     def add_cmdmod(self, new_boss_object):
         for cmd_mod in new_boss_object["cmdmods"]:
             if cmd_mod["value"] in self.cmd_mods:
-                log_output("Warning: cmd mod {} getting overwritten by {}".format(cmd_mod["value"], new_boss_object["name"]), log_level=1)
+                log_output(f"Warning: cmd mod {cmd_mod['value']} getting overwritten by {new_boss_object['name']}", log_level=1)
             self.cmd_mods[cmd_mod["value"]] = cmd_mod["changes"]
 
     def set_data_final_xemnas_retry(self, shouldretry):

@@ -121,7 +121,7 @@ def validate_boss_placements(randomization, pc=False):
                                 old_enemy = kh2.enemy_manager.enemy_records[old_ent["name"]]
                                 avail_list = kh2.enemy_manager.enemy_records[old_enemy["parent"]]["available"]
                                 # prob need to do something about the parent
-                                assert new_parent["name"] in avail_list, "{} is not in {}'s available list".format(new_name, old_enemy["name"])
+                                assert new_parent["name"] in avail_list, f"{new_name} is not in {old_enemy['name']}'s available list"
     return used_bosses
 
 def get_tmp_path():
@@ -234,7 +234,7 @@ def get_randomized(randomization, source_name):
                                 return ent["name"] != new_ent["name"]
                             return False # Wasn't replaced, is vanilla
 
-    raise Exception("Could not find source_name: {}".format(source_name))
+    raise Exception(f"Could not find source_name: {source_name}")
 
 def get_room_randomized(randomization, world, room, spn, spid=None):
     new = randomization["spawns"].get(world, {}).get(room, {}).get("spawnpoints", {}).get(spn, {})
@@ -339,9 +339,9 @@ def calculate_boss_percentages(randomizations, requireSourceReplace, pc=False):
     for boss in sorted(boss_ledger, key=lambda b: boss_ledger[b]):
         if boss_ledger[boss] == 0:
             failed += 1
-        print("{}: {}%".format(boss, round((boss_ledger[boss] / len(randomizations))*100, 2)))
+        print(f"{boss}: {round((boss_ledger[boss] / len(randomizations))*100, 2)}%")
     if failed:
-        assert False, "{} bosses didn't get placed".format(failed)
+        assert False, f"{failed} bosses didn't get placed"
 
 def calculate_luxord_replacement_variety(randomizations, max_percent, pc=False):
     storm_rider_count = 0
@@ -354,7 +354,7 @@ def calculate_luxord_replacement_variety(randomizations, max_percent, pc=False):
             storm_rider_count += 1
         results.append(rep)
     print("luxord replacements")
-    print("Storm rider {} times".format(storm_rider_count))
+    print(f"Storm rider {storm_rider_count} times")
     print(results)
     assert storm_rider_count <= N * max_percent
 

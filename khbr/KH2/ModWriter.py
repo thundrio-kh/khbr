@@ -200,7 +200,7 @@ class ModWriter:
         fn = os.path.join("files", "obj", mset_fn)
         self.write_method(outfn, fn, data)
         return {
-            "name": "obj/{}".format(mset_fn),
+            "name": f"obj/{mset_fn}",
             "method": "copy",
             "source": [
                 {
@@ -215,10 +215,10 @@ class ModWriter:
         self.write_method(outfn, fn, yaml.dump(obj))
         # Whole binarc at once is maybe weird to return
         return {
-            "name": "msg/jp/{}.bar".format(name),
+            "name": f"msg/jp/{name}.bar",
             "multi": [
-                {"name": "msg/us/{}.bar".format(name)},
-                {"name": "msg/uk/{}.bar".format(name)}
+                {"name": f"msg/us/{name}.bar"},
+                {"name": f"msg/uk/{name}.bar"}
             ],
             "method": "binarc",
             "source": [
@@ -277,7 +277,7 @@ class ModWriter:
         outfn = os.path.join(self.outdir, relfn)
         
         self.write_method(outfn, relfn, data)
-        formattedname = "obj/{}.mdlx".format(modelname) if tpe == "obj" else "msn/jp/{}.bar".format(modelname)
+        formattedname = f"obj/{modelname}.mdlx" if tpe == "obj" else f"msn/jp/{modelname}.bar"
         asset = {
             "method": "binarc",
             "name": formattedname,
@@ -301,7 +301,7 @@ class ModWriter:
         self.write_method(outfn, relfn, data)
         return {
             "method": "copy",
-            "name": "scripts/{}".format(luafn),
+            "name": f"scripts/{luafn}",
             "source": [{"name": relfn}]
         }
 
@@ -309,7 +309,7 @@ class ModWriter:
         relfn = os.path.join("files", "msns", msnname + ".bar")
         outfn = os.path.join(self.outdir, relfn)
         self.write_method(outfn, relfn, data)
-        formattedname = "msn/jp/{}.bar".format(msnname)
+        formattedname = f"msn/jp/{msnname}.bar"
         # create the asset
         asset = {
             "method": "copy",

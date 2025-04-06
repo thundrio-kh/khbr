@@ -14,7 +14,7 @@ class openKH:
         self.workdir = workdir
     def _check_binary(self, binary):
         if not os.path.isfile(os.path.join(self.workdir, binary)):
-            raise Exception("{} not found".format(binary))
+            raise Exception(f"{binary} not found")
     def _run_binary(self, binary, args=[], inp='', debug=True):
         self._check_binary(binary)
         if debug:
@@ -331,7 +331,7 @@ def main(cli_args: list=[]):
 
 
     seed = args.seed or str(int(time.time()))
-    log_output("Using Seed {}".format(seed), log_level=0)
+    log_output(f"Using Seed {seed}", log_level=0)
     random.seed(seed)
     
 
@@ -411,7 +411,7 @@ def main(cli_args: list=[]):
     modyml_fn = os.path.join(moddir, "bossrush", "mod.yml")
     modyml = yaml.load(open(modyml_fn), Loader=yaml.SafeLoader)
 
-    modyml["title"] = "Boss Rush {}".format(seed)
+    modyml["title"] = f"Boss Rush {seed}"
     modyml["description"] = json.dumps(settings_to_write, indent=2)
 
 
@@ -427,7 +427,7 @@ def main(cli_args: list=[]):
                 return a
         # Need a new asset
         newasset = {
-            "name": "ard/us/{}".format(ardname),
+            "name": f"ard/us/{ardname}",
             "method": "binarc",
             "source": []
         }
@@ -439,7 +439,7 @@ def main(cli_args: list=[]):
     asset = findRoomSource(modyml["assets"], "TT", "01")
     assetgenerator.generateEvt("TT", "01", 0x34, asset["source"], options={"jump_to":{"world":world, "room":room, "program":program}, "open_menu":True, "remove_event":True, "flags": ['0x84A'], "remove_excess_flags": True})
 
-    log_output("DEBUG boss_order {}".format(boss_order))
+    log_output(f"DEBUG boss_order {boss_order}")
     boss_order.pop(0)
 
     for new_boss_name in boss_order:
@@ -449,9 +449,9 @@ def main(cli_args: list=[]):
         newprogram = new_boss["program"] 
         if newprogram == None:
             newprogram = 0
-            log_output("Warning setting program to 0 for {}".format(current_boss), log_level=1)
+            log_output(f"Warning setting program to 0 for {current_boss}", log_level=1)
         asset = findRoomSource(modyml["assets"], world, room)
-        log_output("Making evt to jump to {}".format(new_boss["name"]))
+        log_output(f"Making evt to jump to {new_boss['name']}")
         set_for_settings = [1] if current_boss.get("name") in ["Hayner", "Vivi", "Setzer"] else None
         assetgenerator.generateEvt(world, room, current_boss.get("outprogram") or "all", asset["source"], options={"remove_event": True, "jump_to":{"world": newworld, "room": newroom, "program": newprogram, "set_for_settings": set_for_settings}, "fix_source_area_settings": "fix_source_area_settings" in current_boss.get("tags"), "open_menu": open_menu_before_each_fight, "remove_event":True})
         world = newworld
@@ -511,7 +511,7 @@ def main(cli_args: list=[]):
 
             # effectively set level to choice
             lvup = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", "lvupVanilla.yml")), Loader=yaml.SafeLoader)
-            log_output("Setting all level stats to that of level {}".format(set_level))
+            log_output(f"Setting all level stats to that of level {set_level}")
             for c, char in lvup.items():
                 lvl_stats = char[set_level]
                 for l, level in char.items():

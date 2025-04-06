@@ -25,15 +25,15 @@ class Randomizer:
 
     def _validate_options(self, schema, options):
         if type(options) not in [dict, str]:
-            raise Exception("Invalid type for options: {}".format(type(options)))
+            raise Exception(f"Invalid type for options: {type(options)}")
         elif type(options) == str:
             options = json.loads(options)
         for key in options:
             if key not in schema:
-                raise Exception("Option {} is not a valid option".format(key))
+                raise Exception(f"Option {key} is not a valid option")
             else:
                 if options[key] not in schema[key]["possible_values"] + schema[key]["hidden_values"]:
-                    raise Exception("Option {}-{} is not found in valid options: {}".format(key, options[key], schema[key]))
+                    raise Exception(f"Option {key}-{options[key]} is not found in valid options: {schema[key]}")
     
     def _make_tmpdir(self):
         if self.tempfn:
@@ -45,7 +45,7 @@ class Randomizer:
             # Realistically this should never happen
             raise Exception("TMP dir already exists, try again")
         os.mkdir(fn)
-        log_output("Made tmpdir {}".format(fn), log_level=0)
+        log_output(f"Made tmpdir {fn}", log_level=0)
         rmdir = lambda : shutil.rmtree(fn)
         return fn, rmdir
 
@@ -91,11 +91,11 @@ class Randomizer:
             raise Exception("Invalid Filename")
         gm = parts[0]
         if gm not in supported_games:
-            raise Exception("Game not supported: {}".format(gm))
+            raise Exception(f"Game not supported: {gm}")
         game = self._get_game(gm)
         schema = parts[1]
         if schema != game.schemaversion:
-            raise Exception("Invalid schema version {}: current version {}".format(schema, game.schemaversion))
+            raise Exception(f"Invalid schema version {schema}: current version {game.schemaversion}")
         
         compressedoptions = parts[3].split("-")
         options = {}
@@ -187,7 +187,7 @@ class Randomizer:
         # for both enemies and bosses
         # replacements are either decided beforehand, or at the time of replacement
         random.seed(seed)
-        log_output("Using seed: {}".format(seed), log_level=0)
+        log_output(f"Using seed: {seed}", log_level=0)
         randomization = game.perform_randomization(options, seed=seed)
         
         return randomization
@@ -267,4 +267,4 @@ if __name__ == '__main__':
         b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=randomization_only)
             # if b64["spawns"]["Olympus Coliseum"]["Coliseum Gates"]['spawnpoints']['b_40']['sp_ids']['41'][0]["name"] == "Luxord":
             #     0/0
-    log_output("Total thing took {}s".format(time.time()-t), log_level=0)
+    log_output(f"Total thing took {time.time()-t}s", log_level=0)

@@ -11,7 +11,7 @@ class AiManager:
     def set_karma_limit(self, available_values):
         karma_param = re.compile(r'push.s (.*)\n.*; trap_enemy_set_karma_limit')
         if karma_param.search(self.script):
-            self.script = karma_param.sub(lambda m: "push.s {}\n syscall 2, 76 ; trap_enemy_set_karma_limit ".format(str(available_values.pop())),  self.script)
+            self.script = karma_param.sub(lambda m: f"push.s {str(available_values.pop())}\n syscall 2, 76 ; trap_enemy_set_karma_limit ",  self.script)
             return
         return
     
@@ -21,7 +21,7 @@ class AiManager:
         if dead_param.search(self.script):
             self.script = dead_param.sub(lambda m: str_to_add, self.script)
         else:
-            raise Exception("Error: Can not find dead action for {}".format(self.fn))
+            raise Exception(f"Error: Can not find dead action for {self.fn}")
 
     def drop_dataspace_orbs(self):
         self.add_when_dead([

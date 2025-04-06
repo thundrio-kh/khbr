@@ -137,18 +137,18 @@ class KingdomHearts2:
             utility_mods.append("is_boss_rush")
         rmcs = options.get("remove_cutscenes", "Disabled")
         if rmcs and rmcs != "Disabled":
-            utility_mods.append("remove_cutscenes{}".format(options.get("remove_cutscenes")))
+            utility_mods.append(f"remove_cutscenes{options.get('remove_cutscenes')}")
         rvlr = options.get("revenge_limit_rando", "Vanilla")
         if rvlr and rvlr != "Vanilla":
-            utility_mods.append("revenge_limit_rando{}".format(options.get("revenge_limit_rando")))
+            utility_mods.append(f"revenge_limit_rando{options.get('revenge_limit_rando')}")
         return utility_mods
 
     def perform_randomization(self, options, seed=None):
-        log_output("KHBR Version: {}".format('4.1.2'))
-        log_output("Enemy Seed: {}".format(seed), log_level=0)
+        log_output(f"KHBR Version: {'4.1.2'}")
+        log_output(f"Enemy Seed: {seed}", log_level=0)
         if DIAGNOSTICS:
             start_time = time.time()
-            log_output("Starting Randomization: {}".format(options), log_level=0)
+            log_output(f"Starting Randomization: {options}", log_level=0)
 
         enemymode = options.get("enemy", 'Disabled') if not options.get("selected_enemy") else options.get("selected_enemy")
         bossmode = options.get("boss", "Disabled") if not options.get("selected_boss") else options.get("selected_boss")
@@ -235,7 +235,7 @@ class KingdomHearts2:
 
         if DIAGNOSTICS:
             end_time = time.time()
-            log_output("Enemy Randomization Complete: {}s".format(end_time-start_time), log_level=0)
+            log_output(f"Enemy Randomization Complete: {end_time-start_time}s", log_level=0)
 
         return rand_seed_json
 
@@ -428,7 +428,7 @@ class KingdomHearts2:
 
         if DIAGNOSTICS:
             end_time = time.time()
-            log_output("Files Generated: {}s".format(end_time-start_time), log_level=0)
+            log_output(f"Files Generated: {end_time-start_time}s", log_level=0)
         return assetgenerator.assets
 
     def generate_mod_basics(self, newname=None):

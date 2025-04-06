@@ -14,7 +14,7 @@ class openKH:
         self.workdir = workdir
     def _check_binary(self, binary):
         if not os.path.isfile(os.path.join(self.workdir, binary)):
-            raise Exception("{} not found".format(binary))
+            raise Exception(f"{binary} not found")
     def _run_binary(self, binary, args=[], inp='', debug=True):
         self._check_binary(binary)
         if debug:

@@ -45,7 +45,7 @@ class CommandManager:
         # We don't care to edit the table at the end of the cmd file, so just call it a generic "footer"
         self.footer = cmd.readRest()
         if len(self.entries) != self.num_entries:
-            raise Exception("Error, cmd specified {} entries but only found {}".format(self.num_entries, len(self.entries)))
+            raise Exception(f"Error, cmd specified {self.num_entries} entries but only found {len(self.entries)}")
     def write_entries(self, bw):
         bw.writeInt32(self.file_version)
         bw.writeInt32(len(self.entries))

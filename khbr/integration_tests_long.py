@@ -13,7 +13,7 @@ class Tests(unittest.TestCase):
         options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "sephiroth": True, "terra": True}
         randomizations = []
         for _ in range(N):
-            print("{}\{}".format(_,N))
+            print(f"{_}\{N}")
             randomization = testutils.generateSeed(options, str(_))
             randomizations.append(randomization)
         testutils.calculate_boss_percentages(randomizations, requireSourceReplace=True)
@@ -26,7 +26,7 @@ class Tests(unittest.TestCase):
         options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "sephiroth": True, "terra": True}
         randomizations = []
         for _ in range(N):
-            print("{}\{}".format(_,N))
+            print(f"{_}\{N}")
             randomization = testutils.generateSeed(options, str(_))
             randomizations.append(randomization)
         testutils.calculate_boss_percentages(randomizations, requireSourceReplace=False)
@@ -38,7 +38,7 @@ class Tests(unittest.TestCase):
         options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "sephiroth": True, "terra": True, "memory_expansion": True}
         randomizations = []
         for _ in range(N):
-            print("{}\{}".format(_,N))
+            print(f"{_}\{N}")
             randomization = testutils.generateSeed(options, str(_))
             randomizations.append(randomization)
         testutils.calculate_boss_percentages(randomizations, requireSourceReplace=True, pc=True)
@@ -50,7 +50,7 @@ class Tests(unittest.TestCase):
         options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "sephiroth": True, "terra": True, "memory_expansion": True}
         randomizations = []
         for _ in range(N):
-            print("{}\{}".format(_,N))
+            print(f"{_}\{N}")
             randomization = testutils.generateSeed(options, str(_))
             randomizations.append(randomization)
         testutils.calculate_boss_percentages(randomizations, requireSourceReplace=False, pc=True)

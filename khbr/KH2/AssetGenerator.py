@@ -94,7 +94,7 @@ class AssetGenerator:
 
             new_enmp_index = self.enemy_manager.enemy_records[new_enemy]["enmp_index"] # really its the id not the index anymore
             if not new_enmp_index:
-                log_output("WARNING: Can't scale {}, no ENMP index found".format(new_enemy), log_level=1)
+                log_output(f"WARNING: Can't scale {new_enemy}, no ENMP index found", log_level=1)
                 continue
             def _get_index(source, idnum):
                 for i in range(len(source)):
@@ -109,7 +109,7 @@ class AssetGenerator:
                 original_enmp_index = self.enemy_manager.enemy_records[original_enemy]["enmp_index"]
             
                 if not original_enmp_index:
-                    log_output("WARNING: Can't scale {}, no ENMP index found".format(original_enemy), log_level=0)
+                    log_output(f"WARNING: Can't scale {original_enemy}, no ENMP index found", log_level=0)
                     continue
                 original_enmp_data = enmp_data_vanilla[_get_index(enmp_data_vanilla, original_enmp_index)]
                 new_enmp_data["health"] = original_enmp_data["health"]
@@ -324,7 +324,7 @@ class AssetGenerator:
             elif rando_type == "Random Values":
                 karma_values = [random.randint(0,200) for _ in karma_values]
             else:
-                raise Exception("Invalid Karma Limit Value: {}".format(rando_type))
+                raise Exception(f"Invalid Karma Limit Value: {rando_type}")
 
             objdir = os.path.join(os.path.dirname(__file__), "data", "bdscript", "obj")
             for modelname in os.listdir(objdir):
@@ -333,7 +333,7 @@ class AssetGenerator:
                     continue
                 aifiles = [f for f in os.listdir(os.path.join(objdir, modelname)) if "original" not in f]
                 if len(aifiles) != 1:
-                    raise Exception("Wrong number of files for {}: {}".format(modelname, len(aifiles)))
+                    raise Exception(f"Wrong number of files for {modelname}: {len(aifiles)}")
                 if modelname in created_mods:
                     created_mods[modelname]["manager"].set_karma_limit(karma_values)
                 else:
@@ -374,7 +374,7 @@ class AssetGenerator:
 
             # This might cause some issues with bosses like the FF bosses because the camera complete won't work, and of course it prevents mickey in some fights, which is most likely fine
             if self.find_asset(oldmsn+".bar"):
-                log_output("Old MSN {} has an ai edit, so can't copy over {}".format(oldmsn, new_msn_name), log_level=1)
+                log_output(f"Old MSN {oldmsn} has an ai edit, so can't copy over {new_msn_name}", log_level=1)
                 continue
             info = msninfo[new_msn_name]
             mission = Mission(new_msn_name, info)
@@ -397,7 +397,7 @@ class AssetGenerator:
 
     def getDefaultRoomAsset(self, ardname):
         # Ideally this would be 
-        formattedname =  "ard/{}.ard".format(ardname)
+        formattedname =  f"ard/{ardname}.ard"
         roomasset = {
             "method": "binarc",
             "name": formattedname,
@@ -478,9 +478,9 @@ class AssetGenerator:
                                 if old_obj.get("story_level", 0) > 0 and self.force_story_boss_levels:
                                     prg = old_obj["program"]
                                     if old_obj["program"] in btlmods["adds"]:
-                                        btlmods["adds"][prg].append("BattleLevel {}".format(old_obj["story_level"]))
+                                        btlmods["adds"][prg].append(f"BattleLevel {old_obj['story_level']}")
                                     else:
-                                        btlmods["adds"][prg] = ["BattleLevel {}".format(old_obj["story_level"])]
+                                        btlmods["adds"][prg] = [f"BattleLevel {old_obj['story_level']}"]
                                 if "fix_source_area_settings" in old_obj["tags"] and self.is_boss_rush:
                                     evtmods["fix_settings"].append({"world": getworld(old_obj), "room": getroom(old_obj), "program": old_obj["program"], "options": {"fix_source_area_settings": True} })
 
@@ -509,7 +509,7 @@ class AssetGenerator:
                         _update_spid(i, spid, custom_unit_list)
                     for cid, unit in custom_unit_list.items():
                         if cid in [s["Id"] for s in existing_spawnpoint]:
-                            log_output("Warning: spid already exists in spawnpoint, test for problems. {} {}".format(cid, ardname), log_level=1) # DEBUG ONLY
+                            log_output(f"Warning: spid already exists in spawnpoint, test for problems. {cid} {ardname}", log_level=1) # DEBUG ONLY
                         existing_spawnpoint.append(unit)
                     
                     spasset = self.modwriter.writeSpawnpoint(ardname, spn, existing_spawnpoint)
@@ -585,7 +585,7 @@ class AssetGenerator:
                 "FadeType": sp[11]
             }
 
-        log_output("DEBUG: making {} {} evt program {}, {}".format(world,room,programnumber,options))
+        log_output(f"DEBUG: making {world} {room} evt program {programnumber}, {options}")
         if not options:
             log_output("Warning: generate_evt not generating anything", log_level=0)
         ardname = world.lower()+room.lower()

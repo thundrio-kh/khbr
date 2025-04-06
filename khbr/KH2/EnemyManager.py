@@ -283,7 +283,7 @@ class EnemyManager:
     def source_room_has_space(source_boss, dest_boss, ispc=False):
         if ispc:
             return True
-        #log_output("{} > {}: {} + {} >= {}".format(source_boss["name"], dest_boss["name"], source_boss["size"], dest_boss["room_size"], maxsize))
+        #log_output(f"{source_boss['name']} > {dest_boss['name']}: {source_boss['size']} + {dest_boss['room_size']} >= {maxsize}")
         roommaxsize = source_boss["roommaxsize"] or LIMITED_SIZE
         availablespace = (roommaxsize - source_boss["room_size"]) * source_boss["roomsizemultiplier"]
         if availablespace - dest_boss["size"] < 0:

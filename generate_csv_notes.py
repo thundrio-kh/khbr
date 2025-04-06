@@ -63,7 +63,7 @@ for source_boss_name in boss_names:
         source_boss_compatability.append(compat)
         names.append(new_boss_name)
     sources.append(source_boss_compatability)
-print("PC Boss Replacements: {}/{}".format(allow_count[0], allow_count[1]))
+print(f"PC Boss Replacements: {allow_count[0]}/{allow_count[1]}")
 
 bosslines.append(["Destination/Source"]+sorted(set(names)))
 bosslines += sources
@@ -109,7 +109,7 @@ for source_boss_name in boss_names:
         names_nightmare.append(new_boss_name)
     sources_nightmare.append(source_boss_compatability)
 
-print("PC Nightmare Boss Replacements: {}/{}".format(allow_count[0], allow_count[1]))
+print(f"PC Nightmare Boss Replacements: {allow_count[0]}/{allow_count[1]}")
 
 bosslines_nightmare.append(["Destination/Source"]+sorted(set(names_nightmare)))
 bosslines_nightmare += sources_nightmare
@@ -205,7 +205,7 @@ for source_boss_name in boss_names:
         source_boss_compatability.append(compat)
         names.append(new_boss_name)
     sources.append(source_boss_compatability)
-print("PS2 Boss Replacements: {}/{}".format(allow_count[0], allow_count[1]))
+print(f"PS2 Boss Replacements: {allow_count[0]}/{allow_count[1]}")
 
 bosslines.append(["Destination/Source"]+sorted(set(names)))
 bosslines += sources
@@ -251,7 +251,7 @@ for source_boss_name in boss_names:
         names_nightmare.append(new_boss_name)
     sources_nightmare.append(source_boss_compatability)
 
-print("PS2 Nightmare Boss Replacements: {}/{}".format(allow_count[0], allow_count[1]))
+print(f"PS2 Nightmare Boss Replacements: {allow_count[0]}/{allow_count[1]}")
 
 bosslines_nightmare.append(["Destination/Source"]+sorted(set(names_nightmare)))
 bosslines_nightmare += sources_nightmare

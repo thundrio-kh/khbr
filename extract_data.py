@@ -42,7 +42,7 @@ for sf in subfiles:
         path = root.split(os.sep)
         for f in files:
             fn = os.path.join(root, f)
-            if fn.endswith(".{}".format(sf)):
+            if fn.endswith(f".{sf}"):
                 subfn = fn.replace(kh2_out_dir, '')
                 if len([c for c in subfn if c == os.sep]) == 1:
                     subfn = os.path.join("root", *subfn.split(os.sep))

@@ -115,19 +115,19 @@ for c in categories:
             lines_nightmare.append(sorted(enemy["children"]))
 
 
-print("Data made: {}".format(time.time()-start_time))
+print(f"Data made: {time.time()-start_time}")
 import sys; sys.stdout.flush()
 
 import pygsheets
 gc = pygsheets.authorize()
 # gc.set_batch_mode(True)
 
-print("Authorized: {}".format(time.time()-start_time))
+print(f"Authorized: {time.time()-start_time}")
 sys.stdout.flush()
 
 sheet = gc.open("KH2 Enemy/Boss Randomizer Notes")
 
-print("Sheet opened: {}".format(time.time()-start_time))
+print(f"Sheet opened: {time.time()-start_time}")
 sys.stdout.flush()
 
 boss_sheet=sheet[2]
@@ -149,7 +149,7 @@ for row_index in range(len(boss_lines)):
             cell.color = green if value == 'O' else red
         cell.update()
 
-print("Boss rows updated: {}".format(time.time()-start_time))
+print(f"Boss rows updated: {time.time()-start_time}")
 sys.stdout.flush()
 
 enemy_sheet = sheet[1]
@@ -160,7 +160,7 @@ for l in range(len(lines)):
 for i in title_rows:
     enemy_sheet.cell((i, 1)).set_text_format('bold', True).set_text_format('fontSize', 20)
 
-print("Enemy rows updated: {}".format(time.time()-start_time))
+print(f"Enemy rows updated: {time.time()-start_time}")
 sys.stdout.flush()
 
 boss_sheet_nightmare=sheet[4]
@@ -181,7 +181,7 @@ for row_index in range(len(bosslines_nightmare)):
         cell.update()
 
 
-print("Nightmare Boss rows updated: {}".format(time.time()-start_time))
+print(f"Nightmare Boss rows updated: {time.time()-start_time}")
 sys.stdout.flush()
 
 enemy_sheet_nightmare = sheet[3]
@@ -192,7 +192,7 @@ for l in range(len(lines_nightmare)):
 for i in title_rows:
     enemy_sheet_nightmare.cell((i, 1)).set_text_format('bold', True).set_text_format('fontSize', 20)
 
-print("NightmareEnemy rows updated: {}".format(time.time()-start_time))
+print(f"NightmareEnemy rows updated: {time.time()-start_time}")
 sys.stdout.flush()
 
 # gc.run_batch()
