@@ -4,7 +4,7 @@
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '62':
           - index: 0
             isboss: false
@@ -68,7 +68,7 @@
             name: Bees (Disappearing)
       b_41:
         size: 0
-        sp_ids:
+        units:
           '710':
           - index: 0
             isboss: false
@@ -122,7 +122,7 @@ Agrabah:
     spawnpoints:
       b_60:
         size: 0
-        sp_ids:
+        units:
           '4':
           - index: 2
             isboss: true
@@ -132,7 +132,7 @@ Agrabah:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '624':
           - index: 0
             isboss: false
@@ -260,7 +260,7 @@ Agrabah:
             name: Silver Rock
       b_01:
         size: 0
-        sp_ids:
+        units:
           '648':
           - index: 0
             isboss: false
@@ -421,7 +421,7 @@ Agrabah:
             name: Fortuneteller
       b_20:
         size: 0
-        sp_ids:
+        units:
           '101':
           - index: 0
             isboss: false
@@ -558,7 +558,7 @@ Agrabah:
             name: Fat Bandit
       b_40:
         size: 0
-        sp_ids:
+        units:
           '106':
           - index: 0
             isboss: false
@@ -670,7 +670,7 @@ Agrabah:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '36':
           - index: 0
             isboss: false
@@ -717,7 +717,7 @@ Agrabah:
             name: Luna Bandit
       b_01:
         size: 0
-        sp_ids:
+        units:
           '48':
           - index: 0
             isboss: false
@@ -788,7 +788,7 @@ Agrabah:
             name: Icy Cube
       b_70:
         size: 0
-        sp_ids:
+        units:
           '441':
           - index: 0
             isboss: false
@@ -835,7 +835,7 @@ Agrabah:
     spawnpoints:
       b_20:
         size: 0
-        sp_ids:
+        units:
           '1004':
           - index: 0
             isboss: false
@@ -1042,7 +1042,7 @@ Agrabah:
             name: Rapid Thruster (Zipliner)
       b_61:
         size: 0
-        sp_ids:
+        units:
           '95':
           - index: 0
             isboss: false
@@ -1079,7 +1079,7 @@ Agrabah:
             name: Fortuneteller (Zipliner)
       b_64:
         size: 0
-        sp_ids:
+        units:
           '160':
           - index: 2
             isboss: false
@@ -1107,7 +1107,7 @@ Agrabah:
             name: Crimson Jazz (Zipliner)
       b_6a:
         size: 0
-        sp_ids:
+        units:
           '1215':
           - index: 0
             isboss: false
@@ -1163,7 +1163,7 @@ Agrabah:
             name: Crimson Jazz
       b_93:
         size: 0
-        sp_ids:
+        units:
           '422':
           - index: 0
             isboss: false
@@ -1239,7 +1239,7 @@ Agrabah:
             name: Fortuneteller (Zipliner)
       b_94:
         size: 0
-        sp_ids:
+        units:
           '1502':
           - index: 0
             isboss: false
@@ -1435,7 +1435,7 @@ Agrabah:
             name: Rapid Thruster (Zipliner)
       b_97:
         size: 0
-        sp_ids:
+        units:
           '1313':
           - index: 0
             isboss: false
@@ -1685,7 +1685,7 @@ Agrabah:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '15':
           - index: 0
             isboss: false
@@ -1729,7 +1729,7 @@ Agrabah:
             name: Silver Rock
       b_01:
         size: 0
-        sp_ids:
+        units:
           '27':
           - index: 0
             isboss: false
@@ -1764,7 +1764,7 @@ Agrabah:
             name: Fortuneteller
       b_20:
         size: 0
-        sp_ids:
+        units:
           '39':
           - index: 0
             isboss: false
@@ -1808,7 +1808,7 @@ Agrabah:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '298':
           - index: 0
             isboss: false
@@ -1845,7 +1845,7 @@ Agrabah:
             name: Fiery Globe
       b_20:
         size: 0
-        sp_ids:
+        units:
           '331':
           - index: 0
             isboss: false
@@ -1861,7 +1861,7 @@ Agrabah:
         pc:
           ignored: false
         size: 0
-        sp_ids:
+        units:
           '41':
           - index: 0
             isboss: false
@@ -2019,7 +2019,7 @@ Agrabah:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '247':
           - index: 0
             isboss: false
@@ -2112,7 +2112,7 @@ Agrabah:
             name: Fiery Globe
       b_01:
         size: 0
-        sp_ids:
+        units:
           '37':
           - index: 0
             isboss: false
@@ -2153,7 +2153,7 @@ Agrabah:
             name: Fat Bandit
       b_20:
         size: 0
-        sp_ids:
+        units:
           '383':
           - index: 0
             isboss: false
@@ -2246,7 +2246,7 @@ Agrabah:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '15':
           - index: 0
             isboss: false
@@ -2277,7 +2277,7 @@ Agrabah:
             name: Luna Bandit
       b_01:
         size: 0
-        sp_ids:
+        units:
           '27':
           - index: 0
             isboss: false
@@ -2338,7 +2338,7 @@ Agrabah:
             name: Luna Bandit
       b_20:
         size: 0
-        sp_ids:
+        units:
           '39':
           - index: 0
             isboss: false
@@ -2367,7 +2367,7 @@ Agrabah:
             name: Luna Bandit
       b_40:
         size: 0
-        sp_ids:
+        units:
           '10':
           - index: 3
             isboss: true
@@ -2380,7 +2380,7 @@ Agrabah:
     spawnpoints:
       b_20:
         size: 0
-        sp_ids:
+        units:
           '202':
           - index: 0
             isboss: false
@@ -2433,7 +2433,7 @@ Agrabah:
             name: Crimson Jazz
       b_40:
         size: 0
-        sp_ids:
+        units:
           '214':
           - index: 0
             isboss: false
@@ -2490,7 +2490,7 @@ Beast's Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '25':
           - index: 0
             isboss: false
@@ -2518,7 +2518,7 @@ Beast's Castle:
             name: Large Body
       b_01:
         size: 0
-        sp_ids:
+        units:
           '37':
           - index: 0
             isboss: false
@@ -2594,7 +2594,7 @@ Beast's Castle:
             name: Large Body
       b_20:
         size: 0
-        sp_ids:
+        units:
           '49':
           - index: 0
             isboss: false
@@ -2625,7 +2625,7 @@ Beast's Castle:
             name: Morning Star
       b_30:
         size: 0
-        sp_ids:
+        units:
           '247':
           - index: 0
             isboss: false
@@ -2650,7 +2650,7 @@ Beast's Castle:
             name: Dragoon
       b_60:
         size: 0
-        sp_ids:
+        units:
           '84':
           - index: 0
             isboss: false
@@ -2674,14 +2674,14 @@ Beast's Castle:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '1':
           - index: 3
             isboss: true
             name: Shadow Stalker
       b_41:
         size: 0
-        sp_ids:
+        units:
           '27':
           - index: 3
             isboss: true
@@ -2689,7 +2689,7 @@ Beast's Castle:
       b_99:
         ignored: true
         size: 0
-        sp_ids:
+        units:
           '50':
           - index: 3
             isboss: true
@@ -2699,14 +2699,14 @@ Beast's Castle:
     spawnpoints:
       b_60:
         size: 0
-        sp_ids:
+        units:
           '13':
           - index: 3
             isboss: true
             name: Xaldin
       b_80:
         size: 0
-        sp_ids:
+        units:
           '79':
           - index: 3
             isboss: true
@@ -2716,7 +2716,7 @@ Beast's Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '30':
           - index: 0
             isboss: false
@@ -2774,7 +2774,7 @@ Beast's Castle:
             name: Hook Bat
       b_01:
         size: 0
-        sp_ids:
+        units:
           '66':
           - index: 0
             isboss: false
@@ -2832,7 +2832,7 @@ Beast's Castle:
             name: Hook Bat
       b_80:
         size: 0
-        sp_ids:
+        units:
           '122':
           - index: 0
             isboss: false
@@ -2843,7 +2843,7 @@ Beast's Castle:
             name: Gargoyle Warrior (40 0)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '150':
           - index: 0
             isboss: false
@@ -2854,7 +2854,7 @@ Beast's Castle:
             name: Gargoyle Warrior (44 0)
       b_82:
         size: 0
-        sp_ids:
+        units:
           '181':
           - index: 0
             isboss: false
@@ -2865,7 +2865,7 @@ Beast's Castle:
             name: Gargoyle Warrior (46 0)
       b_83:
         size: 0
-        sp_ids:
+        units:
           '213':
           - index: 0
             isboss: false
@@ -2876,7 +2876,7 @@ Beast's Castle:
             name: Gargoyle Warrior (42 0)
       b_84:
         size: 0
-        sp_ids:
+        units:
           '241':
           - index: 0
             isboss: false
@@ -2887,7 +2887,7 @@ Beast's Castle:
             name: Gargoyle Warrior (40 0)
       b_85:
         size: 0
-        sp_ids:
+        units:
           '270':
           - index: 0
             isboss: false
@@ -2898,7 +2898,7 @@ Beast's Castle:
             name: Gargoyle Warrior (42 0)
       b_86:
         size: 0
-        sp_ids:
+        units:
           '303':
           - index: 0
             isboss: false
@@ -2909,7 +2909,7 @@ Beast's Castle:
             name: Gargoyle Warrior (44 0)
       b_87:
         size: 0
-        sp_ids:
+        units:
           '332':
           - index: 0
             isboss: false
@@ -2920,7 +2920,7 @@ Beast's Castle:
             name: Gargoyle Warrior (46 0)
       b_89:
         size: 0
-        sp_ids:
+        units:
           '505':
           - index: 0
             isboss: false
@@ -2954,7 +2954,7 @@ Beast's Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '55':
           - index: 0
             isboss: false
@@ -2990,7 +2990,7 @@ Beast's Castle:
             name: Hook Bat
       b_01:
         size: 0
-        sp_ids:
+        units:
           '67':
           - index: 0
             isboss: false
@@ -3039,7 +3039,7 @@ Beast's Castle:
             name: Hook Bat
       b_02:
         size: 0
-        sp_ids:
+        units:
           '145':
           - index: 0
             isboss: false
@@ -3076,7 +3076,7 @@ Beast's Castle:
             name: Lance Soldier
       b_20:
         size: 0
-        sp_ids:
+        units:
           '80':
           - index: 0
             isboss: false
@@ -3110,7 +3110,7 @@ Beast's Castle:
             name: Morning Star
       b_21:
         size: 0
-        sp_ids:
+        units:
           '757':
           - index: 0
             isboss: false
@@ -3144,7 +3144,7 @@ Beast's Castle:
             name: Hammer Frame
       b_30:
         size: 0
-        sp_ids:
+        units:
           '532':
           - index: 0
             isboss: false
@@ -3174,7 +3174,7 @@ Beast's Castle:
             name: Dragoon
       b_60:
         size: 0
-        sp_ids:
+        units:
           '156':
           - index: 0
             isboss: false
@@ -3203,7 +3203,7 @@ Beast's Castle:
             name: Dragoon
       b_80:
         size: 0
-        sp_ids:
+        units:
           '305':
           - index: 0
             isboss: false
@@ -3214,7 +3214,7 @@ Beast's Castle:
             name: Gargoyle Knight (32 0)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '333':
           - index: 0
             isboss: false
@@ -3225,7 +3225,7 @@ Beast's Castle:
             name: Gargoyle Warrior (42 0)
       b_82:
         size: 0
-        sp_ids:
+        units:
           '357':
           - index: 0
             isboss: false
@@ -3236,7 +3236,7 @@ Beast's Castle:
             name: Gargoyle Warrior (40 0)
       b_83:
         size: 0
-        sp_ids:
+        units:
           '384':
           - index: 0
             isboss: false
@@ -3247,7 +3247,7 @@ Beast's Castle:
             name: Gargoyle Warrior (42 0)
       b_84:
         size: 0
-        sp_ids:
+        units:
           '409':
           - index: 0
             isboss: false
@@ -3258,7 +3258,7 @@ Beast's Castle:
             name: Gargoyle Warrior (42 0)
       b_85:
         size: 0
-        sp_ids:
+        units:
           '436':
           - index: 0
             isboss: false
@@ -3272,7 +3272,7 @@ Beast's Castle:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '27':
           - index: 0
             isboss: false
@@ -3327,7 +3327,7 @@ Beast's Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '36':
           - index: 0
             isboss: false
@@ -3366,7 +3366,7 @@ Beast's Castle:
             name: Hook Bat
       b_20:
         size: 0
-        sp_ids:
+        units:
           '48':
           - index: 0
             isboss: false
@@ -3402,7 +3402,7 @@ Beast's Castle:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '5':
           - index: 3
             isboss: true
@@ -3412,7 +3412,7 @@ Beast's Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '21':
           - index: 0
             isboss: false
@@ -3431,7 +3431,7 @@ Beast's Castle:
             name: Shadow
       b_01:
         size: 0
-        sp_ids:
+        units:
           '67':
           - index: 0
             isboss: false
@@ -3453,7 +3453,7 @@ Beast's Castle:
             name: Lance Soldier
       b_02:
         size: 0
-        sp_ids:
+        units:
           '79':
           - index: 0
             isboss: false
@@ -3483,7 +3483,7 @@ Beast's Castle:
             name: Lance Soldier
       b_20:
         size: 0
-        sp_ids:
+        units:
           '496':
           - index: 0
             isboss: false
@@ -3505,7 +3505,7 @@ Beast's Castle:
             name: Gargoyle Knight (30 0)
       b_30:
         size: 0
-        sp_ids:
+        units:
           '132':
           - index: 0
             isboss: false
@@ -3521,35 +3521,35 @@ Beast's Castle:
             name: Dragoon
       b_80:
         size: 0
-        sp_ids:
+        units:
           '175':
           - index: 0
             isboss: false
             name: Gargoyle Knight (30 0)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '203':
           - index: 0
             isboss: false
             name: Gargoyle Warrior (40 0)
       b_82:
         size: 0
-        sp_ids:
+        units:
           '228':
           - index: 0
             isboss: false
             name: Gargoyle Knight (32 0)
       b_83:
         size: 0
-        sp_ids:
+        units:
           '256':
           - index: 0
             isboss: false
             name: Gargoyle Warrior (42 0)
       b_84:
         size: 0
-        sp_ids:
+        units:
           '279':
           - index: 0
             isboss: false
@@ -3560,7 +3560,7 @@ Beast's Castle:
             name: Gargoyle Warrior (42 0)
       b_85:
         size: 0
-        sp_ids:
+        units:
           '306':
           - index: 0
             isboss: false
@@ -3571,7 +3571,7 @@ Beast's Castle:
             name: Gargoyle Warrior (40 0)
       b_86:
         size: 0
-        sp_ids:
+        units:
           '332':
           - index: 0
             isboss: false
@@ -3586,7 +3586,7 @@ Beast's Castle:
             name: Gargoyle Warrior (42 0)
       b_87:
         size: 0
-        sp_ids:
+        units:
           '562':
           - index: 0
             isboss: false
@@ -3604,7 +3604,7 @@ Beast's Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '100':
           - index: 0
             isboss: false
@@ -3695,7 +3695,7 @@ Beast's Castle:
             name: Shadow
       b_01:
         size: 0
-        sp_ids:
+        units:
           '166':
           - index: 0
             isboss: false
@@ -3767,7 +3767,7 @@ Beast's Castle:
             name: Shadow
       b_02:
         size: 0
-        sp_ids:
+        units:
           '1008':
           - index: 0
             isboss: false
@@ -3817,7 +3817,7 @@ Beast's Castle:
             name: Soldier
       b_20:
         size: 0
-        sp_ids:
+        units:
           '109':
           - index: 0
             isboss: false
@@ -3870,7 +3870,7 @@ Beast's Castle:
             name: Morning Star
       b_21:
         size: 0
-        sp_ids:
+        units:
           '760':
           - index: 0
             isboss: false
@@ -3936,7 +3936,7 @@ Beast's Castle:
             name: Crimson Jazz
       b_70:
         size: 0
-        sp_ids:
+        units:
           '1349':
           - index: 0
             isboss: false
@@ -3968,7 +3968,7 @@ Beast's Castle:
             name: Armored Knight
       b_71:
         size: 0
-        sp_ids:
+        units:
           '1382':
           - index: 0
             isboss: false
@@ -3994,7 +3994,7 @@ Beast's Castle:
             name: Crimson Jazz
       b_80:
         size: 0
-        sp_ids:
+        units:
           '294':
           - index: 0
             isboss: false
@@ -4005,21 +4005,21 @@ Beast's Castle:
             name: Gargoyle Warrior (40 0)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '330':
           - index: 0
             isboss: false
             name: Gargoyle Warrior (40 0)
       b_82:
         size: 0
-        sp_ids:
+        units:
           '354':
           - index: 0
             isboss: false
             name: Gargoyle Knight (30 0)
       b_83:
         size: 0
-        sp_ids:
+        units:
           '386':
           - index: 0
             isboss: false
@@ -4030,7 +4030,7 @@ Beast's Castle:
             name: Gargoyle Warrior (42 0)
       b_86:
         size: 0
-        sp_ids:
+        units:
           '868':
           - index: 0
             isboss: false
@@ -4045,7 +4045,7 @@ Beast's Castle:
             name: Gargoyle Warrior (40 0)
       b_87:
         size: 0
-        sp_ids:
+        units:
           '894':
           - index: 0
             isboss: false
@@ -4063,7 +4063,7 @@ Beast's Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '46':
           - index: 0
             isboss: false
@@ -4112,7 +4112,7 @@ Beast's Castle:
             name: Hook Bat
       b_20:
         size: 0
-        sp_ids:
+        units:
           '57':
           - index: 0
             isboss: false
@@ -4146,7 +4146,7 @@ Beast's Castle:
             name: Morning Star
       b_21:
         size: 0
-        sp_ids:
+        units:
           '367':
           - index: 0
             isboss: false
@@ -4173,7 +4173,7 @@ Beast's Castle:
             name: Hammer Frame
       b_80:
         size: 0
-        sp_ids:
+        units:
           '187':
           - index: 0
             isboss: false
@@ -4188,7 +4188,7 @@ Beast's Castle:
             name: Gargoyle Warrior (42 0)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '215':
           - index: 0
             isboss: false
@@ -4199,7 +4199,7 @@ Beast's Castle:
             name: Gargoyle Warrior (42 0)
       b_85:
         size: 0
-        sp_ids:
+        units:
           '684':
           - index: 0
             isboss: false
@@ -4210,7 +4210,7 @@ Beast's Castle:
             name: Gargoyle Knight (32 0)
       b_86:
         size: 0
-        sp_ids:
+        units:
           '720':
           - index: 0
             isboss: false
@@ -4224,7 +4224,7 @@ Beast's Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '34':
           - index: 0
             isboss: false
@@ -4246,7 +4246,7 @@ Beast's Castle:
             name: Hook Bat
       b_01:
         size: 0
-        sp_ids:
+        units:
           '60':
           - index: 0
             isboss: false
@@ -4268,7 +4268,7 @@ Beast's Castle:
             name: Hook Bat
       b_20:
         size: 0
-        sp_ids:
+        units:
           '46':
           - index: 0
             isboss: false
@@ -4287,7 +4287,7 @@ Beast's Castle:
             name: Gargoyle Knight
       b_21:
         size: 0
-        sp_ids:
+        units:
           '742':
           - index: 0
             isboss: false
@@ -4298,7 +4298,7 @@ Beast's Castle:
             name: Gargoyle Warrior (40 0)
       b_40:
         size: 0
-        sp_ids:
+        units:
           '14':
           - index: 3
             isboss: true
@@ -4344,7 +4344,7 @@ Beast's Castle:
             name: Hook Bat
       b_80:
         size: 0
-        sp_ids:
+        units:
           '452':
           - index: 0
             isboss: false
@@ -4355,14 +4355,14 @@ Beast's Castle:
             name: Gargoyle Warrior (40 0)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '476':
           - index: 0
             isboss: false
             name: Gargoyle Knight (30 0)
       b_82:
         size: 0
-        sp_ids:
+        units:
           '501':
           - index: 0
             isboss: false
@@ -4370,7 +4370,7 @@ Beast's Castle:
       b_99:
         size: 0
         ignored: true
-        sp_ids:
+        units:
           '93':
           - index: 4
             isboss: false
@@ -4390,7 +4390,7 @@ Disney Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '47':
           - index: 0
             isboss: false
@@ -4469,14 +4469,14 @@ Disney Castle:
             name: Bolt Tower
       b_40:
         size: 0
-        sp_ids:
+        units:
           '45':
           - index: 0
             isboss: false
             name: Bolt Tower (RAW)
       b_94:
         size: 0
-        sp_ids:
+        units:
           '436':
           - index: 0
             isboss: false
@@ -4496,7 +4496,7 @@ Disney Castle:
           Fat Bandit: 6 # Gets too hard at higher amounts
           Bookmaster: 10 # Gets too hard at higher amounts
         size: 0
-        sp_ids:
+        units:
           '127':
           - index: 0
             isboss: false
@@ -4587,7 +4587,7 @@ Disney Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '25':
           - index: 0
             isboss: false
@@ -4799,7 +4799,7 @@ Disney Castle:
             name: Shadow (RAW)
       b_01:
         size: 0
-        sp_ids:
+        units:
           '42':
           - index: 0
             isboss: false
@@ -4939,7 +4939,7 @@ Disney Castle:
             name: Shadow (Aggressive)
       b_14:
         size: 0
-        sp_ids:
+        units:
           '702':
           - index: 0
             isboss: false
@@ -5036,7 +5036,7 @@ Disney Castle:
             name: Shadow (RAW)
       b_98:
         size: 0
-        sp_ids:
+        units:
           '523':
           - index: 0
             isboss: false
@@ -5248,7 +5248,7 @@ Disney Castle:
             name: Shadow (RAW)
       b_99:
         size: 0
-        sp_ids:
+        units:
           '546':
           - index: 0
             isboss: false
@@ -5495,7 +5495,7 @@ Disney Castle:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '185':
           - index: 0
             isboss: false
@@ -5715,7 +5715,7 @@ Disney Castle:
     spawnpoints:
       b_80:
         size: 0
-        sp_ids:
+        units:
           '32':
           - index: 0
             isboss: true
@@ -5726,7 +5726,7 @@ Halloween Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '90':
           - index: 0
             isboss: false
@@ -5768,7 +5768,7 @@ Halloween Town:
             name: Driller Mole NM
       b_01:
         size: 0
-        sp_ids:
+        units:
           '102':
           - index: 0
             isboss: false
@@ -5794,7 +5794,7 @@ Halloween Town:
             name: Driller Mole NM
       b_02:
         size: 0
-        sp_ids:
+        units:
           '114':
           - index: 0
             isboss: false
@@ -5817,7 +5817,7 @@ Halloween Town:
             name: Emerald Blues NM
       b_20:
         size: 0
-        sp_ids:
+        units:
           '126':
           - index: 0
             isboss: false
@@ -5859,7 +5859,7 @@ Halloween Town:
             name: Neoshadow
       b_21:
         size: 0
-        sp_ids:
+        units:
           '138':
           - index: 0
             isboss: false
@@ -5895,7 +5895,7 @@ Halloween Town:
             name: Trick Ghost (NM)
       b_40:
         size: 0
-        sp_ids:
+        units:
           '28':
           - index: 0
             isboss: false
@@ -5917,7 +5917,7 @@ Halloween Town:
             name: Toy Soldier NM
       b_70:
         size: 0
-        sp_ids:
+        units:
           '1022':
           - index: 0
             isboss: false
@@ -5955,7 +5955,7 @@ Halloween Town:
             name: Toy Soldier NM
       b_71:
         size: 0
-        sp_ids:
+        units:
           '1055':
           - index: 0
             isboss: false
@@ -5993,7 +5993,7 @@ Halloween Town:
     spawnpoints:
       b_60:
         size: 0
-        sp_ids:
+        units:
           '7':
           - index: 3
             isboss: true
@@ -6001,7 +6001,7 @@ Halloween Town:
       b_99:
         ignored: true
         size: 0
-        sp_ids:
+        units:
           '60':
           - index: 3
             isboss: true
@@ -6011,7 +6011,7 @@ Halloween Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '31':
           - index: 0
             isboss: false
@@ -6123,7 +6123,7 @@ Halloween Town:
             name: Wight Knight NM
       b_20:
         size: 0
-        sp_ids:
+        units:
           '44':
           - index: 0
             isboss: false
@@ -6148,7 +6148,7 @@ Halloween Town:
             name: Graveyard NM
       b_40:
         size: 0
-        sp_ids:
+        units:
           '6':
           - index: 3
             isboss: true
@@ -6158,7 +6158,7 @@ Halloween Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '84':
           - index: 0
             isboss: false
@@ -6204,7 +6204,7 @@ Halloween Town:
             name: Driller Mole NM
       b_01:
         size: 0
-        sp_ids:
+        units:
           '100':
           - index: 0
             isboss: false
@@ -6249,7 +6249,7 @@ Halloween Town:
             name: Emerald Blues NM
       b_20:
         size: 0
-        sp_ids:
+        units:
           '108':
           - index: 0
             isboss: false
@@ -6305,7 +6305,7 @@ Halloween Town:
             name: Armored Knight (NM)
       b_21:
         size: 0
-        sp_ids:
+        units:
           '120':
           - index: 0
             isboss: false
@@ -6352,7 +6352,7 @@ Halloween Town:
             name: Graveyard NM
       b_70:
         size: 0
-        sp_ids:
+        units:
           '859':
           - index: 0
             isboss: false
@@ -6363,7 +6363,7 @@ Halloween Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '63':
           - index: 0
             isboss: false
@@ -6386,7 +6386,7 @@ Halloween Town:
             name: Wight Knight NM
       b_01:
         size: 0
-        sp_ids:
+        units:
           '217':
           - index: 0
             isboss: false
@@ -6409,7 +6409,7 @@ Halloween Town:
             name: Wight Knight NM
       b_20:
         size: 0
-        sp_ids:
+        units:
           '75':
           - index: 0
             isboss: false
@@ -6444,7 +6444,7 @@ Halloween Town:
             name: Armored Knight (NM)
       b_21:
         size: 0
-        sp_ids:
+        units:
           '87':
           - index: 0
             isboss: false
@@ -6474,7 +6474,7 @@ Halloween Town:
             name: Wight Knight NM
       b_40:
         size: 0
-        sp_ids:
+        units:
           '14':
           - index: 0
             isboss: false
@@ -6538,7 +6538,7 @@ Halloween Town:
             name: Shadow (NM)
       b_99:
         size: 0
-        sp_ids:
+        units:
           '686':
           - index: 0
             isboss: false
@@ -6566,7 +6566,7 @@ Halloween Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '58':
           - index: 0
             isboss: false
@@ -6592,7 +6592,7 @@ Halloween Town:
             name: Soldier NM
       b_01:
         size: 0
-        sp_ids:
+        units:
           '70':
           - index: 0
             isboss: false
@@ -6625,7 +6625,7 @@ Halloween Town:
             name: Soldier NM
       b_02:
         size: 0
-        sp_ids:
+        units:
           '82':
           - index: 0
             isboss: false
@@ -6648,7 +6648,7 @@ Halloween Town:
             name: Emerald Blues NM
       b_20:
         size: 0
-        sp_ids:
+        units:
           '94':
           - index: 0
             isboss: false
@@ -6685,7 +6685,7 @@ Halloween Town:
             name: Neoshadow (NM)
       b_21:
         size: 0
-        sp_ids:
+        units:
           '107':
           - index: 0
             isboss: false
@@ -6732,7 +6732,7 @@ Halloween Town:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '13':
           - index: 3
             isboss: true
@@ -6742,7 +6742,7 @@ Halloween Town:
     spawnpoints:
       b_60:
         size: 0
-        sp_ids:
+        units:
           '32':
           - index: 3
             isboss: true
@@ -6759,7 +6759,7 @@ Hollow Bastion:
     spawnpoints:
       b_02:
         size: 0
-        sp_ids:
+        units:
           '203':
           - index: 0
             isboss: false
@@ -6804,7 +6804,7 @@ Hollow Bastion:
             name: Crimson Jazz
       b_03:
         size: 0
-        sp_ids:
+        units:
           '291':
           - index: 0
             isboss: false
@@ -6849,7 +6849,7 @@ Hollow Bastion:
             name: Crimson Jazz
       b_20:
         size: 0
-        sp_ids:
+        units:
           '247':
           - index: 0
             isboss: false
@@ -6885,7 +6885,7 @@ Hollow Bastion:
             name: Magnum Loader
       b_21:
         size: 0
-        sp_ids:
+        units:
           '269':
           - index: 0
             isboss: false
@@ -6930,7 +6930,7 @@ Hollow Bastion:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '172':
           - index: 0
             isboss: false
@@ -6981,7 +6981,7 @@ Hollow Bastion:
             name: Shadow
       b_01:
         size: 0
-        sp_ids:
+        units:
           '216':
           - index: 0
             isboss: false
@@ -7036,7 +7036,7 @@ Hollow Bastion:
             name: Armored Knight
       b_40:
         size: 0
-        sp_ids:
+        units:
           '56':
           - index: 0
             isboss: false
@@ -7111,7 +7111,7 @@ Hollow Bastion:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '243':
           - index: 0
             isboss: false
@@ -7177,7 +7177,7 @@ Hollow Bastion:
             name: Soldier
       b_01:
         size: 0
-        sp_ids:
+        units:
           '352':
           - index: 0
             isboss: false
@@ -7233,7 +7233,7 @@ Hollow Bastion:
             name: Bookmaster
       b_02:
         size: 0
-        sp_ids:
+        units:
           '375':
           - index: 0
             isboss: false
@@ -7286,7 +7286,7 @@ Hollow Bastion:
             name: Shadow
       b_03:
         size: 0
-        sp_ids:
+        units:
           '550':
           - index: 0
             isboss: false
@@ -7336,7 +7336,7 @@ Hollow Bastion:
             name: Neoshadow
       b_20:
         size: 0
-        sp_ids:
+        units:
           '462':
           - index: 0
             isboss: false
@@ -7395,7 +7395,7 @@ Hollow Bastion:
             name: Morning Star
       b_21:
         size: 0
-        sp_ids:
+        units:
           '528':
           - index: 0
             isboss: false
@@ -7464,7 +7464,7 @@ Hollow Bastion:
             name: Neoshadow
       b_40:
         size: 0
-        sp_ids:
+        units:
           '86':
           - index: 0
             isboss: false
@@ -7486,7 +7486,7 @@ Hollow Bastion:
             name: Dusk
       b_41:
         size: 0
-        sp_ids:
+        units:
           '98':
           - index: 0
             isboss: false
@@ -7520,7 +7520,7 @@ Hollow Bastion:
             name: Shadow
       b_42:
         size: 0
-        sp_ids:
+        units:
           '143':
           - index: 3
             isboss: false
@@ -7543,7 +7543,7 @@ Hollow Bastion:
     spawnpoints:
       b_20:
         size: 0
-        sp_ids:
+        units:
           '125':
           - index: 0
             isboss: false
@@ -7569,14 +7569,14 @@ Hollow Bastion:
             name: Neoshadow
       b_40:
         size: 0
-        sp_ids:
+        units:
           '42':
           - index: 3
             isboss: true
             name: Demyx
       b_80:
         size: 0
-        sp_ids:
+        units:
           '202':
           - index: 3
             isboss: true
@@ -7586,7 +7586,7 @@ Hollow Bastion:
     spawnpoints:
       b_80:
         size: 0
-        sp_ids:
+        units:
           '1001':
           - index: 0
             isboss: false
@@ -7778,7 +7778,7 @@ Hollow Bastion:
             name: Camo Cannon
       b_81:
         size: 0
-        sp_ids:
+        units:
           '1007':
           - index: 0
             isboss: false
@@ -7961,7 +7961,7 @@ Hollow Bastion:
     spawnpoints:
       b_80:
         size: 0
-        sp_ids:
+        units:
           '233':
           - index: 0
             isboss: false
@@ -8131,7 +8131,7 @@ Hollow Bastion:
             name: Spring Metal
       b_81:
         size: 0
-        sp_ids:
+        units:
           '265':
           - index: 0
             isboss: false
@@ -8304,7 +8304,7 @@ Hollow Bastion:
     spawnpoints:
       b_81:
         size: 0
-        sp_ids:
+        units:
           '343':
           - index: 0
             isboss: false
@@ -8367,7 +8367,7 @@ Hollow Bastion:
             name: Mad Ride
       b_82:
         size: 0
-        sp_ids:
+        units:
           '375':
           - index: 0
             isboss: false
@@ -8421,7 +8421,7 @@ Hollow Bastion:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '46':
           - index: 0
             isboss: false
@@ -8480,7 +8480,7 @@ Hollow Bastion:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '76':
           - index: 0
             isboss: false
@@ -8566,7 +8566,7 @@ Hollow Bastion:
             name: Surveillance Robot
       b_01:
         size: 0
-        sp_ids:
+        units:
           '109':
           - index: 0
             isboss: false
@@ -8622,7 +8622,7 @@ Hollow Bastion:
             name: Shadow
       b_02:
         size: 0
-        sp_ids:
+        units:
           '317':
           - index: 0
             isboss: false
@@ -8675,7 +8675,7 @@ Hollow Bastion:
             name: Surveillance Robot
       b_20:
         size: 0
-        sp_ids:
+        units:
           '251':
           - index: 0
             isboss: false
@@ -8728,7 +8728,7 @@ Hollow Bastion:
             name: Devastator
       b_21:
         size: 0
-        sp_ids:
+        units:
           '295':
           - index: 0
             isboss: false
@@ -8784,14 +8784,14 @@ Hollow Bastion:
     spawnpoints:
       b_80:
         size: 0
-        sp_ids:
+        units:
           '32':
           - index: 3
             isboss: true
             name: Zexion (Data)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '64':
           - index: 3
             isboss: true
@@ -8805,7 +8805,7 @@ Hollow Bastion:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '169':
           - index: 0
             isboss: false
@@ -8857,7 +8857,7 @@ Hollow Bastion:
             name: Armored Knight
       b_20:
         size: 0
-        sp_ids:
+        units:
           '191':
           - index: 0
             isboss: false
@@ -8909,7 +8909,7 @@ Hollow Bastion:
             name: Strafer
       b_21:
         size: 0
-        sp_ids:
+        units:
           '238':
           - index: 0
             isboss: false
@@ -8961,7 +8961,7 @@ Hollow Bastion:
             name: Armored Knight
       b_40:
         size: 0
-        sp_ids:
+        units:
           '41':
           - index: 0
             isboss: false
@@ -9041,7 +9041,7 @@ Hollow Bastion:
             name: Armored Knight
       b_41:
         size: 0
-        sp_ids:
+        units:
           '56':
           - index: 0
             isboss: false
@@ -9193,7 +9193,7 @@ Hollow Bastion:
             name: Shadow (RAW) (99 0)
       b_42:
         size: 0
-        sp_ids:
+        units:
           '70':
           - index: 0
             isboss: false
@@ -9279,7 +9279,7 @@ Hollow Bastion:
             name: Shadow (RAW)
       b_43:
         size: 0
-        sp_ids:
+        units:
           '84':
           - index: 0
             isboss: false
@@ -9405,7 +9405,7 @@ Hollow Bastion:
             name: Armored Knight
       b_45:
         size: 0
-        sp_ids:
+        units:
           '260':
           - index: 0
             isboss: false
@@ -9424,7 +9424,7 @@ Hollow Bastion:
             name: Armored Knight
       b_46:
         size: 0
-        sp_ids:
+        units:
           '285':
           - index: 0
             isboss: false
@@ -9446,7 +9446,7 @@ Hollow Bastion:
             name: Armored Knight
       b_47:
         size: 0
-        sp_ids:
+        units:
           '309':
           - index: 0
             isboss: false
@@ -9465,7 +9465,7 @@ Hollow Bastion:
             name: Armored Knight
       b_48:
         size: 0
-        sp_ids:
+        units:
           '333':
           - index: 0
             isboss: false
@@ -9487,7 +9487,7 @@ Hollow Bastion:
     spawnpoints:
       b_01:
         size: 0
-        sp_ids:
+        units:
           '112':
           - index: 0
             isboss: false
@@ -9565,7 +9565,7 @@ Hollow Bastion:
             name: Surveillance Robot
       b_02:
         size: 0
-        sp_ids:
+        units:
           '90':
           - index: 0
             isboss: false
@@ -9643,7 +9643,7 @@ Hollow Bastion:
             name: Surveillance Robot
       b_20:
         size: 0
-        sp_ids:
+        units:
           '211':
           - index: 0
             isboss: false
@@ -9724,7 +9724,7 @@ Hollow Bastion:
             name: Strafer
       b_21:
         size: 0
-        sp_ids:
+        units:
           '255':
           - index: 0
             isboss: false
@@ -9802,7 +9802,7 @@ Hollow Bastion:
             name: Surveillance Robot
       b_40:
         size: 0
-        sp_ids:
+        units:
           '66':
           - index: 0
             isboss: false
@@ -9854,7 +9854,7 @@ Hollow Bastion:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '65':
           - index: 0
             isboss: false
@@ -9877,14 +9877,14 @@ Hollow Bastion:
     spawnpoints:
       b_80:
         size: 0
-        sp_ids:
+        units:
           '32':
           - index: 3
             isboss: true
             name: Marluxia (Data)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '64':
           - index: 3
             isboss: true
@@ -9894,28 +9894,28 @@ Hollow Bastion:
     spawnpoints:
       b_80:
         size: 0
-        sp_ids:
+        units:
           '32':
           - index: 3
             isboss: true
             name: Lexaeus (Data)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '64':
           - index: 3
             isboss: true
             name: Larxene
       b_82:
         size: 0
-        sp_ids:
+        units:
           '96':
           - index: 3
             isboss: true
             name: Lexaeus
       b_83:
         size: 0
-        sp_ids:
+        units:
           '128':
           - index: 3
             isboss: true
@@ -9923,7 +9923,7 @@ Hollow Bastion:
       b_84:
         ignored: true
         size: 0
-        sp_ids:
+        units:
           '160':
           - index: 3
             isboss: true
@@ -9931,7 +9931,7 @@ Hollow Bastion:
       b_85:
         ignored: true
         size: 0
-        sp_ids:
+        units:
           '192':
           - index: 3
             isboss: true
@@ -9941,7 +9941,7 @@ Hollow Bastion:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '228':
           - index: 0
             isboss: false
@@ -9957,7 +9957,7 @@ Hollow Bastion:
             name: Surveillance Robot
       b_20:
         size: 0
-        sp_ids:
+        units:
           '250':
           - index: 0
             isboss: false
@@ -9970,7 +9970,7 @@ Hollow Bastion:
             name: Devastator
       b_21:
         size: 0
-        sp_ids:
+        units:
           '272':
           - index: 0
             isboss: false
@@ -9986,7 +9986,7 @@ Hollow Bastion:
             name: Surveillance Robot
       b_60:
         size: 0
-        sp_ids:
+        units:
           '162':
           - index: 3
             isboss: true
@@ -9997,7 +9997,7 @@ Hollow Bastion:
     spawnpoints:
       b_99:
         size: 0
-        sp_ids:
+        units:
           '35':
           - index: 26
             isboss: false
@@ -10011,7 +10011,7 @@ Hollow Bastion:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '82':
           - index: 0
             isboss: false
@@ -10055,7 +10055,7 @@ Hollow Bastion:
             name: Surveillance Robot
       b_20:
         size: 0
-        sp_ids:
+        units:
           '104':
           - index: 0
             isboss: false
@@ -10099,7 +10099,7 @@ Hollow Bastion:
             name: Magnum Loader
       b_21:
         size: 0
-        sp_ids:
+        units:
           '126':
           - index: 0
             isboss: false
@@ -10146,14 +10146,14 @@ Hollow Bastion:
     spawnpoints:
       b_80:
         size: 0
-        sp_ids:
+        units:
           '32':
           - index: 3
             isboss: true
             name: Vexen (Data)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '64':
           - index: 3
             isboss: true
@@ -10163,7 +10163,7 @@ Hollow Bastion:
     spawnpoints:
       b_81:
         size: 0
-        sp_ids:
+        units:
           '136':
           - index: 0
             isboss: false
@@ -10239,7 +10239,7 @@ Hollow Bastion:
             name: Assassin
       b_82:
         size: 0
-        sp_ids:
+        units:
           '169':
           - index: 0
             isboss: false
@@ -10303,7 +10303,7 @@ Hollow Bastion:
             name: Gambler
       b_83:
         size: 0
-        sp_ids:
+        units:
           '202':
           - index: 0
             isboss: false
@@ -10463,7 +10463,7 @@ Hollow Bastion:
             name: Creeper
       b_84:
         size: 0
-        sp_ids:
+        units:
           '232':
           - index: 0
             isboss: false
@@ -10599,7 +10599,7 @@ Hollow Bastion:
             name: Dragoon
       b_85:
         size: 0
-        sp_ids:
+        units:
           '264':
           - index: 0
             isboss: false
@@ -10688,7 +10688,7 @@ Olympus Coliseum:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '53':
           - index: 0
             isboss: false
@@ -10705,7 +10705,7 @@ Olympus Coliseum:
             name: Rabid Dog
       b_01:
         size: 0
-        sp_ids:
+        units:
           '64':
           - index: 0
             isboss: false
@@ -10766,7 +10766,7 @@ Olympus Coliseum:
             name: Rabid Dog
       b_20:
         size: 0
-        sp_ids:
+        units:
           '100':
           - index: 0
             isboss: false
@@ -10796,7 +10796,7 @@ Olympus Coliseum:
             name: Driller Mole
       b_21:
         size: 0
-        sp_ids:
+        units:
           '111':
           - index: 0
             isboss: false
@@ -10816,14 +10816,14 @@ Olympus Coliseum:
             name: Crimson Jazz
       b_40:
         size: 0
-        sp_ids:
+        units:
           '13':
           - index: 0
             isboss: true
             name: Cerberus
       b_70:
         size: 0
-        sp_ids:
+        units:
           '493':
           - index: 4
             isboss: false
@@ -10861,7 +10861,7 @@ Olympus Coliseum:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '50':
           - index: 0
             isboss: false
@@ -10915,7 +10915,7 @@ Olympus Coliseum:
             name: Lance Soldier
       b_01:
         size: 0
-        sp_ids:
+        units:
           '292':
           - index: 0
             isboss: false
@@ -10990,7 +10990,7 @@ Olympus Coliseum:
             name: Large Body
       b_20:
         size: 0
-        sp_ids:
+        units:
           '143':
           - index: 0
             isboss: false
@@ -11087,7 +11087,7 @@ Olympus Coliseum:
             name: Crescendo
       b_21:
         size: 0
-        sp_ids:
+        units:
           '155':
           - index: 0
             isboss: false
@@ -11228,7 +11228,7 @@ Olympus Coliseum:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '41':
           - index: 0
             isboss: true
@@ -11238,14 +11238,14 @@ Olympus Coliseum:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '9':
           - index: 0
             isboss: true
             name: Hades I
       b_60:
         size: 0
-        sp_ids:
+        units:
           '54':
           - index: 0
             isboss: false
@@ -11283,7 +11283,7 @@ Olympus Coliseum:
       b_99:
         ignored: true
         size: 0
-        sp_ids:
+        units:
           '27':
           - index: 4
             isboss: true
@@ -11293,7 +11293,7 @@ Olympus Coliseum:
     spawnpoints:
       x_00:
         size: 0
-        sp_ids:
+        units:
           '28':
           - index: 0
             isboss: false
@@ -11321,7 +11321,7 @@ Olympus Coliseum:
             name: Icy Cube
       x_01:
         size: 0
-        sp_ids:
+        units:
           '39':
           - index: 0
             isboss: false
@@ -11355,14 +11355,14 @@ Olympus Coliseum:
     spawnpoints:
       b_62:
         size: 0
-        sp_ids:
+        units:
           '38':
           - index: 3
             isboss: true
             name: Hades II (1)
       b_63:
         size: 0
-        sp_ids:
+        units:
           '60':
           - index: 3
             isboss: true
@@ -11372,7 +11372,7 @@ Olympus Coliseum:
     spawnpoints:
       b_60:
         size: 0
-        sp_ids:
+        units:
           '8':
           - index: 3
             isboss: false
@@ -11394,7 +11394,7 @@ Olympus Coliseum:
             name: Driller Mole
       b_61:
         size: 0
-        sp_ids:
+        units:
           '9':
           - index: 4
             isboss: false
@@ -11422,7 +11422,7 @@ Olympus Coliseum:
             name: Minute Bomb
       b_91:
         size: 0
-        sp_ids:
+        units:
           '129':
           - index: 0
             isboss: false
@@ -11444,7 +11444,7 @@ Olympus Coliseum:
             name: Large Body
       b_92:
         size: 0
-        sp_ids:
+        units:
           '151':
           - index: 0
             isboss: false
@@ -11466,7 +11466,7 @@ Olympus Coliseum:
             name: Soldier
       b_93:
         size: 0
-        sp_ids:
+        units:
           '173':
           - index: 0
             isboss: false
@@ -11497,7 +11497,7 @@ Olympus Coliseum:
             name: Icy Cube
       b_94:
         size: 0
-        sp_ids:
+        units:
           '195':
           - index: 0
             isboss: false
@@ -11522,7 +11522,7 @@ Olympus Coliseum:
             name: Silver Rock
       b_95:
         size: 0
-        sp_ids:
+        units:
           '217':
           - index: 0
             isboss: false
@@ -11544,7 +11544,7 @@ Olympus Coliseum:
             name: Driller Mole
       b_96:
         size: 0
-        sp_ids:
+        units:
           '239':
           - index: 0
             isboss: false
@@ -11572,7 +11572,7 @@ Olympus Coliseum:
             name: Rapid Thruster
       b_97:
         size: 0
-        sp_ids:
+        units:
           '283':
           - index: 0
             isboss: false
@@ -11600,7 +11600,7 @@ Olympus Coliseum:
             name: Rabid Dog
       b_98:
         size: 0
-        sp_ids:
+        units:
           '261':
           - index: 0
             isboss: false
@@ -11628,7 +11628,7 @@ Olympus Coliseum:
             name: Shadow
       b_99:
         size: 0
-        sp_ids:
+        units:
           '107':
           - index: 0
             isboss: false
@@ -11656,7 +11656,7 @@ Olympus Coliseum:
             name: Minute Bomb
       b_9a:
         size: 0
-        sp_ids:
+        units:
           '305':
           - index: 0
             isboss: false
@@ -11678,7 +11678,7 @@ Olympus Coliseum:
             name: Air Pirate
       b_9b:
         size: 0
-        sp_ids:
+        units:
           '327':
           - index: 0
             isboss: false
@@ -11703,7 +11703,7 @@ Olympus Coliseum:
             name: Creeper
       b_9c:
         size: 0
-        sp_ids:
+        units:
           '349':
           - index: 0
             isboss: false
@@ -11731,7 +11731,7 @@ Olympus Coliseum:
             name: Surveillance Robot
       b_9d:
         size: 0
-        sp_ids:
+        units:
           '415':
           - index: 0
             isboss: false
@@ -11759,7 +11759,7 @@ Olympus Coliseum:
             name: Fiery Globe Treasure Room
       b_9e:
         size: 0
-        sp_ids:
+        units:
           '437':
           - index: 0
             isboss: false
@@ -11781,7 +11781,7 @@ Olympus Coliseum:
             name: Assassin
       b_9f:
         size: 0
-        sp_ids:
+        units:
           '459':
           - index: 0
             isboss: false
@@ -11803,7 +11803,7 @@ Olympus Coliseum:
             name: Samurai
       b_9g:
         size: 0
-        sp_ids:
+        units:
           '481':
           - index: 0
             isboss: false
@@ -11825,7 +11825,7 @@ Olympus Coliseum:
             name: Sniper
       b_9h:
         size: 0
-        sp_ids:
+        units:
           '503':
           - index: 0
             isboss: false
@@ -11847,7 +11847,7 @@ Olympus Coliseum:
             name: Dancer
       b_9i:
         size: 0
-        sp_ids:
+        units:
           '525':
           - index: 0
             isboss: false
@@ -11869,7 +11869,7 @@ Olympus Coliseum:
             name: Berserker
       b_9j:
         size: 0
-        sp_ids:
+        units:
           '547':
           - index: 0
             isboss: false
@@ -11891,14 +11891,14 @@ Olympus Coliseum:
             name: Gambler
       b_9k:
         size: 0
-        sp_ids:
+        units:
           '589':
           - index: 16
             isboss: false
             name: Rapid Thruster (RAW)
       b_9l:
         size: 0
-        sp_ids:
+        units:
           '700':
           - index: 0
             isboss: false
@@ -11923,7 +11923,7 @@ Olympus Coliseum:
             name: Fiery Globe
       b_9m:
         size: 0
-        sp_ids:
+        units:
           '722':
           - index: 0
             isboss: false
@@ -11948,7 +11948,7 @@ Olympus Coliseum:
             name: Bolt Tower
       b_9n:
         size: 0
-        sp_ids:
+        units:
           '4594':
           - index: 0
             isboss: false
@@ -11961,7 +11961,7 @@ Olympus Coliseum:
             name: Bulky Vendor
       b_a0:
         size: 0
-        sp_ids:
+        units:
           '392':
           - index: 0
             isboss: true
@@ -11971,7 +11971,7 @@ Olympus Coliseum:
             name: Leon
       b_a1:
         size: 0
-        sp_ids:
+        units:
           '765':
           - index: 0
             isboss: false
@@ -12005,7 +12005,7 @@ Olympus Coliseum:
             name: Hook Bat
       b_a2:
         size: 0
-        sp_ids:
+        units:
           '787':
           - index: 0
             isboss: false
@@ -12030,7 +12030,7 @@ Olympus Coliseum:
             name: Minute Bomb
       b_a3:
         size: 0
-        sp_ids:
+        units:
           '831':
           - index: 0
             isboss: false
@@ -12055,7 +12055,7 @@ Olympus Coliseum:
             name: Rabid Dog
       b_a4:
         size: 0
-        sp_ids:
+        units:
           '853':
           - index: 0
             isboss: false
@@ -12077,7 +12077,7 @@ Olympus Coliseum:
             name: Hot Rod
       b_a5:
         size: 0
-        sp_ids:
+        units:
           '876':
           - index: 0
             isboss: false
@@ -12114,7 +12114,7 @@ Olympus Coliseum:
             name: Rapid Thruster
       b_a6:
         size: 0
-        sp_ids:
+        units:
           '898':
           - index: 0
             isboss: false
@@ -12155,7 +12155,7 @@ Olympus Coliseum:
             name: Lance Soldier
       b_a7:
         size: 0
-        sp_ids:
+        units:
           '920':
           - index: 0
             isboss: false
@@ -12192,14 +12192,14 @@ Olympus Coliseum:
             name: Assault Rider
       b_a8:
         size: 0
-        sp_ids:
+        units:
           '942':
           - index: 1
             isboss: false
             name: Rapid Thruster (RAW)
       b_a9:
         size: 0
-        sp_ids:
+        units:
           '809':
           - index: 0
             isboss: false
@@ -12221,14 +12221,14 @@ Olympus Coliseum:
             name: Creeper Plant
       b_b0:
         size: 0
-        sp_ids:
+        units:
           '1232':
           - index: 0
             isboss: true
             name: Cerberus (Cups)
       b_b1:
         size: 0
-        sp_ids:
+        units:
           '1009':
           - index: 0
             isboss: false
@@ -12244,7 +12244,7 @@ Olympus Coliseum:
             name: Trick Ghost
       b_b2:
         size: 0
-        sp_ids:
+        units:
           '1031':
           - index: 0
             isboss: false
@@ -12266,7 +12266,7 @@ Olympus Coliseum:
             name: Hammer Frame
       b_b3:
         size: 0
-        sp_ids:
+        units:
           '1053':
           - index: 0
             isboss: false
@@ -12288,7 +12288,7 @@ Olympus Coliseum:
             name: Wight Knight
       b_b4:
         size: 0
-        sp_ids:
+        units:
           '1100':
           - index: 0
             isboss: false
@@ -12307,7 +12307,7 @@ Olympus Coliseum:
             name: Silver Rock
       b_b5:
         size: 0
-        sp_ids:
+        units:
           '1122':
           - index: 0
             isboss: false
@@ -12344,7 +12344,7 @@ Olympus Coliseum:
             name: Shaman
       b_b6:
         size: 0
-        sp_ids:
+        units:
           '1144':
           - index: 0
             isboss: false
@@ -12360,7 +12360,7 @@ Olympus Coliseum:
             name: Fortuneteller
       b_b7:
         size: 0
-        sp_ids:
+        units:
           '1166':
           - index: 0
             isboss: false
@@ -12376,7 +12376,7 @@ Olympus Coliseum:
             name: Cannon Gun
       b_b8:
         size: 0
-        sp_ids:
+        units:
           '1188':
           - index: 0
             isboss: false
@@ -12395,7 +12395,7 @@ Olympus Coliseum:
             name: Luna Bandit
       b_b9:
         size: 0
-        sp_ids:
+        units:
           '1210':
           - index: 0
             isboss: false
@@ -12414,14 +12414,14 @@ Olympus Coliseum:
             name: Emerald Blues
       b_c0:
         size: 0
-        sp_ids:
+        units:
           '1343':
           - index: 0
             isboss: true
             name: Hercules
       b_c1:
         size: 0
-        sp_ids:
+        units:
           '1276':
           - index: 0
             isboss: false
@@ -12441,7 +12441,7 @@ Olympus Coliseum:
             name: Dusk
       b_c2:
         size: 0
-        sp_ids:
+        units:
           '1298':
           - index: 0
             isboss: false
@@ -12460,7 +12460,7 @@ Olympus Coliseum:
             name: Assassin
       b_c3:
         size: 0
-        sp_ids:
+        units:
           '1395':
           - index: 0
             isboss: false
@@ -12482,7 +12482,7 @@ Olympus Coliseum:
             name: Berserker
       b_c4:
         size: 0
-        sp_ids:
+        units:
           '3172':
           - index: 0
             isboss: false
@@ -12501,7 +12501,7 @@ Olympus Coliseum:
             name: Sniper
       b_c5:
         size: 0
-        sp_ids:
+        units:
           '3204':
           - index: 0
             isboss: false
@@ -12523,7 +12523,7 @@ Olympus Coliseum:
             name: Neoshadow
       b_c6:
         size: 0
-        sp_ids:
+        units:
           '3236':
           - index: 0
             isboss: false
@@ -12542,7 +12542,7 @@ Olympus Coliseum:
             name: Dragoon
       b_c7:
         size: 0
-        sp_ids:
+        units:
           '3268':
           - index: 0
             isboss: false
@@ -12558,7 +12558,7 @@ Olympus Coliseum:
             name: Crimson Jazz
       b_c8:
         size: 0
-        sp_ids:
+        units:
           '3300':
           - index: 0
             isboss: false
@@ -12583,7 +12583,7 @@ Olympus Coliseum:
             name: Minute Bomb
       b_c9:
         size: 0
-        sp_ids:
+        units:
           '3332':
           - index: 0
             isboss: false
@@ -12602,7 +12602,7 @@ Olympus Coliseum:
             name: Dancer
       b_d0:
         size: 0
-        sp_ids:
+        units:
           '1658':
           - index: 0
             isboss: true
@@ -12634,7 +12634,7 @@ Olympus Coliseum:
             name: Hammer Frame
       b_d1:
         size: 0
-        sp_ids:
+        units:
           '1531':
           - index: 0
             isboss: false
@@ -12665,7 +12665,7 @@ Olympus Coliseum:
             name: Morning Star
       b_d2:
         size: 0
-        sp_ids:
+        units:
           '1562':
           - index: 0
             isboss: false
@@ -12681,7 +12681,7 @@ Olympus Coliseum:
             name: Hammer Frame (99 0)
       b_d3:
         size: 0
-        sp_ids:
+        units:
           '1594':
           - index: 0
             isboss: false
@@ -12697,7 +12697,7 @@ Olympus Coliseum:
             name: Creeper Plant
       b_d4:
         size: 0
-        sp_ids:
+        units:
           '1626':
           - index: 0
             isboss: false
@@ -12713,7 +12713,7 @@ Olympus Coliseum:
             name: Crimson Jazz
       b_d5:
         size: 0
-        sp_ids:
+        units:
           '1723':
           - index: 0
             isboss: false
@@ -12745,7 +12745,7 @@ Olympus Coliseum:
             name: Devastator (Ranged Start)
       b_d6:
         size: 0
-        sp_ids:
+        units:
           '1754':
           - index: 0
             isboss: false
@@ -12755,7 +12755,7 @@ Olympus Coliseum:
             name: Large Body
       b_d7:
         size: 0
-        sp_ids:
+        units:
           '1786':
           - index: 0
             isboss: false
@@ -12771,14 +12771,14 @@ Olympus Coliseum:
             name: Assault Rider
       b_d8:
         size: 0
-        sp_ids:
+        units:
           '1818':
           - index: 1
             isboss: false
             name: Rapid Thruster (RAW)
       b_d9:
         size: 0
-        sp_ids:
+        units:
           '1691':
           - index: 0
             isboss: false
@@ -12794,7 +12794,7 @@ Olympus Coliseum:
             name: Hot Rod
       b_h0:
         size: 0
-        sp_ids:
+        units:
           '1850':
           - index: 0
             isboss: true
@@ -12804,7 +12804,7 @@ Olympus Coliseum:
             name: Yuffie (1)
       b_h1:
         size: 0
-        sp_ids:
+        units:
           '1884':
           - index: 0
             isboss: false
@@ -12826,7 +12826,7 @@ Olympus Coliseum:
             name: Soldier
       b_h2:
         size: 0
-        sp_ids:
+        units:
           '1915':
           - index: 0
             isboss: false
@@ -12848,7 +12848,7 @@ Olympus Coliseum:
             name: Driller Mole
       b_h3:
         size: 0
-        sp_ids:
+        units:
           '1947':
           - index: 0
             isboss: false
@@ -12870,7 +12870,7 @@ Olympus Coliseum:
             name: Rapid Thruster
       b_h4:
         size: 0
-        sp_ids:
+        units:
           '1979':
           - index: 0
             isboss: false
@@ -12895,7 +12895,7 @@ Olympus Coliseum:
             name: Rabid Dog
       b_h5:
         size: 0
-        sp_ids:
+        units:
           '2011':
           - index: 0
             isboss: true
@@ -12908,7 +12908,7 @@ Olympus Coliseum:
             name: Soldier
       b_h6:
         size: 0
-        sp_ids:
+        units:
           '2043':
           - index: 0
             isboss: false
@@ -12930,7 +12930,7 @@ Olympus Coliseum:
             name: Cannon Gun
       b_h7:
         size: 0
-        sp_ids:
+        units:
           '2075':
           - index: 0
             isboss: false
@@ -12979,7 +12979,7 @@ Olympus Coliseum:
             name: Icy Cube
       b_h8:
         size: 0
-        sp_ids:
+        units:
           '2107':
           - index: 0
             isboss: false
@@ -13016,7 +13016,7 @@ Olympus Coliseum:
             name: Large Body
       b_h9:
         size: 0
-        sp_ids:
+        units:
           '2139':
           - index: 0
             isboss: false
@@ -13035,14 +13035,14 @@ Olympus Coliseum:
             name: Creeper
       b_i0:
         size: 0
-        sp_ids:
+        units:
           '2180':
           - index: 0
             isboss: true
             name: Pete Cups
       b_i1:
         size: 0
-        sp_ids:
+        units:
           '2213':
           - index: 0
             isboss: false
@@ -13070,7 +13070,7 @@ Olympus Coliseum:
             name: Rapid Thruster
       b_i2:
         size: 0
-        sp_ids:
+        units:
           '2245':
           - index: 0
             isboss: false
@@ -13095,7 +13095,7 @@ Olympus Coliseum:
             name: Minute Bomb
       b_i3:
         size: 0
-        sp_ids:
+        units:
           '2277':
           - index: 0
             isboss: false
@@ -13114,7 +13114,7 @@ Olympus Coliseum:
             name: Luna Bandit
       b_i4:
         size: 0
-        sp_ids:
+        units:
           '2309':
           - index: 0
             isboss: false
@@ -13136,14 +13136,14 @@ Olympus Coliseum:
             name: Lance Soldier
       b_i5:
         size: 0
-        sp_ids:
+        units:
           '2341':
           - index: 0
             isboss: true
             name: Blizzard Lord (Cups)
       b_i6:
         size: 0
-        sp_ids:
+        units:
           '2373':
           - index: 0
             isboss: false
@@ -13165,7 +13165,7 @@ Olympus Coliseum:
             name: Wight Knight
       b_i7:
         size: 0
-        sp_ids:
+        units:
           '2405':
           - index: 0
             isboss: false
@@ -13205,7 +13205,7 @@ Olympus Coliseum:
             name: Aerial Knocker
       b_i8:
         size: 0
-        sp_ids:
+        units:
           '2437':
           - index: 0
             isboss: false
@@ -13239,7 +13239,7 @@ Olympus Coliseum:
             name: Wight Knight
       b_i9:
         size: 0
-        sp_ids:
+        units:
           '2469':
           - index: 0
             isboss: false
@@ -13258,14 +13258,14 @@ Olympus Coliseum:
             name: Assassin
       b_j0:
         size: 0
-        sp_ids:
+        units:
           '2820':
           - index: 0
             isboss: true
             name: Hades Cups
       b_j1:
         size: 0
-        sp_ids:
+        units:
           '2500':
           - index: 0
             isboss: false
@@ -13290,7 +13290,7 @@ Olympus Coliseum:
             name: Gargoyle Knight
       b_j2:
         size: 0
-        sp_ids:
+        units:
           '2852':
           - index: 0
             isboss: false
@@ -13309,7 +13309,7 @@ Olympus Coliseum:
             name: Fortuneteller
       b_j3:
         size: 0
-        sp_ids:
+        units:
           '2885':
           - index: 0
             isboss: false
@@ -13331,7 +13331,7 @@ Olympus Coliseum:
             name: Shaman
       b_j4:
         size: 0
-        sp_ids:
+        units:
           '2916':
           - index: 0
             isboss: false
@@ -13344,7 +13344,7 @@ Olympus Coliseum:
             name: Bulky Vendor
       b_j5:
         size: 0
-        sp_ids:
+        units:
           '2948':
           - index: 0
             isboss: true
@@ -13354,7 +13354,7 @@ Olympus Coliseum:
             name: Cloud
       b_j6:
         size: 0
-        sp_ids:
+        units:
           '2980':
           - index: 0
             isboss: false
@@ -13373,7 +13373,7 @@ Olympus Coliseum:
             name: Neoshadow
       b_j7:
         size: 0
-        sp_ids:
+        units:
           '3013':
           - index: 0
             isboss: false
@@ -13407,7 +13407,7 @@ Olympus Coliseum:
             name: Nightwalker
       b_j8:
         size: 0
-        sp_ids:
+        units:
           '3045':
           - index: 0
             isboss: false
@@ -13453,7 +13453,7 @@ Olympus Coliseum:
             name: Emerald Blues
       b_j9:
         size: 0
-        sp_ids:
+        units:
           '3076':
           - index: 0
             isboss: false
@@ -13469,7 +13469,7 @@ Olympus Coliseum:
             name: Gambler
       b_k0:
         size: 0
-        sp_ids:
+        units:
           '4753':
           - index: 0
             isboss: true
@@ -13479,7 +13479,7 @@ Olympus Coliseum:
             name: Cloud (1)
       b_k1:
         size: 0
-        sp_ids:
+        units:
           '2532':
           - index: 0
             isboss: false
@@ -13498,7 +13498,7 @@ Olympus Coliseum:
             name: Berserker
       b_k2:
         size: 0
-        sp_ids:
+        units:
           '2564':
           - index: 0
             isboss: false
@@ -13523,7 +13523,7 @@ Olympus Coliseum:
             name: Demyx's Water Clone
       b_k3:
         size: 0
-        sp_ids:
+        units:
           '2596':
           - index: 0
             isboss: false
@@ -13539,7 +13539,7 @@ Olympus Coliseum:
             name: Samurai
       b_k4:
         size: 0
-        sp_ids:
+        units:
           '2628':
           - index: 0
             isboss: false
@@ -13550,14 +13550,14 @@ Olympus Coliseum:
       b_k5:
         ignored: true
         size: 0
-        sp_ids:
+        units:
           '2660':
           - index: 0
             isboss: false
             name: Rapid Thruster (RAW)
       b_k6:
         size: 0
-        sp_ids:
+        units:
           '2692':
           - index: 0
             isboss: false
@@ -13570,7 +13570,7 @@ Olympus Coliseum:
             name: Berserker
       b_k7:
         size: 0
-        sp_ids:
+        units:
           '2725':
           - index: 0
             isboss: false
@@ -13601,7 +13601,7 @@ Olympus Coliseum:
             name: Dragoon
       b_k8:
         size: 0
-        sp_ids:
+        units:
           '2757':
           - index: 0
             isboss: false
@@ -13662,7 +13662,7 @@ Olympus Coliseum:
             name: Sorcerer
       b_k9:
         size: 0
-        sp_ids:
+        units:
           '2788':
           - index: 0
             isboss: false
@@ -13678,14 +13678,14 @@ Olympus Coliseum:
             name: Dragoon (99 0)
       b_l0:
         size: 0
-        sp_ids:
+        units:
           '5041':
           - index: 1
             isboss: true
             name: Hades II
       b_l1:
         size: 0
-        sp_ids:
+        units:
           '4785':
           - index: 0
             isboss: false
@@ -13695,7 +13695,7 @@ Olympus Coliseum:
             name: Toy Soldier
       b_l2:
         size: 0
-        sp_ids:
+        units:
           '4817':
           - index: 0
             isboss: false
@@ -13708,7 +13708,7 @@ Olympus Coliseum:
             name: Living Bone
       b_l3:
         size: 0
-        sp_ids:
+        units:
           '4849':
           - index: 0
             isboss: false
@@ -13724,7 +13724,7 @@ Olympus Coliseum:
             name: Large Body
       b_l4:
         size: 0
-        sp_ids:
+        units:
           '4881':
           - index: 0
             isboss: false
@@ -13737,14 +13737,14 @@ Olympus Coliseum:
             name: Living Bone
       b_l5:
         size: 0
-        sp_ids:
+        units:
           '4913':
           - index: 0
             isboss: false
             name: Armored Knight (1K Battle, Disappears)
       b_l6:
         size: 0
-        sp_ids:
+        units:
           '4945':
           - index: 0
             isboss: false
@@ -13757,7 +13757,7 @@ Olympus Coliseum:
             name: Hot Rod
       b_l7:
         size: 0
-        sp_ids:
+        units:
           '4978':
           - index: 0
             isboss: false
@@ -13809,14 +13809,14 @@ Olympus Coliseum:
             name: Crescendo
       b_l8:
         size: 0
-        sp_ids:
+        units:
           '5009':
           - index: 0
             isboss: true
             name: Cerberus (Cups)
       b_l9:
         size: 0
-        sp_ids:
+        units:
           '5073':
           - index: 0
             isboss: true
@@ -13832,7 +13832,7 @@ Olympus Coliseum:
             name: Leon (2)
       b_r0:
         size: 0
-        sp_ids:
+        units:
           '5137':
           - index: 0
             isboss: true
@@ -13845,7 +13845,7 @@ Olympus Coliseum:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '47':
           - index: 0
             isboss: false
@@ -13871,7 +13871,7 @@ Olympus Coliseum:
             name: Trick Ghost
       b_20:
         size: 0
-        sp_ids:
+        units:
           '59':
           - index: 0
             isboss: false
@@ -13894,7 +13894,7 @@ Olympus Coliseum:
             name: Crimson Jazz
       b_40:
         size: 0
-        sp_ids:
+        units:
           '11':
           - index: 3
             isboss: true
@@ -13904,7 +13904,7 @@ Olympus Coliseum:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '71':
           - index: 0
             isboss: false
@@ -13921,7 +13921,7 @@ Olympus Coliseum:
             name: Trick Ghost
       b_20:
         size: 0
-        sp_ids:
+        units:
           '83':
           - index: 0
             isboss: false
@@ -13965,7 +13965,7 @@ Olympus Coliseum:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '47':
           - index: 0
             isboss: false
@@ -14001,7 +14001,7 @@ Olympus Coliseum:
             name: Soldier
       b_20:
         size: 0
-        sp_ids:
+        units:
           '59':
           - index: 0
             isboss: false
@@ -14049,7 +14049,7 @@ Olympus Coliseum:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '56':
           - index: 0
             isboss: false
@@ -14095,7 +14095,7 @@ Olympus Coliseum:
             name: Lance Soldier
       b_01:
         size: 0
-        sp_ids:
+        units:
           '68':
           - index: 0
             isboss: false
@@ -14121,7 +14121,7 @@ Olympus Coliseum:
             name: Creeper Plant
       b_20:
         size: 0
-        sp_ids:
+        units:
           '130':
           - index: 0
             isboss: false
@@ -14151,7 +14151,7 @@ Olympus Coliseum:
             name: Morning Star
       b_21:
         size: 0
-        sp_ids:
+        units:
           '142':
           - index: 0
             isboss: false
@@ -14205,7 +14205,7 @@ Olympus Coliseum:
             name: Driller Mole
       b_40:
         size: 0
-        sp_ids:
+        units:
           '12':
           - index: 3
             isboss: true
@@ -14287,7 +14287,7 @@ Olympus Coliseum:
     spawnpoints:
       b_20:
         size: 0
-        sp_ids:
+        units:
           '46':
           - index: 0
             isboss: false
@@ -14336,7 +14336,7 @@ Olympus Coliseum:
             name: Shadow
       b_40:
         size: 0
-        sp_ids:
+        units:
           '81':
           - index: 0
             isboss: false
@@ -14391,7 +14391,7 @@ Olympus Coliseum:
             name: Pete OC I
       b_41:
         size: 0
-        sp_ids:
+        units:
           '10':
           - index: 3
             isboss: true
@@ -14447,7 +14447,7 @@ Port Royal:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '291':
           - index: 0
             isboss: false
@@ -14489,7 +14489,7 @@ Port Royal:
             name: Tornado Step
       b_01:
         size: 0
-        sp_ids:
+        units:
           '663':
           - index: 0
             isboss: false
@@ -14533,7 +14533,7 @@ Port Royal:
             name: Shadow
       b_21:
         size: 0
-        sp_ids:
+        units:
           '762':
           - index: 0
             isboss: false
@@ -14572,7 +14572,7 @@ Port Royal:
             name: Rabid Dog
       b_30:
         size: 0
-        sp_ids:
+        units:
           '696':
           - index: 0
             isboss: false
@@ -14589,7 +14589,7 @@ Port Royal:
             name: Dusk
       b_40:
         size: 0
-        sp_ids:
+        units:
           '78':
           - index: 2
             isboss: false
@@ -14605,7 +14605,7 @@ Port Royal:
             name: Undead Pirate C
       b_41:
         size: 0
-        sp_ids:
+        units:
           '90':
           - index: 3
             isboss: false
@@ -14621,7 +14621,7 @@ Port Royal:
             name: Undead Pirate C
       b_60:
         size: 0
-        sp_ids:
+        units:
           '102':
           - index: 3
             isboss: false
@@ -14634,14 +14634,14 @@ Port Royal:
             name: Undead Pirate A
       b_61:
         size: 0
-        sp_ids:
+        units:
           '114':
           - index: 3
             isboss: true
             name: Grim Reaper II
       b_99:
         size: 0
-        sp_ids:
+        units:
           '67':
           - index: 0
             isboss: false
@@ -14665,7 +14665,7 @@ Port Royal:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '145':
           - index: 0
             isboss: false
@@ -14681,7 +14681,7 @@ Port Royal:
             name: Air Pirate
       b_01:
         size: 0
-        sp_ids:
+        units:
           '166':
           - index: 0
             isboss: false
@@ -14707,7 +14707,7 @@ Port Royal:
             name: Air Pirate
       b_02:
         size: 0
-        sp_ids:
+        units:
           '429':
           - index: 0
             isboss: false
@@ -14730,7 +14730,7 @@ Port Royal:
             name: Tornado Step
       b_20:
         size: 0
-        sp_ids:
+        units:
           '462':
           - index: 0
             isboss: false
@@ -14762,7 +14762,7 @@ Port Royal:
           replacements:
             obj_id: obj_id
         size: 0
-        sp_ids:
+        units:
           '484':
           - index: 0
             isboss: false
@@ -14778,7 +14778,7 @@ Port Royal:
             name: Dusk
       b_40:
         size: 0
-        sp_ids:
+        units:
           '98':
           - index: 0
             isboss: false
@@ -14807,14 +14807,14 @@ Port Royal:
             name: Undead Pirate C (93 0)
       b_70:
         size: 0
-        sp_ids:
+        units:
           '109':
           - index: 0
             isboss: false
             name: Gambler
       b_71:
         size: 0
-        sp_ids:
+        units:
           '121':
           - index: 0
             isboss: false
@@ -14838,14 +14838,14 @@ Port Royal:
             name: Armored Knight
       b_80:
         size: 0
-        sp_ids:
+        units:
           '385':
           - index: 0
             isboss: false
             name: Undead Pirate C (93 0)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '506':
           - index: 0
             isboss: false
@@ -14855,7 +14855,7 @@ Port Royal:
             name: Undead Pirate B (93 0)
       b_82:
         size: 0
-        sp_ids:
+        units:
           '528':
           - index: 0
             isboss: false
@@ -14865,7 +14865,7 @@ Port Royal:
             name: Undead Pirate A (93 0)
       b_99:
         size: 0
-        sp_ids:
+        units:
           '74':
           - index: 0
             isboss: false
@@ -14875,7 +14875,7 @@ Port Royal:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '94':
           - index: 0
             isboss: false
@@ -14897,7 +14897,7 @@ Port Royal:
             name: Undead Pirate C (91 0)
       b_01:
         size: 0
-        sp_ids:
+        units:
           '289':
           - index: 0
             isboss: false
@@ -14982,7 +14982,7 @@ Port Royal:
           replacements:
             obj_id: obj_id
         size: 0
-        sp_ids:
+        units:
           '70':
           - index: 0
             isboss: false
@@ -15004,7 +15004,7 @@ Port Royal:
             name: Gambler
       b_71:
         size: 0
-        sp_ids:
+        units:
           '82':
           - index: 0
             isboss: false
@@ -15029,7 +15029,7 @@ Port Royal:
             name: Undead Pirate C (91 0)
       b_99:
         size: 0
-        sp_ids:
+        units:
           '46':
           - index: 0
             isboss: false
@@ -15057,7 +15057,7 @@ Port Royal:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '80':
           - index: 1
             isboss: false
@@ -15072,7 +15072,7 @@ Port Royal:
             name: Undead Pirate A (24 0)
       b_01:
         size: 0
-        sp_ids:
+        units:
           '352':
           - index: 0
             isboss: false
@@ -15106,7 +15106,7 @@ Port Royal:
             name: Tornado Step
       b_20:
         size: 0
-        sp_ids:
+        units:
           '495':
           - index: 0
             isboss: false
@@ -15129,7 +15129,7 @@ Port Royal:
             name: Morning Star
       b_30:
         size: 0
-        sp_ids:
+        units:
           '517':
           - index: 0
             isboss: false
@@ -15155,7 +15155,7 @@ Port Royal:
           replacements:
             obj_id: obj_id
         size: 0
-        sp_ids:
+        units:
           '56':
           - index: 0
             isboss: false
@@ -15170,7 +15170,7 @@ Port Royal:
             name: Undead Pirate A
       b_71:
         size: 0
-        sp_ids:
+        units:
           '68':
           - index: 1
             isboss: false
@@ -15184,7 +15184,7 @@ Port Royal:
             name: Undead Pirate C (28 0)
       b_99:
         size: 0
-        sp_ids:
+        units:
           '44':
           - index: 0
             isboss: false
@@ -15198,7 +15198,7 @@ Port Royal:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '77':
           - index: 0
             isboss: false
@@ -15244,7 +15244,7 @@ Port Royal:
             name: Shadow
       b_20:
         size: 0
-        sp_ids:
+        units:
           '271':
           - index: 0
             isboss: false
@@ -15272,7 +15272,7 @@ Port Royal:
           replacements:
             obj_id: obj_id
         size: 0
-        sp_ids:
+        units:
           '249':
           - index: 0
             isboss: false
@@ -15294,7 +15294,7 @@ Port Royal:
             name: Gambler
       b_40:
         size: 0
-        sp_ids:
+        units:
           '40':
           - index: 3
             isboss: true
@@ -15304,14 +15304,14 @@ Port Royal:
             name: Illuminator
       # b_70:
       #   size: 0
-      #   sp_ids:
+      #   units:
       #     '52':
       #     - index: 0
       #       isboss: false
       #       name: Gambler (Summons Darkness)
       b_80:
         size: 0
-        sp_ids:
+        units:
           '293':
           - index: 0
             isboss: false
@@ -15321,7 +15321,7 @@ Port Royal:
             name: Undead Pirate A
       b_82:
         size: 0
-        sp_ids:
+        units:
           '337':
           - index: 0
             isboss: false
@@ -15331,28 +15331,28 @@ Port Royal:
             name: Undead Pirate C
       b_83:
         size: 0
-        sp_ids:
+        units:
           '359':
           - index: 0
             isboss: false
             name: Undead Pirate A
       b_84:
         size: 0
-        sp_ids:
+        units:
           '381':
           - index: 0
             isboss: false
             name: Undead Pirate B
       b_85:
         size: 0
-        sp_ids:
+        units:
           '403':
           - index: 0
             isboss: false
             name: Undead Pirate C
       b_99:
         size: 0
-        sp_ids:
+        units:
           '29':
           - index: 0
             isboss: false
@@ -15362,7 +15362,7 @@ Port Royal:
     spawnpoints:
       b_20:
         size: 0
-        sp_ids:
+        units:
           '315':
           - index: 0
             isboss: false
@@ -15401,7 +15401,7 @@ Port Royal:
             name: Rapid Thruster
       b_30:
         size: 0
-        sp_ids:
+        units:
           '337':
           - index: 0
             isboss: false
@@ -15440,14 +15440,14 @@ Port Royal:
           replacements:
             obj_id: obj_id
         size: 0
-        sp_ids:
+        units:
           '63':
           - index: 3
             isboss: false
             name: Gambler
       b_70:
         size: 0
-        sp_ids:
+        units:
           '75':
           - index: 0
             isboss: false
@@ -15457,7 +15457,7 @@ Port Royal:
             name: Gambler (5 0)
       b_71:
         size: 0
-        sp_ids:
+        units:
           '87':
           - index: 0
             isboss: false
@@ -15493,7 +15493,7 @@ Port Royal:
             name: Rapid Thruster
       b_80:
         size: 0
-        sp_ids:
+        units:
           '381':
           - index: 0
             isboss: false
@@ -15506,7 +15506,7 @@ Port Royal:
             name: Undead Pirate C (91 0)
       b_81:
         size: 0
-        sp_ids:
+        units:
           '403':
           - index: 0
             isboss: false
@@ -15519,7 +15519,7 @@ Port Royal:
             name: Undead Pirate C (91 0)
       b_82:
         size: 0
-        sp_ids:
+        units:
           '425':
           - index: 0
             isboss: false
@@ -15532,7 +15532,7 @@ Port Royal:
             name: Undead Pirate C (91 0)
       b_83:
         size: 0
-        sp_ids:
+        units:
           '447':
           - index: 0
             isboss: false
@@ -15545,7 +15545,7 @@ Port Royal:
             name: Undead Pirate A (91 0)
       b_90:
         size: 0
-        sp_ids:
+        units:
           '293':
           - index: 0
             isboss: false
@@ -15558,7 +15558,7 @@ Port Royal:
             name: Undead Pirate C (91 0)
       b_99:
         size: 0
-        sp_ids:
+        units:
           '40':
           - index: 0
             isboss: false
@@ -15590,7 +15590,7 @@ Port Royal:
     spawnpoints:
       b_20:
         size: 0
-        sp_ids:
+        units:
           '266':
           - index: 0
             isboss: false
@@ -15604,7 +15604,7 @@ Port Royal:
             name: Lance Soldier
       b_21:
         size: 0
-        sp_ids:
+        units:
           '551':
           - index: 0
             isboss: false
@@ -15633,7 +15633,7 @@ Port Royal:
             name: Lance Soldier
       b_30:
         size: 0
-        sp_ids:
+        units:
           '573':
           - index: 0
             isboss: false
@@ -15663,7 +15663,7 @@ Port Royal:
           replacements:
             obj_id: obj_id
         size: 0
-        sp_ids:
+        units:
           '65':
           - index: 0
             isboss: false
@@ -15673,7 +15673,7 @@ Port Royal:
             name: Gambler (5 0)
       b_72:
         size: 0
-        sp_ids:
+        units:
           '504':
           - index: 0
             isboss: false
@@ -15697,7 +15697,7 @@ Port Royal:
             name: Undead Pirate A (91 0)
       b_80:
         size: 0
-        sp_ids:
+        units:
           '472':
           - index: 0
             isboss: false
@@ -15711,7 +15711,7 @@ Port Royal:
             name: Undead Pirate C (91 0)
       b_99:
         size: 0
-        sp_ids:
+        units:
           '42':
           - index: 0
             isboss: false
@@ -15731,7 +15731,7 @@ Port Royal:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '48':
           - index: 0
             isboss: false
@@ -15753,7 +15753,7 @@ Port Royal:
             name: Undead Pirate A (90 0)
       b_01:
         size: 0
-        sp_ids:
+        units:
           '139':
           - index: 0
             isboss: false
@@ -15769,7 +15769,7 @@ Port Royal:
             name: Neoshadow
       b_30:
         size: 0
-        sp_ids:
+        units:
           '161':
           - index: 0
             isboss: false
@@ -15785,7 +15785,7 @@ Port Royal:
     spawnpoints:
       b_99:
         size: 0
-        sp_ids:
+        units:
           '27':
           - index: 0
             isboss: false
@@ -15822,7 +15822,7 @@ Port Royal:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '71':
           - index: 0
             isboss: false
@@ -15838,7 +15838,7 @@ Port Royal:
             name: Rabid Dog
       b_01:
         size: 0
-        sp_ids:
+        units:
           '139':
           - index: 0
             isboss: false
@@ -15854,7 +15854,7 @@ Port Royal:
             name: Rabid Dog
       b_03:
         size: 0
-        sp_ids:
+        units:
           '203':
           - index: 0
             isboss: false
@@ -15885,7 +15885,7 @@ Port Royal:
             name: Shadow
       b_30:
         size: 0
-        sp_ids:
+        units:
           '161':
           - index: 0
             isboss: false
@@ -15898,7 +15898,7 @@ Port Royal:
             name: Gambler
       b_60:
         size: 0
-        sp_ids:
+        units:
           '245':
           - index: 3
             isboss: true
@@ -15908,7 +15908,7 @@ Port Royal:
     spawnpoints:
       b_03:
         size: 0
-        sp_ids:
+        units:
           '222':
           - index: 0
             isboss: false
@@ -15930,7 +15930,7 @@ Port Royal:
             name: Soldier
       b_20:
         size: 0
-        sp_ids:
+        units:
           '48':
           - index: 0
             isboss: false
@@ -15946,7 +15946,7 @@ Port Royal:
             name: Lance Soldier
       b_21:
         size: 0
-        sp_ids:
+        units:
           '71':
           - index: 0
             isboss: false
@@ -15974,7 +15974,7 @@ Port Royal:
             name: Undead Pirate B (90 0)
       b_22:
         size: 0
-        sp_ids:
+        units:
           '138':
           - index: 0
             isboss: false
@@ -16014,7 +16014,7 @@ Port Royal:
             name: Armored Knight
       b_30:
         size: 0
-        sp_ids:
+        units:
           '160':
           - index: 0
             isboss: false
@@ -16030,7 +16030,7 @@ Port Royal:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '48':
           - index: 0
             isboss: false
@@ -16046,7 +16046,7 @@ Port Royal:
             name: Air Pirate
       b_01:
         size: 0
-        sp_ids:
+        units:
           '71':
           - index: 0
             isboss: false
@@ -16062,7 +16062,7 @@ Port Royal:
             name: Undead Pirate A (90 0)
       b_02:
         size: 0
-        sp_ids:
+        units:
           '94':
           - index: 0
             isboss: false
@@ -16087,7 +16087,7 @@ Port Royal:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '452':
           - index: 0
             isboss: false
@@ -16120,7 +16120,7 @@ Port Royal:
             name: Air Pirate (1 0)
       b_99:
         size: 0
-        sp_ids:
+        units:
           '27':
           - index: 0
             isboss: false
@@ -16151,7 +16151,7 @@ Port Royal:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '47':
           - index: 0
             isboss: false
@@ -16191,7 +16191,7 @@ Port Royal:
             name: Undead Pirate B (90 0)
       b_99:
         size: 0
-        sp_ids:
+        units:
           '35':
           - index: 0
             isboss: false
@@ -16222,7 +16222,7 @@ Port Royal:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '48':
           - index: 0
             isboss: false
@@ -16241,7 +16241,7 @@ Port Royal:
             name: Cannon Gun
       b_01:
         size: 0
-        sp_ids:
+        units:
           '114':
           - index: 0
             isboss: false
@@ -16257,7 +16257,7 @@ Port Royal:
             name: Undead Pirate B (90 0)
       b_02:
         size: 0
-        sp_ids:
+        units:
           '136':
           - index: 0
             isboss: false
@@ -16282,7 +16282,7 @@ Port Royal:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '110':
           - index: 0
             isboss: false
@@ -16321,7 +16321,7 @@ Port Royal:
             name: Cannon Gun
       b_01:
         size: 0
-        sp_ids:
+        units:
           '560':
           - index: 0
             isboss: false
@@ -16364,7 +16364,7 @@ Port Royal:
             name: Soldier
       b_20:
         size: 0
-        sp_ids:
+        units:
           '132':
           - index: 0
             isboss: false
@@ -16424,7 +16424,7 @@ Port Royal:
             name: Neoshadow
       b_21:
         size: 0
-        sp_ids:
+        units:
           '636':
           - index: 0
             isboss: false
@@ -16486,7 +16486,7 @@ Port Royal:
             name: Neoshadow
       b_40:
         size: 0
-        sp_ids:
+        units:
           '108':
           - index: 0
             isboss: false
@@ -16533,14 +16533,14 @@ Port Royal:
             name: Shadow
       b_80:
         size: 0
-        sp_ids:
+        units:
           '516':
           - index: 0
             isboss: false
             name: Undead Pirate C (92 0)
       b_86:
         size: 0
-        sp_ids:
+        units:
           '994':
           - index: 0
             isboss: false
@@ -16554,7 +16554,7 @@ Port Royal:
             name: Undead Pirate C (93 0)
       b_87:
         size: 0
-        sp_ids:
+        units:
           '1026':
           - index: 0
             isboss: false
@@ -16568,7 +16568,7 @@ Port Royal:
             name: Undead Pirate C (93 0)
       b_88:
         size: 0
-        sp_ids:
+        units:
           '1058':
           - index: 0
             isboss: false
@@ -16578,7 +16578,7 @@ Port Royal:
             name: Undead Pirate C (92 0)
       b_99:
         size: 0
-        sp_ids:
+        units:
           '40':
           - index: 0
             isboss: false
@@ -16626,7 +16626,7 @@ Pride Land:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '90':
           - index: 0
             isboss: false
@@ -16691,7 +16691,7 @@ Pride Land:
             name: Soldier
       b_01:
         size: 0
-        sp_ids:
+        units:
           '178':
           - index: 0
             isboss: false
@@ -16744,7 +16744,7 @@ Pride Land:
             name: Shaman
       b_20:
         size: 0
-        sp_ids:
+        units:
           '112':
           - index: 0
             isboss: false
@@ -16788,7 +16788,7 @@ Pride Land:
             name: Living Bone
       b_35:
         size: 0
-        sp_ids:
+        units:
           '438':
           - index: 0
             isboss: false
@@ -16798,7 +16798,7 @@ Pride Land:
             name: Scar Ghost
       b_40:
         size: 0
-        sp_ids:
+        units:
           '11':
           - index: 3
             isboss: false
@@ -16808,7 +16808,7 @@ Pride Land:
             name: Living Bone
       b_60:
         size: 0
-        sp_ids:
+        units:
           '45':
           - index: 0
             isboss: true
@@ -16824,7 +16824,7 @@ Pride Land:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '14':
           - index: 0
             isboss: false
@@ -16854,7 +16854,7 @@ Pride Land:
             name: Living Bone (Headless with Necromancer)
       b_01:
         size: 0
-        sp_ids:
+        units:
           '36':
           - index: 0
             isboss: false
@@ -16887,7 +16887,7 @@ Pride Land:
             name: Soldier
       b_20:
         size: 0
-        sp_ids:
+        units:
           '267':
           - index: 0
             isboss: false
@@ -16944,7 +16944,7 @@ Pride Land:
             name: Aerial Knocker
       b_35:
         size: 0
-        sp_ids:
+        units:
           '182':
           - index: 0
             isboss: false
@@ -16957,14 +16957,14 @@ Pride Land:
     spawnpoints:
       b_20:
         size: 0
-        sp_ids:
+        units:
           '92':
           - index: 4
             isboss: false
             name: Rapid Thruster (RAW)
       b_21:
         size: 0
-        sp_ids:
+        units:
           '125':
           - index: 0
             isboss: false
@@ -16974,7 +16974,7 @@ Pride Land:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '13':
           - index: 3
             isboss: true
@@ -16984,7 +16984,7 @@ Pride Land:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '16':
           - index: 3
             isboss: true
@@ -17002,7 +17002,7 @@ Pride Land:
     spawnpoints:
       b_60:
         size: 0
-        sp_ids:
+        units:
           '23':
           - index: 3
             isboss: true
@@ -17012,7 +17012,7 @@ Pride Land:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '162':
           - index: 0
             isboss: false
@@ -17067,7 +17067,7 @@ Pride Land:
             name: Living Bone
       b_01:
         size: 0
-        sp_ids:
+        units:
           '250':
           - index: 0
             isboss: false
@@ -17104,7 +17104,7 @@ Pride Land:
             name: Living Bone
       b_10:
         size: 0
-        sp_ids:
+        units:
           '206':
           - index: 0
             isboss: false
@@ -17187,7 +17187,7 @@ Pride Land:
             name: Shadow (Aggressive)
       b_20:
         size: 0
-        sp_ids:
+        units:
           '436':
           - index: 0
             isboss: false
@@ -17239,7 +17239,7 @@ Pride Land:
             name: Bolt Tower
       b_35:
         size: 0
-        sp_ids:
+        units:
           '467':
           - index: 0
             isboss: false
@@ -17252,7 +17252,7 @@ Pride Land:
             name: Scar Ghost
       b_90:
         size: 0
-        sp_ids:
+        units:
           '184':
           - index: 0
             isboss: false
@@ -17286,7 +17286,7 @@ Pride Land:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '13':
           - index: 0
             isboss: false
@@ -17332,7 +17332,7 @@ Pride Land:
             name: Living Bone
       b_01:
         size: 0
-        sp_ids:
+        units:
           '37':
           - index: 0
             isboss: false
@@ -17381,7 +17381,7 @@ Pride Land:
             name: Silver Rock
       b_20:
         size: 0
-        sp_ids:
+        units:
           '270':
           - index: 0
             isboss: false
@@ -17427,7 +17427,7 @@ Pride Land:
             name: Living Bone (Necromancer)
       b_35:
         size: 0
-        sp_ids:
+        units:
           '185':
           - index: 0
             isboss: false
@@ -17440,7 +17440,7 @@ Pride Land:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '33':
           - index: 0
             isboss: false
@@ -17498,7 +17498,7 @@ Pride Land:
             name: Shadow
       b_01:
         size: 0
-        sp_ids:
+        units:
           '55':
           - index: 0
             isboss: false
@@ -17541,7 +17541,7 @@ Pride Land:
             name: Shaman
       b_20:
         size: 0
-        sp_ids:
+        units:
           '329':
           - index: 0
             isboss: false
@@ -17608,7 +17608,7 @@ Pride Land:
             name: Shaman
       b_35:
         size: 0
-        sp_ids:
+        units:
           '254':
           - index: 0
             isboss: false
@@ -17618,7 +17618,7 @@ Pride Land:
             name: Scar Ghost
       b_99:
         size: 0
-        sp_ids:
+        units:
           '191':
           - index: 0
             isboss: false
@@ -17665,7 +17665,7 @@ Space Paranoids:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '162':
           - index: 0
             isboss: false
@@ -17714,7 +17714,7 @@ Space Paranoids:
             name: Strafer
       b_20:
         size: 0
-        sp_ids:
+        units:
           '174':
           - index: 0
             isboss: false
@@ -17769,7 +17769,7 @@ Space Paranoids:
     spawnpoints:
       b_60:
         size: 0
-        sp_ids:
+        units:
           '57':
           - index: 3
             isboss: true
@@ -17788,7 +17788,7 @@ Space Paranoids:
             name: Strafer
       b_61:
         size: 0
-        sp_ids:
+        units:
           '69':
           - index: 4
             isboss: true
@@ -17799,7 +17799,7 @@ Space Paranoids:
       b_99:
         size: 0
         ignored: true
-        sp_ids:
+        units:
           '91':
           - index: 4
             isboss: true
@@ -17809,7 +17809,7 @@ Space Paranoids:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '100':
           - index: 0
             isboss: false
@@ -17835,7 +17835,7 @@ Space Paranoids:
             name: Magnum Loader
       b_20:
         size: 0
-        sp_ids:
+        units:
           '112':
           - index: 0
             isboss: false
@@ -17858,7 +17858,7 @@ Space Paranoids:
         - name: NA
           type: enemymod
           vars: {"modification": "drop_dataspace_orbs"}
-        sp_ids:
+        units:
           '87':
           - index: 3
             isboss: false
@@ -17942,7 +17942,7 @@ Space Paranoids:
     spawnpoints:
       b_60:
         size: 0
-        sp_ids:
+        units:
           '56':
           - index: 0
             isboss: false
@@ -17970,7 +17970,7 @@ Space Paranoids:
             name: Magnum Loader
       b_9c:
         size: 0
-        sp_ids:
+        units:
           '528':
           - index: 0
             isboss: false
@@ -17989,7 +17989,7 @@ Space Paranoids:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '110':
           - index: 0
             isboss: false
@@ -18016,7 +18016,7 @@ Space Paranoids:
             name: Emerald Blues (TR)
       b_01:
         size: 0
-        sp_ids:
+        units:
           '122':
           - index: 0
             isboss: false
@@ -18043,7 +18043,7 @@ Space Paranoids:
             name: Devastator
       b_20:
         size: 0
-        sp_ids:
+        units:
           '133':
           - index: 0
             isboss: false
@@ -18072,7 +18072,7 @@ Space Paranoids:
             name: Devastator (Ranged Start)
       b_21:
         size: 0
-        sp_ids:
+        units:
           '145':
           - index: 0
             isboss: false
@@ -18095,14 +18095,14 @@ Space Paranoids:
             name: Bookmaster (TR)
       b_40:
         size: 0
-        sp_ids:
+        units:
           '84':
           - index: 3
             isboss: true
             name: Hostile Program
       b_60:
         size: 0
-        sp_ids:
+        units:
           '97':
           - index: 0
             isboss: false
@@ -18136,7 +18136,7 @@ Space Paranoids:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '81':
           - index: 0
             isboss: false
@@ -18158,7 +18158,7 @@ Space Paranoids:
             name: Magnum Loader
       b_20:
         size: 0
-        sp_ids:
+        units:
           '93':
           - index: 0
             isboss: false
@@ -18171,7 +18171,7 @@ Space Paranoids:
             name: Magnum Loader
       b_21:
         size: 0
-        sp_ids:
+        units:
           '105':
           - index: 0
             isboss: false
@@ -18188,7 +18188,7 @@ Space Paranoids:
     spawnpoints:
       b_60:
         size: 0
-        sp_ids:
+        units:
           '44':
           - index: 0
             isboss: false
@@ -18256,7 +18256,7 @@ The Land of Dragons:
     spawnpoints:
       b_20:
         size: 0
-        sp_ids:
+        units:
           '35':
           - index: 0
             isboss: false
@@ -18281,7 +18281,7 @@ The Land of Dragons:
             name: Assault Rider
       b_60:
         size: 0
-        sp_ids:
+        units:
           '45':
           - index: 0
             isboss: false
@@ -18325,7 +18325,7 @@ The Land of Dragons:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '136':
           - index: 0
             isboss: false
@@ -18355,7 +18355,7 @@ The Land of Dragons:
             name: Nightwalker
       b_01:
         size: 0
-        sp_ids:
+        units:
           '157':
           - index: 0
             isboss: false
@@ -18381,7 +18381,7 @@ The Land of Dragons:
             name: Soldier
       b_20:
         size: 0
-        sp_ids:
+        units:
           '178':
           - index: 0
             isboss: false
@@ -18413,7 +18413,7 @@ The Land of Dragons:
             name: Air Pirate
       b_40:
         size: 0
-        sp_ids:
+        units:
           '94':
           - index: 0
             isboss: false
@@ -18465,7 +18465,7 @@ The Land of Dragons:
         # msn_replacement:
         #   original: MU02_MS103B
         #   new: MU02_MS103A
-        sp_ids:
+        units:
           '416':
           - index: 0
             isboss: false
@@ -18506,7 +18506,7 @@ The Land of Dragons:
             name: Assault Rider
       b_70:
         size: 0
-        sp_ids:
+        units:
           '677':
           - index: 0
             isboss: false
@@ -18536,7 +18536,7 @@ The Land of Dragons:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '58':
           - index: 0
             isboss: false
@@ -18572,7 +18572,7 @@ The Land of Dragons:
             name: Nightwalker
       b_01:
         size: 0
-        sp_ids:
+        units:
           '70':
           - index: 0
             isboss: false
@@ -18585,7 +18585,7 @@ The Land of Dragons:
             name: Assault Rider
       b_20:
         size: 0
-        sp_ids:
+        units:
           '82':
           - index: 0
             isboss: false
@@ -18618,7 +18618,7 @@ The Land of Dragons:
             name: Emerald Blues
       b_40:
         size: 0
-        sp_ids:
+        units:
           '365':
           - index: 0
             isboss: false
@@ -18637,7 +18637,7 @@ The Land of Dragons:
             name: Shadow
       b_42:
         size: 0
-        sp_ids:
+        units:
           '387':
           - index: 0
             isboss: false
@@ -18665,7 +18665,7 @@ The Land of Dragons:
             name: Nightwalker
       b_45:
         size: 0
-        sp_ids:
+        units:
           '588':
           - index: 0
             isboss: false
@@ -18834,7 +18834,7 @@ The Land of Dragons:
             name: Soldier
       b_4p:
         size: 0
-        sp_ids:
+        units:
           '978':
           - index: 0
             isboss: false
@@ -18845,7 +18845,7 @@ The Land of Dragons:
             name: Shadow
       b_4s:
         size: 0
-        sp_ids:
+        units:
           '1007':
           - index: 0
             isboss: false
@@ -18860,7 +18860,7 @@ The Land of Dragons:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '62':
           - index: 0
             isboss: false
@@ -18895,7 +18895,7 @@ The Land of Dragons:
             name: Rapid Thruster
       b_20:
         size: 0
-        sp_ids:
+        units:
           '74':
           - index: 0
             isboss: false
@@ -18935,7 +18935,7 @@ The Land of Dragons:
             name: Nightwalker
       b_40:
         size: 0
-        sp_ids:
+        units:
           '85':
           - index: 0
             isboss: false
@@ -18961,7 +18961,7 @@ The Land of Dragons:
             name: Nightwalker
       b_60:
         size: 0
-        sp_ids:
+        units:
           '39':
           - index: 3
             isboss: false
@@ -18987,7 +18987,7 @@ The Land of Dragons:
             name: Assault Rider
       b_61:
         size: 0
-        sp_ids:
+        units:
           '96':
           - index: 0
             isboss: true
@@ -18997,7 +18997,7 @@ The Land of Dragons:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '82':
           - index: 0
             isboss: false
@@ -19054,7 +19054,7 @@ The Land of Dragons:
             name: Nightwalker
       b_01:
         size: 0
-        sp_ids:
+        units:
           '103':
           - index: 0
             isboss: false
@@ -19111,7 +19111,7 @@ The Land of Dragons:
             name: Nightwalker
       b_20:
         size: 0
-        sp_ids:
+        units:
           '124':
           - index: 0
             isboss: false
@@ -19174,7 +19174,7 @@ The Land of Dragons:
             name: Emerald Blues
       b_40:
         size: 0
-        sp_ids:
+        units:
           '62':
           - index: 0
             isboss: false
@@ -19244,7 +19244,7 @@ The Land of Dragons:
     spawnpoints:
       b_20:
         size: 0
-        sp_ids:
+        units:
           '53':
           - index: 0
             isboss: false
@@ -19272,14 +19272,14 @@ The Land of Dragons:
             name: Assault Rider
       b_40:
         size: 0
-        sp_ids:
+        units:
           '82':
           - index: 3
             isboss: true
             name: Shan-Yu
       b_41:
         size: 0
-        sp_ids:
+        units:
           '148':
           - index: 0
             isboss: false
@@ -19331,7 +19331,7 @@ The Land of Dragons:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '62':
           - index: 0
             isboss: false
@@ -19372,7 +19372,7 @@ The Land of Dragons:
             name: Rapid Thruster
       b_20:
         size: 0
-        sp_ids:
+        units:
           '74':
           - index: 0
             isboss: false
@@ -19401,7 +19401,7 @@ The Land of Dragons:
             name: Rapid Thruster
       b_30:
         size: 0
-        sp_ids:
+        units:
           '378':
           - index: 0
             isboss: false
@@ -19431,7 +19431,7 @@ The Land of Dragons:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '29':
           - index: 0
             isboss: false
@@ -19462,7 +19462,7 @@ The Land of Dragons:
             name: Rapid Thruster
       b_20:
         size: 0
-        sp_ids:
+        units:
           '41':
           - index: 0
             isboss: false
@@ -19499,7 +19499,7 @@ The Land of Dragons:
             name: Rapid Thruster
       b_30:
         size: 0
-        sp_ids:
+        units:
           '390':
           - index: 0
             isboss: false
@@ -19524,7 +19524,7 @@ The Land of Dragons:
             name: Samurai
       b_31:
         size: 0
-        sp_ids:
+        units:
           '412':
           - index: 0
             isboss: false
@@ -19552,7 +19552,7 @@ The Land of Dragons:
             name: Sniper
       b_40:
         size: 0
-        sp_ids:
+        units:
           '52':
           - index: 0
             isboss: false
@@ -19574,28 +19574,28 @@ The Land of Dragons:
             name: Bolt Tower (MU)
       b_41:
         size: 0
-        sp_ids:
+        units:
           '378':
           - index: 0
             isboss: false
             name: Rapid Thruster (RAW)
       b_60:
         size: 0
-        sp_ids:
+        units:
           '236':
           - index: 1
             isboss: true
             name: Riku
       b_61:
         size: 0
-        sp_ids:
+        units:
           '444':
           - index: 0
             isboss: false
             name: Rapid Thruster (RAW) (1 0)
       b_97:
         size: 0
-        sp_ids:
+        units:
           '579':
           - index: 0
             isboss: false
@@ -19689,7 +19689,7 @@ The Land of Dragons:
             name: Rapid Thruster (RAW) (1 0)
       c_00:
         size: 0
-        sp_ids:
+        units:
           '290':
           - index: 0
             isboss: false
@@ -19702,7 +19702,7 @@ The Land of Dragons:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '83':
           - index: 0
             isboss: false
@@ -19740,7 +19740,7 @@ The Land of Dragons:
             name: Rapid Thruster
       b_20:
         size: 0
-        sp_ids:
+        units:
           '104':
           - index: 0
             isboss: false
@@ -19824,7 +19824,7 @@ The Land of Dragons:
             name: Hook Bat
       b_40:
         size: 0
-        sp_ids:
+        units:
           '125':
           - index: 0
             isboss: false
@@ -19956,7 +19956,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '218':
           - index: 0
             isboss: false
@@ -19990,14 +19990,14 @@ The World That Never Was:
             name: Berserker
       b_40:
         size: 0
-        sp_ids:
+        units:
           '69':
           - index: 3
             isboss: true
             name: Saix
       b_80:
         size: 0
-        sp_ids:
+        units:
           '356':
           - index: 3
             isboss: true
@@ -20007,7 +20007,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '294':
           - index: 0
             isboss: false
@@ -20023,7 +20023,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '249':
           - index: 0
             isboss: false
@@ -20039,7 +20039,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '69':
           - index: 0
             isboss: false
@@ -20079,7 +20079,7 @@ The World That Never Was:
             name: Sniper
       b_01:
         size: 0
-        sp_ids:
+        units:
           '91':
           - index: 0
             isboss: false
@@ -20155,7 +20155,7 @@ The World That Never Was:
             name: Shadow (RAW)
       b_10:
         size: 0
-        sp_ids:
+        units:
           '113':
           - index: 0
             isboss: false
@@ -20384,14 +20384,14 @@ The World That Never Was:
             name: Shadow (RAW)
       b_11:
         size: 0
-        sp_ids:
+        units:
           '134':
           - index: 0
             isboss: true
             name: Illuminator
       b_13:
         size: 0
-        sp_ids:
+        units:
           '370':
           - index: 0
             isboss: false
@@ -20797,7 +20797,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '293':
           - index: 0
             isboss: false
@@ -20810,7 +20810,7 @@ The World That Never Was:
             name: Sniper
       b_01:
         size: 0
-        sp_ids:
+        units:
           '403':
           - index: 0
             isboss: false
@@ -20847,14 +20847,14 @@ The World That Never Was:
             name: Creeper
       b_40:
         size: 0
-        sp_ids:
+        units:
           '124':
           - index: 3
             isboss: true
             name: Xigbar
       b_80:
         size: 0
-        sp_ids:
+        units:
           '434':
           - index: 3
             isboss: true
@@ -20864,7 +20864,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '115':
           - index: 0
             isboss: false
@@ -20889,7 +20889,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '240':
           - index: 0
             isboss: false
@@ -20911,14 +20911,14 @@ The World That Never Was:
             name: Gambler
       b_40:
         size: 0
-        sp_ids:
+        units:
           '69':
           - index: 3
             isboss: true
             name: Luxord
       b_80:
         size: 0
-        sp_ids:
+        units:
           '378':
           - index: 3
             isboss: true
@@ -20928,14 +20928,14 @@ The World That Never Was:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '47':
           - index: 3
             isboss: true
             name: Xemnas
       b_80:
         size: 0
-        sp_ids:
+        units:
           '99':
           - index: 3
             isboss: true
@@ -20945,7 +20945,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '92':
           - index: 0
             isboss: false
@@ -20988,7 +20988,7 @@ The World That Never Was:
             name: Berserker
       b_01:
         size: 0
-        sp_ids:
+        units:
           '114':
           - index: 0
             isboss: false
@@ -21034,7 +21034,7 @@ The World That Never Was:
             name: Neoshadow
       b_10:
         size: 0
-        sp_ids:
+        units:
           '136':
           - index: 0
             isboss: false
@@ -21197,7 +21197,7 @@ The World That Never Was:
             name: Shadow
       b_11:
         size: 0
-        sp_ids:
+        units:
           '157':
           - index: 0
             isboss: true
@@ -21207,7 +21207,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '95':
           - index: 0
             isboss: false
@@ -21247,7 +21247,7 @@ The World That Never Was:
             name: Berserker
       b_01:
         size: 0
-        sp_ids:
+        units:
           '201':
           - index: 0
             isboss: false
@@ -21268,7 +21268,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '82':
           - index: 0
             isboss: false
@@ -21306,7 +21306,7 @@ The World That Never Was:
             name: Berserker
       b_01:
         size: 0
-        sp_ids:
+        units:
           '200':
           - index: 0
             isboss: false
@@ -21452,7 +21452,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '138':
           - index: 0
             isboss: false
@@ -21479,7 +21479,7 @@ The World That Never Was:
             name: Sorcerer
       b_01:
         size: 0
-        sp_ids:
+        units:
           '286':
           - index: 0
             isboss: false
@@ -21555,7 +21555,7 @@ The World That Never Was:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '96':
           - index: 0
             isboss: false
@@ -21601,7 +21601,7 @@ The World That Never Was:
             name: Sorcerer
       b_01:
         size: 0
-        sp_ids:
+        units:
           '308':
           - index: 0
             isboss: false
@@ -21777,14 +21777,14 @@ The World That Never Was:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '23':
           - index: 3
             isboss: true
             name: Roxas
       b_80:
         size: 0
-        sp_ids:
+        units:
           '87':
           - index: 3
             isboss: true
@@ -21794,7 +21794,7 @@ The World That Never Was:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '47':
           - index: 2
             isboss: true
@@ -21804,7 +21804,7 @@ The World That Never Was:
             name: Final Xemnas
       b_80:
         size: 0
-        sp_ids:
+        units:
           '89':
           - index: 2
             isboss: true
@@ -21826,14 +21826,14 @@ The World That Never Was:
       b_97:
         ignored: true # not a real fight
         size: 0
-        sp_ids:
+        units:
           '151':
           - index: 2
             isboss: true
             name: Xemnas
       b_99:
         size: 0
-        sp_ids:
+        units:
           '87':
           - index: 2
             isboss: true
@@ -21845,7 +21845,7 @@ The World That Never Was:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '23':
           - index: 11
             isboss: true
@@ -21869,7 +21869,7 @@ The World That Never Was:
       b_99:
         ignored: true # Not a used spawn
         size: 0
-        sp_ids:
+        units:
           '87':
           - index: 11
             isboss: true
@@ -21879,7 +21879,7 @@ The World That Never Was:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '24':
           - index: 0
             isboss: false
@@ -21969,7 +21969,7 @@ The World That Never Was:
     spawnpoints:
       b_99:
         size: 0
-        sp_ids:
+        units:
           '98':
           - index: 0
             isboss: false
@@ -21992,7 +21992,7 @@ Timeless River:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '31':
           - index: 0
             isboss: false
@@ -22035,7 +22035,7 @@ Timeless River:
             name: Rapid Thruster WI
       b_20:
         size: 0
-        sp_ids:
+        units:
           '188':
           - index: 0
             isboss: false
@@ -22057,7 +22057,7 @@ Timeless River:
             name: Hot Rod WI
       b_40:
         size: 0
-        sp_ids:
+        units:
           '18':
           - index: 3
             isboss: false
@@ -22113,7 +22113,7 @@ Timeless River:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '28':
           - index: 0
             isboss: false
@@ -22163,7 +22163,7 @@ Timeless River:
             name: Minute Bomb WI
       b_20:
         size: 0
-        sp_ids:
+        units:
           '229':
           - index: 0
             isboss: false
@@ -22197,7 +22197,7 @@ Timeless River:
             name: Aeroplane WI
       b_40:
         size: 0
-        sp_ids:
+        units:
           '16':
           - index: 0
             isboss: false
@@ -22237,7 +22237,7 @@ Timeless River:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '26':
           - index: 0
             isboss: false
@@ -22287,7 +22287,7 @@ Timeless River:
             name: Shadow WI
       b_20:
         size: 0
-        sp_ids:
+        units:
           '287':
           - index: 0
             isboss: false
@@ -22355,7 +22355,7 @@ Timeless River:
             name: Shadow WI
       b_40:
         size: 0
-        sp_ids:
+        units:
           '14':
           - index: 0
             isboss: false
@@ -22412,7 +22412,7 @@ Timeless River:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '15':
           - index: 0
             isboss: false
@@ -22455,7 +22455,7 @@ Timeless River:
             name: Minute Bomb WI
       b_20:
         size: 0
-        sp_ids:
+        units:
           '364':
           - index: 0
             isboss: false
@@ -22492,7 +22492,7 @@ Timeless River:
             name: Aeroplane WI
       b_40:
         size: 0
-        sp_ids:
+        units:
           '26':
           - index: 3
             isboss: true
@@ -22502,7 +22502,7 @@ Timeless River:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '30':
           - index: 0
             isboss: false
@@ -22524,7 +22524,7 @@ Timeless River:
             name: Aeroplane WI
       b_20:
         size: 0
-        sp_ids:
+        units:
           '220':
           - index: 0
             isboss: false
@@ -22552,7 +22552,7 @@ Timeless River:
             name: Aeroplane WI
       b_40:
         size: 0
-        sp_ids:
+        units:
           '42':
           - index: 0
             isboss: false
@@ -22600,7 +22600,7 @@ Timeless River:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '23':
           - index: 0
             isboss: false
@@ -22654,7 +22654,7 @@ Timeless River:
             name: Soldier (WI)
       b_40:
         size: 0
-        sp_ids:
+        units:
           '36':
           - index: 0
             isboss: false
@@ -22670,7 +22670,7 @@ Timeless River:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '25':
           - index: 0
             isboss: false
@@ -22734,7 +22734,7 @@ Timeless River:
             name: Minute Bomb WI
       b_20:
         size: 0
-        sp_ids:
+        units:
           '276':
           - index: 0
             isboss: false
@@ -22762,7 +22762,7 @@ Timeless River:
             name: Hot Rod WI
       b_40:
         size: 0
-        sp_ids:
+        units:
           '36':
           - index: 3
             isboss: true
@@ -22773,7 +22773,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '223':
           - index: 0
             isboss: false
@@ -22787,7 +22787,7 @@ Twilight Town:
             name: Dusk
       b_21:
         size: 0
-        sp_ids:
+        units:
           '267':
           - index: 0
             isboss: false
@@ -22810,7 +22810,7 @@ Twilight Town:
             name: Gambler
       b_40:
         size: 0
-        sp_ids:
+        units:
           '91':
           - index: 0
             isboss: false
@@ -22825,7 +22825,7 @@ Twilight Town:
         pc:
           ignored: true
         size: 0
-        sp_ids:
+        units:
           '858':
           - index: 3
             isboss: true
@@ -22835,7 +22835,7 @@ Twilight Town:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '11':
           - index: 3
             isboss: false
@@ -22857,7 +22857,7 @@ Twilight Town:
             name: Dusk
       b_41:
         size: 0
-        sp_ids:
+        units:
           '34':
           - index: 0
             isboss: false
@@ -22923,7 +22923,7 @@ Twilight Town:
     spawnpoints:
       b_21:
         size: 0
-        sp_ids:
+        units:
           '128':
           - index: 0
             isboss: false
@@ -22959,14 +22959,14 @@ Twilight Town:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '67':
           - index: 3
             isboss: true
             name: Axel II
       b_80:
         size: 0
-        sp_ids:
+        units:
           '89':
           - index: 3
             isboss: true
@@ -22976,7 +22976,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '299':
           - index: 0
             isboss: false
@@ -22989,7 +22989,7 @@ Twilight Town:
             name: Assassin
       b_21:
         size: 0
-        sp_ids:
+        units:
           '195':
           - index: 0
             isboss: false
@@ -23002,7 +23002,7 @@ Twilight Town:
             name: Samurai
       b_40:
         size: 0
-        sp_ids:
+        units:
           '51':
           - index: 0
             isboss: false
@@ -23027,7 +23027,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '159':
           - index: 0
             isboss: false
@@ -23047,7 +23047,7 @@ Twilight Town:
       b_21:
         ignored: true # Make sure you can level final form in the worst case
         size: 0
-        sp_ids:
+        units:
           '51':
           - index: 0
             isboss: false
@@ -23063,7 +23063,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '403':
           - index: 0
             isboss: false
@@ -23101,7 +23101,7 @@ Twilight Town:
             name: Creeper
       b_20:
         size: 0
-        sp_ids:
+        units:
           '139':
           - index: 0
             isboss: false
@@ -23170,7 +23170,7 @@ Twilight Town:
     spawnpoints:
       b_21:
         size: 0
-        sp_ids:
+        units:
           '152':
           - index: 0
             isboss: false
@@ -23209,7 +23209,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '272':
           - index: 0
             isboss: false
@@ -23236,7 +23236,7 @@ Twilight Town:
             name: Dusk
       b_21:
         size: 0
-        sp_ids:
+        units:
           '525':
           - index: 0
             isboss: false
@@ -23266,7 +23266,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '3411':
           - index: 0
             isboss: false
@@ -23332,7 +23332,7 @@ Twilight Town:
             name: Dusk
       b_21:
         size: 0
-        sp_ids:
+        units:
           '1038':
           - index: 0
             isboss: false
@@ -23444,7 +23444,7 @@ Twilight Town:
             name: Dusk
       b_47:
         size: 0
-        sp_ids:
+        units:
           '243':
           - index: 0
             isboss: false
@@ -23472,7 +23472,7 @@ Twilight Town:
             name: Bees TT PO
       b_81:
         size: 0
-        sp_ids:
+        units:
           '2854':
           - index: 0
             isboss: false
@@ -23488,21 +23488,21 @@ Twilight Town:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '78':
           - index: 3
             isboss: true
             name: Hayner
       b_41:
         size: 0
-        sp_ids:
+        units:
           '100':
           - index: 3
             isboss: true
             name: Vivi
       b_42:
         size: 0
-        sp_ids:
+        units:
           '122':
           - index: 3
             isboss: false
@@ -23515,14 +23515,14 @@ Twilight Town:
             name: Dusk
       b_43:
         size: 0
-        sp_ids:
+        units:
           '144':
           - index: 3
             isboss: true
             name: Axel I
       b_44:
         size: 0
-        sp_ids:
+        units:
           '166':
           - index: 3
             isboss: true
@@ -23532,7 +23532,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '225':
           - index: 0
             isboss: false
@@ -23545,7 +23545,7 @@ Twilight Town:
             name: Dusk
       b_21:
         size: 0
-        sp_ids:
+        units:
           '313':
           - index: 0
             isboss: false
@@ -23558,14 +23558,14 @@ Twilight Town:
             name: Dusk
       b_41:
         size: 0
-        sp_ids:
+        units:
           '71':
           - index: 3
             isboss: true
             name: Seifer (1)
       b_42:
         size: 0
-        sp_ids:
+        units:
           '93':
           - index: 3
             isboss: true
@@ -23578,14 +23578,14 @@ Twilight Town:
           replacements:
             obj_id: obj_id
         size: 0
-        sp_ids:
+        units:
           '115':
           - index: 3
             isboss: false
             name: Dusk
       b_44:
         size: 0
-        sp_ids:
+        units:
           '138':
           - index: 0
             isboss: false
@@ -23622,28 +23622,28 @@ Twilight Town:
             name: Berserker
       b_45:
         size: 0
-        sp_ids:
+        units:
           '2215':
           - index: 3
             isboss: true
             name: Seifer (3)
       b_50:
         size: 0
-        sp_ids:
+        units:
           '2343':
           - index: 3
             isboss: true
             name: Hayner
       b_51:
         size: 0
-        sp_ids:
+        units:
           '2375':
           - index: 3
             isboss: true
             name: Seifer (4)
       b_52:
         size: 0
-        sp_ids:
+        units:
           '2407':
           - index: 3
             isboss: true
@@ -23653,7 +23653,7 @@ Twilight Town:
     spawnpoints:
       b_21:
         size: 0
-        sp_ids:
+        units:
           '353':
           - index: 0
             isboss: false
@@ -23666,7 +23666,7 @@ Twilight Town:
             name: Dragoon
       b_40:
         size: 0
-        sp_ids:
+        units:
           '57':
           - index: 0
             isboss: false
@@ -23731,7 +23731,7 @@ Twilight Town:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '13':
           - index: 0
             isboss: true
@@ -23741,7 +23741,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '73':
           - index: 0
             isboss: false
@@ -23782,7 +23782,7 @@ Twilight Town:
     spawnpoints:
       b_40:
         size: 0
-        sp_ids:
+        units:
           '47':
           - index: 3
             isboss: false
@@ -23798,7 +23798,7 @@ Twilight Town:
     spawnpoints:
       b_21:
         size: 0
-        sp_ids:
+        units:
           '170':
           - index: 0
             isboss: false
@@ -23831,7 +23831,7 @@ Twilight Town:
     spawnpoints:
       b_21:
         size: 0
-        sp_ids:
+        units:
           '343':
           - index: 0
             isboss: false
@@ -23904,7 +23904,7 @@ Twilight Town:
             name: Dusk
       b_41:
         size: 0
-        sp_ids:
+        units:
           '122':
           - index: 3
             isboss: false
@@ -23914,14 +23914,14 @@ Twilight Town:
     spawnpoints:
       b_80:
         size: 0
-        sp_ids:
+        units:
           '55':
           - index: 0
             isboss: true
             name: Vexen
       b_99:
         size: 0
-        sp_ids:
+        units:
           '24':
           - index: 0
             isboss: false
@@ -23980,7 +23980,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '708':
           - index: 0
             isboss: false
@@ -23994,7 +23994,7 @@ Twilight Town:
             name: Assassin
       b_10:
         size: 0
-        sp_ids:
+        units:
           '743':
           - index: 0
             isboss: false
@@ -24010,7 +24010,7 @@ Twilight Town:
             name: Shadow
       b_20:
         size: 0
-        sp_ids:
+        units:
           '244':
           - index: 0
             isboss: false
@@ -24023,7 +24023,7 @@ Twilight Town:
             name: Creeper Plant
       b_21:
         size: 0
-        sp_ids:
+        units:
           '263':
           - index: 0
             isboss: false
@@ -24056,21 +24056,21 @@ Twilight Town:
           replacements:
             obj_id: obj_id
         size: 0
-        sp_ids:
+        units:
           '65':
           - index: 3
             isboss: false
             name: Dusk
       b_42:
         size: 0
-        sp_ids:
+        units:
           '87':
           - index: 3
             isboss: false
             name: Dusk
       b_99:
         size: 0
-        sp_ids:
+        units:
           '326':
           - index: 0
             isboss: false
@@ -24129,7 +24129,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '112':
           - index: 0
             isboss: false
@@ -24153,7 +24153,7 @@ Twilight Town:
             name: Shadow
       b_10:
         size: 0
-        sp_ids:
+        units:
           '384':
           - index: 0
             isboss: false
@@ -24186,7 +24186,7 @@ Twilight Town:
             name: Driller Mole
       b_20:
         size: 0
-        sp_ids:
+        units:
           '90':
           - index: 0
             isboss: false
@@ -24226,7 +24226,7 @@ Twilight Town:
             name: Tornado Step
       b_40:
         size: 0
-        sp_ids:
+        units:
           '23':
           - index: 3
             isboss: false
@@ -24261,7 +24261,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '80':
           - index: 0
             isboss: false
@@ -24281,7 +24281,7 @@ Twilight Town:
             name: Dusk
       b_10:
         size: 0
-        sp_ids:
+        units:
           '104':
           - index: 0
             isboss: false
@@ -24336,7 +24336,7 @@ Twilight Town:
             name: Driller Mole
       b_20:
         size: 0
-        sp_ids:
+        units:
           '196':
           - index: 0
             isboss: false
@@ -24379,7 +24379,7 @@ Twilight Town:
             name: Creeper Plant
       b_21:
         size: 0
-        sp_ids:
+        units:
           '220':
           - index: 0
             isboss: false
@@ -24422,7 +24422,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '199':
           - index: 0
             isboss: false
@@ -24435,7 +24435,7 @@ Twilight Town:
             name: Soldier
       b_10:
         size: 0
-        sp_ids:
+        units:
           '231':
           - index: 0
             isboss: false
@@ -24448,7 +24448,7 @@ Twilight Town:
             name: Cannon Gun
       b_20:
         size: 0
-        sp_ids:
+        units:
           '125':
           - index: 0
             isboss: false
@@ -24467,7 +24467,7 @@ Twilight Town:
             name: Surveillance Robot
       b_21:
         size: 0
-        sp_ids:
+        units:
           '147':
           - index: 0
             isboss: false
@@ -24483,7 +24483,7 @@ Twilight Town:
             name: Gambler
       b_40:
         size: 0
-        sp_ids:
+        units:
           '49':
           - index: 0
             isboss: false
@@ -24517,7 +24517,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '197':
           - index: 0
             isboss: false
@@ -24536,7 +24536,7 @@ Twilight Town:
             name: Shadow
       b_10:
         size: 0
-        sp_ids:
+        units:
           '229':
           - index: 0
             isboss: false
@@ -24552,7 +24552,7 @@ Twilight Town:
             name: Driller Mole
       b_20:
         size: 0
-        sp_ids:
+        units:
           '123':
           - index: 0
             isboss: false
@@ -24568,7 +24568,7 @@ Twilight Town:
             name: Creeper Plant
       b_21:
         size: 0
-        sp_ids:
+        units:
           '145':
           - index: 0
             isboss: false
@@ -24584,7 +24584,7 @@ Twilight Town:
             name: Dragoon
       b_40:
         size: 0
-        sp_ids:
+        units:
           '47':
           - index: 0
             isboss: false
@@ -24627,7 +24627,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '66':
           - index: 0
             isboss: false
@@ -24646,7 +24646,7 @@ Twilight Town:
             name: Shadow
       b_10:
         size: 0
-        sp_ids:
+        units:
           '156':
           - index: 0
             isboss: false
@@ -24656,7 +24656,7 @@ Twilight Town:
             name: Morning Star
       b_20:
         size: 0
-        sp_ids:
+        units:
           '41':
           - index: 0
             isboss: false
@@ -24682,7 +24682,7 @@ Twilight Town:
             name: Crescendo
       b_21:
         size: 0
-        sp_ids:
+        units:
           '89':
           - index: 0
             isboss: false
@@ -24711,7 +24711,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '127':
           - index: 0
             isboss: false
@@ -24724,7 +24724,7 @@ Twilight Town:
             name: Shadow
       b_10:
         size: 0
-        sp_ids:
+        units:
           '246':
           - index: 0
             isboss: false
@@ -24740,7 +24740,7 @@ Twilight Town:
             name: Driller Mole
       b_20:
         size: 0
-        sp_ids:
+        units:
           '101':
           - index: 0
             isboss: false
@@ -24757,7 +24757,7 @@ Twilight Town:
             name: Crimson Jazz
       b_21:
         size: 0
-        sp_ids:
+        units:
           '149':
           - index: 0
             isboss: false
@@ -24790,7 +24790,7 @@ Twilight Town:
     spawnpoints:
       b_00:
         size: 0
-        sp_ids:
+        units:
           '63':
           - index: 0
             isboss: false
@@ -24810,7 +24810,7 @@ Twilight Town:
             name: Shadow
       b_10:
         size: 0
-        sp_ids:
+        units:
           '159':
           - index: 0
             isboss: false
@@ -24830,7 +24830,7 @@ Twilight Town:
             name: Cannon Gun
       b_20:
         size: 0
-        sp_ids:
+        units:
           '41':
           - index: 0
             isboss: false
@@ -24859,7 +24859,7 @@ Twilight Town:
             name: Morning Star
       b_21:
         size: 0
-        sp_ids:
+        units:
           '85':
           - index: 0
             isboss: false
@@ -24888,7 +24888,7 @@ Twilight Town:
     spawnpoints:
       b_10:
         size: 0
-        sp_ids:
+        units:
           '85':
           - index: 0
             isboss: false
@@ -24915,7 +24915,7 @@ Twilight Town:
             name: Morning Star
       b_20:
         size: 0
-        sp_ids:
+        units:
           '174':
           - index: 0
             isboss: false
@@ -24963,7 +24963,7 @@ Twilight Town:
             name: Armored Knight
       b_21:
         size: 0
-        sp_ids:
+        units:
           '195':
           - index: 0
             isboss: false
@@ -24991,7 +24991,7 @@ Twilight Town:
             name: Dusk
       b_40:
         size: 0
-        sp_ids:
+        units:
           '42':
           - index: 0
             isboss: false
@@ -25040,7 +25040,7 @@ Twilight Town:
     spawnpoints:
       b_10:
         size: 0
-        sp_ids:
+        units:
           '79':
           - index: 0
             isboss: false
@@ -25090,7 +25090,7 @@ Twilight Town:
             name: Driller Mole
       b_20:
         size: 0
-        sp_ids:
+        units:
           '131':
           - index: 0
             isboss: false
@@ -25144,7 +25144,7 @@ Twilight Town:
             name: Neoshadow
       b_21:
         size: 0
-        sp_ids:
+        units:
           '157':
           - index: 0
             isboss: false

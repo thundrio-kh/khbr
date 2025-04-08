@@ -36,7 +36,7 @@ class EnemySeed:
             "memory_expansion": self.config.memory_expansion
             }
 
-    def add_spawn(self, world, room, spawnpoint, spid, entity, new_boss_object):
+    def add_spawn(self, world, room, spawnpoint, unitid, entity, new_boss_object):
         #'m pretty sure this is wrong because of update_extras
         new_entity = create_new_entity(entity, new_boss_object)
         if world not in self.spawns:
@@ -44,10 +44,11 @@ class EnemySeed:
         if room not in self.spawns[world]:
             self.spawns[world][room] = {"spawnpoints": {}}
         if spawnpoint not in self.spawns[world][room]["spawnpoints"]:
-            self.spawns[world][room]["spawnpoints"][spawnpoint] = {"sp_ids": {}}
-        if spid not in self.spawns[world][room]["spawnpoints"][spawnpoint]["sp_ids"]:
-            self.spawns[world][room]["spawnpoints"][spawnpoint]["sp_ids"][spid] = []
-        self.spawns[world][room]["spawnpoints"][spawnpoint]["sp_ids"][spid].append(new_entity)
+            self.spawns[world][room]["spawnpoints"][spawnpoint] = {"units": {}}
+        unit_name = "units" if "units" in self.spawns[world][room]["spawnpoints"][spawnpoint] else "sp_id" # back compat
+        if unitid not in self.spawns[world][room]["spawnpoints"][spawnpoint][unit_name]:
+            self.spawns[world][room]["spawnpoints"][spawnpoint][unit_name][unitid] = []
+        self.spawns[world][room]["spawnpoints"][spawnpoint][unit_name][unitid].append(new_entity)
         return
 
     def add_to_subtract_map(self, world, room, spawnpoint, objectid):
@@ -59,12 +60,12 @@ class EnemySeed:
             self.subtract_map[world][room]["spawnpoints"][spawnpoint] = []
         self.subtract_map[world][room]["spawnpoints"][spawnpoint].append(objectid)
 
-    def update_seed(self, old_boss_object, new_boss_object, world, room, spawnpoint, spid):
+    def update_seed(self, old_boss_object, new_boss_object, world, room, spawnpoint, unitid):
         if old_boss_object["name"] == new_boss_object["name"]:
             return # shouldn't do anything in this case, which is mostly only going to happen on selected enemy
         if new_boss_object["name"] == "Shadow Roxas":
             return # Nothing to do in this case
-        self.update_extras(old_boss_object, new_boss_object, world, room, spawnpoint, spid)
+        self.update_extras(old_boss_object, new_boss_object, world, room, spawnpoint, unitid)
         self.update_objentry(new_boss_object)
         self.update_aimod(old_boss_object, new_boss_object)
         self.update_luamod(new_boss_object)
@@ -73,11 +74,11 @@ class EnemySeed:
             self.update_msn_mapping(old_boss_object, new_boss_object)
             self.update_scaling(old_boss_object, new_boss_object)
 
-    def update_extras(self, old_boss_object, new_boss_object, world, room, spawnpoint, spid):
-        # self, world, room, spawnpoint, spid, entity, new_boss_object
+    def update_extras(self, old_boss_object, new_boss_object, world, room, spawnpoint, unitid):
+        # self, world, room, spawnpoint, unitid, entity, new_boss_object
         # uggg my head hurts
         for obj in new_boss_object["adds"]:
-            self.add_spawn(world, room, spawnpoint, spid, "new", obj)
+            self.add_spawn(world, room, spawnpoint, unitid, "new", obj)
         for obj in old_boss_object["subtracts"]+old_boss_object["adds"]:
             if "dontSub" in obj and obj["dontSub"]:
                 continue

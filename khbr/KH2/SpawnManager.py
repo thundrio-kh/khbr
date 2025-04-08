@@ -82,8 +82,8 @@ class SpawnManager:
 
     def ax2_40(self, spawnpoint):
         # remove the buildings
-        for spid in spawnpoint:
-            spid["Entities"] = []
+        for unitid in spawnpoint:
+            unitid["Entities"] = []
 
     def ax2_50(self, spawnpoint):
         # remove the dragon
@@ -281,11 +281,11 @@ class SpawnManager:
         return new_enemy
 
     @staticmethod
-    def getSpId(spawnpoint, idnum):
-        for spid in spawnpoint:
-            if spid["Id"] == idnum:
-                return spid
-        raise Exception("Spid not found!")
+    def getunitid(spawnpoint, idnum):
+        for unitid in spawnpoint:
+            if unitid["Id"] == idnum:
+                return unitid
+        raise Exception("Unit ID not found!")
 
     @staticmethod
     def getNewUnit(defaults):

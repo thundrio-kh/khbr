@@ -449,10 +449,10 @@ class AssetGenerator:
                     existing_spawnpoint = self.spawn_manager.getSpawnpoint(ardname, spn, roommods)
                     #default_object = dict(existing_spawnpoint[0]["Entities"][0])
 
-                    def _update_spid(i, spid, custom_unit_list):
+                    def _update_unitid(i, unitid, custom_unit_list):
                         gr2_self_replace = False
-                        for new_entity in spid:
-                            old_spid = self.spawn_manager.getSpId(existing_spawnpoint, int(i))
+                        for new_entity in unitid:
+                            old_unitid = self.spawn_manager.getunitid(existing_spawnpoint, int(i))
                             # Get to the right spawnpointid sp_instance
                             old_spawn_index = new_entity["index"]
 
@@ -464,16 +464,16 @@ class AssetGenerator:
                                 del new_entity["customUnit"]
                                 self.spawn_manager.add_new_object(custom_unit_list[cu_id], new_entity)#, default_object=default_object)
                             elif new_entity["index"] == "new":
-                                self.spawn_manager.add_new_object(old_spid, new_entity)
+                                self.spawn_manager.add_new_object(old_unitid, new_entity)
                             elif type(new_entity["name"]) == int:
-                                self.spawn_manager.set_object_by_id(old_spid["Entities"][old_spawn_index], new_entity)
+                                self.spawn_manager.set_object_by_id(old_unitid["Entities"][old_spawn_index], new_entity)
                             else:
 
                                 obj = self.enemy_manager.lookup_object(new_entity["name"])
 
-                                if old_spawn_index >= len(old_spid["Entities"]):
+                                if old_spawn_index >= len(old_unitid["Entities"]):
                                     continue # Case like AX1 room where AX1 was replaced subtracting the spawns that got replaced by the icy cube... Smelly way to fix this
-                                old_spawn = old_spid["Entities"][old_spawn_index]
+                                old_spawn = old_unitid["Entities"][old_spawn_index]
                                 old_obj = self.enemy_manager.lookup_object_by_id(old_spawn["ObjectId"])
                                 if old_obj.get("story_level", 0) > 0 and self.force_story_boss_levels:
                                     prg = old_obj["program"]
@@ -505,11 +505,12 @@ class AssetGenerator:
                                 entity["Medal"] = 0
 
                     custom_unit_list = {} # keyed on ID
-                    for i, spid in spawnpoint["sp_ids"].items():
-                        _update_spid(i, spid, custom_unit_list)
+                    unit_name = "units" if "units" in spawnpoint else "sp_ids" # Try to be backwards compatible for overrides
+                    for i, unitid in spawnpoint["units"].items():
+                        _update_unitid(i, unitid, custom_unit_list)
                     for cid, unit in custom_unit_list.items():
                         if cid in [s["Id"] for s in existing_spawnpoint]:
-                            log_output(f"Warning: spid already exists in spawnpoint, test for problems. {cid} {ardname}", log_level=1) # DEBUG ONLY
+                            log_output(f"Warning: unitid already exists in spawnpoint, test for problems. {cid} {ardname}", log_level=1) # DEBUG ONLY
                         existing_spawnpoint.append(unit)
                     
                     spasset = self.modwriter.writeSpawnpoint(ardname, spn, existing_spawnpoint)

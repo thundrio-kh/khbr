@@ -1,4 +1,5 @@
 5.0.0
+* sp_id has been renamed to unit in locations.yaml for accuracy. override yamls with "sp_id" should still work
 * Now the generated mod will always load properly on PS2 or PC, no matter if the memory expansion option is checked
 
 4.1.1

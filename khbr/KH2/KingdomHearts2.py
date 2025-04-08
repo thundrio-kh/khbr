@@ -272,7 +272,8 @@ class KingdomHearts2:
                             continue
                         created_enemies = [] # This is a little weird it's just for location aimods, ideally they would be done at a different level than the spawnpoint level
                         bosses_as_enemies = 0
-                        for i, entities in spawnpoint["sp_ids"].items(): # Fun fact: The internal game code refers to these as "unit"s
+                        unit_name = "units" if "units" in spawnpoint else "sp_ids" # try to be backwards compatible
+                        for i, entities in spawnpoint["units"].items(): # Fun fact: The internal game code refers to these as "unit"s
 
                             # TODO might be able to make this just for entity in entities
                             for e in range(len(entities)):

@@ -71,7 +71,7 @@ def get_boss_list(requireSourceReplace=True, pc=False):
 
 def get_luxord_replacement(randomization):
     try:
-        return randomization["spawns"]["The World That Never Was"]["Havocs Divide"]["spawnpoints"]["b_40"]["sp_ids"]["69"][0]["name"]
+        return randomization["spawns"]["The World That Never Was"]["Havocs Divide"]["spawnpoints"]["b_40"]["units"]["69"][0]["name"]
     except KeyError:
         return "Luxord"
 
@@ -99,24 +99,24 @@ def validate_boss_placements(randomization, pc=False):
             room = world[room_name]
             for spawnpoint_name in room["spawnpoints"]:
                 spawnpoint = room["spawnpoints"][spawnpoint_name]
-                for sp_id_name in spawnpoint["sp_ids"]:
-                    spid = spawnpoint["sp_ids"][sp_id_name]
-                    for e in range(len(spid)):
-                        new_ent = spid[e]
+                for unit_name in spawnpoint["units"]:
+                    unitid = spawnpoint["units"][unit_name]
+                    for e in range(len(unitid)):
+                        new_ent = unitid[e]
                         if not new_ent.get("isboss"):
                             continue
-                        old_spid = vanilla[world_name][room_name]["spawnpoints"][spawnpoint_name]["sp_ids"][sp_id_name] 
-                        new_name = spid[e]["name"]
+                        old_unitid = vanilla[world_name][room_name]["spawnpoints"][spawnpoint_name]["units"][unit_name] 
+                        new_name = unitid[e]["name"]
                         used_bosses.append(new_name)
                         # TODO handle checking these guys properly
                         # They aren't always in the old parents avail list, due to replaceAs nonsense
                         # but they are still their own parent
                         if new_name in ["Armor Xemnas I", "Armor Xemnas II", "Grim Reaper I", "Grim Reaper II", "Shadow Roxas"]:
                             continue
-                        new_index = spid[e]["index"]
+                        new_index = unitid[e]["index"]
                         new_enemy_record = kh2.enemy_manager.enemy_records[new_name]
                         new_parent = kh2.enemy_manager.enemy_records[new_enemy_record["parent"]]
-                        for old_ent in old_spid:
+                        for old_ent in old_unitid:
                             if new_index == old_ent["index"]:
                                 old_enemy = kh2.enemy_manager.enemy_records[old_ent["name"]]
                                 avail_list = kh2.enemy_manager.enemy_records[old_enemy["parent"]]["available"]
@@ -127,7 +127,7 @@ def validate_boss_placements(randomization, pc=False):
 def get_tmp_path():
     return os.path.join(os.getcwd(), "tmp")
 
-def get_enemies_in(randomization, world, room, spn, spid=None):
+def get_enemies_in(randomization, world, room, spn, unitid=None):
     original = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")), Loader=yaml.SafeLoader)
     og_spawnpoint = original[world][room]["spawnpoints"][spn]
     try:
@@ -136,14 +136,14 @@ def get_enemies_in(randomization, world, room, spn, spid=None):
         # Spawnpoint isn't in the randomization, so it's all vanilla
         spawnpoint = og_spawnpoint
     enemies = []
-    for spid_src in og_spawnpoint["sp_ids"]:
-        if spid and spid != spid_src:
+    for unitid_src in og_spawnpoint["units"]:
+        if unitid and unitid != unitid_src:
             continue
-        for enemy in og_spawnpoint["sp_ids"][spid_src]:
-            if spid_src not in spawnpoint["sp_ids"]:
+        for enemy in og_spawnpoint["units"][unitid_src]:
+            if unitid_src not in spawnpoint["units"]:
                 enemies.append(enemy)
                 continue
-            sp_ents = spawnpoint["sp_ids"][spid_src]
+            sp_ents = spawnpoint["units"][unitid_src]
             new_ent = _find_index(sp_ents, enemy["index"])
             if not new_ent:
                 enemies.append(enemy) # wasn't replaced, is vanilla
@@ -152,7 +152,7 @@ def get_enemies_in(randomization, world, room, spn, spid=None):
     return enemies 
 
 def validate_nameforreplace(randomization):
-    undercroft = get_enemies_in(randomization, "Beast's Castle", "Undercroft", "b_40", spid="96")
+    undercroft = get_enemies_in(randomization, "Beast's Castle", "Undercroft", "b_40", unitid="96")
     enemies_used = set([e["name"] for e in undercroft])
     num_enemy_types = len(enemies_used)
     assert num_enemy_types == 1
@@ -206,8 +206,8 @@ def get_found(randomization, name=None, tags=[]):
     for world in randomization["spawns"].values():
         for room in world.values():
             for spawnpoint in room["spawnpoints"].values():
-                for spid in spawnpoint["sp_ids"]:
-                    for enemy in spawnpoint["sp_ids"][spid]:
+                for unitid in spawnpoint["units"]:
+                    for enemy in spawnpoint["units"][unitid]:
                         if name:
                             if enemy["name"] == name:
                                 print(enemy["name"])
@@ -224,10 +224,10 @@ def get_randomized(randomization, source_name):
     for w, world in original.items():
         for r, room in world.items():
             for spn, spawnpoint in room["spawnpoints"].items():
-                for spid, spawns in spawnpoint["sp_ids"].items():
+                for unitid, spawns in spawnpoint["units"].items():
                     for ent in spawns:
                         if ent["name"] == source_name:
-                            new_spawns = randomization["spawns"].get(w,{}).get(r,{}).get("spawnpoints",{}).get(spn, {}).get("sp_ids", {}).get(spid, [])
+                            new_spawns = randomization["spawns"].get(w,{}).get(r,{}).get("spawnpoints",{}).get(spn, {}).get("units", {}).get(unitid, [])
 
                             new_ent = _find_index(new_spawns, ent["index"])
                             if new_ent:
@@ -236,10 +236,10 @@ def get_randomized(randomization, source_name):
 
     raise Exception(f"Could not find source_name: {source_name}")
 
-def get_room_randomized(randomization, world, room, spn, spid=None):
+def get_room_randomized(randomization, world, room, spn, unitid=None):
     new = randomization["spawns"].get(world, {}).get(room, {}).get("spawnpoints", {}).get(spn, {})
-    if spid:
-        new = new.get("sp_ids", {}).get(spid, {})
+    if unitid:
+        new = new.get("units", {}).get(unitid, {})
     if new:
         return True
     return False
@@ -248,7 +248,7 @@ def validate_selected(randomization, name, isboss):
     for w, world in randomization["spawns"].items():
         for r, room in world.items():
             for spn, spawnpoint in room["spawnpoints"].items():
-                for spid, spawns in spawnpoint["sp_ids"].items():
+                for unitid, spawns in spawnpoint["units"].items():
                     for ent in spawns:
                         if ent.get("isboss", False) == isboss:
                             if name != ent["name"]:
@@ -278,7 +278,7 @@ def validate_bosses_show_up_once(randomization, pc=False):
     # for w, world in randomization["spawns"].items():
     #     for r, room in world.items():
     #         for spn, spawnpoint in room["spawnpoints"].items():
-    #             for spid, spawns in spawnpoint["sp_ids"].items():
+    #             for unitid, spawns in spawnpoint["units"].items():
     #                 for ent in spawns:
     #                     if ent["isboss"]:
     #                         assert
@@ -286,9 +286,9 @@ def validate_bosses_show_up_once(randomization, pc=False):
     #                             return False
 
 
-def _find_index(spid, index):
+def _find_index(unitid, index):
     # Given an index, and a list of entities, return the entity matching that index, or None if doesn't exist
-    for ent in spid:
+    for ent in unitid:
         if ent["index"] == index:
             return ent
     return None
@@ -299,11 +299,11 @@ def validate_scale_map(randomization):
     for w, world in original.items():
         for r, room in world.items():
             for spn, spawnpoint in room["spawnpoints"].items():
-                for spid, spawns in spawnpoint["sp_ids"].items():
+                for unitid, spawns in spawnpoint["units"].items():
                     for ent in spawns:
                         if ent["isboss"]:
                             og_boss = ent["name"]
-                            new_boss_spawns = randomization["spawns"].get(w, {}).get(r, {}).get("spawnpoints", {}).get(spn, {}).get("sp_ids", {}).get(spid, [])
+                            new_boss_spawns = randomization["spawns"].get(w, {}).get(r, {}).get("spawnpoints", {}).get(spn, {}).get("units", {}).get(unitid, [])
                             new_boss = _find_index(new_boss_spawns, ent["index"])
                             if new_boss:
                                 if new_boss["name"] in ["Hades Cups", "Armor Xemnas I", "Pete Cups", "Shadow Roxas", "Grim Reaper II"]:

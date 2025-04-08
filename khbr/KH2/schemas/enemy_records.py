@@ -38,7 +38,8 @@ def get_schema():
         "whitelist_source": [],
         "whitelist_destination": [],
         "adds": [],
-        "sp_ids": [],
+        "sp_ids": [], # only here for backwards compatibility
+        "units": [],
         "subtracts": [],
         "msn_list": [],
         "program": None,

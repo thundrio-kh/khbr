@@ -265,6 +265,6 @@ if __name__ == '__main__':
     else:
         # while True:
         b64 = rando.generate_seed("kh2", options, seed=seed, randomization_only=randomization_only)
-            # if b64["spawns"]["Olympus Coliseum"]["Coliseum Gates"]['spawnpoints']['b_40']['sp_ids']['41'][0]["name"] == "Luxord":
+            # if b64["spawns"]["Olympus Coliseum"]["Coliseum Gates"]['spawnpoints']['b_40']['units']['41'][0]["name"] == "Luxord":
             #     0/0
     log_output(f"Total thing took {time.time()-t}s", log_level=0)

@@ -11,11 +11,11 @@ class Tests(unittest.TestCase):
             world="wtest",
             room="rtest",
             spawnpoint="sptest",
-            spid="unittest",
+            unitid="unittest",
             entity={"name": "old", "var": 5},
             new_boss_object={"name": "test"}
         )
-        assert es.spawns == {'wtest': {'rtest': {'spawnpoints': {'sptest': {'sp_ids': {'unittest': [{'name': 'test', 'var': 5}]}}}}}}
+        assert es.spawns == {'wtest': {'rtest': {'spawnpoints': {'sptest': {'units': {'unittest': [{'name': 'test', 'var': 5}]}}}}}}
 
 # Uncomment to run a single test through ipython
 ut = Tests()
