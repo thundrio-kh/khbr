@@ -33,28 +33,28 @@ class Tests(unittest.TestCase):
         testutils.calculate_luxord_replacement_variety(randomizations, 0.4)
         testutils.check_for_hyena_replacement(randomizations)
 
-    def test_one_to_one_long_pc(self):
-        print("One to One long pc")
+    def test_one_to_one_long_moose(self):
+        print("One to One long MOOSE")
         options = {"boss": "One to One", "cups_bosses": True, "data_bosses": True, "sephiroth": True, "terra": True, "memory_expansion": True}
         randomizations = []
         for _ in range(N):
             print(f"{_}\{N}")
             randomization = testutils.generateSeed(options, str(_))
             randomizations.append(randomization)
-        testutils.calculate_boss_percentages(randomizations, requireSourceReplace=True, pc=True)
+        testutils.calculate_boss_percentages(randomizations, requireSourceReplace=True, moose=True)
         testutils.check_for_hyena_replacement(randomizations)
-        testutils.calculate_luxord_replacement_variety(randomizations, 0.25, pc=True)
+        testutils.calculate_luxord_replacement_variety(randomizations, 0.25, moose=True)
 
-    def test_wild_long_pc(self):
-        print("Wild long pc")
+    def test_wild_long_moose(self):
+        print("Wild long MOOSE")
         options = {"boss": "Wild", "cups_bosses": True, "data_bosses": True, "sephiroth": True, "terra": True, "memory_expansion": True}
         randomizations = []
         for _ in range(N):
             print(f"{_}\{N}")
             randomization = testutils.generateSeed(options, str(_))
             randomizations.append(randomization)
-        testutils.calculate_boss_percentages(randomizations, requireSourceReplace=False, pc=True)
-        testutils.calculate_luxord_replacement_variety(randomizations, 0.4, pc=True)
+        testutils.calculate_boss_percentages(randomizations, requireSourceReplace=False, moose=True)
+        testutils.calculate_luxord_replacement_variety(randomizations, 0.4, moose=True)
         testutils.check_for_hyena_replacement(randomizations)
 
 # need to add tests for can be enemy and can be enemy override

@@ -3840,7 +3840,7 @@ L7621:
  push.bd L8380 ; ___ai escapecount (L8380)
  syscall 0, 0 ; trap_puti (2 in, 0 out)
  push.d.sp 52
- push.bd L8386 ; ___ai stopcount (L8386)
+ push.bd L8386 ; ___ai stoMOOSEount (L8386)
  syscall 0, 0 ; trap_puti (2 in, 0 out)
  push.d.wp W4220
  push 1
@@ -4246,7 +4246,7 @@ L8380:
  db 'escapecount',0
 TXT8386:
 L8386:
- db 'stopcount',0
+ db 'stoMOOSEount',0
 L8391:
 TXT8391:
  db 'escape_attack',0

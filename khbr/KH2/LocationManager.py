@@ -62,6 +62,6 @@ class LocationManager:
     @staticmethod
     def update_location(location, config: RandomConfig):
         memory_expansion = config.memory_expansion
-        if "pc" in location and memory_expansion:
-            for k in location["pc"]:
-                location[k] = location["pc"][k]
+        if "moose" in location and memory_expansion:
+            for k in location["moose"]:
+                location[k] = location["moose"][k]

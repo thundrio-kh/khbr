@@ -17,7 +17,7 @@ class EnemyManager:
         if not override:
             fn="full_enemy_records.json"
             if moose:
-                fn = "full_enemy_records_pc.json"
+                fn = "full_enemy_records_moose.json"
             with open(os.path.join(self.basepath, fn)) as f:
                 self.enemy_records = json.load(f)
         else:
@@ -158,24 +158,24 @@ class EnemyManager:
         # I don't know why this is sometimes called with parent == variation
         if parent == variation:
             return
-        if moose and "pc" in variation:
-            for k in variation["pc"]:
-                variation[k] = variation["pc"][k]
-        keys_to_add = {} # keys in pc specific config not in overall
+        if moose and "moose" in variation:
+            for k in variation["moose"]:
+                variation[k] = variation["moose"][k]
+        keys_to_add = {} # keys in MOOSE specific config not in overall
         for k in parent:
-            if moose and k == "pc":
-                for k_pc in parent["pc"]:
-                    value = parent["pc"][k_pc]
+            if moose and k == "moose":
+                for k_moose in parent["moose"]:
+                    value = parent["moose"][k_moose]
                     
-                    if k_pc not in parent:
-                        keys_to_add[k_pc] = value
-                    # Allow different blacklist/whitelists for pc vs ps2
+                    if k_moose not in parent:
+                        keys_to_add[k_moose] = value
+                    # Allow different blacklist/whitelists for MOOSE vs ps2
                     elif type(value) == list:
                         for v in value:
-                            if v not in parent[k_pc]:
-                                parent[k_pc].append(v)
+                            if v not in parent[k_moose]:
+                                parent[k_moose].append(v)
                     else:
-                        parent[k_pc] = parent["pc"][k_pc]
+                        parent[k_moose] = parent["moose"][k_moose]
         
         parent.update(keys_to_add)
         for k in parent:

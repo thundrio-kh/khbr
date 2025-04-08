@@ -48,13 +48,13 @@ class KingdomHearts2:
                                 "type": "boss", "possible_values": [None] + sorted(self.get_valid_bosses()), "hidden_values": []},
             "nightmare_bosses": {"display_name": "Nightmare Bosses", "description": "Replaces bosses using only the most difficult bosses in the game. Forces Boss Randomization Mode to be 'Wild'",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
-            "bosses_replace_enemies": {"display_name": "Bosses Can Replace Enemies (Unstable/PC only)", "description": "Replaces 0.5 percent of enemies in the game with a random boss. Should not put more than one boss as enemy in a single room, due to memory concerns. This option is intended for PC use only.",
+            "bosses_replace_enemies": {"display_name": "Bosses Can Replace Enemies (MOOSE only)", "description": "Replaces 0.5 percent of enemies in the game with a random boss. Should not put more than one boss as enemy in a single room, due to memory concerns. This option is intended for MOOSE use only.",
                     "type": "boss", "possible_values": [False, True], "hidden_values": [], "experimental": True},
             "cups_bosses": {"display_name": "Randomize Cups Bosses", "description": "Include the coliseum bosses in the randomization pool",
                                 "type": "boss", "possible_values": [True, False], "hidden_values": []},
             "data_bosses": {"display_name": "Randomize Data Bosses", "description": "Include the Data versions of organization members in the pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},      
-            "gimmick_bosses": {"display_name": "Allow more risky replacements (PC Only)", "description": "Allow a set of banned replacements that may be end up being exceedingly difficult/tedious, or that can softlock/crash in certain cases.\nExample: Allows Sephiroth to replace Blizzard or Volcano Lord.\nWhen using this option it is useful to be aware of the major known issues (https://github.com/thundrio-kh/khbr/blob/master/KNOWN_ISSUES).",
+            "gimmick_bosses": {"display_name": "Allow more risky replacements (MOOSE Only)", "description": "Allow a set of banned replacements that may be end up being exceedingly difficult/tedious, or that can softlock/crash in certain cases.\nExample: Allows Sephiroth to replace Blizzard or Volcano Lord.\nWhen using this option it is useful to be aware of the major known issues (https://github.com/thundrio-kh/khbr/blob/master/KNOWN_ISSUES).",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
             "sephiroth": {"display_name": "Randomize Sephiroth", "description": "Include Sephiroth in the boss randomization pool",
                                 "type": "boss", "possible_values": [False, True], "hidden_values": []},
@@ -155,7 +155,7 @@ class KingdomHearts2:
         nightmare_bosses = options.get("nightmare_bosses")
         memory_expansion = options.get("memory_expansion")
         if enemymode == "Wild" and not memory_expansion:
-            raise Exception("Wild enemy mode only works on PC due to memory constraints on the PS2 version.")
+            raise Exception("Wild enemy mode only works with MOOSE due to vanilla memory constraints.")
         
         override_location_map = read_override("location-ard-map.json")
         self.location_manager.update_locmap(override_location_map)

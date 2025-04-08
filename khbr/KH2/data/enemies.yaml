@@ -1682,7 +1682,7 @@ Cloud:
   - Xigbar
   limiter: 0
   model: N_HB550_BTL2
-  pc: 
+  moose: 
     tags: 
     - disablecamera
   tags:
@@ -3208,7 +3208,7 @@ Hydra:
   limiter: 0
   model: B_HE100
   unchanged_file_size: true
-  pc:
+  moose:
     unchanged_file_size: false
   msn: HE18_MS108
   obj_id: 352
@@ -3451,7 +3451,7 @@ Larxene:
   room_size: 8.3
   type: boss
   unchanged_file_size: true
-  pc:
+  moose:
     unchanged_file_size: false
   variations:
     Larxene:
@@ -3505,7 +3505,7 @@ Leon:
   - Xemnas
   - Xigbar
   limiter: 0
-  pc: 
+  moose: 
     tags: 
     - disablecamera
   model: N_HB530_BTL2
@@ -3592,7 +3592,7 @@ Lexaeus:
   size: 5
   type: boss
   unchanged_file_size: true
-  pc:
+  moose:
     unchanged_file_size: false
   blacklist_destination:
   - Axel II
@@ -3813,7 +3813,7 @@ Marluxia:
   program: 145
   type: boss
   unchanged_file_size: true
-  pc:
+  moose:
     unchanged_file_size: false
   variations:
     Marluxia:
@@ -3972,7 +3972,7 @@ Oogie Boogie:
   program: 55
   size: 4.79 # 2.79 when accounting for the adds
   unchanged_file_size: true # Not 100% sure this will work
-  pc:
+  moose:
     unchanged_file_size: false
   room_size: 12.41
   subtracts:
@@ -4131,7 +4131,7 @@ Pete TR:
   aimods:
   - name: N_EX760_BTL/n_ex.bdscript
     type: obj
-  pc: 
+  moose: 
     source_replace_allowed: true # TODO supposedly demyx super crashes here on ps2 and most bosses cause crashes here
   source_replace_allowed: false
   msn_replace_allowed: false # This is due soley to Pete OC II
@@ -5134,7 +5134,7 @@ Shan-Yu:
   msn: MU09_MS108
   msn_dest_as: WI03_MS104 # to remove the door gui
   unchanged_file_size: true
-  pc:
+  moose:
     unchanged_file_size: false
   obj_id: 21
   size: 4.64
@@ -5722,7 +5722,7 @@ Tifa:
   msn_replace_allowed: false
   msn_source_as: "WI03_MS104"
   obj_id: 2298
-  pc: 
+  moose: 
     tags: 
     - disablecamera
   tags:
@@ -5886,7 +5886,7 @@ Vexen:
   room_size: 8.97
   type: boss
   unchanged_file_size: true
-  pc:
+  moose:
     unchanged_file_size: false
   variations:
     Vexen (Data):
@@ -6189,7 +6189,7 @@ Yuffie:
   model: N_HB580_BTL2
   msn_replace_allowed: false
   obj_id: 2299
-  pc: 
+  moose: 
     tags: 
     - disablecamera
   tags:

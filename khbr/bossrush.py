@@ -188,7 +188,7 @@ def main(cli_args: list=[]):
         "route": 'random',
         "abilities_start_equipped": True,
         "randomize_starting_stuff": False,
-        "platform": "pc",
+        "moose": False,
         "open_menu_before_each_fight": False,
         "seed": "",
         "debug_inf_hp": False,
@@ -230,7 +230,7 @@ def main(cli_args: list=[]):
     options.add_argument("-randomize_starting_stuff", choices=['True', 'False'], default=last_settings.get("randomize_starting_stuff"))
     options.add_argument("-abilities_start_equipped", choices=['True', 'False'], default=last_settings.get("abilities_start_equipped"))
     options.add_argument("-open_menu_before_each_fight", choices=['True', 'False'], default=last_settings.get("open_menu_before_each_fight"))
-    options.add_argument("-platform", choices=["ps2", "pc"], default=last_settings.get("platform"))
+    options.add_argument("-moose", choices=["True", "False"], default=last_settings.get("moose"))
     options.add_argument("-seed", default=last_settings.get("seed"))
     options.add_argument("-debug_inf_hp", default=last_settings.get("debug_inf_hp"), choices=['True', 'False'])
     options.add_argument("-debug_no_damage_cap", default=last_settings.get("debug_no_damage_cap"), choices=['True', 'False'])
@@ -277,7 +277,7 @@ def main(cli_args: list=[]):
     moddir = os.path.join(openkh_dir, "mods", "kh2")
 
     seed_options = {
-        "memory_expansion": True if args.platform == "pc" else False,
+        "memory_expansion": True if str(args.moose) == "True",
         "always_set_retry": True,
         "apply_better_stt": True,
         "is_boss_rush": True,
@@ -469,9 +469,9 @@ def main(cli_args: list=[]):
     asset = findRoomSource(modyml["assets"], "HE", "09")
     asset["source"] = [s for s in asset["source"] if not s["method"] == "copy"]
     new_program_text = open(os.path.join(os.path.dirname(__file__), "KH2", "data", "he09_bossrush_single.areadataprogram")).read()
-    he_script = AreaDataScript(new_program_text, moose=args.platform == "pc")
+    he_script = AreaDataScript(new_program_text, moose=str(args.moose) == "True")
     he_prg = he_script.programs[0xc4]
-    if args.platform == "pc":
+    if str(args.moose) == "True":
         he_prg.add_packet_spec()
         he_prg.add_enemy_spec()
     programasset = assetgenerator.modwriter.writeAreaDataProgram("he09", "btl", 0xc4, he_prg.make_program())

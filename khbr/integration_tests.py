@@ -129,13 +129,13 @@ class Tests(unittest.TestCase):
             assert randomization["object_map"][1109]["Flag"] == 0
 
 
-    def test_seedgen_enemy_one_to_one_pc(self):
+    def test_seedgen_enemy_one_to_one_moose(self):
         options = {"enemy": "One to One"}
         randomization = testutils.generateSeed(options)
         options["memory_expansion"] = True
-        randomization_pc = testutils.generateSeed(options)
-        testutils.validate_enemies_general(randomization_pc)
-        assert randomization != randomization_pc 
+        randomization_moose = testutils.generateSeed(options)
+        testutils.validate_enemies_general(randomization_moose)
+        assert randomization != randomization_moose 
 
     # def test_seedgen_enemy_one_to_one_nightmare(self):
     #     options = {"enemy": "One to One", "nightmare_enemies": True}
@@ -201,15 +201,15 @@ class Tests(unittest.TestCase):
         testutils.validate_bosses_onetoone(randomization)
         assert False == testutils.get_found(randomization, tags=["data", "cups"])
 
-    def test_seedgen_boss_one_to_one_pc(self):
+    def test_seedgen_boss_one_to_one_moose(self):
         options = {"boss": "One to One"}
         randomization = testutils.generateSeed(options)
         options["memory_expansion"] = True
-        randomization_pc = testutils.generateSeed(options)
-        testutils.validate_bosses_general(randomization_pc, pc=True)
-        testutils.validate_bosses_onetoone(randomization_pc, pc=True)
-        assert False == testutils.get_found(randomization_pc, tags=["data", "cups"])
-        assert randomization_pc != randomization
+        randomization_moose = testutils.generateSeed(options)
+        testutils.validate_bosses_general(randomization_moose, MOOSE=True)
+        testutils.validate_bosses_onetoone(randomization_moose, MOOSE=True)
+        assert False == testutils.get_found(randomization_moose, tags=["data", "cups"])
+        assert randomization_moose != randomization
 
     def test_seedgen_boss_one_to_one_scaled(self):
         options = {"boss": "One to One", "scale_boss_stats": True}
@@ -350,10 +350,10 @@ class Tests(unittest.TestCase):
 
     def validate_memory_expansion(self):
         options = {"enemy": "One to One Per Room", "memory_expansion": True}
-        randomization_pc = testutils.generateSeed(options)
+        randomization_moose = testutils.generateSeed(options)
         options["memory_expansion"] = False
         randomization_ps2 = testutils.generateSeed(options)
-        assert True == testutils.get_room_randomized(randomization_pc, "Agrabah", "The Cave of Wonders: Treasure Room", "b_40")
+        assert True == testutils.get_room_randomized(randomization_moose, "Agrabah", "The Cave of Wonders: Treasure Room", "b_40")
         assert False == testutils.get_room_randomized(randomization_ps2, "Agrabah", "The Cave of Wonders: Treasure Room", "b_40")
 
     def test_is_replacement_blocked(self):

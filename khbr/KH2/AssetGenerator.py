@@ -526,7 +526,7 @@ class AssetGenerator:
                 if ardname == "he09":
                     basename = "he09.btl.ps2.areadatascript"
                     if self.moose:
-                        basename = basename.replace("ps2","pc")
+                        basename = basename.replace("ps2","moose")
                     assetpath = os.path.join(os.path.dirname(__file__), "data", basename)
                     programasset = self.modwriter.writeCopiedSubfile(ardname, "btl", "AreaDataScript", assetpath)
                     roomasset["source"].append(programasset)

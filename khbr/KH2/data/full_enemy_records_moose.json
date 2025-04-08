@@ -8925,7 +8925,7 @@
         ],
         "limiter": 0,
         "model": "N_HB550_BTL2",
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -9052,7 +9052,7 @@
         ],
         "limiter": 0,
         "model": "N_HB550_BTL2",
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -9155,7 +9155,7 @@
         ],
         "limiter": 0,
         "model": "N_HB550_BTL2",
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -15919,7 +15919,7 @@
         "limiter": 0,
         "model": "B_HE100",
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "msn": "HE18_MS108",
@@ -16652,7 +16652,7 @@
         "room_size": 8.3,
         "type": "boss",
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "variations": [
@@ -16780,7 +16780,7 @@
         "room_size": 8.3,
         "type": "boss",
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "variations": [
@@ -16872,7 +16872,7 @@
             "Xigbar"
         ],
         "limiter": 0,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -17001,7 +17001,7 @@
             "Xigbar"
         ],
         "limiter": 0,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -17106,7 +17106,7 @@
             "Xigbar"
         ],
         "limiter": 0,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -17211,7 +17211,7 @@
             "Xigbar"
         ],
         "limiter": 0,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -17299,7 +17299,7 @@
         "size": 5,
         "type": "boss",
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "blacklist_destination": [
@@ -17434,7 +17434,7 @@
         "size": 5,
         "type": "boss",
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "blacklist_destination": [
@@ -18216,7 +18216,7 @@
         "program": 145,
         "type": "boss",
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "variations": [
@@ -18347,7 +18347,7 @@
         "room_size": 7.96,
         "type": "boss",
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "variations": [
@@ -18924,7 +18924,7 @@
         "program": 55,
         "size": 4.79,
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "room_size": 12.41,
@@ -19588,7 +19588,7 @@
         "obj_edits": {},
         "luamod": null,
         "story_level": 19,
-        "pc": {
+        "moose": {
             "source_replace_allowed": true
         }
     },
@@ -19785,7 +19785,7 @@
         "unchanged_file_size": false,
         "obj_edits": {},
         "luamod": null,
-        "pc": {
+        "moose": {
             "source_replace_allowed": true
         }
     },
@@ -19809,7 +19809,7 @@
                 "type": "obj"
             }
         ],
-        "pc": {
+        "moose": {
             "source_replace_allowed": true
         },
         "source_replace_allowed": true,
@@ -24263,7 +24263,7 @@
         "msn": "MU09_MS108",
         "msn_dest_as": "WI03_MS104",
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "obj_id": 21,
@@ -26150,7 +26150,7 @@
         "msn_replace_allowed": false,
         "msn_source_as": "WI03_MS104",
         "obj_id": 2298,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -26277,7 +26277,7 @@
         "msn_replace_allowed": false,
         "msn_source_as": "WI03_MS104",
         "obj_id": 2298,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -26380,7 +26380,7 @@
         "msn_replace_allowed": false,
         "msn_source_as": "WI03_MS104",
         "obj_id": 2298,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -26761,7 +26761,7 @@
         "room_size": 8.97,
         "type": "boss",
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "variations": [
@@ -26834,7 +26834,7 @@
         "room_size": 8.97,
         "type": "boss",
         "unchanged_file_size": false,
-        "pc": {
+        "moose": {
             "unchanged_file_size": false
         },
         "variations": [
@@ -27746,7 +27746,7 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -27875,7 +27875,7 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -27978,7 +27978,7 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]
@@ -28082,7 +28082,7 @@
         "model": "N_HB580_BTL2",
         "msn_replace_allowed": false,
         "obj_id": 2299,
-        "pc": {
+        "moose": {
             "tags": [
                 "disablecamera"
             ]

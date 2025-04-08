@@ -47,14 +47,14 @@ def get_random_config(
             mickey_rule = mickey_rule
         )
 
-def get_boss_list(requireSourceReplace=True, pc=False):
+def get_boss_list(requireSourceReplace=True, moose=False):
     # Get a list of bosses that the enemies.yaml says is available
     # For isWild thats just every boss that is enabled
     # for oneToOne thats just every boss that is enabled + source_replace_allowed: true
     boss_list = []
     filename = "full_enemy_records"
-    if pc:
-        filename += "_pc"
+    if moose:
+        filename += "_moose"
     filename += ".json"
     enemy_json = json.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data", filename)))
     for enemy in enemy_json:
@@ -80,17 +80,17 @@ def check_for_hyena_replacement(randomizations):
         if "Pride Land" in randomization["spawns"]:
             assert "The Kings Den" not in randomization["spawns"]["Pride Land"]
 
-def validate_bosses_general(randomization, pc=False):
-    validate_consistent_bosses(randomization, pc=pc)
-    return validate_boss_placements(randomization, pc=pc)
+def validate_bosses_general(randomization, moose=False):
+    validate_consistent_bosses(randomization, moose=MOOSE)
+    return validate_boss_placements(randomization, moose=MOOSE)
 
-def validate_bosses_onetoone(randomization, pc=False):
-    validate_bosses_show_up_once(randomization, pc=pc)
+def validate_bosses_onetoone(randomization, moose=False):
+    validate_bosses_show_up_once(randomization, moose=moose)
 
-def validate_boss_placements(randomization, pc=False):
+def validate_boss_placements(randomization, moose=False):
     import yaml
     kh2 = KingdomHearts2()
-    kh2.enemy_manager.set_enemies(moose=pc)
+    kh2.enemy_manager.set_enemies(moose=moose)
     vanilla = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")), Loader=yaml.SafeLoader)
     used_bosses = []
     for world_name in randomization["spawns"]:
@@ -254,10 +254,10 @@ def validate_selected(randomization, name, isboss):
                             if name != ent["name"]:
                                 return False
 
-def validate_consistent_bosses(randomization, pc=False):
+def validate_consistent_bosses(randomization, moose=False):
     kh2 = KingdomHearts2()
-    if pc:
-        kh2.enemy_manager.set_enemies("full_enemy_records_pc.json")
+    if moose:
+        kh2.enemy_manager.set_enemies("full_enemy_records_moose.json")
     # Check that Cerberus and Cerberus in cups are the same parent
     # normal_cerberus = get_enemies_in("Olympus Coliseum", "Cave of the Dead: Entrance", "b_40")
     # cups_cerberus = get_enemies_in("Olympus Coliseum", "The Underdrome 09", "b_b0")
@@ -269,7 +269,7 @@ def validate_consistent_bosses(randomization, pc=False):
     data_luxord = get_enemies_in(randomization, "The World That Never Was", "Havocs Divide", "b_80")[0]["name"]
     assert kh2.enemy_manager.enemy_records[normal_luxord]["parent"] == kh2.enemy_manager.enemy_records[data_luxord]["parent"]
 
-def validate_bosses_show_up_once(randomization, pc=False):
+def validate_bosses_show_up_once(randomization, moose=False):
     assert True
     # Commenting out for now it seems too hard
     # You have to account for the bosses that show up more than once but are the same
@@ -327,10 +327,10 @@ def validate_enemy_records(enemy_records):
                 assert enemy["name"] in storm_original["whitelist_destination"]
     pass
 
-def calculate_boss_percentages(randomizations, requireSourceReplace, pc=False):
-    boss_ledger = {b: 0 for b in get_boss_list(requireSourceReplace=requireSourceReplace, pc=pc)}
+def calculate_boss_percentages(randomizations, requireSourceReplace, moose=False):
+    boss_ledger = {b: 0 for b in get_boss_list(requireSourceReplace=requireSourceReplace, moose=moose)}
     for randomization in randomizations:
-        used = validate_bosses_general(randomization, pc=pc)
+        used = validate_bosses_general(randomization, moose=moose)
         for boss in boss_ledger:
             if boss in used:
                 boss_ledger[boss] += 1
@@ -343,12 +343,12 @@ def calculate_boss_percentages(randomizations, requireSourceReplace, pc=False):
     if failed:
         assert False, f"{failed} bosses didn't get placed"
 
-def calculate_luxord_replacement_variety(randomizations, max_percent, pc=False):
+def calculate_luxord_replacement_variety(randomizations, max_percent, moose=False):
     storm_rider_count = 0
     N = len(randomizations)
     results = []
     for randomization in randomizations:
-        validate_bosses_general(randomization, pc=pc)
+        validate_bosses_general(randomization, moose=moose)
         rep = get_luxord_replacement(randomization)
         if rep == "Storm Rider":
             storm_rider_count += 1

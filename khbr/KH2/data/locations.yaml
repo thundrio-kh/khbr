@@ -1858,7 +1858,7 @@ Agrabah:
             name: Fortuneteller
       b_40:
         ignored: true
-        pc:
+        moose:
           ignored: false
         size: 0
         units:
@@ -4384,7 +4384,7 @@ Beast's Castle:
 Disney Castle:
   Audience Chamber:
     ignored: true
-    pc:
+    moose:
       ignored: false # Enemies with particle effects I think are the main concern here, like living bone shamans and berserkers
     size: 5000000
     spawnpoints:
@@ -4581,7 +4581,7 @@ Disney Castle:
             name: Bolt Tower DC
   Colonnade:
     ignored: false # I think it's fine
-    pc:
+    moose:
       ignored: false
     size: 5000000
     spawnpoints:
@@ -8800,7 +8800,7 @@ Hollow Bastion:
     size: 5000000
     ignored: true 
     bossenemy_ignored: true
-    pc:
+    moose:
       ignored: false
     spawnpoints:
       b_00:
@@ -15584,7 +15584,7 @@ Port Royal:
   'Ship Graveyard: Seadrift Row':
     # In worst case the medallion carrying heartless won't spawn
     ignored: true
-    pc:
+    moose:
       ignored: false
     size: 5000000
     spawnpoints:
@@ -19696,7 +19696,7 @@ The Land of Dragons:
             name: Rapid Thruster (RAW)
   Village Cave:
     ignored: true
-    pc:
+    moose:
       ignored: false
     size: 5000000
     spawnpoints:
@@ -22822,7 +22822,7 @@ Twilight Town:
             isboss: false
             name: Dusk
       b_41:
-        pc:
+        moose:
           ignored: true
         size: 0
         units:

@@ -17,7 +17,7 @@ exclusions = ["Banzai", "Barrel", "Ed", "Giant Sark", "MCP",
 
 
 ######
-##RUN FOR PC
+##RUN FOR MOOSE
 ######
 exclusions_enemies = []
 
@@ -63,12 +63,12 @@ for source_boss_name in boss_names:
         source_boss_compatability.append(compat)
         names.append(new_boss_name)
     sources.append(source_boss_compatability)
-print(f"PC Boss Replacements: {allow_count[0]}/{allow_count[1]}")
+print(f"MOOSE Boss Replacements: {allow_count[0]}/{allow_count[1]}")
 
 bosslines.append(["Destination/Source"]+sorted(set(names)))
 bosslines += sources
 
-with open("boss_compat_pc.csv", "w") as f:
+with open("boss_compat_moose.csv", "w") as f:
     # bosslines is a 2 dimensional list, where each row is a list of strings
     # reverse the x and y axis to make it easier to read
     f.write("\n".join([",".join(s) for s in zip(*bosslines)]))
@@ -109,12 +109,12 @@ for source_boss_name in boss_names:
         names_nightmare.append(new_boss_name)
     sources_nightmare.append(source_boss_compatability)
 
-print(f"PC Nightmare Boss Replacements: {allow_count[0]}/{allow_count[1]}")
+print(f"MOOSE Nightmare Boss Replacements: {allow_count[0]}/{allow_count[1]}")
 
 bosslines_nightmare.append(["Destination/Source"]+sorted(set(names_nightmare)))
 bosslines_nightmare += sources_nightmare
 
-with open("boss_compat_nightmare_pc.csv", "w") as f:
+with open("boss_compat_nightmare_moose.csv", "w") as f:
     f.write("\n".join([",".join(s) for s in zip(*bosslines_nightmare)]))
 
 
