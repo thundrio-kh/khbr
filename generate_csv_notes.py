@@ -22,7 +22,7 @@ exclusions = ["Banzai", "Barrel", "Ed", "Giant Sark", "MCP",
 exclusions_enemies = []
 
 kh2 = KingdomHearts2()
-kh2.enemy_manager.set_enemies(ispc=True)
+kh2.enemy_manager.set_enemies(moose=True)
 records = kh2.enemy_manager.enemy_records
 
 bosses = {b: records[b] for b in records if records[b]["type"] == "boss" and records[b]["name"] not in exclusions}
@@ -164,7 +164,7 @@ with open("boss_compat_nightmare_pc.csv", "w") as f:
 exclusions_enemies = []
 
 kh2 = KingdomHearts2()
-kh2.enemy_manager.set_enemies(ispc=False)
+kh2.enemy_manager.set_enemies(moose=False)
 records = kh2.enemy_manager.enemy_records
 
 bosses = {b: records[b] for b in records if records[b]["type"] == "boss" and records[b]["name"] not in exclusions}

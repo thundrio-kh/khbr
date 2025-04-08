@@ -90,7 +90,7 @@ def validate_bosses_onetoone(randomization, pc=False):
 def validate_boss_placements(randomization, pc=False):
     import yaml
     kh2 = KingdomHearts2()
-    kh2.enemy_manager.set_enemies(ispc=pc)
+    kh2.enemy_manager.set_enemies(moose=pc)
     vanilla = yaml.load(open(os.path.join(os.path.dirname(__file__), "KH2", "data","locations.yaml")), Loader=yaml.SafeLoader)
     used_bosses = []
     for world_name in randomization["spawns"]:

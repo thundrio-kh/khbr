@@ -14,13 +14,13 @@ import random
 
 # TODO future refactor could use jsonpath to make looking through the complex spawns dict easier
 class AssetGenerator:
-    def __init__(self, modwriter, spawn_manager = None, location_manager=None, enemy_manager = None, ispc=False, is_boss_rush=False, force_story_boss_levels=False):
+    def __init__(self, modwriter, spawn_manager = None, location_manager=None, enemy_manager = None, moose=False, is_boss_rush=False, force_story_boss_levels=False):
         self.assets = []
         self.modwriter = modwriter
         self.enemy_manager = enemy_manager
         self.location_manager = location_manager
         self.spawn_manager = spawn_manager
-        self.ispc = ispc
+        self.moose = moose
         self.is_boss_rush=is_boss_rush
         self.force_story_boss_levels=force_story_boss_levels
 
@@ -525,7 +525,7 @@ class AssetGenerator:
                 # For now it's only needed for OC Cups
                 if ardname == "he09":
                     basename = "he09.btl.ps2.areadatascript"
-                    if self.ispc:
+                    if self.moose:
                         basename = basename.replace("ps2","pc")
                     assetpath = os.path.join(os.path.dirname(__file__), "data", basename)
                     programasset = self.modwriter.writeCopiedSubfile(ardname, "btl", "AreaDataScript", assetpath)
@@ -542,14 +542,14 @@ class AssetGenerator:
             self.assets.append(textasset)
 
     def update_area_data_programs(self, ardname, roomsource, btlmods={}):
-        def _can_update_capacity(ispc, prg):
+        def _can_update_capacity(moose, prg):
             if not prg.has_command("Capacity"):
                 return False
             if ardname in ["mu07", "mu09"]:
                 # Summit will crash when capacity is infinite, and shan yu's summons can sometimes crash the game
                 return False
             mission = prg.get_mission()
-            if (not ispc) and (not mission):
+            if (not moose) and (not mission):
                 # It's not a big deal if enemies fail to spawn properly in areas where you don't have a mission going on
                 return False             
             if mission == "MU02_MS103B":
@@ -559,12 +559,12 @@ class AssetGenerator:
         #btlmods = {} 
         btlfn = os.path.join(KH2_DIR, "subfiles", "script", "ard", ardname, "btl.script")
         with open(btlfn) as f:
-            script = AreaDataScript(f.read(), ispc=self.ispc)
+            script = AreaDataScript(f.read(), moose=self.moose)
         for p in script.programs:
             prg = script.programs[p]
-            if _can_update_capacity(script.ispc, prg):
+            if _can_update_capacity(script.moose, prg):
                 prg.update_capacity(HARDCAP)
-            if self.ispc:
+            if self.moose:
                 if prg.has_command("Spawn"):
                     prg.add_packet_spec()
                     prg.add_enemy_spec()

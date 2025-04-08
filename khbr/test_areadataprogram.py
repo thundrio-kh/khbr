@@ -139,14 +139,14 @@ class Tests(unittest.TestCase):
             "Capacity 50",
             "Spawn 3"
         ]
-        adp = AreaDataProgram(lines, ispc=True)
+        adp = AreaDataProgram(lines, moose=True)
         adp.update_capacity(capacity=99)
         output = adp.make_program()
         assert output.split("\n") == [
             "Program 0xBF",
             "Spawn 3"
         ]
-        adp = AreaDataProgram(lines, ispc=False)
+        adp = AreaDataProgram(lines, moose=False)
         adp.update_capacity(capacity=99)
         output = adp.make_program()
         assert output.split("\n") == [
@@ -158,7 +158,7 @@ class Tests(unittest.TestCase):
             "Program 0xBF",
             "Spawn 3"
         ]
-        adp = AreaDataProgram(lines, ispc=True)
+        adp = AreaDataProgram(lines, moose=True)
         adp.update_capacity(capacity=99)
         output = adp.make_program()
         assert output.split("\n") == [

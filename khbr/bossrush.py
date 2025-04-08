@@ -294,7 +294,7 @@ def main(cli_args: list=[]):
 
     kh2 = KingdomHearts2()
     modwriter = ModWriter(os.path.join(moddir, "bossrush"))
-    assetgenerator = AssetGenerator(modwriter, spawn_manager=kh2.spawn_manager, location_manager=kh2.location_manager, enemy_manager=kh2.enemy_manager, ispc=seed_options["memory_expansion"])
+    assetgenerator = AssetGenerator(modwriter, spawn_manager=kh2.spawn_manager, location_manager=kh2.location_manager, enemy_manager=kh2.enemy_manager, moose=seed_options["memory_expansion"])
 
 
 
@@ -469,7 +469,7 @@ def main(cli_args: list=[]):
     asset = findRoomSource(modyml["assets"], "HE", "09")
     asset["source"] = [s for s in asset["source"] if not s["method"] == "copy"]
     new_program_text = open(os.path.join(os.path.dirname(__file__), "KH2", "data", "he09_bossrush_single.areadataprogram")).read()
-    he_script = AreaDataScript(new_program_text, ispc=args.platform == "pc")
+    he_script = AreaDataScript(new_program_text, moose=args.platform == "pc")
     he_prg = he_script.programs[0xc4]
     if args.platform == "pc":
         he_prg.add_packet_spec()

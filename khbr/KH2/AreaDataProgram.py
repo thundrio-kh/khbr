@@ -1,9 +1,9 @@
 from khbr.randutils import log_output
 
 class AreaDataProgram:
-    def __init__(self, lines, ispc=False):
+    def __init__(self, lines, moose=False):
         self.lines = lines
-        self.ispc = ispc
+        self.moose = moose
         num_settings = len(''.join(lines).split("AreaSettings"))
         # if num_settings > 2:
         #     log_output(lines)
@@ -77,7 +77,7 @@ class AreaDataProgram:
             return False
         return self.get_command("Mission").split(" ")[-1].replace('"','')
     def update_capacity(self, capacity=None):
-        if self.ispc:
+        if self.moose:
             self.remove_command("Capacity")
         elif capacity:
             self.add_command("Capacity", str(capacity))
